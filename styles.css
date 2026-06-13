@@ -447,6 +447,9 @@ html, body {
 .building-marker.bm-ok      { background: #4ade80; }  /* green  — con datos */
 .building-marker.bm-nodata  { background: #94a3b8; }  /* gray   — sin datos */
 .building-marker.bm-unknown { background: #93c5fd; }  /* blue   — desconocido */
+.building-marker.bm-fuera   { background: #ef4444; }  /* red    — fuera proyecto */
+
+tr.row-fuera td { background: #fef2f2; color: #dc2626; }
 
 /* Wrapper para el icono + etiqueta del edificio */
 .bm-wrap { overflow: visible !important; background: transparent !important; border: none !important; }

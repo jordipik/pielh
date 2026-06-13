@@ -524,6 +524,7 @@ function renderBuildingMarker(b) {
     let statusCls = 'bm-unknown';
     if (hasData === 'OK') statusCls = 'bm-ok';
     else if (hasData === 'SIN DATOS') statusCls = 'bm-nodata';
+    if (b.state === 'Fuera Proyecto') statusCls = 'bm-fuera';
 
     const labelText = getBuildingCode(b) || b.id || '';
     const icon = L.divIcon({
@@ -780,6 +781,7 @@ function renderBuildingsList() {
         const tr = document.createElement('tr');
         tr.dataset.rid = b.id;
         if (b.id === state.selectedId) tr.classList.add('row-selected');
+        if (b.state === 'Fuera Proyecto') tr.classList.add('row-fuera');
         tr.innerHTML = `
             <td title="${esc(b.id)}">${esc(b.id)}</td>
             <td title="${esc(b.name)}">${esc(truncate(b.name || b.short_name, 30))}</td>
