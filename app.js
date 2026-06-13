@@ -536,7 +536,6 @@ function renderBuildingMarker(b) {
     });
 
     const marker = L.marker([lat, lon], { icon, pane: 'buildingsPane', zIndexOffset: 0 });
-    marker.bindPopup(buildingPopup(b, sCount), { maxWidth: 300 });
     marker.on('click', () => selectRecord(b.id, { source: 'map' }));
     layers.buildings.addLayer(marker);
     markerIndex.buildings[b.id] = marker;
@@ -559,7 +558,6 @@ function renderSensorMarker(s, offsets) {
         fillOpacity: 0.9,
     });
 
-    marker.bindPopup(sensorPopup(s), { maxWidth: 300 });
     marker.on('click', () => selectRecord(s.id, { source: 'map' }));
     layers.sensors.addLayer(marker);
     markerIndex.sensors[s.id] = marker;
@@ -812,6 +810,8 @@ const SENSOR_LIMIT = 500;
 
 function renderSensorsList() {
     let records = filtered.sensors;
+    const selBldId = state.selectedId && data._buildingsMap[state.selectedId] ? state.selectedId : null;
+    if (selBldId) records = records.filter(s => s.hos === selBldId);
     _lastSensorRecords = records;
     if (state.onlyVisibleSns) records = getMapVisible(records);
     records = sortRecords(records, state.sort.sensors);
@@ -820,9 +820,10 @@ function renderSensorsList() {
 
     const total = (data.sensors ?? []).length;
     const filt = filtered.sensors.length;
+    const bldSuffix = selBldId ? ` · edificio ${selBldId}` : '';
     document.getElementById('sensors-info').textContent = state.onlyVisibleSns
-        ? `${records.length} visibles · ${filt} filtrados de ${total}${limited ? ' (límite 500)' : ''}`
-        : `${filt} de ${total} sensores${limited ? ' (mostrando 500)' : ''}`;
+        ? `${records.length} visibles · ${filt} filtrados de ${total}${limited ? ' (límite 500)' : ''}${bldSuffix}`
+        : `${selBldId ? records.length : filt} de ${total} sensores${limited ? ' (mostrando 500)' : ''}${bldSuffix}`;
 
     updateSortIcons('sensors-thead', state.sort.sensors);
 
@@ -869,8 +870,6 @@ function focusBuilding(id) {
 
     if (!map.hasLayer(layers.buildings)) map.addLayer(layers.buildings);
     map.setView([lat, lon], 17, { animate: true });
-    const marker = markerIndex.buildings[id];
-    if (marker) setTimeout(() => marker.openPopup(), 300);
 }
 
 function focusSensor(id) {
@@ -881,8 +880,6 @@ function focusSensor(id) {
 
     if (!map.hasLayer(layers.sensors)) map.addLayer(layers.sensors);
     map.setView([lat, lon], 17, { animate: true });
-    const marker = markerIndex.sensors[id];
-    if (marker) setTimeout(() => marker.openPopup(), 300);
 }
 
 // ── Map highlight ─────────────────────────────────────────────
@@ -945,6 +942,7 @@ function selectRecord(id, opts = {}) {
     }
 
     renderSelectionBar();
+    if (isBuilding) renderSensorsList();
 }
 
 // ── Visible-in-map filter ─────────────────────────────────────
@@ -1409,10 +1407,14 @@ function closeDetailPanel() {
 
 function renderSelectionBar() {
     const bar = document.getElementById('selection-bar');
+    const card = document.getElementById('selected-building-card');
     if (!bar) return;
     const n = state.multiSelect.size;
 
     if (n > 1) {
+        if (card) { card.classList.add('hidden'); card.innerHTML = ''; }
+        const sc2 = document.getElementById('selected-sensor-card');
+        if (sc2) { sc2.classList.add('hidden'); sc2.innerHTML = ''; }
         const type = state.multiSelectType;
         const label = type === 'building' ? 'edificios' : 'sensores';
         bar.innerHTML = `
@@ -1428,29 +1430,101 @@ function renderSelectionBar() {
     }
 
     const id = n === 1 ? [...state.multiSelect][0] : state.selectedId;
-    if (!id) { bar.style.display = 'none'; return; }
-
-    const isBuilding = !!data._buildingsMap[id];
-    let name = '';
-    if (isBuilding) {
-        const b = data._buildingsMap[id];
-        name = b.name || b.short_name || '';
-    } else {
-        const s = (data.sensors ?? []).find(x => x.id === id);
-        name = s ? [s.system_id, s.system_name].filter(Boolean).join(' · ') : '';
+    if (!id) {
+        bar.style.display = 'none';
+        if (card) { card.classList.add('hidden'); card.innerHTML = ''; }
+        const sc = document.getElementById('selected-sensor-card');
+        if (sc) { sc.classList.add('hidden'); sc.innerHTML = ''; }
+        return;
     }
 
-    bar.innerHTML = `
-        <div class="selection-info">
-            <span class="selection-id">${esc(id)}</span>
-            ${name ? `<span class="selection-name">${esc(truncate(name, 38))}</span>` : ''}
+    const sensorCard = document.getElementById('selected-sensor-card');
+    bar.style.display = 'none';
+
+    const isBuilding = !!data._buildingsMap[id];
+    if (isBuilding) {
+        if (sensorCard) { sensorCard.classList.add('hidden'); sensorCard.innerHTML = ''; }
+        renderSelectedBuildingCard(data._buildingsMap[id]);
+    } else {
+        const s = (data.sensors ?? []).find(x => x.id === id);
+        const building = s && s.hos ? data._buildingsMap[s.hos] : null;
+        if (building) {
+            renderSelectedBuildingCard(building);
+        } else if (card) {
+            card.classList.add('hidden'); card.innerHTML = '';
+        }
+        if (s) renderSelectedSensorCard(s);
+        else if (sensorCard) { sensorCard.classList.add('hidden'); sensorCard.innerHTML = ''; }
+    }
+}
+
+function renderSelectedBuildingCard(b) {
+    const card = document.getElementById('selected-building-card');
+    if (!card || !b) return;
+
+    const sensors = data._sensorsByBuilding[b.id] ?? [];
+    const systemIds = [...new Set(sensors.map(s => s.system_id).filter(Boolean))];
+    const sysBadges = systemIds.map(sid =>
+        `<span class="sys-badge" style="background:${esc(getSystemColor(sid))}" title="${esc(sid)}">${esc(sid)}</span>`
+    ).join('');
+    const meta = [b.type, b.neighborhood, b.district_name || b.district_code, b.state]
+        .filter(Boolean).map(esc).join('<span class="meta-sep">·</span>');
+
+    card.classList.remove('hidden');
+    card.innerHTML = `
+        <div class="selection-card-main">
+            <div class="selection-card-icon">
+                ${b.image ? `<img src="${esc(b.image)}" alt="">` : '<span class="card-icon-emoji">&#127970;</span>'}
+            </div>
+            <div class="selection-card-info">
+                <div class="selection-card-kicker">Edificio seleccionado</div>
+                <div class="selection-card-title">${esc(b.id)} · ${esc(b.short_name || b.name || '')}</div>
+                <div class="selection-card-meta">${meta}</div>
+                <div class="selection-card-systems">
+                    ${sysBadges}
+                    <span class="sys-count">${sensors.length} sensor${sensors.length !== 1 ? 'es' : ''}</span>
+                </div>
+            </div>
+            <div class="selection-card-actions">
+                <button type="button" class="card-btn" onclick="editSelectedRecord()" title="Editar">&#9999;</button>
+                <button type="button" class="card-btn" onclick="zoomSelectedRecord()" title="Zoom">&#128205;</button>
+                <button type="button" class="card-btn card-btn-clear" onclick="clearSelection()" title="Limpiar">&#10005;</button>
+            </div>
         </div>
-        <div class="selection-actions">
-            <button class="sel-btn" onclick="editSelectedRecord()">&#9999; Editar</button>
-            <button class="sel-btn" onclick="zoomSelectedRecord()">&#128205; Zoom</button>
-            <button class="sel-btn sel-btn-clear" onclick="clearSelection()">&#10005; Limpiar</button>
-        </div>`;
-    bar.style.display = 'flex';
+    `;
+}
+
+function renderSelectedSensorCard(s) {
+    const card = document.getElementById('selected-sensor-card');
+    if (!card || !s) return;
+
+    const color = getSystemColor(s.system_id);
+    const meta = [s.system_name, s.type, s.ref_etra, s.neighborhood]
+        .filter(Boolean).map(esc).join('<span class="meta-sep">·</span>');
+
+    card.classList.remove('hidden');
+    card.innerHTML = `
+        <div class="selection-card-main">
+            <div class="selection-card-icon">
+                <div class="sys-icon-circle" style="background:${esc(color)}">${esc(s.system_id || '?')}</div>
+            </div>
+            <div class="selection-card-info">
+                <div class="selection-card-kicker">Sensor seleccionado</div>
+                <div class="selection-card-title">${esc(s.id)}</div>
+                <div class="selection-card-meta">${meta}</div>
+                <div class="selection-card-systems">
+                    <span class="sys-badge" style="background:${esc(color)}">${esc(s.system_id || '')}</span>
+                    <span class="sys-count">${esc(s.has_data || '-')}</span>
+                    ${s.district_name || s.district_code ? `<span class="meta-sep">·</span><span class="sys-count">${esc(s.district_name || s.district_code)}</span>` : ''}
+                </div>
+            </div>
+            <div class="selection-card-actions">
+                <button type="button" class="card-btn" onclick="editSelectedRecord()" title="Editar">&#9999;</button>
+                <button type="button" class="card-btn" onclick="zoomSelectedRecord()" title="Zoom">&#128205;</button>
+                <button type="button" class="card-btn card-btn-clear" onclick="clearSelection()" title="Limpiar">&#10005;</button>
+            </div>
+        </div>
+    `;
 }
 
 function clearSelection() {
@@ -1459,6 +1533,7 @@ function clearSelection() {
     clearMapHighlight();
     closeDetailPanel();
     clearMultiSelect();  // calls updateMultiSelectUI() → renderSelectionBar() → hides bar
+    renderSensorsList();
 }
 
 function editSelectedRecord() {
