@@ -5,7 +5,7 @@
 'use strict';
 
 let data = null;
-let map  = null;
+let map = null;
 
 const layers = {};
 
@@ -22,22 +22,24 @@ let filtered = { buildings: [], sensors: [], otherObjects: [] };
 const state = {
     sort: {
         buildings: { key: 'id', dir: 'asc' },
-        sensors:   { key: 'id', dir: 'asc' },
+        sensors: { key: 'id', dir: 'asc' },
     },
-    selectedId:      null,
-    onlyVisibleBld:  false,
-    onlyVisibleSns:  false,
-    multiSelect:     new Set(),
+    selectedId: null,
+    onlyVisibleBld: false,
+    onlyVisibleSns: false,
+    multiSelect: new Set(),
     multiSelectType: null,   // 'building' | 'sensor'
-    lastSelectedId:  null,
+    lastSelectedId: null,
 };
 
-let _hlLayer = null;
+let _hlLayer        = null;
+let _cityBounds     = null;
+let _layersControl  = null;
 
 // ── Helpers ─────────────────────────────────────────────────
 
 async function fetchJson(url, options) {
-    const res  = await fetch(url, options);
+    const res = await fetch(url, options);
     const text = await res.text();
     let json;
     try {
@@ -52,8 +54,8 @@ async function fetchJson(url, options) {
 function esc(v) {
     if (v == null) return '';
     return String(v)
-        .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
-        .replace(/"/g,'&quot;');
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
 }
 
 function getLat(item) { return item.lat ?? item.Latitud ?? null; }
@@ -90,35 +92,35 @@ function normalizeSystemId(value) {
 // ── System color palette ─────────────────────────────────────
 
 const SYSTEM_COLORS = {
-    S01:  '#ef4444', // RUIDO
-    S02:  '#92400e', // CONTAMINACIÓN EXTERIOR
-    S03:  '#7c3aed', // GAS RADON
-    S04:  '#0891b2', // AMBIENTE INTERIOR
-    S05:  '#ca8a04', // ELECTRICIDAD
-    S06:  '#2563eb', // AGUA
-    S07:  '#f97316', // GAS
+    S01: '#ef4444', // RUIDO
+    S02: '#92400e', // CONTAMINACIÓN EXTERIOR
+    S03: '#7c3aed', // GAS RADON
+    S04: '#0891b2', // AMBIENTE INTERIOR
+    S05: '#ca8a04', // ELECTRICIDAD
+    S06: '#2563eb', // AGUA
+    S07: '#f97316', // GAS
     S08A: '#b91c1c', // CALDERAS TEMP
     S08B: '#dc2626', // CALDERAS ACS
-    S09:  '#0ea5e9', // CLIMATIZACIÓN
-    S10:  '#6b7280', // CONTENEDORES
-    S11:  '#65a30d', // RIEGO
-    S12:  '#d97706', // POTENCIA SOLAR
+    S09: '#0ea5e9', // CLIMATIZACIÓN
+    S10: '#6b7280', // CONTENEDORES
+    S11: '#65a30d', // RIEGO
+    S12: '#d97706', // POTENCIA SOLAR
     S13A: '#059669', // SOSTENIBILIDAD EDIFICIOS
     S13B: '#10b981', // ACELERÓMETROS
     S14A: '#0284c7', // METEO
     S14B: '#38bdf8', // SENSOR PIRA
-    S15:  '#d946ef', // PRESENCIA
-    S16:  '#8b5cf6', // IPS
-    S17:  '#ec4899', // AFORO
-    S18:  '#f43f5e', // TRAFICO
-    S19:  '#fb923c', // DETECCIÓN FUGAS GAS
-    S20:  '#3b82f6', // INUNDACION
-    S21:  '#6366f1', // DETECCIÓN HUMOS
-    S22:  '#14b8a6', // TRANSPORTE PUBLICO
-    S23:  '#84cc16', // PARKING
-    S24:  '#e11d48', // TRAFICO CAM
-    S25:  '#78716c', // ASCENSORES
-    SIP:  '#94a3b8', // SENSOR IPS / desconocido
+    S15: '#d946ef', // PRESENCIA
+    S16: '#8b5cf6', // IPS
+    S17: '#ec4899', // AFORO
+    S18: '#f43f5e', // TRAFICO
+    S19: '#fb923c', // DETECCIÓN FUGAS GAS
+    S20: '#3b82f6', // INUNDACION
+    S21: '#6366f1', // DETECCIÓN HUMOS
+    S22: '#14b8a6', // TRANSPORTE PUBLICO
+    S23: '#84cc16', // PARKING
+    S24: '#e11d48', // TRAFICO CAM
+    S25: '#78716c', // ASCENSORES
+    SIP: '#94a3b8', // SENSOR IPS / desconocido
 };
 
 function getSystemColor(system_id) {
@@ -173,13 +175,13 @@ async function loadGeoJsonLayer(url, layerGroup, styleOpts, labelFields) {
         L.geoJSON(geojson, {
             style: styleOpts,
             onEachFeature(feature, leafletLayer) {
-                const props  = feature.properties ?? {};
-                const label  = labelFields.map(k => props[k]).find(v => v != null && v !== '')
+                const props = feature.properties ?? {};
+                const label = labelFields.map(k => props[k]).find(v => v != null && v !== '')
                     ?? props.NOM ?? props.NOMBRE ?? props.name ?? '—';
                 leafletLayer.bindTooltip(String(label), {
-                    permanent:  false,
-                    direction:  'center',
-                    className:  'boundary-label',
+                    permanent: false,
+                    direction: 'center',
+                    className: 'boundary-label',
                 });
                 leafletLayer.bindPopup(
                     `<div class="popup-title">${esc(String(label))}</div>`,
@@ -201,13 +203,13 @@ async function loadBoundaryLayers() {
         'data/geojson/hospitalet_districtes.geojson',
         layers.districts,
         {
-            pane:        'districtsPane',
-            color:       '#1e40af',
-            weight:      3,
-            opacity:     0.85,
-            fillColor:   '#3b82f6',
+            pane: 'districtsPane',
+            color: '#1e40af',
+            weight: 3,
+            opacity: 0.85,
+            fillColor: '#3b82f6',
             fillOpacity: 0.04,
-            dashArray:   '8 5',
+            dashArray: '8 5',
         },
         ['NOM_DIS', 'NOM', 'DISTRICTE', 'NOMBRE_DIS', 'name']
     );
@@ -216,15 +218,28 @@ async function loadBoundaryLayers() {
         'data/geojson/hospitalet_barris.geojson',
         layers.neighborhoods,
         {
-            pane:        'neighborhoodsPane',
-            color:       '#15803d',
-            weight:      2,
-            opacity:     0.8,
-            fillColor:   '#22c55e',
+            pane: 'neighborhoodsPane',
+            color: '#15803d',
+            weight: 2,
+            opacity: 0.8,
+            fillColor: '#22c55e',
             fillOpacity: 0.06,
         },
         ['NOM_BAR', 'NOM', 'BARRI', 'NOMBRE_BAR', 'name']
     );
+
+    try {
+        const res = await fetch('data/geojson/hospitalet_boundary.geojson');
+        if (res.ok) {
+            const geojson = await res.json();
+            const geoLayer = L.geoJSON(geojson, {
+                style: { color: '#1e3a5f', weight: 2.5, opacity: 0.85, fill: false, dashArray: '6 4' }
+            });
+            const b = geoLayer.getBounds();
+            if (b.isValid()) _cityBounds = b;
+            geoLayer.addTo(layers.cityBoundary);
+        }
+    } catch {}
 }
 
 // ── Load data ────────────────────────────────────────────────
@@ -247,6 +262,7 @@ async function loadData() {
     normalizeData();
     initMap();
     await loadBoundaryLayers();   // GeoJSON polygons; fallback to point markers if absent
+    requestAnimationFrame(() => { map.invalidateSize(false); zoomToCity(); });
     buildFilters();
     renderSystemsLegend();
     applyFilters();
@@ -281,13 +297,33 @@ function normalizeData() {
 
 function initMapPanes() {
     // Lower z-index = drawn first (bottom); higher = drawn on top
-    map.createPane('districtsPane').style.zIndex     = 200;
+    map.createPane('districtsPane').style.zIndex = 200;
     map.createPane('neighborhoodsPane').style.zIndex = 250;
-    map.createPane('streetsPane').style.zIndex       = 275;
-    map.createPane('buildingsPane').style.zIndex     = 300;
-    map.createPane('sensorsPane').style.zIndex       = 420;
+    map.createPane('streetsPane').style.zIndex = 275;
+    map.createPane('buildingsPane').style.zIndex = 300;
+    map.createPane('sensorsPane').style.zIndex = 420;
     // pointer-events are NOT disabled at pane level; interactive:false
     // on individual background circles handles click pass-through.
+}
+
+// ── City zoom ────────────────────────────────────────────────
+
+function zoomToCity() {
+    if (_cityBounds?.isValid()) {
+        map.fitBounds(_cityBounds, { padding: [30, 30], animate: true });
+        return;
+    }
+    let b = null;
+    layers.districts.eachLayer(l => {
+        try {
+            const lb = l.getBounds?.();
+            const ll = l.getLatLng?.();
+            if (lb?.isValid()) b = b ? b.extend(lb) : lb;
+            else if (ll) b = b ? b.extend(ll) : L.latLngBounds([ll, ll]);
+        } catch {}
+    });
+    if (b?.isValid()) map.fitBounds(b, { padding: [30, 30], animate: true });
+    else map.setView([41.365, 2.105], 13, { animate: true });
 }
 
 // ── Map init ─────────────────────────────────────────────────
@@ -296,7 +332,7 @@ function initMap() {
     map = L.map('map').setView([41.365, 2.105], 13);
 
     // CartoDB Positron — clean, neutral basemap
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    layers.basemap = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
         attribution: '© <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
         subdomains: 'abcd',
         maxZoom: 19
@@ -304,19 +340,41 @@ function initMap() {
 
     initMapPanes();
 
+    layers.cityBoundary  = L.layerGroup();           // OFF by default; populated async
     layers.districts     = L.layerGroup().addTo(map);
     layers.neighborhoods = L.layerGroup().addTo(map);
     layers.streets       = L.layerGroup();           // OFF by default
     layers.buildings     = L.layerGroup().addTo(map);
     layers.sensors       = L.layerGroup().addTo(map);
 
-    L.control.layers(null, {
-        'Distritos':    layers.districts,
-        'Barrios':      layers.neighborhoods,
-        'Calles':       layers.streets,
-        'Edificios':    layers.buildings,
-        'Sensores':     layers.sensors,
+    _layersControl = L.control.layers(null, {
+        'Límite ciudad': layers.cityBoundary,
+        'Mapa de fondo': layers.basemap,
+        'Distritos':     layers.districts,
+        'Barrios':       layers.neighborhoods,
+        'Calles':        layers.streets,
+        'Edificios':     layers.buildings,
+        'Sensores':      layers.sensors,
     }, { collapsed: false, position: 'topright' }).addTo(map);
+
+    const CityZoom = L.Control.extend({
+        onAdd() {
+            const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
+            const btn = L.DomUtil.create('a', '', container);
+            btn.href = '#';
+            btn.title = 'Ver toda la ciudad';
+            btn.innerHTML = '⌂';
+            btn.style.fontSize = '16px';
+            btn.style.lineHeight = '26px';
+            L.DomEvent.disableClickPropagation(btn);
+            L.DomEvent.on(btn, 'click', e => {
+                L.DomEvent.preventDefault(e);
+                zoomToCity();
+            });
+            return container;
+        }
+    });
+    new CityZoom({ position: 'topleft' }).addTo(map);
 
     map.on('moveend zoomend', () => {
         if (state.onlyVisibleBld) renderBuildingsList();
@@ -351,11 +409,11 @@ function buildFilters() {
     const zones = [...new Set((data.buildings ?? []).map(b => b.zone).filter(Boolean))].sort();
     populateSelect('filter-zone', zones.map(z => ({ value: z, label: z })));
 
-    ['filter-district','filter-neighborhood','filter-system','filter-type','filter-zone','filter-search']
+    ['filter-district', 'filter-neighborhood', 'filter-system', 'filter-type', 'filter-zone', 'filter-search']
         .forEach(id => {
             const el = document.getElementById(id);
             el.addEventListener('change', applyFilters);
-            el.addEventListener('input',  applyFilters);
+            el.addEventListener('input', applyFilters);
         });
 }
 
@@ -363,14 +421,14 @@ function populateSelect(id, options) {
     const sel = document.getElementById(id);
     options.forEach(opt => {
         const el = document.createElement('option');
-        el.value       = opt.value;
+        el.value = opt.value;
         el.textContent = opt.label;
         sel.appendChild(el);
     });
 }
 
 function resetFilters() {
-    ['filter-district','filter-neighborhood','filter-system','filter-type','filter-zone'].forEach(id => {
+    ['filter-district', 'filter-neighborhood', 'filter-system', 'filter-type', 'filter-zone'].forEach(id => {
         document.getElementById(id).value = '';
     });
     document.getElementById('filter-search').value = '';
@@ -380,25 +438,25 @@ function resetFilters() {
 // ── Apply filters ────────────────────────────────────────────
 
 function applyFilters() {
-    const district     = document.getElementById('filter-district').value;
+    const district = document.getElementById('filter-district').value;
     const neighborhood = document.getElementById('filter-neighborhood').value;
-    const system       = document.getElementById('filter-system').value;
-    const type         = document.getElementById('filter-type').value;
-    const zone         = document.getElementById('filter-zone').value;
-    const search       = document.getElementById('filter-search').value.toLowerCase().trim();
+    const system = document.getElementById('filter-system').value;
+    const type = document.getElementById('filter-type').value;
+    const zone = document.getElementById('filter-zone').value;
+    const search = document.getElementById('filter-search').value.toLowerCase().trim();
 
     filtered.buildings = (data.buildings ?? []).filter(b => {
-        if (district     && b.district_code    !== district)    return false;
+        if (district && b.district_code !== district) return false;
         if (neighborhood && !sameKey(b.neighborhood_key, neighborhood)) return false;
-        if (type         && b.type             !== type)        return false;
-        if (zone         && b.zone             !== zone)        return false;
+        if (type && b.type !== type) return false;
+        if (zone && b.zone !== zone) return false;
         if (system) {
             const bSensors = data._sensorsByBuilding[b.id] ?? [];
             if (!bSensors.some(s => normalizeSystemId(s.system_id) === normalizeSystemId(system))) return false;
         }
         if (search) {
             const hay = [b.id, b.name, b.short_name, b.street_etra, b.neighborhood,
-                         b.thing_id, b.thing_token, b.state]
+            b.thing_id, b.thing_token, b.state]
                 .filter(Boolean).join(' ').toLowerCase();
             if (!hay.includes(search)) return false;
         }
@@ -406,14 +464,14 @@ function applyFilters() {
     });
 
     filtered.sensors = (data.sensors ?? []).filter(s => {
-        if (district     && s.district_code    !== district)    return false;
+        if (district && s.district_code !== district) return false;
         if (neighborhood && !sameKey(s.neighborhood_key, neighborhood)) return false;
-        if (system       && normalizeSystemId(s.system_id) !== normalizeSystemId(system)) return false;
-        if (type         && s.type             !== type)        return false;
-        if (zone         && s.zone             !== zone)        return false;
+        if (system && normalizeSystemId(s.system_id) !== normalizeSystemId(system)) return false;
+        if (type && s.type !== type) return false;
+        if (zone && s.zone !== zone) return false;
         if (search) {
             const hay = [s.id, s.hos, s.building_name, s.system_name,
-                         s.ref_etra, s.thing_id, s.thing_token, s.cu_old, s.neighborhood]
+            s.ref_etra, s.thing_id, s.thing_token, s.cu_old, s.neighborhood]
                 .filter(Boolean).join(' ').toLowerCase();
             if (!hay.includes(search)) return false;
         }
@@ -441,16 +499,16 @@ function renderMarkers() {
     layers.streets.clearLayers();
     // GeoJSON boundary layers are static — only clear/re-render when using point fallback
     if (!geoJsonLoaded.neighborhoods) layers.neighborhoods.clearLayers();
-    if (!geoJsonLoaded.districts)     layers.districts.clearLayers();
+    if (!geoJsonLoaded.districts) layers.districts.clearLayers();
     markerIndex.buildings = {};
-    markerIndex.sensors   = {};
+    markerIndex.sensors = {};
 
     const sensorOffsets = offsetOverlappingSensors(filtered.sensors);
 
     filtered.buildings.forEach(b => renderBuildingMarker(b));
-    filtered.sensors.forEach(s   => renderSensorMarker(s, sensorOffsets));
+    filtered.sensors.forEach(s => renderSensorMarker(s, sensorOffsets));
     if (!geoJsonLoaded.neighborhoods) renderNeighborhoodMarkers();
-    if (!geoJsonLoaded.districts)     renderDistrictMarkers();
+    if (!geoJsonLoaded.districts) renderDistrictMarkers();
     renderStreetMarkers();
 }
 
@@ -460,19 +518,19 @@ function renderBuildingMarker(b) {
     const lat = getLat(b), lon = getLon(b);
     if (lat == null || lon == null) return;
 
-    const sCount  = (data._sensorsByBuilding[b.id] ?? []).length;
+    const sCount = (data._sensorsByBuilding[b.id] ?? []).length;
     const hasData = (b.has_data ?? '').toUpperCase();
 
     let statusCls = 'bm-unknown';
-    if (hasData === 'OK')        statusCls = 'bm-ok';
+    if (hasData === 'OK') statusCls = 'bm-ok';
     else if (hasData === 'SIN DATOS') statusCls = 'bm-nodata';
 
     const labelText = getBuildingCode(b) || b.id || '';
     const icon = L.divIcon({
         className: 'bm-wrap',
         html: `<div class="building-marker ${statusCls}"></div><div class="building-label">${esc(labelText)}</div>`,
-        iconSize:    [18, 18],
-        iconAnchor:  [9, 9],
+        iconSize: [18, 18],
+        iconAnchor: [9, 9],
         popupAnchor: [0, -11],
     });
 
@@ -492,11 +550,11 @@ function renderSensorMarker(s, offsets) {
     const color = getSystemColor(s.system_id);
 
     const marker = L.circleMarker([pos.lat, pos.lon], {
-        pane:        'sensorsPane',
-        radius:      6,
-        fillColor:   color,
-        color:       '#fff',
-        weight:      1.5,
+        pane: 'sensorsPane',
+        radius: 6,
+        fillColor: color,
+        color: '#fff',
+        weight: 1.5,
         fillOpacity: 0.9,
     });
 
@@ -519,11 +577,11 @@ function renderNeighborhoodMarkers() {
 
         // Large transparent circle — non-interactive (pass clicks through)
         L.circleMarker([lat, lon], {
-            pane:        'neighborhoodsPane',
-            radius:      32,
-            fillColor:   '#22c55e',
-            color:       '#15803d',
-            weight:      2,
+            pane: 'neighborhoodsPane',
+            radius: 32,
+            fillColor: '#22c55e',
+            color: '#15803d',
+            weight: 2,
             fillOpacity: 0.07,
             interactive: false,
         }).addTo(layers.neighborhoods);
@@ -532,7 +590,7 @@ function renderNeighborhoodMarkers() {
         const icon = L.divIcon({
             className: '',
             html: `<div class="neighborhood-label">${esc(o.name)}</div>`,
-            iconAnchor:  [0, 0],
+            iconAnchor: [0, 0],
             popupAnchor: [0, -6],
         });
         L.marker([lat, lon], { icon, pane: 'neighborhoodsPane' })
@@ -552,13 +610,13 @@ function renderDistrictMarkers() {
 
         // Dashed boundary circle — non-interactive
         L.circleMarker([lat, lon], {
-            pane:        'districtsPane',
-            radius:      60,
-            fillColor:   '#3b82f6',
-            color:       '#1e40af',
-            weight:      3,
+            pane: 'districtsPane',
+            radius: 60,
+            fillColor: '#3b82f6',
+            color: '#1e40af',
+            weight: 3,
             fillOpacity: 0.03,
-            dashArray:   '8 5',
+            dashArray: '8 5',
             interactive: false,
         }).addTo(layers.districts);
 
@@ -568,7 +626,7 @@ function renderDistrictMarkers() {
         const icon = L.divIcon({
             className: '',
             html: `<div class="district-label">${esc(label.trim())}</div>`,
-            iconAnchor:  [0, 0],
+            iconAnchor: [0, 0],
             popupAnchor: [0, -8],
         });
         L.marker([lat, lon], { icon, pane: 'districtsPane' })
@@ -587,20 +645,20 @@ function renderStreetMarkers() {
         if (lat == null || lon == null) return;
 
         const marker = L.circleMarker([lat, lon], {
-            pane:        'streetsPane',
-            radius:      5,
-            fillColor:   '#8b5cf6',
-            color:       '#6d28d9',
-            weight:      1,
+            pane: 'streetsPane',
+            radius: 5,
+            fillColor: '#8b5cf6',
+            color: '#6d28d9',
+            weight: 1,
             fillOpacity: 0.75,
         });
 
         // Permanent tooltip with street name
         marker.bindTooltip(esc(o.name), {
-            permanent:  false,
-            direction:  'top',
-            offset:     [0, -6],
-            className:  'street-tooltip',
+            permanent: false,
+            direction: 'top',
+            offset: [0, -6],
+            className: 'street-tooltip',
         });
 
         marker.bindPopup(otherPopup(o), { maxWidth: 260 });
@@ -622,7 +680,7 @@ function rowMono(label, value) {
 
 function buildingPopup(b, sCount) {
     const hasData = b.has_data ?? '—';
-    const color   = hasData === 'OK' ? '#16a34a' : '#64748b';
+    const color = hasData === 'OK' ? '#16a34a' : '#64748b';
     return `
         <div class="popup-title">${esc(b.name)}</div>
         <table class="popup-table">
@@ -682,7 +740,7 @@ function districtPopup(o) {
         <div class="popup-title">${esc(o.name)}</div>
         <table class="popup-table">
             ${cat ? row('Edificios', cat.building_count) : ''}
-            ${cat ? row('Sensores',  cat.sensor_count)  : ''}
+            ${cat ? row('Sensores', cat.sensor_count) : ''}
             ${rowMono('ThingID', o.thing_id)}
         </table>`;
 }
@@ -690,11 +748,11 @@ function districtPopup(o) {
 // ── Summary cards ────────────────────────────────────────────
 
 function renderSummary() {
-    document.getElementById('count-buildings').textContent     = filtered.buildings.length;
-    document.getElementById('count-sensors').textContent       = filtered.sensors.length;
+    document.getElementById('count-buildings').textContent = filtered.buildings.length;
+    document.getElementById('count-sensors').textContent = filtered.sensors.length;
     document.getElementById('count-neighborhoods').textContent = (data.catalogs?.neighborhoods ?? []).length;
-    document.getElementById('count-systems').textContent       = (data.catalogs?.systems ?? []).length;
-    document.getElementById('count-qa').textContent            = (data.qa?.findings ?? []).length;
+    document.getElementById('count-systems').textContent = (data.catalogs?.systems ?? []).length;
+    document.getElementById('count-qa').textContent = (data.qa?.findings ?? []).length;
 }
 
 // ── Buildings list ───────────────────────────────────────────
@@ -706,7 +764,7 @@ function renderBuildingsList() {
     _lastBuildingRecords = records;
 
     const total = (data.buildings ?? []).length;
-    const filt  = filtered.buildings.length;
+    const filt = filtered.buildings.length;
     document.getElementById('buildings-info').textContent = state.onlyVisibleBld
         ? `${records.length} visibles · ${filt} filtrados de ${total}`
         : `${filt} de ${total} edificios`;
@@ -716,8 +774,8 @@ function renderBuildingsList() {
     const tbody = document.getElementById('list-tbody');
     tbody.innerHTML = '';
     records.forEach(b => {
-        const sCount    = (data._sensorsByBuilding[b.id] ?? []).length;
-        const hasData   = (b.has_data ?? '').toUpperCase();
+        const sCount = (data._sensorsByBuilding[b.id] ?? []).length;
+        const hasData = (b.has_data ?? '').toUpperCase();
         const dataColor = hasData === 'OK' ? '#16a34a' : '#94a3b8';
         const tr = document.createElement('tr');
         tr.dataset.rid = b.id;
@@ -759,7 +817,7 @@ function renderSensorsList() {
     if (limited) records = records.slice(0, SENSOR_LIMIT);
 
     const total = (data.sensors ?? []).length;
-    const filt  = filtered.sensors.length;
+    const filt = filtered.sensors.length;
     document.getElementById('sensors-info').textContent = state.onlyVisibleSns
         ? `${records.length} visibles · ${filt} filtrados de ${total}${limited ? ' (límite 500)' : ''}`
         : `${filt} de ${total} sensores${limited ? ' (mostrando 500)' : ''}`;
@@ -769,8 +827,8 @@ function renderSensorsList() {
     const tbody = document.getElementById('sensors-tbody');
     tbody.innerHTML = '';
     records.forEach(s => {
-        const color     = getSystemColor(s.system_id);
-        const hasData   = (s.has_data ?? '').toUpperCase();
+        const color = getSystemColor(s.system_id);
+        const hasData = (s.has_data ?? '').toUpperCase();
         const dataColor = hasData === 'OK' ? '#16a34a' : '#94a3b8';
         const tr = document.createElement('tr');
         tr.dataset.rid = s.id;
@@ -837,10 +895,10 @@ function highlightMapRecord(id, type) {
     if (!m) return;
     _hlLayer = L.circleMarker(m.getLatLng(), {
         pane: 'sensorsPane',
-        radius:      type === 'building' ? 18 : 14,
-        color:       '#f59e0b',
-        weight:      3,
-        fillColor:   '#fde68a',
+        radius: type === 'building' ? 18 : 14,
+        color: '#f59e0b',
+        weight: 3,
+        fillColor: '#fde68a',
         fillOpacity: 0.45,
         interactive: false,
     }).addTo(map);
@@ -871,8 +929,6 @@ function selectRecord(id, opts = {}) {
             const btn = document.querySelector('[data-tab="tab-buildings"]');
             if (btn && !document.getElementById('tab-buildings').classList.contains('active'))
                 showTab(btn, 'tab-buildings');
-        } else {
-            focusBuilding(id);
         }
     } else {
         const s = (data.sensors ?? []).find(x => x.id === id);
@@ -882,8 +938,6 @@ function selectRecord(id, opts = {}) {
                 const btn = document.querySelector('[data-tab="tab-sensors"]');
                 if (btn && !document.getElementById('tab-sensors').classList.contains('active'))
                     showTab(btn, 'tab-sensors');
-            } else {
-                focusSensor(id);
             }
         }
     }
@@ -928,7 +982,7 @@ function updateSortIcons(theadId, sortState) {
 // ── Panel resizer ─────────────────────────────────────────────
 
 function initPanelResizer() {
-    const panel  = document.querySelector('.right-panel');
+    const panel = document.querySelector('.right-panel');
     const handle = document.getElementById('panel-resizer');
     if (!panel || !handle) return;
 
@@ -995,7 +1049,7 @@ function initTables() {
         th.addEventListener('click', e => {
             if (e.target.classList.contains('col-resizer')) return;
             const key = th.dataset.sort;
-            const s   = state.sort.buildings;
+            const s = state.sort.buildings;
             s.dir = (s.key === key && s.dir === 'asc') ? 'desc' : 'asc';
             s.key = key;
             renderBuildingsList();
@@ -1007,7 +1061,7 @@ function initTables() {
         th.addEventListener('click', e => {
             if (e.target.classList.contains('col-resizer')) return;
             const key = th.dataset.sort;
-            const s   = state.sort.sensors;
+            const s = state.sort.sensors;
             s.dir = (s.key === key && s.dir === 'asc') ? 'desc' : 'asc';
             s.key = key;
             renderSensorsList();
@@ -1035,10 +1089,10 @@ function renderQA() {
     const findings = data.qa?.findings ?? [];
 
     const bySeverity = {};
-    const byType     = {};
+    const byType = {};
     findings.forEach(f => {
         bySeverity[f.severity] = (bySeverity[f.severity] ?? 0) + 1;
-        byType[f.type]         = (byType[f.type]         ?? 0) + 1;
+        byType[f.type] = (byType[f.type] ?? 0) + 1;
     });
 
     document.getElementById('qa-severity-badges').innerHTML = Object.entries(bySeverity)
@@ -1075,7 +1129,7 @@ function renderQARows(findings) {
             .join('<br>');
         const tr = document.createElement('tr');
         tr.dataset.severity = f.severity;
-        tr.dataset.type     = f.type;
+        tr.dataset.type = f.type;
         tr.innerHTML = `
             <td><span class="badge badge-${(f.severity ?? 'info').toLowerCase()}">${esc(f.severity)}</span></td>
             <td class="qa-type-label" title="${esc(f.type)}">${esc(f.type)}</td>
@@ -1086,11 +1140,11 @@ function renderQARows(findings) {
 }
 
 function filterQA() {
-    const sev  = document.getElementById('qa-filter-severity').value;
+    const sev = document.getElementById('qa-filter-severity').value;
     const type = document.getElementById('qa-filter-type').value;
     document.querySelectorAll('#qa-tbody tr').forEach(tr => {
-        const sevMatch  = !sev  || tr.dataset.severity === sev;
-        const typeMatch = !type || tr.dataset.type     === type;
+        const sevMatch = !sev || tr.dataset.severity === sev;
+        const typeMatch = !type || tr.dataset.type === type;
         tr.style.display = sevMatch && typeMatch ? '' : 'none';
     });
 }
@@ -1098,12 +1152,12 @@ function filterQA() {
 // ── Systems legend ────────────────────────────────────────────
 
 const LEGEND_SYSTEMS = [
-    ['S01','RUIDO'],   ['S02','CONTAM. EXT.'], ['S03','GAS RADÓN'],
-    ['S04','AMBIENTE'],['S05','ELECTRIC.'],    ['S06','AGUA'],
-    ['S07','GAS'],     ['S08A','CALDERAS'],    ['S09','CLIMAT.'],
-    ['S13A','SOSTENIB.'],['S14A','METEO'],     ['S15','PRESENCIA'],
-    ['S19','FUGAS GAS'],['S20','INUNDACIÓN'],  ['S21','HUMOS'],
-    ['S22','TRANS. PÚB.'],
+    ['S01', 'RUIDO'], ['S02', 'CONTAM. EXT.'], ['S03', 'GAS RADÓN'],
+    ['S04', 'AMBIENTE'], ['S05', 'ELECTRIC.'], ['S06', 'AGUA'],
+    ['S07', 'GAS'], ['S08A', 'CALDERAS'], ['S09', 'CLIMAT.'],
+    ['S13A', 'SOSTENIB.'], ['S14A', 'METEO'], ['S15', 'PRESENCIA'],
+    ['S19', 'FUGAS GAS'], ['S20', 'INUNDACIÓN'], ['S21', 'HUMOS'],
+    ['S22', 'TRANS. PÚB.'],
 ];
 
 function renderSystemsLegend() {
@@ -1150,13 +1204,13 @@ loadData();
 // Module-level vars
 
 let _lastBuildingRecords = [];
-let _lastSensorRecords   = [];
-let _pendingCopyChanges  = null;
+let _lastSensorRecords = [];
+let _pendingCopyChanges = null;
 
 const editState = {
     entityType: null,   // 'sensor' | 'building'
-    ids:        [],     // single or bulk
-    bulk:       false,
+    ids: [],     // single or bulk
+    bulk: false,
 };
 
 // ── Catalog helpers ───────────────────────────────────────────
@@ -1242,32 +1296,32 @@ function dpSelect(field, label, options, currentValue) {
 function renderDetailForm(record, entityType) {
     const rows = [];
     if (entityType === 'sensor') {
-        rows.push(dpReadonly('ID',        record.id));
-        rows.push(dpReadonly('Tipo',      record.type));
-        rows.push(dpSelect  ('system_id',       'Sistema',       allSystems(),       record.system_id));
-        rows.push(dpSelect  ('neighborhood_key','Barrio',        allNeighborhoods(), record.neighborhood_key));
-        rows.push(dpSelect  ('district_code',   'Distrito',      allDistricts(),     record.district_code));
-        rows.push(dpSelect  ('hos',             'Edificio HOS',  allBuildings(),     record.hos));
-        rows.push(dpText    ('ref_etra',        'Calle',         record.ref_etra));
-        rows.push(dpNumber  ('lat',             'Latitud',       record.lat));
-        rows.push(dpNumber  ('lon',             'Longitud',      record.lon));
-        rows.push(dpText    ('thing_id',        'ThingID',       record.thing_id));
-        rows.push(dpText    ('thing_token',     'ThingToken',    record.thing_token));
-        rows.push(dpTextarea('observaciones',   'Observaciones', record.observaciones));
+        rows.push(dpReadonly('ID', record.id));
+        rows.push(dpReadonly('Tipo', record.type));
+        rows.push(dpSelect('system_id', 'Sistema', allSystems(), record.system_id));
+        rows.push(dpSelect('neighborhood_key', 'Barrio', allNeighborhoods(), record.neighborhood_key));
+        rows.push(dpSelect('district_code', 'Distrito', allDistricts(), record.district_code));
+        rows.push(dpSelect('hos', 'Edificio HOS', allBuildings(), record.hos));
+        rows.push(dpText('ref_etra', 'Calle', record.ref_etra));
+        rows.push(dpNumber('lat', 'Latitud', record.lat));
+        rows.push(dpNumber('lon', 'Longitud', record.lon));
+        rows.push(dpText('thing_id', 'ThingID', record.thing_id));
+        rows.push(dpText('thing_token', 'ThingToken', record.thing_token));
+        rows.push(dpTextarea('observaciones', 'Observaciones', record.observaciones));
     } else {
-        rows.push(dpReadonly('ID',              record.id));
-        rows.push(dpText    ('short_name',      'Nombre corto',  record.short_name));
-        rows.push(dpText    ('description',     'Descripción',   record.description));
-        rows.push(dpText    ('type',            'Tipo',          record.type));
-        rows.push(dpText    ('zone',            'Zona',          record.zone));
-        rows.push(dpSelect  ('neighborhood_key','Barrio',        allNeighborhoods(), record.neighborhood_key));
-        rows.push(dpSelect  ('district_code',   'Distrito',      allDistricts(),     record.district_code));
-        rows.push(dpText    ('street_etra',     'Calle',         record.street_etra));
-        rows.push(dpNumber  ('lat',             'Latitud',       record.lat));
-        rows.push(dpNumber  ('lon',             'Longitud',      record.lon));
-        rows.push(dpText    ('thing_id',        'ThingID',       record.thing_id));
-        rows.push(dpText    ('thing_token',     'ThingToken',    record.thing_token));
-        rows.push(dpTextarea('observaciones',   'Observaciones', record.observaciones));
+        rows.push(dpReadonly('ID', record.id));
+        rows.push(dpText('short_name', 'Nombre corto', record.short_name));
+        rows.push(dpText('description', 'Descripción', record.description));
+        rows.push(dpText('type', 'Tipo', record.type));
+        rows.push(dpText('zone', 'Zona', record.zone));
+        rows.push(dpSelect('neighborhood_key', 'Barrio', allNeighborhoods(), record.neighborhood_key));
+        rows.push(dpSelect('district_code', 'Distrito', allDistricts(), record.district_code));
+        rows.push(dpText('street_etra', 'Calle', record.street_etra));
+        rows.push(dpNumber('lat', 'Latitud', record.lat));
+        rows.push(dpNumber('lon', 'Longitud', record.lon));
+        rows.push(dpText('thing_id', 'ThingID', record.thing_id));
+        rows.push(dpText('thing_token', 'ThingToken', record.thing_token));
+        rows.push(dpTextarea('observaciones', 'Observaciones', record.observaciones));
     }
     document.getElementById('dp-body').innerHTML = `<form id="dp-form">${rows.join('')}</form>`;
 
@@ -1279,15 +1333,15 @@ function renderBulkForm(entityType) {
     const note = `<p class="dp-bulk-note">Los campos en blanco no se modificarán.</p>`;
     const rows = [note];
     if (entityType === 'sensor') {
-        rows.push(dpSelect('system_id',       'Sistema',      allSystems(),      ''));
-        rows.push(dpSelect('neighborhood_key','Barrio',       allNeighborhoods(),''));
-        rows.push(dpSelect('district_code',   'Distrito',     allDistricts(),    ''));
-        rows.push(dpSelect('hos',             'Edificio HOS', allBuildings(),    ''));
+        rows.push(dpSelect('system_id', 'Sistema', allSystems(), ''));
+        rows.push(dpSelect('neighborhood_key', 'Barrio', allNeighborhoods(), ''));
+        rows.push(dpSelect('district_code', 'Distrito', allDistricts(), ''));
+        rows.push(dpSelect('hos', 'Edificio HOS', allBuildings(), ''));
     } else {
-        rows.push(dpSelect('neighborhood_key','Barrio',   allNeighborhoods(),''));
-        rows.push(dpSelect('district_code',   'Distrito', allDistricts(),    ''));
-        rows.push(dpText  ('type',            'Tipo',     ''));
-        rows.push(dpText  ('zone',            'Zona',     ''));
+        rows.push(dpSelect('neighborhood_key', 'Barrio', allNeighborhoods(), ''));
+        rows.push(dpSelect('district_code', 'Distrito', allDistricts(), ''));
+        rows.push(dpText('type', 'Tipo', ''));
+        rows.push(dpText('zone', 'Zona', ''));
     }
     document.getElementById('dp-body').innerHTML = `<form id="dp-form">${rows.join('')}</form>`;
     const copyBtn = document.getElementById('dp-copy-btn');
@@ -1306,7 +1360,7 @@ function openDetailPanel(id) {
     if (!record) return;
 
     editState.entityType = entityType;
-    editState.ids  = [id];
+    editState.ids = [id];
     editState.bulk = false;
     _pendingCopyChanges = null;
 
@@ -1327,7 +1381,7 @@ function openBulkEdit(type) {
     if (!ids.length) return;
 
     editState.entityType = type;
-    editState.ids  = ids;
+    editState.ids = ids;
     editState.bulk = true;
     _pendingCopyChanges = null;
 
@@ -1344,7 +1398,7 @@ function openBulkEdit(type) {
 function closeDetailPanel() {
     document.getElementById('detail-panel').classList.remove('open');
     editState.entityType = null;
-    editState.ids  = [];
+    editState.ids = [];
     editState.bulk = false;
     _pendingCopyChanges = null;
 }
@@ -1357,7 +1411,7 @@ function renderSelectionBar() {
     const n = state.multiSelect.size;
 
     if (n > 1) {
-        const type  = state.multiSelectType;
+        const type = state.multiSelectType;
         const label = type === 'building' ? 'edificios' : 'sensores';
         bar.innerHTML = `
             <div class="selection-info">
@@ -1416,7 +1470,7 @@ function editSelectedRecord() {
 }
 
 function zoomSelectedRecord() {
-    const n  = state.multiSelect.size;
+    const n = state.multiSelect.size;
     const id = n === 1 ? [...state.multiSelect][0] : state.selectedId;
     if (!id) return;
     if (data._buildingsMap[id]) focusBuilding(id);
@@ -1549,10 +1603,10 @@ function showCopyFromBuilding() {
     const sensor = (data.sensors ?? []).find(s => s.id === editState.ids[0]);
     const FIELDS = [
         { key: 'neighborhood_key', label: 'Barrio' },
-        { key: 'district_code',    label: 'Distrito' },
-        { key: 'street_etra',      label: 'Calle' },
-        { key: 'lat',              label: 'Latitud' },
-        { key: 'lon',              label: 'Longitud' },
+        { key: 'district_code', label: 'Distrito' },
+        { key: 'street_etra', label: 'Calle' },
+        { key: 'lat', label: 'Latitud' },
+        { key: 'lon', label: 'Longitud' },
     ];
 
     _pendingCopyChanges = FIELDS
@@ -1621,7 +1675,7 @@ function rangeMultiSelect(id, type, records) {
         state.multiSelect.clear();
     state.multiSelectType = type;
 
-    const ids  = records.map(r => r.id);
+    const ids = records.map(r => r.id);
     const last = state.lastSelectedId ? ids.indexOf(state.lastSelectedId) : -1;
     const curr = ids.indexOf(id);
     if (last === -1) {

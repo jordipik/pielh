@@ -32,7 +32,9 @@ const state = {
     lastSelectedId:  null,
 };
 
-let _hlLayer = null;
+let _hlLayer        = null;
+let _cityBounds     = null;
+let _layersControl  = null;
 
 // ── Helpers ─────────────────────────────────────────────────
 
@@ -225,6 +227,19 @@ async function loadBoundaryLayers() {
         },
         ['NOM_BAR', 'NOM', 'BARRI', 'NOMBRE_BAR', 'name']
     );
+
+    try {
+        const res = await fetch('data/geojson/hospitalet_boundary.geojson');
+        if (res.ok) {
+            const geojson = await res.json();
+            const geoLayer = L.geoJSON(geojson, {
+                style: { color: '#1e3a5f', weight: 2.5, opacity: 0.85, fill: false, dashArray: '6 4' }
+            });
+            const b = geoLayer.getBounds();
+            if (b.isValid()) _cityBounds = b;
+            geoLayer.addTo(layers.cityBoundary);
+        }
+    } catch {}
 }
 
 // ── Load data ────────────────────────────────────────────────
@@ -247,6 +262,7 @@ async function loadData() {
     normalizeData();
     initMap();
     await loadBoundaryLayers();   // GeoJSON polygons; fallback to point markers if absent
+    requestAnimationFrame(() => { map.invalidateSize(false); zoomToCity(); });
     buildFilters();
     renderSystemsLegend();
     applyFilters();
@@ -290,13 +306,33 @@ function initMapPanes() {
     // on individual background circles handles click pass-through.
 }
 
+// ── City zoom ────────────────────────────────────────────────
+
+function zoomToCity() {
+    if (_cityBounds?.isValid()) {
+        map.fitBounds(_cityBounds, { padding: [30, 30], animate: true });
+        return;
+    }
+    let b = null;
+    layers.districts.eachLayer(l => {
+        try {
+            const lb = l.getBounds?.();
+            const ll = l.getLatLng?.();
+            if (lb?.isValid()) b = b ? b.extend(lb) : lb;
+            else if (ll) b = b ? b.extend(ll) : L.latLngBounds([ll, ll]);
+        } catch {}
+    });
+    if (b?.isValid()) map.fitBounds(b, { padding: [30, 30], animate: true });
+    else map.setView([41.365, 2.105], 13, { animate: true });
+}
+
 // ── Map init ─────────────────────────────────────────────────
 
 function initMap() {
     map = L.map('map').setView([41.365, 2.105], 13);
 
     // CartoDB Positron — clean, neutral basemap
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    layers.basemap = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
         attribution: '© <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
         subdomains: 'abcd',
         maxZoom: 19
@@ -304,19 +340,56 @@ function initMap() {
 
     initMapPanes();
 
+    layers.cityBoundary  = L.layerGroup();           // OFF by default; populated async
     layers.districts     = L.layerGroup().addTo(map);
     layers.neighborhoods = L.layerGroup().addTo(map);
     layers.streets       = L.layerGroup();           // OFF by default
     layers.buildings     = L.layerGroup().addTo(map);
     layers.sensors       = L.layerGroup().addTo(map);
 
-    L.control.layers(null, {
-        'Distritos':    layers.districts,
-        'Barrios':      layers.neighborhoods,
-        'Calles':       layers.streets,
-        'Edificios':    layers.buildings,
-        'Sensores':     layers.sensors,
+    _layersControl = L.control.layers(null, {
+        'Límite ciudad': layers.cityBoundary,
+        'Mapa de fondo': layers.basemap,
+        'Distritos':     layers.districts,
+        'Barrios':       layers.neighborhoods,
+        'Calles':        layers.streets,
+        'Edificios':     layers.buildings,
+        'Sensores':      layers.sensors,
     }, { collapsed: false, position: 'topright' }).addTo(map);
+
+    const CityZoom = L.Control.extend({
+        onAdd() {
+            const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
+            const btn = L.DomUtil.create('a', '', container);
+            btn.href  = '#';
+            btn.title = 'Ver toda la ciudad';
+            btn.innerHTML = '⌂';
+            btn.style.fontSize   = '16px';
+            btn.style.lineHeight = '26px';
+            L.DomEvent.disableClickPropagation(btn);
+            L.DomEvent.on(btn, 'click', e => {
+                L.DomEvent.preventDefault(e);
+                map.invalidateSize(false);
+                if (_cityBounds?.isValid()) {
+                    map.fitBounds(_cityBounds, { padding: [30, 30], animate: true });
+                    return;
+                }
+                let b = null;
+                layers.districts.eachLayer(l => {
+                    try {
+                        const lb = l.getBounds?.();
+                        const ll = l.getLatLng?.();
+                        if (lb?.isValid()) b = b ? b.extend(lb) : lb;
+                        else if (ll) b = b ? b.extend(ll) : L.latLngBounds([ll, ll]);
+                    } catch {}
+                });
+                if (b?.isValid()) map.fitBounds(b, { padding: [30, 30], animate: true });
+                else map.setView([41.365, 2.105], 13, { animate: true });
+            });
+            return container;
+        }
+    });
+    new CityZoom({ position: 'topleft' }).addTo(map);
 
     map.on('moveend zoomend', () => {
         if (state.onlyVisibleBld) renderBuildingsList();
@@ -871,8 +944,6 @@ function selectRecord(id, opts = {}) {
             const btn = document.querySelector('[data-tab="tab-buildings"]');
             if (btn && !document.getElementById('tab-buildings').classList.contains('active'))
                 showTab(btn, 'tab-buildings');
-        } else {
-            focusBuilding(id);
         }
     } else {
         const s = (data.sensors ?? []).find(x => x.id === id);
@@ -882,8 +953,6 @@ function selectRecord(id, opts = {}) {
                 const btn = document.querySelector('[data-tab="tab-sensors"]');
                 if (btn && !document.getElementById('tab-sensors').classList.contains('active'))
                     showTab(btn, 'tab-sensors');
-            } else {
-                focusSensor(id);
             }
         }
     }
