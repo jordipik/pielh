@@ -17,7 +17,8 @@
   _populateDropdowns();
 
   setLoading('Inicializando tabla…');
-  TableView.init('table-container');
+  const _initialData = Filters.apply(Data.getAll('buildings'), 'buildings');
+  TableView.init('table-container', 'buildings', _initialData);
 
   TableView.onSelect((type, item) => {
     Details.render(type, item);

@@ -3,8 +3,6 @@ const TableView = (() => {
   let _table = null;
   let _currentType = 'buildings';
   let _onSelect = null;
-  let _built = false;
-  let _pending = null;
 
   const COLS = {
     buildings: [
@@ -52,37 +50,33 @@ const TableView = (() => {
     ]
   };
 
-  function init(containerId) {
+  function init(containerId, initialType, initialData) {
+    _currentType = initialType || 'buildings';
     _table = new Tabulator('#' + containerId, {
-      height: '100%',
       layout: 'fitDataFill',
       pagination: 'local',
       paginationSize: 50,
       paginationSizeSelector: [25, 50, 100, 200],
       movableColumns: true,
       selectable: 1,
-      columns: COLS.buildings,
-      rowClick(e, row) {
-        if (_onSelect) _onSelect(_currentType, row.getData());
-      },
-      tableBuilt() {
-        _built = true;
-        if (_pending) { _doSetData(_pending.type, _pending.data); _pending = null; }
-      }
+      renderVertical: 'basic',
+      columns: COLS[_currentType],
+      data: initialData || []
+    });
+    _table.on('rowClick', (e, row) => {
+      if (_onSelect) _onSelect(_currentType, row.getData());
     });
   }
 
   function onSelect(fn) { _onSelect = fn; }
 
-  function _doSetData(type, data) {
-    _currentType = type;
-    _table.setColumns(COLS[type] || COLS.buildings);
-    _table.setData(data);
-  }
-
-  function setData(type, data) {
-    if (!_built) { _pending = { type, data }; return; }
-    _doSetData(type, data);
+  async function setData(type, data) {
+    if (!_table) return;
+    if (type !== _currentType) {
+      _currentType = type;
+      await _table.setColumns(COLS[type] || COLS.buildings);
+    }
+    _table.replaceData(data);
   }
 
   function highlightRow(id) {
