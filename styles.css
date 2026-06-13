@@ -532,6 +532,13 @@ tr.row-fuera td { background: #fef2f2; color: #dc2626; }
     flex-shrink: 0;
 }
 
+.coord-cell {
+    font-family: monospace;
+    font-size: 11px;
+    color: #475569;
+    white-space: nowrap;
+}
+
 /* ── Popup system dot ───────────────────────────────────────── */
 
 .popup-sys-dot {

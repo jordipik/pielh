@@ -268,6 +268,7 @@ async function loadData() {
     applyFilters();
     renderQA();
     initTables();
+    renderEmptyBuildingCard();
 }
 
 // ── Normalize / index data ───────────────────────────────────
@@ -836,6 +837,8 @@ function renderSensorsList() {
         const tr = document.createElement('tr');
         tr.dataset.rid = s.id;
         if (s.id === state.selectedId) tr.classList.add('row-selected');
+        const street = s.raw?.Ed_Calle_ETRA || data._buildingsMap[s.hos]?.street_etra || '—';
+        const lat = getLat(s), lon = getLon(s);
         tr.innerHTML = `
             <td title="${esc(s.id)}">${esc(truncate(s.id, 18))}</td>
             <td>${esc(s.hos ?? '—')}</td>
@@ -844,6 +847,9 @@ function renderSensorsList() {
             </td>
             <td title="${esc(s.neighborhood)}">${esc(shortNeighborhood(s.neighborhood))}</td>
             <td title="${esc(s.ref_etra)}">${esc(truncate(s.ref_etra, 18))}</td>
+            <td title="${esc(street)}">${esc(truncate(street, 20))}</td>
+            <td class="coord-cell">${lat != null ? lat.toFixed(6) : '—'}</td>
+            <td class="coord-cell">${lon != null ? lon.toFixed(6) : '—'}</td>
             <td style="color:${dataColor};font-weight:600">${esc(s.has_data ?? '—')}</td>
         `;
         tr.addEventListener('click', e => {
@@ -924,10 +930,12 @@ function selectRecord(id, opts = {}) {
     if (isBuilding) {
         highlightMapRecord(id, 'building');
         if (source === 'map') {
-            // Switch to buildings tab if not active
-            const btn = document.querySelector('[data-tab="tab-buildings"]');
-            if (btn && !document.getElementById('tab-buildings').classList.contains('active'))
-                showTab(btn, 'tab-buildings');
+            const sensorsTabActive = document.getElementById('tab-sensors')?.classList.contains('active');
+            if (!sensorsTabActive) {
+                const btn = document.querySelector('[data-tab="tab-buildings"]');
+                if (btn && !document.getElementById('tab-buildings').classList.contains('active'))
+                    showTab(btn, 'tab-buildings');
+            }
         }
     } else {
         const s = (data.sensors ?? []).find(x => x.id === id);
@@ -1412,7 +1420,7 @@ function renderSelectionBar() {
     const n = state.multiSelect.size;
 
     if (n > 1) {
-        if (card) { card.classList.add('hidden'); card.innerHTML = ''; }
+        renderEmptyBuildingCard();
         const sc2 = document.getElementById('selected-sensor-card');
         if (sc2) { sc2.classList.add('hidden'); sc2.innerHTML = ''; }
         const type = state.multiSelectType;
@@ -1432,7 +1440,7 @@ function renderSelectionBar() {
     const id = n === 1 ? [...state.multiSelect][0] : state.selectedId;
     if (!id) {
         bar.style.display = 'none';
-        if (card) { card.classList.add('hidden'); card.innerHTML = ''; }
+        renderEmptyBuildingCard();
         const sc = document.getElementById('selected-sensor-card');
         if (sc) { sc.classList.add('hidden'); sc.innerHTML = ''; }
         return;
@@ -1450,12 +1458,30 @@ function renderSelectionBar() {
         const building = s && s.hos ? data._buildingsMap[s.hos] : null;
         if (building) {
             renderSelectedBuildingCard(building);
-        } else if (card) {
-            card.classList.add('hidden'); card.innerHTML = '';
+        } else {
+            renderEmptyBuildingCard();
         }
         if (s) renderSelectedSensorCard(s);
         else if (sensorCard) { sensorCard.classList.add('hidden'); sensorCard.innerHTML = ''; }
     }
+}
+
+function renderEmptyBuildingCard() {
+    const card = document.getElementById('selected-building-card');
+    if (!card) return;
+    card.classList.remove('hidden');
+    card.innerHTML = `
+        <div class="selection-card-main selection-card-empty">
+            <div class="selection-card-icon">
+                <span class="card-icon-emoji">&#127970;</span>
+            </div>
+            <div class="selection-card-info">
+                <div class="selection-card-kicker">Edificio seleccionado</div>
+                <div class="selection-card-title" style="color:#94a3b8;font-weight:400">Ningún edificio seleccionado</div>
+                <div class="selection-card-meta" style="color:#cbd5e1">Haz clic en un edificio del mapa o del listado</div>
+            </div>
+        </div>
+    `;
 }
 
 function renderSelectedBuildingCard(b) {
@@ -1467,7 +1493,9 @@ function renderSelectedBuildingCard(b) {
     const sysBadges = systemIds.map(sid =>
         `<span class="sys-badge" style="background:${esc(getSystemColor(sid))}" title="${esc(sid)}">${esc(sid)}</span>`
     ).join('');
-    const meta = [b.type, b.neighborhood, b.district_name || b.district_code, b.state]
+    const bLat = getLat(b), bLon = getLon(b);
+    const coordStr = bLat != null ? `${bLat.toFixed(6)}, ${bLon.toFixed(6)}` : null;
+    const meta = [b.type, b.neighborhood, b.district_name || b.district_code, b.state, coordStr]
         .filter(Boolean).map(esc).join('<span class="meta-sep">·</span>');
 
     card.classList.remove('hidden');
