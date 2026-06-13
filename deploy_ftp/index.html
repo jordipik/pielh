@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIELH QA Dashboard — L'Hospitalet</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-brand">
+            <h1>PIELH QA</h1>
+            <span class="header-sub">L'Hospitalet de Llobregat</span>
+        </div>
+        <div class="summary-cards">
+            <div class="card">
+                <div class="card-value" id="count-buildings">—</div>
+                <div class="card-label">Edificios</div>
+            </div>
+            <div class="card">
+                <div class="card-value" id="count-sensors">—</div>
+                <div class="card-label">Sensores</div>
+            </div>
+            <div class="card">
+                <div class="card-value" id="count-neighborhoods">—</div>
+                <div class="card-label">Barrios</div>
+            </div>
+            <div class="card">
+                <div class="card-value" id="count-systems">—</div>
+                <div class="card-label">Sistemas</div>
+            </div>
+            <div class="card card-alert">
+                <div class="card-value" id="count-qa">—</div>
+                <div class="card-label">Avisos QA</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Alerts -->
+    <div id="error-msg"   class="alert alert-error"   style="display:none"></div>
+    <div id="loading-msg" class="alert alert-info">Cargando datos…</div>
+
+    <!-- Main 3-column layout -->
+    <div class="main-layout">
+
+        <!-- Left: filters -->
+        <aside class="sidebar">
+            <h2 class="sidebar-title">Filtros</h2>
+
+            <div class="filter-group">
+                <label for="filter-search">Búsqueda libre</label>
+                <input type="text" id="filter-search" placeholder="HOS, nombre, ThingID, dirección…">
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-district">Distrito</label>
+                <select id="filter-district"><option value="">Todos</option></select>
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-neighborhood">Barrio</label>
+                <select id="filter-neighborhood"><option value="">Todos</option></select>
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-system">Sistema</label>
+                <select id="filter-system"><option value="">Todos</option></select>
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-type">Tipo edificio</label>
+                <select id="filter-type"><option value="">Todos</option></select>
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-zone">Zona</label>
+                <select id="filter-zone"><option value="">Todos</option></select>
+            </div>
+
+            <button id="btn-reset" class="btn-reset" onclick="resetFilters()">Limpiar filtros</button>
+
+            <div class="legend">
+                <h3 class="legend-title">Capas</h3>
+                <div class="legend-row">
+                    <span class="legend-line legend-line-district"></span>
+                    Distrito
+                </div>
+                <div class="legend-row">
+                    <span class="ldot ldot-neighborhood"></span>
+                    Barrio
+                </div>
+                <div class="legend-row">
+                    <span class="ldot ldot-street"></span>
+                    Calle / Sensor calle
+                </div>
+                <div class="legend-row">
+                    <span class="legend-square"></span>
+                    Edificio
+                </div>
+                <div class="legend-row">
+                    <span class="ldot ldot-sensor"></span>
+                    Sensor (por sistema)
+                </div>
+
+                <h3 class="legend-title" style="margin-top:12px">Edificio — estado datos</h3>
+                <div class="legend-row">
+                    <span class="legend-square" style="background:#4ade80;border-color:#15803d"></span>
+                    Con datos (OK)
+                </div>
+                <div class="legend-row">
+                    <span class="legend-square" style="background:#94a3b8;border-color:#475569"></span>
+                    Sin datos
+                </div>
+                <div class="legend-row">
+                    <span class="legend-square" style="background:#93c5fd;border-color:#1d4ed8"></span>
+                    Desconocido
+                </div>
+
+                <h3 class="legend-title" style="margin-top:12px">Sistemas</h3>
+                <div id="legend-systems"></div>
+            </div>
+        </aside>
+
+        <!-- Center: map -->
+        <div class="map-wrap">
+            <div id="map"></div>
+        </div>
+
+        <div id="panel-resizer" title="Arrastrar para redimensionar"></div>
+
+        <!-- Right: tabbed panel -->
+        <div class="right-panel">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="tab-buildings" onclick="showTab(this, 'tab-buildings')">Edificios</button>
+                <button class="tab-btn"        data-tab="tab-sensors"   onclick="showTab(this, 'tab-sensors')">Sensores</button>
+                <button class="tab-btn"        data-tab="tab-qa"        onclick="showTab(this, 'tab-qa')">QA</button>
+            </div>
+
+            <!-- Selection bar -->
+            <div id="selection-bar" class="selection-bar" style="display:none"></div>
+
+            <!-- Edificios -->
+            <div id="tab-buildings" class="tab-pane active">
+                <div class="tab-toolbar">
+                    <span id="buildings-info" class="tab-info-text"></span>
+                    <button id="btn-bulk-bld" class="btn-bulk" style="display:none"
+                            onclick="openBulkEdit('building')">
+                        Editar <span id="bulk-count-bld">0</span>
+                    </button>
+                    <label class="lbl-only-visible">
+                        <input type="checkbox" id="chk-visible-bld"> Solo visibles
+                    </label>
+                </div>
+                <div class="scroll-wrap">
+                    <table class="data-table" id="buildings-table">
+                        <thead id="list-thead">
+                            <tr>
+                                <th data-sort="id">HOS<span class="sort-icon"></span></th>
+                                <th data-sort="name">Nombre<span class="sort-icon"></span></th>
+                                <th data-sort="type">Tipo<span class="sort-icon"></span></th>
+                                <th data-sort="neighborhood">Barrio<span class="sort-icon"></span></th>
+                                <th data-sort="district_name">Dist.<span class="sort-icon"></span></th>
+                                <th data-sort="street_etra">Calle<span class="sort-icon"></span></th>
+                                <th data-sort="_sCount" title="Sensores">S<span class="sort-icon"></span></th>
+                                <th data-sort="has_data">Datos<span class="sort-icon"></span></th>
+                            </tr>
+                        </thead>
+                        <tbody id="list-tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Sensores -->
+            <div id="tab-sensors" class="tab-pane">
+                <div class="tab-toolbar">
+                    <span id="sensors-info" class="tab-info-text"></span>
+                    <button id="btn-bulk-sns" class="btn-bulk" style="display:none"
+                            onclick="openBulkEdit('sensor')">
+                        Editar <span id="bulk-count-sns">0</span>
+                    </button>
+                    <label class="lbl-only-visible">
+                        <input type="checkbox" id="chk-visible-sns"> Solo visibles
+                    </label>
+                </div>
+                <div class="scroll-wrap">
+                    <table class="data-table" id="sensors-table">
+                        <thead id="sensors-thead">
+                            <tr>
+                                <th data-sort="id">ID<span class="sort-icon"></span></th>
+                                <th data-sort="hos">HOS<span class="sort-icon"></span></th>
+                                <th data-sort="system_id">Sistema<span class="sort-icon"></span></th>
+                                <th data-sort="neighborhood">Barrio<span class="sort-icon"></span></th>
+                                <th data-sort="ref_etra">Calle<span class="sort-icon"></span></th>
+                                <th data-sort="has_data">Datos<span class="sort-icon"></span></th>
+                            </tr>
+                        </thead>
+                        <tbody id="sensors-tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- QA Findings -->
+            <div id="tab-qa" class="tab-pane">
+                <div class="qa-header">
+                    <div id="qa-severity-badges"></div>
+                    <div class="filter-group" style="margin-top:8px">
+                        <select id="qa-filter-severity" onchange="filterQA()">
+                            <option value="">Todas las severidades</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <select id="qa-filter-type" onchange="filterQA()">
+                            <option value="">Todos los tipos</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="scroll-wrap">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Sev.</th>
+                                <th>Tipo</th>
+                                <th>Detalle</th>
+                            </tr>
+                        </thead>
+                        <tbody id="qa-tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- /main-layout -->
+</div><!-- /app -->
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="app.js"></script>
+
+<!-- ── Detail / Edit Panel ─────────────────────────────── -->
+<div id="detail-panel" class="detail-panel">
+    <div class="dp-header">
+        <span id="dp-title">—</span>
+        <button class="dp-close" onclick="closeDetailPanel()" title="Cerrar">✕</button>
+    </div>
+    <div class="dp-body" id="dp-body"></div>
+    <div class="dp-footer">
+        <div id="dp-copy-preview" class="dp-copy-preview" style="display:none"></div>
+        <div class="dp-actions">
+            <button id="dp-copy-btn" class="btn-sec" onclick="showCopyFromBuilding()" style="display:none">
+                Copiar datos edificio
+            </button>
+            <button class="btn-pri" onclick="saveDetailPanel()">Guardar</button>
+            <button class="btn-sec" onclick="closeDetailPanel()">Cancelar</button>
+        </div>
+    </div>
+</div>
+
+<!-- Toast -->
+<div id="toast" class="toast" style="display:none"></div>
+</body>
+</html>

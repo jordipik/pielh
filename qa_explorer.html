@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PIELH QA Explorer — L'Hospitalet</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <link rel="stylesheet" href="https://unpkg.com/tabulator-tables@6.2.1/dist/css/tabulator.min.css" crossorigin="">
+  <link rel="stylesheet" href="qa_explorer_styles.css">
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <header id="topbar">
+    <div id="brand">
+      <span class="brand-logo">⬡</span>
+      <span class="brand-name">PIELH QA Explorer</span>
+      <span class="brand-sub">Hospitalet Smart City</span>
+    </div>
+
+    <div id="filters">
+      <div class="fg">
+        <label>Tipo</label>
+        <div class="btn-group">
+          <button class="type-btn active" data-type="buildings">Edificios <span class="cnt" id="cnt-buildings">—</span></button>
+          <button class="type-btn" data-type="sensors">Sensores <span class="cnt" id="cnt-sensors">—</span></button>
+          <button class="type-btn" data-type="neighborhoods">Barrios <span class="cnt" id="cnt-neighborhoods">—</span></button>
+          <button class="type-btn" data-type="districts">Distritos <span class="cnt" id="cnt-districts">—</span></button>
+        </div>
+      </div>
+      <div class="fg">
+        <label>Sistema</label>
+        <select id="filter-system"><option value="">Todos</option></select>
+      </div>
+      <div class="fg">
+        <label>Barrio</label>
+        <select id="filter-neighborhood"><option value="">Todos</option></select>
+      </div>
+      <div class="fg">
+        <label>Distrito</label>
+        <select id="filter-district"><option value="">Todos</option></select>
+      </div>
+      <input type="text" id="filter-text" placeholder="Buscar…">
+      <button class="icon-btn" id="btn-export" title="Exportar CSV">CSV ↓</button>
+      <button class="icon-btn" id="btn-zoom" title="Centrar en seleccionado">📍 Zoom</button>
+    </div>
+  </header>
+
+  <!-- MAIN: tabla + mapa -->
+  <main id="main">
+    <div id="table-panel">
+      <div id="table-container"></div>
+    </div>
+    <div id="map-panel">
+      <div id="map"></div>
+    </div>
+  </main>
+
+  <!-- FICHA INFERIOR -->
+  <div id="detail-panel">
+    <div class="detail-empty">Selecciona un elemento para ver su ficha</div>
+  </div>
+
+  <!-- LOADING -->
+  <div id="loading-overlay">
+    <div class="loading-box">
+      <div class="loading-spinner"></div>
+      <div id="loading-text">Cargando datos…</div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="https://unpkg.com/tabulator-tables@6.2.1/dist/js/tabulator.min.js" crossorigin=""></script>
+  <script src="modules/data.js"></script>
+  <script src="modules/filters.js"></script>
+  <script src="modules/map.js"></script>
+  <script src="modules/table.js"></script>
+  <script src="modules/details.js"></script>
+  <script src="qa_explorer_app.js"></script>
+
+</body>
+</html>

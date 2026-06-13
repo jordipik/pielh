@@ -1,0 +1,8 @@
+{
+  "json_file": "pielh_qa_master.json",
+  "backup_dir": "data/backups",
+  "log_file": "logs/pielh.log",
+  "max_backups": 20,
+  "host": "127.0.0.1",
+  "port": 8080
+}
