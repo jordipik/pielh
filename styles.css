@@ -1505,3 +1505,115 @@ tr.row-multi-selected td {
     .right-panel { flex: 0 0 100%; height: 400px; border-left: none; border-top: 1px solid #e2e8f0; }
     #app         { overflow-y: auto; height: auto; }
 }
+
+/* ============================================================
+   CENTRO DE SINCRONIZACIÓN IoT
+   ============================================================ */
+
+.sync-toolbar {
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.sync-filters {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 5px 10px;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 12px;
+    color: #475569;
+}
+.sync-filters label { display: flex; align-items: center; gap: 4px; cursor: pointer; }
+
+/* Badges de estado */
+.sync-badge {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    background: #f1f5f9;
+    color: #64748b;
+    border: 1px solid #cbd5e1;
+}
+.sync-badge-active  { background: #dcfce7; color: #15803d; border-color: #86efac; }
+.sync-badge-partial { background: #fef9c3; color: #854d0e; border-color: #fde047; }
+.sync-badge-nodata  { background: #f1f5f9; color: #64748b; border-color: #cbd5e1; }
+.sync-badge-error   { background: #fee2e2; color: #991b1b; border-color: #fca5a5; }
+
+/* Checkbox column */
+.sync-chk-col { width: 28px; text-align: center; }
+
+/* Fila TODOS */
+.sync-row-all td { background: #f0f9ff; font-weight: 600; }
+.sync-row-all:hover td { background: #e0f2fe; }
+
+/* Botón de acción por sistema */
+.btn-sync-system {
+    padding: 3px 10px;
+    font-size: 11px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.btn-sync-system:hover { background: #dbeafe; }
+
+/* Área de progreso */
+.sync-progress-area {
+    flex: 0 0 auto;
+    padding: 8px 10px;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.sync-prog-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+}
+.sync-prog-label { width: 100px; flex-shrink: 0; color: #475569; font-weight: 600; }
+.sync-prog-bar-wrap {
+    flex: 1;
+    height: 10px;
+    background: #e2e8f0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.sync-prog-bar {
+    height: 100%;
+    width: 0%;
+    background: #3b82f6;
+    border-radius: 5px;
+    transition: width .3s ease;
+}
+.sync-prog-status { width: 100px; flex-shrink: 0; color: #64748b; font-size: 11px; }
+
+/* Sección global al pie */
+.sync-global-action {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    background: #fafafa;
+    border-top: 1px solid #e2e8f0;
+    font-size: 12px;
+}
+.sync-global-note { color: #94a3b8; }
+
+/* OK/ERR inline en última sync */
+.sync-ok  { color: #15803d; font-weight: 600; }
+.sync-err { color: #b91c1c; font-weight: 600; }
+
+.sync-last-sync { font-size: 11px; color: #64748b; }
+.sync-loading   { text-align: center; color: #94a3b8; padding: 20px; }

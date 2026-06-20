@@ -1,8 +1,8 @@
 # PIELH — Informe de Salud del Inventario IoT
 
-_Generado: 2026-06-20T15:37:24.980669+00:00_
+_Generado: 2026-06-20T17:57:26.728839+00:00_
 
-_Fuente: `thethings_activity_20260620_152144.csv`_
+_Fuente: `thethings_activity_20260620_174117.csv`_
 
 ---
 ## 1. Resumen ejecutivo
@@ -12,7 +12,7 @@ _Fuente: `thethings_activity_20260620_152144.csv`_
 | Total sensores | 1564 |
 | Things válidos | 1564 |
 | Things inválidos (token/thing roto) | 0 |
-| Sensores activos (24h + 7d) | 247 |
+| Sensores activos (24h + 7d) | 244 |
 | Sensores con datos | 286 |
 | Sensores sin datos | 1277 |
 | TOKEN_OR_THING_INVALID | 0 |
@@ -25,9 +25,9 @@ _Fuente: `thethings_activity_20260620_152144.csv`_
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | SIP | IPS | 139 | 139 | 0 | 49 | 50 | **A** |
 | S22 | TRANSPORTE PUBLICO | 325 | 325 | 0 | 48 | 48 | **A** |
-| S04 | AMBIENTE INTERIOR | 112 | 112 | 0 | 36 | 40 | **A** |
 | S21 | DETECCION HUMOS | 158 | 158 | 0 | 36 | 70 | **A** |
 | S02 | CONTAMINACIÓN EXTERIOR | 69 | 69 | 0 | 33 | 33 | **A** |
+| S04 | AMBIENTE INTERIOR | 112 | 112 | 0 | 33 | 40 | **A** |
 | S05 | ELECTRICIDAD | 102 | 102 | 0 | 32 | 32 | **A** |
 | S14A | METEO | 19 | 19 | 0 | 6 | 7 | **A** |
 | S07 | GAS | 25 | 25 | 0 | 5 | 5 | **A** |
@@ -59,9 +59,9 @@ _Criterio: ACTIVE\_24H + ACTIVE\_7D > 0, ordenados por sensores activos._
 |---|---|---|---|---|---|---|
 | SIP | IPS | 49 | 46 | 3 | 50 | 139 |
 | S22 | TRANSPORTE PUBLICO | 48 | 48 | 0 | 48 | 325 |
-| S04 | AMBIENTE INTERIOR | 36 | 21 | 15 | 40 | 112 |
 | S21 | DETECCION HUMOS | 36 | 33 | 3 | 70 | 158 |
 | S02 | CONTAMINACIÓN EXTERIOR | 33 | 33 | 0 | 33 | 69 |
+| S04 | AMBIENTE INTERIOR | 33 | 21 | 12 | 40 | 112 |
 | S05 | ELECTRICIDAD | 32 | 29 | 3 | 32 | 102 |
 | S14A | METEO | 6 | 6 | 0 | 7 | 19 |
 | S07 | GAS | 5 | 4 | 1 | 5 | 25 |
@@ -73,9 +73,9 @@ _Criterio: ACTIVE\_24H + ACTIVE\_7D > 0, ordenados por sensores activos._
 
 | KPI | Valor |
 |---|---|
-| demo\_ready\_sensors | 247 |
+| demo\_ready\_sensors | 244 |
 | demo\_ready\_systems | 10 |
-| demo\_ready\_percent | 15.8% |
+| demo\_ready\_percent | 15.6% |
 
 ---
 ## 6. Clasificación completa A / B / C
@@ -91,7 +91,7 @@ _Criterio: ACTIVE\_24H + ACTIVE\_7D > 0, ordenados por sensores activos._
 | S01 | RUIDO | **A** | 3 | 3 | 0 | 1 | 1 |
 | S02 | CONTAMINACIÓN EXTERIOR | **A** | 69 | 69 | 0 | 33 | 33 |
 | S03 | GAS RADON | B | 1 | 1 | 0 | 0 | 0 |
-| S04 | AMBIENTE INTERIOR | **A** | 112 | 112 | 0 | 36 | 40 |
+| S04 | AMBIENTE INTERIOR | **A** | 112 | 112 | 0 | 33 | 40 |
 | S05 | ELECTRICIDAD | **A** | 102 | 102 | 0 | 32 | 32 |
 | S06 | AGUA | B | 257 | 257 | 0 | 0 | 0 |
 | S07 | GAS | **A** | 25 | 25 | 0 | 5 | 5 |

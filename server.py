@@ -139,6 +139,16 @@ _resolve_state = {
     'started_at': None, 'finished_at': None,
 }
 
+_system_sync_lock  = threading.Lock()
+_system_sync_state = {
+    'running': False, 'done': False, 'error': None,
+    'systems': [],
+    'current_system': '', 'current_idx': 0, 'total': 0,
+    'things_done': 0,
+    'started_at': None, 'finished_at': None,
+}
+_last_system_sync = {}  # system_id → {at, sensors, ok, error?}
+
 # ── File logger ───────────────────────────────────────────────────────
 LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
 _log = logging.getLogger('pielh')
@@ -168,6 +178,12 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             self._handle_sync_pending()
         elif self.path == '/api/sync-status':
             self._handle_sync_status()
+        elif self.path == '/api/systems-status':
+            self._handle_systems_status()
+        elif self.path == '/api/system-sync-status':
+            self._handle_system_sync_status()
+        elif self.path == '/api/models':
+            self._handle_models()
         else:
             super().do_GET()
 
@@ -184,6 +200,10 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             self._handle_sync_record()
         elif self.path == '/api/sync-all':
             self._handle_sync_all()
+        elif self.path == '/api/import-system':
+            self._handle_import_system()
+        elif self.path == '/api/import-selected':
+            self._handle_import_selected()
         else:
             self.send_error(404)
 
@@ -975,6 +995,162 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             'raw':              {},
         }
 
+    # ── Centro de Sincronización IoT ─────────────────────────────────
+
+    def _handle_models(self):
+        sensor_models = [m for m in MODELS if m.get('type') == 'sensor']
+        self._ok({'ok': True, 'models': sensor_models})
+
+    def _handle_systems_status(self):
+        try:
+            master = self._load()
+            sensors = master.get('sensors', [])
+            by_system = {}
+            for m in MODELS:
+                if m.get('type') != 'sensor':
+                    continue
+                sid = m['system_id']
+                by_system[sid] = {
+                    'system_id':   sid,
+                    'system_name': m['system_name'],
+                    'label':       m['label'],
+                    'count':       0,
+                    'with_data':   0,
+                    'without_data': 0,
+                    'last_seen':   None,
+                }
+            for s in sensors:
+                sid = s.get('system_id', '')
+                if sid not in by_system:
+                    continue
+                row = by_system[sid]
+                row['count'] += 1
+                ih = s.get('iot_health') or {}
+                if ih.get('demo_ready') or ih.get('has_real_data'):
+                    row['with_data'] += 1
+                    ls = ih.get('last_seen')
+                    if ls and (not row['last_seen'] or ls > row['last_seen']):
+                        row['last_seen'] = ls
+                else:
+                    row['without_data'] += 1
+            for sid, row in by_system.items():
+                if row['count'] == 0:
+                    row['status'] = 'NO_DATA'
+                elif row['with_data'] == 0:
+                    row['status'] = 'NO_DATA'
+                elif row['without_data'] == 0:
+                    row['status'] = 'ACTIVE'
+                else:
+                    row['status'] = 'PARTIAL'
+                lss = _last_system_sync.get(sid)
+                if lss:
+                    row['last_sync'] = lss
+            total_sensors = len(sensors)
+            total_with    = sum(1 for s in sensors if (s.get('iot_health') or {}).get('demo_ready'))
+            self._ok({
+                'ok': True,
+                'systems': list(by_system.values()),
+                'total_sensors': total_sensors,
+                'total_with_data': total_with,
+            })
+        except Exception as e:
+            self._err(500, str(e))
+
+    def _handle_system_sync_status(self):
+        with _system_sync_lock:
+            self._ok(dict(_system_sync_state))
+
+    def _handle_import_system(self):
+        try:
+            body      = self._read_json()
+            system_id = (body.get('system_id') or '').strip()
+            if not system_id:
+                return self._err(400, 'system_id requerido')
+            model = next((m for m in MODELS if m.get('system_id') == system_id), None)
+            if not model:
+                return self._err(404, f'Sistema {system_id} no encontrado')
+            with _system_sync_lock:
+                if _system_sync_state['running']:
+                    return self._ok({'ok': False, 'message': 'already running'})
+                _system_sync_state.update({
+                    'running': True, 'done': False, 'error': None,
+                    'systems': [system_id], 'current_system': system_id,
+                    'current_idx': 0, 'total': 1, 'things_done': 0,
+                    'started_at': datetime.now().isoformat(), 'finished_at': None,
+                })
+            self._ok({'ok': True, 'message': 'started'})
+            threading.Thread(target=self._run_import_systems, args=([system_id],), daemon=True).start()
+        except Exception as e:
+            self._err(500, str(e))
+
+    def _handle_import_selected(self):
+        try:
+            body    = self._read_json()
+            systems = body.get('systems') or []
+            systems = [s.strip() for s in systems if s.strip()]
+            valid   = [m['system_id'] for m in MODELS if m.get('system_id') in systems and m.get('type') == 'sensor']
+            if not valid:
+                return self._err(400, 'Ningún sistema válido')
+            with _system_sync_lock:
+                if _system_sync_state['running']:
+                    return self._ok({'ok': False, 'message': 'already running'})
+                _system_sync_state.update({
+                    'running': True, 'done': False, 'error': None,
+                    'systems': valid, 'current_system': valid[0],
+                    'current_idx': 0, 'total': len(valid), 'things_done': 0,
+                    'started_at': datetime.now().isoformat(), 'finished_at': None,
+                })
+            self._ok({'ok': True, 'message': 'started', 'count': len(valid)})
+            threading.Thread(target=self._run_import_systems, args=(valid,), daemon=True).start()
+        except Exception as e:
+            self._err(500, str(e))
+
+    def _run_import_systems(self, system_ids):
+        global _last_system_sync
+        try:
+            master = self._load()
+            for idx, system_id in enumerate(system_ids):
+                model = next((m for m in MODELS if m.get('system_id') == system_id), None)
+                if not model:
+                    continue
+                with _system_sync_lock:
+                    _system_sync_state['current_system'] = system_id
+                    _system_sync_state['current_idx']    = idx
+                    _system_sync_state['things_done']    = 0
+                ts = datetime.now().isoformat()
+                try:
+                    things = self._fetch_model_things(model['id'])
+                except Exception as exc:
+                    _log.warning(f"import-system: {system_id} fallido — {exc}")
+                    _last_system_sync[system_id] = {'at': ts, 'sensors': 0, 'ok': False, 'error': str(exc)}
+                    continue
+                master['sensors'] = [s for s in master['sensors'] if s.get('system_id') != system_id]
+                new_sensors = []
+                if isinstance(things, list):
+                    for thing in things:
+                        new_sensors.append(self._thing_to_sensor(thing, model))
+                        with _system_sync_lock:
+                            _system_sync_state['things_done'] += 1
+                master['sensors'].extend(new_sensors)
+                _last_system_sync[system_id] = {'at': ts, 'sensors': len(new_sensors), 'ok': True}
+                _log.info(f"import-system: {system_id} — {len(new_sensors)} sensores")
+                time.sleep(0.2)
+            self._resolve_tags_in_master(master)
+            self._save(master)
+            finished = datetime.now().isoformat()
+            with _system_sync_lock:
+                _system_sync_state.update({
+                    'running': False, 'done': True, 'finished_at': finished,
+                })
+            _log.info(f"import-system: completado {system_ids}")
+        except Exception as exc:
+            _log.error(f"import-system: error — {exc}")
+            with _system_sync_lock:
+                _system_sync_state.update({
+                    'running': False, 'done': True, 'error': str(exc),
+                    'finished_at': datetime.now().isoformat(),
+                })
+
     # ── Sync to TheThings ─────────────────────────────────────────────
 
     def _handle_sync_pending(self):
@@ -1101,8 +1277,17 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             method='POST',
         )
         ctx = ssl._create_unverified_context()
-        with urllib.request.urlopen(req, context=ctx, timeout=30) as resp:
-            resp.read()
+        try:
+            with urllib.request.urlopen(req, context=ctx, timeout=30) as resp:
+                resp.read()
+        except urllib.error.HTTPError as e:
+            body = ''
+            try:
+                body = e.read().decode('utf-8', errors='replace')
+            except Exception:
+                pass
+            _log.error(f"sync: POST {url} → {e.code} {e.reason} | body: {body}")
+            raise ValueError(f"HTTP {e.code} {e.reason}: {body}")
         return {'values_sent': len(values)}
 
     def _mark_sync_pending(self, records, updated_fields):

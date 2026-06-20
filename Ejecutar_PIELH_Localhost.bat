@@ -1,10 +1,32 @@
 @echo off
-cd /d %~dp0
+setlocal
 
+title PIELH QA - Auto Restart
+
+cd /d "%~dp0"
+
+if not exist logs mkdir logs
+
+:restart
+
+echo [%date% %time%] Iniciando servidor... >> logs\server_restart.log
+echo.
+echo ==========================================
 echo Iniciando PIELH QA...
-start "" cmd /c "python server.py"
+echo ==========================================
+echo.
+
+python server.py
+
+echo [%date% %time%] Servidor detenido. Reiniciando... >> logs\server_restart.log
 
 echo.
-echo Servidor iniciado en http://localhost:8080
+echo ==========================================
+echo El servidor se ha detenido.
+echo Reiniciando en 5 segundos...
+echo ==========================================
 echo.
-exit
+
+timeout /t 5 /nobreak >nul
+
+goto restart

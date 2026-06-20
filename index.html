@@ -161,6 +161,7 @@
                 <button class="tab-btn active" data-tab="tab-buildings" onclick="showTab(this, 'tab-buildings')">Edificios</button>
                 <button class="tab-btn"        data-tab="tab-sensors"   onclick="showTab(this, 'tab-sensors')">Sensores</button>
                 <button class="tab-btn"        data-tab="tab-qa"        onclick="showTab(this, 'tab-qa')">QA</button>
+                <button class="tab-btn"        data-tab="tab-sync"      onclick="showTab(this, 'tab-sync')">Sincronización</button>
             </div>
 
             <!-- Selection bar -->
@@ -255,6 +256,48 @@
                     </table>
                 </div>
             </div>
+            <!-- Sincronización IoT -->
+            <div id="tab-sync" class="tab-pane">
+                <div class="tab-toolbar sync-toolbar">
+                    <button class="btn-sec" onclick="refreshSyncCenter()" title="Actualizar estadísticas">⟳ Actualizar</button>
+                    <button class="btn-sec" onclick="analyzeSystems()" title="Analizar estado IoT de los sistemas">🔍 Analizar sistemas</button>
+                    <button class="btn-pri" id="btn-sync-selected" disabled onclick="syncSelected()">↓ Sincronizar seleccionados</button>
+                </div>
+                <div class="sync-filters">
+                    <label><input type="radio" name="sync-filter" value="all"     checked onchange="filterSyncTable()"> Todos</label>
+                    <label><input type="radio" name="sync-filter" value="active"          onchange="filterSyncTable()"> Solo activos</label>
+                    <label><input type="radio" name="sync-filter" value="no_data"         onchange="filterSyncTable()"> Solo sin datos</label>
+                    <label><input type="radio" name="sync-filter" value="partial"         onchange="filterSyncTable()"> Solo parciales</label>
+                    <label><input type="radio" name="sync-filter" value="error"           onchange="filterSyncTable()"> Solo con errores</label>
+                </div>
+                <div id="sync-progress-area" class="sync-progress-area" style="display:none"></div>
+                <div class="scroll-wrap">
+                    <table class="data-table" id="sync-table">
+                        <thead>
+                            <tr>
+                                <th class="sync-chk-col"><input type="checkbox" id="chk-sync-all" onchange="toggleAllSyncCheck(this)"></th>
+                                <th>Sistema</th>
+                                <th>Nombre</th>
+                                <th title="Número total de sensores">Nº</th>
+                                <th title="Sensores con datos IoT activos">Con datos</th>
+                                <th title="Sensores sin datos IoT">Sin datos</th>
+                                <th>Última lectura</th>
+                                <th>Estado</th>
+                                <th>Última sync</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="sync-tbody">
+                            <tr><td colspan="10" class="sync-loading">Cargando sistemas…</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="sync-global-action">
+                    <button class="btn-sec" onclick="importFromAPI()" title="Reconstruir todo el inventario desde cero">⟳ Reconstruir inventario completo</button>
+                    <span class="sync-global-note">Descarga todos los sistemas y reconstruye el inventario IoT completo.</span>
+                </div>
+            </div>
+
         </div>
 
     </div><!-- /main-layout -->

@@ -24,8 +24,11 @@ const state = {
         buildings: { key: 'id', dir: 'asc' },
         sensors: { key: 'id', dir: 'asc' },
     },
-    selectedId: null,
-    selectedThingId: null,  // disambiguates sensors that share the same id
+    selectedId: null,           // legacy alias — kept for multi-select compat
+    selectedThingId: null,      // legacy alias
+    selectedBuildingId: null,   // active building context
+    selectedSensorId: null,     // active sensor (null = none)
+    selectedSensorThingId: null,
     onlyVisibleBld: false,
     onlyVisibleSns: false,
     onlyIotSensorsActive: false,
@@ -544,6 +547,9 @@ function pruneStaleSelection() {
     if (state.selectedId && !isVisible(state.selectedId, state.selectedThingId)) {
         state.selectedId = null;
         state.selectedThingId = null;
+        state.selectedBuildingId = null;
+        state.selectedSensorId = null;
+        state.selectedSensorThingId = null;
         clearMapHighlight();
     }
     for (const id of [...state.multiSelect]) {
@@ -876,7 +882,7 @@ function renderBuildingsList() {
         const dataColor = hasData === 'OK' ? '#16a34a' : '#94a3b8';
         const tr = document.createElement('tr');
         tr.dataset.rid = b.id;
-        if (b.id === state.selectedId) tr.classList.add('row-selected');
+        if (b.id === state.selectedBuildingId) tr.classList.add('row-selected');
         if (b.state === 'Fuera Proyecto') tr.classList.add('row-fuera');
         tr.innerHTML = `
             <td title="${esc(b.id)}">${esc(b.id)}</td>
@@ -910,7 +916,7 @@ const SENSOR_LIMIT = 500;
 
 function renderSensorsList() {
     let records = filtered.sensors;
-    const selBldId = state.selectedId && data._buildingsMap[state.selectedId] ? state.selectedId : null;
+    const selBldId = state.selectedBuildingId || null;
     if (selBldId) records = records.filter(s => s.hos === selBldId);
     _lastSensorRecords = records;
     if (state.onlyVisibleSns) records = getMapVisible(records);
@@ -935,7 +941,7 @@ function renderSensorsList() {
         const dataColor = hasData === 'OK' ? '#16a34a' : '#94a3b8';
         const tr = document.createElement('tr');
         tr.dataset.rid = s.id;
-        if (s.id === state.selectedId && (!state.selectedThingId || s.thing_id === state.selectedThingId))
+        if (s.id === state.selectedSensorId && (!state.selectedSensorThingId || s.thing_id === state.selectedSensorThingId))
             tr.classList.add('row-selected');
         tr.innerHTML = `
             <td title="${esc(s.id)}">${esc(truncate(s.id, 18))}</td>
@@ -1026,29 +1032,36 @@ function selectRecord(id, opts = {}) {
 
     document.querySelectorAll('tr.row-selected').forEach(r => r.classList.remove('row-selected'));
     clearMapHighlight();
-    state.selectedId = id;
-    state.selectedThingId = thingId;
     if (!id) return;
 
-    // Highlight row and scroll to it
-    const row = document.querySelector(`tr[data-rid="${CSS.escape(id)}"]`);
-    if (row) {
-        row.classList.add('row-selected');
-        row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-    }
-
     const isBuilding = !!data._buildingsMap[id];
+
     if (isBuilding) {
+        // Building selected: set building context, clear sensor
+        state.selectedBuildingId    = id;
+        state.selectedSensorId      = null;
+        state.selectedSensorThingId = null;
+        state.selectedId            = id;
+        state.selectedThingId       = null;
+
         highlightMapRecord(id, 'building');
         if (source === 'map') {
-            // Switch to buildings tab if not active
             const btn = document.querySelector('[data-tab="tab-buildings"]');
             if (btn && !document.getElementById('tab-buildings').classList.contains('active'))
                 showTab(btn, 'tab-buildings');
         }
     } else {
+        // Sensor selected: activate sensor + auto-set building context from hos
         const s = findSensor(id, thingId);
         if (s) {
+            state.selectedSensorId      = id;
+            state.selectedSensorThingId = thingId;
+            state.selectedId            = id;
+            state.selectedThingId       = thingId;
+            // Auto-select parent building if sensor has hos
+            if (s.hos && data._buildingsMap[s.hos]) {
+                state.selectedBuildingId = s.hos;
+            }
             highlightMapRecord(id, 'sensor');
             if (source === 'map') {
                 const btn = document.querySelector('[data-tab="tab-sensors"]');
@@ -1058,8 +1071,14 @@ function selectRecord(id, opts = {}) {
         }
     }
 
+    // Highlight rows
+    const bldRow = document.querySelector(`tr[data-rid="${CSS.escape(state.selectedBuildingId || '')}"]`);
+    if (bldRow) { bldRow.classList.add('row-selected'); bldRow.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }
+    const sensRow = document.querySelector(`tr[data-rid="${CSS.escape(id)}"]`);
+    if (sensRow && !isBuilding) { sensRow.classList.add('row-selected'); sensRow.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }
+
     renderSelectionBar();
-    if (isBuilding) renderSensorsList();
+    renderSensorsList();
 }
 
 // ── Visible-in-map filter ─────────────────────────────────────
@@ -1327,6 +1346,228 @@ function showTab(btn, tabId) {
     document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
     btn.classList.add('active');
     document.getElementById(tabId).classList.add('active');
+    if (tabId === 'tab-sync') initSyncTab();
+}
+
+// ============================================================
+// CENTRO DE SINCRONIZACIÓN IoT
+// ============================================================
+
+let _systemSyncPollTimer = null;
+let _systemSyncData      = [];
+let _syncSelectedSet     = new Set();
+
+async function initSyncTab() {
+    if (_systemSyncData.length === 0) await refreshSyncCenter();
+}
+
+async function refreshSyncCenter() {
+    try {
+        const r = await fetchJson('/api/systems-status');
+        _systemSyncData = r.systems || [];
+        renderSyncTable(_systemSyncData);
+    } catch (e) {
+        showToast('Error al cargar sistemas: ' + e.message, false);
+    }
+}
+
+function renderSyncTable(systems) {
+    const tbody = document.getElementById('sync-tbody');
+    if (!tbody) return;
+    const filter = (document.querySelector('input[name="sync-filter"]:checked') || {}).value || 'all';
+    let rows = systems;
+    if (filter === 'active')  rows = systems.filter(s => s.status === 'ACTIVE');
+    if (filter === 'no_data') rows = systems.filter(s => s.status === 'NO_DATA');
+    if (filter === 'partial') rows = systems.filter(s => s.status === 'PARTIAL');
+    if (filter === 'error')   rows = systems.filter(s => s.status === 'ERROR');
+
+    const totalCount    = systems.reduce((a, s) => a + s.count, 0);
+    const totalWith     = systems.reduce((a, s) => a + s.with_data, 0);
+    const totalWithout  = systems.reduce((a, s) => a + s.without_data, 0);
+
+    let html = `<tr class="sync-row-all">
+        <td><input type="checkbox" class="sync-chk" value="ALL" onchange="toggleSyncCheck(this)"></td>
+        <td colspan="2"><strong>TODOS</strong></td>
+        <td>${totalCount}</td>
+        <td>${totalWith}</td>
+        <td>${totalWithout}</td>
+        <td>—</td><td>—</td><td>—</td>
+        <td><button class="btn-sync-system" onclick="syncSystem('ALL')">Sincronizar todos</button></td>
+    </tr>`;
+
+    for (const sys of rows) {
+        const checked  = _syncSelectedSet.has(sys.system_id) ? 'checked' : '';
+        const badge    = _syncStatusBadge(sys.status);
+        const lastSeen = _relativeTime(sys.last_seen);
+        const lss      = sys.last_sync;
+        const lastSync = lss
+            ? `${_fmtDT(lss.at)} ${lss.ok ? '<span class="sync-ok">OK</span>' : '<span class="sync-err">ERR</span>'}`
+            : '—';
+        html += `<tr data-status="${sys.status || ''}">
+            <td><input type="checkbox" class="sync-chk" value="${sys.system_id}" ${checked} onchange="toggleSyncCheck(this)"></td>
+            <td>${sys.system_id}</td>
+            <td title="${sys.label || ''}">${sys.system_name}</td>
+            <td>${sys.count}</td>
+            <td>${sys.with_data}</td>
+            <td>${sys.without_data}</td>
+            <td>${lastSeen}</td>
+            <td>${badge}</td>
+            <td class="sync-last-sync">${lastSync}</td>
+            <td><button class="btn-sync-system" onclick="syncSystem('${sys.system_id}')">Sincronizar</button></td>
+        </tr>`;
+    }
+    tbody.innerHTML = html;
+    _updateSyncSelectedBtn();
+}
+
+function _syncStatusBadge(status) {
+    const cls = { ACTIVE: 'active', PARTIAL: 'partial', NO_DATA: 'nodata', ERROR: 'error' };
+    const c = cls[status] || '';
+    return `<span class="sync-badge${c ? ' sync-badge-' + c : ''}">${status || '?'}</span>`;
+}
+
+function filterSyncTable() {
+    renderSyncTable(_systemSyncData);
+}
+
+function toggleSyncCheck(cb) {
+    const val = cb.value;
+    if (val === 'ALL') {
+        _syncSelectedSet.clear();
+        if (cb.checked) _systemSyncData.forEach(s => _syncSelectedSet.add(s.system_id));
+        document.querySelectorAll('.sync-chk:not([value="ALL"])').forEach(c => { c.checked = cb.checked; });
+    } else {
+        if (cb.checked) _syncSelectedSet.add(val);
+        else _syncSelectedSet.delete(val);
+    }
+    _updateSyncSelectedBtn();
+}
+
+function toggleAllSyncCheck(cb) {
+    _syncSelectedSet.clear();
+    if (cb.checked) _systemSyncData.forEach(s => _syncSelectedSet.add(s.system_id));
+    document.querySelectorAll('.sync-chk').forEach(c => { c.checked = cb.checked; });
+    _updateSyncSelectedBtn();
+}
+
+function _updateSyncSelectedBtn() {
+    const btn = document.getElementById('btn-sync-selected');
+    if (!btn) return;
+    const n = _syncSelectedSet.size;
+    btn.disabled = n === 0;
+    btn.textContent = n > 0 ? `↓ Sincronizar seleccionados (${n})` : '↓ Sincronizar seleccionados';
+}
+
+async function syncSystem(systemId) {
+    if (systemId === 'ALL') return syncSelected(_systemSyncData.map(s => s.system_id));
+    return syncSelected([systemId]);
+}
+
+async function syncSelected(overrideList) {
+    const systems = overrideList || [..._syncSelectedSet];
+    if (!systems.length) return;
+    _showSyncProgress(systems);
+    try {
+        let endpoint, body;
+        if (systems.length === 1) {
+            endpoint = '/api/import-system';
+            body = JSON.stringify({ system_id: systems[0] });
+        } else {
+            endpoint = '/api/import-selected';
+            body = JSON.stringify({ systems });
+        }
+        await fetchJson(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body });
+        _pollSystemSync(systems);
+    } catch (e) {
+        showToast('Error al iniciar sincronización: ' + e.message, false);
+        const area = document.getElementById('sync-progress-area');
+        if (area) area.style.display = 'none';
+    }
+}
+
+function _showSyncProgress(systems) {
+    const area = document.getElementById('sync-progress-area');
+    if (!area) return;
+    area.style.display = 'block';
+    area.innerHTML = systems.map((sid, i) =>
+        `<div class="sync-prog-row">
+            <span class="sync-prog-label">[${i + 1}/${systems.length}] ${sid}</span>
+            <div class="sync-prog-bar-wrap"><div class="sync-prog-bar" id="sync-bar-${sid}" style="width:0%"></div></div>
+            <span class="sync-prog-status" id="sync-stat-${sid}">Pendiente</span>
+        </div>`
+    ).join('');
+}
+
+function _pollSystemSync(systems) {
+    clearTimeout(_systemSyncPollTimer);
+    _systemSyncPollTimer = setTimeout(async () => {
+        try {
+            const s = await fetchJson('/api/system-sync-status');
+            _updateSystemSyncUI(s, systems);
+            if (s.running) {
+                _pollSystemSync(systems);
+            } else {
+                if (s.done && !s.error) {
+                    systems.forEach(sid => {
+                        const bar  = document.getElementById(`sync-bar-${sid}`);
+                        const stat = document.getElementById(`sync-stat-${sid}`);
+                        if (bar)  { bar.style.width = '100%'; bar.style.background = '#4ade80'; }
+                        if (stat) stat.textContent = 'OK';
+                    });
+                    await reloadData();
+                    await refreshSyncCenter();
+                    showToast(`Sincronización completada: ${systems.join(', ')}`, true);
+                } else if (s.error) {
+                    showToast('Error en sincronización: ' + s.error, false);
+                }
+                setTimeout(() => {
+                    const area = document.getElementById('sync-progress-area');
+                    if (area) area.style.display = 'none';
+                }, 3000);
+            }
+        } catch (_) { _pollSystemSync(systems); }
+    }, 1200);
+}
+
+function _updateSystemSyncUI(s, systems) {
+    const idx = s.current_idx || 0;
+    systems.forEach((sid, i) => {
+        const bar  = document.getElementById(`sync-bar-${sid}`);
+        const stat = document.getElementById(`sync-stat-${sid}`);
+        if (!bar || !stat) return;
+        if (i < idx) {
+            bar.style.width = '100%'; bar.style.background = '#4ade80';
+            stat.textContent = 'OK';
+        } else if (i === idx && s.running) {
+            const pct = Math.min(85, 10 + (s.things_done || 0) * 2);
+            bar.style.width = pct + '%'; bar.style.background = '#3b82f6';
+            stat.textContent = `${s.things_done || 0} things…`;
+        }
+    });
+}
+
+async function analyzeSystems() {
+    showToast('Actualizando estado IoT de sistemas…', true);
+    await refreshSyncCenter();
+}
+
+function _relativeTime(isoStr) {
+    if (!isoStr) return '—';
+    const diff = Date.now() - new Date(isoStr).getTime();
+    const m    = Math.floor(diff / 60000);
+    if (m < 1)   return 'ahora';
+    if (m < 60)  return `hace ${m} min`;
+    const h = Math.floor(m / 60);
+    if (h < 24)  return `hace ${h}h`;
+    return `hace ${Math.floor(h / 24)}d`;
+}
+
+function _fmtDT(isoStr) {
+    if (!isoStr) return '—';
+    return new Date(isoStr).toLocaleString('es-ES', {
+        day: '2-digit', month: '2-digit', year: 'numeric',
+        hour: '2-digit', minute: '2-digit',
+    });
 }
 
 // ── Utilities ────────────────────────────────────────────────
@@ -1592,33 +1833,38 @@ function renderSelectionBar() {
         return;
     }
 
-    const id = n === 1 ? [...state.multiSelect][0] : state.selectedId;
-    const thingId = n === 1 ? null : state.selectedThingId;
-    if (!id) {
-        bar.style.display = 'none';
-        if (card) { card.classList.add('hidden'); card.innerHTML = ''; }
-        const sc = document.getElementById('selected-sensor-card');
-        if (sc) { sc.classList.add('hidden'); sc.innerHTML = ''; }
-        return;
+    // Multi-select (n===1): use the single selected id for edit/zoom actions
+    if (n === 1) {
+        const mid = [...state.multiSelect][0];
+        state.selectedId = mid;
+        state.selectedThingId = null;
     }
 
     const sensorCard = document.getElementById('selected-sensor-card');
     bar.style.display = 'none';
 
-    const isBuilding = !!data._buildingsMap[id];
-    if (isBuilding) {
+    // No context at all
+    if (!state.selectedBuildingId && !state.selectedSensorId) {
+        if (card) { card.classList.add('hidden'); card.innerHTML = ''; }
         if (sensorCard) { sensorCard.classList.add('hidden'); sensorCard.innerHTML = ''; }
-        renderSelectedBuildingCard(data._buildingsMap[id]);
-    } else {
-        const s = findSensor(id, thingId);
-        const building = s && s.hos ? data._buildingsMap[s.hos] : null;
-        if (building) {
-            renderSelectedBuildingCard(building);
-        } else if (card) {
-            card.classList.add('hidden'); card.innerHTML = '';
-        }
+        bar.style.display = 'none';
+        return;
+    }
+
+    // Render building card (always when there is a building context)
+    if (state.selectedBuildingId && data._buildingsMap[state.selectedBuildingId]) {
+        renderSelectedBuildingCard(data._buildingsMap[state.selectedBuildingId]);
+    } else if (card) {
+        card.classList.add('hidden'); card.innerHTML = '';
+    }
+
+    // Render sensor card (only when a sensor is active)
+    if (state.selectedSensorId) {
+        const s = findSensor(state.selectedSensorId, state.selectedSensorThingId);
         if (s) renderSelectedSensorCard(s);
         else if (sensorCard) { sensorCard.classList.add('hidden'); sensorCard.innerHTML = ''; }
+    } else {
+        if (sensorCard) { sensorCard.classList.add('hidden'); sensorCard.innerHTML = ''; }
     }
 }
 
@@ -1641,7 +1887,7 @@ function renderSelectedBuildingCard(b) {
                 ${b.image ? `<img src="${esc(b.image)}" alt="">` : '<span class="card-icon-emoji">&#127970;</span>'}
             </div>
             <div class="selection-card-info">
-                <div class="selection-card-kicker">Edificio seleccionado</div>
+                <div class="selection-card-kicker">Contexto actual</div>
                 <div class="selection-card-title">${esc(b.id)} · ${esc(b.short_name || b.name || '')}</div>
                 <div class="selection-card-meta">${meta}</div>
                 <div class="selection-card-systems">
@@ -1674,7 +1920,7 @@ function renderSelectedSensorCard(s) {
                 <div class="sys-icon-circle" style="background:${esc(color)}">${esc(s.system_id || '?')}</div>
             </div>
             <div class="selection-card-info">
-                <div class="selection-card-kicker">Sensor seleccionado</div>
+                <div class="selection-card-kicker">Sensor activo</div>
                 <div class="selection-card-title">${esc(s.id)}</div>
                 <div class="selection-card-meta">${meta}</div>
                 <div class="selection-card-systems">
@@ -1689,15 +1935,35 @@ function renderSelectedSensorCard(s) {
             <div class="selection-card-actions">
                 <button type="button" class="card-btn" onclick="editSelectedRecord()" title="Editar">&#9999;</button>
                 <button type="button" class="card-btn" onclick="zoomSelectedRecord()" title="Zoom">&#128205;</button>
-                <button type="button" class="card-btn card-btn-clear" onclick="clearSelection()" title="Limpiar">&#10005;</button>
+                <button type="button" class="card-btn card-btn-clear" onclick="clearSensor()" title="Cerrar sensor">&#10005;</button>
             </div>
         </div>
     `;
 }
 
+function clearSensor() {
+    state.selectedSensorId      = null;
+    state.selectedSensorThingId = null;
+    state.selectedId            = state.selectedBuildingId;
+    state.selectedThingId       = null;
+    document.querySelectorAll('tr.row-selected').forEach(r => r.classList.remove('row-selected'));
+    clearMapHighlight();
+    if (state.selectedBuildingId) {
+        highlightMapRecord(state.selectedBuildingId, 'building');
+        const bldRow = document.querySelector(`tr[data-rid="${CSS.escape(state.selectedBuildingId)}"]`);
+        if (bldRow) { bldRow.classList.add('row-selected'); bldRow.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }
+    }
+    closeDetailPanel();
+    renderSelectionBar();
+    renderSensorsList();
+}
+
 function clearSelection() {
-    state.selectedId = null;
-    state.selectedThingId = null;
+    state.selectedId            = null;
+    state.selectedThingId       = null;
+    state.selectedBuildingId    = null;
+    state.selectedSensorId      = null;
+    state.selectedSensorThingId = null;
     document.querySelectorAll('tr.row-selected').forEach(r => r.classList.remove('row-selected'));
     clearMapHighlight();
     closeDetailPanel();
@@ -1711,18 +1977,27 @@ function editSelectedRecord() {
         openBulkEdit(state.multiSelectType);
     } else if (n === 1) {
         openDetailPanel([...state.multiSelect][0]);
-    } else if (state.selectedId) {
-        openDetailPanel(state.selectedId, state.selectedThingId);
+    } else if (state.selectedSensorId) {
+        openDetailPanel(state.selectedSensorId, state.selectedSensorThingId);
+    } else if (state.selectedBuildingId) {
+        openDetailPanel(state.selectedBuildingId);
     }
 }
 
 function zoomSelectedRecord() {
     const n = state.multiSelect.size;
-    const id = n === 1 ? [...state.multiSelect][0] : state.selectedId;
-    const thingId = n === 1 ? null : state.selectedThingId;
-    if (!id) return;
-    if (data._buildingsMap[id]) focusBuilding(id);
-    else focusSensor(id, thingId);
+    if (n === 1) {
+        const mid = [...state.multiSelect][0];
+        if (data._buildingsMap[mid]) focusBuilding(mid);
+        else focusSensor(mid, null);
+        return;
+    }
+    // Zoom to sensor if active, else to building context
+    if (state.selectedSensorId) {
+        focusSensor(state.selectedSensorId, state.selectedSensorThingId);
+    } else if (state.selectedBuildingId) {
+        focusBuilding(state.selectedBuildingId);
+    }
 }
 
 // ── Save ──────────────────────────────────────────────────────

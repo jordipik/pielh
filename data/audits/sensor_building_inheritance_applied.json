@@ -1,0 +1,58 @@
+{
+  "generated_at": "2026-06-20T16:13:12.475348+00:00",
+  "backup": "C:\\Users\\jordi\\source\\repos\\pielh\\pielh_v02\\data\\backups\\pielh_qa_master_20260620_181312.json",
+  "total_sensors_with_hos": 1261,
+  "skipped_no_hos": 301,
+  "skipped_invalid_hos": 2,
+  "updated_building_name": 1180,
+  "updated_coordinates_from_building": 406,
+  "skipped_existing_coordinates": 853,
+  "updated_admin_fields": 0,
+  "admin_field_detail": {},
+  "sensors_changed": 1260,
+  "examples": [
+    {
+      "sensor_id": "HOS044-S01-01",
+      "thing_id": "SnHdcxnnzpD1Z79Dvxs_8O-CkgSE79MVRI3j6T0DxEk",
+      "hos": "HOS044",
+      "changes": {
+        "building_name": "HOS044 Esc. Gornal"
+      }
+    },
+    {
+      "sensor_id": "HOS044-S01-01",
+      "thing_id": "suj9PiI4JbekaYqNnsbjaQY2kR1TrCjFT1KOvxdOzPU",
+      "hos": "HOS044",
+      "changes": {
+        "building_name": "HOS044 Esc. Gornal"
+      }
+    },
+    {
+      "sensor_id": "HOS136-S01-01 (T257517)",
+      "thing_id": "XzMNdYAN5eNT1UNnkgGcoT6Zb1kO9QeLauwy9m-pon8",
+      "hos": "HOS136",
+      "changes": {
+        "building_name": "HOS136 Residencia Els Alps",
+        "lat": 41.36258967284149,
+        "lon": 2.0954845257125845,
+        "coords_source": "building"
+      }
+    },
+    {
+      "sensor_id": "HOS505-S02-01 BET00230061",
+      "thing_id": "QmwnQuDypPIa1yMjbVA6CKsH0FVwcl7vwTV00dkowJQ",
+      "hos": "HOS505",
+      "changes": {
+        "building_name": "HOS505"
+      }
+    },
+    {
+      "sensor_id": "HOS511-S02-01 BET00230067",
+      "thing_id": "P1R0s3qUfWq5443HCWV-75b2vis7vpruWWOWvyr7ihA",
+      "hos": "HOS511",
+      "changes": {
+        "building_name": "HOS511"
+      }
+    }
+  ]
+}

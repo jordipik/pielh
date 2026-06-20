@@ -1,51 +1,22 @@
 {
-  "generated_at": "2026-06-20T17:57:26.728839+00:00",
-  "source_summary": "C:\\Users\\jordi\\source\\repos\\pielh\\pielh_v02\\data\\audits\\thethings_activity_20260620_174117.csv",
-  "executive_summary": {
-    "total_sensors": 1564,
-    "valid_things": 1564,
-    "invalid_things": 0,
-    "sensors_active": 244,
-    "sensors_with_data": 286,
-    "sensors_no_data": 1277,
-    "sensors_token_invalid": 0,
-    "api_errors": 0
-  },
-  "kpis_demo": {
-    "demo_ready_sensors": 244,
-    "demo_ready_systems": 10,
-    "demo_ready_percent": 15.6
-  },
-  "classification": {
-    "A_operative": [
-      "SIP",
-      "S22",
-      "S21",
-      "S02",
-      "S04",
-      "S05",
-      "S14A",
-      "S07",
-      "S01",
-      "S24"
-    ],
-    "B_recoverable": [
-      "S06",
-      "S08",
-      "S19",
-      "S20",
-      "S09",
-      "S15",
-      "S13A",
-      "S14B",
-      "S17",
-      "S23",
-      "S03"
-    ],
-    "C_broken": []
-  },
-  "broken_token_systems": [],
-  "systems_detail": {
+  "total_sensors": 1564,
+  "valid_things": 1564,
+  "invalid_things": 0,
+  "active_24h": 222,
+  "active_7d": 22,
+  "stale_30d": 43,
+  "stale_90d": 0,
+  "inactive_90d": 0,
+  "data_no_timestamp": 0,
+  "no_data": 1277,
+  "token_or_thing_invalid": 0,
+  "has_real_value": 286,
+  "missing_thing_token": 0,
+  "missing_hos": 382,
+  "building_not_found": 384,
+  "missing_coords": 713,
+  "api_errors": 0,
+  "by_system": {
     "S01": {
       "system_name": "RUIDO",
       "total": 3,
@@ -58,11 +29,7 @@
       "inactive_90d": 0,
       "data_no_timestamp": 0,
       "no_data": 2,
-      "has_real_value": 1,
-      "class": "A",
-      "active": 1,
-      "with_data": 1,
-      "pct_invalid": 0.0
+      "has_real_value": 1
     },
     "S02": {
       "system_name": "CONTAMINACIÓN EXTERIOR",
@@ -76,11 +43,7 @@
       "inactive_90d": 0,
       "data_no_timestamp": 0,
       "no_data": 36,
-      "has_real_value": 33,
-      "class": "A",
-      "active": 33,
-      "with_data": 33,
-      "pct_invalid": 0.0
+      "has_real_value": 33
     },
     "S03": {
       "system_name": "GAS RADON",
@@ -94,11 +57,7 @@
       "inactive_90d": 0,
       "data_no_timestamp": 0,
       "no_data": 1,
-      "has_real_value": 0,
-      "class": "B",
-      "active": 0,
-      "with_data": 0,
-      "pct_invalid": 0.0
+      "has_real_value": 0
     },
     "S04": {
       "system_name": "AMBIENTE INTERIOR",
@@ -112,11 +71,7 @@
       "inactive_90d": 0,
       "data_no_timestamp": 0,
       "no_data": 72,
-      "has_real_value": 40,
-      "class": "A",
-      "active": 33,
-      "with_data": 40,
-      "pct_invalid": 0.0
+      "has_real_value": 40
     },
     "S05": {
       "system_name": "ELECTRICIDAD",
@@ -130,11 +85,7 @@
       "inactive_90d": 0,
       "data_no_timestamp": 0,
       "no_data": 70,
-      "has_real_value": 32,
-      "class": "A",
-      "active": 32,
-      "with_data": 32,
-      "pct_invalid": 0.0
+      "has_real_value": 32
     },
     "S06": {
       "system_name": "AGUA",
@@ -148,11 +99,7 @@
       "inactive_90d": 0,
       "data_no_timestamp": 0,
       "no_data": 257,
-      "has_real_value": 0,
-      "class": "B",
-      "active": 0,
-      "with_data": 0,
-      "pct_invalid": 0.0
+      "has_real_value": 0
     },
     "S07": {
       "system_name": "GAS",
@@ -166,11 +113,7 @@
       "inactive_90d": 0,
       "data_no_timestamp": 0,
       "no_data": 20,
-      "has_real_value": 5,
-      "class": "A",
-      "active": 5,
-      "with_data": 5,
-      "pct_invalid": 0.0
+      "has_real_value": 5
     },
     "S08": {
       "system_name": "CALDERAS",
@@ -184,11 +127,7 @@
       "inactive_90d": 0,
       "data_no_timestamp": 0,
       "no_data": 107,
-      "has_real_value": 0,
-      "class": "B",
-      "active": 0,
-      "with_data": 0,
-      "pct_invalid": 0.0
+      "has_real_value": 0
     },
     "S09": {
       "system_name": "CLIMATIZACIÓN",
@@ -202,11 +141,7 @@
       "inactive_90d": 0,
       "data_no_timestamp": 0,
       "no_data": 53,
-      "has_real_value": 0,
-      "class": "B",
-      "active": 0,
-      "with_data": 0,
-      "pct_invalid": 0.0
+      "has_real_value": 0
     },
     "S13A": {
       "system_name": "SOSTENIBILIDAD EDIFICIOS",
@@ -220,11 +155,7 @@
       "inactive_90d": 0,
       "data_no_timestamp": 0,
       "no_data": 14,
-      "has_real_value": 0,
-      "class": "B",
-      "active": 0,
-      "with_data": 0,
-      "pct_invalid": 0.0
+      "has_real_value": 0
     },
     "S14A": {
       "system_name": "METEO",
@@ -238,11 +169,7 @@
       "inactive_90d": 0,
       "data_no_timestamp": 0,
       "no_data": 12,
-      "has_real_value": 6,
-      "class": "A",
-      "active": 6,
-      "with_data": 7,
-      "pct_invalid": 0.0
+      "has_real_value": 6
     },
     "S14B": {
       "system_name": "METEO SENSOR",
@@ -256,11 +183,7 @@
       "inactive_90d": 0,
       "data_no_timestamp": 0,
       "no_data": 11,
-      "has_real_value": 0,
-      "class": "B",
-      "active": 0,
-      "with_data": 0,
-      "pct_invalid": 0.0
+      "has_real_value": 0
     },
     "S15": {
       "system_name": "PRESENCIA",
@@ -274,11 +197,7 @@
       "inactive_90d": 0,
       "data_no_timestamp": 0,
       "no_data": 31,
-      "has_real_value": 0,
-      "class": "B",
-      "active": 0,
-      "with_data": 0,
-      "pct_invalid": 0.0
+      "has_real_value": 0
     },
     "S17": {
       "system_name": "AFORO",
@@ -292,11 +211,7 @@
       "inactive_90d": 0,
       "data_no_timestamp": 0,
       "no_data": 4,
-      "has_real_value": 0,
-      "class": "B",
-      "active": 0,
-      "with_data": 0,
-      "pct_invalid": 0.0
+      "has_real_value": 0
     },
     "S19": {
       "system_name": "GAS",
@@ -310,11 +225,7 @@
       "inactive_90d": 0,
       "data_no_timestamp": 0,
       "no_data": 65,
-      "has_real_value": 0,
-      "class": "B",
-      "active": 0,
-      "with_data": 0,
-      "pct_invalid": 0.0
+      "has_real_value": 0
     },
     "S20": {
       "system_name": "INUNDACION",
@@ -328,11 +239,7 @@
       "inactive_90d": 0,
       "data_no_timestamp": 0,
       "no_data": 61,
-      "has_real_value": 0,
-      "class": "B",
-      "active": 0,
-      "with_data": 0,
-      "pct_invalid": 0.0
+      "has_real_value": 0
     },
     "S21": {
       "system_name": "DETECCION HUMOS",
@@ -346,11 +253,7 @@
       "inactive_90d": 0,
       "data_no_timestamp": 0,
       "no_data": 88,
-      "has_real_value": 70,
-      "class": "A",
-      "active": 36,
-      "with_data": 70,
-      "pct_invalid": 0.0
+      "has_real_value": 70
     },
     "S22": {
       "system_name": "TRANSPORTE PUBLICO",
@@ -364,11 +267,7 @@
       "inactive_90d": 0,
       "data_no_timestamp": 0,
       "no_data": 277,
-      "has_real_value": 48,
-      "class": "A",
-      "active": 48,
-      "with_data": 48,
-      "pct_invalid": 0.0
+      "has_real_value": 48
     },
     "S23": {
       "system_name": "PARKING",
@@ -382,11 +281,7 @@
       "inactive_90d": 0,
       "data_no_timestamp": 0,
       "no_data": 2,
-      "has_real_value": 0,
-      "class": "B",
-      "active": 0,
-      "with_data": 0,
-      "pct_invalid": 0.0
+      "has_real_value": 0
     },
     "S24": {
       "system_name": "TRAFICO",
@@ -400,11 +295,7 @@
       "inactive_90d": 0,
       "data_no_timestamp": 0,
       "no_data": 5,
-      "has_real_value": 1,
-      "class": "A",
-      "active": 1,
-      "with_data": 1,
-      "pct_invalid": 0.0
+      "has_real_value": 1
     },
     "SIP": {
       "system_name": "IPS",
@@ -418,11 +309,32 @@
       "inactive_90d": 0,
       "data_no_timestamp": 0,
       "no_data": 89,
-      "has_real_value": 50,
-      "class": "A",
-      "active": 49,
-      "with_data": 50,
-      "pct_invalid": 0.0
+      "has_real_value": 50
     }
+  },
+  "by_district": {
+    "Distrito VI": 113,
+    "Distrito I": 475,
+    "UNKNOWN": 429,
+    "Distrito III": 154,
+    "Distrito IV": 81,
+    "Distrito II": 146,
+    "Distrito V": 166
+  },
+  "by_neighborhood": {
+    "El Gornal": 28,
+    "Sanfeliu": 53,
+    "UNKNOWN": 429,
+    "Granvia Sud": 44,
+    "La Florida": 28,
+    "Santa Eulàlia": 110,
+    "Centre": 321,
+    "Collblanc": 98,
+    "Bellvitge": 85,
+    "Les Planes": 53,
+    "Pubilla Cases": 105,
+    "La Torrassa": 48,
+    "Sant Josep": 101,
+    "Can Serra": 61
   }
 }
