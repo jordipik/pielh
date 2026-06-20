@@ -28,6 +28,9 @@ const state = {
     selectedThingId: null,  // disambiguates sensors that share the same id
     onlyVisibleBld: false,
     onlyVisibleSns: false,
+    onlyIotSensorsActive: false,
+    onlyIotBuildingsActive: false,
+    demoIotMode: false,
     multiSelect: new Set(),
     multiSelectType: null,   // 'building' | 'sensor'
     lastSelectedId: null,
@@ -449,6 +452,11 @@ function resetFilters() {
         document.getElementById(id).value = '';
     });
     document.getElementById('filter-search').value = '';
+    state.onlyIotSensorsActive  = false;
+    state.onlyIotBuildingsActive = false;
+    state.demoIotMode = false;
+    _syncDemoIotCheckboxes();
+    _syncDemoIotBtn();
     applyFilters();
 }
 
@@ -477,6 +485,9 @@ function applyFilters() {
                 .filter(Boolean).join(' ').toLowerCase();
             if (!hay.includes(search)) return false;
         }
+        if (state.onlyIotBuildingsActive) {
+            if (!((b.iot_active_sensors ?? 0) > 0 || b.iot_health_status === 'ACTIVE')) return false;
+        }
         return true;
     });
 
@@ -492,6 +503,10 @@ function applyFilters() {
                 .filter(Boolean).join(' ').toLowerCase();
             if (!hay.includes(search)) return false;
         }
+        if (state.onlyIotSensorsActive) {
+            const iot = s.iot_health;
+            if (!iot || (!iot.demo_ready && !iot.has_real_data)) return false;
+        }
         return true;
     });
 
@@ -506,6 +521,7 @@ function applyFilters() {
 
     renderMarkers();
     renderSummary();
+    renderIotDemoSummary();
     renderBuildingsList();
     renderSensorsList();
     updateMultiSelectUI();
@@ -567,7 +583,10 @@ function renderBuildingMarker(b) {
     const hasData = (b.has_data ?? '').toUpperCase();
 
     let statusCls = 'bm-unknown';
-    if (hasData === 'OK') statusCls = 'bm-ok';
+    if (b.iot_health_status === 'ACTIVE') statusCls = 'bm-ok';
+    else if (b.iot_health_status === 'NO_DATA') statusCls = 'bm-nodata';
+    else if (b.iot_health_status === 'NO_SENSORS') statusCls = 'bm-unknown';
+    else if (hasData === 'OK') statusCls = 'bm-ok';
     else if (hasData === 'SIN DATOS') statusCls = 'bm-nodata';
     if (b.state === 'Fuera Proyecto') statusCls = 'bm-fuera';
 
@@ -593,14 +612,21 @@ function renderSensorMarker(s, offsets) {
     if (!pos) return;
 
     const color = getSystemColor(s.system_id);
+    const iot = s.iot_health;
+    let fillOpacity = 0.9, weight = 1.5, borderColor = '#fff';
+    if (iot) {
+        if (iot.demo_ready) { fillOpacity = 0.95; borderColor = '#fff'; }
+        else if (iot.has_real_data) { fillOpacity = 0.5; weight = 1; }
+        else { fillOpacity = 0.22; weight = 1; }
+    }
 
     const marker = L.circleMarker([pos.lat, pos.lon], {
         pane: 'sensorsPane',
         radius: 6,
         fillColor: color,
-        color: '#fff',
-        weight: 1.5,
-        fillOpacity: 0.9,
+        color: borderColor,
+        weight: weight,
+        fillOpacity: fillOpacity,
     });
 
     marker.on('click', () => selectRecord(s.id, { source: 'map' }));
@@ -738,6 +764,7 @@ function buildingPopup(b, sCount) {
             ${row('Sensores', sCount)}
             ${row('Estado', b.state)}
             <tr><th>Datos</th><td style="color:${color};font-weight:600">${esc(hasData)}</td></tr>
+            ${b.iot_health_status ? row('IoT', `${b.iot_active_sensors ?? 0}/${b.iot_total_sensors ?? 0} activos`) : ''}
             ${rowMono('ThingID', b.thing_id)}
         </table>`;
 }
@@ -758,6 +785,9 @@ function sensorPopup(s) {
             ${row('Tipo', s.type)}
             ${row('REF-ETRA', s.ref_etra)}
             ${row('Datos', s.has_data)}
+            ${s.iot_health ? row('IoT estado', s.iot_health.status) : ''}
+            ${s.iot_health?.resource ? row('IoT recurso', s.iot_health.resource) : ''}
+            ${s.iot_health?.last_seen ? row('Ultima lectura', s.iot_health.last_seen.slice(0, 16).replace('T', ' ')) : ''}
             ${rowMono('ThingID', s.thing_id)}
             ${rowMono('ThingToken', s.thing_token)}
         </table>`;
@@ -787,6 +817,29 @@ function districtPopup(o) {
             ${cat ? row('Sensores', cat.sensor_count) : ''}
             ${rowMono('ThingID', o.thing_id)}
         </table>`;
+}
+
+// ── IoT Demo Summary ─────────────────────────────────────────
+
+function renderIotDemoSummary() {
+    const el = document.getElementById('iot-demo-summary');
+    if (!el) return;
+
+    const allSensors   = data.sensors   ?? [];
+    const allBuildings = data.buildings ?? [];
+
+    const activeSensors   = allSensors.filter(s => s.iot_health?.demo_ready || s.iot_health?.has_real_data);
+    const activeBuildings = allBuildings.filter(b => (b.iot_active_sensors ?? 0) > 0);
+    const activeSysIds    = new Set(activeSensors.map(s => s.system_id).filter(Boolean));
+
+    const total = allSensors.length;
+    const pct   = total > 0 ? (activeSensors.length / total * 100).toFixed(1) : '0.0';
+
+    el.innerHTML =
+        `<div class="iot-summary-row"><span class="iot-summary-val">${activeSensors.length}</span><span class="iot-summary-lbl"> sensores IoT activos</span></div>` +
+        `<div class="iot-summary-row"><span class="iot-summary-val">${activeBuildings.length}</span><span class="iot-summary-lbl"> edificios con IoT activo</span></div>` +
+        `<div class="iot-summary-row"><span class="iot-summary-val">${activeSysIds.size}</span><span class="iot-summary-lbl"> sistemas IoT activos</span></div>` +
+        `<div class="iot-summary-row"><span class="iot-summary-val">${pct}%</span><span class="iot-summary-lbl"> cobertura de datos</span></div>`;
 }
 
 // ── Summary cards ────────────────────────────────────────────
@@ -833,7 +886,9 @@ function renderBuildingsList() {
             <td title="${esc(b.district_name)}">${esc(b.district_name ?? '—')}</td>
             <td title="${esc(b.street_etra)}">${esc(truncate(b.street_etra, 20))}</td>
             <td>${sCount}</td>
-            <td style="color:${dataColor};font-weight:600">${esc(b.has_data ?? '—')}</td>
+            <td>${b.iot_health_status
+                ? `<span class="iot-badge iot-${b.iot_health_status.toLowerCase()}">${b.iot_active_sensors ?? 0}/${b.iot_total_sensors ?? 0}</span>`
+                : `<span style="color:${dataColor};font-weight:600">${esc(b.has_data ?? '—')}</span>`}</td>
         `;
         tr.addEventListener('click', e => {
             if (e.ctrlKey || e.metaKey) {
@@ -891,7 +946,9 @@ function renderSensorsList() {
             <td title="${esc(s.neighborhood)}">${esc(shortNeighborhood(s.neighborhood))}</td>
             <td title="${esc(s.district_name)}">${esc(s.district_name ?? '—')}</td>
             <td title="${esc(s.ref_etra)}">${esc(truncate(s.ref_etra, 18))}</td>
-            <td style="color:${dataColor};font-weight:600">${esc(s.has_data ?? '—')}</td>
+            <td>${s.iot_health
+                ? `<span class="iot-badge iot-${s.iot_health.demo_ready ? 'active' : 'nodata'}">${esc(s.iot_health.status)}</span>`
+                : `<span style="color:${dataColor};font-weight:600">${esc(s.has_data ?? '—')}</span>`}</td>
         `;
         tr.addEventListener('click', e => {
             if (e.ctrlKey || e.metaKey) {
@@ -1138,9 +1195,40 @@ function initTables() {
         renderSensorsList();
     });
 
+    // IoT demo controls
+    document.getElementById('chk-iot-sensors-active').addEventListener('change', e => {
+        state.onlyIotSensorsActive = e.target.checked;
+        if (!e.target.checked) state.demoIotMode = false;
+        _syncDemoIotBtn();
+        applyFilters();
+    });
+    document.getElementById('chk-iot-buildings-active').addEventListener('change', e => {
+        state.onlyIotBuildingsActive = e.target.checked;
+        if (!e.target.checked) state.demoIotMode = false;
+        _syncDemoIotBtn();
+        applyFilters();
+    });
+    document.getElementById('btn-demo-iot').addEventListener('click', () => {
+        state.demoIotMode = !state.demoIotMode;
+        state.onlyIotSensorsActive  = state.demoIotMode;
+        state.onlyIotBuildingsActive = state.demoIotMode;
+        _syncDemoIotCheckboxes();
+        _syncDemoIotBtn();
+        applyFilters();
+    });
+
     initResizableColumns('buildings-table');
     initResizableColumns('sensors-table');
     initPanelResizer();
+}
+
+function _syncDemoIotCheckboxes() {
+    document.getElementById('chk-iot-sensors-active').checked  = state.onlyIotSensorsActive;
+    document.getElementById('chk-iot-buildings-active').checked = state.onlyIotBuildingsActive;
+}
+function _syncDemoIotBtn() {
+    document.getElementById('btn-demo-iot')
+        .classList.toggle('btn-demo-iot-active', state.demoIotMode);
 }
 
 // ── QA Panel ─────────────────────────────────────────────────
@@ -1559,6 +1647,7 @@ function renderSelectedBuildingCard(b) {
                 <div class="selection-card-systems">
                     ${sysBadges}
                     <span class="sys-count">${sensors.length} sensor${sensors.length !== 1 ? 'es' : ''}</span>
+                    ${b.iot_health_status ? `<span class="iot-badge iot-${b.iot_health_status.toLowerCase()}">${b.iot_active_sensors ?? 0}/${b.iot_total_sensors ?? 0} IoT</span>` : ''}
                 </div>
             </div>
             <div class="selection-card-actions">
@@ -1590,7 +1679,10 @@ function renderSelectedSensorCard(s) {
                 <div class="selection-card-meta">${meta}</div>
                 <div class="selection-card-systems">
                     <span class="sys-badge" style="background:${esc(color)}">${esc(s.system_id || '')}</span>
-                    <span class="sys-count">${esc(s.has_data || '-')}</span>
+                    ${s.iot_health
+                        ? `<span class="iot-badge iot-${s.iot_health.demo_ready ? 'active' : 'nodata'}">${esc(s.iot_health.status)}</span>`
+                        : `<span class="sys-count">${esc(s.has_data || '-')}</span>`}
+                    ${s.iot_health?.last_seen ? `<span class="meta-sep">·</span><span class="sys-count">${esc(s.iot_health.last_seen.slice(0,10))}</span>` : ''}
                     ${s.district_name || s.district_code ? `<span class="meta-sep">·</span><span class="sys-count">${esc(s.district_name || s.district_code)}</span>` : ''}
                 </div>
             </div>
@@ -1871,7 +1963,15 @@ function _pollSyncStatus() {
                 document.getElementById('btn-sync').disabled = false;
                 if (s.done) {
                     await reloadData();
-                    showToast(`Sincronización completada: ${s.buildings} edificios, ${s.sensors} sensores.`, true);
+                    loadPushStatus();
+                    if (s.inventory_health_skipped) {
+                        const reason = s.inventory_stats?.reason || 'motivo desconocido';
+                        showToast(`Sync completa: ${s.buildings} edif., ${s.sensors} sens. ⚠ Inventario IoT omitido: ${reason}`, false);
+                    } else {
+                        const warns = (s.warnings || []).length;
+                        const warnTxt = warns > 0 ? ` · ${warns} aviso${warns > 1 ? 's' : ''}` : '';
+                        showToast(`Sincronización completa: ${s.buildings} edificios, ${s.sensors} sensores${warnTxt}.`, true);
+                    }
                 } else if (s.error) {
                     showToast('Error en sincronización: ' + s.error, false);
                 }
@@ -1886,7 +1986,14 @@ function _updateSyncUI(s) {
     const el = document.getElementById('sync-status');
     if (!el) return;
     if (s.running) {
-        el.textContent = `Importando… ${s.things_done} things · ${s.current_model}`;
+        const phase = s.phase || 'importing';
+        if (phase === 'resolving_tags') {
+            el.textContent = 'Resolviendo tags automáticamente…';
+        } else if (phase === 'updating_inventory') {
+            el.textContent = s.sub_status || 'Actualizando inventario IoT…';
+        } else {
+            el.textContent = `Importando… ${s.things_done} things · ${s.current_model}`;
+        }
     } else if (s.done && s.finished_at) {
         const t = new Date(s.finished_at).toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
         el.textContent = `Sync ${t} · ${s.buildings} edif. ${s.sensors} sens.`;

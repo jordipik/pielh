@@ -2,6 +2,7 @@
 """PIELH QA — servidor con guardado, health check y logging."""
 
 import copy
+import csv
 import http.server
 import json
 import logging
@@ -16,6 +17,17 @@ from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).parent
+
+import sys as _sys
+_scripts_dir = str(ROOT / 'scripts')
+if _scripts_dir not in _sys.path:
+    _sys.path.insert(0, _scripts_dir)
+try:
+    from audit_thethings_activity import run_audit as _run_audit_fn
+    from build_inventory_health_report import run_build_report as _run_report_fn
+    _HAS_AUDIT_MODULES = True
+except ImportError:
+    _HAS_AUDIT_MODULES = False
 
 # Fields that are never propagated/completed across sensors that share the same id
 # (each duplicate is treated as the same logical sensor, but ID/token belong to a
@@ -101,9 +113,17 @@ MODELS = [
 _import_lock  = threading.Lock()
 _import_state = {
     'running': False, 'done': False, 'error': None,
+    'phase': '',       # importing | resolving_tags | updating_inventory | done | error
+    'sub_status': '',  # detalle dentro de la fase actual
     'models_total': len(MODELS), 'models_done': 0,
     'things_done': 0, 'current_model': '',
     'buildings': 0, 'sensors': 0,
+    'tags_stats': None,        # stats de resolve_tags
+    'inventory_stats': None,   # stats de iot_health
+    'inventory_health_skipped': None,
+    'warnings': [],
+    'tags_resolved_at': None, 'inventory_health_updated_at': None,
+    'sync_pipeline_version': 'import_tags_inventory_v1',
     'started_at': None, 'finished_at': None,
 }
 
@@ -336,9 +356,14 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                 if not already:
                     _import_state.update({
                         'running': True, 'done': False, 'error': None,
+                        'phase': '', 'sub_status': '',
                         'models_done': 0, 'things_done': 0,
                         'buildings': 0, 'sensors': 0,
                         'current_model': '',
+                        'tags_stats': None, 'inventory_stats': None,
+                        'inventory_health_skipped': None,
+                        'warnings': [],
+                        'tags_resolved_at': None, 'inventory_health_updated_at': None,
                         'started_at': datetime.now().isoformat(),
                         'finished_at': None,
                     })
@@ -350,6 +375,14 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
     def _run_import(self):
         try:
+            # ── Backup preventivo ─────────────────────────────────────
+            self._backup()
+            _log.info('import: inicio sincronización completa (pipeline import_tags_inventory_v1)')
+
+            # ── Fase 1: importing ─────────────────────────────────────
+            with _import_lock:
+                _import_state['phase'] = 'importing'
+
             master = self._load()
             master['buildings'] = []
             master['sensors']   = []
@@ -383,23 +416,85 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
                 time.sleep(0.3)
 
+            # ── Fase 2: resolving_tags ────────────────────────────────
+            with _import_lock:
+                _import_state['phase'] = 'resolving_tags'
+
+            _log.info('import: resolviendo tags…')
+            resolve_stats = self._resolve_tags_in_master(master)
+            _log.info(
+                f"import: tags — {resolve_stats['buildings_updated']} edif., "
+                f"{resolve_stats['sensors_updated']} sens."
+            )
+            with _import_lock:
+                _import_state['tags_stats'] = {
+                    'buildings_updated': resolve_stats['buildings_updated'],
+                    'sensors_updated':   resolve_stats['sensors_updated'],
+                    'no_tags':           resolve_stats['no_tags'],
+                    'skipped':           resolve_stats['skipped'],
+                    'tags_unknown':      resolve_stats['tags_unknown'][:10],
+                }
+
+            # ── Fase 3: updating_inventory ────────────────────────────
+            with _import_lock:
+                _import_state['phase']      = 'updating_inventory'
+                _import_state['sub_status'] = 'Iniciando auditoría IoT…'
+
+            inv_stats = self._apply_inventory_health_full(master)
+            inv_skipped = bool(inv_stats.get('skipped'))
+            if inv_skipped:
+                _log.info(f"import: inventario omitido — {inv_stats.get('reason')}")
+            else:
+                _log.info(
+                    f"import: inventario — {inv_stats.get('sensors_audited')} auditados, "
+                    f"{inv_stats.get('matched')} matched, "
+                    f"{inv_stats.get('buildings_updated')} edif."
+                )
+            with _import_lock:
+                _import_state['inventory_stats']          = inv_stats
+                _import_state['inventory_health_skipped'] = inv_skipped
+
+            # ── Validación final ──────────────────────────────────────
+            validation = self._validate_iot_health(master)
+            with _import_lock:
+                _import_state['warnings'] = validation['warnings']
+
+            # ── Guardar y finalizar ───────────────────────────────────
             finished = datetime.now().isoformat()
             master['_meta'] = {
-                'last_sync': finished,
-                'buildings': len(master['buildings']),
-                'sensors':   len(master['sensors']),
+                'last_sync':                     finished,
+                'buildings':                     len(master['buildings']),
+                'sensors':                       len(master['sensors']),
+                'tags_resolved_at':              finished,
+                'inventory_health_updated_at':   finished if not inv_skipped else None,
+                'inventory_health_skipped':      inv_skipped,
+                'inventory_health_error':        inv_stats.get('reason') if inv_skipped else None,
+                'sync_pipeline_version':         'import_tags_inventory_v1',
+                'validation':                    validation,
             }
             self._save(master)
+
             with _import_lock:
-                _import_state['running']     = False
-                _import_state['done']        = True
-                _import_state['finished_at'] = finished
-            _log.info(f"import done: {_import_state['buildings']} edificios, {_import_state['sensors']} sensores")
+                _import_state['running']                     = False
+                _import_state['done']                        = True
+                _import_state['phase']                       = 'done'
+                _import_state['sub_status']                  = ''
+                _import_state['finished_at']                 = finished
+                _import_state['tags_resolved_at']            = finished
+                _import_state['inventory_health_updated_at'] = finished if not inv_skipped else None
+
+            _log.info(
+                f"import done: {_import_state['buildings']} edif., "
+                f"{_import_state['sensors']} sens. "
+                f"warnings={validation['warnings']}"
+            )
 
         except Exception as exc:
             with _import_lock:
-                _import_state['running'] = False
-                _import_state['error']   = str(exc)
+                _import_state['running']    = False
+                _import_state['error']      = str(exc)
+                _import_state['phase']      = 'error'
+                _import_state['sub_status'] = ''
             _log.error(f"import failed: {exc}")
 
     # ── Resolve Tags ──────────────────────────────────────────────
@@ -410,6 +505,9 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
     def _handle_resolve_tags(self):
         try:
+            with _import_lock:
+                if _import_state.get('running'):
+                    return self._err(409, 'Import en curso — espera a que termine antes de resolver tags')
             with _resolve_lock:
                 already = _resolve_state['running']
                 if not already:
@@ -437,71 +535,39 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
         try:
             master    = self._load()
-            cats      = master.get('catalogs', {})
             buildings = master.get('buildings', [])
-            sensors   = master.get('sensors', [])
-
-            # Build lookup maps
-            district_map = {d['code'].upper(): d for d in cats.get('districts', [])}
-            neighborhood_map = {}
-            for nb in cats.get('neighborhoods', []):
-                key_norm = nb['key'].upper().replace(' ', '_')
-                neighborhood_map[key_norm] = nb
-
-            # Pre-calc sensors without matched building
-            building_ids = {b['id'] for b in buildings}
-            sns_no_bld = sum(1 for s in sensors if s.get('hos', '') and s['hos'] not in building_ids)
 
             with _resolve_lock:
-                _resolve_state['total']              = len(buildings)
-                _resolve_state['sensors_no_building'] = sns_no_bld
-            log(f'Cargados {len(buildings)} edificios · {len(district_map)} distritos · {len(neighborhood_map)} barrios')
+                _resolve_state['total'] = len(buildings)
+            log(f'Cargados {len(buildings)} edificios')
 
-            bld_updated  = 0
-            sns_updated  = 0
-            no_tags_cnt  = 0
-            skipped_cnt  = 0
-            fields_count = {'district_code': 0, 'neighborhood_key': 0, 'type': 0, 'zone': 0, 'street_etra': 0}
-            unknown_tags = set()
-
-            for i, b in enumerate(buildings):
-                tags_str = b.get('tags', '')
-                if not tags_str:
-                    no_tags_cnt += 1
-                else:
-                    tags_list = [t.strip() for t in tags_str.split(',') if t.strip()]
-                    fields, unknowns = self._resolve_tags_to_fields(tags_list, district_map, neighborhood_map)
-                    unknown_tags.update(unknowns)
-                    if fields:
-                        for fk in fields_count:
-                            if fk in fields:
-                                fields_count[fk] += 1
-                        self._apply_updates(b, fields)
-                        n = self._propagate_to_sensors(master, b['id'], fields)
-                        bld_updated += 1
-                        sns_updated += n
-                        resolved = ', '.join(f'{k}={v}' for k, v in list(fields.items())[:3])
-                        log(f'{b["id"]}: {resolved}')
-                    else:
-                        skipped_cnt += 1
-
+            def on_progress(done, total, stats):
                 with _resolve_lock:
-                    _resolve_state['done_count']          = i + 1
-                    _resolve_state['buildings_updated']    = bld_updated
-                    _resolve_state['sensors_updated']      = sns_updated
-                    _resolve_state['no_tags']              = no_tags_cnt
-                    _resolve_state['skipped']              = skipped_cnt
-                    _resolve_state['fields_count']         = dict(fields_count)
-                    _resolve_state['tags_unknown']         = sorted(unknown_tags)[:50]
+                    _resolve_state['done_count']       = done
+                    _resolve_state['buildings_updated'] = stats['buildings_updated']
+                    _resolve_state['sensors_updated']   = stats['sensors_updated']
+                    _resolve_state['no_tags']           = stats['no_tags']
+                    _resolve_state['skipped']           = stats['skipped']
+                    _resolve_state['fields_count']      = stats['fields_count']
+                    _resolve_state['tags_unknown']      = stats['tags_unknown']
+                    if stats.get('last_log'):
+                        _resolve_state['log'].append(stats['last_log'])
+
+            stats = self._resolve_tags_in_master(master, on_progress=on_progress)
 
             self._save(master)
             finished = datetime.now().isoformat()
-            log(f'✓ Completado: {bld_updated} resueltos · {skipped_cnt} sin coincidencia · {no_tags_cnt} sin tags · {sns_updated} sensores')
+            log(
+                f'✓ Completado: {stats["buildings_updated"]} resueltos · '
+                f'{stats["skipped"]} sin coincidencia · {stats["no_tags"]} sin tags · '
+                f'{stats["sensors_updated"]} sensores'
+            )
 
             with _resolve_lock:
-                _resolve_state['running']     = False
-                _resolve_state['done']        = True
-                _resolve_state['finished_at'] = finished
+                _resolve_state['sensors_no_building'] = stats['sensors_no_building']
+                _resolve_state['running']             = False
+                _resolve_state['done']                = True
+                _resolve_state['finished_at']         = finished
 
         except Exception as exc:
             with _resolve_lock:
@@ -509,6 +575,285 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                 _resolve_state['error']   = str(exc)
                 _resolve_state['log'].append(f'Error: {exc}')
             _log.error(f'resolve-tags failed: {exc}')
+
+    def _validate_iot_health(self, master):
+        """Comprueba integridad del inventario IoT en master. No modifica nada."""
+        sensors   = master.get('sensors', [])
+        buildings = master.get('buildings', [])
+        total_sensors   = len(sensors)
+        total_buildings = len(buildings)
+
+        sensors_with_iot       = sum(1 for s in sensors if 'iot_health' in s)
+        buildings_with_counts  = sum(1 for b in buildings if 'iot_total_sensors' in b)
+        buildings_missing      = total_buildings - buildings_with_counts
+        missing_token          = sum(1 for s in sensors if not s.get('thing_token'))
+        no_hos                 = sum(1 for s in sensors if not s.get('hos'))
+
+        warnings = []
+        if sensors_with_iot < total_sensors:
+            warnings.append(
+                f'{total_sensors - sensors_with_iot}/{total_sensors} sensores sin iot_health'
+            )
+        if buildings_missing > 0:
+            warnings.append(
+                f'{buildings_missing}/{total_buildings} edificios sin contadores IoT'
+            )
+        if missing_token > 0:
+            warnings.append(f'{missing_token} sensores sin thing_token')
+        if no_hos > 0:
+            warnings.append(f'{no_hos} sensores sin HOS asignado')
+
+        return {
+            'total_sensors':              total_sensors,
+            'sensors_with_iot_health':    sensors_with_iot,
+            'buildings_with_iot_counts':  buildings_with_counts,
+            'buildings_missing_iot_counts': buildings_missing,
+            'total_buildings':            total_buildings,
+            'warnings':                   warnings,
+        }
+
+    def _resolve_tags_in_master(self, master, on_progress=None):
+        """Resuelve tags de todos los edificios en master (in-place). Devuelve stats."""
+        cats      = master.get('catalogs', {})
+        buildings = master.get('buildings', [])
+        sensors   = master.get('sensors', [])
+
+        district_map = {d['code'].upper(): d for d in cats.get('districts', [])}
+        neighborhood_map = {}
+        for nb in cats.get('neighborhoods', []):
+            key_norm = nb['key'].upper().replace(' ', '_')
+            neighborhood_map[key_norm] = nb
+
+        building_ids = {b['id'] for b in buildings}
+        sns_no_bld   = sum(1 for s in sensors if s.get('hos', '') and s['hos'] not in building_ids)
+
+        bld_updated = sns_updated = no_tags_cnt = skipped_cnt = 0
+        fields_count = {'district_code': 0, 'neighborhood_key': 0, 'type': 0, 'zone': 0, 'street_etra': 0}
+        unknown_tags = set()
+        log_entries  = []
+
+        for i, b in enumerate(buildings):
+            tags_str = b.get('tags', '')
+            if not tags_str:
+                no_tags_cnt += 1
+            else:
+                tags_list = [t.strip() for t in tags_str.split(',') if t.strip()]
+                fields, unknowns = self._resolve_tags_to_fields(tags_list, district_map, neighborhood_map)
+                unknown_tags.update(unknowns)
+                if fields:
+                    for fk in fields_count:
+                        if fk in fields:
+                            fields_count[fk] += 1
+                    self._apply_updates(b, fields)
+                    n = self._propagate_to_sensors(master, b['id'], fields)
+                    bld_updated += 1
+                    sns_updated += n
+                    msg = f'{b["id"]}: ' + ', '.join(f'{k}={v}' for k, v in list(fields.items())[:3])
+                    log_entries.append(msg)
+                else:
+                    skipped_cnt += 1
+
+            if on_progress:
+                on_progress(i + 1, len(buildings), {
+                    'buildings_updated': bld_updated,
+                    'sensors_updated':   sns_updated,
+                    'no_tags':           no_tags_cnt,
+                    'skipped':           skipped_cnt,
+                    'fields_count':      dict(fields_count),
+                    'tags_unknown':      sorted(unknown_tags)[:50],
+                    'last_log':          log_entries[-1] if log_entries else None,
+                })
+
+        return {
+            'buildings_updated': bld_updated,
+            'sensors_updated':   sns_updated,
+            'no_tags':           no_tags_cnt,
+            'skipped':           skipped_cnt,
+            'fields_count':      dict(fields_count),
+            'tags_unknown':      sorted(unknown_tags)[:50],
+            'sensors_no_building': sns_no_bld,
+            'log':               log_entries,
+        }
+
+    _DEMO_READY_STATUSES = {'ACTIVE_24H', 'ACTIVE_7D'}
+
+    def _apply_iot_health_to_master(self, master, audit_by_token, sys_class, health_source):
+        """Core in-memory: aplica iot_health a sensores y contadores IoT a edificios (in-place).
+        audit_by_token: dict {thing_token → row_dict} con campos del audit.
+        sys_class:      dict {system_id → class_letter}.
+        Devuelve stats dict."""
+        sensors   = master.get('sensors', [])
+        buildings = master.get('buildings', [])
+        matched   = unmatched = 0
+
+        for s in sensors:
+            tt  = s.get('thing_token', '')
+            row = audit_by_token.get(tt)
+            if row:
+                status   = (row.get('active_status') or 'NO_DATA')
+                if isinstance(status, str):
+                    status = status.strip() or 'NO_DATA'
+                has_real_raw = row.get('has_real_value')
+                if isinstance(has_real_raw, bool):
+                    has_real = has_real_raw
+                else:
+                    has_real = str(has_real_raw or '').strip().lower() in ('true', '1', 'yes')
+                demo_ready = status in self._DEMO_READY_STATUSES
+                last_seen  = row.get('last_timestamp') or None
+                if isinstance(last_seen, str):
+                    last_seen = last_seen.strip() or None
+                resource   = row.get('resource_detected') or None
+                if isinstance(resource, str):
+                    resource = resource.strip() or None
+                sys_id = (row.get('system_id') or '')
+                if isinstance(sys_id, str):
+                    sys_id = sys_id.strip()
+                s_class = sys_class.get(sys_id, '?')
+                s['iot_health'] = {
+                    'status':        status,
+                    'has_real_data': has_real,
+                    'demo_ready':    demo_ready,
+                    'last_seen':     last_seen,
+                    'resource':      resource,
+                    'system_class':  s_class,
+                    'health_source': health_source,
+                }
+                matched += 1
+            else:
+                s['iot_health'] = {
+                    'status':        'NOT_AUDITED',
+                    'has_real_data': False,
+                    'demo_ready':    False,
+                    'last_seen':     None,
+                    'resource':      None,
+                    'system_class':  sys_class.get(s.get('system_id', ''), '?'),
+                    'health_source': health_source,
+                }
+                unmatched += 1
+
+        sensors_by_hos: dict = {}
+        for s in sensors:
+            hos = s.get('hos', '')
+            if hos:
+                sensors_by_hos.setdefault(hos, []).append(s)
+
+        bld_updated = bld_active = 0
+        for b in buildings:
+            bld_sensors = sensors_by_hos.get(b.get('id', ''), [])
+            total  = len(bld_sensors)
+            active = sum(1 for s in bld_sensors if s.get('iot_health', {}).get('demo_ready', False))
+
+            if total == 0:
+                iot_status = 'NO_SENSORS'
+            elif active > 0:
+                iot_status = 'ACTIVE'
+            else:
+                iot_status = 'NO_DATA'
+
+            b['iot_total_sensors']  = total
+            b['iot_active_sensors'] = active
+            b['iot_demo_ready']     = active
+            b['iot_health_status']  = iot_status
+            bld_updated += 1
+            if iot_status == 'ACTIVE':
+                bld_active += 1
+
+        return {
+            'skipped':           False,
+            'matched':           matched,
+            'unmatched':         unmatched,
+            'buildings_updated': bld_updated,
+            'buildings_active':  bld_active,
+            'health_source':     health_source,
+        }
+
+    def _apply_inventory_health(self, master):
+        """Fallback file-based: carga CSV + report de data/audits/ y aplica al master.
+        Solo funciona si existen archivos previos de auditoría."""
+        audit_dir = ROOT / 'data' / 'audits'
+
+        csvs = sorted(audit_dir.glob('thethings_activity_[0-9]*.csv'), reverse=True)
+        if not csvs:
+            return {'skipped': True, 'reason': 'no audit CSV in data/audits/'}
+
+        report_path = audit_dir / 'inventory_health_report.json'
+        if not report_path.exists():
+            return {'skipped': True, 'reason': 'inventory_health_report.json not found'}
+
+        csv_path = csvs[0]
+        audit_by_token = {}
+        with open(csv_path, 'r', encoding='utf-8-sig') as f:
+            for row in csv.DictReader(f):
+                tt = row.get('thing_token', '').strip()
+                if tt:
+                    audit_by_token[tt] = row
+
+        with open(report_path, 'r', encoding='utf-8') as f:
+            report = json.load(f)
+        sys_class = {
+            sid: info.get('class', '?')
+            for sid, info in report.get('systems_detail', {}).items()
+        }
+
+        return self._apply_iot_health_to_master(master, audit_by_token, sys_class, csv_path.name)
+
+    def _apply_inventory_health_full(self, master):
+        """Pipeline completo: llama a TheThings API → CSV/report en data/audits/ → aplica al master.
+        Requiere thethings_token en config.json.
+        En caso de error devuelve {'skipped': True, 'reason': ...} sin romper el import."""
+        if not _HAS_AUDIT_MODULES:
+            return {'skipped': True, 'reason': 'módulos de auditoría no disponibles (ImportError)'}
+        if not THETHINGS_TOKEN:
+            return {'skipped': True, 'reason': 'thethings_token no configurado'}
+
+        audit_dir = ROOT / 'data' / 'audits'
+        audit_dir.mkdir(parents=True, exist_ok=True)
+
+        sensors_total = len(master.get('sensors', []))
+
+        def _progress(done, total, _result):
+            with _import_lock:
+                _import_state['sub_status'] = f'Auditando sensor {done}/{total}…'
+
+        try:
+            with _import_lock:
+                _import_state['sub_status'] = 'Auditando actividad real de sensores…'
+
+            results, summary, csv_path = _run_audit_fn(
+                master, THETHINGS_API, THETHINGS_TOKEN, audit_dir,
+                sleep=0.1, progress_cb=_progress,
+            )
+
+            with _import_lock:
+                _import_state['sub_status'] = 'Generando informe de salud IoT…'
+
+            report = _run_report_fn(summary, audit_dir, summary_source=str(csv_path))
+
+            with _import_lock:
+                _import_state['sub_status'] = 'Aplicando inventario IoT al master…'
+
+            # Construir lookup dicts desde datos en memoria
+            audit_by_token = {
+                r['thing_token']: r
+                for r in results
+                if r.get('thing_token')
+            }
+            sys_class = {
+                sid: info.get('class', '?')
+                for sid, info in report.get('systems_detail', {}).items()
+            }
+
+            stats = self._apply_iot_health_to_master(
+                master, audit_by_token, sys_class, csv_path.name
+            )
+            stats['sensors_audited'] = len(results)
+            return stats
+
+        except Exception as exc:
+            _log.error(f'inventory_health_full failed: {exc}')
+            with _import_lock:
+                _import_state['sub_status'] = f'Inventario IoT omitido: {exc}'
+            return {'skipped': True, 'reason': str(exc)}
 
     def _resolve_tags_to_fields(self, tags_list, district_map, neighborhood_map):
         result   = {}
@@ -921,7 +1266,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
 if __name__ == '__main__':
     srv = http.server.HTTPServer((HOST, PORT), Handler)
-    print(f'PIELH QA  →  http://localhost:{PORT}')
+    print(f'PIELH QA  ->  http://localhost:{PORT}')
     try:
         threading.Timer(1.5, lambda: webbrowser.open(f'http://localhost:{PORT}')).start()
     except Exception:

@@ -147,7 +147,7 @@
 
 ## POST /api/import
 
-**Funció:** Inicia la importació asíncrona de tots els things des de la API thethings.
+**Funció:** Inicia la importació asíncrona completa (pipeline `import_tags_inventory_v1`): descàrrega TheThings + resolució de tags + inventari IoT.
 
 **Mètode:** POST  
 **Cos:** cap (buit)
@@ -156,16 +156,51 @@
 - Si ja hi ha una importació en curs → retorna `{"ok": true, "message": "already running"}`
 - Si no → llança thread `_run_import()` i retorna `{"ok": true, "message": "started"}`
 
-**El thread `_run_import()`:**
-1. Reinicia `buildings = []` i `sensors = []` al master
-2. Per cada model de `MODELS` (21 models):
-   - `GET {thethings_api}/v2/models/{id}/things?lib=panel` amb SSL no verificat
-   - Converteix cada thing a building o sensor
-   - Guarda incrementalment el JSON
-3. Escriu `_meta.last_sync`
-4. Actualitza `_import_state`
+**El thread `_run_import()` — 3 fases:**
 
-**Nota:** L'import substitueix completament buildings i sensors. Catàlegs i QA no es toquen.
+**Fase 1 — importing:**
+1. `_backup()` preventiu
+2. Reinicia `buildings = []` i `sensors = []` al master
+3. Per cada model de `MODELS` (22 models):
+   - `GET {thethings_api}/v2/models/{id}/things?lib=panel` amb SSL no verificat
+   - Converteix cada thing a building o sensor via `_thing_to_building()` / `_thing_to_sensor()`
+   - Guarda incrementalment el JSON
+
+**Fase 2 — resolving_tags:**
+4. `_resolve_tags_in_master(master)` — llegeix tags de cada edifici i omple camps de catàleg
+5. `_propagate_to_sensors()` per cada edifici actualitzat
+6. Guarda `tags_stats` a `_import_state`
+
+**Fase 3 — updating_inventory:**
+7. `_apply_inventory_health_full(master)` — crida live a l'API TheThings per auditar activitat de cada sensor
+8. Genera CSV + JSON d'auditoria a `data/audits/`
+9. Aplica `iot_health` a cada sensor i comptadors IoT a cada edifici
+10. Validació final via `_validate_iot_health(master)`
+11. Escriu `_meta` complet amb estadístiques i validació
+
+**`_meta` resultant:**
+```json
+{
+  "last_sync": "2026-06-20T17:37:24.986673",
+  "buildings": 192,
+  "sensors": 1564,
+  "tags_resolved_at": "...",
+  "inventory_health_updated_at": "...",
+  "inventory_health_skipped": false,
+  "inventory_health_error": null,
+  "sync_pipeline_version": "import_tags_inventory_v1",
+  "validation": {
+    "total_sensors": 1564,
+    "sensors_with_iot_health": 1564,
+    "buildings_with_iot_counts": 192,
+    "buildings_missing_iot_counts": 0,
+    "total_buildings": 192,
+    "warnings": ["382 sensores sin HOS asignado"]
+  }
+}
+```
+
+**Nota:** L'import substitueix completament buildings i sensors. Catàlegs i QA no es toquen. Si la fase 3 falla (API no disponible), l'import continua i `inventory_health_skipped = true`.
 
 ---
 
@@ -173,22 +208,49 @@
 
 **Funció:** Retorna l'estat de la importació en curs (polling).
 
-**Sortida:**
+**Sortida (exemple real — prova 2026-06-20):**
 ```json
 {
-  "running": true,
-  "done": false,
+  "running": false,
+  "done": true,
   "error": null,
-  "models_total": 21,
-  "models_done": 5,
-  "things_done": 143,
-  "current_model": "S04 - Calidad Aire Interior",
-  "buildings": 0,
-  "sensors": 143,
-  "started_at": "2026-06-18T10:00:00",
-  "finished_at": null
+  "phase": "done",
+  "sub_status": "",
+  "models_total": 22,
+  "models_done": 22,
+  "things_done": 1756,
+  "current_model": "SIP - NodoIoT",
+  "buildings": 192,
+  "sensors": 1564,
+  "tags_stats": {
+    "buildings_updated": 166,
+    "sensors_updated": 1135,
+    "no_tags": 2,
+    "skipped": 24,
+    "tags_unknown": ["CONFIG", "CU02", "CU08", ...]
+  },
+  "inventory_stats": {
+    "skipped": false,
+    "matched": 1564,
+    "unmatched": 0,
+    "buildings_updated": 192,
+    "buildings_active": 98,
+    "health_source": "thethings_activity_20260620_152144.csv",
+    "sensors_audited": 1564
+  },
+  "inventory_health_skipped": false,
+  "warnings": ["382 sensores sin HOS asignado"],
+  "sync_pipeline_version": "import_tags_inventory_v1",
+  "started_at": "2026-06-20T17:21:33.019758",
+  "finished_at": "2026-06-20T17:37:24.986673"
 }
 ```
+
+**Camp `phase`:** `importing` | `resolving_tags` | `updating_inventory` | `done` | `error`
+
+**Camp `sub_status`:** Detall dins la fase actual (ex: `"Auditando sensor 832/1564…"`). Buit quan no hi ha import en curs.
+
+**Camp `inventory_health_skipped`:** `true` si la fase d'inventari IoT es va ometre (API no disponible). En aquest cas `inventory_stats.reason` conté el motiu.
 
 ---
 
@@ -262,7 +324,7 @@ Inclou: `index.html`, `app.js`, `styles.css`, `pielh_qa_master.json`, `data/geoj
 **Funció:** `_backup()` — `server.py:720`
 
 - S'executa automàticament en cada crida a `save-record` i `save-batch` (un cop per crida)
-- **No** s'executa durant l'import (l'import substitueix directament)
+- S'executa **automàticament al inici de cada import** (backup preventiu) i en cada `save-record` / `save-batch`
 - Format: `data/backups/pielh_qa_master_YYYYMMDD_HHMMSS.json`
 - Rotació: manté els últims `MAX_BACKUPS` (defecte: 20) fitxers. Elimina els més antics.
 

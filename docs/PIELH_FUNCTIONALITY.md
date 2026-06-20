@@ -228,32 +228,57 @@ Activa la capa del mapa corresponent si estava desactivada.
 
 ---
 
-## 12. Sincronització des de l'API thethings
+## 12. Sincronització des de l'API thethings (pipeline complet)
 
-**Activació:** Botó "⟳ Sincronizar" → `importFromAPI()`
+**Activació:** Botó "⟳ Sincronizar tot" → `importFromAPI()`
+
+Pipeline `import_tags_inventory_v1` — 3 fases automàtiques:
 
 ```
 importFromAPI()
   ├── POST /api/import
   ├── servidor: thread _run_import()
-  │     ├── per cada model MODELS[21]:
-  │     │   ├── GET {API}/v2/models/{id}/things?lib=panel
-  │     │   ├── _thing_to_building() o _thing_to_sensor()
-  │     │   └── _save(master) incremental
-  │     └── escriu _meta: {last_sync, buildings, sensors}
+  │     ├── [FASE 1 — importing]
+  │     │   ├── _backup() preventiu
+  │     │   ├── per cada model MODELS[22]:
+  │     │   │   ├── GET {API}/v2/models/{id}/things?lib=panel
+  │     │   │   ├── _thing_to_building() o _thing_to_sensor()
+  │     │   │   └── _save(master) incremental
+  │     │   └── result: 192 edif., 1564 sens. (prova 2026-06-20)
+  │     │
+  │     ├── [FASE 2 — resolving_tags]
+  │     │   ├── _resolve_tags_in_master(master)
+  │     │   │   └── per cada edifici: _resolve_tags_to_fields() → _propagate_to_sensors()
+  │     │   └── result: 166 edif., 1135 sens. resolts (prova 2026-06-20)
+  │     │
+  │     ├── [FASE 3 — updating_inventory]
+  │     │   ├── _apply_inventory_health_full(master)
+  │     │   │   ├── run_audit() → crida live API TheThings per cada sensor
+  │     │   │   ├── run_build_report() → genera data/audits/inventory_health_report.*
+  │     │   │   └── _apply_iot_health_to_master() → iot_health per sensor + comptadors edifici
+  │     │   ├── _validate_iot_health(master) → warnings
+  │     │   └── result: 1564/1564 sens. amb iot_health, 98 edif. actius (prova 2026-06-20)
+  │     │
+  │     └── escriu _meta complet (validation, stats, sync_pipeline_version)
+  │
   └── _pollSyncStatus() [polling /api/import-status cada 1.5s]
-        └── quan done: reloadData() + showToast()
+        ├── fase=importing → "Importando… N things · model"
+        ├── fase=resolving_tags → "Resolviendo tags automáticamente…"
+        ├── fase=updating_inventory → sub_status ("Auditando sensor N/1564…")
+        └── quan done: reloadData() + showToast() [amb avís si inventory_health_skipped]
 ```
 
-**Comportament de l'import:** Substitueix `buildings` i `sensors` completament (no és incremental). Els catàlegs (`catalogs`) no es modifiquen.
+**Comportament:** Substitueix `buildings` i `sensors` completament. Catàlegs i QA no es toquen. Si la fase 3 falla (API no disponible), l'import continua amb `inventory_health_skipped=true` i avís al toast.
 
-**Fitxers:** `server.py:297-374`, `app.js:1836-1886`
+**Fitxers:** `server.py` (`_run_import`, `_resolve_tags_in_master`, `_apply_inventory_health_full`, `_validate_iot_health`), `app.js` (`importFromAPI`, `_pollSyncStatus`, `_updateSyncUI`)
 
 ---
 
 ## 13. Resolució de tags
 
-**Activació:** Botó "⚙ Resolver Tags" → `resolveTagsFromAPI()`
+**Automàtica:** S'executa a la fase 2 de cada sincronització (veure secció 12).
+
+**Manual (reparació):** Botó "⚙ Resolver Tags" (secundari) → `resolveTagsFromAPI()`
 
 El servidor llegeix els tags de cada edifici (format CSV) i els mapeja a camps:
 
@@ -267,9 +292,11 @@ El servidor llegeix els tags de cada edifici (format CSV) i els mapeja a camps:
 
 Els camps resolts es propaguen als sensors de l'edifici (`BUILDING_TO_SENSOR_FIELDS`).
 
-**Polling:** `/api/resolve-status` cada 1s. El log es va omplint en temps real al modal.
+**Polling manual:** `/api/resolve-status` cada 1s. El log es va omplint en temps real al modal.
 
-**Fitxers:** `server.py:376-509`, `app.js:1888-2006`
+**Nota:** El botó manual retorna error 409 si hi ha un import en curs.
+
+**Fitxers:** `server.py` (`_resolve_tags_in_master`, `_run_resolve_tags`, `_handle_resolve_tags`), `app.js` (`resolveTagsFromAPI`)
 
 ---
 

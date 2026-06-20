@@ -1,0 +1,243 @@
+{
+  "generated_at": "20260620_094614",
+  "total_rows": 22,
+  "resource_candidates": {
+    "S06": [
+      "antenna_id",
+      "count_value",
+      "count_value_acum_d",
+      "count_value_acum_w",
+      "counter_id",
+      "date",
+      "description",
+      "m3",
+      "m3_acum_d",
+      "poliza"
+    ]
+  },
+  "summary": [
+    {
+      "system_id": "S06",
+      "system_name": "AGUA",
+      "total_sensors": 257,
+      "sampled": 3,
+      "sensors_ok": 2,
+      "sensors_err": 1,
+      "resource_count": 12,
+      "resources_detected": [
+        "antenna_id",
+        "count_value",
+        "count_value_acum_d",
+        "count_value_acum_w",
+        "counter_id",
+        "date",
+        "description",
+        "m3",
+        "m3PerM2_avg_w",
+        "m3_acum_d",
+        "m3_avg_w",
+        "poliza"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "system_id": "S06",
+      "system_name": "AGUA",
+      "thing_id": "CPsUMKBbOgK-bT7dD_KpoTf9OZm_64F315FjYWMDN7A",
+      "thing_token": "MHS5R9_eKzb1YU-uybEDQfbG_a5icL4SDwyTo62ZZmg",
+      "resource_name": "antenna_id",
+      "resource_type": "string",
+      "resource_key": "antenna_id"
+    },
+    {
+      "system_id": "S06",
+      "system_name": "AGUA",
+      "thing_id": "CPsUMKBbOgK-bT7dD_KpoTf9OZm_64F315FjYWMDN7A",
+      "thing_token": "MHS5R9_eKzb1YU-uybEDQfbG_a5icL4SDwyTo62ZZmg",
+      "resource_name": "count_value",
+      "resource_type": "numeric",
+      "resource_key": "count_value"
+    },
+    {
+      "system_id": "S06",
+      "system_name": "AGUA",
+      "thing_id": "CPsUMKBbOgK-bT7dD_KpoTf9OZm_64F315FjYWMDN7A",
+      "thing_token": "MHS5R9_eKzb1YU-uybEDQfbG_a5icL4SDwyTo62ZZmg",
+      "resource_name": "count_value_acum_w",
+      "resource_type": "numeric",
+      "resource_key": "count_value_acum_w"
+    },
+    {
+      "system_id": "S06",
+      "system_name": "AGUA",
+      "thing_id": "CPsUMKBbOgK-bT7dD_KpoTf9OZm_64F315FjYWMDN7A",
+      "thing_token": "MHS5R9_eKzb1YU-uybEDQfbG_a5icL4SDwyTo62ZZmg",
+      "resource_name": "counter_id",
+      "resource_type": "numeric",
+      "resource_key": "counter_id"
+    },
+    {
+      "system_id": "S06",
+      "system_name": "AGUA",
+      "thing_id": "CPsUMKBbOgK-bT7dD_KpoTf9OZm_64F315FjYWMDN7A",
+      "thing_token": "MHS5R9_eKzb1YU-uybEDQfbG_a5icL4SDwyTo62ZZmg",
+      "resource_name": "date",
+      "resource_type": "unknown",
+      "resource_key": "date"
+    },
+    {
+      "system_id": "S06",
+      "system_name": "AGUA",
+      "thing_id": "CPsUMKBbOgK-bT7dD_KpoTf9OZm_64F315FjYWMDN7A",
+      "thing_token": "MHS5R9_eKzb1YU-uybEDQfbG_a5icL4SDwyTo62ZZmg",
+      "resource_name": "description",
+      "resource_type": "boolean",
+      "resource_key": "description"
+    },
+    {
+      "system_id": "S06",
+      "system_name": "AGUA",
+      "thing_id": "CPsUMKBbOgK-bT7dD_KpoTf9OZm_64F315FjYWMDN7A",
+      "thing_token": "MHS5R9_eKzb1YU-uybEDQfbG_a5icL4SDwyTo62ZZmg",
+      "resource_name": "m3",
+      "resource_type": "numeric",
+      "resource_key": "m3"
+    },
+    {
+      "system_id": "S06",
+      "system_name": "AGUA",
+      "thing_id": "CPsUMKBbOgK-bT7dD_KpoTf9OZm_64F315FjYWMDN7A",
+      "thing_token": "MHS5R9_eKzb1YU-uybEDQfbG_a5icL4SDwyTo62ZZmg",
+      "resource_name": "m3PerM2_avg_w",
+      "resource_type": "numeric",
+      "resource_key": "m3PerM2_avg_w"
+    },
+    {
+      "system_id": "S06",
+      "system_name": "AGUA",
+      "thing_id": "CPsUMKBbOgK-bT7dD_KpoTf9OZm_64F315FjYWMDN7A",
+      "thing_token": "MHS5R9_eKzb1YU-uybEDQfbG_a5icL4SDwyTo62ZZmg",
+      "resource_name": "m3_avg_w",
+      "resource_type": "numeric",
+      "resource_key": "m3_avg_w"
+    },
+    {
+      "system_id": "S06",
+      "system_name": "AGUA",
+      "thing_id": "CPsUMKBbOgK-bT7dD_KpoTf9OZm_64F315FjYWMDN7A",
+      "thing_token": "MHS5R9_eKzb1YU-uybEDQfbG_a5icL4SDwyTo62ZZmg",
+      "resource_name": "poliza",
+      "resource_type": "unknown",
+      "resource_key": "poliza"
+    },
+    {
+      "system_id": "S06",
+      "system_name": "AGUA",
+      "thing_id": "-Qa0z9F7d74mKBQkniAdv6z6MNYxmvChQLmvDqsQX4U",
+      "thing_token": "-JLH6JiuaOuxKjqDEdoJ5j2yntGxdNsFtNWbVcI9NDg",
+      "resource_name": "antenna_id",
+      "resource_type": "string",
+      "resource_key": "antenna_id"
+    },
+    {
+      "system_id": "S06",
+      "system_name": "AGUA",
+      "thing_id": "-Qa0z9F7d74mKBQkniAdv6z6MNYxmvChQLmvDqsQX4U",
+      "thing_token": "-JLH6JiuaOuxKjqDEdoJ5j2yntGxdNsFtNWbVcI9NDg",
+      "resource_name": "count_value",
+      "resource_type": "numeric",
+      "resource_key": "count_value"
+    },
+    {
+      "system_id": "S06",
+      "system_name": "AGUA",
+      "thing_id": "-Qa0z9F7d74mKBQkniAdv6z6MNYxmvChQLmvDqsQX4U",
+      "thing_token": "-JLH6JiuaOuxKjqDEdoJ5j2yntGxdNsFtNWbVcI9NDg",
+      "resource_name": "count_value_acum_d",
+      "resource_type": "numeric",
+      "resource_key": "count_value_acum_d"
+    },
+    {
+      "system_id": "S06",
+      "system_name": "AGUA",
+      "thing_id": "-Qa0z9F7d74mKBQkniAdv6z6MNYxmvChQLmvDqsQX4U",
+      "thing_token": "-JLH6JiuaOuxKjqDEdoJ5j2yntGxdNsFtNWbVcI9NDg",
+      "resource_name": "count_value_acum_w",
+      "resource_type": "numeric",
+      "resource_key": "count_value_acum_w"
+    },
+    {
+      "system_id": "S06",
+      "system_name": "AGUA",
+      "thing_id": "-Qa0z9F7d74mKBQkniAdv6z6MNYxmvChQLmvDqsQX4U",
+      "thing_token": "-JLH6JiuaOuxKjqDEdoJ5j2yntGxdNsFtNWbVcI9NDg",
+      "resource_name": "counter_id",
+      "resource_type": "numeric",
+      "resource_key": "counter_id"
+    },
+    {
+      "system_id": "S06",
+      "system_name": "AGUA",
+      "thing_id": "-Qa0z9F7d74mKBQkniAdv6z6MNYxmvChQLmvDqsQX4U",
+      "thing_token": "-JLH6JiuaOuxKjqDEdoJ5j2yntGxdNsFtNWbVcI9NDg",
+      "resource_name": "date",
+      "resource_type": "unknown",
+      "resource_key": "date"
+    },
+    {
+      "system_id": "S06",
+      "system_name": "AGUA",
+      "thing_id": "-Qa0z9F7d74mKBQkniAdv6z6MNYxmvChQLmvDqsQX4U",
+      "thing_token": "-JLH6JiuaOuxKjqDEdoJ5j2yntGxdNsFtNWbVcI9NDg",
+      "resource_name": "description",
+      "resource_type": "boolean",
+      "resource_key": "description"
+    },
+    {
+      "system_id": "S06",
+      "system_name": "AGUA",
+      "thing_id": "-Qa0z9F7d74mKBQkniAdv6z6MNYxmvChQLmvDqsQX4U",
+      "thing_token": "-JLH6JiuaOuxKjqDEdoJ5j2yntGxdNsFtNWbVcI9NDg",
+      "resource_name": "m3",
+      "resource_type": "numeric",
+      "resource_key": "m3"
+    },
+    {
+      "system_id": "S06",
+      "system_name": "AGUA",
+      "thing_id": "-Qa0z9F7d74mKBQkniAdv6z6MNYxmvChQLmvDqsQX4U",
+      "thing_token": "-JLH6JiuaOuxKjqDEdoJ5j2yntGxdNsFtNWbVcI9NDg",
+      "resource_name": "m3PerM2_avg_w",
+      "resource_type": "numeric",
+      "resource_key": "m3PerM2_avg_w"
+    },
+    {
+      "system_id": "S06",
+      "system_name": "AGUA",
+      "thing_id": "-Qa0z9F7d74mKBQkniAdv6z6MNYxmvChQLmvDqsQX4U",
+      "thing_token": "-JLH6JiuaOuxKjqDEdoJ5j2yntGxdNsFtNWbVcI9NDg",
+      "resource_name": "m3_acum_d",
+      "resource_type": "numeric",
+      "resource_key": "m3_acum_d"
+    },
+    {
+      "system_id": "S06",
+      "system_name": "AGUA",
+      "thing_id": "-Qa0z9F7d74mKBQkniAdv6z6MNYxmvChQLmvDqsQX4U",
+      "thing_token": "-JLH6JiuaOuxKjqDEdoJ5j2yntGxdNsFtNWbVcI9NDg",
+      "resource_name": "m3_avg_w",
+      "resource_type": "numeric",
+      "resource_key": "m3_avg_w"
+    },
+    {
+      "system_id": "S06",
+      "system_name": "AGUA",
+      "thing_id": "-Qa0z9F7d74mKBQkniAdv6z6MNYxmvChQLmvDqsQX4U",
+      "thing_token": "-JLH6JiuaOuxKjqDEdoJ5j2yntGxdNsFtNWbVcI9NDg",
+      "resource_name": "poliza",
+      "resource_type": "unknown",
+      "resource_key": "poliza"
+    }
+  ]
+}

@@ -1,11 +1,86 @@
 # PIELH — TheThings Sync Implementation
 
-Data: 2026-06-18
+Data: 2026-06-18 / Actualitzat: 2026-06-20
 
 ## Resum
 
-Implementació incremental que permet detectar canvis locals i pujar-los a l'API de TheThings.
-No modifica l'arquitectura existent.
+Aquest document cobreix **dues operacions de sincronització amb TheThings** que operen en sentits oposats:
+
+| Operació | Direcció | Botó UI | Endpoint |
+|---|---|---|---|
+| **Sync de baixada** (import complet) | TheThings → PIELH | "⟳ Sincronizar tot" | `POST /api/import` |
+| **Sync de pujada** (push canvis locals) | PIELH → TheThings | "↑ Pujar canvis" | `POST /api/sync-all` |
+
+---
+
+## Sync de baixada — Pipeline `import_tags_inventory_v1`
+
+Implementat a `server.py:_run_import()`. Executa 3 fases automàtiques en seqüència.
+
+### Flux
+
+```
+POST /api/import
+  ↓
+_run_import() [thread]
+  │
+  ├── [FASE 1 — importing]
+  │   ├── _backup() preventiu → data/backups/pielh_qa_master_YYYYMMDD_HHMMSS.json
+  │   ├── buildings = [], sensors = []
+  │   └── per cada model MODELS[22]:
+  │       GET {API}/v2/models/{id}/things?lib=panel → _thing_to_building() / _thing_to_sensor()
+  │       _save() incremental
+  │
+  ├── [FASE 2 — resolving_tags]
+  │   └── _resolve_tags_in_master(master)
+  │       per cada edifici: _resolve_tags_to_fields() → _propagate_to_sensors()
+  │
+  ├── [FASE 3 — updating_inventory]
+  │   ├── run_audit() [scripts/audit_thethings_activity.py]
+  │   │   └── per cada sensor: GET {API}/v2/things/{token}/last → status, last_seen
+  │   │       guarda data/audits/thethings_activity_YYYYMMDD_HHMMSS.csv + .json
+  │   ├── run_build_report() [scripts/build_inventory_health_report.py]
+  │   │   └── guarda data/audits/inventory_health_report.json + .md
+  │   └── _apply_iot_health_to_master(master, audit_data)
+  │       per cada sensor: iot_health = {status, has_real_data, demo_ready, last_seen, ...}
+  │       per cada edifici: iot_total_sensors, iot_active_sensors, iot_demo_ready, iot_health_status
+  │
+  ├── _validate_iot_health(master) → warnings[]
+  └── escriu _meta: {last_sync, buildings, sensors, tags_resolved_at,
+                     inventory_health_updated_at, inventory_health_skipped,
+                     sync_pipeline_version, validation}
+```
+
+### Resultat prova real (2026-06-20)
+
+| Mètrica | Valor |
+|---|---|
+| Durada total | ~16 min (1564 sensors × API TheThings) |
+| Buildings baixats | 192 |
+| Sensors baixats | 1564 |
+| Things processats | 1756 (22 models) |
+| Tags resolts (edificis) | 166 / 192 |
+| Tags resolts (sensors) | 1135 / 1564 |
+| Sensors amb `iot_health` | 1564 / 1564 |
+| Edificis actius IoT | 98 / 192 |
+| `inventory_health_skipped` | false |
+| Avís generat | "382 sensores sin HOS asignado" |
+| Backup generat | `pielh_qa_master_20260620_172332.json` |
+
+### Degradació graceful
+
+Si la fase 3 falla (API no disponible, token invàlid, timeout):
+- `_apply_inventory_health_full()` retorna `{'skipped': True, 'reason': '...'}`
+- L'import continua i guarda buildings + tags resolts
+- `_meta.inventory_health_skipped = true`
+- UI mostra toast d'avís amb el motiu
+
+### Seguretat
+
+- `THETHINGS_TOKEN` viu a `config.json` → `server.py`. Mai al frontend.
+- L'auditoria de la fase 3 usa el mateix token per llegir l'activitat dels sensors.
+
+---
 
 ---
 

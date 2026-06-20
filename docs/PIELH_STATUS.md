@@ -43,8 +43,10 @@
 | Redimensionador del panell dret | FUNCIONAL | Persistit a localStorage |
 | Redimensionament de columnes | FUNCIONAL | Persistit a localStorage |
 | Toast de notificació | FUNCIONAL | |
-| Sincronització des de thethings API | FUNCIONAL | Asíncron, polling, progress |
-| Resolució de tags | FUNCIONAL | Modal amb log en temps real |
+| Sincronització des de thethings API (pipeline complet) | FUNCIONAL | 3 fases: import → tags → inventari IoT. Pipeline `import_tags_inventory_v1`. Prova real: 192 edif., 1564 sens. |
+| Resolució de tags (automàtica dins sync) | FUNCIONAL | S'executa automàticament al sincronitzar. Prova real: 166 edif., 1135 sens. resolts |
+| Resolució de tags (manual, secundari) | FUNCIONAL | Botó "⚙ Resolver Tags" secundari per a reparació manual |
+| Inventari IoT (audit + health) | FUNCIONAL | Auditoria live TheThings API + `iot_health` per sensor. Prova real: 1564/1564 sens. amb iot_health, 98 edif. actius |
 | Propagació edifici → sensors | FUNCIONAL | `BUILDING_TO_SENSOR_FIELDS` |
 | Completat entre sensors germans | FUNCIONAL | `_complete_empty_fields` |
 | Tab auto-switch (mapa → taula) | FUNCIONAL | Edifici→Edificios, Sensor→Sensores |
@@ -61,11 +63,11 @@
 | GET /api/health | FUNCIONAL | |
 | POST /api/save-record | FUNCIONAL | Validació, backup, log, propagació |
 | POST /api/save-batch | FUNCIONAL | Idem, múltiples IDs |
-| POST /api/import | FUNCIONAL | Thread asíncron, polling |
-| GET /api/import-status | FUNCIONAL | |
-| POST /api/resolve-tags | FUNCIONAL | Thread asíncron, polling, log en temps real |
+| POST /api/import | FUNCIONAL | Thread asíncron, 3 fases: importing → resolving_tags → updating_inventory |
+| GET /api/import-status | FUNCIONAL | Inclou `phase`, `sub_status`, `tags_stats`, `inventory_stats`, `warnings`, `inventory_health_skipped` |
+| POST /api/resolve-tags | FUNCIONAL | Thread asíncron, polling, log en temps real (manual/reparació) |
 | GET /api/resolve-status | FUNCIONAL | |
-| Sistema de backup automàtic | FUNCIONAL | Rotació a màx. 20 |
+| Sistema de backup automàtic | FUNCIONAL | Rotació a màx. 20. Backup preventiu al inici de cada import |
 | Logging de canvis de camps | FUNCIONAL | |
 | Validació de coordenades | FUNCIONAL | Conversió a float |
 | Validació de catàlegs | FUNCIONAL | district_code, neighborhood_key, system_id |

@@ -1,0 +1,227 @@
+{
+  "generated_at": "2026-06-20T15:55:34.853835+00:00",
+  "backup": "C:\\Users\\jordi\\source\\repos\\pielh\\pielh_v02\\data\\backups\\pielh_qa_master_20260620_175534.json",
+  "total_candidates": 81,
+  "applied": 81,
+  "skipped": 0,
+  "applied_by_category": {
+    "BUILDING_MATCH_BY_ID": 56,
+    "DUPLICATE_OR_SIBLING": 25
+  },
+  "applied_by_hos": {
+    "HOS010": 4,
+    "HOS027": 2,
+    "HOS045": 2,
+    "HOS033": 2,
+    "HOS040": 2,
+    "HOS034": 2,
+    "HOS066": 2,
+    "HOS154": 2,
+    "HOS146": 2,
+    "HOS141": 1,
+    "HOS064": 1,
+    "HOS054": 1,
+    "HOS030": 1,
+    "HOS046": 1,
+    "HOS153": 1,
+    "HOS099": 1,
+    "HOS150": 1,
+    "HOS060": 1,
+    "HOS148": 1,
+    "HOS144": 1,
+    "HOS041": 1,
+    "HOS022": 1,
+    "HOS043": 1,
+    "HOS048": 1,
+    "HOS026": 1,
+    "HOS152": 1,
+    "HOS004": 1,
+    "HOS061": 1,
+    "HOS025": 1,
+    "HOS065": 1
+  },
+  "skipped_reasons": {},
+  "applied_sample": [
+    {
+      "thing_id": "IO84v5Kxec9yLuQU_G-EEGeIhhtW4y6gS3a9byaQ7ZE",
+      "sensor_id": "S4E-HOS010",
+      "category": "BUILDING_MATCH_BY_ID",
+      "hos": "HOS010",
+      "building_name": "HOS010 Bibl. i esc. pl. Europa",
+      "changes": {
+        "hos": "HOS010",
+        "building_name": "HOS010 Bibl. i esc. pl. Europa",
+        "district_code": "DISTRITO-3",
+        "district_name": "Distrito III",
+        "neighborhood_key": "SANTA EULÀLIA",
+        "neighborhood": "Santa Eulàlia",
+        "type": "EDUCACION",
+        "zone": "RESIDENCIAL",
+        "street_etra": "C._HERRERO"
+      }
+    },
+    {
+      "thing_id": "K99gziUqdvUoAkmhNMhI4h6aB4nmucs5ljEBTxdEkEI",
+      "sensor_id": "S4E-HOS141",
+      "category": "BUILDING_MATCH_BY_ID",
+      "hos": "HOS141",
+      "building_name": "HOS141 Institut Eugeni d'Ors",
+      "changes": {
+        "hos": "HOS141",
+        "building_name": "HOS141 Institut Eugeni d'Ors",
+        "district_code": "DISTRITO-5",
+        "district_name": "Distrito V",
+        "neighborhood_key": "PUBILLA CASES",
+        "neighborhood": "Pubilla Cases",
+        "type": "EDUCACION",
+        "zone": "RESIDENCIAL",
+        "street_etra": "C._J.OLIMPICS_(*)"
+      }
+    },
+    {
+      "thing_id": "CMpnq1N3oSHY48JwtcTlF4DbddU5mzUHcGCtJl5xyJQ",
+      "sensor_id": "S4E-HOS064",
+      "category": "BUILDING_MATCH_BY_ID",
+      "hos": "HOS064",
+      "building_name": "HOS064 Esc. Puig i Gairalt",
+      "changes": {
+        "hos": "HOS064",
+        "building_name": "HOS064 Esc. Puig i Gairalt",
+        "district_code": "DISTRITO-5",
+        "district_name": "Distrito V",
+        "neighborhood_key": "PUBILLA CASES",
+        "neighborhood": "Pubilla Cases",
+        "type": "EDUCACION",
+        "zone": "RESIDENCIAL",
+        "street_etra": "AV_J_MOLINS"
+      }
+    },
+    {
+      "thing_id": "vWbUartAl3FWAE_qgm7Pv4gINIjnVbPBVGgMaxHU7tg",
+      "sensor_id": "S4E-HOS054",
+      "category": "BUILDING_MATCH_BY_ID",
+      "hos": "HOS054",
+      "building_name": "HOS054 Esc. Milagros Consarnau",
+      "changes": {
+        "hos": "HOS054",
+        "building_name": "HOS054 Esc. Milagros Consarnau",
+        "district_code": "DISTRITO-3",
+        "district_name": "Distrito III",
+        "neighborhood_key": "SANTA EULÀLIA",
+        "neighborhood": "Santa Eulàlia",
+        "type": "EDUCACION",
+        "zone": "RESIDENCIAL",
+        "street_etra": "C._J_VERDAGUER"
+      }
+    },
+    {
+      "thing_id": "XSSoWPOE8p992l48obY6JmlkzYngtRWiJB7rdVvaIrs",
+      "sensor_id": "S4E-HOS027",
+      "category": "BUILDING_MATCH_BY_ID",
+      "hos": "HOS027",
+      "building_name": "HOS027 A. B. B. S. - Dte. VI",
+      "changes": {
+        "hos": "HOS027",
+        "building_name": "HOS027 A. B. B. S. - Dte. VI",
+        "district_code": "DISTRITO-6",
+        "district_name": "Distrito VI",
+        "neighborhood_key": "BELLVITGE",
+        "neighborhood": "Bellvitge",
+        "type": "ADMINISTRATIVO",
+        "zone": "RESIDENCIAL",
+        "street_etra": "AV_AMÈRICA"
+      }
+    },
+    {
+      "thing_id": "kP9HBcJWs2v0JlFSnTuM7lFViHk5fotGj9Zmv2ZFhMY",
+      "sensor_id": "S4E-HOS030",
+      "category": "BUILDING_MATCH_BY_ID",
+      "hos": "HOS030",
+      "building_name": "HOS030 Can Colom",
+      "changes": {
+        "hos": "HOS030",
+        "building_name": "HOS030 Can Colom",
+        "district_code": "DISTRITO-3",
+        "district_name": "Distrito III",
+        "neighborhood_key": "SANTA EULÀLIA",
+        "neighborhood": "Santa Eulàlia",
+        "type": "ADMINISTRATIVO",
+        "zone": "RESIDENCIAL",
+        "street_etra": "C._MARTÍ-CODOLAR"
+      }
+    },
+    {
+      "thing_id": "2Ir17bu0U1Asi1cUSFDqknFdg8DAAThwo5qEL5Fiuzg",
+      "sensor_id": "S4E-HOS045",
+      "category": "BUILDING_MATCH_BY_ID",
+      "hos": "HOS045",
+      "building_name": "HOS045 Esc. Joan Maragall",
+      "changes": {
+        "hos": "HOS045",
+        "building_name": "HOS045 Esc. Joan Maragall",
+        "district_code": "DISTRITO-4",
+        "district_name": "Distrito IV",
+        "neighborhood_key": "LES PLANES",
+        "neighborhood": "Les Planes",
+        "type": "EDUCACION",
+        "zone": "RESIDENCIAL",
+        "street_etra": "C._TEIDE"
+      }
+    },
+    {
+      "thing_id": "LWlB4iipptKyigxeap64Na64SeooSktL5MpeNZNMZg8",
+      "sensor_id": "S4E-HOS046",
+      "category": "BUILDING_MATCH_BY_ID",
+      "hos": "HOS046",
+      "building_name": "HOS046 Esc. Joaquim Ruyra",
+      "changes": {
+        "hos": "HOS046",
+        "building_name": "HOS046 Esc. Joaquim Ruyra",
+        "district_code": "DISTRITO-2",
+        "district_name": "Distrito II",
+        "neighborhood_key": "COLLBLANC",
+        "neighborhood": "Collblanc",
+        "type": "EDUCACION",
+        "zone": "RESIDENCIAL",
+        "street_etra": "CR_COLLBLANC"
+      }
+    },
+    {
+      "thing_id": "Cf-b6ps2YNjPvXGK9XW6YrKIZkATy3YQBgnnOfO525A",
+      "sensor_id": "S4E-HOS033-1",
+      "category": "BUILDING_MATCH_BY_ID",
+      "hos": "HOS033",
+      "building_name": "HOS033 Regidoria Districte I",
+      "changes": {
+        "hos": "HOS033",
+        "building_name": "HOS033 Regidoria Districte I",
+        "district_code": "DISTRITO-1",
+        "district_name": "Distrito I",
+        "neighborhood_key": "CENTRE",
+        "neighborhood": "Centre",
+        "type": "ADMINISTRATIVO",
+        "zone": "RESIDENCIAL",
+        "street_etra": "C._RIERA_CREU"
+      }
+    },
+    {
+      "thing_id": "MH5SO0NuQaHC5s-m1QgG09t3ZUt-BEznYsiEujWFpR0",
+      "sensor_id": "S4E-HOS033",
+      "category": "BUILDING_MATCH_BY_ID",
+      "hos": "HOS033",
+      "building_name": "HOS033 Regidoria Districte I",
+      "changes": {
+        "hos": "HOS033",
+        "building_name": "HOS033 Regidoria Districte I",
+        "district_code": "DISTRITO-1",
+        "district_name": "Distrito I",
+        "neighborhood_key": "CENTRE",
+        "neighborhood": "Centre",
+        "type": "ADMINISTRATIVO",
+        "zone": "RESIDENCIAL",
+        "street_etra": "C._RIERA_CREU"
+      }
+    }
+  ],
+  "skipped_detail": []
+}

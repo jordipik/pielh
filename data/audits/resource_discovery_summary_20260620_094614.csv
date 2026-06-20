@@ -1,0 +1,2 @@
+﻿system_id,system_name,total_sensors,sampled,sensors_ok,sensors_err,resource_count,resources_detected
+S06,AGUA,257,3,2,1,12,antenna_id; count_value; count_value_acum_d; count_value_acum_w; counter_id; date; description; m3; m3PerM2_avg_w; m3_acum_d; m3_avg_w; poliza

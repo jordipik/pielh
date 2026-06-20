@@ -1,0 +1,86 @@
+[
+  {
+    "sensor_id": "HOS044-S01-01",
+    "thing_id": "SnHdcxnnzpD1Z79Dvxs_8O-CkgSE79MVRI3j6T0DxEk",
+    "thing_token": "Rgbvq1cQ-axYBE3u6gUFQqr3yHRHKDT_q29KAmWa2fI",
+    "hos": "HOS044",
+    "building_found": true,
+    "building_name": "HOS044 Esc. Gornal",
+    "system_id": "S01",
+    "system_name": "RUIDO",
+    "district_name": "",
+    "neighborhood": "",
+    "lat": 41.35800213172508,
+    "lon": 2.117626512218669,
+    "resource_detected": "noise",
+    "last_timestamp": null,
+    "last_value": 53.9,
+    "days_since_last_data": null,
+    "active_status": "NO_DATA",
+    "issues": [
+      "MISSING_DISTRICT",
+      "MISSING_NEIGHBORHOOD"
+    ],
+    "api_error": "",
+    "raw_sample": [
+      {
+        "key": "noise",
+        "value": 53.9,
+        "datetime": "2026-06-20T09:10:15.184Z"
+      }
+    ]
+  },
+  {
+    "sensor_id": "HOS044-S01-01",
+    "thing_id": "suj9PiI4JbekaYqNnsbjaQY2kR1TrCjFT1KOvxdOzPU",
+    "thing_token": "t0kyL490cWiXX1e4kfQyAnY9Ias4JGDk2heMNgqHL60",
+    "hos": "HOS044",
+    "building_found": true,
+    "building_name": "HOS044 Esc. Gornal",
+    "system_id": "S01",
+    "system_name": "RUIDO",
+    "district_name": "",
+    "neighborhood": "",
+    "lat": 41.35800213172508,
+    "lon": 2.117626512218669,
+    "resource_detected": "",
+    "last_timestamp": null,
+    "last_value": null,
+    "days_since_last_data": null,
+    "active_status": "NO_DATA",
+    "issues": [
+      "MISSING_DISTRICT",
+      "MISSING_NEIGHBORHOOD",
+      "NO_DATA"
+    ],
+    "api_error": "",
+    "raw_sample": null
+  },
+  {
+    "sensor_id": "HOS136-S01-01 (T257517)",
+    "thing_id": "XzMNdYAN5eNT1UNnkgGcoT6Zb1kO9QeLauwy9m-pon8",
+    "thing_token": "h4C7It4LeNY6j1bXTEJ6GxIdEWoQ91mlnryTQalX_no",
+    "hos": "HOS136",
+    "building_found": true,
+    "building_name": "HOS136 Residencia Els Alps",
+    "system_id": "S01",
+    "system_name": "RUIDO",
+    "district_name": "",
+    "neighborhood": "",
+    "lat": 41.36258967284149,
+    "lon": 2.0954845257125845,
+    "resource_detected": "",
+    "last_timestamp": null,
+    "last_value": null,
+    "days_since_last_data": null,
+    "active_status": "NO_DATA",
+    "issues": [
+      "MISSING_COORDS",
+      "MISSING_DISTRICT",
+      "MISSING_NEIGHBORHOOD",
+      "NO_DATA"
+    ],
+    "api_error": "",
+    "raw_sample": null
+  }
+]

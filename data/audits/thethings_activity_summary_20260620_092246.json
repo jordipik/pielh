@@ -1,0 +1,38 @@
+{
+  "total_sensors": 20,
+  "active_24h": 18,
+  "active_7d": 0,
+  "stale_30d": 0,
+  "stale_90d": 0,
+  "inactive_90d": 0,
+  "data_no_timestamp": 0,
+  "no_data": 2,
+  "has_real_value": 18,
+  "missing_thing_token": 0,
+  "missing_hos": 1,
+  "building_not_found": 1,
+  "missing_coords": 3,
+  "api_errors": 0,
+  "by_system": {
+    "S01": {
+      "total": 3,
+      "active_24h": 1,
+      "data_no_timestamp": 0,
+      "no_data": 2,
+      "has_real_value": 1
+    },
+    "S02": {
+      "total": 17,
+      "active_24h": 17,
+      "data_no_timestamp": 0,
+      "no_data": 0,
+      "has_real_value": 17
+    }
+  },
+  "by_district": {
+    "UNKNOWN": 20
+  },
+  "by_neighborhood": {
+    "UNKNOWN": 20
+  }
+}

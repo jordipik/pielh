@@ -293,6 +293,8 @@ html, body {
 }
 .btn-resolve:hover:not(:disabled) { background: #ede9fe; }
 .btn-resolve:disabled { opacity: .5; cursor: default; }
+.btn-resolve.btn-resolve-secondary { opacity: .7; font-size: .8rem; }
+.btn-resolve.btn-resolve-secondary:hover:not(:disabled) { opacity: 1; background: #ede9fe; }
 
 /* ── Modal ─────────────────────────────────────────────────── */
 
@@ -385,10 +387,37 @@ html, body {
 
 /* ── Legend ────────────────────────────────────────────────── */
 
-.legend {
-    margin-top: 16px;
-    padding-top: 12px;
+.legend-details {
+    margin-top: 12px;
     border-top: 1px solid #e2e8f0;
+}
+.legend-toggle {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    color: #94a3b8;
+    padding: 6px 0 4px;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    user-select: none;
+}
+.legend-toggle::-webkit-details-marker { display: none; }
+.legend-toggle::before {
+    content: '▶';
+    font-size: 8px;
+    transition: transform 0.15s;
+    color: #94a3b8;
+}
+.legend-details[open] .legend-toggle::before { transform: rotate(90deg); }
+.legend-details[open] .legend-toggle { color: #64748b; }
+
+.legend {
+    margin-top: 4px;
+    padding-top: 6px;
 }
 
 .legend-title {
@@ -622,6 +651,65 @@ html, body {
 .building-marker.bm-nodata  { background: #94a3b8; }  /* gray   — sin datos */
 .building-marker.bm-unknown { background: #93c5fd; }  /* blue   — desconocido */
 .building-marker.bm-fuera   { background: #ef4444; }  /* red    — fuera proyecto */
+
+/* IoT Demo Controls (sidebar) */
+.iot-demo-controls {
+    margin: 8px 0 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.btn-demo-iot {
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1.5px solid #86efac;
+    background: #f0fdf4;
+    color: #15803d;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.15s, color 0.15s;
+}
+.btn-demo-iot:hover { background: #dcfce7; }
+.btn-demo-iot.btn-demo-iot-active { background: #16a34a; color: #fff; border-color: #15803d; }
+.iot-chk-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11.5px;
+    color: #374151;
+    cursor: pointer;
+}
+.iot-chk-label input[type="checkbox"] { accent-color: #16a34a; }
+.iot-demo-summary {
+    margin: 4px 0 10px;
+    padding: 7px 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    font-size: 11px;
+    min-height: 18px;
+}
+.iot-summary-row { display: flex; align-items: baseline; gap: 3px; line-height: 1.65; }
+.iot-summary-val { font-weight: 700; color: #15803d; min-width: 28px; text-align: right; font-size: 12px; }
+.iot-summary-lbl { color: #64748b; }
+
+/* IoT health badges */
+.iot-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 1px 5px;
+    border-radius: 3px;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    line-height: 1.5;
+}
+.iot-badge.iot-active    { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
+.iot-badge.iot-nodata    { background: #f1f5f9; color: #64748b; border: 1px solid #cbd5e1; }
+.iot-badge.iot-no_data   { background: #f1f5f9; color: #64748b; border: 1px solid #cbd5e1; }
+.iot-badge.iot-no_sensors { background: #f8fafc; color: #94a3b8; border: 1px solid #e2e8f0; }
 
 tr.row-fuera td { background: #fef2f2; color: #dc2626; }
 

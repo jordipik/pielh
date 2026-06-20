@@ -1,0 +1,171 @@
+{
+  "total_sensors": 1564,
+  "active_24h": 117,
+  "active_7d": 22,
+  "stale_30d": 36,
+  "stale_90d": 0,
+  "inactive_90d": 0,
+  "data_no_timestamp": 0,
+  "no_data": 1389,
+  "has_real_value": 175,
+  "missing_thing_token": 0,
+  "missing_hos": 381,
+  "building_not_found": 383,
+  "missing_coords": 708,
+  "api_errors": 0,
+  "by_system": {
+    "S01": {
+      "total": 3,
+      "active_24h": 1,
+      "data_no_timestamp": 0,
+      "no_data": 2,
+      "has_real_value": 1
+    },
+    "S02": {
+      "total": 69,
+      "active_24h": 33,
+      "data_no_timestamp": 0,
+      "no_data": 36,
+      "has_real_value": 33
+    },
+    "S03": {
+      "total": 1,
+      "active_24h": 0,
+      "data_no_timestamp": 0,
+      "no_data": 1,
+      "has_real_value": 0
+    },
+    "S04": {
+      "total": 112,
+      "active_24h": 21,
+      "data_no_timestamp": 0,
+      "no_data": 72,
+      "has_real_value": 40
+    },
+    "S05": {
+      "total": 102,
+      "active_24h": 29,
+      "data_no_timestamp": 0,
+      "no_data": 70,
+      "has_real_value": 32
+    },
+    "S06": {
+      "total": 257,
+      "active_24h": 0,
+      "data_no_timestamp": 0,
+      "no_data": 257,
+      "has_real_value": 0
+    },
+    "S07": {
+      "total": 25,
+      "active_24h": 0,
+      "data_no_timestamp": 0,
+      "no_data": 25,
+      "has_real_value": 0
+    },
+    "S08": {
+      "total": 107,
+      "active_24h": 0,
+      "data_no_timestamp": 0,
+      "no_data": 107,
+      "has_real_value": 0
+    },
+    "S09": {
+      "total": 53,
+      "active_24h": 0,
+      "data_no_timestamp": 0,
+      "no_data": 53,
+      "has_real_value": 0
+    },
+    "S13A": {
+      "total": 14,
+      "active_24h": 0,
+      "data_no_timestamp": 0,
+      "no_data": 14,
+      "has_real_value": 0
+    },
+    "S14A": {
+      "total": 19,
+      "active_24h": 0,
+      "data_no_timestamp": 0,
+      "no_data": 19,
+      "has_real_value": 0
+    },
+    "S14B": {
+      "total": 11,
+      "active_24h": 0,
+      "data_no_timestamp": 0,
+      "no_data": 11,
+      "has_real_value": 0
+    },
+    "S15": {
+      "total": 31,
+      "active_24h": 0,
+      "data_no_timestamp": 0,
+      "no_data": 31,
+      "has_real_value": 0
+    },
+    "S17": {
+      "total": 4,
+      "active_24h": 0,
+      "data_no_timestamp": 0,
+      "no_data": 4,
+      "has_real_value": 0
+    },
+    "S19": {
+      "total": 65,
+      "active_24h": 0,
+      "data_no_timestamp": 0,
+      "no_data": 65,
+      "has_real_value": 0
+    },
+    "S20": {
+      "total": 61,
+      "active_24h": 0,
+      "data_no_timestamp": 0,
+      "no_data": 61,
+      "has_real_value": 0
+    },
+    "S21": {
+      "total": 158,
+      "active_24h": 33,
+      "data_no_timestamp": 0,
+      "no_data": 89,
+      "has_real_value": 69
+    },
+    "S22": {
+      "total": 325,
+      "active_24h": 0,
+      "data_no_timestamp": 0,
+      "no_data": 325,
+      "has_real_value": 0
+    },
+    "S23": {
+      "total": 2,
+      "active_24h": 0,
+      "data_no_timestamp": 0,
+      "no_data": 2,
+      "has_real_value": 0
+    },
+    "S24": {
+      "total": 6,
+      "active_24h": 0,
+      "data_no_timestamp": 0,
+      "no_data": 6,
+      "has_real_value": 0
+    },
+    "SIP": {
+      "total": 139,
+      "active_24h": 0,
+      "data_no_timestamp": 0,
+      "no_data": 139,
+      "has_real_value": 0
+    }
+  },
+  "by_district": {
+    "UNKNOWN": 1564
+  },
+  "by_neighborhood": {
+    "UNKNOWN": 1564
+  }
+}
