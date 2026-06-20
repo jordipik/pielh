@@ -1,0 +1,63 @@
+graph TB
+    subgraph Browser["NAVEGADOR"]
+        direction TB
+        subgraph Dashboard["Dashboard principal (index.html)"]
+            appjs["app.js\n(lògica completa inline)"]
+            leaflet1["Leaflet 1.9.4\n(mapa interactiu)"]
+            styles["styles.css"]
+        end
+        subgraph Explorer["QA Explorer (qa_explorer.html)"]
+            explorerjs["qa_explorer_app.js"]
+            modules["modules/\ndata.js · filters.js\nmap.js · table.js · details.js"]
+            tabulator["Tabulator 6.2.1\n(taula avançada)"]
+            leaflet2["Leaflet 1.9.4"]
+        end
+    end
+
+    subgraph Server["SERVIDOR (server.py — Python http.server)"]
+        staticfiles["Fitxers estàtics\nGET /"]
+        api_health["GET /api/health"]
+        api_save["POST /api/save-record\nPOST /api/save-batch"]
+        api_import["POST /api/import\nGET /api/import-status"]
+        api_resolve["POST /api/resolve-tags\nGET /api/resolve-status"]
+    end
+
+    subgraph Persistence["PERSISTÈNCIA"]
+        jsonfile["pielh_qa_master.json\n(font de veritat única)"]
+        backups["data/backups/\npielh_qa_master_TIMESTAMP.json\n(màx. 20)"]
+        logfile["logs/pielh.log\n(registre de canvis)"]
+        config["config.json"]
+    end
+
+    subgraph ExternalAPI["API EXTERNA"]
+        thethings["api.smartpielh.l-h.cat\nGET /v2/models/{id}/things?lib=panel\n(21 models IoT)"]
+    end
+
+    subgraph GeoJSON["DADES GIS"]
+        barris["hospitalet_barris.geojson"]
+        districtes["hospitalet_districtes.geojson"]
+        boundary["hospitalet_boundary.geojson"]
+    end
+
+    appjs -->|fetch| jsonfile
+    appjs -->|fetch| api_save
+    appjs -->|fetch| api_import
+    appjs -->|fetch| api_resolve
+    appjs -->|fetch| barris
+    appjs -->|fetch| districtes
+    appjs -->|fetch| boundary
+    appjs --- leaflet1
+
+    explorerjs --- modules
+    explorerjs --- tabulator
+    explorerjs --- leaflet2
+    modules -->|fetch| jsonfile
+
+    api_save -->|read/write| jsonfile
+    api_save -->|backup| backups
+    api_save -->|log| logfile
+    api_import -->|write| jsonfile
+    api_resolve -->|read/write| jsonfile
+    api_resolve -->|log| logfile
+    Server -->|read| config
+    api_import -->|HTTPS| thethings

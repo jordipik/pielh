@@ -1,0 +1,101 @@
+erDiagram
+    District {
+        string code PK
+        string name
+        string description
+        int building_count
+        int sensor_count
+    }
+
+    Neighborhood {
+        string key PK
+        string name
+        string district_code FK
+        string district_name
+        int building_count
+        int sensor_count
+        float lat
+        float lon
+        string thing_id
+    }
+
+    Building {
+        string id PK
+        string name
+        string short_name
+        string description
+        string observaciones
+        string pielh_id
+        string district_code FK
+        string district_name
+        string neighborhood_key FK
+        string neighborhood
+        string type
+        string zone
+        string street_etra
+        string street_mti
+        float lat
+        float lon
+        string thing_id
+        string thing_token
+        string tags
+        string state
+        string has_data
+        int sensor_count
+    }
+
+    Sensor {
+        string id PK
+        string thing_id UK
+        string thing_token
+        string hos FK
+        string system_id FK
+        string system_name
+        float lat
+        float lon
+        string building_name
+        string district_code FK
+        string district_name
+        string neighborhood_key FK
+        string neighborhood
+        string type
+        string zone
+        string ref_etra
+        string has_data
+        bool include
+        string status
+        string sensor_code_old
+        int sensor_order
+        string cu_old
+        string qa_notes
+        string tags
+    }
+
+    System {
+        string id PK
+        string name
+    }
+
+    OtherObject {
+        string id PK
+        string object_type
+        string name
+        string group
+        float lat
+        float lon
+        string thing_id
+        string thing_token
+        string has_data
+    }
+
+    QAFinding {
+        string severity
+        string type
+        string detail
+    }
+
+    District ||--o{ Neighborhood : "té"
+    Neighborhood ||--o{ Building : "conté"
+    District ||--o{ Building : "agrupa"
+    Building ||--o{ Sensor : "hos"
+    System ||--o{ Sensor : "system_id"

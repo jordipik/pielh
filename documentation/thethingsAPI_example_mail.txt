@@ -1,0 +1,62 @@
+Para operaciones directas sobre things, el host es:
+
+https://api.smartpielh.l-h.cat
+Para envío de datos a través del parser de sistema, el host es:
+
+https://subscription.smartpielh.l-h.cat
+Ejemplo 1: listar things de un modelo
+
+TOKEN="TU_TOKEN"
+MODEL_ID="33814"
+
+curl -sk \
+  -H "authorization: $TOKEN" \
+  "https://api.smartpielh.l-h.cat/v2/models/$MODEL_ID/things?lib=panel"
+Ejemplo 2: leer un recurso de un thing
+
+TOKEN="TU_TOKEN"
+THING_TOKEN="THING_TOKEN_REAL"
+RESOURCE="noise"
+
+curl -sk \
+  -H "authorization: $TOKEN" \
+  "https://api.smartpielh.l-h.cat/v2/things/$THING_TOKEN/resources/$RESOURCE?limit=10&lib=panel"
+Con rango de fechas:
+
+curl -sk \
+  -H "authorization: $TOKEN" \
+  "https://api.smartpielh.l-h.cat/v2/things/$THING_TOKEN/resources/$RESOURCE?limit=1000&startDate=2026-06-10T09:00:00.000Z&endDate=2026-06-10T09:59:59.999Z&lib=panel"
+Ejemplo 3: escribir directamente en un thing
+
+TOKEN="TU_TOKEN"
+THING_TOKEN="THING_TOKEN_REAL"
+
+curl -sk -X POST \
+  -H "authorization: $TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "values": [
+      {"key": "temperature", "value": 22.5},
+      {"key": "humidity", "value": 55}
+    ]
+  }' \
+  "https://api.smartpielh.l-h.cat/v2/things/$THING_TOKEN?store=true&broadcast=true"
+Ejemplo 4: enviar datos vía parser de sistema
+
+Este es el formato usado por los sistemas que publican contra un endpoint /http.
+
+PRODUCT_ID="33814"
+HASH="O2qKMxWyUNILLg"
+DEV_ID="HOS044-S01-01"
+
+curl -sk -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"noise":55.4,"battery":98}' \
+  "https://subscription.smartpielh.l-h.cat/http/$PRODUCT_ID/$HASH?idname=dev_id&dev_id=$DEV_ID"
+Resumen:
+
+Lectura/escritura directa de things:
+https://api.smartpielh.l-h.cat/v2/...
+
+Envío de datos por parser de sistema:
+https://subscription.smartpielh.l-h.cat/http/...

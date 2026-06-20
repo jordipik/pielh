@@ -1,0 +1,57 @@
+sequenceDiagram
+    actor U as Usuari
+    participant FE as Frontend (app.js)
+    participant BE as Backend (server.py)
+    participant FS as Fitxers
+
+    U->>FE: Click "Editar" (taula o mapa)
+    FE->>FE: openDetailPanel(id, thingId)
+    FE->>FE: renderDetailForm(record, entityType)
+    FE-->>U: Mostra formulari
+
+    U->>FE: Modifica camps
+    U->>FE: Click "Guardar"
+
+    FE->>FE: getSingleFormValues()
+    FE->>FE: Comprova que updates no és buit
+
+    FE->>BE: POST /api/save-record<br/>{entityType, id, selector, updates}
+
+    BE->>FS: _load() — llegeix pielh_qa_master.json
+    FS-->>BE: JSON
+
+    BE->>BE: _validate(updates, master)
+    alt Validació fallida
+        BE-->>FE: HTTP 400 {error: "..."}
+        FE-->>U: showToast("Error: ...")
+    else Validació OK
+        BE->>BE: _siblings() — troba registres amb el mateix id
+        alt Registre no trobat
+            BE-->>FE: HTTP 404
+            FE-->>U: showToast("Error: ...")
+        else Registre trobat
+            BE->>BE: _expand_updates()<br/>(district_code→district_name, etc.)
+            BE->>FS: _backup() — crea pielh_qa_master_TIMESTAMP.json
+            BE->>BE: _apply_updates() per a cada germà
+            BE->>BE: _complete_empty_fields()<br/>(propaga entre germans)
+            opt entityType === building
+                BE->>BE: _propagate_to_sensors()<br/>(aplica BUILDING_TO_SENSOR_FIELDS)
+            end
+            BE->>FS: _save() — escriu pielh_qa_master.json
+            BE->>FS: _log_change() — logs/pielh.log
+            BE-->>FE: HTTP 200 {ok:true, records, sensors_updated}
+
+            FE->>BE: GET pielh_qa_master.json (no-cache)
+            BE->>FS: llegeix JSON
+            FS-->>BE: JSON actualitzat
+            BE-->>FE: JSON
+
+            FE->>FE: normalizeData()
+            FE->>FE: applyFilters()
+            FE->>FE: renderMarkers()
+            FE->>FE: renderBuildingsList()
+            FE->>FE: renderSensorsList()
+            FE->>FE: closeDetailPanel()
+            FE-->>U: showToast("Guardado correctamente.")
+        end
+    end

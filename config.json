@@ -4,5 +4,7 @@
   "log_file": "logs/pielh.log",
   "max_backups": 20,
   "host": "127.0.0.1",
-  "port": 8080
+  "port": 8080,
+  "thethings_api": "https://api.smartpielh.l-h.cat",
+  "thethings_token": "VF_EF98t-LOviEi0ugeu63Lj6t8"
 }

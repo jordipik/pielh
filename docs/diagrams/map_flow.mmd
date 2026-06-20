@@ -1,0 +1,50 @@
+flowchart TD
+    A["loadData()\nfetch pielh_qa_master.json"] --> B["normalizeData()\nCrea índexs en memòria:\n_buildingsMap, _sensorsByBuilding,\n_systemsMap, _otherByType"]
+
+    B --> C["initMap()\nL.map + CartoDB Positron\nCrea panes (z-index)\nCrea layerGroups"]
+
+    C --> D["loadBoundaryLayers()\nCarrega GeoJSON async"]
+
+    D --> D1{GeoJSON barris\nexisteix?}
+    D1 -->|SI| D2["L.geoJSON → layers.neighborhoods\ngeoJsonLoaded.neighborhoods = true"]
+    D1 -->|NO| D3["fallback: punto marker\n(renderNeighborhoodMarkers)"]
+
+    D --> D4{GeoJSON districtes\nexisteix?}
+    D4 -->|SI| D5["L.geoJSON → layers.districts\ngeoJsonLoaded.districts = true"]
+    D4 -->|NO| D6["fallback: punto marker\n(renderDistrictMarkers)"]
+
+    D --> D7{GeoJSON boundary\nexisteix?}
+    D7 -->|SI| D8["L.geoJSON → layers.cityBoundary\ncalcula _cityBounds"]
+    D7 -->|NO| D9["_cityBounds = null\nfallback al zoom per districtes"]
+
+    D --> E["applyFilters()\nFiltra buildings, sensors, otherObjects"]
+
+    E --> F["renderMarkers()"]
+
+    F --> F1["layers.buildings.clearLayers()\nlayers.sensors.clearLayers()\nlayers.streets.clearLayers()"]
+
+    F1 --> G["offsetOverlappingSensors()\nAgrupa sensors per coordenades\nCalcula offsets en cercle ~4m"]
+
+    G --> H["filtered.buildings.forEach\n→ renderBuildingMarker(b)"]
+    H --> H1["getLat/getLon\nDetermina statusCls\n(bm-ok/bm-nodata/bm-unknown/bm-fuera)\nL.divIcon amb quadrat + etiqueta HOS\nPane: buildingsPane z=300\nmarkerIndex.buildings[id] = marker"]
+
+    G --> I["filtered.sensors.forEach\n→ renderSensorMarker(s, offsets)"]
+    I --> I1["Aplica offset calculat\ngetSystemColor(system_id)\nL.circleMarker r=6 coloreig per sistema\nPane: sensorsPane z=420\nmarkerIndex.sensors[id] = marker"]
+
+    F1 --> J{geoJsonLoaded.neighborhoods?}
+    J -->|NO| J1["renderNeighborhoodMarkers()\nOTROS-BARRIOS → cercle + label"]
+
+    F1 --> K{geoJsonLoaded.districts?}
+    K -->|NO| K1["renderDistrictMarkers()\nOTROS-DISTRITOS → cercle + label"]
+
+    F1 --> L["renderStreetMarkers()\nOTROS-CALLES → circleMarker violeta\n(capa desactivada per defecte)"]
+
+    subgraph Selection["Selecció d'element"]
+        M["Click marcador / fila taula\n→ selectRecord(id, source)"]
+        M --> N["highlightMapRecord(id, type)\nL.circleMarker groc\nradi 18(bld) o 14(sensor)\n_hlLayer = cercle highlight"]
+        M --> O["Zoom opcional: focusBuilding/focusSensor\nmap.setView([lat,lon], 17)"]
+    end
+
+    subgraph MapEvents["Events del mapa"]
+        P["map.on('moveend zoomend')\nSi onlyVisibleBld → renderBuildingsList()\nSi onlyVisibleSns → renderSensorsList()"]
+    end

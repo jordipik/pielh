@@ -16,6 +16,10 @@
             <h1>PIELH QA</h1>
             <span class="header-sub">L'Hospitalet de Llobregat</span>
         </div>
+        <button id="btn-sync" class="btn-sync" onclick="importFromAPI()" title="Importar datos desde thethings">⟳ Sincronizar</button>
+        <span id="sync-status" class="sync-status"></span>
+        <button id="btn-push" class="btn-push" onclick="syncAllPending()" title="Pujar canvis pendents a TheThings">↑ Pujar canvis</button>
+        <span id="push-status" class="push-status"></span>
         <a href="qa_explorer.html" target="_blank" class="btn-explorer">QA Explorer</a>
         <div class="summary-cards">
             <div class="card">
@@ -83,6 +87,7 @@
             </div>
 
             <button id="btn-reset" class="btn-reset" onclick="resetFilters()">Limpiar filtros</button>
+            <button id="btn-resolve" class="btn-resolve" onclick="resolveTagsFromAPI()" title="Leer tags de los things y aplicar distrito, barrio, tipo, zona y calle">⚙ Resolver Tags</button>
 
             <div class="legend">
                 <h3 class="legend-title">Capas</h3>
@@ -135,7 +140,7 @@
 
         <!-- Right: tabbed panel -->
         <div class="right-panel">
-            <div id="selected-building-card" class="selection-card"></div>
+            <div id="selected-building-card" class="selection-card hidden"></div>
             <div id="selected-sensor-card" class="selection-card hidden"></div>
             <div class="tabs">
                 <button class="tab-btn active" data-tab="tab-buildings" onclick="showTab(this, 'tab-buildings')">Edificios</button>
@@ -197,10 +202,8 @@
                                 <th data-sort="hos">HOS<span class="sort-icon"></span></th>
                                 <th data-sort="system_id">Sistema<span class="sort-icon"></span></th>
                                 <th data-sort="neighborhood">Barrio<span class="sort-icon"></span></th>
-                                <th data-sort="ref_etra">REF-ETRA<span class="sort-icon"></span></th>
-                                <th>Calle<span class="sort-icon"></span></th>
-                                <th data-sort="lat">Lat<span class="sort-icon"></span></th>
-                                <th data-sort="lon">Lon<span class="sort-icon"></span></th>
+                                <th data-sort="district_name">Dist.<span class="sort-icon"></span></th>
+                                <th data-sort="ref_etra">Calle<span class="sort-icon"></span></th>
                                 <th data-sort="has_data">Datos<span class="sort-icon"></span></th>
                             </tr>
                         </thead>
@@ -258,6 +261,9 @@
             <button id="dp-copy-btn" class="btn-sec" onclick="showCopyFromBuilding()" style="display:none">
                 Copiar datos edificio
             </button>
+            <button id="dp-sync-btn" class="btn-sec btn-sync-record" onclick="syncSelectedRecord()" style="display:none" title="Pujar canvis pendents a TheThings">
+                ↑ Sincronitzar
+            </button>
             <button class="btn-pri" onclick="saveDetailPanel()">Guardar</button>
             <button class="btn-sec" onclick="closeDetailPanel()">Cancelar</button>
         </div>
@@ -266,5 +272,22 @@
 
 <!-- Toast -->
 <div id="toast" class="toast" style="display:none"></div>
+
+<!-- Resolve Tags Modal -->
+<div id="resolve-modal" class="modal-overlay" style="display:none">
+    <div class="modal-box">
+        <div class="modal-header">
+            <span>Resolución de Tags</span>
+            <button class="modal-close" id="resolve-close-btn" onclick="closeResolveModal()" disabled>✕</button>
+        </div>
+        <div class="modal-progress-wrap">
+            <div class="modal-progress-bar" id="resolve-progress-bar"></div>
+        </div>
+        <div class="modal-log" id="resolve-log"></div>
+        <div class="modal-footer">
+            <span id="resolve-summary"></span>
+        </div>
+    </div>
+</div>
 </body>
 </html>

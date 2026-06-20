@@ -108,6 +108,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             body        = self._read_json()
             entity_type = body.get('entityType', '')
             record_id   = body.get('id', '')
+            selector    = body.get('selector', {})
             updates     = body.get('updates', {})
 
             if entity_type not in ('sensor', 'building'):
@@ -122,18 +123,19 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             if err:
                 return self._err(400, err)
 
-            rec = self._find(master, entity_type, record_id)
+            rec = self._find(master, entity_type, record_id, selector)
             if rec is None:
                 return self._err(404, f"{entity_type} '{record_id}' no encontrado")
 
+            updates = self._expand_updates(updates, master)
             old_values = {k: rec.get(k) for k in updates}
             self._backup()
-            rec.update(updates)
+            self._apply_updates(rec, updates)
             self._save(master)
             for field, new_val in updates.items():
                 _log_change(entity_type, record_id, field, old_values.get(field), new_val)
 
-            self._ok({'ok': True, 'id': record_id})
+            self._ok({'ok': True, 'id': record_id, 'updates': updates})
 
         except Exception as e:
             self._err(500, str(e))
@@ -158,6 +160,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             err = self._validate(updates, master)
             if err:
                 return self._err(400, err)
+            updates = self._expand_updates(updates, master)
 
             not_found = [rid for rid in ids if self._find(master, entity_type, rid) is None]
             if not_found:
@@ -168,11 +171,11 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                 rec = self._find(master, entity_type, rid)
                 if rec is not None:
                     old_values = {k: rec.get(k) for k in updates}
-                    rec.update(updates)
+                    self._apply_updates(rec, updates)
                     for field, new_val in updates.items():
                         _log_change(entity_type, rid, field, old_values.get(field), new_val)
             self._save(master)
-            self._ok({'ok': True, 'count': len(ids)})
+            self._ok({'ok': True, 'count': len(ids), 'updates': updates})
 
         except Exception as e:
             self._err(500, str(e))
@@ -192,9 +195,43 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             encoding='utf-8'
         )
 
-    def _find(self, master, entity_type, record_id):
+    def _find(self, master, entity_type, record_id, selector=None):
         collection = 'sensors' if entity_type == 'sensor' else 'buildings'
-        return next((r for r in master.get(collection, []) if r.get('id') == record_id), None)
+        matches = [r for r in master.get(collection, []) if r.get('id') == record_id]
+        selector = selector if isinstance(selector, dict) else {}
+        if selector.get('thing_id'):
+            return next((r for r in matches if r.get('thing_id') == selector['thing_id']), None)
+        return matches[0] if matches else None
+
+    def _expand_updates(self, updates, master):
+        expanded = dict(updates)
+        cats = master.get('catalogs', {})
+
+        if 'district_code' in expanded:
+            district = next(
+                (d for d in cats.get('districts', []) if d.get('code') == expanded['district_code']),
+                None
+            )
+            expanded['district_name'] = district.get('name') if district else None
+
+        if 'neighborhood_key' in expanded:
+            neighborhood = next(
+                (n for n in cats.get('neighborhoods', []) if n.get('key') == expanded['neighborhood_key']),
+                None
+            )
+            expanded['neighborhood'] = neighborhood.get('name') if neighborhood else None
+
+        return expanded
+
+    def _apply_updates(self, rec, updates):
+        rec.update(updates)
+        raw = rec.get('raw')
+        if not isinstance(raw, dict):
+            return
+        if 'district_code' in updates:
+            raw['Distrito'] = updates['district_code']
+        if 'neighborhood' in updates:
+            raw['Barrio'] = updates['neighborhood']
 
     def _validate(self, updates, master):
         cats = master.get('catalogs', {})

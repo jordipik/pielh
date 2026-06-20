@@ -25,6 +25,7 @@ const state = {
         sensors: { key: 'id', dir: 'asc' },
     },
     selectedId: null,
+    selectedThingId: null,  // disambiguates sensors that share the same id
     onlyVisibleBld: false,
     onlyVisibleSns: false,
     multiSelect: new Set(),
@@ -246,7 +247,7 @@ async function loadBoundaryLayers() {
 
 async function loadData() {
     try {
-        const res = await fetch('pielh_qa_master.json');
+        const res = await fetch('pielh_qa_master.json', { cache: 'no-store' });
         if (!res.ok) throw new Error(`HTTP ${res.status} — ${res.statusText}`);
         data = await res.json();
     } catch (e) {
@@ -268,7 +269,22 @@ async function loadData() {
     applyFilters();
     renderQA();
     initTables();
-    renderEmptyBuildingCard();
+    _applyMetaSync(data._meta);
+    _checkSyncOnLoad();
+    loadPushStatus();
+}
+
+// ── Reload data after save (keeps siblings/completed fields in sync) ──
+
+async function reloadData() {
+    const res = await fetch('pielh_qa_master.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error(`HTTP ${res.status} — ${res.statusText}`);
+    data = await res.json();
+    normalizeData();
+    applyFilters();
+    renderQA();
+    _applyMetaSync(data._meta);
+    loadPushStatus();
 }
 
 // ── Normalize / index data ───────────────────────────────────
@@ -486,10 +502,38 @@ function applyFilters() {
         return hay.includes(search);
     });
 
+    pruneStaleSelection();
+
     renderMarkers();
     renderSummary();
     renderBuildingsList();
     renderSensorsList();
+    updateMultiSelectUI();
+}
+
+// Quita la selección/tarjeta actual si el registro ya no pertenece al
+// resultado filtrado (p.ej. al cambiar de distrito).
+function pruneStaleSelection() {
+    const visibleIds = new Set([
+        ...filtered.buildings.map(b => b.id),
+        ...filtered.otherObjects.map(o => o.id),
+    ]);
+
+    // Sensors can share the same `id` (legacy duplicates) — a plain id
+    // match isn't enough; the specific copy (by thing_id) must be filtered in.
+    const isVisible = (id, thingId = null) =>
+        visibleIds.has(id) ||
+        filtered.sensors.some(s => s.id === id && (!thingId || s.thing_id === thingId));
+
+    if (state.selectedId && !isVisible(state.selectedId, state.selectedThingId)) {
+        state.selectedId = null;
+        state.selectedThingId = null;
+        clearMapHighlight();
+    }
+    for (const id of [...state.multiSelect]) {
+        if (!isVisible(id)) state.multiSelect.delete(id);
+    }
+    if (!state.multiSelect.size) state.multiSelectType = null;
 }
 
 // ── Render all markers ───────────────────────────────────────
@@ -836,9 +880,8 @@ function renderSensorsList() {
         const dataColor = hasData === 'OK' ? '#16a34a' : '#94a3b8';
         const tr = document.createElement('tr');
         tr.dataset.rid = s.id;
-        if (s.id === state.selectedId) tr.classList.add('row-selected');
-        const street = s.raw?.Ed_Calle_ETRA || data._buildingsMap[s.hos]?.street_etra || '—';
-        const lat = getLat(s), lon = getLon(s);
+        if (s.id === state.selectedId && (!state.selectedThingId || s.thing_id === state.selectedThingId))
+            tr.classList.add('row-selected');
         tr.innerHTML = `
             <td title="${esc(s.id)}">${esc(truncate(s.id, 18))}</td>
             <td>${esc(s.hos ?? '—')}</td>
@@ -846,10 +889,8 @@ function renderSensorsList() {
                 <span class="sys-dot" style="background:${color}"></span>${esc(s.system_id ?? '—')}
             </td>
             <td title="${esc(s.neighborhood)}">${esc(shortNeighborhood(s.neighborhood))}</td>
+            <td title="${esc(s.district_name)}">${esc(s.district_name ?? '—')}</td>
             <td title="${esc(s.ref_etra)}">${esc(truncate(s.ref_etra, 18))}</td>
-            <td title="${esc(street)}">${esc(truncate(street, 20))}</td>
-            <td class="coord-cell">${lat != null ? lat.toFixed(6) : '—'}</td>
-            <td class="coord-cell">${lon != null ? lon.toFixed(6) : '—'}</td>
             <td style="color:${dataColor};font-weight:600">${esc(s.has_data ?? '—')}</td>
         `;
         tr.addEventListener('click', e => {
@@ -859,7 +900,7 @@ function renderSensorsList() {
                 rangeMultiSelect(s.id, 'sensor', _lastSensorRecords);
             } else {
                 clearMultiSelect();
-                selectRecord(s.id, { source: 'table' });
+                selectRecord(s.id, { source: 'table', thingId: s.thing_id });
             }
         });
         tbody.appendChild(tr);
@@ -878,14 +919,26 @@ function focusBuilding(id) {
     map.setView([lat, lon], 17, { animate: true });
 }
 
-function focusSensor(id) {
-    const s = (data.sensors ?? []).find(x => x.id === id);
+function focusSensor(id, thingId = null) {
+    const s = findSensor(id, thingId);
     if (!s) return;
     const lat = getLat(s), lon = getLon(s);
     if (lat == null) return;
 
     if (!map.hasLayer(layers.sensors)) map.addLayer(layers.sensors);
     map.setView([lat, lon], 17, { animate: true });
+}
+
+// Sensors may share the same `id` (legacy duplicates) — when a specific
+// thing_id is known, prefer the matching copy; otherwise fall back to the
+// first occurrence.
+function findSensor(id, thingId = null) {
+    const matches = (data.sensors ?? []).filter(s => s.id === id);
+    if (thingId) {
+        const m = matches.find(s => s.thing_id === thingId);
+        if (m) return m;
+    }
+    return matches[0];
 }
 
 // ── Map highlight ─────────────────────────────────────────────
@@ -912,11 +965,12 @@ function highlightMapRecord(id, type) {
 // ── Central record selection ──────────────────────────────────
 
 function selectRecord(id, opts = {}) {
-    const { source = 'table' } = opts;
+    const { source = 'table', thingId = null } = opts;
 
     document.querySelectorAll('tr.row-selected').forEach(r => r.classList.remove('row-selected'));
     clearMapHighlight();
     state.selectedId = id;
+    state.selectedThingId = thingId;
     if (!id) return;
 
     // Highlight row and scroll to it
@@ -930,15 +984,13 @@ function selectRecord(id, opts = {}) {
     if (isBuilding) {
         highlightMapRecord(id, 'building');
         if (source === 'map') {
-            const sensorsTabActive = document.getElementById('tab-sensors')?.classList.contains('active');
-            if (!sensorsTabActive) {
-                const btn = document.querySelector('[data-tab="tab-buildings"]');
-                if (btn && !document.getElementById('tab-buildings').classList.contains('active'))
-                    showTab(btn, 'tab-buildings');
-            }
+            // Switch to buildings tab if not active
+            const btn = document.querySelector('[data-tab="tab-buildings"]');
+            if (btn && !document.getElementById('tab-buildings').classList.contains('active'))
+                showTab(btn, 'tab-buildings');
         }
     } else {
-        const s = (data.sensors ?? []).find(x => x.id === id);
+        const s = findSensor(id, thingId);
         if (s) {
             highlightMapRecord(id, 'sensor');
             if (source === 'map') {
@@ -1219,6 +1271,7 @@ const editState = {
     entityType: null,   // 'sensor' | 'building'
     ids: [],     // single or bulk
     bulk: false,
+    selector: null,
 };
 
 // ── Catalog helpers ───────────────────────────────────────────
@@ -1315,6 +1368,7 @@ function renderDetailForm(record, entityType) {
         rows.push(dpNumber('lon', 'Longitud', record.lon));
         rows.push(dpText('thing_id', 'ThingID', record.thing_id));
         rows.push(dpText('thing_token', 'ThingToken', record.thing_token));
+        rows.push(dpText('tags', 'Tags', record.tags ?? ''));
         rows.push(dpTextarea('observaciones', 'Observaciones', record.observaciones));
     } else {
         rows.push(dpReadonly('ID', record.id));
@@ -1329,6 +1383,7 @@ function renderDetailForm(record, entityType) {
         rows.push(dpNumber('lon', 'Longitud', record.lon));
         rows.push(dpText('thing_id', 'ThingID', record.thing_id));
         rows.push(dpText('thing_token', 'ThingToken', record.thing_token));
+        rows.push(dpText('tags', 'Tags', record.tags ?? ''));
         rows.push(dpTextarea('observaciones', 'Observaciones', record.observaciones));
     }
     document.getElementById('dp-body').innerHTML = `<form id="dp-form">${rows.join('')}</form>`;
@@ -1358,18 +1413,21 @@ function renderBulkForm(entityType) {
 
 // ── Panel open / close ────────────────────────────────────────
 
-function openDetailPanel(id) {
+function openDetailPanel(id, thingId = null) {
     if (!id) { closeDetailPanel(); return; }
     const isBuilding = !!data._buildingsMap[id];
     const entityType = isBuilding ? 'building' : 'sensor';
     const record = isBuilding
         ? data._buildingsMap[id]
-        : (data.sensors ?? []).find(s => s.id === id);
+        : findSensor(id, thingId);
     if (!record) return;
 
     editState.entityType = entityType;
     editState.ids = [id];
     editState.bulk = false;
+    editState.selector = entityType === 'sensor' && record.thing_id
+        ? { thing_id: record.thing_id }
+        : null;
     _pendingCopyChanges = null;
 
     document.getElementById('dp-title').textContent =
@@ -1378,6 +1436,13 @@ function openDetailPanel(id) {
 
     const preview = document.getElementById('dp-copy-preview');
     if (preview) preview.style.display = 'none';
+
+    const syncBtn = document.getElementById('dp-sync-btn');
+    if (syncBtn) {
+        const st = record._sync?.status;
+        syncBtn.style.display = (st === 'pending' || st === 'error') ? '' : 'none';
+        syncBtn.textContent   = st === 'error' ? '↑ Reintentar sync' : '↑ Sincronitzar';
+    }
 
     document.getElementById('detail-panel').classList.add('open');
 }
@@ -1391,6 +1456,7 @@ function openBulkEdit(type) {
     editState.entityType = type;
     editState.ids = ids;
     editState.bulk = true;
+    editState.selector = null;
     _pendingCopyChanges = null;
 
     document.getElementById('dp-title').textContent =
@@ -1408,6 +1474,7 @@ function closeDetailPanel() {
     editState.entityType = null;
     editState.ids = [];
     editState.bulk = false;
+    editState.selector = null;
     _pendingCopyChanges = null;
 }
 
@@ -1420,7 +1487,7 @@ function renderSelectionBar() {
     const n = state.multiSelect.size;
 
     if (n > 1) {
-        renderEmptyBuildingCard();
+        if (card) { card.classList.add('hidden'); card.innerHTML = ''; }
         const sc2 = document.getElementById('selected-sensor-card');
         if (sc2) { sc2.classList.add('hidden'); sc2.innerHTML = ''; }
         const type = state.multiSelectType;
@@ -1438,9 +1505,10 @@ function renderSelectionBar() {
     }
 
     const id = n === 1 ? [...state.multiSelect][0] : state.selectedId;
+    const thingId = n === 1 ? null : state.selectedThingId;
     if (!id) {
         bar.style.display = 'none';
-        renderEmptyBuildingCard();
+        if (card) { card.classList.add('hidden'); card.innerHTML = ''; }
         const sc = document.getElementById('selected-sensor-card');
         if (sc) { sc.classList.add('hidden'); sc.innerHTML = ''; }
         return;
@@ -1454,34 +1522,16 @@ function renderSelectionBar() {
         if (sensorCard) { sensorCard.classList.add('hidden'); sensorCard.innerHTML = ''; }
         renderSelectedBuildingCard(data._buildingsMap[id]);
     } else {
-        const s = (data.sensors ?? []).find(x => x.id === id);
+        const s = findSensor(id, thingId);
         const building = s && s.hos ? data._buildingsMap[s.hos] : null;
         if (building) {
             renderSelectedBuildingCard(building);
-        } else {
-            renderEmptyBuildingCard();
+        } else if (card) {
+            card.classList.add('hidden'); card.innerHTML = '';
         }
         if (s) renderSelectedSensorCard(s);
         else if (sensorCard) { sensorCard.classList.add('hidden'); sensorCard.innerHTML = ''; }
     }
-}
-
-function renderEmptyBuildingCard() {
-    const card = document.getElementById('selected-building-card');
-    if (!card) return;
-    card.classList.remove('hidden');
-    card.innerHTML = `
-        <div class="selection-card-main selection-card-empty">
-            <div class="selection-card-icon">
-                <span class="card-icon-emoji">&#127970;</span>
-            </div>
-            <div class="selection-card-info">
-                <div class="selection-card-kicker">Edificio seleccionado</div>
-                <div class="selection-card-title" style="color:#94a3b8;font-weight:400">Ningún edificio seleccionado</div>
-                <div class="selection-card-meta" style="color:#cbd5e1">Haz clic en un edificio del mapa o del listado</div>
-            </div>
-        </div>
-    `;
 }
 
 function renderSelectedBuildingCard(b) {
@@ -1493,9 +1543,7 @@ function renderSelectedBuildingCard(b) {
     const sysBadges = systemIds.map(sid =>
         `<span class="sys-badge" style="background:${esc(getSystemColor(sid))}" title="${esc(sid)}">${esc(sid)}</span>`
     ).join('');
-    const bLat = getLat(b), bLon = getLon(b);
-    const coordStr = bLat != null ? `${bLat.toFixed(6)}, ${bLon.toFixed(6)}` : null;
-    const meta = [b.type, b.neighborhood, b.district_name || b.district_code, b.state, coordStr]
+    const meta = [b.type, b.neighborhood, b.district_name || b.district_code, b.state]
         .filter(Boolean).map(esc).join('<span class="meta-sep">·</span>');
 
     card.classList.remove('hidden');
@@ -1557,6 +1605,7 @@ function renderSelectedSensorCard(s) {
 
 function clearSelection() {
     state.selectedId = null;
+    state.selectedThingId = null;
     document.querySelectorAll('tr.row-selected').forEach(r => r.classList.remove('row-selected'));
     clearMapHighlight();
     closeDetailPanel();
@@ -1568,18 +1617,20 @@ function editSelectedRecord() {
     const n = state.multiSelect.size;
     if (n > 1) {
         openBulkEdit(state.multiSelectType);
-    } else {
-        const id = n === 1 ? [...state.multiSelect][0] : state.selectedId;
-        if (id) openDetailPanel(id);
+    } else if (n === 1) {
+        openDetailPanel([...state.multiSelect][0]);
+    } else if (state.selectedId) {
+        openDetailPanel(state.selectedId, state.selectedThingId);
     }
 }
 
 function zoomSelectedRecord() {
     const n = state.multiSelect.size;
     const id = n === 1 ? [...state.multiSelect][0] : state.selectedId;
+    const thingId = n === 1 ? null : state.selectedThingId;
     if (!id) return;
     if (data._buildingsMap[id]) focusBuilding(id);
-    else focusSensor(id);
+    else focusSensor(id, thingId);
 }
 
 // ── Save ──────────────────────────────────────────────────────
@@ -1629,6 +1680,7 @@ async function saveDetailPanel() {
                 body: JSON.stringify({
                     entityType: editState.entityType,
                     id: editState.ids[0],
+                    selector: editState.selector,
                     updates,
                 }),
             });
@@ -1636,61 +1688,31 @@ async function saveDetailPanel() {
 
         if (!result.ok) throw new Error(result.error);
 
-        // Update in-memory data
-        editState.ids.forEach(id => updateLocalRecord(editState.entityType, id, updates));
+        await reloadData();
 
-        // Refresh popup if open
-        if (!editState.bulk) {
-            const id = editState.ids[0];
-            const marker = editState.entityType === 'building'
-                ? markerIndex.buildings[id]
-                : markerIndex.sensors[id];
-            if (marker && marker.isPopupOpen()) {
-                if (editState.entityType === 'building') {
-                    const b = data._buildingsMap[id];
-                    const sCount = (data._sensorsByBuilding[b.id] ?? []).length;
-                    marker.setPopupContent(buildingPopup(b, sCount));
-                } else {
-                    const s = (data.sensors ?? []).find(x => x.id === id);
-                    if (s) marker.setPopupContent(sensorPopup(s));
-                }
+        let msg;
+        if (editState.bulk) {
+            msg = `${editState.ids.length} registros guardados.`;
+            if (result.records_updated > editState.ids.length) {
+                msg = `${editState.ids.length} registros guardados (${result.records_updated} en total, incluye duplicados con el mismo ID).`;
+            }
+        } else {
+            msg = 'Guardado correctamente.';
+            if (result.records?.length > 1) {
+                msg = `Guardado correctamente (${result.records.length} sensores con el mismo ID actualizados).`;
             }
         }
-
-        showToast(editState.bulk
-            ? `${editState.ids.length} registros guardados.`
-            : 'Guardado correctamente.', true);
+        if (result.sensors_updated > 0) {
+            msg += ` ${result.sensors_updated} sensor${result.sensors_updated === 1 ? '' : 'es'} del edificio actualizado${result.sensors_updated === 1 ? '' : 's'}.`;
+        }
+        showToast(msg, true);
+        loadPushStatus();
 
         closeDetailPanel();
         clearMultiSelect();
-        applyFilters();
 
     } catch (err) {
         showToast('Error: ' + err.message, false);
-    }
-}
-
-function updateLocalRecord(entityType, id, updates) {
-    if (entityType === 'sensor') {
-        const s = (data.sensors ?? []).find(x => x.id === id);
-        if (!s) return;
-        if ('hos' in updates && updates.hos !== s.hos) {
-            // Re-index _sensorsByBuilding
-            if (s.hos && data._sensorsByBuilding[s.hos]) {
-                data._sensorsByBuilding[s.hos] = data._sensorsByBuilding[s.hos].filter(x => x.id !== id);
-            }
-            Object.assign(s, updates);
-            if (s.hos) {
-                if (!data._sensorsByBuilding[s.hos]) data._sensorsByBuilding[s.hos] = [];
-                if (!data._sensorsByBuilding[s.hos].find(x => x.id === id))
-                    data._sensorsByBuilding[s.hos].push(s);
-            }
-        } else {
-            Object.assign(s, updates);
-        }
-    } else {
-        const b = data._buildingsMap[id];
-        if (b) Object.assign(b, updates);
     }
 }
 
@@ -1705,7 +1727,7 @@ function showCopyFromBuilding() {
     const building = data._buildingsMap[hosEl.value];
     if (!building) { showToast('Edificio no encontrado.', false); return; }
 
-    const sensor = (data.sensors ?? []).find(s => s.id === editState.ids[0]);
+    const sensor = findSensor(editState.ids[0], editState.selector?.thing_id);
     const FIELDS = [
         { key: 'neighborhood_key', label: 'Barrio' },
         { key: 'district_code', label: 'Distrito' },
@@ -1821,6 +1843,201 @@ function updateMultiSelectUI() {
     renderSelectionBar();
 }
 
+// ── API Import / Sync ─────────────────────────────────────────
+
+let _syncPollTimer = null;
+
+async function importFromAPI() {
+    const btn = document.getElementById('btn-sync');
+    btn.disabled = true;
+    try {
+        const result = await fetchJson('/api/import', { method: 'POST' });
+        _pollSyncStatus();
+    } catch (err) {
+        showToast('Error al iniciar: ' + err.message, false);
+        btn.disabled = false;
+    }
+}
+
+function _pollSyncStatus() {
+    clearTimeout(_syncPollTimer);
+    _syncPollTimer = setTimeout(async () => {
+        try {
+            const s = await fetchJson('/api/import-status');
+            _updateSyncUI(s);
+            if (s.running) {
+                _pollSyncStatus();
+            } else {
+                document.getElementById('btn-sync').disabled = false;
+                if (s.done) {
+                    await reloadData();
+                    showToast(`Sincronización completada: ${s.buildings} edificios, ${s.sensors} sensores.`, true);
+                } else if (s.error) {
+                    showToast('Error en sincronización: ' + s.error, false);
+                }
+            }
+        } catch (e) {
+            document.getElementById('btn-sync').disabled = false;
+        }
+    }, 1500);
+}
+
+function _updateSyncUI(s) {
+    const el = document.getElementById('sync-status');
+    if (!el) return;
+    if (s.running) {
+        el.textContent = `Importando… ${s.things_done} things · ${s.current_model}`;
+    } else if (s.done && s.finished_at) {
+        const t = new Date(s.finished_at).toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
+        el.textContent = `Sync ${t} · ${s.buildings} edif. ${s.sensors} sens.`;
+    } else {
+        el.textContent = '';
+    }
+}
+
+// ── Resolve Tags Modal ────────────────────────────────────────
+
+let _resolvePollTimer = null;
+
+function openResolveModal() {
+    document.getElementById('resolve-modal').style.display = 'flex';
+}
+function closeResolveModal() {
+    document.getElementById('resolve-modal').style.display = 'none';
+}
+
+async function resolveTagsFromAPI() {
+    const btn = document.getElementById('btn-resolve');
+    btn.disabled = true;
+    openResolveModal();
+
+    const logEl = document.getElementById('resolve-log');
+    logEl.innerHTML = '';
+    document.getElementById('resolve-progress-bar').style.width = '0%';
+    document.getElementById('resolve-summary').textContent = '';
+    document.getElementById('resolve-close-btn').disabled = true;
+
+    _addResolveLog('Iniciando resolución de tags…', 'dim');
+
+    try {
+        await fetchJson('/api/resolve-tags', { method: 'POST' });
+        _pollResolveStatus(0);
+    } catch (err) {
+        _addResolveLog('Error: ' + err.message, 'err');
+        document.getElementById('resolve-close-btn').disabled = false;
+        btn.disabled = false;
+    }
+}
+
+function _pollResolveStatus(lastCount) {
+    clearTimeout(_resolvePollTimer);
+    _resolvePollTimer = setTimeout(async () => {
+        try {
+            const s = await fetchJson('/api/resolve-status');
+            const log = s.log || [];
+
+            for (let i = lastCount; i < log.length; i++) {
+                const msg = log[i];
+                const cls = msg.startsWith('✓') ? 'ok' : msg.startsWith('Error') ? 'err' : '';
+                _addResolveLog(msg, cls);
+            }
+
+            const pct = s.total > 0 ? Math.round((s.done_count / s.total) * 100) : 0;
+            document.getElementById('resolve-progress-bar').style.width = pct + '%';
+
+            if (s.running) {
+                _pollResolveStatus(log.length);
+            } else {
+                document.getElementById('resolve-close-btn').disabled = false;
+                document.getElementById('btn-resolve').disabled = false;
+                if (s.done) {
+                    document.getElementById('resolve-progress-bar').style.width = '100%';
+                    _renderResolveSummary(s);
+                    await reloadData();
+                    showToast(`Tags resueltos: ${s.buildings_updated} edificios, ${s.sensors_updated} sensores.`, true);
+                } else if (s.error) {
+                    _addResolveLog('Error: ' + s.error, 'err');
+                }
+            }
+        } catch (e) {
+            _addResolveLog('Error de conexión: ' + e.message, 'err');
+            document.getElementById('resolve-close-btn').disabled = false;
+            document.getElementById('btn-resolve').disabled = false;
+        }
+    }, 1000);
+}
+
+function _renderResolveSummary(s) {
+    const el = document.getElementById('resolve-summary');
+    if (!el) return;
+    let dur = '';
+    if (s.started_at && s.finished_at) {
+        const ms = new Date(s.finished_at) - new Date(s.started_at);
+        dur = ` · ${(ms / 1000).toFixed(1)}s`;
+    }
+    const fc  = s.fields_count  || {};
+    const unk = s.tags_unknown  || [];
+    let html = `<div class="rsb">`;
+    html += `<div class="rsb-title">Resumen${dur}</div>`;
+    html += `<div class="rsb-grid">`;
+    html += `<div class="rsb-col">`;
+    html += `<div class="rsb-section">Edificios (${s.total})</div>`;
+    html += `<div class="rsb-row rsb-ok">✓ Resueltos: <strong>${s.buildings_updated}</strong></div>`;
+    html += `<div class="rsb-row rsb-warn">⚠ Sin coincidencia: <strong>${s.skipped || 0}</strong></div>`;
+    html += `<div class="rsb-row rsb-dim">○ Sin tags: <strong>${s.no_tags || 0}</strong></div>`;
+    html += `</div>`;
+    html += `<div class="rsb-col">`;
+    html += `<div class="rsb-section">Campos aplicados</div>`;
+    html += `<div class="rsb-row">Distrito: <strong>${fc.district_code || 0}</strong></div>`;
+    html += `<div class="rsb-row">Barrio: <strong>${fc.neighborhood_key || 0}</strong></div>`;
+    html += `<div class="rsb-row">Tipo: <strong>${fc.type || 0}</strong></div>`;
+    html += `<div class="rsb-row">Zona: <strong>${fc.zone || 0}</strong></div>`;
+    html += `<div class="rsb-row">Calle: <strong>${fc.street_etra || 0}</strong></div>`;
+    html += `</div>`;
+    html += `</div>`;
+    html += `<div class="rsb-sensors">Sensores actualizados: <strong>${s.sensors_updated}</strong>`;
+    if (s.sensors_no_building) html += ` · sin edificio asignado: <strong>${s.sensors_no_building}</strong>`;
+    html += `</div>`;
+    if (unk.length > 0) {
+        html += `<div class="rsb-unknown">Tags no reconocidos (${unk.length}): <span class="rsb-tags">${unk.join(', ')}</span></div>`;
+    }
+    html += `</div>`;
+    el.innerHTML = html;
+}
+
+function _addResolveLog(msg, cls = '') {
+    const el = document.getElementById('resolve-log');
+    if (!el) return;
+    const line = document.createElement('div');
+    line.className = cls ? `modal-log-${cls}` : '';
+    line.textContent = msg;
+    el.appendChild(line);
+    el.scrollTop = el.scrollHeight;
+}
+
+function _applyMetaSync(meta) {
+    if (!meta?.last_sync) return;
+    const d = new Date(meta.last_sync);
+    const label = d.toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit' })
+                + ' ' + d.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
+    const el = document.getElementById('sync-status');
+    if (el && !el.textContent.startsWith('Import')) {
+        el.textContent = `Sync ${label} · ${meta.buildings ?? ''} edif. ${meta.sensors ?? ''} sens.`;
+    }
+}
+
+// Comprueba al arrancar si hay un import en curso (p.ej. tras recargar la página)
+async function _checkSyncOnLoad() {
+    try {
+        const s = await fetchJson('/api/import-status');
+        _updateSyncUI(s);
+        if (s.running) {
+            document.getElementById('btn-sync').disabled = true;
+            _pollSyncStatus();
+        }
+    } catch { /* silencioso */ }
+}
+
 // ── Toast ─────────────────────────────────────────────────────
 
 function showToast(msg, ok = true) {
@@ -1831,4 +2048,82 @@ function showToast(msg, ok = true) {
     el.style.display = 'block';
     clearTimeout(el._t);
     el._t = setTimeout(() => { el.style.display = 'none'; }, 3500);
+}
+
+// ── Push canvis a TheThings ────────────────────────────────────
+
+async function loadPushStatus() {
+    try {
+        const s = await fetchJson('/api/sync-status');
+        renderPushStatus(s);
+    } catch { /* silencioso */ }
+}
+
+function renderPushStatus(s) {
+    const el  = document.getElementById('push-status');
+    const btn = document.getElementById('btn-push');
+    if (!el || !btn) return;
+    const pending = s.pending || 0;
+    const errors  = s.errors  || 0;
+    if (pending > 0) {
+        el.textContent = `${pending} pendent${pending !== 1 ? 's' : ''} de pujar`;
+        el.className   = 'push-status push-pending';
+    } else if (errors > 0) {
+        el.textContent = `${errors} error${errors !== 1 ? 's' : ''} de sync`;
+        el.className   = 'push-status push-error';
+    } else if (s.synced > 0) {
+        el.textContent = 'Tot sincronitzat';
+        el.className   = 'push-status push-synced';
+    } else {
+        el.textContent = '';
+        el.className   = 'push-status';
+    }
+    btn.disabled = false;
+}
+
+async function syncAllPending() {
+    const btn = document.getElementById('btn-push');
+    const el  = document.getElementById('push-status');
+    if (btn) btn.disabled = true;
+    if (el)  { el.textContent = 'Pujant…'; el.className = 'push-status'; }
+    try {
+        const result = await fetchJson('/api/sync-all', { method: 'POST' });
+        if (result.total === 0) {
+            showToast('No hi ha canvis pendents de pujar.', true);
+        } else {
+            const msg = `Pujat: ${result.synced} ok, ${result.errors} errors de ${result.total}.`;
+            showToast(msg, result.errors === 0);
+        }
+        await loadPushStatus();
+    } catch (err) {
+        showToast('Error sync: ' + err.message, false);
+        await loadPushStatus();
+    }
+}
+
+async function syncSelectedRecord() {
+    const syncBtn = document.getElementById('dp-sync-btn');
+    if (syncBtn) syncBtn.disabled = true;
+    try {
+        const result = await fetchJson('/api/sync-record', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                entityType: editState.entityType,
+                id: editState.ids[0],
+                selector: editState.selector,
+            }),
+        });
+        if (result.result?.skipped) {
+            showToast('Sense camps sync pendents.', true);
+        } else {
+            showToast(`Sincronitzat (${result.result?.values_sent ?? 0} camps).`, true);
+        }
+        await reloadData();
+        await loadPushStatus();
+        if (syncBtn) syncBtn.style.display = 'none';
+    } catch (err) {
+        showToast('Error sync: ' + err.message, false);
+        if (syncBtn) syncBtn.disabled = false;
+    }
 }

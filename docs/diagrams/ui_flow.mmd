@@ -1,0 +1,81 @@
+stateDiagram-v2
+    [*] --> Loading : Obre index.html
+
+    Loading --> Ready : loadData() OK
+    Loading --> Error : JSON no disponible
+
+    state Ready {
+        [*] --> NoSelection
+
+        NoSelection --> SingleSelected : Click element\n(taula o mapa)
+        NoSelection --> MultiSelected : Ctrl+Click ≥2 elements
+
+        SingleSelected --> NoSelection : clearSelection()
+        SingleSelected --> EditPanel : editSelectedRecord()
+        SingleSelected --> SingleSelected : Click diferent element
+        SingleSelected --> MultiSelected : Ctrl+Click element addicional
+
+        MultiSelected --> NoSelection : clearSelection()
+        MultiSelected --> BulkEditPanel : openBulkEdit()
+        MultiSelected --> MultiSelected : Ctrl+Click (toggle)\nShift+Click (rang)
+        MultiSelected --> SingleSelected : Click simple (neteja multi)
+
+        state SingleSelected {
+            [*] --> BuildingSelected
+            [*] --> SensorSelected
+
+            BuildingSelected --> TabBuildings : auto-switch si source=map
+            SensorSelected --> TabSensors : auto-switch si source=map
+
+            BuildingSelected --> MapHighlight : highlightMapRecord
+            SensorSelected --> MapHighlight : highlightMapRecord
+        }
+
+        state EditPanel {
+            [*] --> FormRendered
+            FormRendered --> CopyPreview : showCopyFromBuilding()\n(sensor únicamente)
+            CopyPreview --> FormRendered : applyCopyFromBuilding()
+            CopyPreview --> FormRendered : cancelCopyFromBuilding()
+            FormRendered --> Saving : saveDetailPanel()
+            Saving --> [*] : OK → closeDetailPanel()\n+ reloadData()
+            Saving --> FormRendered : Error → showToast
+        }
+
+        state BulkEditPanel {
+            [*] --> BulkFormRendered
+            BulkFormRendered --> BulkSaving : saveDetailPanel() [bulk]
+            BulkSaving --> [*] : OK → closeDetailPanel()\n+ reloadData()
+            BulkSaving --> BulkFormRendered : Error
+        }
+
+        state FilterChanged {
+            [*] --> FiltersApplied
+            FiltersApplied --> MarkersRerendered : renderMarkers()
+            FiltersApplied --> TablesRerendered : renderBuildingsList()\nrenderSensorsList()
+            FiltersApplied --> SelectionPruned : pruneStaleSelection()
+        }
+    }
+
+    state SyncProcess {
+        [*] --> ImportStarted : importFromAPI()
+        ImportStarted --> Polling : _pollSyncStatus() 1.5s
+        Polling --> Polling : running=true
+        Polling --> SyncDone : running=false, done=true
+        Polling --> SyncError : running=false, error!=null
+        SyncDone --> [*] : reloadData() + showToast
+        SyncError --> [*] : showToast error
+    }
+
+    state ResolveProcess {
+        [*] --> ModalOpen : resolveTagsFromAPI()
+        ModalOpen --> ResolvePolling : _pollResolveStatus() 1s
+        ResolvePolling --> ResolvePolling : running=true (log actualitzat)
+        ResolvePolling --> ResolveDone : done=true
+        ResolvePolling --> ResolveError : error
+        ResolveDone --> [*] : reloadData() + showToast\nModal tancable
+        ResolveError --> [*] : showToast error\nModal tancable
+    }
+
+    Ready --> SyncProcess : btn-sync click
+    Ready --> ResolveProcess : btn-resolve click
+    Ready --> FilterChanged : canvi en filtres
