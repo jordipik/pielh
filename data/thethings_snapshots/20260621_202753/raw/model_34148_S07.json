@@ -1,0 +1,378 @@
+[
+  {
+    "_id": "j0Yyuqe1cD5orpxQSyKuwzrbRxItker8gzPDWcOT3rk",
+    "lastSeen": "2026-06-21T18:26:33.133Z",
+    "lastRead": "2026-06-21T18:26:33.124Z",
+    "lastWrite": "2026-06-21T18:26:33.133Z",
+    "thingToken": "lARc8Yi-kFjcy1WRaG-1h0P6v7SxqD64xZZfbaq4gIw",
+    "description": {
+      "name": "P. M. Gornal - 0018b2400001947d - HOS130",
+      "geo": {
+        "long": 2.11862823595954,
+        "lat": 41.3603764243106
+      }
+    },
+    "createdAt": "2026-06-03T16:24:42.389Z",
+    "tags": [
+      {
+        "_id": "hos130",
+        "name": "HOS130",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "yRzJTFPxQSfFyucOdaGQ653wQHaZqa_-XBZVlfGPO4M",
+    "lastSeen": "2026-06-21T18:19:23.948Z",
+    "lastRead": "2026-06-21T18:19:23.939Z",
+    "lastWrite": "2026-06-21T18:19:23.948Z",
+    "thingToken": "fpDeJEcFi5AkNb6bEEmrnvfizNvY_32EWVH20h4zNws",
+    "description": {
+      "name": "Esc. Pablo Neruda - 0018b240000198cb-HOS055",
+      "geo": {
+        "long": 2.08727351037097,
+        "lat": 41.365828552025
+      }
+    },
+    "createdAt": "2026-06-03T16:17:52.551Z",
+    "tags": [
+      {
+        "_id": "hos055",
+        "name": "HOS055",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "oJ9s37Y0MuU-lEtuIwZluYMZ-MdKEoyO-iq7mFgLmhU",
+    "lastSeen": "2026-06-21T18:19:00.838Z",
+    "lastRead": "2026-06-21T18:19:00.827Z",
+    "lastWrite": "2026-06-21T18:19:00.838Z",
+    "thingToken": "kn6jnlCMIMzvl7YqbFZ-Kmabd8D7eVzSJC_BkzAPB2Q",
+    "description": {
+      "name": "Esc. Bernat Metge - 0018b2400001960b - HOS040",
+      "geo": {
+        "long": 2.11260428462165,
+        "lat": 41.3579888393564
+      }
+    },
+    "createdAt": "2026-06-03T16:17:21.106Z",
+    "tags": [
+      {
+        "_id": "hos040",
+        "name": "HOS040",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "j3jiSpRPggHMLz7j8YtkIipatMVGHhMWwK0VvglXwhw",
+    "lastSeen": "2026-06-21T09:00:06.507Z",
+    "lastRead": "2026-06-21T08:50:42.921Z",
+    "lastWrite": "2026-06-21T09:00:06.507Z",
+    "thingToken": "3ULMiOoE98JkZ2xTrEEvSpCdR4jrku0A6D3khucCNaY",
+    "description": {
+      "name": "Esc. Joaquim Ruyra - HOS046",
+      "geo": {
+        "long": 2.11120923689681,
+        "lat": 41.3762598922437
+      }
+    },
+    "createdAt": "2026-06-04T08:48:56.473Z",
+    "tags": [
+      {
+        "_id": "hos046",
+        "name": "HOS046",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "Sv8Jcu449v-pS13Q_INorQE7KjI8tO_ZEuz4eK6aMac",
+    "lastSeen": "2026-06-21T00:00:12.544Z",
+    "lastRead": "2026-06-19T11:45:32.477Z",
+    "lastWrite": "2026-06-21T00:00:12.544Z",
+    "thingToken": "s1P7y-tWjNIYQB6QiXbB43xgIiwTjPCddScqpGcGrGc",
+    "description": {
+      "name": "0018b24000019623",
+      "geo": {}
+    },
+    "createdAt": "2026-06-04T11:44:12.167Z",
+    "tags": []
+  },
+  {
+    "_id": "TfaPnnuPCcF_W0azwxAFGZcxymZuzYqG-zP3TYqezk0",
+    "thingToken": "X6ivngX1TGCJ-lOoyNI1B1yrS2RRKeefrAM13srfaMI",
+    "description": {
+      "name": "0018b24000019407",
+      "geo": {}
+    },
+    "createdAt": "2025-11-19T10:31:20.060Z",
+    "tags": []
+  },
+  {
+    "_id": "apHhbWldt6wg55vQtEyzWii12s7i5_4nn94Qdq5panE",
+    "thingToken": "m8nfEoLB1OYvy0_g9n6Z3kIgEo2foKVPykhsZUX84p8",
+    "description": {
+      "name": "Esc. Pablo Neruda - 0018b240000198cb-HOS055",
+      "geo": {
+        "lat": 41.365828552025,
+        "long": 2.08727351037097
+      }
+    },
+    "createdAt": "2025-06-27T06:26:55.754Z",
+    "tags": [
+      {
+        "_id": "hos055",
+        "name": "HOS055",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "BhCcVeqMpgw3HZ1_PTi-3IgJgCAjIZqfHOytw-F-OwA",
+    "thingToken": "Ny7gML4nym4QL_T2iyrFD1XVTN10UOgz9l5lgcR1rQs",
+    "description": {
+      "name": "0018b2400001962e",
+      "geo": {}
+    },
+    "createdAt": "2025-06-20T07:54:03.446Z",
+    "tags": []
+  },
+  {
+    "_id": "1mfmjD218sHe0E1zFXgqphr7_tPUGlScQ5yvPHTh5Mk",
+    "thingToken": "kOlel8VDXxyTtp2-6i0dmVw9vEGjjaBzujc-H1lEZCk",
+    "description": {
+      "name": "0018b2400001961f-HOS045",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-06-19T09:13:00.578Z",
+    "tags": []
+  },
+  {
+    "_id": "gxFvPg5Yk6OhIeTxbv9rbinnlHbfTZq3XqVDPLM4PZc",
+    "thingToken": "kcvtm3q2kCmEzQkgmlA6w9DFysu--s1uNv-x2ANn0vM",
+    "description": {
+      "name": "0018b24000019612",
+      "geo": {}
+    },
+    "createdAt": "2025-06-16T07:49:22.748Z",
+    "tags": []
+  },
+  {
+    "_id": "21A8wHaTzWt9ra9x-5bbhX6xP4kpPJIQWev8GLAlV8s",
+    "thingToken": "8r7dcsGoBStCDtttkEmKo1eqz8tGdmK04t75K8tI63k",
+    "description": {
+      "name": "0018b24000019632",
+      "geo": {}
+    },
+    "createdAt": "2025-06-16T07:46:14.729Z",
+    "tags": []
+  },
+  {
+    "_id": "Dhy_sHudthP-TtOSvABBt_TbwXbMcYa9AfqV082N_b8",
+    "thingToken": "7EBGBpSpEXqWd9u-gFIa8U91Pa9ugtkzaaOHelEDJQE",
+    "description": {
+      "name": "0018b240000198aa",
+      "geo": {}
+    },
+    "createdAt": "2025-06-13T09:32:21.686Z",
+    "tags": []
+  },
+  {
+    "_id": "KMYMeXXMqIq9DpIvMFJjF1DxK_OdBBSJqdY7W4NtdS0",
+    "thingToken": "IWpeBX4yqWPpqxGuTisKX3v4sO-5DLZA8EHBDd8n5ZA",
+    "description": {
+      "name": "Esc. Bernat Metge - 0018b2400001960b - HOS040",
+      "geo": {
+        "lat": 41.3579888393564,
+        "long": 2.11260428462165
+      }
+    },
+    "createdAt": "2025-06-13T08:36:55.931Z",
+    "tags": [
+      {
+        "_id": "hos040",
+        "name": "HOS040",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "bZ3wKcvvsjqUsCmTSPG1pu8hbHTp6gXkpPY1R1GnoiA",
+    "thingToken": "PZn8riKiJkw1LdeTwHDTo97XwZNbwHhjfLay7attLi8",
+    "description": {
+      "name": "0018b240000198a3",
+      "geo": {}
+    },
+    "createdAt": "2025-06-05T11:19:51.557Z",
+    "tags": []
+  },
+  {
+    "_id": "FtZk8-T-9e3bwYjF8useUBLqv2tTwDREqvLoKVoPdFQ",
+    "thingToken": "0V__f3FTH3N3RGV7hX0xhyO47VrresJ66kf8Jm2fBEg",
+    "description": {
+      "name": "Esc. Joaquim Ruyra - HOS046",
+      "geo": {
+        "lat": 41.3762598922437,
+        "long": 2.11120923689681
+      }
+    },
+    "createdAt": "2025-06-05T08:07:57.586Z",
+    "tags": [
+      {
+        "_id": "hos046",
+        "name": "HOS046",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "JArlShk-vKSMU7U5gaepXTk7X3qZLDPWMH1Eue5BbSI",
+    "thingToken": "svXn0alS2PTbid64jND7T0o4NIEdisThANhOgyXM_vo",
+    "description": {
+      "name": "Esc. La Carpa - HOS048",
+      "geo": {
+        "lat": 41.3672213608047,
+        "long": 2.09978269502928
+      }
+    },
+    "createdAt": "2025-06-04T11:10:16.173Z",
+    "tags": [
+      {
+        "_id": "hos048",
+        "name": "HOS048",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "C7wO7N5u3VMGSFWAwNIISVhfKPZXMzfaiNBqi7nRDOw",
+    "thingToken": "R3fR-Te-l_17fl5VsUsUIm0AF2k1rJCpiIlh2yugxTI",
+    "description": {
+      "name": "0018b2400001962d",
+      "geo": {}
+    },
+    "createdAt": "2025-06-04T08:11:30.732Z",
+    "tags": []
+  },
+  {
+    "_id": "Y8cItc0LDbChEFoBQuePoRtuojNBEJcsU6bDFbABR9A",
+    "thingToken": "PZXx1yHXUuIiQQ4SjuG6_pnUcwKxWDvevi36FIhBYjs",
+    "description": {
+      "name": "Residencia Els Alps - HOS136",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-05-21T12:14:59.929Z",
+    "tags": [
+      {
+        "_id": "hos136",
+        "name": "HOS136",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "oRrUVWqwqcm42FIuprDSHK1YKq8O-ftCNhQGVhVhph8",
+    "thingToken": "pnNI-TyUD451gi0QpIcv_lipLoDTFapCxK6A8t6PNvQ",
+    "description": {
+      "name": "0018b2400001989a",
+      "geo": {}
+    },
+    "createdAt": "2025-05-21T11:34:59.327Z",
+    "tags": []
+  },
+  {
+    "_id": "uyFnd_JW4jlLEvboO6SAj4ZYl8Fcp9uaQzFMZjZtM2w",
+    "thingToken": "jnNXx8Bd17aUd25BljVcgUWMXuLda7k_QxScV5e9zSA",
+    "description": {
+      "name": "Dipòsit Santa Eulàlia - 0018b24000019430 - HOS036",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2024-06-14T06:33:22.407Z",
+    "tags": [
+      {
+        "_id": "hos036",
+        "name": "HOS036",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "6rlQxUw-oOsNM3Bl5CdbKmQGX_9IbZKjfpr-5EWiIGo",
+    "thingToken": "6kfumSSXqx1hfc8m67ExqLLSSz8KEtYH7mF9oCvYBEM",
+    "description": {
+      "name": "CEMFO - 0018b24000019306 - HOS004",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2024-05-27T12:15:06.807Z",
+    "tags": [
+      {
+        "_id": "hos004",
+        "name": "HOS004",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "xhieDqD0f8pBpT3OUdGYpmhXwy1X-CigP-j7ORHJlR4",
+    "thingToken": "PTGhPU_koyT-dIunvpIHoiakSKrm06Um3yGTANfAsH4",
+    "description": {
+      "name": "0018b2400001961a",
+      "geo": {}
+    },
+    "createdAt": "2024-05-22T08:24:24.044Z",
+    "tags": []
+  },
+  {
+    "_id": "2hUpIIPiMfzdjDzb-tcULYZd50ts6Y_Hi5OkNfPrErg",
+    "thingToken": "N2iJbhphONZmK3h6_UMzZH0YK2QKXG78k-f4XI6BlAQ",
+    "description": {
+      "name": "P. M. Gornal - 0018b2400001947d - HOS130",
+      "geo": {
+        "lat": 41.3603764243106,
+        "long": 2.11862823595954
+      }
+    },
+    "createdAt": "2024-05-17T12:16:02.955Z",
+    "tags": [
+      {
+        "_id": "hos130",
+        "name": "HOS130",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "v_WrlGsBA-TgOcPzDlsWq-ORd9u7X6dLtogB6b_gVDw",
+    "thingToken": "aOjNJcGKKy-qltIpnwtQimY-Ki8ulJGBohaM5sgKP0I",
+    "description": {
+      "name": "0018b240000193f3",
+      "geo": {}
+    },
+    "createdAt": "2023-11-14T11:03:54.772Z",
+    "tags": []
+  },
+  {
+    "_id": "vtiF0uv7570ULmojr3HTH7BX6xW-xQcLjjfwGwpf8a0",
+    "thingToken": "VZTbCrmGTqXcqOUgA8e1ejbskPISC-hpMRPwL71xJas",
+    "description": {
+      "name": "0018b24000019858 - Edificio 1",
+      "geo": {}
+    },
+    "createdAt": "2023-05-19T09:06:32.290Z",
+    "tags": []
+  }
+]

@@ -1,0 +1,7132 @@
+[
+  {
+    "_id": "RT8K7p08i-8BgKAp-jfC6BbbIYTMLN7bq3RcWQdt37o",
+    "lastSeen": "2026-06-21T18:26:19.098Z",
+    "lastWrite": "2026-06-21T18:26:19.098Z",
+    "thingToken": "f_NaPt1zVt7LgcWTsr_uFTS7pnCmdYonWBo_XO2KBgI",
+    "description": {
+      "name": "HOS069 Ca n'Olivé",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:22.724Z",
+    "tags": [
+      {
+        "_id": "hos069",
+        "name": "HOS069",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "hK2yQpRPGCv0nE54Q0hvIR33G1pBunC6VtZhSbGo250",
+    "lastSeen": "2026-06-21T18:26:18.941Z",
+    "lastWrite": "2026-06-21T18:26:18.941Z",
+    "thingToken": "cyskaeuyj2gcAQ84tcPp6BTLrdw6nYw4RmmEVpTpDZA",
+    "description": {
+      "name": "HOS052 Esc. Màrius Torres",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:24.440Z",
+    "tags": [
+      {
+        "_id": "hos052",
+        "name": "HOS052",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "u_wqoWQ2isjDqSsrGKXs-6CzB6NcZPxuW6-d-wlKENY",
+    "lastSeen": "2026-06-21T18:26:18.901Z",
+    "lastWrite": "2026-06-21T18:26:18.901Z",
+    "thingToken": "Rn7hZ43AXhbgN2dZUPhOHUu4F9OXLpLsvLuAp-Z6e2A",
+    "description": {
+      "name": "HOS023 C. M. Ana Díaz Rico",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:30.173Z",
+    "tags": [
+      {
+        "_id": "hos023",
+        "name": "HOS023",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "0vdi7d6prPgH5yC90jgk_yVJlFWQ0sk0Bt40AJC6tzc",
+    "lastSeen": "2026-06-21T18:26:18.844Z",
+    "lastWrite": "2026-06-21T18:26:18.844Z",
+    "thingToken": "TlzTpFvgryG6vsuF7Hb4RxU_R1BoDHDhukIFApezNtY",
+    "description": {
+      "name": "HOS028 Area de Benestar social",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:25.804Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos028",
+        "name": "HOS028",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "eccFL2RDaIP_AxE8WsXfQ1OHFi-Qv7KtyU_xCOi2nYA",
+    "lastSeen": "2026-06-21T18:26:18.481Z",
+    "lastWrite": "2026-06-21T18:26:18.481Z",
+    "thingToken": "CctdlNPUoM6_4AlTONMWcenZTtAnKzMmyCLRDIvGO9E",
+    "description": {
+      "name": "HOS130 P. M. Gornal",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:21.051Z",
+    "tags": [
+      {
+        "_id": "hos130",
+        "name": "HOS130",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "rBRDHbWTOfZD1jYmKfC5-FR8MPFYCfhVL8STgQtdmho",
+    "lastSeen": "2026-06-21T18:26:18.472Z",
+    "lastWrite": "2026-06-21T18:26:18.472Z",
+    "thingToken": "2liLbTPDWvbeKz0ts98iFMGa1rVLknJ3VSDb1LV_Jas",
+    "description": {
+      "name": "Sant Josep-HOS089",
+      "geo": {
+        "long": 2.1068747518447326,
+        "lat": 41.362574237806555
+      }
+    },
+    "createdAt": "2026-06-08T12:14:23.319Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos089",
+        "name": "HOS089",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "6GHOUTpDl7KREYjuZWTxl-YJl6O2-giGIoWnppy8pd0",
+    "lastSeen": "2026-06-21T18:26:18.077Z",
+    "lastWrite": "2026-06-21T18:26:18.077Z",
+    "thingToken": "xEqroxxtA9JB5B0l2zb7xRQglzDHlBc_6P3ZECxf3jc",
+    "description": {
+      "name": "Hospital Duran i Reynals - Institut Catala Oncologia-HOS031",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:23.353Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos031",
+        "name": "HOS031",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "sHVifBVcetO21sc6xrBUQF-LfazClz6XItzsirEVTKc",
+    "lastSeen": "2026-06-21T18:26:18.067Z",
+    "lastWrite": "2026-06-21T18:26:18.067Z",
+    "thingToken": "z1yXhoxpYR23RLDqHc1zM4fZH5rvEbGrgVi1thL9HtQ",
+    "description": {
+      "name": "Rambla Just Oliveras (L1)-HOS086",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:20.944Z",
+    "tags": [
+      {
+        "_id": "hos086",
+        "name": "HOS086",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "5eyTXGqEm0SBoXZuH1RjBp9vrVMhUgTUvoN7CvvDdfQ",
+    "lastSeen": "2026-06-21T18:26:17.913Z",
+    "lastWrite": "2026-06-21T18:26:17.913Z",
+    "thingToken": "c1D8L4BFQ0eeURVQg19RBG6VU1k3dYLWkSE_54xKxsM",
+    "description": {
+      "name": "HOS059 Esc. Pau Vila",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:20.879Z",
+    "tags": [
+      {
+        "_id": "hos059",
+        "name": "HOS059",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "hURqD0FGQLyEDjJUgaC_don0jXjMHt7I_srTELfQDLI",
+    "lastSeen": "2026-06-21T18:26:17.909Z",
+    "lastWrite": "2026-06-21T18:26:17.909Z",
+    "thingToken": "n-T6rBoCGPlIuqz88xuidmQUTzIzolmEdaqNzn_EHDk",
+    "description": {
+      "name": "Provençana (L10)-HOS094",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:18.396Z",
+    "tags": [
+      {
+        "_id": "hos094",
+        "name": "HOS094",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "T9KwOtRR1CAz0pjTLGvzQQO71W5jLczzKuTO2Z7Yjlk",
+    "lastSeen": "2026-06-21T18:26:17.907Z",
+    "lastWrite": "2026-06-21T18:26:17.907Z",
+    "thingToken": "V4QddFqJxFPxzBG0nwBSZvQR9vAJny9ZfaW224W_7no",
+    "description": {
+      "name": "Can Vidalet (L5)-HOS080",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:26.475Z",
+    "tags": [
+      {
+        "_id": "hos080",
+        "name": "HOS080",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "Wwl0aLGE2wQrT4YJFdYr9tUPFHN4j-bk-dBASC5OTGc",
+    "lastSeen": "2026-06-21T18:26:17.659Z",
+    "lastWrite": "2026-06-21T18:26:17.659Z",
+    "thingToken": "9-MS1xYZWT2OHu39ZC_qAY1V4Nk-rM10_YFrYjYlR7s",
+    "description": {
+      "name": "HOS047 Esc. Josep Janes",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:30.174Z",
+    "tags": [
+      {
+        "_id": "hos047",
+        "name": "HOS047",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "qfJlBd5fGy4E7oIhHrc9VP5kwIPQRDnlEA0QnI2wx2I",
+    "lastSeen": "2026-06-21T18:26:17.650Z",
+    "lastWrite": "2026-06-21T18:26:17.650Z",
+    "thingToken": "qHPRtRo76peW2CweQV89NCnUnP2Hw0tqkuqXOXO25KM",
+    "description": {
+      "name": "HOS126 Museu L'Harmonia",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:30.858Z",
+    "tags": [
+      {
+        "_id": "hos126",
+        "name": "HOS126",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "TExZ88T612LrMFFLtsAF1bc7e_7W87qCtxxeMK02pL8",
+    "lastSeen": "2026-06-21T18:26:17.612Z",
+    "lastWrite": "2026-06-21T18:26:17.612Z",
+    "thingToken": "V-Ot1GawbTOlu2b6yHQjeptxoP5LGD8b9hcRTX7dlgY",
+    "description": {
+      "name": "HOS058 Esc. Pau Sans",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:24:20.190Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos058",
+        "name": "HOS058",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "1n2X6h9g7wnU6Eq197zEEmAi5yoorHAEQnmi8pBq8RA",
+    "lastSeen": "2026-06-21T18:26:17.343Z",
+    "lastWrite": "2026-06-21T18:26:17.343Z",
+    "thingToken": "iO8jXdEsgxRqwVz41FPjPpLHXbTIsE8sTQnu7hKNwYQ",
+    "description": {
+      "name": "HOS001 Aj L'H-Casa Consistorial",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:22.077Z",
+    "tags": [
+      {
+        "_id": "hos001",
+        "name": "HOS001",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "WCCXdQjEgcb3J8LIvlGKrHAChzxQTsQ4rrfsjddYgxU",
+    "lastSeen": "2026-06-21T18:26:17.104Z",
+    "lastWrite": "2026-06-21T18:26:17.104Z",
+    "thingToken": "NaUa5Y9MkIuXGiHh0PMul8PujR-4HAnaAB4RRN9cFEo",
+    "description": {
+      "name": "HOS012 Cement. Mun. L'Hospitalet",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:21.031Z",
+    "tags": [
+      {
+        "_id": "hos012",
+        "name": "HOS012",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ZKn_pYM4KLwyiTZuEOOeheN7LcA7tC6zkXlRfzMOmu8",
+    "lastSeen": "2026-06-21T18:26:17.099Z",
+    "lastWrite": "2026-06-21T18:26:17.100Z",
+    "thingToken": "vl25JwX1zhmRQQWhUsCCOHGlxMKvHZFV3N1sQYNNAF8",
+    "description": {
+      "name": "HOS139 Esc. Rest. El Repartidor",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:23.052Z",
+    "tags": [
+      {
+        "_id": "hos139",
+        "name": "HOS139",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "2lbpvho4hSupLjAnM7mVtILADjlCAwG4VE5ax8vu8xw",
+    "lastSeen": "2026-06-21T18:26:16.261Z",
+    "lastWrite": "2026-06-21T18:26:16.261Z",
+    "thingToken": "cx5jZ407_glGqbqjkXOH-ACsDadxaIG8N6l7dAjG4DE",
+    "description": {
+      "name": "HOS005 Edificio Cobalt",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:29.670Z",
+    "tags": [
+      {
+        "_id": "hos005",
+        "name": "HOS005",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "0AX0xqkzO45yRFWk2YVXCj8fFA-_0i3B74q76Ok4_Hk",
+    "lastSeen": "2026-06-21T18:26:16.254Z",
+    "lastWrite": "2026-06-21T18:26:16.254Z",
+    "thingToken": "-j2bePVNp-YT-tc2stDDEzXGwss7m5mS_S5VPPNQ874",
+    "description": {
+      "name": "Escola de Música - Centre de les Arts-HOS071",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:24.026Z",
+    "tags": [
+      {
+        "_id": "hos071",
+        "name": "HOS071",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "yy0sAvj6zoYl_hcg-wolRzRk_gZPMZkNz2EFhcgZR7U",
+    "lastSeen": "2026-06-21T18:26:16.249Z",
+    "lastWrite": "2026-06-21T18:26:16.249Z",
+    "thingToken": "PsqbT0aacICv8KlNlIObldegRiEQxPy2zh3sBraNllc",
+    "description": {
+      "name": "Centre d'Atenció Primària Just Oliveras (dte. I)-HOS018",
+      "geo": {
+        "long": 2.10094442211301,
+        "lat": 41.362760941406165
+      }
+    },
+    "createdAt": "2026-06-08T12:04:25.213Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos018",
+        "name": "HOS018",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ajvQhXtxkG2Wcqo-dHM2c2lYZGsG3GD3ouJz9BJWrFg",
+    "lastSeen": "2026-06-21T18:26:16.246Z",
+    "lastWrite": "2026-06-21T18:26:16.247Z",
+    "thingToken": "XWGcFRuSj3AhSmWaDxbYXsd6EWvezybyIDTiAC0aBC0",
+    "description": {
+      "name": "Centre Telecom. i Tecnologies de la Informació (CTTI)-HOS165",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:28.325Z",
+    "tags": [
+      {
+        "_id": "hos165",
+        "name": "HOS165",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "B4fTOBmHAarYHxdBXOPfx_SCL11nd-V60MqYLE_yte4",
+    "lastSeen": "2026-06-21T18:26:16.234Z",
+    "lastWrite": "2026-06-21T18:26:16.234Z",
+    "thingToken": "9EUkCtwBJ8d9imrldLEhDu4t03doBJ5M0tV9Lm-oO6A",
+    "description": {
+      "name": "HOS040 Esc. Bernat Metge",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:19.085Z",
+    "tags": [
+      {
+        "_id": "hos040",
+        "name": "HOS040",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "jZrD8CV3_jUNeJhsqU17sl_GwfcJS4bPskkQVG64R9Y",
+    "lastSeen": "2026-06-21T18:26:14.450Z",
+    "lastWrite": "2026-06-21T18:26:14.451Z",
+    "thingToken": "2rB1nHXh-QXbrce_PZ3WDyEp-b2Oz2Es_ol6lHfwSkw",
+    "description": {
+      "name": "Bellvitge-HOS073",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:24:19.791Z",
+    "tags": [
+      {
+        "_id": "hos073",
+        "name": "HOS073",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "6rii4a3l__VbAz_q7-zBezEn2lmq2uhRIKB4GPiHEN0",
+    "lastSeen": "2026-06-21T18:26:14.443Z",
+    "lastWrite": "2026-06-21T18:26:14.443Z",
+    "thingToken": "zFz_7HBUY3zcxdL1IrFM0b24_vKPpEVvpGJmlgLs56A",
+    "description": {
+      "name": "HOS051 Esc. M. d'E. de Bellvitge",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:30.951Z",
+    "tags": [
+      {
+        "_id": "hos051",
+        "name": "HOS051",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "SE05zjj75FXmfGsyTy5ZeNesTGPaRM1zQvqk3ryN1ag",
+    "lastSeen": "2026-06-21T18:26:14.405Z",
+    "lastWrite": "2026-06-21T18:26:14.405Z",
+    "thingToken": "R9ZSqmFhe7HHCUbo9BE3yKb26UvQ7OwAgKl_F_4tMIk",
+    "description": {
+      "name": "HOS033 Regidoria Districte I",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:18.908Z",
+    "tags": [
+      {
+        "_id": "hos033",
+        "name": "HOS033",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "fOxotlKyQgtdZSujyUJhXTuc3GTXFkWzwLhOP5wxJNg",
+    "lastSeen": "2026-06-21T18:26:14.399Z",
+    "lastWrite": "2026-06-21T18:26:14.399Z",
+    "thingToken": "pXhKAmm5tX3gNAcs9nVxH2A3xqyU4c0PT7YYY2PkR_0",
+    "description": {
+      "name": "Ikea-HOS095",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:22.802Z",
+    "tags": [
+      {
+        "_id": "hos095",
+        "name": "HOS095",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "Sk4Hb8WO9Udshz6t41CvtNWqk9xyjWYEzPy6e64u-NA",
+    "lastSeen": "2026-06-21T18:26:14.393Z",
+    "lastWrite": "2026-06-21T18:26:14.393Z",
+    "thingToken": "ytWZundOaccvpz7SCNSiVKmgNA21h-P7GObuTfuXYEw",
+    "description": {
+      "name": "HOS136 Residencia Els Alps",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:29.885Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos136",
+        "name": "HOS136",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "yOtWrTuh1tkCSCdJ0gMEHkzCE7xAEjVEZcvjM9olhGY",
+    "lastSeen": "2026-06-21T18:26:14.383Z",
+    "lastWrite": "2026-06-21T18:26:14.383Z",
+    "thingToken": "eVorLt0J08qk7Pt-W3hJoi6sTJTHHrLd2HtEJQ9VPck",
+    "description": {
+      "name": "HOS038 Esc. Busquets i Punset",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:21.851Z",
+    "tags": [
+      {
+        "_id": "hos038",
+        "name": "HOS038",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "UIi7XCUR96oR4wFgfDK9lZIcEUk7Cq6KcRpBzJcwGfY",
+    "lastSeen": "2026-06-21T18:26:13.546Z",
+    "lastWrite": "2026-06-21T18:26:13.546Z",
+    "thingToken": "LESJy7RYeV5NYNRyvycBtTk6rm5SM4w5xpa7Do4hLWA",
+    "description": {
+      "name": "Pubilla Cases (L5)-HOS085",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:24:19.426Z",
+    "tags": [
+      {
+        "_id": "hos085",
+        "name": "HOS085",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "Nw7MT8SNfVoSy7vM28Z_2Dp4FCn7iHCD9BBneoktMz0",
+    "lastSeen": "2026-06-21T18:26:12.805Z",
+    "lastWrite": "2026-06-21T18:26:12.806Z",
+    "thingToken": "cqZOAw0oUI5TuE3TW1CyadfJAXjN1yCQx2e3jgURtUk",
+    "description": {
+      "name": "Edificio de viviendas C. Prat-HOS162",
+      "geo": {
+        "long": 2.0980672216451253,
+        "lat": 41.32949515298887
+      }
+    },
+    "createdAt": "2026-06-08T12:04:22.174Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos162",
+        "name": "HOS162",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "CWWGoVfNxxUWnmfZhJizMp-8spcsHhkJmKIPqS6fpSg",
+    "lastSeen": "2026-06-21T18:26:12.795Z",
+    "lastWrite": "2026-06-21T18:26:12.795Z",
+    "thingToken": "y2sH8HR9MoWACbgWEBSRtXHrx20FpMrH3PJ5jzhOehc",
+    "description": {
+      "name": "HOS068 Palauet Can Buxeres",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:24.235Z",
+    "tags": [
+      {
+        "_id": "hos068",
+        "name": "HOS068",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "eum45HkhmAzOl17fUJjFRNZO6fHNdIOpu-AvrAKW9bo",
+    "lastSeen": "2026-06-21T18:26:12.788Z",
+    "lastWrite": "2026-06-21T18:26:12.788Z",
+    "thingToken": "RIQqhCYwcEimb8Ivf4nlMkOD84Krsxlvmjq2nDLCJrc",
+    "description": {
+      "name": "HOS153 Institut Can Vilumara",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:23.458Z",
+    "tags": [
+      {
+        "_id": "hos153",
+        "name": "HOS153",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "5rwJWu4AA0FSgk70wKKdlDR_mINYFAUO7uFy3Mpvo9k",
+    "lastSeen": "2026-06-21T18:26:12.163Z",
+    "lastWrite": "2026-06-21T18:26:12.163Z",
+    "thingToken": "ZVRciNIcYBPjSxwdfFXPhbZ2ZspiTbikP6VVCNMAWnw",
+    "description": {
+      "name": "HOS003 Aj L'H-Ed. Girona",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:30.115Z",
+    "tags": [
+      {
+        "_id": "hos003",
+        "name": "HOS003",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "BqWmTXz0-s8w1gn6n0zWwbIv44C6vpV96pwgfe4EX2Q",
+    "lastSeen": "2026-06-21T18:26:12.158Z",
+    "lastWrite": "2026-06-21T18:26:12.158Z",
+    "thingToken": "SQzOqc8U98sf1NiqM8QD96OlBvfIRgdjeHvA0r6rXls",
+    "description": {
+      "name": "HOS154 Institut Jaume Botey",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:24.282Z",
+    "tags": [
+      {
+        "_id": "hos154",
+        "name": "HOS154",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "oUSOoyL3jfdfaGp1nuza_ghMVwiy7w_zJvf3MP42lNw",
+    "lastSeen": "2026-06-21T18:26:12.142Z",
+    "lastWrite": "2026-06-21T18:26:12.142Z",
+    "thingToken": "4rAFOcTUcOiEuN54S5aTpO6-i8VPhzHv6vCqn_K8rKI",
+    "description": {
+      "name": "HOS133 Ermita de Santa Eulàlia",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:23.968Z",
+    "tags": [
+      {
+        "_id": "hos133",
+        "name": "HOS133",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "KcgPUNMgl8jFIOu0VMDYFTNue8RHvCh4PNEaQ_cLqzQ",
+    "lastSeen": "2026-06-21T18:26:11.802Z",
+    "lastWrite": "2026-06-21T18:26:11.802Z",
+    "thingToken": "__AROZbavIwOZ9I3wHrYJUMv0b4MqYUfNsMmGAxXsA4",
+    "description": {
+      "name": "HOS027 A. B. B. S. - Dte. VI",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:20.044Z",
+    "tags": [
+      {
+        "_id": "hos027",
+        "name": "HOS027",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "3zbexS0ASghMk_Ub8WrjImVVb2ao3Ky0s0_50a3ql_k",
+    "lastSeen": "2026-06-21T18:26:10.248Z",
+    "lastWrite": "2026-06-21T18:26:10.248Z",
+    "thingToken": "SGmSZYnJOPX2OWTR1bQZ_alIMtT83SEPNeiB72tSZqs",
+    "description": {
+      "name": "Can Tries Gornal (L9)-HOS087",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:28.916Z",
+    "tags": [
+      {
+        "_id": "hos087",
+        "name": "HOS087",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "pi4nHPDNi7HrjPf9pnlwsB02-kCBKRU-1qhE7S17b08",
+    "lastSeen": "2026-06-21T18:26:10.240Z",
+    "lastWrite": "2026-06-21T18:26:10.240Z",
+    "thingToken": "KsrstMln1E90G5-m8QwpfP3iRUWAIPEbqFwAr2oKbFU",
+    "description": {
+      "name": "HOS004 CEMFO",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:27.638Z",
+    "tags": [
+      {
+        "_id": "hos004",
+        "name": "HOS004",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "PND5-aQYl20aDbfAb-3aglA0eI5TfoCMLurho6PMStM",
+    "lastSeen": "2026-06-21T18:26:10.234Z",
+    "lastWrite": "2026-06-21T18:26:10.234Z",
+    "thingToken": "ydvrTdLsBvTOUEUuGVKBGJUdoDJ2jrxPkBQ-h2AU36s",
+    "description": {
+      "name": "HOS117 Mercat Merca-2 Bellvitge",
+      "geo": {
+        "long": 2.1103918103702894,
+        "lat": 41.35100929689533
+      }
+    },
+    "createdAt": "2026-06-08T12:14:22.820Z",
+    "tags": [
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos117",
+        "name": "HOS117",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "Ca-mWaj_WEa1qvtwodVFLl6QVGrfCO96bGcucTKFkcE",
+    "lastSeen": "2026-06-21T18:26:10.233Z",
+    "lastWrite": "2026-06-21T18:26:10.233Z",
+    "thingToken": "TwpZP4lRrnsX-8buMQd43UrSgNnt7AtpCTKtFkMgbiI",
+    "description": {
+      "name": "HOS143 Institut Bellvitge",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:25.641Z",
+    "tags": [
+      {
+        "_id": "hos143",
+        "name": "HOS143",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "1eePmmCoEnpV_PgVBXTy974AnOUMGvYk7qJCxJSlMOY",
+    "lastSeen": "2026-06-21T18:26:10.219Z",
+    "lastWrite": "2026-06-21T18:26:10.220Z",
+    "thingToken": "mBnHmgVd75t7Pz0U5iSRzTISn9uSkz1TrUA4ApIzhu8",
+    "description": {
+      "name": "HOS115 P. M. Centre",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:23.897Z",
+    "tags": [
+      {
+        "_id": "hos115",
+        "name": "HOS115",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "eRTsfIjVtuyuFvEGaXxxOjFu-6frvqLl5vZLrB4iHmc",
+    "lastSeen": "2026-06-21T18:26:10.213Z",
+    "lastWrite": "2026-06-21T18:26:10.213Z",
+    "thingToken": "bXrbycqKZOTGhk3OXmwf3jcPsNOGrr2z2wyplxY4PBs",
+    "description": {
+      "name": "HOS152 Institut Torras i Bages",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:29.636Z",
+    "tags": [
+      {
+        "_id": "hos152",
+        "name": "HOS152",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "KzI1G17Qs91y-P_Hyc26ULpHIlogstzl0qjv17scyYs",
+    "lastSeen": "2026-06-21T18:26:10.200Z",
+    "lastWrite": "2026-06-21T18:26:10.200Z",
+    "thingToken": "56kPVCtyijti6J038WAM5eXjhFsr8hSRGtQ0ik8U-X0",
+    "description": {
+      "name": "Bellvitge (L1)-HOS083",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:18.156Z",
+    "tags": [
+      {
+        "_id": "hos083",
+        "name": "HOS083",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "jY-13mHxzxEjDklffoXlWFbrkQfYHRCxWiYM_93zF6I",
+    "lastSeen": "2026-06-21T18:26:10.197Z",
+    "lastWrite": "2026-06-21T18:26:10.197Z",
+    "thingToken": "b884iNflOq2Wgyi4KpTLR10Zu3QuYQeoRY9uV2pazjM",
+    "description": {
+      "name": "Collblanc (L5)-HOS075",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:29.543Z",
+    "tags": [
+      {
+        "_id": "hos075",
+        "name": "HOS075",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "iGNjQ5d6gTXEZ2C1MroGUUqTwkUlgch0yz_uP-4pVxk",
+    "lastSeen": "2026-06-21T18:26:10.193Z",
+    "lastWrite": "2026-06-21T18:26:10.193Z",
+    "thingToken": "noiSUpXjdcdVUpXE-FH67ymTDobsha5hewSXlI88DIw",
+    "description": {
+      "name": "HOS067 Esc. Sant Josep - El Pi",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:22.407Z",
+    "tags": [
+      {
+        "_id": "hos067",
+        "name": "HOS067",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "hAY-YDmdEVvKSbJuBGvBZ8vNX-dC1Ki4gLINTJ2SA_Q",
+    "lastSeen": "2026-06-21T18:26:10.188Z",
+    "lastWrite": "2026-06-21T18:26:10.188Z",
+    "thingToken": "IGg3no5h5XzezTHQAKQiYuH1o6N-TDYFI-MEs8_Xfes",
+    "description": {
+      "name": "Hospital General de L'Hospitalet-HOS032",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:21.315Z",
+    "tags": [
+      {
+        "_id": "hospital",
+        "name": "HOSPITAL",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "5_V2vFjtBW1_IMcrDhbG6Oo0LGBIn3yDtDoW7Lmi8r8",
+    "lastSeen": "2026-06-21T18:26:09.690Z",
+    "lastWrite": "2026-06-21T18:26:09.690Z",
+    "thingToken": "-YmtRR1v0comS_r8m7u8C-OBcBwl51C-_2gCGcB4r6E",
+    "description": {
+      "name": "Centre d'Atenció Primària Gornal (dte. VI)-HOS017",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:21.564Z",
+    "tags": [
+      {
+        "_id": "hos017",
+        "name": "HOS017",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "Ng1YcGm5xawuRq54z6bbj_4BmUpriaJHJfDP80oqToQ",
+    "lastSeen": "2026-06-21T18:26:08.496Z",
+    "lastWrite": "2026-06-21T18:26:08.496Z",
+    "thingToken": "kfrgASd5IA6YBJ1LJbCUddxaSO4l-h5mnyNXUhXlmKo",
+    "description": {
+      "name": "HOS037 Dipòsit Parc de la serp",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:27.435Z",
+    "tags": [
+      {
+        "_id": "hos037",
+        "name": "HOS037",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "na28uWraDMy0uP7pl2vui-aOwaxiZpDRqJVPE3COBCE",
+    "lastSeen": "2026-06-21T18:26:08.319Z",
+    "lastWrite": "2026-06-21T18:26:08.319Z",
+    "thingToken": "KYZ5HkuFdVLk1DjfStpY8rkJsjV5SxYUSMKX3Lgi2W4",
+    "description": {
+      "name": "HOS044 Esc. Gornal",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:22.209Z",
+    "tags": [
+      {
+        "_id": "hos044",
+        "name": "HOS044",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "vtuEc0cnqL2YqutJ3NS9qId4b4jUmobrXZMQy6fK3tw",
+    "lastSeen": "2026-06-21T18:26:08.141Z",
+    "lastWrite": "2026-06-21T18:26:08.141Z",
+    "thingToken": "SuWbsZr_5xHi7r1KYeWu_WCvLqpfSqhKsd9K3ED691E",
+    "description": {
+      "name": "L'Hospitalet de Llogregat-HOS072",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:29.732Z",
+    "tags": [
+      {
+        "_id": "hos072",
+        "name": "HOS072",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "yEnt8eXhKcFLIPZXINjgYofzygsKHH92uGrO-m_O9xM",
+    "lastSeen": "2026-06-21T18:26:08.134Z",
+    "lastWrite": "2026-06-21T18:26:08.134Z",
+    "thingToken": "P2rLsoof9OsYvIG73PHHozbMGbhkeYEayVW7EZWPpik",
+    "description": {
+      "name": "HOS006 Cal Gotlla",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:24.026Z",
+    "tags": [
+      {
+        "_id": "hos006",
+        "name": "HOS006",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "6GZgZTAwPRWdJ6InU68lUdUutf_2brMg3sgIRXyiZz0",
+    "lastSeen": "2026-06-21T18:26:07.636Z",
+    "lastWrite": "2026-06-21T18:26:07.636Z",
+    "thingToken": "EOxuf60x6QX6H57kiK6-FgBjNP9VsELM-NXDvKb5koo",
+    "description": {
+      "name": "Florida (L1)-HOS077",
+      "geo": {
+        "long": 2.1100162680419356,
+        "lat": 41.36846190235389
+      }
+    },
+    "createdAt": "2026-06-08T12:04:23.068Z",
+    "tags": [
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos077",
+        "name": "HOS077",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "57mrTddz6zOOKX8Z_zFVfQogzkzo9Ihvqx2-uWovoZ8",
+    "lastSeen": "2026-06-21T18:26:07.127Z",
+    "lastWrite": "2026-06-21T18:26:07.127Z",
+    "thingToken": "fMDQDnEwQN0V_EqIxerd3qpBFV5JSi2DBRlmJMrdN_g",
+    "description": {
+      "name": "HOS064 Esc. Puig i Gairalt",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:22.647Z",
+    "tags": [
+      {
+        "_id": "hos064",
+        "name": "HOS064",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "KU2dlbJSupV5RLodHcDLek3TWDRqSbPHyMi_fxxlv2E",
+    "lastSeen": "2026-06-21T18:26:06.535Z",
+    "lastWrite": "2026-06-21T18:26:06.535Z",
+    "thingToken": "62zgPWzDB2ebfDR4V5DQ_GxCwQqF89pKG1AYwwGEVDc",
+    "description": {
+      "name": "HOS049 Esc. La Marina",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:23.617Z",
+    "tags": [
+      {
+        "_id": "hos049",
+        "name": "HOS049",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "YUZKYF6P7CKQcGOsSy9s0dCuE25-FRikmEHhwjUoHeg",
+    "lastSeen": "2026-06-21T18:26:06.529Z",
+    "lastWrite": "2026-06-21T18:26:06.529Z",
+    "thingToken": "auoKiS-l-i66Ln_88fmUQhpi3GQNtmq5pm9whd5Tt0o",
+    "description": {
+      "name": "Unifamiliar C. Ebre-HOS163",
+      "geo": {
+        "long": 2.102366980926833,
+        "lat": 41.35995628917471
+      }
+    },
+    "createdAt": "2026-06-08T12:14:23.436Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos163",
+        "name": "HOS163",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "-L0gWEUk47Nz3DEh-eRqcUqNzEv5TsfhEbwzkXZxizA",
+    "lastSeen": "2026-06-21T18:26:06.135Z",
+    "lastWrite": "2026-06-21T18:26:06.135Z",
+    "thingToken": "4XzDzCfk5M_zncgUmvQVe9Qb-3fCdkwNFyUYajtpGEc",
+    "description": {
+      "name": "HOS002 Aj L'H-Ed. Migdia",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:20.766Z",
+    "tags": [
+      {
+        "_id": "hos002",
+        "name": "HOS002",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "NTu7csrQJF2w5qm0cPcZPqJsQbmB7zijj0UIyStXtxQ",
+    "lastSeen": "2026-06-21T18:26:06.122Z",
+    "lastWrite": "2026-06-21T18:26:06.122Z",
+    "thingToken": "Q9HLx10gTmLtixCSNlELIcILG6d_qfG46uoBEaTbJig",
+    "description": {
+      "name": "HOS146 Institut Europa",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:30.357Z",
+    "tags": [
+      {
+        "_id": "hos146",
+        "name": "HOS146",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "G47hVoW5Xq53ksUx11MCg_5VPZuSaor_k95mPDIDigY",
+    "lastSeen": "2026-06-21T18:26:06.118Z",
+    "lastWrite": "2026-06-21T18:26:06.118Z",
+    "thingToken": "dDQQwgjn7uOZ2O9moSWyJde3OlnSCDocaSGNu2laOLg",
+    "description": {
+      "name": "HOS128 Edificio PUIG",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:21.824Z",
+    "tags": [
+      {
+        "_id": "hos128",
+        "name": "HOS128",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "KlEuLdnDVx2A3A4BZsuFoaYd3Nx6rEV1S1c-5uzqcNk",
+    "lastSeen": "2026-06-21T18:26:06.104Z",
+    "lastWrite": "2026-06-21T18:26:06.104Z",
+    "thingToken": "rR0fWIzk6FL_7aPeySEyH1eZWpA9Qkj06sCJWaSCQCI",
+    "description": {
+      "name": "HOS147 Institut Mercè Rodoreda",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:24.417Z",
+    "tags": [
+      {
+        "_id": "hos147",
+        "name": "HOS147",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "os4v-EYboPkAxEPld_PPRuy9FPZwr_08-11bg6XjrwU",
+    "lastSeen": "2026-06-21T18:26:06.100Z",
+    "lastWrite": "2026-06-21T18:26:06.100Z",
+    "thingToken": "7TVocVMbsCsuYmO8QFK6GS-9Rk-O-WeXbRKsP3WGBBQ",
+    "description": {
+      "name": "HOS039 Esc. Ausias March",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:20.162Z",
+    "tags": [
+      {
+        "_id": "hos039",
+        "name": "HOS039",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "9lqZ0Vh56dAhw0Fc-Lpylpgy9lDA73X4q9NJQtfdFqk",
+    "lastSeen": "2026-06-21T18:26:06.088Z",
+    "lastWrite": "2026-06-21T18:26:06.088Z",
+    "thingToken": "z2ag-FI8WAy4M-BdrMu9PIMCW3469oFNDPpA_HdT9aw",
+    "description": {
+      "name": "Europa Fira-HOS091",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:27.478Z",
+    "tags": [
+      {
+        "_id": "hos091",
+        "name": "HOS091",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ObrmI6z-eTOgLfWqaFFs4nNV18xX5hePrX8hP_qM8B0",
+    "lastSeen": "2026-06-21T18:26:06.080Z",
+    "lastWrite": "2026-06-21T18:26:06.080Z",
+    "thingToken": "sIxd11KQV9apx1YGCddWHWEmD4E3MgaF-gbEs-pYJXE",
+    "description": {
+      "name": "HOS099 Esc. Br. Patufet",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:23.721Z",
+    "tags": [
+      {
+        "_id": "hos099",
+        "name": "HOS099",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "3USxhI6PX61zJu_x6mKHCJIHPMtGJucYxASAaqI3uJk",
+    "lastSeen": "2026-06-21T18:26:05.955Z",
+    "lastWrite": "2026-06-21T18:26:05.955Z",
+    "thingToken": "WF3ChXwmVzGFRFflOvlQ8y6s3c1Fpsv3sAKkEzAm2_w",
+    "description": {
+      "name": "Gornal-HOS092",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:24.053Z",
+    "tags": [
+      {
+        "_id": "hos092",
+        "name": "HOS092",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "XBrdJetTxkUd5j2Ll-y-PANDTIcCVA-QKmpJ3vXIksk",
+    "lastSeen": "2026-06-21T18:26:05.040Z",
+    "lastWrite": "2026-06-21T18:26:05.040Z",
+    "thingToken": "jjyKm38n272DVPO4YvQpre6quuHooGRDTM_PirFHRqA",
+    "description": {
+      "name": "HOS015 CGG Santa Eulalia",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:23.555Z",
+    "tags": [
+      {
+        "_id": "hos015",
+        "name": "HOS015",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "k8Q6gyE26IvkD-akoLlloF2PvXbf_n20pPANR21pZ4E",
+    "lastSeen": "2026-06-21T18:26:04.156Z",
+    "lastWrite": "2026-06-21T18:26:04.156Z",
+    "thingToken": "TbgsH0YSRPnBPXy4bsVCoJsc_kG0_Fu0tAxzG_M4Wos",
+    "description": {
+      "name": "HOS127 Museu Can Riera",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:30.312Z",
+    "tags": [
+      {
+        "_id": "hos127",
+        "name": "HOS127",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "GmWpB1wUNrsFoCWyLO2K7MDIh5EutvXYL3JfABlcwog",
+    "lastSeen": "2026-06-21T18:26:04.144Z",
+    "lastWrite": "2026-06-21T18:26:04.144Z",
+    "thingToken": "byDnAvn28c1vSU1H3e8b-ZvcKDOil08KsCncXAaBJWw",
+    "description": {
+      "name": "HOS118 CGG la Ermita",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:34:17.277Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos118",
+        "name": "HOS118",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "sWmQVtIPKsGseI6dJJ6HEwW9DpBpEZMlVQu-j8QZarQ",
+    "lastSeen": "2026-06-21T18:26:04.125Z",
+    "lastWrite": "2026-06-21T18:26:04.125Z",
+    "thingToken": "bsCVfuM4YSGUKQCtSR6vrzWcaY6-6UZeiPBTXFbgLws",
+    "description": {
+      "name": "HOS070 Ca n'Arús",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:17.933Z",
+    "tags": [
+      {
+        "_id": "hos070",
+        "name": "HOS070",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "-b4hzEEpobX6AWX-0HUxVuvvfPzxhBxtABbCg8OFXSo",
+    "lastSeen": "2026-06-21T18:26:04.112Z",
+    "lastWrite": "2026-06-21T18:26:04.112Z",
+    "thingToken": "oRp2-H0KXpLnR7a9KLajt5x4zmT8c5UeaRqCXJ4dMoQ",
+    "description": {
+      "name": "Fira (L9)-HOS074",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:30.812Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos074",
+        "name": "HOS074",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "8ldejb8scyl8DcZgdhgQRk1V39nFa-JW5m0VyRvxJWo",
+    "lastSeen": "2026-06-21T18:26:03.719Z",
+    "lastWrite": "2026-06-21T18:26:03.720Z",
+    "thingToken": "PKFxKVFVxWYgxVytv8t_5g5WgmP0q-iSeDjHcnXeYh0",
+    "description": {
+      "name": "HOS013 CGG Sanfeliu",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:22.021Z",
+    "tags": [
+      {
+        "_id": "hos013",
+        "name": "HOS013",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "Us8qBfTaDqzIVokrcEVuPJmcnud7qJp2cgbpdTYV5Uk",
+    "lastSeen": "2026-06-21T18:26:03.683Z",
+    "lastWrite": "2026-06-21T18:26:03.683Z",
+    "thingToken": "QNPHGBp07qWZfP_yfdIvENbLFR1PD-0FkHs__XnWG74",
+    "description": {
+      "name": "HOS125 Museu Casa Espanya",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:20.942Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos125",
+        "name": "HOS125",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "EJIF_NsA2LPwUurJmBHs71SYWjdtmep_Gh5AqM7ni5o",
+    "lastSeen": "2026-06-21T18:26:03.664Z",
+    "lastWrite": "2026-06-21T18:26:03.665Z",
+    "thingToken": "6HceJdt8A3BVS4Qc71HWFnUiUAqoriq1ludqIwj3kIQ",
+    "description": {
+      "name": "Centre d'Atenció Primària Florida (dte. IV)-HOS019",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:21.731Z",
+    "tags": [
+      {
+        "_id": "hos019",
+        "name": "HOS019",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "52sjIY3izpe-97wS8ebbcRpazx5IbQout3DNpbKeoP8",
+    "lastSeen": "2026-06-21T18:26:02.743Z",
+    "lastWrite": "2026-06-21T18:26:02.743Z",
+    "thingToken": "W4roVGh6qWcKZI_ElP215U8u9B9gTsv6TXrwXegbjwg",
+    "description": {
+      "name": "IFP (Innovación en Formación Profesional)-HOS140",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:22.023Z",
+    "tags": [
+      {
+        "_id": "hos140",
+        "name": "HOS140",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "qWPGcGdeQH_kxOR_Jab2HXwUY6DX_KYNeA_LP1Jv9eo",
+    "lastSeen": "2026-06-21T18:26:02.359Z",
+    "lastWrite": "2026-06-21T18:26:02.359Z",
+    "thingToken": "WQ1Bm3SfqRS3uLwEFRWDiZsNiV5_SH3epQ0r2u9jKeM",
+    "description": {
+      "name": "HOS066 Esc. Ramon Muntaner",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:30.909Z",
+    "tags": [
+      {
+        "_id": "hos066",
+        "name": "HOS066",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "o6TTg2fcxvfnIiduGWAcweyZtANtP3EWeMChw_VoWig",
+    "lastSeen": "2026-06-21T18:26:02.106Z",
+    "lastWrite": "2026-06-21T18:26:02.106Z",
+    "thingToken": "eHGD6Qh-ivn9oUHHn-SQETUXWzXY_6RJYGYPO2KGO1k",
+    "description": {
+      "name": "HOS007 Biblioteca Can Sumarro",
+      "geo": {
+        "long": 2.096687154547911,
+        "lat": 41.36034580946075
+      }
+    },
+    "createdAt": "2026-06-08T12:04:28.289Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos007",
+        "name": "HOS007",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "yeVQHi6hqhgkM_FCrCtRZwxI7bedlRO3WcqUrYN4coE",
+    "lastSeen": "2026-06-21T18:26:02.072Z",
+    "lastWrite": "2026-06-21T18:26:02.072Z",
+    "thingToken": "p4XIEdIS0oFs8frzl3gmI94VlOM30Nf7cGdA9XeIOns",
+    "description": {
+      "name": "Centre d'Atenció Primària Pura Fernández-HOS100",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:23.205Z",
+    "tags": [
+      {
+        "_id": "hos100",
+        "name": "HOS100",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "IHYatGEcld9cEABUywt8eNj-phq5B0Lki_vAQFE_EPc",
+    "lastSeen": "2026-06-21T18:26:02.062Z",
+    "lastWrite": "2026-06-21T18:26:02.062Z",
+    "thingToken": "OGjn-nHvDdg04RL53oZiJUdrO59qdIRg54OPQHkPWdY",
+    "description": {
+      "name": "HOS123 CGG Provençana",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:20.812Z",
+    "tags": [
+      {
+        "_id": "hos123",
+        "name": "HOS123",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "WnyjQ5dKNNDWOH_X9AiyXhreuWQMzlCdiKhmod-EE8U",
+    "lastSeen": "2026-06-21T18:26:01.764Z",
+    "lastWrite": "2026-06-21T18:26:01.764Z",
+    "thingToken": "PoqJbg4HzlmTf1M_XH-O6-4t10f4HuJRjuUlNFpNUmg",
+    "description": {
+      "name": "HOS014 CGG de la Torrassa",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:34:17.373Z",
+    "tags": [
+      {
+        "_id": "hos014",
+        "name": "HOS014",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "DbtIFZr2ag62_5tKRoMzoK-2aQpizPxO0tcydk6nTeY",
+    "lastSeen": "2026-06-21T18:26:01.749Z",
+    "lastWrite": "2026-06-21T18:26:01.749Z",
+    "thingToken": "ZUH9E_VXTo6k189ohDVPDSQEQvQwYZyYFpdqF5nYlHE",
+    "description": {
+      "name": "HOS097 Esc. Br. Garabatos",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:24.657Z",
+    "tags": [
+      {
+        "_id": "hos097",
+        "name": "HOS097",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "VeCXAY9viVJb5arBLS9G30Alj6tMxaQDNZMLPI35B_8",
+    "lastSeen": "2026-06-21T18:26:01.308Z",
+    "lastWrite": "2026-06-21T18:26:01.308Z",
+    "thingToken": "R95RgoFSi6Q261cw3llwwZWVhSZRAqDCoejr2Of6LQY",
+    "description": {
+      "name": "HOS010 Bibl. i esc. pl. Europa",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:26.173Z",
+    "tags": [
+      {
+        "_id": "hos010",
+        "name": "HOS010",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "jS2DQ_rByb9CMKV0qKmnEj45FY2m1FTVgKm8qZkQEBI",
+    "lastSeen": "2026-06-21T18:25:52.744Z",
+    "lastWrite": "2026-06-21T18:25:52.744Z",
+    "thingToken": "L1PsuPlGVClbcxwEINWavBBdV5vYQOh4_bpTkV1meFY",
+    "description": {
+      "name": "HOS046 Esc. Joaquim Ruyra",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:26.720Z",
+    "tags": [
+      {
+        "_id": "hos046",
+        "name": "HOS046",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "i6V1cozqMpg_lAM6iNnJTVuF5mEzKrQEjfCYtBi7VsM",
+    "lastSeen": "2026-06-21T18:25:52.742Z",
+    "lastWrite": "2026-06-21T18:25:52.742Z",
+    "thingToken": "F_qi67DN_NRGMuYtKkEp2WM1MxGxss8hZ87qaUpSJyc",
+    "description": {
+      "name": "Can Serra (L1)-HOS079",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:23.439Z",
+    "tags": [
+      {
+        "_id": "hos079",
+        "name": "HOS079",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "765xFXhu7RZPN0k8dJeMNODqtHxVcTqf6I7Zto4GvWo",
+    "lastSeen": "2026-06-21T18:25:52.731Z",
+    "lastWrite": "2026-06-21T18:25:52.731Z",
+    "thingToken": "k4A-aa6led3dDduVzDRsuU1jRweP4v_7lLjyzzQG1nQ",
+    "description": {
+      "name": "Can Boixeres (L5)-HOS081",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:20.127Z",
+    "tags": [
+      {
+        "_id": "hos081",
+        "name": "HOS081",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "mh8-6lOsvAKO36_J-a69h8u1GKUXtuxWbhSLIRuCBrU",
+    "lastSeen": "2026-06-21T18:25:52.725Z",
+    "lastWrite": "2026-06-21T18:25:52.725Z",
+    "thingToken": "OzquhUquSgRu7g-18m4LmvckzRl4q6xFSwHOR836bZo",
+    "description": {
+      "name": "HOS063 Esc. Prat de la Manta",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:25.144Z",
+    "tags": [
+      {
+        "_id": "hos063",
+        "name": "HOS063",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "LVA92Sa59tbLE7-bX1KP0J13kzKqV5PiGQLxSima0Os",
+    "lastSeen": "2026-06-21T18:25:51.925Z",
+    "lastWrite": "2026-06-21T18:25:51.925Z",
+    "thingToken": "ybXuceK-qhVLTMQJTPSSeIpHN8-rz7VAORDAOVwhBHk",
+    "description": {
+      "name": "Avinguda Carrilet (L1)-HOS082",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:24:20.167Z",
+    "tags": [
+      {
+        "_id": "hos082",
+        "name": "HOS082",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "pf36rnx029TaiftFR1hwC01UVtE-2cGVRyTQ0R9Ghb4",
+    "lastSeen": "2026-06-21T18:25:51.921Z",
+    "lastWrite": "2026-06-21T18:25:51.921Z",
+    "thingToken": "5FsL442grFRwyrpFTX0qpyjIK9F25-VmwT_F2cNOp7M",
+    "description": {
+      "name": "HOS105 Calzedonia",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:18.402Z",
+    "tags": [
+      {
+        "_id": "hos105",
+        "name": "HOS105",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "UUXcF3TYyNnEWirkyvt1uL-GGr_GBaob4xWqx2NmZNg",
+    "lastSeen": "2026-06-21T18:25:51.913Z",
+    "lastWrite": "2026-06-21T18:25:51.913Z",
+    "thingToken": "dyJ1MXNKG1ijv3IeKQN-d1mfNSsBCpSyoSYhhTdKqMw",
+    "description": {
+      "name": "HOS056 Esc. Patufet Sant Jordi",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:29.455Z",
+    "tags": [
+      {
+        "_id": "hos056",
+        "name": "HOS056",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "7Ubsuwjsy0zlpqfdd9Ny9K6xT9UPgpejEaFquFIbwY0",
+    "lastSeen": "2026-06-21T18:25:51.488Z",
+    "lastWrite": "2026-06-21T18:25:51.488Z",
+    "thingToken": "dTOesPpkIhikntXAonhjhViqiHJDetyrBZnkpJD580w",
+    "description": {
+      "name": "Hospital de Bellvitge (L1)-HOS084",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:14:22.023Z",
+    "tags": [
+      {
+        "_id": "hospital",
+        "name": "HOSPITAL",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "umDsyPvYfNhlbgzODlXJi7oeUk_klIXKQx5UJLTKBv8",
+    "lastSeen": "2026-06-21T18:25:51.485Z",
+    "lastWrite": "2026-06-21T18:25:51.485Z",
+    "thingToken": "_DgunihZTmp-8NUhEoQCd4fBOFhKCx9TPgzEJRptDQ0",
+    "description": {
+      "name": "HOS024 Torre Barrina",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:19.992Z",
+    "tags": [
+      {
+        "_id": "hos024",
+        "name": "HOS024",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "xTwgYESR85zEEqCuHeta0Q_to2E_2OBMBaabcsCVjRc",
+    "lastSeen": "2026-06-21T18:25:51.482Z",
+    "lastWrite": "2026-06-21T18:25:51.482Z",
+    "thingToken": "6vb2DI7mbIY136-8t8XTzxebljmV-0W5GXPM72qZ32c",
+    "description": {
+      "name": "Centre comercial Gran Via 2-HOS093",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:29.885Z",
+    "tags": [
+      {
+        "_id": "hos093",
+        "name": "HOS093",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "rxI2_prjin49FKPQKwPKNkzN8Lid9QjQphHUfhIItNs",
+    "lastSeen": "2026-06-21T18:25:51.478Z",
+    "lastWrite": "2026-06-21T18:25:51.479Z",
+    "thingToken": "UoEVCniOlsm66SpPNMQL-SfWs3n2DtaRPlx6tdwoOZ0",
+    "description": {
+      "name": "Torrassa (L1)-HOS076",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:22.543Z",
+    "tags": [
+      {
+        "_id": "hos076",
+        "name": "HOS076",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "KVvvdoS8WZhJTvk4Syq_DlpEqww29Um_E3SNNeVY0pY",
+    "lastSeen": "2026-06-21T18:25:51.476Z",
+    "lastWrite": "2026-06-21T18:25:51.476Z",
+    "thingToken": "gbXRu4WL40WUffwCivm3hDew0hs1MPizCEaCCZTK1YQ",
+    "description": {
+      "name": "HOS110 P. M. Fum d'Estampa",
+      "geo": {
+        "long": 2.114915610371404,
+        "lat": 41.37526699079505
+      }
+    },
+    "createdAt": "2026-06-08T12:14:18.520Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos110",
+        "name": "HOS110",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "GHnKJBRn4NfhUPGdZIW2jsIYz3Ia1OCuf8M3cPyzB9s",
+    "lastSeen": "2026-06-21T18:15:51.492Z",
+    "lastWrite": "2026-06-21T18:15:51.492Z",
+    "thingToken": "AJm0INU-L6qK_ITibqFxtXMaDaqnNdV6bbk5FsTjVh4",
+    "description": {
+      "name": "Residència Collblanc Companys Socials-HOS138",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:24:19.792Z",
+    "tags": [
+      {
+        "_id": "hos138",
+        "name": "HOS138",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "yuhKVpa_zsQkZWKqL23MgJ1Ex4U4YspqwNWGMif3rMg",
+    "lastSeen": "2026-06-21T00:02:31.546Z",
+    "lastWrite": "2026-06-21T00:02:31.546Z",
+    "thingToken": "1mIntHZPydORpcvymc4y7OxJ9O6athA__xNM8yJ7Pww",
+    "description": {
+      "name": "HOS096 Esc. Br. Nova Fortuny",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:04:28.447Z",
+    "tags": [
+      {
+        "_id": "hos096",
+        "name": "HOS096",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "PIVrTsZcxGqNbQ_CDTzJWc5CbBg4BlbLWDDzyuvWt0Q",
+    "thingToken": "X1sw5zjPY0Avb73Se7FPgCAgVCr4l6NDb4HNtYSYfz0",
+    "description": {
+      "name": "Institut Jaume Botey - HOS154",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-29T13:25:49.950Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "O94kfECJCXLblwxnemlDiqubhDmSBFCDb1ld-jKxoWM",
+    "thingToken": "6qj3k1IV2lqMQpaVOLLhCtjamrOP3z4EmMx6N7rPnx0",
+    "description": {
+      "name": "Institut Torras i Bages - HOS152",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-29T13:25:49.778Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos152",
+        "name": "HOS152",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "xqY9SBa3cI05MPC8VnbBtm_1KlIiWYtg9wamzXAp5hI",
+    "thingToken": "1fYfeLHodvDiDSASfnCX73QKmBZgYcx-1-rvr8_MUBM",
+    "description": {
+      "name": "Institut Mercè Rodoreda - HOS147",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-29T13:15:43.275Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos147",
+        "name": "HOS147",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "AinJaftftCaOoVlhkU-BWWub8Y7PPnU6Vf6D9kcSBOc",
+    "thingToken": "tKa8WNqUhVthCn71xDIm-eChr824r5DxEJRLaZE5xjU",
+    "description": {
+      "name": "Institut Europa - HOS146",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-29T13:15:43.041Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "0_q1-J9lPbUJuVTK1LqriL5z_E7AlOvMOBoArEObMvw",
+    "thingToken": "FvuxX2AKhAbFd-yt6oLa02F2xrW-Ec8lSZ3soKbV4C8",
+    "description": {
+      "name": "Institut Bellvitge-HOS143",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-29T13:15:42.985Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "RaUvzmUo615Lw-JN_oqS2278Ff9x266lE4GpfBQw1HI",
+    "thingToken": "x0dui_fut-sZ3aBHFHAr1p9IiiGA5JoNgVeD3TEzoaQ",
+    "description": {
+      "name": "Institut Can Vilumara-HOS153",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-29T13:15:42.874Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos153",
+        "name": "HOS153",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "PaG8c6ZPGk1l5EjJWVs8agUZRD-e6J-teBTlxH1AZpg",
+    "thingToken": "6081NUs6TC9ojTFKNHRK7r5p-PB85vWepZdPDCKz110",
+    "description": {
+      "name": "Residencia Els Alps - HOS136",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-29T13:05:44.294Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos136",
+        "name": "HOS136",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "BV-0oTJPO2bC6TKDXsasmGBkl8wNLokTR3jEntIpz8s",
+    "thingToken": "9Efs1vX6rtbGco4vmBooJpK-iP8RZedxqCzLaBuTyVo",
+    "description": {
+      "name": "Edificio PUIG - HOS128",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-29T13:05:43.955Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "1wwELl69OpUn5GuLGsxVrrUm_FgoCp1oJdsUhx4D_co",
+    "thingToken": "0iejh6yo3GvSd5PCtBOuL06j51152QSFxrrI6I1jt54",
+    "description": {
+      "name": "Ermita de Santa Eulàlia - HOS133",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-29T13:05:43.881Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos133",
+        "name": "HOS133",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "40jAFe7hfJZp7au_r2FQZdL6trpIPi3KELJH01qkPb8",
+    "thingToken": "azWB40jY-FCaaL6FgQnei3Bxy7qw3CwbGu7XI7HWZLw",
+    "description": {
+      "name": "Esc. Rest. El Repartidor - HOS139",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-29T13:05:43.858Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos139",
+        "name": "HOS139",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "EtIUHCkiv0mQ-HqyAlJ5UhToZpYTI__aDV1OAGHMpCw",
+    "thingToken": "wDOA5jR0wHqcO2fhI81iz219_zPz3MJB8BfEdw6u6lA",
+    "description": {
+      "name": "Mercat Merca-2 Bellvitge - HOS117",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-29T13:05:43.791Z",
+    "tags": [
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos117",
+        "name": "HOS117",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "txF9D6j7ovOhaovPlyVqirU0Xo8I4Cs8Jqvnbfy8PLY",
+    "thingToken": "cj__gR0bo-D2KL2ir9WpNEy2Jd2deGio6RWXYovugWY",
+    "description": {
+      "name": "Museu Can Riera - HOS127",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-29T13:05:43.518Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos127",
+        "name": "HOS127",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "wau5yHbsyOLCotYzp0bU4BHybUEee3IeO_gxd_ack6M",
+    "thingToken": "yT_JM1xN1d6TrYjGadrXoetDgEbNweisEg8Sf3YqcmQ",
+    "description": {
+      "name": "P. M. Gornal - HOS130",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-29T13:05:43.295Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos130",
+        "name": "HOS130",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ClkXdU9rseNCOkSXfD8HODG1Axg6V6ZlxMWpm6y9zF0",
+    "thingToken": "WcYdaH7OunwlpIemiaL7syt_pipgOpNWB_EkkgzWY_Q",
+    "description": {
+      "name": "CGG la Ermita - HOS118",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-29T12:55:40.785Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos118",
+        "name": "HOS118",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "W0qKO3at9lka--PKs0y3VSMjrvcnw26msaQm1S1uk1Y",
+    "thingToken": "7HeJGZrOGRRUPn_SQ15FJWKdLU8VeyfpZAUxs_DngEk",
+    "description": {
+      "name": "Museu L'Harmonia - HOS126",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-29T12:55:40.673Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos126",
+        "name": "HOS126",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "opMfszLm2-Zkd7RdAHJvXyVPThJcx7W70u9GdGkwibY",
+    "thingToken": "KW3MqH1d1O7JlUWjJC_jofJ09TfIKalmUJyk-iFu2Ko",
+    "description": {
+      "name": "CGG Provençana - HOS123",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-29T12:55:40.663Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "FKgfJ55pBb8vZA_qPcZ9FkZW5m3OyiTQ1U248-OSJXU",
+    "thingToken": "VspY-HYr2Xx13O5_bVO5JyR-FSj5Twe-Hgq0NQ_4rxg",
+    "description": {
+      "name": "P. M. Centre - HOS115",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-29T12:55:40.614Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos115",
+        "name": "HOS115",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "qZFWGY2CSFs_TnQBNh_1iupqD9b-nny8YjeRXYlvigg",
+    "thingToken": "Med8xuDpBhy8h26VMoEWp1XFzD3X6NCoUl8DM4cbQeU",
+    "description": {
+      "name": "Museu Casa Espanya - HOS125",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-29T12:55:40.395Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos125",
+        "name": "HOS125",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "w96WVuiQvJuZHGFR6uPIjN22VcbXHtkvmeGVJIgp0Go",
+    "thingToken": "TtsgGys_Wa1XZUcciiB-kJiEp4amAKMlfOL6CEYrgCA",
+    "description": {
+      "name": "Calzedonia - HOS105",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-28T14:35:41.679Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos105",
+        "name": "HOS105",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ar4b5UFaCS-Lo_UXRWfRPq9h2UeGRel-zx8Ly5_schk",
+    "thingToken": "J3TpWcq0iwI4q8Pob64RPJJvxX3zcjdjbwd-0OaVbmo",
+    "description": {
+      "name": "P. M. Fum d'Estampa - HOS110",
+      "geo": {
+        "long": 2.114915610371404,
+        "lat": 41.37526699079505
+      }
+    },
+    "createdAt": "2025-10-28T14:25:43.384Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos110",
+        "name": "HOS110",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "wUR4pmSRl96dgsKaSVfzcMNFgUaer5VZwDLcbHMKGao",
+    "thingToken": "szOYyVAhP5cDTuNO0OHt1F-qw7bJVe6zIzsu45wWqwI",
+    "description": {
+      "name": "Esc. Br. Patufet - HOS099",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-28T14:05:41.259Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos099",
+        "name": "HOS099",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "JlpqsC6GBerP9tE4gKwRus0KgXmhus5NNg5pCVK945o",
+    "thingToken": "Ru5XS2Kgm6p8i573B-AFJwA9pTMLT2FcT7m_JgXYbxc",
+    "description": {
+      "name": "Esc. Br. Garabatos-HOS097",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-28T14:05:41.215Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos097",
+        "name": "HOS097",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "r122K4jtficinK3EUGopFOU-HPhgx5bGLGEcqkJcJSA",
+    "thingToken": "SqVeyRWXpjvjnX8qNup6UlTYvFH-8csN7zsPPoz2jsk",
+    "description": {
+      "name": "Esc. Ramon Muntaner - HOS066",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-28T13:55:41.733Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "MO-vyYHWg_ENwBTL00joSBVIHokOpjZwqi5O2QgQMvo",
+    "thingToken": "hLz0T-niqYNt1Grr2NTQc39kAoMxy6Pdb4gewxYJiqo",
+    "description": {
+      "name": "Ca n'Olivé - HOS069",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-28T13:55:41.171Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos069",
+        "name": "HOS069",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "fhwFSX6F8l_T4zHOAraNaXO_wxQjgqd5x-qaOZyv0lc",
+    "thingToken": "GbjVojSUcYk6ZSsWX0-rNZ0tvbVEUGWHqhh8Zh_Et9c",
+    "description": {
+      "name": "Esc. Patufet Sant Jordi - HOS056",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-28T13:55:41.002Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos056",
+        "name": "HOS056",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "xP1oKZ6Tud7VY3o8A5HKjIiPLclJqBKaz9vrqE-0GLI",
+    "thingToken": "9V5NY_9VHRqXL9cKVV88BZM36Y1q84WhzVUMp7y0q1g",
+    "description": {
+      "name": "Esc. Br. Nova Fortuny - HOS096",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-28T13:55:40.839Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "aRTTNXphVC4pKXCoRtnzWtamhAYrImiW2dM1BhJ3VJk",
+    "thingToken": "SOjo7rPKAPvkxNidko2vbqTQeI9aA-GS9nrbdIFhCxU",
+    "description": {
+      "name": "Esc. Sant Josep - El Pi - HOS067",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-28T13:45:48.098Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos067",
+        "name": "HOS067",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "FRMBwICMipgc3xHwvEc4SZBuU2_-3IdeUNQAb0MWrv4",
+    "thingToken": "2mtAOqG4eFOaIoBXEHLppjw67P_VFTwdDFMHN-tjsqU",
+    "description": {
+      "name": "Esc. Pau Sans - HOS058",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-28T13:45:47.647Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos058",
+        "name": "HOS058",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "qyOuA1_EHP5laR9YoGz_f7RYVQRqxPJqsnXQlURJ6tU",
+    "thingToken": "PP6tnSpmacWXfHgLbYNUR95T_HcyYbQ4xG2-zLHX9Bo",
+    "description": {
+      "name": "Palauet Can Buxeres - HOS068",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-28T13:45:47.290Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos068",
+        "name": "HOS068",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "6XkESrHcZBb6Lxb2lb2tTg4aPduNO2GRDhtCdFtpODY",
+    "thingToken": "tA_tFyp2X6Qu2OtGcgWe1V1sS1nsfb4yyGAM-staSNs",
+    "description": {
+      "name": "Esc. Puig i Gairalt - HOS064",
+      "geo": {
+        "long": 2.1068291968777477,
+        "lat": 41.37564228295669
+      }
+    },
+    "createdAt": "2025-10-28T13:45:47.174Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos064",
+        "name": "HOS064",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "OZw_4PIlGmaXS4ekYI4a8S1GE5lYhLO-0iW028nM8W0",
+    "thingToken": "U6p40NW501qbsT96zvQIVShrLNkTvzuzNpseOs3eAbw",
+    "description": {
+      "name": "Esc. Prat de la Manta - HOS063",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-28T13:45:46.944Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos063",
+        "name": "HOS063",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "e_bFfghfsFULGXfx3SYWrUqXgUPQTWBlxmDCHxe6_-M",
+    "thingToken": "ELknAc5q3uIeONRun9lhvV_SFqmUfy04Gp5jY2FW4XY",
+    "description": {
+      "name": "Esc. Pau Vila - HOS059",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-28T13:45:46.903Z",
+    "tags": [
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos059",
+        "name": "HOS059",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "rtP479UxSMafSQ9Y2ScBiqUWBAB49eEutggtiUSxY8k",
+    "thingToken": "x4Acxcn7pVqCVI6PUdKbF96HN8Ci9PQWDEvn17lcEfM",
+    "description": {
+      "name": "Ca n'Arús - HOS070",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-28T13:45:46.899Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos070",
+        "name": "HOS070",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "weRkqBmD0w2vDy8I4L3yGtvGBYoPn4G3r4jg6IXGZqs",
+    "thingToken": "MqhhNBH7lMMM6bXpkVhJHPDCnkh9ZSlnpPLZVkV-y1w",
+    "description": {
+      "name": "Esc. Josep Janes - HOS047",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-28T13:35:45.383Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "iBWGEc_U5rXlaz0XisrfEfAHiOKMYNiy5Zz9iPotf3g",
+    "thingToken": "0T5ivTt1DhoqpMWS34AcnnceEeWbcHn7d5D3p5RMJqY",
+    "description": {
+      "name": "Esc. Màrius Torres - HOS052",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-28T13:35:44.929Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos052",
+        "name": "HOS052",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "BhBJV-5dOwTfD8xcFN3WUuO4arr-_ZIPaWygarP8tcc",
+    "thingToken": "OiIxG4dGqolHDB7e0z2LiHXibrDLPWZQ8kThYtlXcfg",
+    "description": {
+      "name": "Esc. M. d'E. de Bellvitge - HOS051",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-28T13:35:44.335Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos051",
+        "name": "HOS051",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "rWMZkZa1mJ47-aZq4uwt4-Uev9UNwjAZvyTyZlJhyhM",
+    "thingToken": "MQeULeTINt96pUHGP3FWYfz7WQ1IeUO2FDdAl1VF6TE",
+    "description": {
+      "name": "Esc. Gornal - HOS044",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-28T13:35:43.968Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "pgOCOi3SDkmcd4jGe1F7pQwIJTEmQf-ZZQP-CYlxH9E",
+    "thingToken": "q9P5Vv5_x-no696bCfLSJ9FINo2K3aQoe_Cb3iOnhzE",
+    "description": {
+      "name": "Esc. La Marina - HOS049",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-28T13:35:43.726Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos049",
+        "name": "HOS049",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "COINlvOVgEJSvetVBSBFVNuWxCR2oYn9E8ltnEnXNlw",
+    "thingToken": "qhGxemyD908Pvlyr_9gnTo5yu3pmF-aIfJIVobquOIo",
+    "description": {
+      "name": "Esc. Joaquim Ruyra - HOS046",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-28T13:35:43.263Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos046",
+        "name": "HOS046",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "_9JmN5i5tZvjS01kz3pYalGtujyKMULypWeh5ajVwSU",
+    "thingToken": "wCkwZ2fuwBr6t6KvYagCWwUM0R9k9nV4gY7DKpcbIYQ",
+    "description": {
+      "name": "A. B. B. S. - Dte. VI - HOS027",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-23T15:05:44.416Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "xRw3lbd6C7ItX4TTYktGCvvok3JVS7O_5ekQQCBGXTg",
+    "thingToken": "NEoUpDAdlVtEKGqoganfc5UfqjVzKh8NmoVEzveCx-c",
+    "description": {
+      "name": "Esc. Bernat Metge - HOS040",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-23T15:05:44.243Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "KPaDD4R9mP6Z5TQBBWEa7_9EJrm4GYsBLXxEgRWocKE",
+    "thingToken": "dkQyS6OylpZN1trdWL-lgXtsAKME6CBeVUJG1prZnVo",
+    "description": {
+      "name": "Esc. Busquets i Punset - HOS038",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-23T15:05:44.155Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos038",
+        "name": "HOS038",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "HhUpyKrX9UboVQ0_bXC-yFj0_aRrXn1SH_fUjIedj14",
+    "thingToken": "kxjxFVqlZx2uWpxNILJAfQGNDfEJS5zq_8kp3zTxBOI",
+    "description": {
+      "name": "Dipòsit Parc de la serp - HOS037",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-23T15:05:44.081Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos037",
+        "name": "HOS037",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "HXT67TKmToyD44BEjlQUB1NPMOktCDs6oQQQAuoaE_M",
+    "thingToken": "i05V_TfmREH9FvIHcvTWbqczJM2WcUOT11SxXXSTWKk",
+    "description": {
+      "name": "C. M. Ana Díaz Rico - HOS023",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-23T15:05:43.754Z",
+    "tags": [
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos023",
+        "name": "HOS023",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "EgLCWY6NMyRhM_J_Vu1uY76UgSSZAIYaW5iXEjjotEI",
+    "thingToken": "xpdUjTQFEsxcs3KP3LYwwOlaA_NcAoDc2-HwvUyeLto",
+    "description": {
+      "name": "Esc. Ausias March - HOS039",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-23T14:55:43.326Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos039",
+        "name": "HOS039",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ehvk4rMwv-5SINU7pdU6h73KHNpHPeOW5grmSBZThl0",
+    "thingToken": "gs3QbC10dbGnq98sgJll8ua-pZ0nxm0Oq9PGBklR66E",
+    "description": {
+      "name": "Area de Benestar social-HOS028",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-23T14:55:43.275Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos028",
+        "name": "HOS028",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "qOOl2BaLeZQHIJOWQ_ydfzmrYirRiCs2ItEcLEGl73E",
+    "thingToken": "-8ndsfD68RJqa-MRdlTLBREAhxmItkfUlzjvUHWY510",
+    "description": {
+      "name": "Regidoria Districte I - HOS033",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-23T14:55:42.982Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos033",
+        "name": "HOS033",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "oo9Nx4slZ9rfLppb1LvKu2Z-LDjuz58dWoSnZxeurL8",
+    "thingToken": "nfVl0KQfWJURG9ntuJH37Psefm-gkTF36K3e62NKn7c",
+    "description": {
+      "name": "CGG Santa Eulalia - HOS015",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-23T14:55:42.981Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "vHG8K8jk-UEZF3aDquB-qbe8cp-AVKINAMatYQXuv3M",
+    "thingToken": "8v6cPsbBbFTSoYNftxoH4INdfacTOYBTH0194ntQoXw",
+    "description": {
+      "name": "Torre Barrina - HOS024",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-23T14:45:41.503Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos024",
+        "name": "HOS024",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ZKkrlp_w8k56MZmK0fwguyJPj5SxPJ65ISM93FnMV9c",
+    "thingToken": "2e6SHC8CSB5nmY6g7CrDDaVrvGPdp0BduaRNBYqCkM8",
+    "description": {
+      "name": "Aj L'H-Ed. Girona - HOS003",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-23T14:45:41.496Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos003",
+        "name": "HOS003",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "iSYlksb7ygeK_Vqv2b4I4qtY2KPOya_EwcfgdDYGPKw",
+    "thingToken": "ibwVdaBXwR0vyA-BRN_wc0KxnEN0L7Kr613W5BBeniA",
+    "description": {
+      "name": "Aj L'H-Ed. Migdia - HOS002",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-23T14:35:47.285Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos002",
+        "name": "HOS002",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "QqVFcHhNsV7H3VhO-uoBWPNdHSIm1NWE6DKwz4Kjpy0",
+    "thingToken": "ECrFR2ePDuHN8QzNhemYLlHXgpl8I9CrsUhIAgM6Do0",
+    "description": {
+      "name": "Aj L'H-Casa Consistorial - HOS001",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-23T14:35:46.937Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos001",
+        "name": "HOS001",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "Dwl1aiYqrqz-mX4zXXLrU_Dgb4LYQqWzNUGWx2fh_w8",
+    "thingToken": "IzaB2S7hpoO1lcZ043YWzW0k-xwlYWM2-wA-8SMY4L8",
+    "description": {
+      "name": "CGG Sanfeliu-HOS013",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-23T14:35:46.537Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos013",
+        "name": "HOS013",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "pbtd-F-_PZqD8Y2Xl9NM9ZWJd-4P_hIs-jtZfg4CqAw",
+    "thingToken": "Xs10sB13Lhr6MK4K2aqP39U7zEuBSRK6HLo_d_yrAII",
+    "description": {
+      "name": "Cal Gotlla - HOS006",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-23T14:35:46.496Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "IdLKlTCBTy6SutJp7hINaONaff7aqx2oqenQVeHNk14",
+    "thingToken": "vDokvyhOlce4PX7PsWoFEJD19GlDdiDf0cZWt1tMMBw",
+    "description": {
+      "name": "CGG de la Torrassa - HOS014",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-23T14:35:46.479Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ffNia7-XmbuTqxbOiCOFdUY_ewbimdrBMZuqXsboBHg",
+    "thingToken": "js4SvPfnFrvPSeVo-q8Mgdcw0I7BBHcYOX01Xp39ZUo",
+    "description": {
+      "name": "Bibl. i esc. pl. Europa-HOS010",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-23T14:35:46.479Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "no1SvN-afpxp2P3BRGs7U2tRDDmvco7pJ0NyMN1Eonw",
+    "thingToken": "IPKAk-1o7svikH2cjx14L7CsXMwETS2-2H698_hHMRA",
+    "description": {
+      "name": "Edificio Cobalt-HOS005",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-23T14:35:46.463Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos005",
+        "name": "HOS005",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "rgB1KOmuYh5y565DY7Y1WGVnuilmPLIpFbJWigHwRnc",
+    "thingToken": "lwrlYZ5rvCK5rLfwRPfeabuBsBVU7VVKAw872E-y7tU",
+    "description": {
+      "name": "Biblioteca Can Sumarro - HOS007",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-23T14:35:46.453Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos007",
+        "name": "HOS007",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "UHmTi6_9ZJKq3I5MgCUhh_hhN3ypHYevHCd-0xvBWQY",
+    "thingToken": "p2QS3p3b4FEbS7BPUtU1degRu5m8LX0N0-BenKyNmlo",
+    "description": {
+      "name": "CEMFO - HOS004",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-23T14:35:46.136Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos004",
+        "name": "HOS004",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "WwiLAGrvMKy4DNGIZa5KliTOdAs0H2UOzdkV1Ni9uS8",
+    "thingToken": "FRPn40Ql18mqddXEaRIFf-hCek_sgS5oxOzLrBTmXWM",
+    "description": {
+      "name": "Cement. Mun. L'Hospitalet - HOS012",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-23T14:35:45.771Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos012",
+        "name": "HOS012",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "3GfgwUz-CLGZMxVlWNjKwVf7F3Qrhftk95yBbRKd-T0",
+    "thingToken": "N7kuXFH-vb_UQfbDx7MbzlSBT8zeVVJeLUSe_8mt6cY",
+    "description": {
+      "name": "Centre de Rehabilitació Rambla Marina i Servei de Proves - Institut Català de la Salut (dte. VI)-HOS013",
+      "geo": {}
+    },
+    "createdAt": "2025-07-23T00:57:18.548Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "RXLFdl4svJfJ_6PNQxSnkdCbS6Krdj_6mRGlEbrkkdM",
+    "thingToken": "CBZrf-6IMawFDPiuZjW6amD0FB48eDtsAokc4ePdFlY",
+    "description": {
+      "name": "S4E-HOS142",
+      "geo": {
+        "lat": 41.373702546498706,
+        "long": 2.1150761746975526
+      }
+    },
+    "createdAt": "2025-02-12T10:36:52.968Z",
+    "tags": [
+      {
+        "_id": "hos142",
+        "name": "HOS142",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "i4-muLAdKNTN3TBfpbXNZIr3CjHkqJ4j_PyWx6zcHp4",
+    "thingToken": "RV5XbDR5iUok_1PT_Two0zcIj_0DFndQXhpv3sS13O8",
+    "description": {
+      "name": "Jaueme Botey-HOS154",
+      "geo": {
+        "lat": 41.36257733521297,
+        "long": 2.1181158473919517
+      }
+    },
+    "createdAt": "2025-01-29T14:44:18.503Z",
+    "tags": [
+      {
+        "_id": "hos154",
+        "name": "HOS154",
+        "organizationId": 33788
+      },
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "Y0czxDobVeKn0qDfSWNyM7ko69-Hs72fhlCp7V0ktTc",
+    "thingToken": "jV-iINDS1BSRNHBe5eCR2cVN8uDBgyymG9nS8L_sUo4",
+    "description": {
+      "name": "Institut Llobregat (2)-HOS154",
+      "geo": {
+        "lat": 41.36257733521297,
+        "long": 2.1181158473919517
+      }
+    },
+    "createdAt": "2025-01-22T11:31:28.517Z",
+    "tags": [
+      {
+        "_id": "hos154",
+        "name": "HOS154",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "jr_tmwwbANyYUOKmUG72LEPxaDyit19d83H4XrpeNk0",
+    "thingToken": "0nHDZ74TrWNLJSO4Ui2xCgB5d3gc6sGbNSHEMD09nl0",
+    "description": {
+      "name": "Ca n'Olivé-HOS069",
+      "geo": {
+        "lat": 41.36952525205977,
+        "long": 2.094770390538484
+      }
+    },
+    "createdAt": "2025-01-03T05:29:56.941Z",
+    "tags": [
+      {
+        "_id": "hos069",
+        "name": "HOS069",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "MZLtK0Op64oA9vk9VxvFuIhngAYicNhz7wjOnR1-ae0",
+    "thingToken": "8TWPNmbJbn3NVTA3pKQL2BXSuox-RTUGHCO-Xxx1khk",
+    "description": {
+      "name": "Regidoria Districte II-HOS034",
+      "geo": {
+        "lat": 41.370624907348784,
+        "long": 2.121711071906005
+      }
+    },
+    "createdAt": "2024-12-29T02:33:51.501Z",
+    "tags": [
+      {
+        "_id": "hos034",
+        "name": "HOS034",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "zgILtIbKfyonmlvLXtyDhPvadcU50t_fAHSqfU5Aq9c",
+    "thingToken": "-xGVNaAfOIcNFem3zMocmu5FQ9Q_BW0aW-s99OCKHoc",
+    "description": {
+      "name": "Tanatori - Crematori L'Hospitalet Gran Via-HOS158",
+      "geo": {
+        "lat": 41.363313668865786,
+        "long": 2.0930151865454074
+      }
+    },
+    "createdAt": "2024-12-28T03:30:28.393Z",
+    "tags": [
+      {
+        "_id": "hos158",
+        "name": "HOS158",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ipZz4OB0GWIxfgik-m7ZDmDLjuzJgd3yencFLDsiKyM",
+    "thingToken": "-ttceRjRvGiu5UezIoxcDdKhwEidXMIWyVKUIhZzCkg",
+    "description": {
+      "name": "Escola Pompeu Fabra-HOS062",
+      "geo": {
+        "lat": 41.36605298642543,
+        "long": 2.1229377589519003
+      }
+    },
+    "createdAt": "2024-12-27T17:29:38.892Z",
+    "tags": [
+      {
+        "_id": "hos062",
+        "name": "HOS062",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "i_kXCC93C1c3J1i-Knw0PxgNO54BlDPuLYAOUgsFRbc",
+    "thingToken": "vcgJeV9luIdk2WR1U_b__cPEuaGdeouwM7Vkbg2GR8Q",
+    "description": {
+      "name": "Centre Cultural Santa Eulàlia-HOS021",
+      "geo": {
+        "lat": 41.367964758872574,
+        "long": 2.1275503103710465
+      }
+    },
+    "createdAt": "2024-12-27T16:37:27.592Z",
+    "tags": [
+      {
+        "_id": "hos021",
+        "name": "HOS021",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ZUTJfxvbbbGRRY7FfQXtwY7Qujpq5OlPRxdD5z73HzE",
+    "thingToken": "h5VL5GXSKNjHfHFqU-bqlYp0-a876H3IDiLnSNV8BqQ",
+    "description": {
+      "name": "Institut Pedraforca-HOS149",
+      "geo": {
+        "lat": 41.372957597083555,
+        "long": 2.1118163680421578
+      }
+    },
+    "createdAt": "2024-12-26T20:21:48.815Z",
+    "tags": [
+      {
+        "_id": "hos149",
+        "name": "HOS149",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "nImlb6erLi0Vp_c7wHhADuguyOd82iU70I6wbqecyyY",
+    "thingToken": "XvlKmy_LkLBidDaIBvXbY3rmHjCdIxAe8OVRL9YRlRg",
+    "description": {
+      "name": "Escola Pere Lliscart-HOS061",
+      "geo": {
+        "lat": 41.37479624882629,
+        "long": 2.111619596877657
+      }
+    },
+    "createdAt": "2024-12-25T22:33:58.470Z",
+    "tags": [
+      {
+        "_id": "hos061",
+        "name": "HOS061",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "sPaN8zM4IxAJQFOREfiULNzKeaOosdMn83Xv0HzOIW8",
+    "thingToken": "oWgnjCGMpZMkd7PS0Dr57VM6IzwDfrjvh4JC5t0qVto",
+    "description": {
+      "name": "Regidoria Districte III-HOS035",
+      "geo": {
+        "lat": 41.368273839983765,
+        "long": 2.127204235649481
+      }
+    },
+    "createdAt": "2024-12-25T19:35:31.894Z",
+    "tags": [
+      {
+        "_id": "hos035",
+        "name": "HOS035",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "6q2Kygz4wadDPavAIefHz9vgMCbYfxYCLtSCKZFslxg",
+    "thingToken": "jIElFO-xeWcNBg9bcNhbyTvL1KkUdE5JbzWz8m_YeH8",
+    "description": {
+      "name": "Casal gent gran Pubilla Casas-HOS025",
+      "geo": {
+        "lat": 41.373745441670316,
+        "long": 2.1046224392067723
+      }
+    },
+    "createdAt": "2024-12-25T16:29:15.213Z",
+    "tags": [
+      {
+        "_id": "hos025",
+        "name": "HOS025",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ezFc0RAWebpzi5Q2fPGUliw2bm-hujRmBr7tUhN0MfI",
+    "thingToken": "PVskgNyGcXoSwRK4oiLjNIct2lmGm0a5A7YZUW-OrUM",
+    "description": {
+      "name": "ETRA BONAL - Cornellà-HOS166",
+      "geo": {
+        "lat": 41.34914830075914,
+        "long": 2.0915982971666085
+      }
+    },
+    "createdAt": "2024-12-24T23:29:06.159Z",
+    "tags": [
+      {
+        "_id": "hos166",
+        "name": "HOS166",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "9vdxUwY0c1FoPL7ixZoRUl6-7WZ9sD6ZJFrUw61Nz4U",
+    "thingToken": "HMTD8CtJOEdEHT6FFkwHJSWt_l3JIdEaPpvEADJYXiU",
+    "description": {
+      "name": "Escola Joan Maragall-HOS045",
+      "geo": {
+        "lat": 41.36633711793946,
+        "long": 2.109332362917055
+      }
+    },
+    "createdAt": "2024-12-23T09:32:11.341Z",
+    "tags": [
+      {
+        "_id": "hos045",
+        "name": "HOS045",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "YNnWGqaInD_EstAEjQvyZVGWeGi1psom3Z8byK30ZMU",
+    "thingToken": "JNcAMxXARuI06beeIMvG1IwFPootF8TZIfBA0VinaAo",
+    "description": {
+      "name": "Institut Rubio i Ors-HOS150",
+      "geo": {
+        "lat": 41.36931536118192,
+        "long": 2.1011617035681778
+      }
+    },
+    "createdAt": "2024-12-23T07:40:43.408Z",
+    "tags": [
+      {
+        "_id": "hos150",
+        "name": "HOS150",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "iLyT7bu0ZxV7qgC9_oNpNKTLaCjXn9GZbnM7CFVYp0w",
+    "thingToken": "O70FxBhN0_d3PcMY6QGlayVu4sVYC1dmo9p1KS8pHtY",
+    "description": {
+      "name": "Mercat de La Florida-HOS121",
+      "geo": {
+        "lat": 41.370752097251966,
+        "long": 2.1085620103712213
+      }
+    },
+    "createdAt": "2024-12-20T20:28:37.254Z",
+    "tags": [
+      {
+        "_id": "hos121",
+        "name": "HOS121",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "P8qrqkYib9GmUurMiDj3DVJMBNud3YYKlL9E51r4eD8",
+    "thingToken": "s9wPoQ5-UiEPetldbOJFgdnvhCwso2bbt9_BsXslCJw",
+    "description": {
+      "name": "Fira Barcelona Gran Via-HOS131",
+      "geo": {
+        "lat": 41.35488398218472,
+        "long": 2.1278359732332457
+      }
+    },
+    "createdAt": "2024-12-20T10:36:28.038Z",
+    "tags": [
+      {
+        "_id": "hos131",
+        "name": "HOS131",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "1pMIauxZfFR7FWPZQqpY2wkoHY5h4LU9rl02C_tP6G0",
+    "thingToken": "VtWAXPRM-_UrxKWhTI0f48wlIJkQoZXquSy6MiMjYEM",
+    "description": {
+      "name": "Hospital Universitari Bellvitge-HOS160",
+      "geo": {
+        "lat": 41.34495938260861,
+        "long": 2.1042318968763247
+      }
+    },
+    "createdAt": "2024-12-20T10:36:27.991Z",
+    "tags": [
+      {
+        "_id": "hos160",
+        "name": "HOS160",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "gyOIXi7IRpUlDl0m2q6mLmxNmTv13Jf2odUBz8DTxl0",
+    "thingToken": "ltjgppMTDdYRr8Q57xmDWKMFfWKWRdH9WeQxVc0ZNXg",
+    "description": {
+      "name": "Institut Margarida Xirgu-HOS148",
+      "geo": {
+        "lat": 41.374810593957626,
+        "long": 2.1138692815359303
+      }
+    },
+    "createdAt": "2024-12-19T16:29:46.261Z",
+    "tags": [
+      {
+        "_id": "hos148",
+        "name": "HOS148",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "SNchwF9FyNtfVcIox0Qo-3I4ivL9TY9SFiyBEnfMojQ",
+    "thingToken": "xkMPEj2lxL_MwPxbiH25FCzpxWSZn7t1hVxkUdHy7Kg",
+    "description": {
+      "name": "Mercat de Santa Eulàlia-HOS122",
+      "geo": {
+        "lat": 41.36559042134499,
+        "long": 2.127172939206397
+      }
+    },
+    "createdAt": "2024-12-18T08:24:24.604Z",
+    "tags": [
+      {
+        "_id": "hos122",
+        "name": "HOS122",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "TySCjyKhiVz6E0Z-MP65u77InihLF3rsfvBK5Km8kjM",
+    "thingToken": "Y5RccN-kyr2YyzzWCLIf8LCK2BaZiqaZRY4dHOgkr2Q",
+    "description": {
+      "name": "Biblioteca i Centre Cultural la Bòbila-HOS008",
+      "geo": {
+        "lat": 41.373093225408724,
+        "long": 2.1011804951287654
+      }
+    },
+    "createdAt": "2024-12-16T07:33:48.398Z",
+    "tags": [
+      {
+        "_id": "hos008",
+        "name": "HOS008",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "5g6piyrTkgTGJocWKQ7DnG-tBdlZRV_gaFbmuHO_ZC0",
+    "thingToken": "0Eci2f5APY2pqeDaO9-YRK0jid_iKhSzRwbOjNAHxg4",
+    "description": {
+      "name": "Radio-TV de L'Hospitalet-HOS088",
+      "geo": {
+        "lat": 41.364854844215394,
+        "long": 2.1281175668513144
+      }
+    },
+    "createdAt": "2024-12-14T13:21:09.776Z",
+    "tags": [
+      {
+        "_id": "hos088",
+        "name": "HOS088",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "UyPl-w886J8PSm3ldlm80mB9rzB0tc8HnNo7kRwnZsI",
+    "thingToken": "pVEtoS8B4Wc4Du26hp_xc98Dd8TFmzPRgR7gXzMVYJ4",
+    "description": {
+      "name": "Escola Frederic Mistral-HOS043",
+      "geo": {
+        "lat": 41.36226896760275,
+        "long": 2.133601222082758
+      }
+    },
+    "createdAt": "2024-12-14T10:28:24.004Z",
+    "tags": [
+      {
+        "_id": "hos043",
+        "name": "HOS043",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "-Kvqi-4LAy10L-Qz7M8Yl7wNQ_ETEEUKUYAukU6YPdw",
+    "thingToken": "-G-gBcJp7btYXR3LKSOD96xdSKmlweq21NyCRXr47iM",
+    "description": {
+      "name": "Ildefons Cerdà-HOS090",
+      "geo": {
+        "lat": 41.36138679695318,
+        "long": 2.130161568041627
+      }
+    },
+    "createdAt": "2024-12-12T18:28:20.374Z",
+    "tags": [
+      {
+        "_id": "hos090",
+        "name": "HOS090",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "y4bKtpmmkQNIhQiJr-FpB4AFuEHfrZYh-zBgSoNM2K8",
+    "thingToken": "SlunQ2xr9Rt96McZzTlfp7cPsTWwExeXsO6EaDDHAjI",
+    "description": {
+      "name": "CLD-HOS103",
+      "geo": {
+        "lat": 41.34779542044428,
+        "long": 2.1295932797792583
+      }
+    },
+    "createdAt": "2024-12-12T12:27:31.230Z",
+    "tags": [
+      {
+        "_id": "hos103",
+        "name": "HOS103",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "WIiHI6nYnOs-ixP8la399z-1yEzV-AjOnO0nQl_HK0k",
+    "thingToken": "V4FGX9TWVieFziZ3Oyo23gdVQpXjZmsWoDov4bvfw9k",
+    "description": {
+      "name": "Poliesportiu Municipal Bellvitge Sergio Manzano-HOS113",
+      "geo": {
+        "lat": 41.34858377184772,
+        "long": 2.1059178122182183
+      }
+    },
+    "createdAt": "2024-12-12T04:41:47.659Z",
+    "tags": [
+      {
+        "_id": "hos113",
+        "name": "HOS113",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "snU3TelNaqrDbFMW5K1qyhPR89K8HJiZjvmrI76ABVQ",
+    "thingToken": "M5bj7eGtyYHEBdIdDI1UdkQ2trFx1s0rkgzcZfFN4Vs",
+    "description": {
+      "name": "Escola Pep Ventura-HOS060",
+      "geo": {
+        "lat": 41.374764131612785,
+        "long": 2.121408852700516
+      }
+    },
+    "createdAt": "2024-12-11T10:42:50.280Z",
+    "tags": [
+      {
+        "_id": "hos060",
+        "name": "HOS060",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "Vadpf1Bn0RebtxGTlsNjNRtg2-yDWYMpSvm-ImxrAAY",
+    "thingToken": "psMPQOWjiv5gOS6-IiveRwE_Q7z7FxutZORoZYDbXUo",
+    "description": {
+      "name": "Escola Menéndez Pidal-HOS053",
+      "geo": {
+        "lat": 41.373052201540304,
+        "long": 2.110847583383893
+      }
+    },
+    "createdAt": "2024-12-09T22:33:21.236Z",
+    "tags": [
+      {
+        "_id": "hos053",
+        "name": "HOS053",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "l9OET0xfT-ZDMUvX_VbZg57dfvqoaQiERhivXWLZhtU",
+    "thingToken": "lAj1IC-vyMIjfrcGef-bDAMRFZ2kxCJd-2kGuBNDXNo",
+    "description": {
+      "name": "Hotel Hesperia Tower-HOS102",
+      "geo": {
+        "lat": 41.346379614959794,
+        "long": 2.108638468040945
+      }
+    },
+    "createdAt": "2024-12-09T14:34:01.614Z",
+    "tags": [
+      {
+        "_id": "hos102",
+        "name": "HOS102",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "-7fYTjjdpMRryqyymCRZ8dnD0622oNBxuxsT5zuREA0",
+    "thingToken": "8LhHPtRXPAch3H0CC7pOHvjPC-pbMA-bP3Gx361SeL8",
+    "description": {
+      "name": "Centre d'Atenció Primària Alhambra-HOS101",
+      "geo": {
+        "lat": 41.36279263945538,
+        "long": 2.1294486852315075
+      }
+    },
+    "createdAt": "2024-12-09T13:35:06.932Z",
+    "tags": [
+      {
+        "_id": "hos101",
+        "name": "HOS101",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "o9jfs59JIUri3_uWjB5rzTTy4kuegh4rM-1nsjVcOVo",
+    "thingToken": "yzjveqSbtZX6R1_yYFsEf4OEs2iFSAZKzBEqInA-JJM",
+    "description": {
+      "name": "Escola Santiago Ramón y Cajal-HOS065",
+      "geo": {
+        "lat": 41.3694666582098,
+        "long": 2.1224105680419783
+      }
+    },
+    "createdAt": "2024-12-08T10:42:58.981Z",
+    "tags": [
+      {
+        "_id": "hos065",
+        "name": "HOS065",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "OmT8bGjJZGAHXmOEI7zlIxCb7sLpeK3cFXxGpjtMnjQ",
+    "thingToken": "rNgcQYQOwL1HQOV48GbxjRDUALmGCxzYzCSO18uogyU",
+    "description": {
+      "name": "Centre assistencial Prytanis Plaça Europa-HOS129",
+      "geo": {
+        "lat": 41.36160648577257,
+        "long": 2.122895696877076
+      }
+    },
+    "createdAt": "2024-12-08T08:38:24.453Z",
+    "tags": [
+      {
+        "_id": "hos129",
+        "name": "HOS129",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "JN_r78iCnKNuN--mJPLqO5jc31HI8vamJHpx1-ay9h8",
+    "thingToken": "9Yp_4tYr3d_TuWd-nW1ZxvG2YQaIZ51HY8in3H6BDXw",
+    "description": {
+      "name": "Can Colom (Centre Atenció a la Infància i la Dòna)-HOS030",
+      "geo": {
+        "lat": 41.36737156926719,
+        "long": 2.1317029559931697
+      }
+    },
+    "createdAt": "2024-12-08T07:31:00.186Z",
+    "tags": [
+      {
+        "_id": "hos030",
+        "name": "HOS030",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "hrnwRmG5cjjIsS0VNT3kV2VrP8MFjERNA5d4_2j7jJw",
+    "thingToken": "gOifx8jVycbc6d-BoaNrizfCn49ScjbNVD2rKsAfKvI",
+    "description": {
+      "name": "Institut Llobregat-HOS155",
+      "geo": {
+        "lat": 41.3638853125489,
+        "long": 2.11431166804174
+      }
+    },
+    "createdAt": "2024-12-08T06:32:10.576Z",
+    "tags": [
+      {
+        "_id": "hos155",
+        "name": "HOS155",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "gtuOkUx4mwTz8-7AVsqfPmD51R0qeJBfhtZN-fFGw7Y",
+    "thingToken": "cnZwoCBJxhAEQ8G16glHpW7NCpFYdQ2_04uBBptXHJ8",
+    "description": {
+      "name": "Teatre Joventut-HOS159",
+      "geo": {
+        "lat": 41.37275450493519,
+        "long": 2.1178780410547646
+      }
+    },
+    "createdAt": "2024-12-07T13:26:25.256Z",
+    "tags": [
+      {
+        "_id": "hos159",
+        "name": "HOS159",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "y1CwcmpDSU8h52Gd3oBl-Xl1ljcorm4gwDOfwXtvK0g",
+    "thingToken": "jkgKaYnXsqk9YVKsIVLLYhFSGgwgf5uZ1-9d8gJkq0M",
+    "description": {
+      "name": "Ara Vinc-HOS104",
+      "geo": {
+        "lat": 41.34864199688712,
+        "long": 2.1278077410536884
+      }
+    },
+    "createdAt": "2024-12-06T16:33:50.904Z",
+    "tags": [
+      {
+        "_id": "hos104",
+        "name": "HOS104",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "0q_z85F1hHUxbhi9ILpV3eC_rQ7RZ5u232G4U0_NSDA",
+    "thingToken": "tznQkohJXGH5oawjmqnlY3oRR4w1GLUHlafYx3niEns",
+    "description": {
+      "name": "Centre d'Atenció Primària Collblanc (dte. II)-HOS016",
+      "geo": {
+        "lat": 41.374227968942876,
+        "long": 2.1171886239645845
+      }
+    },
+    "createdAt": "2024-12-06T13:33:56.791Z",
+    "tags": [
+      {
+        "_id": "hos016",
+        "name": "HOS016",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "QU2fDfEFag-5I9t3GtsxPXAs2f42g_M73EkCzimOwdE",
+    "thingToken": "Spn3nttdJZbmfbEL1AE6u3B0DTUSABhZmBhH4PqeR0w",
+    "description": {
+      "name": "Tanatori L'Hospitalet Ronda-HOS157",
+      "geo": {
+        "lat": 41.362582772859554,
+        "long": 2.092157068041681
+      }
+    },
+    "createdAt": "2024-12-06T09:34:26.417Z",
+    "tags": [
+      {
+        "_id": "hos157",
+        "name": "HOS157",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "tETPXW2CSXf-AY8DNrtSDFLhfcPGOtS2qUngrN7tThs",
+    "thingToken": "aUgvTw_HfM6PCRjX-mJIbFmuodOviF1tMd3ff6PXTBE",
+    "description": {
+      "name": "Centre Cultural Metropolità Tecla Sala-HOS022",
+      "geo": {
+        "lat": 41.366805261886064,
+        "long": 2.1152714527001515
+      }
+    },
+    "createdAt": "2024-12-06T08:29:45.400Z",
+    "tags": [
+      {
+        "_id": "hos022",
+        "name": "HOS022",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "f07tvVH-EEQx6vI-r4tLNulyRghBumvAeB-UBBoXVUI",
+    "thingToken": "5CJJmpxt6ipVnewsgWYW6YWmpBf7W01uDRFJdLvm5YM",
+    "description": {
+      "name": "Poliesportiu Municipal Sanfeliu-HOS114",
+      "geo": {
+        "lat": 41.36887820819126,
+        "long": 2.0891911968774157
+      }
+    },
+    "createdAt": "2024-12-06T03:34:13.448Z",
+    "tags": [
+      {
+        "_id": "hos114",
+        "name": "HOS114",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "e0LM3Cd3SmsTpj8LxOxFyFmlCmGpA3Su43tALijv3BU",
+    "thingToken": "vxQuXf8zXI0QdC8ps0aTLnMKPOwW6w0LYfW82jOjkCk",
+    "description": {
+      "name": "Poliesportiu Municipal Les Planes-HOS111",
+      "geo": {
+        "lat": 41.36970510593975,
+        "long": 2.104254454548331
+      }
+    },
+    "createdAt": "2024-12-06T02:34:09.447Z",
+    "tags": [
+      {
+        "_id": "hos111",
+        "name": "HOS111",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "QEhLJyBJ1-l3jy2WLaKdD1zjrP_qoIv9Snaz0zZgABs",
+    "thingToken": "SbLuIA1fMsQFo5l9-FPI_zqvbPcvbjNetdjV7ADySEo",
+    "description": {
+      "name": "Institut Provençana-HOS156",
+      "geo": {
+        "lat": 41.36345423716286,
+        "long": 2.1146114968771585
+      }
+    },
+    "createdAt": "2024-12-06T02:34:09.338Z",
+    "tags": [
+      {
+        "_id": "hos156",
+        "name": "HOS156",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "JqMiCO0o6HJ0zlNaED3ftGoML4ObliHJFP-4XVtDGx0",
+    "thingToken": "ECSZjCFMiQaYLsrH3zxk_awIb078scckvSmO91xT89A",
+    "description": {
+      "name": "Escola La Carpa-HOS048",
+      "geo": {
+        "lat": 41.36722136080466,
+        "long": 2.099782695029278
+      }
+    },
+    "createdAt": "2024-12-05T20:30:12.304Z",
+    "tags": [
+      {
+        "_id": "hos048",
+        "name": "HOS048",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "QQJ5tlNv1efaj8BCYryHaoP8TlO1s8YjzxAxrF_rj2o",
+    "thingToken": "DLjoGfvCnPbBgkB7tk9-73pBY1YFE5vIYrQNLahXfPw",
+    "description": {
+      "name": "Institut Eduard Fontserè-HOS145",
+      "geo": {
+        "lat": 41.36754851552921,
+        "long": 2.1116363392064756
+      }
+    },
+    "createdAt": "2024-12-03T23:36:20.171Z",
+    "tags": [
+      {
+        "_id": "hos145",
+        "name": "HOS145",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "dyfk8FJnmY3lZJT19JGpkTcaSywXWb2RD_44MAQ0Ly0",
+    "thingToken": "tNGoCDC29lKD-MhzT690s_cOs6dVR6sWrlw3RUzK-90",
+    "description": {
+      "name": "Ciudad de la Justicia (Juzgado 1ª Instancia Nº 2)-HOS116",
+      "geo": {
+        "lat": 41.365986307868766,
+        "long": 2.132764081535548
+      }
+    },
+    "createdAt": "2024-12-02T17:39:11.206Z",
+    "tags": [
+      {
+        "_id": "hos116",
+        "name": "HOS116",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "cVfyYCI8x1sgV-iaJ04CbWqpW2kPEpvJEXe0hGFRksE",
+    "thingToken": "vSVyXz9Asbv81XHxWjZ87unQVgA036H41Pn_vW8U-F0",
+    "description": {
+      "name": "Poliesportiu Municipal Santa Eulàlia-HOS112",
+      "geo": {
+        "lat": 41.36650365869991,
+        "long": 2.128120710370996
+      }
+    },
+    "createdAt": "2024-12-02T17:39:11.192Z",
+    "tags": [
+      {
+        "_id": "hos112",
+        "name": "HOS112",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "wvNDiIqCYT050LqY4KthvSdZJoD5rgcSbftBzVWMt5M",
+    "thingToken": "1iXj_SPV066s5vkmhOYfwUXraV5qvypIw29I52t9g3M",
+    "description": {
+      "name": "Escola Pau Vila-HOS059",
+      "geo": {
+        "lat": 41.36857208448327,
+        "long": 2.1428565939686437
+      }
+    },
+    "createdAt": "2024-11-29T13:22:54.617Z",
+    "tags": [
+      {
+        "_id": "hos059",
+        "name": "HOS059",
+        "organizationId": 33788
+      },
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "k1X5uNRb87TV1yzB7-wxucOdwXHHfSMksGGM9W8Aq7U",
+    "thingToken": "l3MGQVd15HGPwqdyzUiHAXptnFNIl_2Rne5mulkiD-U",
+    "description": {
+      "name": "Area Basica Serveis Socials - Dte. IV/V - Benestar Social-HOS026",
+      "geo": {
+        "lat": 41.37095237467606,
+        "long": 2.102731875248043
+      }
+    },
+    "createdAt": "2024-11-29T03:32:23.086Z",
+    "tags": [
+      {
+        "_id": "hos026",
+        "name": "HOS026",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "OxG0-oMRB0EuRvEHaLNiXQ4U2hELBi8bpG3YcYolxuk",
+    "thingToken": "gD7ZbicJjWQd9MqA2fHJyuN5t4meZ9ZHfrh4kmkFzvk",
+    "description": {
+      "name": "Centre d'Atenció Primària Rb.Marina (dte. VI)-HOS013",
+      "geo": {
+        "lat": 41.36259853963358,
+        "long": 2.136378841222514
+      }
+    },
+    "createdAt": "2024-11-28T20:29:04.477Z",
+    "tags": [
+      {
+        "_id": "hos013",
+        "name": "HOS013",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ZDniIxMK9-nPNY3pbKFWLjhl-4J5MMatFGw0qdSA3GQ",
+    "thingToken": "MifmsYKAgGnY2RFbDHqYgbRyYdm3gq_OOI9iiQxhrbE",
+    "description": {
+      "name": "LH_MAIN",
+      "geo": {}
+    },
+    "createdAt": "2024-11-28T17:39:27.756Z",
+    "tags": []
+  },
+  {
+    "_id": "rC0mxoMqvuxIyqEflOquy5y3gmpfJhxhrOzjt8AGrPs",
+    "thingToken": "vKK2A0VpGNnBo0dCEG0JPYGYcdIRB8ig3ana6alrLzM",
+    "description": {
+      "name": "Bombers de L'Hospitalet-HOS011",
+      "geo": {
+        "lat": 41.370212798453494,
+        "long": 2.1060591968774616
+      }
+    },
+    "createdAt": "2024-11-28T17:39:27.710Z",
+    "tags": [
+      {
+        "_id": "hos011",
+        "name": "HOS011",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "Poj_HIXlD7wWwQ9xVx_9oEeT3tPy9lqAIPVWS5g1Mi4",
+    "thingToken": "mPgAzZPaP0JlJ7wciuzGiGxveZtph-SsZAGbZFEvd8Y",
+    "description": {
+      "name": "DIPRO-MTI",
+      "geo": {}
+    },
+    "createdAt": "2024-11-28T14:36:41.389Z",
+    "tags": []
+  },
+  {
+    "_id": "FwjFqp8CUHaQfwNNweCNc8czVifnHGc1eqKw2ML6qa8",
+    "thingToken": "iJngKu-NahKq6DB6RY6qfOdKsJguMzb_AKQrjVIv0Hw",
+    "description": {
+      "name": "Dipòsit de vehicles (santa eulàlia)-HOS036",
+      "geo": {
+        "lat": 41.36664296230814,
+        "long": 2.1180993103710057
+      }
+    },
+    "createdAt": "2024-11-27T11:29:12.388Z",
+    "tags": [
+      {
+        "_id": "hos036",
+        "name": "HOS036",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "qyJhKu8f-Q5kuzex35dFiBNyXtm4OrgnBFBnpW780gs",
+    "thingToken": "Vie37GAB-k1ffziBRtzsv57Yg3WSLJpttLx4_R1fsSU",
+    "description": {
+      "name": "Escola Milagros Consarnau-HOS054",
+      "geo": {
+        "lat": 41.364484084491146,
+        "long": 2.1293158257126676
+      }
+    },
+    "createdAt": "2024-11-27T10:29:00.295Z",
+    "tags": [
+      {
+        "_id": "hos054",
+        "name": "HOS054",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "lpdQM87oAZtYKV3rt-PNCXFXTlcnnxWsQ7Y0KUcaBeg",
+    "thingToken": "_zaTxTipMgGnzRW0l7evl_SuhtofQFt9bG3z5fbAW0g",
+    "description": {
+      "name": "Piscines Municipals L'Hospitalet-HOS107",
+      "geo": {
+        "lat": 41.36579626450838,
+        "long": 2.1158300680418334
+      }
+    },
+    "createdAt": "2024-11-27T09:26:31.346Z",
+    "tags": [
+      {
+        "_id": "hos107",
+        "name": "HOS107",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "tHQLkzD-mD3d-kzgys8vkWFLIHmhTyxsoEagIunQ1TM",
+    "thingToken": "x7mF3EQyhPHJfpEchmnEhKO_wJJpaD0oI0Ndxb2lbOw",
+    "description": {
+      "name": "Mercat del Torrent Gornal-HOS124",
+      "geo": {
+        "lat": 41.370396852551515,
+        "long": 2.11503973735857
+      }
+    },
+    "createdAt": "2024-11-27T08:37:14.831Z",
+    "tags": [
+      {
+        "_id": "hos124",
+        "name": "HOS124",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "sEgAzhJ9DQOwUwLPjUfLlpGIyJ0OfiYLSDrPjk8q5Do",
+    "thingToken": "VDD2a9ZuG93xBy05I1-WrV_K2tqllZ9UYr1-xGKmq5M",
+    "description": {
+      "name": "Santa Eulàlia (L1)-HOS078",
+      "geo": {
+        "lat": 41.36998640518088,
+        "long": 2.1303149672060506
+      }
+    },
+    "createdAt": "2024-11-27T06:29:12.817Z",
+    "tags": [
+      {
+        "_id": "hos078",
+        "name": "HOS078",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "f6M0frvQ7y5HCfc4T3NTRLUqMfh7OqL9-zuLOKW00k4",
+    "thingToken": "5JFifQ8Y9XQkX7KRBxSzvfEhMOuovnLs0jVvWrAydkE",
+    "description": {
+      "name": "Escola Pau Casals-HOS057",
+      "geo": {
+        "long": 2.1156761857605337,
+        "lat": 41.36913856573678
+      }
+    },
+    "createdAt": "2024-11-27T04:30:16.288Z",
+    "tags": [
+      {
+        "_id": "hos057",
+        "name": "HOS057",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "QqGlCS5DFw9Oi-5iFXLuIkB3L3RbySfhK_7JCBpNvD0",
+    "thingToken": "KwpBsy8jd1q5Ttb8AUZUfOfod_eXLLJISt7tf66xd3c",
+    "description": {
+      "name": "Escola Bressol Municipal La Casa del Molí-HOS098",
+      "geo": {
+        "lat": 41.3702258014712,
+        "long": 2.1010214833837733
+      }
+    },
+    "createdAt": "2024-11-24T12:33:51.988Z",
+    "tags": [
+      {
+        "_id": "hos098",
+        "name": "HOS098",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "5RYf2H92cKK-_PECduj7I4JdVOgWkGoFdV3HXv3dPQ0",
+    "thingToken": "yEgbTjFP1r3tX92sWLYbjgsmWH0gX9aXeJOCbwR1Q6I",
+    "description": {
+      "name": "Escola Charlie Rivel-HOS041",
+      "geo": {
+        "lat": 41.3735215060933,
+        "long": 2.1165200676343883
+      }
+    },
+    "createdAt": "2024-11-24T05:25:54.685Z",
+    "tags": [
+      {
+        "_id": "hos041",
+        "name": "HOS041",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "KUT-r42v59DJUMRldXzsBP7DqVoDFk3D7uaPHo2JIEo",
+    "thingToken": "drmq1tIgunPelakw1qWiryRzP6pRLbAQ3zbcT4-jG0U",
+    "description": {
+      "name": "Edificio de viviendas Plaza Guernica-HOS164",
+      "geo": {
+        "lat": 41.3743496932928,
+        "long": 2.1225331680421933
+      }
+    },
+    "createdAt": "2024-11-23T07:27:26.435Z",
+    "tags": [
+      {
+        "_id": "hos164",
+        "name": "HOS164",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "Y46AHJkFMeLSzdo0fs2m74MD8O8IT6nzFKwuT2n0SRw",
+    "thingToken": "z6wwcVbfmr9IR91mwQW9_wUMDvDDZx3t34JwY1dvPGw",
+    "description": {
+      "name": "Mercat Merca-2 Can Serra-HOS119",
+      "geo": {
+        "lat": 41.36784709394278,
+        "long": 2.099713553814763
+      }
+    },
+    "createdAt": "2024-11-23T04:31:10.069Z",
+    "tags": [
+      {
+        "_id": "hos119",
+        "name": "HOS119",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "Jb2Op6nsqbZ-mgp69DIviA796RKW3cWOaW48ugL0xpE",
+    "thingToken": "iDmUMoB76MhygSuatYa9iphOkRQvXaqJ_eRLJhYu0g0",
+    "description": {
+      "name": "Deixalleria Municipal-HOS132",
+      "geo": {
+        "lat": 41.349618730784414,
+        "long": 2.0957683290275684
+      }
+    },
+    "createdAt": "2024-11-23T04:31:09.813Z",
+    "tags": [
+      {
+        "_id": "hos132",
+        "name": "HOS132",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "BSw7QKcVGEPnA1iXUAfvLGZzIbpxc8PW8136VjWg2F0",
+    "thingToken": "EK79hSCFgy3vqSUtzu7Fnj2GWDGwcwptNdSxPSBhQwA",
+    "description": {
+      "name": "Mezquita de Santa Eulàlia-HOS135",
+      "geo": {
+        "lat": 41.36503966773672,
+        "long": 2.117151464160636
+      }
+    },
+    "createdAt": "2024-11-23T03:39:07.034Z",
+    "tags": [
+      {
+        "_id": "hos135",
+        "name": "HOS135",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "QArdSw7jnNH0w9xHSUh_U-wtA2DuvT3AVAaIJOQLjVg",
+    "thingToken": "HocKuGsCDlLr_B2AI0EBmLovvYbOv1rxgZVPjoKo5gE",
+    "description": {
+      "name": "Centre d'Atenció Primària Ronda de la Torrassa (dte. II)-HOS020",
+      "geo": {
+        "lat": 41.36944960015373,
+        "long": 2.1226640103711367
+      }
+    },
+    "createdAt": "2024-11-18T22:38:49.318Z",
+    "tags": [
+      {
+        "_id": "hos020",
+        "name": "HOS020",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "YhhEvt3_gjTk13rhFR-1JCBdmwULPjWQByztDfFKvbE",
+    "thingToken": "_0nO8GHePDOVo9Tn1bdJ9La0J1fkmEvSu79xVzsEQbc",
+    "description": {
+      "name": "Mercat de Collblanc-HOS120",
+      "geo": {
+        "lat": 41.37496179539499,
+        "long": 2.119787510371402
+      }
+    },
+    "createdAt": "2024-11-18T22:38:49.318Z",
+    "tags": [
+      {
+        "_id": "hos120",
+        "name": "HOS120",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "TPJLQ6zPJWXiOedHCq0Q7_oXicMJb6GflPkU0W3Zpfk",
+    "thingToken": "j00NU2nDNWafL2oY_KlfFYIhT8TD0hiNl5iW02Cnfy4",
+    "description": {
+      "name": "Biblioteca la Florida-HOS009",
+      "geo": {
+        "lat": 41.36974260583765,
+        "long": 2.1074131103711404
+      }
+    },
+    "createdAt": "2024-11-18T11:30:33.739Z",
+    "tags": [
+      {
+        "_id": "hos009",
+        "name": "HOS009",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "-5uC-RsB45GMKajBQ_20cRIK7VofdhCyqHInjBhCATo",
+    "thingToken": "LhbkNJbxnhaBeaXqEmT_sBPzWJm-Goy3Wn0P07o3qZM",
+    "description": {
+      "name": "Universitat de Barcelona-HOS161",
+      "geo": {
+        "lat": 41.34632073296873,
+        "long": 2.1062011517615353
+      }
+    },
+    "createdAt": "2024-11-18T01:34:55.011Z",
+    "tags": [
+      {
+        "_id": "hos161",
+        "name": "HOS161",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "-dqWpYiWm2e2AkWAmg9VyDB1juek_QqnyHzDKtbmo6U",
+    "thingToken": "-hUJdxJUIWZdZgPjSfdHul-8VKt1y3eaFhN5QSx7zuc",
+    "description": {
+      "name": "Escola Josep Maria Folch i Torres-HOS042",
+      "geo": {
+        "lat": 41.37822331956801,
+        "long": 2.1036891396955038
+      }
+    },
+    "createdAt": "2024-11-17T19:29:58.486Z",
+    "tags": [
+      {
+        "_id": "hos042",
+        "name": "HOS042",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "f9M23F2bn9IKH1QHF_rgU19Oh1syqASTatagZvnP36Y",
+    "thingToken": "aCseZ-DirBvfcBTqOw-SlBaxOwNfcNlK0ITOV0FO-To",
+    "description": {
+      "name": "Estadi Municipal Futbol L'Hospitalet-HOS108",
+      "geo": {
+        "lat": 41.3474426665431,
+        "long": 2.102077854547316
+      }
+    },
+    "createdAt": "2024-11-17T19:29:58.399Z",
+    "tags": [
+      {
+        "_id": "hos108",
+        "name": "HOS108",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "QEXGnE7WlugAfMB6H_frHTh6laHCmZhv_PifMaMEYIQ",
+    "thingToken": "dyRDbKTk_aN51r0zQUErG70fEHv2CfP9EMFEFSTRKFo",
+    "description": {
+      "name": "Escola Josep Janes-HOS047",
+      "geo": {
+        "lat": 41.36538072196777,
+        "long": 2.110586996877262
+      }
+    },
+    "createdAt": "2024-11-17T18:31:04.977Z",
+    "tags": [
+      {
+        "_id": "hos047",
+        "name": "HOS047",
+        "organizationId": 33788
+      },
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "5G8IpFeVmhktBr7BjuJbm5YK_26pzN4WoWUI1TRqKvw",
+    "thingToken": "WqdRQ9MSTLTwE3CKnvjjdSIIARmvguqPpb4jsW-GwEU",
+    "description": {
+      "name": "Pavelló Municipal d'Esports-HOS106",
+      "geo": {
+        "lat": 41.347115766743705,
+        "long": 2.101304949172038
+      }
+    },
+    "createdAt": "2024-11-16T19:36:48.327Z",
+    "tags": [
+      {
+        "_id": "hos106",
+        "name": "HOS106",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "eBq2266xZ2PRO8EObqxlt46Fcr0CRgmgtk3rNRCIINA",
+    "thingToken": "86FAnFVQlKuzGg7wuk0oRWu1wmdJrVKUTwKwSzIDme8",
+    "description": {
+      "name": "Escola Lola Anglada-HOS050",
+      "geo": {
+        "lat": 41.368885152035766,
+        "long": 2.103239409922257
+      }
+    },
+    "createdAt": "2024-11-15T08:22:46.185Z",
+    "tags": [
+      {
+        "_id": "hos050",
+        "name": "HOS050",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "N6jppuLkQEGGt26eQcKfBnrTeSi9adMrhqeBAR15se0",
+    "thingToken": "rn06_05GwJBlUWptPE4q5eur5nZAybNRxwQufy9w3bE",
+    "description": {
+      "name": "Complex Esportiu Municipal L'Hospitalet Nord-HOS109",
+      "geo": {
+        "lat": 41.37910802990839,
+        "long": 2.10223203920702
+      }
+    },
+    "createdAt": "2024-11-14T15:34:03.553Z",
+    "tags": [
+      {
+        "_id": "hos109",
+        "name": "HOS109",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "O36PBicvyIxKUyCIg5fQ4PwXoSM83Jk0A7DN4-p32ig",
+    "thingToken": "D9SJjsoTzxoETNRBBn3p-sF-4NgIeAAaAlKKo1Mg8EY",
+    "description": {
+      "name": "Iglesia de la Florida-HOS134",
+      "geo": {
+        "lat": 41.37080774309496,
+        "long": 2.1094923201990894
+      }
+    },
+    "createdAt": "2024-11-14T09:41:41.168Z",
+    "tags": [
+      {
+        "_id": "hos134",
+        "name": "HOS134",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ILipqxkw7_hexYrQoJ4Pz1FKwMLWImQwNnKxYNY5cgc",
+    "thingToken": "w8n8Y5jzPLgh5elMoIF9oLCDH2mhXfGic4ibdl664Ek",
+    "description": {
+      "name": "Institut Bisbe Berenguer-HOS144",
+      "geo": {
+        "lat": 41.36350213287836,
+        "long": 2.12903619318106
+      }
+    },
+    "createdAt": "2024-11-14T08:28:20.570Z",
+    "tags": [
+      {
+        "_id": "hos144",
+        "name": "HOS144",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "mei0qOdmLO4DFJqr855qwGi8ZVzL_CAq7b_LqUO7Pyk",
+    "thingToken": "g2p9PKue0qD3PJwzNZKPf_J9XGI2TsnnQfWLPQxFAcE",
+    "description": {
+      "name": "Centre assistencial Prytanis Hospitalet-HOS137",
+      "geo": {
+        "lat": 41.36415236878068,
+        "long": 2.1301074968772
+      }
+    },
+    "createdAt": "2024-11-14T07:35:54.143Z",
+    "tags": [
+      {
+        "_id": "hos137",
+        "name": "HOS137",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "INVq9nooxV4GwJ3urrNeqP7AHwUzkKD7EaoCSlsrV7o",
+    "thingToken": "hf0x8e72DH_dF9MjmjrAqiuGYoUCVIfpmJrMD4XSFaI",
+    "description": {
+      "name": "Escola Pablo Neruda-HOS055",
+      "geo": {
+        "lat": 41.36582855202499,
+        "long": 2.08727351037097
+      }
+    },
+    "createdAt": "2024-11-14T07:35:54.136Z",
+    "tags": [
+      {
+        "_id": "hos055",
+        "name": "HOS055",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "9TgxJi1vtnDPpaysK5fMdVzZTBFCJs1_nFIZ0NmR7LE",
+    "thingToken": "l7HvaNOYMxwNYIDvlF2rSFulkwY7co4mrZYI5BoxixQ",
+    "description": {
+      "name": "Institut Apel·les Mestres-HOS142",
+      "geo": {
+        "lat": 41.373702546498706,
+        "long": 2.1150761746975526
+      }
+    },
+    "createdAt": "2024-11-13T15:27:46.629Z",
+    "tags": [
+      {
+        "_id": "hos142",
+        "name": "HOS142",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "6TLrLGHINcKvr6lkW12srAbSpQwyUqoDAgto62aKz38",
+    "thingToken": "W1GUkfo0TvU5fist174pjHey7-jNQJ18P-Uagzwgq8Y",
+    "description": {
+      "name": "Residencia Els Alps-HOS136",
+      "geo": {
+        "lat": 41.36258967284149,
+        "long": 2.0954845257125845
+      }
+    },
+    "createdAt": "2024-10-11T11:14:23.587Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos136",
+        "name": "HOS136",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "XyRzr8EaffTD7QNm33_FghaB5_rrZROVSjk52KKWLgc",
+    "thingToken": "77k0bPK71N-8fHySILZIg2RuCm3uRynKLwGWw-WTivA",
+    "description": {
+      "name": "Escola Bressol Garabatos-HOS097",
+      "geo": {
+        "lat": 41.362904800180544,
+        "long": 2.1087158257126
+      }
+    },
+    "createdAt": "2024-10-11T11:12:48.056Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos097",
+        "name": "HOS097",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "RVHLtilFMKXsz9mDNU-OuEumFS1kmYuK8MqlBpx37M8",
+    "thingToken": "P-E60u3MDSzSiIDn0uVYJYVCr2YqjwRsmyTsu87IlQI",
+    "description": {
+      "name": "Escola Busquets i Punset-HOS038",
+      "geo": {
+        "lat": 41.36310548113534,
+        "long": 2.0966734257125696
+      }
+    },
+    "createdAt": "2024-10-11T11:12:47.715Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos038",
+        "name": "HOS038",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "egY03d5PxymW9NlrP3HVjSZVIU1f9QBqj1C9VHXfEak",
+    "thingToken": "XFRzzZxm12Uht0cSTygTmiPaKgnZbGAl5iezBLBNP-Y",
+    "description": {
+      "name": "Mercat del Centre-HOS123",
+      "geo": {
+        "lat": 41.358707138653735,
+        "long": 2.099045279782595
+      }
+    },
+    "createdAt": "2024-10-11T10:31:34.791Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos123",
+        "name": "HOS123",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "k0HLmpgsLMB1p-j1R3y5M6dMQaLZnoNhPuIXbYQ-95Y",
+    "thingToken": "zBX2UqH1bdlRW2UlUtP7Mq5vlyuSp37hMx5d5r9b0CA",
+    "description": {
+      "name": "Institut Can Vilumara-HOS153",
+      "geo": {
+        "lat": 41.363500222833466,
+        "long": 2.10425026804173
+      }
+    },
+    "createdAt": "2024-10-11T10:31:34.328Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos153",
+        "name": "HOS153",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "r_ZkLCQS5X2B29mR2Uh66bWKzasawEGPyajRmgEb2OM",
+    "thingToken": "zLUAcH5tt2GBqSZ0TUBqG9QntNKd6imdi16QvfwzWvM",
+    "description": {
+      "name": "Museu de L'Hospitalet - Casa Espanya-HOS125",
+      "geo": {
+        "lat": 41.36122859752088,
+        "long": 2.097298010370756
+      }
+    },
+    "createdAt": "2024-10-11T10:31:34.132Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos125",
+        "name": "HOS125",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "uQAGj59Z4B9SC5Fn8w53TyaIFW473gIdITdk9gYg9Nc",
+    "thingToken": "qMJpL-UocOCDKZ7wvmXoiOXHezM-TVBSzjsr_LMmeF4",
+    "description": {
+      "name": "Museu de L'Hospitalet - L'Harmonia-HOS126",
+      "geo": {
+        "lat": 41.360494767375066,
+        "long": 2.0976899950289667
+      }
+    },
+    "createdAt": "2024-10-11T10:31:34.018Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos126",
+        "name": "HOS126",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "Ii_30YPrEZCs9Fd3n5HHlgKcIJzsUefDO8oNh5mrtgY",
+    "thingToken": "f4PSls4T1idEqH6hAvwPSAypJD7HsUDP2Ctaero5ihU",
+    "description": {
+      "name": "Museu de L'Hospitalet - Can Riera-HOS127",
+      "geo": {
+        "lat": 41.36148983352355,
+        "long": 2.096930010370743
+      }
+    },
+    "createdAt": "2024-10-11T10:31:33.983Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos127",
+        "name": "HOS127",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "zxMaRKbrsFMzbjes1_6SVU43vmrFtY38DsobfhkG0dQ",
+    "thingToken": "Ubpc2G797qYMNpjhJh58cOQD6nqI9B4IUfLGDC7Kk7A",
+    "description": {
+      "name": "Centre d'Atenció Primària Just Oliveras (dte. I)-HOS018",
+      "geo": {
+        "lat": 41.362760941406165,
+        "long": 2.10094442211301
+      }
+    },
+    "createdAt": "2024-10-11T10:31:33.903Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos018",
+        "name": "HOS018",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "GpkuyHQjLrJfrr6F9NSr9QVMUhmYFjo8CqOhA8ghAkE",
+    "thingToken": "pogu46awB8oFDKq57IquhYehVIvTmioSVfiuvRZ1Bag",
+    "description": {
+      "name": "Institut Torras i Bages-HOS152",
+      "geo": {
+        "lat": 41.366620410395356,
+        "long": 2.1015339815355576
+      }
+    },
+    "createdAt": "2024-10-11T10:31:33.722Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos152",
+        "name": "HOS152",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "_sAg45gN-qlLlaqz6v-aEP4dpsjMM-Bpr8t_qsj83-Y",
+    "thingToken": "QkwRr45ETor2UGkKBK6dS7UmIhmFxYbBJd5vsoLOh64",
+    "description": {
+      "name": "Dipòsit de vehicles (parc de la serp)-HOS037",
+      "geo": {
+        "lat": 41.36198726423529,
+        "long": 2.109137281535389
+      }
+    },
+    "createdAt": "2024-10-11T10:31:33.498Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos037",
+        "name": "HOS037",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "Xi6zN8bK-LPmy01Jtkzs18gOzWB4gtJAk8M5Jmq-kyM",
+    "thingToken": "yZW3xCnnjl2xQgdrb-9T3f5-iiipXIjyxajHW7B5GoU",
+    "description": {
+      "name": "Escola Sant Josep - El Pi-HOS067",
+      "geo": {
+        "lat": 41.36486721473454,
+        "long": 2.109263741054419
+      }
+    },
+    "createdAt": "2024-10-11T10:31:33.082Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos067",
+        "name": "HOS067",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "z94GIy8sCvZARU4wcP7de6M7iUac2DH0-rXSUafY3yw",
+    "thingToken": "HmgFt0UA5ralrqPJqTp90Z1BNgDfIfUu38rpvhTKTnY",
+    "description": {
+      "name": "Unifamiliar C. Ebre-HOS163",
+      "geo": {
+        "lat": 41.35995628917471,
+        "long": 2.102366980926833
+      }
+    },
+    "createdAt": "2024-10-11T10:31:32.961Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos163",
+        "name": "HOS163",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "mhj2e57MfGF6FHHvHDWKr0hvD7gVVDlRxi9YVuiVgvE",
+    "thingToken": "369EMt2GWFuoBO2OrvlWFRSI3eyHS29I-hBwfBGDy80",
+    "description": {
+      "name": "Area de Benestar social-HOS028",
+      "geo": {
+        "lat": 41.35133012335228,
+        "long": 2.114267945819028
+      }
+    },
+    "createdAt": "2024-10-11T10:31:32.830Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos028",
+        "name": "HOS028",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "KUamzGAQzSE6ndPzPqqdacbIyIsspvYZqjJSLfz7gOU",
+    "thingToken": "IXSPQX0RSvyI7lXttyd-afvj95Xyr9xn3gVa5cE4FIA",
+    "description": {
+      "name": "IFP (Innovación en Formación Profesional)-HOS140",
+      "geo": {
+        "lat": 41.36591292154958,
+        "long": 2.101703444979985
+      }
+    },
+    "createdAt": "2024-10-11T10:31:31.547Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos140",
+        "name": "HOS140",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "KfqNlLaUBd7o9FH3233nAjRf_WRHLcjIoHaoGGdbIe4",
+    "thingToken": "5xASozuK-itC2rWe6RxSxZg0hPNFtLDo_LFVCVr2QZg",
+    "description": {
+      "name": "Sant Josep-HOS089",
+      "geo": {
+        "lat": 41.362574237806555,
+        "long": 2.1068747518447326
+      }
+    },
+    "createdAt": "2024-10-11T10:29:31.217Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos089",
+        "name": "HOS089",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "botRztmETQ8Ulywa48RReFHqJ5MrNNLIZ0jltNcWCO4",
+    "thingToken": "1PzYBK4O_bWkxKbpFvatHc3gJ6p8_4JnoEVJtCQadIE",
+    "description": {
+      "name": "Escola Bressol Patufet-HOS099",
+      "geo": {
+        "lat": 41.36258512047963,
+        "long": 2.093596369897219
+      }
+    },
+    "createdAt": "2024-10-11T10:29:31.178Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos099",
+        "name": "HOS099",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "4tUqBOs_fZIjbMi61g5nWgMBe-vau_XWlMQ065z7wj0",
+    "thingToken": "MYujEZ67hL0s2wfcCcKAh7KkqdFMAvf1wIecF4FuAjs",
+    "description": {
+      "name": "Biblioteca Can Sumarro-HOS007",
+      "geo": {
+        "lat": 41.36034580946075,
+        "long": 2.096687154547911
+      }
+    },
+    "createdAt": "2024-10-11T10:29:30.561Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos007",
+        "name": "HOS007",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "PycbpLteTR1wY6df6ddxPv3-CryMQRix6A8SEr7dE9A",
+    "thingToken": "U3v_z4zZ8kv7lwsGx8ERyD0cP6pnlQ43CVogGeoJVoM",
+    "description": {
+      "name": "Palauet Can Buxeres-HOS068",
+      "geo": {
+        "lat": 41.36502927518359,
+        "long": 2.096159439206368
+      }
+    },
+    "createdAt": "2024-10-11T10:29:29.987Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos068",
+        "name": "HOS068",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "0-9uS-MzUIacsyhK7AdEoSv3gw9b3QIz7fqVlJkcCAk",
+    "thingToken": "wDQDx2zyxs7008DEbeoCW_CZBjjM1UhAklBAp3qpanI",
+    "description": {
+      "name": "Escola Ausias March-HOS039",
+      "geo": {
+        "lat": 41.36326127587289,
+        "long": 2.0938688815354225
+      }
+    },
+    "createdAt": "2024-10-11T10:29:29.872Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos039",
+        "name": "HOS039",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "5_yEj-RM7g9E5aF7Olo3A6shZMYv51HEsFvI7GxzRIM",
+    "thingToken": "fo2dipsAhZyzPwwH51D4a8dY8LpxijaQx12pQNLYvWM",
+    "description": {
+      "name": "L'Hospitalet de Llogregat-HOS072",
+      "geo": {
+        "lat": 41.364353544823025,
+        "long": 2.1008150046785623
+      }
+    },
+    "createdAt": "2024-10-11T10:29:29.808Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos072",
+        "name": "HOS072",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "5Mmoe1KLxexk4XL7ubslmx8ohhMJF_X9K-pih_YAIKc",
+    "thingToken": "j1Y0Vkgv_dNHmytK7qtv3N2E6MqpjVKqc1nBv1O-F8E",
+    "description": {
+      "name": "Cementerio Municipal L'Hospitalet-HOS012",
+      "geo": {
+        "lat": 41.366017720075696,
+        "long": 2.106016968041826
+      }
+    },
+    "createdAt": "2024-10-11T10:29:29.264Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos012",
+        "name": "HOS012",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "brAUVAU7Oz0vnrQlIxrcGaFa-AnJf_CmdnJjr50QGxM",
+    "thingToken": "vfANCxYJj5aCGHOO5-z5-Sa8MY5QsJLcqHOodLnRctc",
+    "description": {
+      "name": "Poliesportiu Municipal Centre-HOS115",
+      "geo": {
+        "lat": 41.36165499091583,
+        "long": 2.096222909095192
+      }
+    },
+    "createdAt": "2024-10-11T10:29:29.154Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos115",
+        "name": "HOS115",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "AQiOvotNsGQETmFtQokg-pOkSocUCib4Xuw44zhZtyE",
+    "thingToken": "FAh3FFFHiTt1caClYKpikgu1mGTkim5Ja-hZNLJXzTo",
+    "description": {
+      "name": "Regidoria Districte I-HOS033",
+      "geo": {
+        "lat": 41.36168453454276,
+        "long": 2.1011643565642597
+      }
+    },
+    "createdAt": "2024-10-11T10:29:29.063Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos033",
+        "name": "HOS033",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "wet0gzgKyFkJ4NTznGH-anlG46ubqJTZdYxnXaKnZxI",
+    "thingToken": "eSD6pG6QrUON7WUG24TzygjZFPHZK9h0mPwUgNN8hYs",
+    "description": {
+      "name": "Ajuntament de L'Hospitalet - Ed. Migdia-HOS002",
+      "geo": {
+        "lat": 41.36100588320447,
+        "long": 2.0961394124993054
+      }
+    },
+    "createdAt": "2024-10-11T10:29:28.960Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos002",
+        "name": "HOS002",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "E10g0f9LKm_iRDVb5wqZKOWDIRE-XKCBSRmes3eZNe0",
+    "thingToken": "W3X1kMQyep604ePhPvVlqH8yw6s-e3r8eKbHO98wn-0",
+    "description": {
+      "name": "Ajuntament de L'Hospitalet - Ed. Girona-HOS003",
+      "geo": {
+        "lat": 41.36179764658288,
+        "long": 2.103427277911183
+      }
+    },
+    "createdAt": "2024-10-11T10:29:28.792Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos003",
+        "name": "HOS003",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "y1Fo6ync1iLmbG_CzSwiSJe6WJ8DOxS4KCHbLKkc3I8",
+    "thingToken": "nm7CFSV_14iiBY9098V66R5xSWNlb6m9kUnhauw6KNM",
+    "description": {
+      "name": "Ajuntament de L'Hospitalet - Casa Consistorial-HOS001",
+      "geo": {
+        "lat": 41.36100588320447,
+        "long": 2.0961394124993054
+      }
+    },
+    "createdAt": "2024-10-11T10:29:28.601Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos001",
+        "name": "HOS001",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "0XdYIggv27QmbPHHbqQvOphuRyD_7naiingsQ5kqA9Q",
+    "thingToken": "1qMbyoDuBBtvgGfb4BsPFpvth1yT-GyPsSGJHzY_obs",
+    "description": {
+      "name": "Escola restaurant El Repartidor / Tragaluz - El Llindar-HOS139",
+      "geo": {
+        "lat": 41.361717027688094,
+        "long": 2.099708641054257
+      }
+    },
+    "createdAt": "2024-10-11T10:29:28.461Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos139",
+        "name": "HOS139",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "xAdu14uHXteyInI-1_vTlEvXzIlp25su8zfOHyzS5mI",
+    "thingToken": "7HYXeQDoGc2pH4dpqXB6QJ3hV1R9kvDI9C3ZxXzMFX0",
+    "description": {
+      "name": "Escola Bernat Metge-HOS040",
+      "geo": {
+        "lat": 41.3579888393564,
+        "long": 2.1126042846216464
+      }
+    },
+    "createdAt": "2024-10-07T10:40:02.780Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos040",
+        "name": "HOS040",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "DTbNaDtCeiDa8pkaavaTDroeEqPjN0DJ-H7ph6o3T4A",
+    "thingToken": "VU1I9ERaGKzRlYkhtoz6uE10SFu0wRUnFjpbCviZ9PQ",
+    "description": {
+      "name": "Edificio Cobalt (archivo municipal)-HOS005",
+      "geo": {
+        "lat": 41.35914207845774,
+        "long": 2.110842108618114
+      }
+    },
+    "createdAt": "2024-10-07T10:35:27.952Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos005",
+        "name": "HOS005",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "bKBN8WoiBR9K3i2oqNKzBDV1PcsiiPV-yqfWrdCl4xo",
+    "thingToken": "Ct11CwvHT1kVenjA0JzVokAEvPi1Um1TUp08NdSNPeU",
+    "description": {
+      "name": "Florida (L1)-HOS077",
+      "geo": {
+        "lat": 41.36846190235389,
+        "long": 2.1100162680419356
+      }
+    },
+    "createdAt": "2024-10-07T10:35:27.782Z",
+    "tags": [
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos077",
+        "name": "HOS077",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "kvq4jDHdOAaRdW0_3jXTcdQ0WBLm3EzWUeBwO1DLeIs",
+    "thingToken": "m1Yz9lKsip5cO3PwfZRttth3x04M8WQy_9V0fd_BanE",
+    "description": {
+      "name": "Escola Ramon Muntaner-HOS066",
+      "geo": {
+        "lat": 41.349335825274665,
+        "long": 2.1096686238639015
+      }
+    },
+    "createdAt": "2024-10-07T10:35:27.722Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos066",
+        "name": "HOS066",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "PZoVAnraMnRaZ8AHA4HO350ukJRzjZMRPScD7p7UfEs",
+    "thingToken": "pVilT63QZ2YBq3-la6JOF2EK3Oa5vF-bibZeSXxM2II",
+    "description": {
+      "name": "Institut Europa-HOS146",
+      "geo": {
+        "lat": 41.35589685673795,
+        "long": 2.113257381535079
+      }
+    },
+    "createdAt": "2024-10-07T10:03:40.786Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos146",
+        "name": "HOS146",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "hHWUOVgKNRJiRTrva8hAIKJpXycCWhccpIjnqOV9enU",
+    "thingToken": "aoo5oehvGd4Ni5R_4k5HDnXRm_Y6HAXh7dZOXgYmFzc",
+    "description": {
+      "name": "Escola Gornal-HOS044",
+      "geo": {
+        "lat": 41.35800213172508,
+        "long": 2.117626512218669
+      }
+    },
+    "createdAt": "2024-10-07T10:03:40.658Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos044",
+        "name": "HOS044",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "0VBpaeWPzqCqnTpgFSha7vbkdA3FZdGkNbyB9ZPIgKs",
+    "thingToken": "CiqQTtLE6cyVXFq4GkYBJ-wxCcy9c5GgvrxbyhmV7cs",
+    "description": {
+      "name": "Europa Fira-HOS091",
+      "geo": {
+        "lat": 41.3573884457036,
+        "long": 2.124599383383171
+      }
+    },
+    "createdAt": "2024-10-07T10:03:40.609Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos091",
+        "name": "HOS091",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "Z8qwgeeKKjdWX_ZCz3RGN9rf2CPHVqAgGxMbXXkfzBA",
+    "thingToken": "bcVtiGPL-CD99A8Q85R3RnC_Mb9hQg7Ge8IAzvMyVnM",
+    "description": {
+      "name": "Centre d'Atenció Primària Amadeu Torner (dte. III)-HOS014",
+      "geo": {
+        "lat": 41.36075277361944,
+        "long": 2.122105172295015
+      }
+    },
+    "createdAt": "2024-10-07T10:03:40.526Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos014",
+        "name": "HOS014",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "fVTfgyGVdVUtZwQ87xWzmAYS9BtGeWr0n-S-9cPMsA0",
+    "thingToken": "0CpT70aeQDy3H-r3tlUQhAOzX8OSrQAsg8GpO3LwcRc",
+    "description": {
+      "name": "CEMFO-HOS004",
+      "geo": {
+        "lat": 41.35642266948409,
+        "long": 2.1089592931807704
+      }
+    },
+    "createdAt": "2024-10-07T10:03:40.481Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos004",
+        "name": "HOS004",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "AS8_bHCHGttdludlV4AMAvVP901dw-6h84PLRHwFpqg",
+    "thingToken": "r_8-i_B6R-rzQtYbmqOqOcFHGNtUARgzMzCD9ydKhxY",
+    "description": {
+      "name": "Mercat Bellvitge-HOS118",
+      "geo": {
+        "lat": 41.35291618331664,
+        "long": 2.112201583383001
+      }
+    },
+    "createdAt": "2024-10-07T10:03:39.948Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos118",
+        "name": "HOS118",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "KQPE_ZW1QlrFU2PaJhOzJfwK-v5I4s7MdFTEiX2dOeM",
+    "thingToken": "9ZTIvEdCB3D3XU7XggVqc2ZuCjdcWlrGY3f3SoJ_20c",
+    "description": {
+      "name": "Biblioteca i escola bressol plaça Europa-HOS010",
+      "geo": {
+        "lat": 41.35985412714199,
+        "long": 2.1226581815352565
+      }
+    },
+    "createdAt": "2024-10-07T10:03:39.826Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos010",
+        "name": "HOS010",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "hRhW76tSNg8x6MhBGKaGq82vD78KdTdWtSUHnR_TuYU",
+    "thingToken": "DJe_QfnE82vDTIxXgpC4beZMK0B80UAcleQKtMOXbvA",
+    "description": {
+      "name": "Gornal-HOS092",
+      "geo": {
+        "lat": 41.35658775830969,
+        "long": 2.117755082523786
+      }
+    },
+    "createdAt": "2024-10-07T10:03:39.796Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos092",
+        "name": "HOS092",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "RlJzI9ShOFiSte3jXu8JP337FvhgRIzghS1ckUdyXz8",
+    "thingToken": "TCMCi_NrAOWjLCgV-eaN2trWvcSSQn95KZdbSX9LOLk",
+    "description": {
+      "name": "Centre Telecom. i Tecnologies de la Informació (CTTI)-HOS165",
+      "geo": {
+        "lat": 41.35437651238891,
+        "long": 2.12401888979552
+      }
+    },
+    "createdAt": "2024-10-07T10:03:39.780Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos165",
+        "name": "HOS165",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "bkd5cFEXtSF6u56mLUbHrlhCpm0A_kDjgqIaiCHy9xw",
+    "thingToken": "KcuqI_SIV4GC46Uj7_CCiw6arGzItFXcbz4h4Pv1yAE",
+    "description": {
+      "name": "Centre d'Atenció Primària Bellvitge (dte. VI)-HOS015",
+      "geo": {
+        "lat": 41.35017364521854,
+        "long": 2.1092471526993877
+      }
+    },
+    "createdAt": "2024-10-07T10:03:39.621Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos015",
+        "name": "HOS015",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "QWsmhSTHcmvethG1RX9AYGWf3nOBOaeXpn54PTeXPkk",
+    "thingToken": "PKATMzvr9mMt5g-BVbxrqmqfBSMM6UA0xlJjQLlckw8",
+    "description": {
+      "name": "Centre Municipal la Florida - Ana Díaz Rico-HOS023",
+      "geo": {
+        "lat": 41.36780316660146,
+        "long": 2.110279383383685
+      }
+    },
+    "createdAt": "2024-10-07T10:03:39.547Z",
+    "tags": [
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos023",
+        "name": "HOS023",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "0YbSMMYu8lYvaWZIY1S76sE0vYuko1otnFCclE8VJLA",
+    "thingToken": "UDGsJAm7ZpE3NNUr_ldauFwQOQ_Kq4_tROfX_8tUSIo",
+    "description": {
+      "name": "Can Boixeres (L5)-HOS081",
+      "geo": {
+        "lat": 41.36670685430617,
+        "long": 2.09147381037101
+      }
+    },
+    "createdAt": "2024-10-07T10:03:39.459Z",
+    "tags": [
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos081",
+        "name": "HOS081",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "13sVuGN2zpO_RIdW4Iq9oOChJqzgd0y6vD8dEKTzkM0",
+    "thingToken": "r1VMY7FY116E9-9F6MaC9QiQWS2iE_ZbNY-3UrAW_r4",
+    "description": {
+      "name": "Can Tries Gornal (L9)-HOS087",
+      "geo": {
+        "lat": 41.36084523006136,
+        "long": 2.1181612526998688
+      }
+    },
+    "createdAt": "2024-10-07T10:03:39.323Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos087",
+        "name": "HOS087",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "7Lb9O2gjDafVgyTa9GYwLXlT5JNyGVnNiE7beyZPj8U",
+    "thingToken": "latk2p9MM73eRJ9on06IOYTnep-_6jYRYp2ED6bPX-c",
+    "description": {
+      "name": "Rambla Just Oliveras (L1)-HOS086",
+      "geo": {
+        "lat": 41.36395220780424,
+        "long": 2.099970839206299
+      }
+    },
+    "createdAt": "2024-10-07T10:03:39.007Z",
+    "tags": [
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos086",
+        "name": "HOS086",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "jWkWBLCvetX-ujEVvAOVG9hqOGxEaQfSB0rydg2L3Dg",
+    "thingToken": "eAomNbHHOWtRzUSq9_9hC7RjfSJgMjkDM59waPVEHZk",
+    "description": {
+      "name": "Pubilla Cases (L5)-HOS085",
+      "geo": {
+        "lat": 41.37363279083411,
+        "long": 2.1068321103713363
+      }
+    },
+    "createdAt": "2024-10-07T10:03:38.868Z",
+    "tags": [
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos085",
+        "name": "HOS085",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "MW_5j0IjgAP8tJtvvQT398F6Nuel4RWHpS-JkztWF6o",
+    "thingToken": "9q3-M-M5oXSD5Z78hrs-9dta5_Jv4A-tXoXcPuM85po",
+    "description": {
+      "name": "Hospital General de L'Hospitalet-HOS032",
+      "geo": {
+        "lat": 41.374479537952126,
+        "long": 2.106587487916021
+      }
+    },
+    "createdAt": "2024-10-07T10:03:38.290Z",
+    "tags": [
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos032",
+        "name": "HOS032",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "zEuqzY1_aVHfndGQSc7v_Rg6z_MGYzG9b3ylvspsejU",
+    "thingToken": "UCFskEibEb159NQiYZjXuy8xdkeNnRHZDUs-v0k-oZ8",
+    "description": {
+      "name": "Can Serra (L1)-HOS079",
+      "geo": {
+        "lat": 41.36785590370389,
+        "long": 2.1035928968773763
+      }
+    },
+    "createdAt": "2024-10-07T10:03:37.957Z",
+    "tags": [
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos079",
+        "name": "HOS079",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "z76ZDwBe3UiP8bzI53WAkJz8SbM0jih_WnL02dluYXQ",
+    "thingToken": "Msz3uvljS_-45H7HMoCgHaSzU1ZakT8Va8xSXWQPSHI",
+    "description": {
+      "name": "Escola Mare de Déu de Bellvitge-HOS051",
+      "geo": {
+        "lat": 41.351694439701106,
+        "long": 2.107701754547507
+      }
+    },
+    "createdAt": "2024-10-07T09:59:45.904Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos051",
+        "name": "HOS051",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "uBYFyhygZJCI0Ge4W6PYUA73ld8inpMelttG8J4-_5s",
+    "thingToken": "Yk2g9xpQM0deLVSc_OYXFTN-OJbbKeGxmnmaEuczq4A",
+    "description": {
+      "name": "Area Basica de Serveis Socials - Districte VI-HOS027",
+      "geo": {
+        "lat": 41.352336592468866,
+        "long": 2.1141417163978398
+      }
+    },
+    "createdAt": "2024-10-07T09:59:45.820Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos027",
+        "name": "HOS027",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "6N_X7em9ir0cZY-rSD_steHkfQ-up5_w5zdrug8qqdM",
+    "thingToken": "DKiurPsnrfTjFDLI5aS1h9P1i9TIiDHX000Ze3unTuY",
+    "description": {
+      "name": "Institut Bellvitge-HOS143",
+      "geo": {
+        "lat": 41.35253819895971,
+        "long": 2.1138492257121415
+      }
+    },
+    "createdAt": "2024-10-07T09:59:45.691Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos143",
+        "name": "HOS143",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "uFu1loM_V2fNiW08AUEMX5lOf18tSp4oa6eYzYTrQf4",
+    "thingToken": "dtKsoFJBZB353b8TY0d9j0GVDE2k9-3B29YezGYZYeA",
+    "description": {
+      "name": "Edificio PUIG-HOS128",
+      "geo": {
+        "lat": 41.35766312267478,
+        "long": 2.1222155833831935
+      }
+    },
+    "createdAt": "2024-10-07T09:59:45.525Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos128",
+        "name": "HOS128",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "0Qohfq8s7zbpgyvrrI0SwOcKfCffpcMFwDmCbxdo1B8",
+    "thingToken": "lxN6tqfAL_gvl1OAgGtX-iCfFykP-oYPByoaD4n5Mbk",
+    "description": {
+      "name": "Bellvitge (L1)-HOS083",
+      "geo": {
+        "lat": 41.35258004503342,
+        "long": 2.1110691480466417
+      }
+    },
+    "createdAt": "2024-10-07T09:59:44.985Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos083",
+        "name": "HOS083",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "nX6PVDFCA0aMm-oieuuYBkQ61brCltGJcOlyqfgbKeU",
+    "thingToken": "qWFhs-1yvbA7HCo2i-IX5Ey4ZivFD25Fd0IgqMPXfSM",
+    "description": {
+      "name": "Provençana (L10)-HOS094",
+      "geo": {
+        "lat": 41.36154823335021,
+        "long": 2.124110725712506
+      }
+    },
+    "createdAt": "2024-10-07T09:59:44.889Z",
+    "tags": [
+      {
+        "_id": "hos094",
+        "name": "HOS094",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "X0dPEmB_9SeTlXPxRrkqymwt6VI73-IqE44rb3lx7J0",
+    "thingToken": "RP3ctpVHKMor29UKgA8yvgjoKxoAG7-f0qav3MIKd6k",
+    "description": {
+      "name": "Escola Pau Sans-HOS058",
+      "geo": {
+        "lat": 41.36229332110509,
+        "long": 2.1109706833834316
+      }
+    },
+    "createdAt": "2024-10-07T09:59:44.785Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos058",
+        "name": "HOS058",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "sOul7rzg_cG2J9q_gn9__YpkJvq1-3cuF-sf5KI9jbI",
+    "thingToken": "akl1dbwAKUkBme8yF-07orEn3ke46rbew2GZR0d3bKU",
+    "description": {
+      "name": "Cal Gotlla-HOS006",
+      "geo": {
+        "lat": 41.35337367560269,
+        "long": 2.1236383583524563
+      }
+    },
+    "createdAt": "2024-10-07T09:59:43.488Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos006",
+        "name": "HOS006",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "-Zn87saWKXXWT9exMBzCyifIwqdXoZil0lkU8-GwkTI",
+    "thingToken": "cK3BeaZhFvP36P01WMTokw-PBt-0oF-21QApIpfHGeI",
+    "description": {
+      "name": "Centre d'Atenció Primària Gornal (dte. VI)-HOS017",
+      "geo": {
+        "lat": 41.35741253318419,
+        "long": 2.116754798724928
+      }
+    },
+    "createdAt": "2024-10-07T09:59:43.397Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos017",
+        "name": "HOS017",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "Z3VW5iX_cwxHmIuvN5FgLVuBKhkxV4MgOpLXNa1jtCY",
+    "thingToken": "7INv1fW70OazZbbsfbIafNK-a6LT7SA17jTXCf33p10",
+    "description": {
+      "name": "Ca n'Arús-HOS070",
+      "geo": {
+        "lat": 41.358752748430774,
+        "long": 2.1020539220162515
+      }
+    },
+    "createdAt": "2024-10-07T09:59:43.366Z",
+    "tags": [
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos070",
+        "name": "HOS070",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "S1cBwlFGoPfTQ1yWpGA_9cRZ5uqCpZbDEwehlUx_Bao",
+    "thingToken": "283IUpX6HIgAweLvy56PUsS6jrhsQ3SIwJMppWb1AzM",
+    "description": {
+      "name": "Can Vidalet (L5)-HOS080",
+      "geo": {
+        "lat": 41.37153691052336,
+        "long": 2.0994447821438142
+      }
+    },
+    "createdAt": "2024-10-07T09:59:43.247Z",
+    "tags": [
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos080",
+        "name": "HOS080",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "N5SIhZKdojNXBA2AbDd8hzZ6uDvHopHQoUpIGPlRjIU",
+    "thingToken": "OhztdqMVChZ4HGxOiK5jIOCHXFjNVqcTUBq0eCBDGag",
+    "description": {
+      "name": "Escola La Marina-HOS049",
+      "geo": {
+        "lat": 41.35352359044607,
+        "long": 2.1090857857292793
+      }
+    },
+    "createdAt": "2024-10-07T09:59:43.222Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos049",
+        "name": "HOS049",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "aceL4gwdaDFoysngHsCGmhSNgHa4SFbIT4wRRpngC80",
+    "thingToken": "zAl3JVpwKLuvrSIvO_d4Em2JDtRRb_ObDGOFgi-35ko",
+    "description": {
+      "name": "Poliesportiu Municipal Gornal-HOS130",
+      "geo": {
+        "lat": 41.36030692938389,
+        "long": 2.118242894471688
+      }
+    },
+    "createdAt": "2024-10-07T09:59:43.216Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos130",
+        "name": "HOS130",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "32IF7gRibNzYdIPNsiJJ0bCVSBHWoehEzVkxjb5RD6M",
+    "thingToken": "0dTmeH99Gt5FnZ78TtCAH2jt-92Yl-xLwT6TcvUrgs0",
+    "description": {
+      "name": "Escola de Música - Centre de les Arts-HOS071",
+      "geo": {
+        "lat": 41.354507647313525,
+        "long": 2.11613428338308
+      }
+    },
+    "createdAt": "2024-10-07T09:59:43.081Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos071",
+        "name": "HOS071",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "GmshbRGGDYbJL9470Lz-DXiX7gsQX063ttNZKNfOflc",
+    "thingToken": "FlaSjm5JlwnUeXGmQiN11GbHwATSxyEuO3KNCue2AMg",
+    "description": {
+      "name": "Hospital de Bellvitge (L1)-HOS084",
+      "geo": {
+        "lat": 41.34474922997629,
+        "long": 2.1067297733007764
+      }
+    },
+    "createdAt": "2024-10-07T09:59:42.860Z",
+    "tags": [
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos084",
+        "name": "HOS084",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "N6FoUq9iF2GaHTcgz1jUGF5kLMDSBcX90LXx2qxRh5g",
+    "thingToken": "n5CNtrBR6mxxTjHr_QgjS1OlH_xr3tCphHd536-ajOc",
+    "description": {
+      "name": "Torrassa (L1)-HOS076",
+      "geo": {
+        "lat": 41.368552712546474,
+        "long": 2.1165833815356683
+      }
+    },
+    "createdAt": "2024-10-07T09:59:42.688Z",
+    "tags": [
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos076",
+        "name": "HOS076",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "s2C3Ef7K00Ud-rQqb9OdUiT99ptw6M4kItfnO_gDtv4",
+    "thingToken": "tHaCesQ2oCryMdAQrX82Ss5uY_Pfw5PptTmjllcEFvI",
+    "description": {
+      "name": "Centre d'Atenció Primària Florida (dte. IV)-HOS019",
+      "geo": {
+        "lat": 41.375055632809804,
+        "long": 2.111850253461704
+      }
+    },
+    "createdAt": "2024-10-07T09:59:42.560Z",
+    "tags": [
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos019",
+        "name": "HOS019",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ETCPaaWRKsNAHHk2CqIWxmHjQQDiIFerZtSJ_ZyExxk",
+    "thingToken": "pUWFqgQimwguoSc7iaxpe4s0zgZRTak9AKqRNczwiTU",
+    "description": {
+      "name": "Centre d'Atenció Primària Pura Fernández-HOS100",
+      "geo": {
+        "lat": 41.35669589455798,
+        "long": 2.1043768833831575
+      }
+    },
+    "createdAt": "2024-08-30T14:29:37.576Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos100",
+        "name": "HOS100",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "qmaZSs0Kv2-hvh22pWuD4EHa-hKEIRJD2fYEx2K2sAw",
+    "thingToken": "lshoqldu466cW79PqYKvide3Ef82J9BJICbBXTRdmmg",
+    "description": {
+      "name": "Ermita de Santa Eulàlia-HOS133",
+      "geo": {
+        "lat": 41.351584770026484,
+        "long": 2.109927531097601
+      }
+    },
+    "createdAt": "2024-08-30T14:28:57.872Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos133",
+        "name": "HOS133",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "zGvaHMX1CjFD5vTm0xphG4fiKuvqkaf2BPzw6P5HKFE",
+    "thingToken": "lgWg5COBoysPj2DahEaVmmbEitu6NB-oDpo5pO0yMlk",
+    "description": {
+      "name": "Fira (L9)-HOS074",
+      "geo": {
+        "lat": 41.356711245489535,
+        "long": 2.1259471559204863
+      }
+    },
+    "createdAt": "2024-08-30T14:26:24.058Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos074",
+        "name": "HOS074",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "CKzP1dS8TQTftYNwto4JpCBCXGU65-g542_mo61xE24",
+    "thingToken": "fMvyJvpi3xiNWN8ymF_ssWkSx6Vs17Sd3MrxoaEDkUo",
+    "description": {
+      "name": "Escola Joaquim Ruyra-HOS046",
+      "geo": {
+        "lat": 41.37625989224369,
+        "long": 2.111209236896805
+      }
+    },
+    "createdAt": "2024-08-30T14:26:23.986Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos046",
+        "name": "HOS046",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "adUMrGQS7FbGtn_eDyS2Q3GLbPi1yeb7VTLLPSXyaoI",
+    "thingToken": "9ybhTrYwgqTvs3M8o8ka4G6Q07PSSz0Vk_9XkCk7ZH0",
+    "description": {
+      "name": "Escola Puig i Gairalt-HOS064",
+      "geo": {
+        "lat": 41.37564228295669,
+        "long": 2.1068291968777477
+      }
+    },
+    "createdAt": "2024-08-30T14:26:23.934Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos064",
+        "name": "HOS064",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "1sssl26tcHBmq9AhOIk0uAIRHgOjzNHLPMTLCd8jHQs",
+    "thingToken": "pmsEaCc5Q60TlB7MxyYfEv84xlH16CcR0o2iWgsnWOE",
+    "description": {
+      "name": "Centre comercial Gran Via 2-HOS093",
+      "geo": {
+        "lat": 41.359020282116916,
+        "long": 2.1296873968769594
+      }
+    },
+    "createdAt": "2024-08-30T14:26:23.462Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos093",
+        "name": "HOS093",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "PjIAxcJ4yHaQMO4-DBnEo1f-onPKyBepAbwYyansZVU",
+    "thingToken": "itIN2pCNP_eRnUSaP2hFDlmFIFEke3uVVmsjwWVe1tM",
+    "description": {
+      "name": "Collblanc (L5)-HOS075",
+      "geo": {
+        "lat": 41.37600464448887,
+        "long": 2.118147359359333
+      }
+    },
+    "createdAt": "2024-08-30T14:24:30.072Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos075",
+        "name": "HOS075",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "e-SuEXaYHCX62sja3pb2S1ZQ2oidJR0nrosm-fAiIWo",
+    "thingToken": "OSzRfm5ZhVs6TerPwAXiID2xORwUAQGpP_IkLFdkAK8",
+    "description": {
+      "name": "Torre Barrina-HOS024",
+      "geo": {
+        "lat": 41.37545179029178,
+        "long": 2.117481366194221
+      }
+    },
+    "createdAt": "2024-08-30T14:24:30.061Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos024",
+        "name": "HOS024",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "z_P9uvRQNzBaU4e_QgtQ6YOUZ4aETjXaxinBq5mRxZI",
+    "thingToken": "bxejoSQgJT9LxssFeUU-szGuM56KrA_qG7IsdyGiuHA",
+    "description": {
+      "name": "Calzedonia-HOS105",
+      "geo": {
+        "lat": 41.35897219392181,
+        "long": 2.129535410370654
+      }
+    },
+    "createdAt": "2024-08-30T14:24:29.995Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos105",
+        "name": "HOS105",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "xZpO7-I8_HxJ99eXb4tXeIS6IsqhTyZEAyQnWaBoGFA",
+    "thingToken": "CCCTgLxIJ-Tr1wBu33iOIWcxHh2lRcltmi4v8XZKzRg",
+    "description": {
+      "name": "Avinguda Carrilet (L1)-HOS082",
+      "geo": {
+        "lat": 41.35815483134717,
+        "long": 2.102486268041469
+      }
+    },
+    "createdAt": "2024-08-30T14:24:29.990Z",
+    "tags": [
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos082",
+        "name": "HOS082",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "g6AT0UpPNaYCnzF9MxPviKJ6NQJC5wCbFfCbgJW_MrM",
+    "thingToken": "YjBjiR4V6ecuG3bCjzhQ9l3dGzQCFhFdewvief2KheU",
+    "description": {
+      "name": "Ikea-HOS095",
+      "geo": {
+        "lat": 41.35523421603335,
+        "long": 2.1239175615414947
+      }
+    },
+    "createdAt": "2024-08-30T14:24:29.860Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos095",
+        "name": "HOS095",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "mxgGetcIxkVXX-xoL5-I1yjEaqe8luzWS0NXB2RTATo",
+    "thingToken": "1tPX9-i_abWMl6QpVNDiUAq6M7hRsxEXHk6cZbXuSac",
+    "description": {
+      "name": "Bellvitge-HOS073",
+      "geo": {
+        "lat": 41.35216442906785,
+        "long": 2.1087577500400205
+      }
+    },
+    "createdAt": "2024-08-30T14:24:29.494Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos073",
+        "name": "HOS073",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "L_9RwLRCcZPfO-sZKq0G3PW2s7NrZ62MTrm6MrQV8zg",
+    "thingToken": "eTNDWjgacvxsYx9RV4Xd7iFsooc97GYE-i3smdjWUII",
+    "description": {
+      "name": "Institut Eugeni d'Ors-HOS141",
+      "geo": {
+        "lat": 41.38201847968107,
+        "long": 2.1152532926095313
+      }
+    },
+    "createdAt": "2024-08-30T14:24:29.293Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos141",
+        "name": "HOS141",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "nyBWPuwkutgUYKkRcsQdjuOYywvjirZY78T_HbxXdUs",
+    "thingToken": "P1ZJiwAm9nfxHmMzHuJlFmGjetP4QRpdlJChiK_Iv4o",
+    "description": {
+      "name": "Escola Màrius Torres-HOS052",
+      "geo": {
+        "lat": 41.37586603668318,
+        "long": 2.115805373586468
+      }
+    },
+    "createdAt": "2024-08-30T14:16:54.568Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos052",
+        "name": "HOS052",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "FI6zNPJm4LqxwriW-bjr0s1ZX0wVoOMG-Ws6mS7AGxo",
+    "thingToken": "PmC569xLewyCzqH2UOaOpgCwOdd64JGCEsRNKWVqk0A",
+    "description": {
+      "name": "Escola Prat de la Manta-HOS063",
+      "geo": {
+        "lat": 41.359986821232674,
+        "long": 2.127480352699837
+      }
+    },
+    "createdAt": "2024-08-30T14:16:54.210Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos063",
+        "name": "HOS063",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "nt538PsA7V_POiex5JgMt1j36NDb_WU9gOVHM9S5Efw",
+    "thingToken": "57tvXgoM9DygfcMj_KRzDL2OrB24P41kYJdTvyNEzy8",
+    "description": {
+      "name": "Residència Collblanc Companys Socials-HOS138",
+      "geo": {
+        "lat": 41.375977733182395,
+        "long": 2.1216407429029718
+      }
+    },
+    "createdAt": "2024-08-30T14:16:54.175Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos138",
+        "name": "HOS138",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "DDmTohU4W7dCdLxpm5IdoX9eroAU3PNaiiem_XDL9eY",
+    "thingToken": "HxtwmvmvG3NXz-iMCOOr-yWZOwhjL3WVqyQ7E44TrWI",
+    "description": {
+      "name": "Institut Santa Eulàlia-HOS151",
+      "geo": {
+        "lat": 41.36570544218876,
+        "long": 2.127616077533189
+      }
+    },
+    "createdAt": "2024-08-30T14:16:54.118Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos151",
+        "name": "HOS151",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "SmFXVLvd6qBOdfPaW_YnOD4Qj40-Toheim-JzrZQzVQ",
+    "thingToken": "X2Wnqc3ZTToShB_aArnE52xbavTTEFbg3My0M9AWeuA",
+    "description": {
+      "name": "Escola Patufet Sant Jordi-HOS056",
+      "geo": {
+        "lat": 41.357714373223935,
+        "long": 2.1027371257123595
+      }
+    },
+    "createdAt": "2024-08-30T14:16:54.089Z",
+    "tags": [
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos056",
+        "name": "HOS056",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "k2CQjG1ODfygt6VQ0pjCEVs_PNqqdXCCUlwACUK1XjI",
+    "thingToken": "HdRrQCssWBYKt-IA_De9IzKEoARJOAx6HXRCXYbRqO8",
+    "description": {
+      "name": "Poliesportiu Municipal Fum d'Estampa-HOS110",
+      "geo": {
+        "lat": 41.37526699079505,
+        "long": 2.114915610371404
+      }
+    },
+    "createdAt": "2024-08-30T14:16:54.082Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos110",
+        "name": "HOS110",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "Relg675zvk4jgGbRQX4gMAaHIOYqjm5f0NSMuLdIuPs",
+    "thingToken": "eB0Ny-St53kmlmv_9B2ISUyRSKZWRW4ZVI9j_h35W6Y",
+    "description": {
+      "name": "Mercat Merca-2 Bellvitge-HOS117",
+      "geo": {
+        "lat": 41.35100929689533,
+        "long": 2.1103918103702894
+      }
+    },
+    "createdAt": "2024-08-30T14:16:54.032Z",
+    "tags": [
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "metro",
+        "name": "metro",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos117",
+        "name": "HOS117",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "H-W89ddBkNF43YxlyKipgJXVxLkHUTdIFdzq67rwIqs",
+    "thingToken": "DbwhAEDL5s4Zn4fFQWeCgdclyqccKw5cBk9hWhkSF7g",
+    "description": {
+      "name": "Escola Prat de la Manta-HOS063",
+      "geo": {
+        "lat": 41.359986821232674,
+        "long": 2.127480352699837
+      }
+    },
+    "createdAt": "2024-08-30T14:16:18.838Z",
+    "tags": [
+      {
+        "_id": "hos063",
+        "name": "HOS063",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "6xUqnu1Yg0SaFq7G3ckOzNmxxdTc_mE72_PJ4i8Mk7E",
+    "thingToken": "qycO_zX5BK9NhhnPpwtmjNC0A0zR6fr29ZBduDwCCaw",
+    "description": {
+      "name": "Escola Bressol Nova Fortuny-HOS096",
+      "geo": {
+        "lat": 41.37545458852764,
+        "long": 2.122055483384039
+      }
+    },
+    "createdAt": "2024-08-30T14:16:18.672Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos096",
+        "name": "HOS096",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "A1vGQhOMlJnsDSDebFuc7jE57bRgQiwgNdnv6l5ycz8",
+    "thingToken": "ER4BFpeZ7POKXtaSoWMCByOSG1QmzQ8aXQSDx3hSYqQ",
+    "description": {
+      "name": "Edificio de viviendas C. Prat-HOS162",
+      "geo": {
+        "lat": 41.32949515298887,
+        "long": 2.0980672216451253
+      }
+    },
+    "createdAt": "2024-08-30T14:16:18.671Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos162",
+        "name": "HOS162",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "elniMCDW9yND7glxqosm2HTGk7Wwnlok_eejdrT-xvA",
+    "thingToken": "VLoGfp010ezQEzkRvLv8vljcBqVBIoSL2jY_7yPGCKM",
+    "description": {
+      "name": "Hospital Duran i Reynals - Institut Catala Oncologia-HOS031",
+      "geo": {
+        "lat": 41.34602589245683,
+        "long": 2.1114213229176655
+      }
+    },
+    "createdAt": "2024-08-30T14:16:18.599Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "renfe",
+        "name": "renfe",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos031",
+        "name": "HOS031",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "BNMII7uTTZt59Z_z6Ze0KxV5WCJhS-sLbKFfXikrZ74",
+    "thingToken": "MyE1VJFJSax-F01vNYJRpI1cRIryOMGBdGQUXp6JKkM",
+    "description": {
+      "name": "Casa dels Cargols-HOS029",
+      "geo": {
+        "long": 2.120963920621763,
+        "lat": 41.371127544620045
+      }
+    },
+    "createdAt": "2024-08-30T14:16:18.490Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos029",
+        "name": "HOS029",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "weeR9bqBJ0Kv4_PQQDjxfXp89I4mJucUVE7XEZnGPOo",
+    "thingToken": "fPK5FSKR-5D93rvw2uctFDI4GeDTbPE0pQH1X51RRKk",
+    "description": {
+      "name": "Institut Mercè Rodoreda-HOS147",
+      "geo": {
+        "lat": 41.356224615455446,
+        "long": 2.103577932649638
+      }
+    },
+    "createdAt": "2024-08-30T14:16:18.474Z",
+    "tags": [
+      {
+        "_id": "bus",
+        "name": "bus",
+        "organizationId": 33788
+      },
+      {
+        "_id": "ferrocarril",
+        "name": "ferrocarril",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos147",
+        "name": "HOS147",
+        "organizationId": 33788
+      }
+    ]
+  }
+]

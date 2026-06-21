@@ -1,0 +1,1999 @@
+{
+  "_meta": {
+    "created_at": "2026-06-21T20:51:11.929285",
+    "source": "thethings",
+    "phase": "resources_probe",
+    "base_structure_snapshot": "C:\\Users\\jordi\\source\\repos\\pielh\\pielh_v02\\data\\thethings_snapshots\\latest\\thethings_structure_only.json",
+    "sensors_total": 1564,
+    "sensors_processed": 20,
+    "limit_samples": 1,
+    "mode": "probe_candidates",
+    "master_modified": false
+  },
+  "sensors": [
+    {
+      "id": "HOS044-S01-01",
+      "hos": "HOS044",
+      "system_id": "S01",
+      "system_name": "RUIDO",
+      "thing_id": "SnHdcxnnzpD1Z79Dvxs_8O-CkgSE79MVRI3j6T0DxEk",
+      "thing_token_present": true,
+      "platform_last_seen": "2026-06-21T18:27:17.706Z",
+      "resources": [
+        {
+          "resource": "noise",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:17.753Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "noise_avg_d",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-20T21:59:59.000Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "noise_avg_h",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T17:59:59.000Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "noise_avg_w",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-14T21:59:59.000Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "has_any_resource": true,
+      "has_real_data": true,
+      "last_seen": "2026-06-21T18:50:17.753Z",
+      "errors_count": 0
+    },
+    {
+      "id": "HOS044-S01-01",
+      "hos": "HOS044",
+      "system_id": "S01",
+      "system_name": "RUIDO",
+      "thing_id": "suj9PiI4JbekaYqNnsbjaQY2kR1TrCjFT1KOvxdOzPU",
+      "thing_token_present": true,
+      "platform_last_seen": null,
+      "resources": [
+        {
+          "resource": "noise",
+          "exists": false,
+          "has_data": false,
+          "samples_count": 0,
+          "last_seen": null,
+          "last_value_type": null,
+          "http_status": 404,
+          "error": null
+        },
+        {
+          "resource": "noise_avg_d",
+          "exists": false,
+          "has_data": false,
+          "samples_count": 0,
+          "last_seen": null,
+          "last_value_type": null,
+          "http_status": 404,
+          "error": null
+        },
+        {
+          "resource": "noise_avg_h",
+          "exists": false,
+          "has_data": false,
+          "samples_count": 0,
+          "last_seen": null,
+          "last_value_type": null,
+          "http_status": 404,
+          "error": null
+        },
+        {
+          "resource": "noise_avg_w",
+          "exists": false,
+          "has_data": false,
+          "samples_count": 0,
+          "last_seen": null,
+          "last_value_type": null,
+          "http_status": 404,
+          "error": null
+        }
+      ],
+      "has_any_resource": false,
+      "has_real_data": false,
+      "last_seen": null,
+      "errors_count": 0
+    },
+    {
+      "id": "HOS136-S01-01 (T257517)",
+      "hos": "HOS136",
+      "system_id": "S01",
+      "system_name": "RUIDO",
+      "thing_id": "XzMNdYAN5eNT1UNnkgGcoT6Zb1kO9QeLauwy9m-pon8",
+      "thing_token_present": true,
+      "platform_last_seen": null,
+      "resources": [
+        {
+          "resource": "noise",
+          "exists": false,
+          "has_data": false,
+          "samples_count": 0,
+          "last_seen": null,
+          "last_value_type": null,
+          "http_status": 404,
+          "error": null
+        },
+        {
+          "resource": "noise_avg_d",
+          "exists": false,
+          "has_data": false,
+          "samples_count": 0,
+          "last_seen": null,
+          "last_value_type": null,
+          "http_status": 404,
+          "error": null
+        },
+        {
+          "resource": "noise_avg_h",
+          "exists": false,
+          "has_data": false,
+          "samples_count": 0,
+          "last_seen": null,
+          "last_value_type": null,
+          "http_status": 404,
+          "error": null
+        },
+        {
+          "resource": "noise_avg_w",
+          "exists": false,
+          "has_data": false,
+          "samples_count": 0,
+          "last_seen": null,
+          "last_value_type": null,
+          "http_status": 404,
+          "error": null
+        }
+      ],
+      "has_any_resource": false,
+      "has_real_data": false,
+      "last_seen": null,
+      "errors_count": 0
+    },
+    {
+      "id": "HOS519-S02-01 BET00230150",
+      "hos": "HOS519",
+      "system_id": "S02",
+      "system_name": "CONTAMINACIÓN EXTERIOR",
+      "thing_id": "Q7rnvv_KWKbM44_5cMOcOwC5UvkkkNp3HQw9TIPtpkg",
+      "thing_token_present": true,
+      "platform_last_seen": "2026-06-21T18:26:47.754Z",
+      "resources": [
+        {
+          "resource": "temperature",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.847Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.847Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "no2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.847Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "o3",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.847Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm1",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.847Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm10",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.847Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm25",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.847Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pressure",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.847Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.847Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "has_any_resource": true,
+      "has_real_data": true,
+      "last_seen": "2026-06-21T18:48:46.847Z",
+      "errors_count": 0
+    },
+    {
+      "id": "HOS521-S02-01 BET00230152",
+      "hos": "HOS521",
+      "system_id": "S02",
+      "system_name": "CONTAMINACIÓN EXTERIOR",
+      "thing_id": "04G1c1BHHYT8ZfIZk3fdA1YTIhxYlkFNbYADI22DL3Q",
+      "thing_token_present": true,
+      "platform_last_seen": "2026-06-21T18:26:47.753Z",
+      "resources": [
+        {
+          "resource": "temperature",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.440Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.440Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "no2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.440Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "o3",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.440Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm1",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.440Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm10",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.440Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm25",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.440Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pressure",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.440Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.440Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "has_any_resource": true,
+      "has_real_data": true,
+      "last_seen": "2026-06-21T18:48:46.440Z",
+      "errors_count": 0
+    },
+    {
+      "id": "HOS509-S02-01 BET00230065",
+      "hos": "HOS509",
+      "system_id": "S02",
+      "system_name": "CONTAMINACIÓN EXTERIOR",
+      "thing_id": "7UD3c1Cr8KiFODz0zQQNnMxJn6xyq6jBKixNUGO9AmI",
+      "thing_token_present": true,
+      "platform_last_seen": "2026-06-21T18:26:47.692Z",
+      "resources": [
+        {
+          "resource": "temperature",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.866Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.866Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "no2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.866Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "o3",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.866Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm1",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.866Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm10",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.866Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm25",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.866Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pressure",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.866Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.866Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "has_any_resource": true,
+      "has_real_data": true,
+      "last_seen": "2026-06-21T18:48:46.866Z",
+      "errors_count": 0
+    },
+    {
+      "id": "HOS102-S02-01 BET00230042",
+      "hos": "HOS102",
+      "system_id": "S02",
+      "system_name": "CONTAMINACIÓN EXTERIOR",
+      "thing_id": "YwZ06s4-aeESCU3tFvYvA3N_Xl9VQQabwi7swBFUUw8",
+      "thing_token_present": true,
+      "platform_last_seen": "2026-06-21T18:26:47.599Z",
+      "resources": [
+        {
+          "resource": "temperature",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.805Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.805Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "no2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.805Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "o3",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.805Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm1",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.805Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm10",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.805Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm25",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.805Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pressure",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.805Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.805Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "has_any_resource": true,
+      "has_real_data": true,
+      "last_seen": "2026-06-21T18:48:46.805Z",
+      "errors_count": 0
+    },
+    {
+      "id": "HOS517-S02-01 BET00230148",
+      "hos": "HOS517",
+      "system_id": "S02",
+      "system_name": "CONTAMINACIÓN EXTERIOR",
+      "thing_id": "P3HrZp_UOHxDamPu1AOSWEWQSYmfAp-uqQMNOEx6EdA",
+      "thing_token_present": true,
+      "platform_last_seen": "2026-06-21T18:26:47.598Z",
+      "resources": [
+        {
+          "resource": "temperature",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:44.359Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:44.359Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "no2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:44.359Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "o3",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:44.359Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm1",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:44.359Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm10",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:44.359Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm25",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:44.359Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pressure",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:44.359Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:44.359Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "has_any_resource": true,
+      "has_real_data": true,
+      "last_seen": "2026-06-21T18:48:44.359Z",
+      "errors_count": 0
+    },
+    {
+      "id": "HOS515-S02-01 BET00230146",
+      "hos": "HOS515",
+      "system_id": "S02",
+      "system_name": "CONTAMINACIÓN EXTERIOR",
+      "thing_id": "AQK8RQ0DtE9zlFRoIdswWl9sic8ORoRnqvPhbEDRv3s",
+      "thing_token_present": true,
+      "platform_last_seen": "2026-06-21T18:26:47.572Z",
+      "resources": [
+        {
+          "resource": "temperature",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.099Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.099Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "no2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.099Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "o3",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.099Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm1",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.099Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm10",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.099Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm25",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.099Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pressure",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.099Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.099Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "has_any_resource": true,
+      "has_real_data": true,
+      "last_seen": "2026-06-21T18:48:46.099Z",
+      "errors_count": 0
+    },
+    {
+      "id": "HOS503-S02-01 BET00230058",
+      "hos": "HOS503",
+      "system_id": "S02",
+      "system_name": "CONTAMINACIÓN EXTERIOR",
+      "thing_id": "r_4Rww_t5HWcFuobge3-V0XthVyfDKGJle_4-Ta6u3o",
+      "thing_token_present": true,
+      "platform_last_seen": "2026-06-21T18:26:47.548Z",
+      "resources": [
+        {
+          "resource": "temperature",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.571Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.571Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "no2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.571Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "o3",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.571Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm1",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.571Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm10",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.571Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm25",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.571Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pressure",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.571Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:46.571Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "has_any_resource": true,
+      "has_real_data": true,
+      "last_seen": "2026-06-21T18:48:46.571Z",
+      "errors_count": 0
+    },
+    {
+      "id": "HOS103-S02-01 BET00230036",
+      "hos": "HOS103",
+      "system_id": "S02",
+      "system_name": "CONTAMINACIÓN EXTERIOR",
+      "thing_id": "7j4-Kdha3KXwjMVsOaaiKU0AjokWHJ97J8FWxm9XbjU",
+      "thing_token_present": true,
+      "platform_last_seen": "2026-06-21T18:26:47.529Z",
+      "resources": [
+        {
+          "resource": "temperature",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:45.897Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:45.897Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "no2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:45.897Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "o3",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:45.897Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm1",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:45.897Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm10",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:45.897Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm25",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:45.897Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pressure",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:48:45.897Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.782Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "has_any_resource": true,
+      "has_real_data": true,
+      "last_seen": "2026-06-21T18:50:46.782Z",
+      "errors_count": 0
+    },
+    {
+      "id": "HOS508-S02-01 BET00230064",
+      "hos": "HOS508",
+      "system_id": "S02",
+      "system_name": "CONTAMINACIÓN EXTERIOR",
+      "thing_id": "1NwDlCAwmCjKzsgAtcqg0tON7JFd9vXKJQ-m1PejYjw",
+      "thing_token_present": true,
+      "platform_last_seen": "2026-06-21T18:26:47.463Z",
+      "resources": [
+        {
+          "resource": "temperature",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.210Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.210Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "no2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.210Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "o3",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.210Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm1",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.210Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm10",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.210Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm25",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.210Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pressure",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.210Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.210Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "has_any_resource": true,
+      "has_real_data": true,
+      "last_seen": "2026-06-21T18:50:45.210Z",
+      "errors_count": 0
+    },
+    {
+      "id": "HOS157-S02-01 BET00230040",
+      "hos": "HOS157",
+      "system_id": "S02",
+      "system_name": "CONTAMINACIÓN EXTERIOR",
+      "thing_id": "ZwlgXpeLiKRjN2rlOqTtUMX2hUg5d0xyC9MuQcMycEI",
+      "thing_token_present": true,
+      "platform_last_seen": "2026-06-21T18:26:47.352Z",
+      "resources": [
+        {
+          "resource": "temperature",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.024Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.024Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "no2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.023Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "o3",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.023Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm1",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.023Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm10",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.024Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm25",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.024Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pressure",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.024Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.023Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "has_any_resource": true,
+      "has_real_data": true,
+      "last_seen": "2026-06-21T18:50:45.024Z",
+      "errors_count": 0
+    },
+    {
+      "id": "HOS504-S02-01 BET00230059",
+      "hos": "HOS504",
+      "system_id": "S02",
+      "system_name": "CONTAMINACIÓN EXTERIOR",
+      "thing_id": "G556UP-SDICJ0z-uUi77YJ8nkBQLIfS4JiskOjqASlc",
+      "thing_token_present": true,
+      "platform_last_seen": "2026-06-21T18:26:47.352Z",
+      "resources": [
+        {
+          "resource": "temperature",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:47.024Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:47.024Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "no2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:47.024Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "o3",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:47.024Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm1",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:47.024Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm10",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:47.024Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm25",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:47.024Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pressure",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:47.024Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:47.024Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "has_any_resource": true,
+      "has_real_data": true,
+      "last_seen": "2026-06-21T18:50:47.024Z",
+      "errors_count": 0
+    },
+    {
+      "id": "BET00230154",
+      "hos": null,
+      "system_id": "S02",
+      "system_name": "CONTAMINACIÓN EXTERIOR",
+      "thing_id": "vyoObnVyAQLIp0G5lnS0BtrQliPxCRohVG5pEP9kHA4",
+      "thing_token_present": true,
+      "platform_last_seen": "2026-06-21T18:26:47.291Z",
+      "resources": [
+        {
+          "resource": "temperature",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.244Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.244Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "no2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.244Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "o3",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.244Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm1",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.244Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm10",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.244Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm25",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.244Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pressure",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.244Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:45.244Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "has_any_resource": true,
+      "has_real_data": true,
+      "last_seen": "2026-06-21T18:50:45.244Z",
+      "errors_count": 0
+    },
+    {
+      "id": "HOS506-S02-01 BET00230062",
+      "hos": "HOS506",
+      "system_id": "S02",
+      "system_name": "CONTAMINACIÓN EXTERIOR",
+      "thing_id": "_0TrX0h06wO2WDeo8mNhgL1Z3Fjm7aeAQz8SyD20EX0",
+      "thing_token_present": true,
+      "platform_last_seen": "2026-06-21T18:26:47.101Z",
+      "resources": [
+        {
+          "resource": "temperature",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:44.295Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:44.295Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "no2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:44.295Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "o3",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:44.295Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm1",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:44.295Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm10",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:44.295Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm25",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:44.295Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pressure",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:44.295Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:44.295Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "has_any_resource": true,
+      "has_real_data": true,
+      "last_seen": "2026-06-21T18:50:44.295Z",
+      "errors_count": 0
+    },
+    {
+      "id": "HOS024-S02-01-BET00230039",
+      "hos": "HOS024",
+      "system_id": "S02",
+      "system_name": "CONTAMINACIÓN EXTERIOR",
+      "thing_id": "5ZNeqH6IoaRddPT_tGfAFrGPQ58Sd3kEohKXgDvw5oQ",
+      "thing_token_present": true,
+      "platform_last_seen": "2026-06-21T18:26:47.097Z",
+      "resources": [
+        {
+          "resource": "temperature",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.590Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.590Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "no2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.590Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "o3",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.590Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm1",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.590Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm10",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.590Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm25",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.590Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pressure",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.590Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.590Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "has_any_resource": true,
+      "has_real_data": true,
+      "last_seen": "2026-06-21T18:50:46.590Z",
+      "errors_count": 0
+    },
+    {
+      "id": "HOS522-S02-01 BET00230153",
+      "hos": "HOS522",
+      "system_id": "S02",
+      "system_name": "CONTAMINACIÓN EXTERIOR",
+      "thing_id": "QnlazOHYON_6VJ-NCX5bj8jua403B3l-Tjca_oqrLAc",
+      "thing_token_present": true,
+      "platform_last_seen": "2026-06-21T18:26:47.096Z",
+      "resources": [
+        {
+          "resource": "temperature",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:44.474Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:44.474Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "no2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:44.474Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "o3",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:44.474Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm1",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:44.474Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm10",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:44.474Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm25",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:44.474Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pressure",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:44.474Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:44.474Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "has_any_resource": true,
+      "has_real_data": true,
+      "last_seen": "2026-06-21T18:50:44.474Z",
+      "errors_count": 0
+    },
+    {
+      "id": "HOS128-S02-01 BET00230038",
+      "hos": "HOS128",
+      "system_id": "S02",
+      "system_name": "CONTAMINACIÓN EXTERIOR",
+      "thing_id": "r07qpMIayX32SrVzIqaBCfjywHOuhqm5on4ADF9kRFg",
+      "thing_token_present": true,
+      "platform_last_seen": "2026-06-21T18:26:46.980Z",
+      "resources": [
+        {
+          "resource": "temperature",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.618Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.618Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "no2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.618Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "o3",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.618Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm1",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.618Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm10",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.618Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm25",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.618Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pressure",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.618Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.618Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "has_any_resource": true,
+      "has_real_data": true,
+      "last_seen": "2026-06-21T18:50:46.618Z",
+      "errors_count": 0
+    },
+    {
+      "id": "HOS516-S02-01 BET00230147",
+      "hos": "HOS516",
+      "system_id": "S02",
+      "system_name": "CONTAMINACIÓN EXTERIOR",
+      "thing_id": "L2xhnj5lUBGO58StMy8AmW6viTQwptqRK548rbtH5k8",
+      "thing_token_present": true,
+      "platform_last_seen": "2026-06-21T18:26:46.686Z",
+      "resources": [
+        {
+          "resource": "temperature",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.726Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.726Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "no2",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.726Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "o3",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.726Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm1",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.726Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm10",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.726Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pm25",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.726Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "pressure",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.726Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "co",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:50:46.726Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "has_any_resource": true,
+      "has_real_data": true,
+      "last_seen": "2026-06-21T18:50:46.726Z",
+      "errors_count": 0
+    }
+  ],
+  "summary_by_system": {
+    "S01": {
+      "sensors_processed": 3,
+      "sensors_with_data": 1,
+      "system_name": "RUIDO",
+      "resources_found": [
+        "noise",
+        "noise_avg_d",
+        "noise_avg_h",
+        "noise_avg_w"
+      ],
+      "errors": 0,
+      "last_seen": "2026-06-21T18:50:17.753Z"
+    },
+    "S02": {
+      "sensors_processed": 17,
+      "sensors_with_data": 17,
+      "system_name": "CONTAMINACIÓN EXTERIOR",
+      "resources_found": [
+        "co",
+        "co2",
+        "no2",
+        "o3",
+        "pm1",
+        "pm10",
+        "pm25",
+        "pressure",
+        "temperature"
+      ],
+      "errors": 0,
+      "last_seen": "2026-06-21T18:50:47.024Z"
+    }
+  },
+  "errors": []
+}

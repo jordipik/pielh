@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-20T15:55:34.853835+00:00",
-  "backup": "C:\\Users\\jordi\\source\\repos\\pielh\\pielh_v02\\data\\backups\\pielh_qa_master_20260620_175534.json",
+  "generated_at": "2026-06-21T08:04:51.371777+00:00",
+  "backup": "C:\\Users\\jordi\\source\\repos\\pielh\\pielh_v02\\data\\backups\\pielh_qa_master_20260621_100451.json",
   "total_candidates": 81,
   "applied": 81,
   "skipped": 0,
@@ -18,8 +18,8 @@
     "HOS066": 2,
     "HOS154": 2,
     "HOS146": 2,
-    "HOS141": 1,
     "HOS064": 1,
+    "HOS141": 1,
     "HOS054": 1,
     "HOS030": 1,
     "HOS046": 1,
@@ -43,21 +43,21 @@
   "skipped_reasons": {},
   "applied_sample": [
     {
-      "thing_id": "IO84v5Kxec9yLuQU_G-EEGeIhhtW4y6gS3a9byaQ7ZE",
-      "sensor_id": "S4E-HOS010",
+      "thing_id": "CMpnq1N3oSHY48JwtcTlF4DbddU5mzUHcGCtJl5xyJQ",
+      "sensor_id": "S4E-HOS064",
       "category": "BUILDING_MATCH_BY_ID",
-      "hos": "HOS010",
-      "building_name": "HOS010 Bibl. i esc. pl. Europa",
+      "hos": "HOS064",
+      "building_name": "HOS064 Esc. Puig i Gairalt",
       "changes": {
-        "hos": "HOS010",
-        "building_name": "HOS010 Bibl. i esc. pl. Europa",
-        "district_code": "DISTRITO-3",
-        "district_name": "Distrito III",
-        "neighborhood_key": "SANTA EULÀLIA",
-        "neighborhood": "Santa Eulàlia",
+        "hos": "HOS064",
+        "building_name": "HOS064 Esc. Puig i Gairalt",
+        "district_code": "DISTRITO-5",
+        "district_name": "Distrito V",
+        "neighborhood_key": "PUBILLA CASES",
+        "neighborhood": "Pubilla Cases",
         "type": "EDUCACION",
         "zone": "RESIDENCIAL",
-        "street_etra": "C._HERRERO"
+        "street_etra": "AV_J_MOLINS"
       }
     },
     {
@@ -79,21 +79,21 @@
       }
     },
     {
-      "thing_id": "CMpnq1N3oSHY48JwtcTlF4DbddU5mzUHcGCtJl5xyJQ",
-      "sensor_id": "S4E-HOS064",
+      "thing_id": "XSSoWPOE8p992l48obY6JmlkzYngtRWiJB7rdVvaIrs",
+      "sensor_id": "S4E-HOS027",
       "category": "BUILDING_MATCH_BY_ID",
-      "hos": "HOS064",
-      "building_name": "HOS064 Esc. Puig i Gairalt",
+      "hos": "HOS027",
+      "building_name": "HOS027 A. B. B. S. - Dte. VI",
       "changes": {
-        "hos": "HOS064",
-        "building_name": "HOS064 Esc. Puig i Gairalt",
-        "district_code": "DISTRITO-5",
-        "district_name": "Distrito V",
-        "neighborhood_key": "PUBILLA CASES",
-        "neighborhood": "Pubilla Cases",
-        "type": "EDUCACION",
+        "hos": "HOS027",
+        "building_name": "HOS027 A. B. B. S. - Dte. VI",
+        "district_code": "DISTRITO-6",
+        "district_name": "Distrito VI",
+        "neighborhood_key": "BELLVITGE",
+        "neighborhood": "Bellvitge",
+        "type": "ADMINISTRATIVO",
         "zone": "RESIDENCIAL",
-        "street_etra": "AV_J_MOLINS"
+        "street_etra": "AV_AMÈRICA"
       }
     },
     {
@@ -112,24 +112,6 @@
         "type": "EDUCACION",
         "zone": "RESIDENCIAL",
         "street_etra": "C._J_VERDAGUER"
-      }
-    },
-    {
-      "thing_id": "XSSoWPOE8p992l48obY6JmlkzYngtRWiJB7rdVvaIrs",
-      "sensor_id": "S4E-HOS027",
-      "category": "BUILDING_MATCH_BY_ID",
-      "hos": "HOS027",
-      "building_name": "HOS027 A. B. B. S. - Dte. VI",
-      "changes": {
-        "hos": "HOS027",
-        "building_name": "HOS027 A. B. B. S. - Dte. VI",
-        "district_code": "DISTRITO-6",
-        "district_name": "Distrito VI",
-        "neighborhood_key": "BELLVITGE",
-        "neighborhood": "Bellvitge",
-        "type": "ADMINISTRATIVO",
-        "zone": "RESIDENCIAL",
-        "street_etra": "AV_AMÈRICA"
       }
     },
     {
@@ -220,6 +202,24 @@
         "type": "ADMINISTRATIVO",
         "zone": "RESIDENCIAL",
         "street_etra": "C._RIERA_CREU"
+      }
+    },
+    {
+      "thing_id": "OnvkGxY_iCpi-F0xnzwnLyRpk9KXzgu7QCYz7zr1ywk",
+      "sensor_id": "S4E-HOS153",
+      "category": "BUILDING_MATCH_BY_ID",
+      "hos": "HOS153",
+      "building_name": "HOS153 Institut Can Vilumara",
+      "changes": {
+        "hos": "HOS153",
+        "building_name": "HOS153 Institut Can Vilumara",
+        "district_code": "DISTRITO-1",
+        "district_name": "Distrito I",
+        "neighborhood_key": "CENTRE",
+        "neighborhood": "Centre",
+        "type": "EDUCACION",
+        "zone": "RESIDENCIAL",
+        "street_etra": "AV_J_TARRADELLAS_J"
       }
     }
   ],

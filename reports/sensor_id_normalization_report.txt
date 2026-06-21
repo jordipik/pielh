@@ -1,0 +1,1580 @@
+Sensor ID Normalization Report
+Fecha  : 2026-06-20T22:46:25.523084
+Backup : C:\Users\jordi\source\repos\pielh\pielh_v02\data\backups\pielh_qa_master_before_sensor_id_normalization_20260620_224625.json
+
+Total sensores revisados    : 1564
+Sin hos (omitidos)          : 382
+Ya normalizados (omitidos)  : 0
+id_old creados              : 1182
+Sensores renombrados        : 804
+Sensores marcados OLD       : 161
+Grupos con duplicados       : 267
+Errores                     : 0
+
+Sensores sin hos (omitidos):
+  'BET00230154' | system_id=S02
+  'BET00230154' | system_id=S02
+  'S4E-HOS030' | system_id=S04
+  'S4E-HOS045' | system_id=S04
+  'S4E-HOS046' | system_id=S04
+  'S4E-HOS033-1' | system_id=S04
+  'S4E-HOS033' | system_id=S04
+  'S4E-HOS153' | system_id=S04
+  'S4E-HOS099' | system_id=S04
+  'S4E-HOS150' | system_id=S04
+  'S4E-HOS040' | system_id=S04
+  'S4E-HOS060' | system_id=S04
+  'S4E-HOS010' | system_id=S04
+  'S4E-HOS141' | system_id=S04
+  'S4E-HOS064' | system_id=S04
+  'S4E-HOS054' | system_id=S04
+  'S4E-HOS027' | system_id=S04
+  'S4E-HOS148' | system_id=S04
+  'S4E-HOS034' | system_id=S04
+  'S4E-HOS144' | system_id=S04
+  'S4E-HOS041' | system_id=S04
+  'S4E-HOS022' | system_id=S04
+  'S4E-HOS066' | system_id=S04
+  'S4E-HOS043' | system_id=S04
+  'S4E-HOS048' | system_id=S04
+  'S4E-HOS154' | system_id=S04
+  'S4E-HOS034' | system_id=S04
+  'S4E-HOS146' | system_id=S04
+  'S4E-HOS026' | system_id=S04
+  'S4E-HOS152' | system_id=S04
+  'S4E-HOS004' | system_id=S04
+  'S4E-143' | system_id=S04
+  'S4E-HOS061' | system_id=S04
+  'S4E-HOS025' | system_id=S04
+  'S4E-HOS065' | system_id=S04
+  'S4E-HOS069' | system_id=S04
+  'SISTEMA_4' | system_id=S04
+  'S4E-HOS003' | system_id=S04
+  'S4E-HOS023' | system_id=S04
+  'Aj L'H-Casa Consistorial-HOS001' | system_id=S04
+  '22323387990187' | system_id=S05
+  '22324388010270' | system_id=S05
+  '22324388010270' | system_id=S05
+  '22323387990069' | system_id=S05
+  '22324388010283' | system_id=S05
+  '22324388010284' | system_id=S05
+  '22323387990187' | system_id=S05
+  'SISTEMA_5' | system_id=S05
+  'I17BE085778O' | system_id=S06
+  'I17BD014384G' | system_id=S06
+  'H23VA083135U' | system_id=S06
+  'D16TD053003Y' | system_id=S06
+  'I17BC041526Y' | system_id=S06
+  'I17BD096770I' | system_id=S06
+  'I17BE063112M' | system_id=S06
+  'S06-01 I17BC095962D' | system_id=S06
+  'D17BA245795C' | system_id=S06
+  'D16FE086647C' | system_id=S06
+  'H23VA864747G' | system_id=S06
+  'D15TC125050O' | system_id=S06
+  'I16BD105801Y' | system_id=S06
+  'Deixalleria Municipal - HOS132-S06-01 I17BD045696M' | system_id=S06
+  'I19BC062758S' | system_id=S06
+  'I18BC030788S' | system_id=S06
+  'I18BD012202M' | system_id=S06
+  'I18BE082533S' | system_id=S06
+  'I18BD033258Q' | system_id=S06
+  'I19BB015889I' | system_id=S06
+  'I18BC012582E' | system_id=S06
+  'I19BD042447D' | system_id=S06
+  'I18BD033597G' | system_id=S06
+  'I20BD020143F' | system_id=S06
+  'I18BD039671X' | system_id=S06
+  'I20BD036673D' | system_id=S06
+  'Bibl. i esc. pl. Europa - HOS010-S06-01 I22BD035149C' | system_id=S06
+  'I22BD053196L' | system_id=S06
+  'I22BD089718C' | system_id=S06
+  'I21BE056200A' | system_id=S06
+  'I22LA020277R' | system_id=S06
+  'I20BD078435T' | system_id=S06
+  'I22BD089717B' | system_id=S06
+  'I20LA078279G' | system_id=S06
+  'I21BD015287S' | system_id=S06
+  'I22BC092123D' | system_id=S06
+  'I21BB036576Y' | system_id=S06
+  'I21BD022197K' | system_id=S06
+  'I21BC007276L' | system_id=S06
+  'I22BB051758B' | system_id=S06
+  'I22BC056178O' | system_id=S06
+  'I22BC022199O' | system_id=S06
+  'I26BB006351N' | system_id=S06
+  'P25AD361634T' | system_id=S06
+  'I25BD102387U' | system_id=S06
+  'P24UG742875Q' | system_id=S06
+  'P24UF737486P' | system_id=S06
+  'P24AB721542X' | system_id=S06
+  'P23UH800297G' | system_id=S06
+  'P23FA018698V' | system_id=S06
+  'P22UF521430S' | system_id=S06
+  'P22UE716341M' | system_id=S06
+  'P22UE716336P' | system_id=S06
+  'P20VA163658V' | system_id=S06
+  'P19UF026339P' | system_id=S06
+  'P19UE040018G' | system_id=S06
+  'P19UE039966U' | system_id=S06
+  'P18UG043847A' | system_id=S06
+  'P18UE276483R' | system_id=S06
+  'P18UE276339K' | system_id=S06
+  'P18AD500332D' | system_id=S06
+  'I25BD024186Z' | system_id=S06
+  'I24LA138052L' | system_id=S06
+  'I24BD057468Y' | system_id=S06
+  'I24BC057126Y' | system_id=S06
+  'I23BE066999T' | system_id=S06
+  'I23BE024445O' | system_id=S06
+  'I23BD017868H' | system_id=S06
+  'I23BD011418N' | system_id=S06
+  'I23BD005562F' | system_id=S06
+  'I23BC010176D' | system_id=S06
+  'I23BB001380X' | system_id=S06
+  'I22LA020277R' | system_id=S06
+  'I22BD089718C' | system_id=S06
+  '' | system_id=S06
+  'I22BD089717B' | system_id=S06
+  'I22BD053196L' | system_id=S06
+  'I22BC092123D' | system_id=S06
+  'I22BC092123D' | system_id=S06
+  'I22BC056178O' | system_id=S06
+  'I22BC056178O' | system_id=S06
+  'I22BC022199O' | system_id=S06
+  'I22BC022199O' | system_id=S06
+  'D8683450377492801I21BE056200A' | system_id=S06
+  'I21BD017030D' | system_id=S06
+  'I21BD015287S' | system_id=S06
+  'I21BC007276L' | system_id=S06
+  'I21BB036576Y' | system_id=S06
+  'I20LA078279G' | system_id=S06
+  'I20BD078435T' | system_id=S06
+  'I20BD036673D' | system_id=S06
+  'I20BD020143F' | system_id=S06
+  'I19BD042447D' | system_id=S06
+  'I19BB015889I' | system_id=S06
+  'I18BE082533S' | system_id=S06
+  'I18BD033597G' | system_id=S06
+  'I18BD033258Q' | system_id=S06
+  'I18BC012582E' | system_id=S06
+  'I17BE063112M' | system_id=S06
+  'I17BD096770I' | system_id=S06
+  'I17BD014384G' | system_id=S06
+  'H23VA083135U' | system_id=S06
+  'H23VA083135U' | system_id=S06
+  'H23VA083135U' | system_id=S06
+  'H23VA083135U' | system_id=S06
+  'D17BA245795C' | system_id=S06
+  'D16TD053003Y' | system_id=S06
+  'D15TC125050O' | system_id=S06
+  'P21UE000954H' | system_id=S06
+  'P16VA111023D' | system_id=S06
+  'I23BB012089G' | system_id=S06
+  'I23BB012089G' | system_id=S06
+  'I22BB051758B' | system_id=S06
+  'I19BC062758S' | system_id=S06
+  'I18BD012202M' | system_id=S06
+  'I18BD012202M' | system_id=S06
+  'I18BD012202M' | system_id=S06
+  'I17BE085778O' | system_id=S06
+  'I17BE085778O' | system_id=S06
+  'I17BE085778O' | system_id=S06
+  'I17BE085778O' | system_id=S06
+  'I17BE085778O' | system_id=S06
+  'I17BC041526Y' | system_id=S06
+  'I16BD105801Y' | system_id=S06
+  'H23VA864747G' | system_id=S06
+  'Esc. Br. Garabatos - HOS097-S06-01 P22FA007729T' | system_id=S06
+  'Radio-TV de L'Hospitalet - HOS088-S06-01 I24LA138394E' | system_id=S06
+  'Bibl. i esc. pl. Europa - HOS010-S06-01 I22BD035149C' | system_id=S06
+  'I20LA223736D' | system_id=S06
+  'J25FA091773F' | system_id=S06
+  'P23AD727226R' | system_id=S06
+  'P19UE039975V' | system_id=S06
+  'I23BD021926H' | system_id=S06
+  'I22BC001723Y' | system_id=S06
+  'I22BB010257N' | system_id=S06
+  'I20LA228706R' | system_id=S06
+  'I20BB038156H' | system_id=S06
+  'I18BD039671X' | system_id=S06
+  'I18BC030788S' | system_id=S06
+  'I17BF045531G' | system_id=S06
+  'S06-01 I17BC095962D' | system_id=S06
+  'S06-01 H23VA120599M' | system_id=S06
+  'ZZ-DUPLICADO D18BA010631X' | system_id=S06
+  'S06-01 D17BA087741E' | system_id=S06
+  'S06-01 D16BA113364X' | system_id=S06
+  '0018b24000019623' | system_id=S07
+  '0018b24000019407' | system_id=S07
+  '0018b2400001962e' | system_id=S07
+  '0018b2400001961f-HOS045' | system_id=S07
+  '0018b24000019612' | system_id=S07
+  '0018b24000019632' | system_id=S07
+  '0018b240000198aa' | system_id=S07
+  '0018b240000198a3' | system_id=S07
+  '0018b2400001962d' | system_id=S07
+  '0018b2400001989a' | system_id=S07
+  '0018b2400001961a' | system_id=S07
+  '0018b240000193f3' | system_id=S07
+  '0018b24000019858 - Edificio 1' | system_id=S07
+  '1112' | system_id=S08
+  '1113' | system_id=S08
+  '1092' | system_id=S08
+  '1117' | system_id=S08
+  '1122' | system_id=S08
+  '1119' | system_id=S08
+  '1121' | system_id=S08
+  'test' | system_id=S14A
+  '215285' | system_id=S14A
+  '70B3D5CEC0000371' | system_id=S21
+  '70B3D5CEC0000386' | system_id=S21
+  '70B3D5CEC0000380' | system_id=S21
+  '70B3D5CEC0000376' | system_id=S21
+  '70B3D5CEC0000351' | system_id=S21
+  '70B3D5CEC00003CE' | system_id=S21
+  '70B3D5CEC000040B' | system_id=S21
+  '70B3D5CEC0000396' | system_id=S21
+  '70B3D5CEC000007E' | system_id=S21
+  '70B3D5CEC0000394' | system_id=S21
+  '70B3D5CEC0000040' | system_id=S21
+  '70B3D5CEC000039A' | system_id=S21
+  '70B3D5CEC00003DC' | system_id=S21
+  '70B3D5CEC00003FD' | system_id=S21
+  '70B3D5CEC000037C' | system_id=S21
+  '70B3D5CEC000034C' | system_id=S21
+  '70B3D5CEC00003A5' | system_id=S21
+  '70B3D5CEC000040F' | system_id=S21
+  '70B3D5CEC00003C4' | system_id=S21
+  '70B3D5CEC0000402' | system_id=S21
+  '70B3D5CEC0000389' | system_id=S21
+  '70B3D5CEC0000373' | system_id=S21
+  '70B3D5CEC00003AD' | system_id=S21
+  '70B3D5CEC0000393' | system_id=S21
+  '70B3D5CEC0000399' | system_id=S21
+  '70B3D5CEC000037F' | system_id=S21
+  '70B3D5CEC00003F4' | system_id=S21
+  '70B3D5CEC000039F' | system_id=S21
+  '70B3D5CEC000040E' | system_id=S21
+  '70B3D5CEC000034F' | system_id=S21
+  '70B3D5CEC00003B6' | system_id=S21
+  '70B3D5CEC00003A5' | system_id=S21
+  '70B3D5CEC000007E' | system_id=S21
+  '70B3D5CEC0000394' | system_id=S21
+  '70B3D5CEC0000040' | system_id=S21
+  '70B3D5CEC000039A' | system_id=S21
+  '70B3D5CEC000037C' | system_id=S21
+  '70B3D5CEC00003DC' | system_id=S21
+  '70B3D5CEC0000396' | system_id=S21
+  '70B3D5CEC00003CE' | system_id=S21
+  '70B3D5CEC0000351' | system_id=S21
+  '70B3D5CEC0000380' | system_id=S21
+  '70B3D5CEC0000386' | system_id=S21
+  '70B3D5CEC0000371' | system_id=S21
+  '70B3D5CEC00003B6' | system_id=S21
+  '70B3D5CEC00003F4' | system_id=S21
+  '70B3D5CEC000037F' | system_id=S21
+  '70B3D5CEC0000399' | system_id=S21
+  '70B3D5CEC0000393' | system_id=S21
+  '70B3D5CEC00003AD' | system_id=S21
+  '70B3D5CEC000034F' | system_id=S21
+  '70B3D5CEC000040E' | system_id=S21
+  '70B3D5CEC0000373' | system_id=S21
+  '70B3D5CEC0000389' | system_id=S21
+  '70B3D5CEC0000402' | system_id=S21
+  '70B3D5CEC00003C4' | system_id=S21
+  '70B3D5CEC000040F' | system_id=S21
+  '70B3D5CEC000034C' | system_id=S21
+  '70B3D5CEC00003FD' | system_id=S21
+  '70B3D5CEC0000376' | system_id=S21
+  '70B3D5CEC000038E' | system_id=S21
+  '70B3D5CEC000038E' | system_id=S21
+  'Ikea-HOS095' | system_id=S22
+  'Torrassa (L1)-HOS076' | system_id=S22
+  'Can Boixeres (L5)-HOS081' | system_id=S22
+  'Can Serra (L1)-HOS079' | system_id=S22
+  'Bellvitge-HOS073' | system_id=S22
+  'Centre comercial Gran Via 2-HOS093' | system_id=S22
+  'Can Vidalet (L5)-HOS080' | system_id=S22
+  'Centre d'Atenció Primària Pura Fernández-HOS100' | system_id=S22
+  'Escola de Música - Centre de les Arts-HOS071' | system_id=S22
+  'IFP (Innovación en Formación Profesional)-HOS140' | system_id=S22
+  'Pubilla Cases (L5)-HOS085' | system_id=S22
+  'Gornal-HOS092' | system_id=S22
+  'Centre d'Atenció Primària Gornal (dte. VI)-HOS017' | system_id=S22
+  'Can Tries Gornal (L9)-HOS087' | system_id=S22
+  'Europa Fira-HOS091' | system_id=S22
+  'Centre Telecom. i Tecnologies de la Informació (CTTI)-HOS165' | system_id=S22
+  'Residència Collblanc Companys Socials-HOS138' | system_id=S22
+  'Bellvitge (L1)-HOS083' | system_id=S22
+  'L'Hospitalet de Llogregat-HOS072' | system_id=S22
+  'Avinguda Carrilet (L1)-HOS082' | system_id=S22
+  'Centre d'Atenció Primària Florida (dte. IV)-HOS019' | system_id=S22
+  'Rambla Just Oliveras (L1)-HOS086' | system_id=S22
+  'Collblanc (L5)-HOS075' | system_id=S22
+  'Institut Jaume Botey - HOS154' | system_id=S22
+  'Institut Europa - HOS146' | system_id=S22
+  'Institut Bellvitge-HOS143' | system_id=S22
+  'Edificio PUIG - HOS128' | system_id=S22
+  'CGG Provençana - HOS123' | system_id=S22
+  'Esc. Ramon Muntaner - HOS066' | system_id=S22
+  'Esc. Br. Nova Fortuny - HOS096' | system_id=S22
+  'Esc. Josep Janes - HOS047' | system_id=S22
+  'Esc. Gornal - HOS044' | system_id=S22
+  'A. B. B. S. - Dte. VI - HOS027' | system_id=S22
+  'Esc. Bernat Metge - HOS040' | system_id=S22
+  'CGG Santa Eulalia - HOS015' | system_id=S22
+  'Cal Gotlla - HOS006' | system_id=S22
+  'Bibl. i esc. pl. Europa-HOS010' | system_id=S22
+  'CGG de la Torrassa - HOS014' | system_id=S22
+  'Centre de Rehabilitació Rambla Marina i Servei de Proves - Institut Català de la Salut (dte. VI)-HOS013' | system_id=S22
+  'LH_MAIN' | system_id=S22
+  'DIPRO-MTI' | system_id=S22
+  'ID0200J23007500313' | system_id=SIP
+  'ID0200J23007500261' | system_id=SIP
+  'ID0200J23007500262' | system_id=SIP
+  'ID0200J23007500231' | system_id=SIP
+  'ID0200J23007500255' | system_id=SIP
+  'ID0200J23007500358' | system_id=SIP
+  'ID0200J23007500236' | system_id=SIP
+  'ID0200J23007500273' | system_id=SIP
+  'ID0200J23007500247' | system_id=SIP
+  'ID0200J23007500254' | system_id=SIP
+  'ID0200J23007500344' | system_id=SIP
+  'ID0200J23007500282' | system_id=SIP
+  'ID0200J23007500275' | system_id=SIP
+  'ID0200J23007500199' | system_id=SIP
+  'ID0200J23007500274' | system_id=SIP
+  'ID0200J23007500317' | system_id=SIP
+  'ID0200J23007500258' | system_id=SIP
+  'ID0200J23007500271' | system_id=SIP
+  'ID0200J23007500338' | system_id=SIP
+  'ID0200J23007500373' | system_id=SIP
+  'ID0200J23007500383' | system_id=SIP
+  'ID0200J23007500257' | system_id=SIP
+  'ID0200J23007500259' | system_id=SIP
+  'ID0200J23007500319' | system_id=SIP
+  'ID0200J23007500264' | system_id=SIP
+  'ID0200J23007500268' | system_id=SIP
+  'ID0200J23007500334' | system_id=SIP
+  'ID0200J23007500281' | system_id=SIP
+  'ID0200J23007500322' | system_id=SIP
+  'ID0200J23007500245' | system_id=SIP
+  'ID0200J23007500260' | system_id=SIP
+  'ID0200J23007500388' | system_id=SIP
+  'ID0200J23007500283' | system_id=SIP
+  'ID0200J23007500140' | system_id=SIP
+  'ID0200J23007500331' | system_id=SIP
+  'ID0200J23007500325' | system_id=SIP
+  'ID0200J23007500263' | system_id=SIP
+  'ID0200J23007500312' | system_id=SIP
+  'ID0200J23007500315' | system_id=SIP
+  'ID0200J23007500252' | system_id=SIP
+  'ID0200J23007500336' | system_id=SIP
+  'ID0200J23007500238' | system_id=SIP
+  'ID0200J23007500340' | system_id=SIP
+  'ID0200J23007500362' | system_id=SIP
+  'ID0200J23007500278' | system_id=SIP
+  'ID0200J23007500345' | system_id=SIP
+  'ID0200J23007500253' | system_id=SIP
+  'ID0200J23007500341' | system_id=SIP
+  'ID0200J23007500337' | system_id=SIP
+  'ID0200J23007500191' | system_id=SIP
+  'ID0200J23007500331' | system_id=SIP
+  'ID0200J23007500383' | system_id=SIP
+  'ID0200J23007500191' | system_id=SIP
+  'IPEX1' | system_id=SIP
+  'ID0200J23007500196' | system_id=SIP
+  'ID0200J23007500343' | system_id=SIP
+  'ID0200J23007500409' | system_id=SIP
+  'ID0200J23007500415' | system_id=SIP
+  'ID0200J23007500415' | system_id=SIP
+  'ID0200J23007500342' | system_id=SIP
+  'ID0200J23007500398' | system_id=SIP
+  'ID0200J23007500399' | system_id=SIP
+  'ID0200J23007500316' | system_id=SIP
+  'ID0200J23007500141' | system_id=SIP
+
+Cambios realizados:
+  [HOS001-S03]  'HOS001-S03-01'  ->  'HOS001-S03-01'
+  [HOS001-S04]  'HOS001'  ->  'HOS001-S04-01'
+  [HOS001-S04]  'HOS001-S04-01'  ->  'Old-HOS001-S04-02'
+  [HOS001-S06]  'HOS001-S06-01 I19BD035462J'  ->  'HOS001-S06-01'
+  [HOS001-S06]  'HOS001-S06-01 I19BD035462J'  ->  'HOS001-S06-02'
+  [HOS001-S08]  'HOS001-S08-01'  ->  'HOS001-S08-01'
+  [HOS001-S08]  'HOS001-2'  ->  'HOS001-S08-02'
+  [HOS001-S08]  'HOS001-S08-02'  ->  'HOS001-S08-03'
+  [HOS001-S08]  'HOS001-1'  ->  'HOS001-S08-04'
+  [HOS001-S09]  'HOS001-S09-08'  ->  'HOS001-S09-01'
+  [HOS001-S09]  'HOS001-S09-01'  ->  'HOS001-S09-02'
+  [HOS001-S09]  'HOS001-S09-05'  ->  'HOS001-S09-03'
+  [HOS001-S09]  'HOS001-S09-06'  ->  'HOS001-S09-04'
+  [HOS001-S09]  'HOS001-S09-09'  ->  'HOS001-S09-05'
+  [HOS001-S09]  'HOS001-S09-07'  ->  'HOS001-S09-06'
+  [HOS001-S09]  'HOS001-S09-03'  ->  'HOS001-S09-07'
+  [HOS001-S09]  'HOS001-S09-04'  ->  'HOS001-S09-08'
+  [HOS001-S09]  'HOS001-S09-02'  ->  'HOS001-S09-09'
+  [HOS001-S15]  'HOS001-S15-01'  ->  'HOS001-S15-01'
+  [HOS001-S20]  'HOS001-S20-01'  ->  'HOS001-S20-01'
+  [HOS001-S21]  'HOS001-S21-01'  ->  'HOS001-S21-01'
+  [HOS001-S22]  'HOS001 Aj L'H-Casa Consistorial'  ->  'HOS001-S22-01'
+  [HOS001-S22]  'Aj L'H-Casa Consistorial - HOS001'  ->  'Old-HOS001-S22-02'
+  [HOS001-S22]  'Ajuntament de L'Hospitalet - Casa Consistorial-HOS001'  ->  'Old-HOS001-S22-03'
+  [HOS001-SIP]  'HOS001-IPEX04-ID0200J23007500258'  ->  'HOS001-SIP-01'
+  [HOS001-SIP]  'HOS001-IPEX04-ID0200J23007500322'  ->  'HOS001-SIP-02'
+  [HOS001-SIP]  'HOS001-IPEX04-ID0200J23007500260'  ->  'HOS001-SIP-03'
+  [HOS001-SIP]  'HOS001-IPEX04-ID0200J23007500325'  ->  'HOS001-SIP-04'
+  [HOS002-S06]  'Aj L'H-Ed. Migdia - HOS002-S06-01 D16UH084259X'  ->  'HOS002-S06-01'
+  [HOS002-S06]  'Aj L'H-Ed. Migdia - HOS002-S06-01 D16UH084259X'  ->  'HOS002-S06-02'
+  [HOS002-S21]  'HOS002-S21-01'  ->  'HOS002-S21-01'
+  [HOS002-S22]  'HOS002 Aj L'H-Ed. Migdia'  ->  'HOS002-S22-01'
+  [HOS002-S22]  'Aj L'H-Ed. Migdia - HOS002'  ->  'Old-HOS002-S22-02'
+  [HOS002-S22]  'Ajuntament de L'Hospitalet - Ed. Migdia-HOS002'  ->  'Old-HOS002-S22-03'
+  [HOS003-S04]  'HOS003-S04-01'  ->  'HOS003-S04-01'
+  [HOS003-S05]  'HOS003-S05-01'  ->  'HOS003-S05-01'
+  [HOS003-S05]  'HOS003-S05-01'  ->  'Old-HOS003-S05-02'
+  [HOS003-S06]  'Aj L'H-Ed. Girona - HOS003-S06-01 I22BB010103W'  ->  'HOS003-S06-01'
+  [HOS003-S06]  'Aj L'H-Ed. Girona - HOS003-S06-01 I22BB010103W'  ->  'HOS003-S06-02'
+  [HOS003-S09]  'HOS003-S09-01'  ->  'HOS003-S09-01'
+  [HOS003-S15]  'HOS003-S15-01'  ->  'HOS003-S15-01'
+  [HOS003-S20]  'HOS003-S20-01'  ->  'HOS003-S20-01'
+  [HOS003-S21]  'HOS003-S21-01'  ->  'HOS003-S21-01'
+  [HOS003-S22]  'HOS003 Aj L'H-Ed. Girona'  ->  'HOS003-S22-01'
+  [HOS003-S22]  'Ajuntament de L'Hospitalet - Ed. Girona-HOS003'  ->  'Old-HOS003-S22-02'
+  [HOS003-S22]  'Aj L'H-Ed. Girona - HOS003'  ->  'Old-HOS003-S22-03'
+  [HOS003-SIP]  'HOS003-IPEX04-ID0200J23007500140'  ->  'HOS003-SIP-01'
+  [HOS004-S04]  'HOS004-S04-01'  ->  'HOS004-S04-01'
+  [HOS004-S05]  'HOS004-S05-01'  ->  'HOS004-S05-01'
+  [HOS004-S05]  'HOS004-S05-01'  ->  'Old-HOS004-S05-02'
+  [HOS004-S06]  'CEMFO - HOS004-S06-01 I17BE046798C'  ->  'HOS004-S06-01'
+  [HOS004-S06]  'CEMFO - HOS004-S06-01 I17BE046798C'  ->  'HOS004-S06-02'
+  [HOS004-S07]  'CEMFO - 0018b24000019306 - HOS004'  ->  'HOS004-S07-01'
+  [HOS004-S09]  'HOS004-S09-01'  ->  'HOS004-S09-01'
+  [HOS004-S15]  'HOS004-S15-02'  ->  'HOS004-S15-01'
+  [HOS004-S15]  'HOS004-S15-03'  ->  'HOS004-S15-02'
+  [HOS004-S15]  'HOS004-S15-01'  ->  'HOS004-S15-03'
+  [HOS004-S19]  'HOS004-S19-01'  ->  'HOS004-S19-01'
+  [HOS004-S20]  'HOS004-S20-01'  ->  'HOS004-S20-01'
+  [HOS004-S21]  'HOS004-S21-01'  ->  'HOS004-S21-01'
+  [HOS004-S22]  'HOS004 CEMFO'  ->  'HOS004-S22-01'
+  [HOS004-S22]  'CEMFO - HOS004'  ->  'Old-HOS004-S22-02'
+  [HOS004-S22]  'CEMFO-HOS004'  ->  'Old-HOS004-S22-03'
+  [HOS004-SIP]  'HOS004-IPEX04-ID0200J23007500315'  ->  'HOS004-SIP-01'
+  [HOS004-SIP]  'HOS004-IPEX04-ID0200J23007500319'  ->  'HOS004-SIP-02'
+  [HOS005-S05]  'HOS005-S05-01'  ->  'HOS005-S05-01'
+  [HOS005-S05]  'HOS005-S05-01'  ->  'Old-HOS005-S05-02'
+  [HOS005-S06]  'Edificio Cobalt - HOS005-S06-01 P24VA123225Q'  ->  'HOS005-S06-01'
+  [HOS005-S09]  'HOS005-S09-01'  ->  'HOS005-S09-01'
+  [HOS005-S19]  'HOS005-S19-01'  ->  'HOS005-S19-01'
+  [HOS005-S20]  'HOS005-S20-01'  ->  'HOS005-S20-01'
+  [HOS005-S21]  'HOS005'  ->  'HOS005-S21-01'
+  [HOS005-S21]  'HOS005'  ->  'HOS005-S21-02'
+  [HOS005-S21]  'HOS005'  ->  'Old-HOS005-S21-03'
+  [HOS005-S21]  'HOS005-S21-01'  ->  'Old-HOS005-S21-04'
+  [HOS005-S22]  'HOS005 Edificio Cobalt'  ->  'HOS005-S22-01'
+  [HOS005-S22]  'Edificio Cobalt (archivo municipal)-HOS005'  ->  'Old-HOS005-S22-02'
+  [HOS005-S22]  'Edificio Cobalt-HOS005'  ->  'Old-HOS005-S22-03'
+  [HOS005-SIP]  'HOS005-IPEX04-ID0200J23007500373'  ->  'HOS005-SIP-01'
+  [HOS006-S05]  'HOS006-S05-01'  ->  'HOS006-S05-01'
+  [HOS006-S06]  'Cal Gotlla - HOS006-S06-01 D18BA388376I'  ->  'HOS006-S06-01'
+  [HOS006-S06]  'Cal Gotlla - HOS006-S06-01 D18BA388376I'  ->  'HOS006-S06-02'
+  [HOS006-S09]  'HOS006-S09-01'  ->  'HOS006-S09-01'
+  [HOS006-S20]  'HOS006-S20-01'  ->  'HOS006-S20-01'
+  [HOS006-S21]  'HOS006-S21-01'  ->  'HOS006-S21-01'
+  [HOS006-S22]  'Cal Gotlla-HOS006'  ->  'HOS006-S22-01'
+  [HOS006-S22]  'HOS006 Cal Gotlla'  ->  'HOS006-S22-02'
+  [HOS006-SIP]  'HOS006-IPEX04-ID0200J23007500330'  ->  'HOS006-SIP-01'
+  [HOS007-S06]  'Biblioteca Can Sumarro - HOS007-S06-01 I17BD504878W'  ->  'HOS007-S06-01'
+  [HOS007-S06]  'Biblioteca Can Sumarro - HOS007-S06-01 I17BD504878W'  ->  'HOS007-S06-02'
+  [HOS007-S21]  'HOS007-S21-01'  ->  'HOS007-S21-01'
+  [HOS007-S22]  'HOS007 Biblioteca Can Sumarro'  ->  'HOS007-S22-01'
+  [HOS007-S22]  'Biblioteca Can Sumarro-HOS007'  ->  'Old-HOS007-S22-02'
+  [HOS007-S22]  'Biblioteca Can Sumarro - HOS007'  ->  'Old-HOS007-S22-03'
+  [HOS008-S04]  'HOS008-S04-01'  ->  'HOS008-S04-01'
+  [HOS008-S06]  'Bibl. i C. C. la Bòbila - HOS008-S06-01 P18UF031335N'  ->  'HOS008-S06-01'
+  [HOS008-S09]  'HOS008-S09-01'  ->  'HOS008-S09-01'
+  [HOS008-S21]  'HOS008-S21-01'  ->  'HOS008-S21-01'
+  [HOS008-S22]  'Biblioteca i Centre Cultural la Bòbila-HOS008'  ->  'HOS008-S22-01'
+  [HOS008-SIP]  'HOS008-IPEX04-ID0200J23007500310'  ->  'HOS008-SIP-01'
+  [HOS009-S06]  'Biblioteca la Florida - HOS009-S06-01 D17BA214472T'  ->  'HOS009-S06-01'
+  [HOS009-S06]  'Biblioteca la Florida - HOS009-S06-01 D17BA214472T'  ->  'HOS009-S06-02'
+  [HOS009-S22]  'Biblioteca la Florida-HOS009'  ->  'HOS009-S22-01'
+  [HOS010-S04]  'HOS010-S04-01'  ->  'HOS010-S04-01'
+  [HOS010-S08]  'HOS010-1'  ->  'HOS010-S08-01'
+  [HOS010-S08]  'HOS010-2'  ->  'HOS010-S08-02'
+  [HOS010-S09]  'HOS010-S09-01'  ->  'HOS010-S09-01'
+  [HOS010-S22]  'Biblioteca i escola bressol plaça Europa-HOS010'  ->  'HOS010-S22-01'
+  [HOS010-S22]  'HOS010 Bibl. i esc. pl. Europa'  ->  'HOS010-S22-02'
+  [HOS010-SIP]  'HOS010-IPEX04-ID0200J23007500334'  ->  'HOS010-SIP-01'
+  [HOS011-S02]  'HOS011-S02-01 BET00210039'  ->  'HOS011-S02-01'
+  [HOS011-S22]  'Bombers de L'Hospitalet-HOS011'  ->  'HOS011-S22-01'
+  [HOS012-S05]  'HOS012-S05-01'  ->  'HOS012-S05-01'
+  [HOS012-S05]  'HOS012-S05-01'  ->  'Old-HOS012-S05-02'
+  [HOS012-S08]  'HOS012-S08-02'  ->  'HOS012-S08-01'
+  [HOS012-S08]  'HOS012-1'  ->  'HOS012-S08-02'
+  [HOS012-S08]  'HOS012-2'  ->  'HOS012-S08-03'
+  [HOS012-S08]  'HOS012-S08-01'  ->  'HOS012-S08-04'
+  [HOS012-S09]  'HOS012-S09-01'  ->  'HOS012-S09-01'
+  [HOS012-S20]  'HOS012-S20-01'  ->  'HOS012-S20-01'
+  [HOS012-S21]  'HOS012-S21-01'  ->  'HOS012-S21-01'
+  [HOS012-S22]  'HOS012 Cement. Mun. L'Hospitalet'  ->  'HOS012-S22-01'
+  [HOS012-S22]  'Cementerio Municipal L'Hospitalet-HOS012'  ->  'Old-HOS012-S22-02'
+  [HOS012-S22]  'Cement. Mun. L'Hospitalet - HOS012'  ->  'Old-HOS012-S22-03'
+  [HOS013-S22]  'HOS013 CGG Sanfeliu'  ->  'HOS013-S22-01'
+  [HOS013-S22]  'CGG Sanfeliu-HOS013'  ->  'Old-HOS013-S22-02'
+  [HOS013-S22]  'Centre d'Atenció Primària Rb.Marina (dte. VI)-HOS013'  ->  'Old-HOS013-S22-03'
+  [HOS013-SIP]  'HOS013-IPEX04-ID0200J23007500335'  ->  'HOS013-SIP-01'
+  [HOS014-S22]  'HOS014 CGG de la Torrassa'  ->  'HOS014-S22-01'
+  [HOS014-S22]  'Centre d'Atenció Primària Amadeu Torner (dte. III)-HOS014'  ->  'HOS014-S22-02'
+  [HOS015-S02]  'HOS015-S02-01'  ->  'HOS015-S02-01'
+  [HOS015-S22]  'HOS015 CGG Santa Eulalia'  ->  'HOS015-S22-01'
+  [HOS015-S22]  'Centre d'Atenció Primària Bellvitge (dte. VI)-HOS015'  ->  'HOS015-S22-02'
+  [HOS016-S22]  'Centre d'Atenció Primària Collblanc (dte. II)-HOS016'  ->  'HOS016-S22-01'
+  [HOS017-S22]  'Centre d'Atenció Primària Gornal (dte. VI)-HOS017'  ->  'HOS017-S22-01'
+  [HOS018-S22]  'Centre d'Atenció Primària Just Oliveras (dte. I)-HOS018'  ->  'HOS018-S22-01'
+  [HOS018-S22]  'Centre d'Atenció Primària Just Oliveras (dte. I)-HOS018'  ->  'Old-HOS018-S22-02'
+  [HOS019-S22]  'Centre d'Atenció Primària Florida (dte. IV)-HOS019'  ->  'HOS019-S22-01'
+  [HOS020-S22]  'Centre d'Atenció Primària Ronda de la Torrassa (dte. II)-HOS020'  ->  'HOS020-S22-01'
+  [HOS021-S04]  'HOS021-S04-01'  ->  'HOS021-S04-01'
+  [HOS021-S06]  'C. C. Santa Eulàlia - HOS021-S06-01 P20VA148641W'  ->  'HOS021-S06-01'
+  [HOS021-S09]  'HOS021-S09-01'  ->  'HOS021-S09-01'
+  [HOS021-S20]  'HOS021-S20-01'  ->  'HOS021-S20-01'
+  [HOS021-S21]  'HOS021-S21-01'  ->  'HOS021-S21-01'
+  [HOS021-S22]  'Centre Cultural Santa Eulàlia-HOS021'  ->  'HOS021-S22-01'
+  [HOS022-S04]  'HOS022-S04-01'  ->  'HOS022-S04-01'
+  [HOS022-S05]  'HOS022-S05-01'  ->  'HOS022-S05-01'
+  [HOS022-S05]  'HOS022-S05-01'  ->  'Old-HOS022-S05-02'
+  [HOS022-S06]  'C. C.  Tecla Sala - HOS022-S06-01 I17BD504011F'  ->  'HOS022-S06-01'
+  [HOS022-S06]  'C. C.  Tecla Sala - HOS022-S06-01 I17BD504011F'  ->  'HOS022-S06-02'
+  [HOS022-S09]  'HOS022-S09-01'  ->  'HOS022-S09-01'
+  [HOS022-S20]  'HOS022-S20-01'  ->  'HOS022-S20-01'
+  [HOS022-S21]  'HOS022-S21-01'  ->  'HOS022-S21-01'
+  [HOS022-S22]  'Centre Cultural Metropolità Tecla Sala-HOS022'  ->  'HOS022-S22-01'
+  [HOS022-SIP]  'HOS022-IPEX04-ID0200J23007500252'  ->  'HOS022-SIP-01'
+  [HOS023-S04]  'HOS023-S04-01'  ->  'HOS023-S04-01'
+  [HOS023-S05]  'HOS023-S05-01'  ->  'HOS023-S05-01'
+  [HOS023-S05]  'HOS023-S05-01'  ->  'Old-HOS023-S05-02'
+  [HOS023-S06]  'CGG Provençana - HOS023-S06-01 I17BC013010U'  ->  'HOS023-S06-01'
+  [HOS023-S06]  'CGG Provençana - HOS023-S06-01 I17BC013010U'  ->  'HOS023-S06-02'
+  [HOS023-S09]  'HOS023-S09-01'  ->  'HOS023-S09-01'
+  [HOS023-S20]  'HOS023-S20-01'  ->  'HOS023-S20-01'
+  [HOS023-S21]  'HOS023-S21-01'  ->  'HOS023-S21-01'
+  [HOS023-S22]  'C. M. Ana Díaz Rico - HOS023'  ->  'HOS023-S22-01'
+  [HOS023-S22]  'Centre Municipal la Florida - Ana Díaz Rico-HOS023'  ->  'HOS023-S22-02'
+  [HOS023-S22]  'HOS023 C. M. Ana Díaz Rico'  ->  'HOS023-S22-03'
+  [HOS023-SIP]  'HOS023-IPEX04-ID0200J23007500333'  ->  'HOS023-SIP-01'
+  [HOS024-S02]  'HOS024-S02-01-BET00230039'  ->  'HOS024-S02-01'
+  [HOS024-S02]  'HOS024-S02-01-BET00230039'  ->  'Old-HOS024-S02-02'
+  [HOS024-S04]  'HOS024-S04-01'  ->  'HOS024-S04-01'
+  [HOS024-S05]  'HOS024-S05-01'  ->  'HOS024-S05-01'
+  [HOS024-S09]  'HOS024-S09-01'  ->  'HOS024-S09-01'
+  [HOS024-S13A]  'HOS024-S13-01'  ->  'HOS024-S13A-01'
+  [HOS024-S19]  'Torre Barrina - HOS024'  ->  'HOS024-S19-01'
+  [HOS024-S20]  'HOS024-S20-01'  ->  'HOS024-S20-01'
+  [HOS024-S21]  'HOS024-S21-01'  ->  'HOS024-S21-01'
+  [HOS024-S22]  'Torre Barrina-HOS024'  ->  'HOS024-S22-01'
+  [HOS024-S22]  'HOS024 Torre Barrina'  ->  'HOS024-S22-02'
+  [HOS024-S22]  'Torre Barrina - HOS024'  ->  'HOS024-S22-03'
+  [HOS024-SIP]  'HOS024-IPEX04-ID0200J23007500348'  ->  'HOS024-SIP-01'
+  [HOS025-S04]  'HOS025-S04-01'  ->  'HOS025-S04-01'
+  [HOS025-S05]  'HOS025-S05-01'  ->  'HOS025-S05-01'
+  [HOS025-S05]  'HOS025-S05-01'  ->  'Old-HOS025-S05-02'
+  [HOS025-S06]  'CGG Pubilla Casas - HOS025-S06-01 H23VA084841R'  ->  'HOS025-S06-01'
+  [HOS025-S06]  'CGG Pubilla Casas - HOS025-S06-01 H23VA084841R'  ->  'HOS025-S06-02'
+  [HOS025-S09]  'HOS025-S09-01'  ->  'HOS025-S09-01'
+  [HOS025-S20]  'HOS025-S20-01'  ->  'HOS025-S20-01'
+  [HOS025-S21]  'HOS025-S21-01'  ->  'HOS025-S21-01'
+  [HOS025-S22]  'Casal gent gran Pubilla Casas-HOS025'  ->  'HOS025-S22-01'
+  [HOS025-SIP]  'HOS025-IPEX-04-ID0200J23007500264'  ->  'HOS025-SIP-01'
+  [HOS026-S04]  'HOS026-S04-01'  ->  'HOS026-S04-01'
+  [HOS026-S05]  'HOS026-S05-01'  ->  'HOS026-S05-01'
+  [HOS026-S05]  'HOS026-S05-01'  ->  'Old-HOS026-S05-02'
+  [HOS026-S06]  'A. B. S. S. - Dte. IV/V - HOS026-S06-01 D16BA108177L'  ->  'HOS026-S06-01'
+  [HOS026-S06]  'A. B. S. S. - Dte. IV/V - HOS026-S06-01 D16BA108177L'  ->  'HOS026-S06-02'
+  [HOS026-S09]  'HOS026-S09-01'  ->  'HOS026-S09-01'
+  [HOS026-S15]  'HOS026-S15-02'  ->  'HOS026-S15-01'
+  [HOS026-S15]  'HOS026-S15-03'  ->  'HOS026-S15-02'
+  [HOS026-S15]  'HOS026-S15-01'  ->  'HOS026-S15-03'
+  [HOS026-S20]  'HOS026-S20-01'  ->  'HOS026-S20-01'
+  [HOS026-S21]  'HOS026-S21-01'  ->  'HOS026-S21-01'
+  [HOS026-S22]  'Area Basica Serveis Socials - Dte. IV/V - Benestar Social-HOS026'  ->  'HOS026-S22-01'
+  [HOS026-SIP]  'HOS026-IPEX04-ID0200J23007500254'  ->  'HOS026-SIP-01'
+  [HOS026-SIP]  'HOS026-IPEX04-ID0200J23007500253'  ->  'HOS026-SIP-02'
+  [HOS027-S04]  'HOS027-S04-01'  ->  'HOS027-S04-01'
+  [HOS027-S05]  'HOS027-S05-01'  ->  'HOS027-S05-01'
+  [HOS027-S05]  'HOS027-S05-01'  ->  'Old-HOS027-S05-02'
+  [HOS027-S06]  'A. B. B. S. - Dte. VI - HOS027-S06-01 I23BD005559K'  ->  'HOS027-S06-01'
+  [HOS027-S09]  'HOS027-S09-01'  ->  'HOS027-S09-01'
+  [HOS027-S15]  'HOS027-S15-01'  ->  'HOS027-S15-01'
+  [HOS027-S20]  'HOS027-S20-01'  ->  'HOS027-S20-01'
+  [HOS027-S21]  'HOS027-S21-01'  ->  'HOS027-S21-01'
+  [HOS027-S22]  'HOS027 A. B. B. S. - Dte. VI'  ->  'HOS027-S22-01'
+  [HOS027-S22]  'Area Basica de Serveis Socials - Districte VI-HOS027'  ->  'HOS027-S22-02'
+  [HOS027-SIP]  'HOS027-IPEX04-ID0200J23007500313'  ->  'HOS027-SIP-01'
+  [HOS028-S06]  'Area de Benestar social - HOS028-S06-01 H23VA120131G'  ->  'HOS028-S06-01'
+  [HOS028-S06]  'Area de Benestar social - HOS028-S06-01 H23VA120131G'  ->  'HOS028-S06-02'
+  [HOS028-S09]  'HOS028-S09-01'  ->  'HOS028-S09-01'
+  [HOS028-S21]  'HOS028-S21-01'  ->  'HOS028-S21-01'
+  [HOS028-S22]  'HOS028 Area de Benestar social'  ->  'HOS028-S22-01'
+  [HOS028-S22]  'Area de Benestar social-HOS028'  ->  'Old-HOS028-S22-02'
+  [HOS028-S22]  'Area de Benestar social-HOS028'  ->  'Old-HOS028-S22-03'
+  [HOS028-SIP]  'HOS028-IPEX04-ID0200J23007500266'  ->  'HOS028-SIP-01'
+  [HOS028-SIP]  'HOS028-IPEX04-ID0200J23007500269'  ->  'HOS028-SIP-02'
+  [HOS029-S05]  'HOS029'  ->  'HOS029-S05-01'
+  [HOS029-S05]  'HOS029'  ->  'Old-HOS029-S05-02'
+  [HOS029-S06]  'Casa dels Cargols - HOS029-S06-01 H22VA827558M'  ->  'HOS029-S06-01'
+  [HOS029-S06]  'Casa dels Cargols - HOS029-S06-01 H22VA827558M'  ->  'HOS029-S06-02'
+  [HOS029-S09]  'HOS029-S09-01'  ->  'HOS029-S09-01'
+  [HOS029-S15]  'HOS029-S1-02'  ->  'HOS029-S15-01'
+  [HOS029-S15]  'HOS029-S1-03'  ->  'HOS029-S15-02'
+  [HOS029-S15]  'HOS029-S1-01'  ->  'HOS029-S15-03'
+  [HOS029-S20]  'HOS029-S20-01'  ->  'HOS029-S20-01'
+  [HOS029-S21]  'HOS029-S21-01'  ->  'HOS029-S21-01'
+  [HOS029-S22]  'Casa dels Cargols-HOS029'  ->  'HOS029-S22-01'
+  [HOS029-SIP]  'HOS029-IPEX04-ID0200J23007500265'  ->  'HOS029-SIP-01'
+  [HOS029-SIP]  'HOS029-IPEX04-ID0200J23007500259'  ->  'HOS029-SIP-02'
+  [HOS030-S04]  'HOS030-S04-01'  ->  'HOS030-S04-01'
+  [HOS030-S05]  'HOS030-S05-01'  ->  'HOS030-S05-01'
+  [HOS030-S05]  'HOS030-S05-01'  ->  'Old-HOS030-S05-02'
+  [HOS030-S06]  'Can Colom - HOS030-S06-02 I22BB051956F'  ->  'HOS030-S06-01'
+  [HOS030-S06]  'Can Colom - HOS030-S06-02 I22BB051956F'  ->  'HOS030-S06-02'
+  [HOS030-S09]  'HOS030-S09-01'  ->  'HOS030-S09-01'
+  [HOS030-S15]  'HOS030-S15-01'  ->  'HOS030-S15-01'
+  [HOS030-S15]  'HOS030-S15-03'  ->  'HOS030-S15-02'
+  [HOS030-S15]  'HOS030-S15-02'  ->  'HOS030-S15-03'
+  [HOS030-S20]  'HOS030-S20-01'  ->  'HOS030-S20-01'
+  [HOS030-S21]  'HOS030-S21-01'  ->  'HOS030-S21-01'
+  [HOS030-S22]  'Can Colom (Centre Atenció a la Infància i la Dòna)-HOS030'  ->  'HOS030-S22-01'
+  [HOS030-SIP]  'HOS030-IPEX04-ID0200J23007500255'  ->  'HOS030-SIP-01'
+  [HOS030-SIP]  'HOS030-IPEX04-ID0200J23007500262'  ->  'HOS030-SIP-02'
+  [HOS031-S22]  'Hospital Duran i Reynals - Institut Catala Oncologia-HOS031'  ->  'HOS031-S22-01'
+  [HOS031-S22]  'Hospital Duran i Reynals - Institut Catala Oncologia-HOS031'  ->  'HOS031-S22-02'
+  [HOS032-S22]  'Hospital General de L'Hospitalet-HOS032'  ->  'HOS032-S22-01'
+  [HOS033-S04]  'HOS033-S04-02'  ->  'HOS033-S04-01'
+  [HOS033-S04]  'HOS033-S04-01'  ->  'HOS033-S04-02'
+  [HOS033-S05]  'HOS033-S05-01'  ->  'HOS033-S05-01'
+  [HOS033-S05]  'HOS033-S05-01'  ->  'Old-HOS033-S05-02'
+  [HOS033-S06]  'Regidoria Districte I - HOS033-S06-01 P23FA015384U'  ->  'HOS033-S06-01'
+  [HOS033-S09]  'HOS033-S09-01'  ->  'HOS033-S09-01'
+  [HOS033-S13A]  'HOS033-S13-01'  ->  'HOS033-S13A-01'
+  [HOS033-S15]  'HOS033-S15-01'  ->  'HOS033-S15-01'
+  [HOS033-S15]  'HOS033-S15-02'  ->  'HOS033-S15-02'
+  [HOS033-S15]  'HOS033-S15-03'  ->  'HOS033-S15-03'
+  [HOS033-S20]  'HOS033-S20-01'  ->  'HOS033-S20-01'
+  [HOS033-S21]  'HOS033-S21-01'  ->  'HOS033-S21-01'
+  [HOS033-S22]  'HOS033 Regidoria Districte I'  ->  'HOS033-S22-01'
+  [HOS033-S22]  'Regidoria Districte I-HOS033'  ->  'Old-HOS033-S22-02'
+  [HOS033-S22]  'Regidoria Districte I - HOS033'  ->  'Old-HOS033-S22-03'
+  [HOS033-SIP]  'HOS033-IPEX04-02-ID0200J23007500344'  ->  'HOS033-SIP-01'
+  [HOS033-SIP]  'HOS033-IPEX04-01-ID0200J23007500345'  ->  'HOS033-SIP-02'
+  [HOS034-S04]  'HOS034-S04-01'  ->  'HOS034-S04-01'
+  [HOS034-S05]  'HOS034-S05-01'  ->  'HOS034-S05-01'
+  [HOS034-S05]  'HOS034-S05-01'  ->  'Old-HOS034-S05-02'
+  [HOS034-S06]  'Regidoria Districte II - HOS034-S06-01 C15FA260208R'  ->  'HOS034-S06-01'
+  [HOS034-S06]  'Regidoria Districte II - HOS034-S06-01 C15FA260208R'  ->  'HOS034-S06-02'
+  [HOS034-S09]  'HOS034-S09-01'  ->  'HOS034-S09-01'
+  [HOS034-S15]  'HOS034-S15-01'  ->  'HOS034-S15-01'
+  [HOS034-S15]  'HOS034-S15-03'  ->  'HOS034-S15-02'
+  [HOS034-S15]  'HOS034-S15-02'  ->  'HOS034-S15-03'
+  [HOS034-S20]  'HOS034-S20-01'  ->  'HOS034-S20-01'
+  [HOS034-S21]  'HOS034-S21-01'  ->  'HOS034-S21-01'
+  [HOS034-S22]  'Regidoria Districte II-HOS034'  ->  'HOS034-S22-01'
+  [HOS034-SIP]  'HOS034-IPEX04-ID0200J23007500336'  ->  'HOS034-SIP-01'
+  [HOS034-SIP]  'HOS034-IPEX04-ID0200J23007500312'  ->  'HOS034-SIP-02'
+  [HOS035-S04]  'HOS035-S04-01'  ->  'HOS035-S04-01'
+  [HOS035-S05]  'HOS035-S05-01'  ->  'HOS035-S05-01'
+  [HOS035-S09]  'HOS035-S09-01'  ->  'HOS035-S09-01'
+  [HOS035-S15]  'HOS035-S15-02'  ->  'HOS035-S15-01'
+  [HOS035-S15]  'HOS035-S15-04'  ->  'HOS035-S15-02'
+  [HOS035-S15]  'HOS035-S15-01'  ->  'HOS035-S15-03'
+  [HOS035-S15]  'HOS035-S15-03'  ->  'HOS035-S15-04'
+  [HOS035-S15]  'HOS035-S15-05'  ->  'HOS035-S15-05'
+  [HOS035-S20]  'HOS035-S20-01'  ->  'HOS035-S20-01'
+  [HOS035-S21]  'HOS035-S21-01'  ->  'HOS035-S21-01'
+  [HOS035-S22]  'Regidoria Districte III-HOS035'  ->  'HOS035-S22-01'
+  [HOS035-SIP]  'HOS035-IPEX04-ID0200J23007500314'  ->  'HOS035-SIP-01'
+  [HOS035-SIP]  'HOS035-IPEX04-ID0200J23007500328'  ->  'HOS035-SIP-02'
+  [HOS036-S05]  'HOS036-S05-01'  ->  'HOS036-S05-01'
+  [HOS036-S05]  'HOS036-S05-01'  ->  'Old-HOS036-S05-02'
+  [HOS036-S06]  'Dipòsit Santa Eulàlia - HOS036-S06-01 I20LA195865W'  ->  'HOS036-S06-01'
+  [HOS036-S07]  'Dipòsit Santa Eulàlia - 0018b24000019430 - HOS036'  ->  'HOS036-S07-01'
+  [HOS036-S09]  'HOS036-S09-01'  ->  'HOS036-S09-01'
+  [HOS036-S20]  'HOS036-S20-01'  ->  'HOS036-S20-01'
+  [HOS036-S21]  'HOS036-S21-01'  ->  'HOS036-S21-01'
+  [HOS036-S22]  'Dipòsit de vehicles (santa eulàlia)-HOS036'  ->  'HOS036-S22-01'
+  [HOS036-SIP]  'HOS036-IPEX04-ID0200J23007500268'  ->  'HOS036-SIP-01'
+  [HOS037-S05]  'HOS037-S05-01'  ->  'HOS037-S05-01'
+  [HOS037-S05]  'HOS037-S05-01'  ->  'Old-HOS037-S05-02'
+  [HOS037-S06]  'Dipòsit Parc de la serp - HOS037-S06-01 H24VA628016X'  ->  'HOS037-S06-01'
+  [HOS037-S06]  'Dipòsit Parc de la serp - HOS037-S06-01 H24VA628016X'  ->  'HOS037-S06-02'
+  [HOS037-S09]  'HOS037-S09-01'  ->  'HOS037-S09-01'
+  [HOS037-S20]  'HOS037-S20-01'  ->  'HOS037-S20-01'
+  [HOS037-S21]  'HOS037'  ->  'HOS037-S21-01'
+  [HOS037-S21]  'HOS037'  ->  'HOS037-S21-02'
+  [HOS037-S21]  'HOS037-S21-01'  ->  'Old-HOS037-S21-03'
+  [HOS037-S22]  'HOS037 Dipòsit Parc de la serp'  ->  'HOS037-S22-01'
+  [HOS037-S22]  'Dipòsit Parc de la serp - HOS037'  ->  'Old-HOS037-S22-02'
+  [HOS037-S22]  'Dipòsit de vehicles (parc de la serp)-HOS037'  ->  'Old-HOS037-S22-03'
+  [HOS037-SIP]  'HOS037-IPEX-04-ID0200J23007500271'  ->  'HOS037-SIP-01'
+  [HOS038-S04]  'HOS038-S04-01'  ->  'HOS038-S04-01'
+  [HOS038-S05]  'HOS038-S05-01'  ->  'HOS038-S05-01'
+  [HOS038-S06]  'Esc. Busquets i Punset - HOS038-S06-01 P20AD552738S'  ->  'HOS038-S06-01'
+  [HOS038-S19]  'HOS038-S19-01'  ->  'HOS038-S19-01'
+  [HOS038-S19]  'HOS038-S19-02'  ->  'HOS038-S19-02'
+  [HOS038-S20]  'HOS038-S20-01'  ->  'HOS038-S20-01'
+  [HOS038-S21]  'HOS038-S21-01'  ->  'HOS038-S21-01'
+  [HOS038-S21]  'HOS038-S21-02'  ->  'HOS038-S21-02'
+  [HOS038-S22]  'HOS038 Esc. Busquets i Punset'  ->  'HOS038-S22-01'
+  [HOS038-S22]  'Esc. Busquets i Punset - HOS038'  ->  'Old-HOS038-S22-02'
+  [HOS038-S22]  'Escola Busquets i Punset-HOS038'  ->  'Old-HOS038-S22-03'
+  [HOS038-SIP]  'HOS038-IPEX04-ID0200J23007500408'  ->  'HOS038-SIP-01'
+  [HOS039-S04]  'HOS039-S04-01'  ->  'HOS039-S04-01'
+  [HOS039-S05]  'HOS039-S05-01'  ->  'HOS039-S05-01'
+  [HOS039-S06]  'Esc. Ausias March - HOS039-S06-01 I20BD036700P'  ->  'HOS039-S06-01'
+  [HOS039-S06]  'Esc. Ausias March - HOS039-S06-01 I20BD036700P'  ->  'HOS039-S06-02'
+  [HOS039-S08]  'HOS039-S08-02'  ->  'HOS039-S08-01'
+  [HOS039-S08]  'HOS039-S08-01'  ->  'HOS039-S08-02'
+  [HOS039-S14A]  'HOS039-S14-Meteo (216694)'  ->  'HOS039-S14A-01'
+  [HOS039-S14B]  'HOS039-S14-Pira'  ->  'HOS039-S14B-01'
+  [HOS039-S19]  'HOS039-S19-01'  ->  'HOS039-S19-01'
+  [HOS039-S20]  'HOS039-S20-01'  ->  'HOS039-S20-01'
+  [HOS039-S21]  'HOS039-S21-01'  ->  'HOS039-S21-01'
+  [HOS039-S22]  'HOS039 Esc. Ausias March'  ->  'HOS039-S22-01'
+  [HOS039-S22]  'Escola Ausias March-HOS039'  ->  'Old-HOS039-S22-02'
+  [HOS039-S22]  'Esc. Ausias March - HOS039'  ->  'Old-HOS039-S22-03'
+  [HOS039-SIP]  'HOS039-IPEX04-ID0200J23007500321'  ->  'HOS039-SIP-01'
+  [HOS040-S04]  'HOS040-S04-01'  ->  'HOS040-S04-01'
+  [HOS040-S05]  'HOS040-S05-01'  ->  'HOS040-S05-01'
+  [HOS040-S05]  'HOS040-S05-01'  ->  'Old-HOS040-S05-02'
+  [HOS040-S07]  'Esc. Bernat Metge - 0018b2400001960b - HOS040'  ->  'HOS040-S07-01'
+  [HOS040-S07]  'Esc. Bernat Metge - 0018b2400001960b - HOS040'  ->  'Old-HOS040-S07-02'
+  [HOS040-S08]  'HOS040'  ->  'HOS040-S08-01'
+  [HOS040-S08]  'HOS040-S08-01'  ->  'HOS040-S08-02'
+  [HOS040-S19]  'HOS040-S19-01'  ->  'HOS040-S19-01'
+  [HOS040-S20]  'HOS040-S20-01'  ->  'HOS040-S20-01'
+  [HOS040-S21]  'HOS040-S21-01'  ->  'HOS040-S21-01'
+  [HOS040-S22]  'HOS040 Esc. Bernat Metge'  ->  'HOS040-S22-01'
+  [HOS040-S22]  'Escola Bernat Metge-HOS040'  ->  'Old-HOS040-S22-02'
+  [HOS040-SIP]  'HOS040-IPEX04-ID0200J23007500341'  ->  'HOS040-SIP-01'
+  [HOS041-S04]  'HOS041-S04-01'  ->  'HOS041-S04-01'
+  [HOS041-S05]  'HOS041-S05-01'  ->  'HOS041-S05-01'
+  [HOS041-S05]  'HOS041-S05-01'  ->  'Old-HOS041-S05-02'
+  [HOS041-S06]  'Esc. Charlie Rivel - HOS041-S06-01 I22BB010137G'  ->  'HOS041-S06-01'
+  [HOS041-S06]  'Esc. Charlie Rivel - HOS041-S06-01 I22BB010137G'  ->  'HOS041-S06-02'
+  [HOS041-S08]  'HOS041-2'  ->  'HOS041-S08-01'
+  [HOS041-S08]  'HOS041'  ->  'HOS041-S08-02'
+  [HOS041-S08]  'HOS041-S08-01'  ->  'HOS041-S08-03'
+  [HOS041-S08]  'HOS041-S08-02'  ->  'HOS041-S08-04'
+  [HOS041-S14A]  'HOS041-S14-Meteo (214189)'  ->  'HOS041-S14A-01'
+  [HOS041-S14A]  'HOS041-S14-Meteo (214189)'  ->  'Old-HOS041-S14A-02'
+  [HOS041-S14B]  'HOS041-S14-Pira'  ->  'HOS041-S14B-01'
+  [HOS041-S19]  'HOS041-S19-01'  ->  'HOS041-S19-01'
+  [HOS041-S19]  'HOS041-S19-02'  ->  'HOS041-S19-02'
+  [HOS041-S20]  'HOS041-S20-01'  ->  'HOS041-S20-01'
+  [HOS041-S21]  'HOS041'  ->  'HOS041-S21-01'
+  [HOS041-S21]  'HOS041'  ->  'HOS041-S21-02'
+  [HOS041-S21]  'HOS041'  ->  'Old-HOS041-S21-03'
+  [HOS041-S21]  'HOS041'  ->  'Old-HOS041-S21-04'
+  [HOS041-S21]  'HOS041-S21-01'  ->  'Old-HOS041-S21-05'
+  [HOS041-S22]  'Escola Charlie Rivel-HOS041'  ->  'HOS041-S22-01'
+  [HOS041-SIP]  'HOS041-IPEX04-ID0200J23007500283'  ->  'HOS041-SIP-01'
+  [HOS042-S04]  'HOS042-S04-01'  ->  'HOS042-S04-01'
+  [HOS042-S05]  'HOS042-S05-01'  ->  'HOS042-S05-01'
+  [HOS042-S06]  'Esc. J. M. Folch i Torres - HOS042-S06-01 P18AD500362J'  ->  'HOS042-S06-01'
+  [HOS042-S08]  'HOS042-S08-01'  ->  'HOS042-S08-01'
+  [HOS042-S09]  'HOS042-S09-01'  ->  'HOS042-S09-01'
+  [HOS042-S19]  'HOS042-S19-01'  ->  'HOS042-S19-01'
+  [HOS042-S19]  'HOS042-S19-02'  ->  'HOS042-S19-02'
+  [HOS042-S20]  'HOS042-S20-01'  ->  'HOS042-S20-01'
+  [HOS042-S21]  'HOS042-S21-01'  ->  'HOS042-S21-01'
+  [HOS042-S22]  'Escola Josep Maria Folch i Torres-HOS042'  ->  'HOS042-S22-01'
+  [HOS042-SIP]  'HOS042-IPEX04-ID0200J23007500231'  ->  'HOS042-SIP-01'
+  [HOS043-S04]  'HOS043-S04-01'  ->  'HOS043-S04-01'
+  [HOS043-S05]  'HOS043-S05-01'  ->  'HOS043-S05-01'
+  [HOS043-S05]  'HOS043-S05-01'  ->  'Old-HOS043-S05-02'
+  [HOS043-S08]  'HOS043-S08-01'  ->  'HOS043-S08-01'
+  [HOS043-S08]  'HOS043'  ->  'HOS043-S08-02'
+  [HOS043-S09]  'HOS043-S09-01'  ->  'HOS043-S09-01'
+  [HOS043-S19]  'HOS043-S19-01'  ->  'HOS043-S19-01'
+  [HOS043-S20]  'HOS043-S20-01'  ->  'HOS043-S20-01'
+  [HOS043-S21]  'HOS043-S21-01'  ->  'HOS043-S21-01'
+  [HOS043-S22]  'Escola Frederic Mistral-HOS043'  ->  'HOS043-S22-01'
+  [HOS043-SIP]  'HOS043-IPEX04-ID0200J23007500261'  ->  'HOS043-SIP-01'
+  [HOS044-S01]  'HOS044-S01-01'  ->  'HOS044-S01-01'
+  [HOS044-S01]  'HOS044-S01-01'  ->  'Old-HOS044-S01-02'
+  [HOS044-S04]  'HOS044-S04-01'  ->  'HOS044-S04-01'
+  [HOS044-S05]  'HOS044-S05-01'  ->  'HOS044-S05-01'
+  [HOS044-S08]  'HOS044-S08-01'  ->  'HOS044-S08-01'
+  [HOS044-S08]  'HOS044-S08-02'  ->  'HOS044-S08-02'
+  [HOS044-S19]  'HOS044-S19-01'  ->  'HOS044-S19-01'
+  [HOS044-S20]  'HOS044-S20-01'  ->  'HOS044-S20-01'
+  [HOS044-S21]  'HOS044-S21-01'  ->  'HOS044-S21-01'
+  [HOS044-S22]  'Escola Gornal-HOS044'  ->  'HOS044-S22-01'
+  [HOS044-S22]  'HOS044 Esc. Gornal'  ->  'HOS044-S22-02'
+  [HOS044-SIP]  'HOS044-PEX04-ID0200J23007500340'  ->  'HOS044-SIP-01'
+  [HOS045-S04]  'HOS045-S04-01'  ->  'HOS045-S04-01'
+  [HOS045-S05]  'HOS045-S05-01'  ->  'HOS045-S05-01'
+  [HOS045-S05]  'HOS045-S05-01'  ->  'Old-HOS045-S05-02'
+  [HOS045-S08]  'HOS045-2'  ->  'HOS045-S08-01'
+  [HOS045-S08]  'HOS045-S08-01'  ->  'HOS045-S08-02'
+  [HOS045-S08]  'HOS045-S08-02'  ->  'HOS045-S08-03'
+  [HOS045-S08]  'HOS045-1'  ->  'HOS045-S08-04'
+  [HOS045-S09]  'HOS045-S09-01'  ->  'HOS045-S09-01'
+  [HOS045-S14A]  'HOS045-S14-Meteo (216699)'  ->  'HOS045-S14A-01'
+  [HOS045-S14A]  'HOS045-S14-Meteo (216699)'  ->  'Old-HOS045-S14A-02'
+  [HOS045-S14B]  'HOS045-S14-Pira'  ->  'HOS045-S14B-01'
+  [HOS045-S19]  'HOS045-S19-02'  ->  'HOS045-S19-01'
+  [HOS045-S19]  'HOS045-S19-01'  ->  'HOS045-S19-02'
+  [HOS045-S20]  'HOS045-S20-01'  ->  'HOS045-S20-01'
+  [HOS045-S21]  'HOS045-S21-01'  ->  'HOS045-S21-01'
+  [HOS045-S22]  'Escola Joan Maragall-HOS045'  ->  'HOS045-S22-01'
+  [HOS045-SIP]  'HOS045-IPEX04-ID0200J23007500238'  ->  'HOS045-SIP-01'
+  [HOS046-S04]  'HOS046-S04-01'  ->  'HOS046-S04-01'
+  [HOS046-S05]  'HOS046-S05-01'  ->  'HOS046-S05-01'
+  [HOS046-S05]  'HOS046-S05-01'  ->  'Old-HOS046-S05-02'
+  [HOS046-S06]  'Esc. Joaquim Ruyra - HOS046-S06-01 I25BD024043L'  ->  'HOS046-S06-01'
+  [HOS046-S07]  'Esc. Joaquim Ruyra - HOS046'  ->  'HOS046-S07-01'
+  [HOS046-S07]  'Esc. Joaquim Ruyra - HOS046'  ->  'Old-HOS046-S07-02'
+  [HOS046-S08]  'HOS046-S08-01'  ->  'HOS046-S08-01'
+  [HOS046-S08]  'HOS046'  ->  'HOS046-S08-02'
+  [HOS046-S19]  'HOS046-S19-01'  ->  'HOS046-S19-01'
+  [HOS046-S20]  'HOS046-S20-01'  ->  'HOS046-S20-01'
+  [HOS046-S21]  'HOS046-S21-01'  ->  'HOS046-S21-01'
+  [HOS046-S22]  'Escola Joaquim Ruyra-HOS046'  ->  'HOS046-S22-01'
+  [HOS046-S22]  'Esc. Joaquim Ruyra - HOS046'  ->  'HOS046-S22-02'
+  [HOS046-S22]  'HOS046 Esc. Joaquim Ruyra'  ->  'HOS046-S22-03'
+  [HOS046-SIP]  'HOS046-IPEX04-ID0200J23007500278'  ->  'HOS046-SIP-01'
+  [HOS047-S04]  'HOS047-S04-01'  ->  'HOS047-S04-01'
+  [HOS047-S05]  'HOS047-S05-01'  ->  'HOS047-S05-01'
+  [HOS047-S06]  'Esc. Josep Janes - HOS047-S06-01 I17BE094519Y'  ->  'HOS047-S06-01'
+  [HOS047-S06]  'Esc. Josep Janes - HOS047-S06-01 I17BE094519Y'  ->  'HOS047-S06-02'
+  [HOS047-S08]  'HOS047-S08-01'  ->  'HOS047-S08-01'
+  [HOS047-S14A]  'HOS047-S14-Meteo (215360)'  ->  'HOS047-S14A-01'
+  [HOS047-S14A]  'HOS047-S14-Meteo (215360)'  ->  'Old-HOS047-S14A-02'
+  [HOS047-S14B]  'HOS047-S14-Pira'  ->  'HOS047-S14B-01'
+  [HOS047-S19]  'HOS047-S19-03'  ->  'HOS047-S19-01'
+  [HOS047-S19]  'HOS047-S19-01'  ->  'HOS047-S19-02'
+  [HOS047-S19]  'HOS047-S19-02'  ->  'HOS047-S19-03'
+  [HOS047-S20]  'HOS047-S20-01'  ->  'HOS047-S20-01'
+  [HOS047-S21]  'HOS047-S21-01'  ->  'HOS047-S21-01'
+  [HOS047-S22]  'Escola Josep Janes-HOS047'  ->  'HOS047-S22-01'
+  [HOS047-S22]  'HOS047 Esc. Josep Janes'  ->  'HOS047-S22-02'
+  [HOS047-SIP]  'HOS047-IPEX04-ID0200J23007500362'  ->  'HOS047-SIP-01'
+  [HOS048-S04]  'HOS048-S04-01'  ->  'HOS048-S04-01'
+  [HOS048-S05]  'HOS048-S05-01'  ->  'HOS048-S05-01'
+  [HOS048-S05]  'HOS048-S05-01'  ->  'Old-HOS048-S05-02'
+  [HOS048-S06]  'Esc. La Carpa - HOS048-S06-01 P18UE276480O'  ->  'HOS048-S06-01'
+  [HOS048-S07]  'Esc. La Carpa - HOS048'  ->  'HOS048-S07-01'
+  [HOS048-S08]  'HOS048-S08-01'  ->  'HOS048-S08-01'
+  [HOS048-S08]  'HOS048'  ->  'HOS048-S08-02'
+  [HOS048-S09]  'HOS048-S09-01'  ->  'HOS048-S09-01'
+  [HOS048-S19]  'HOS048-S19-01'  ->  'HOS048-S19-01'
+  [HOS048-S20]  'HOS048-S20-01'  ->  'HOS048-S20-01'
+  [HOS048-S21]  'HOS048-S21-01'  ->  'HOS048-S21-01'
+  [HOS048-S22]  'Escola La Carpa-HOS048'  ->  'HOS048-S22-01'
+  [HOS048-SIP]  'HOS048-IPEX04-ID0200J23007500273'  ->  'HOS048-SIP-01'
+  [HOS049-S04]  'HOS049-S04-01'  ->  'HOS049-S04-01'
+  [HOS049-S05]  'HOS049-S05-01'  ->  'HOS049-S05-01'
+  [HOS049-S08]  'HOS049-S08-02'  ->  'HOS049-S08-01'
+  [HOS049-S08]  'HOS049-S08-01'  ->  'HOS049-S08-02'
+  [HOS049-S08]  'HOS049-S08-03'  ->  'HOS049-S08-03'
+  [HOS049-S09]  'HOS049-S09-01'  ->  'HOS049-S09-01'
+  [HOS049-S13A]  'HOS049-S13-01'  ->  'HOS049-S13A-01'
+  [HOS049-S19]  'HOS049-S19-02'  ->  'HOS049-S19-01'
+  [HOS049-S19]  'HOS049-S19-01'  ->  'HOS049-S19-02'
+  [HOS049-S20]  'HOS049-S20-01'  ->  'HOS049-S20-01'
+  [HOS049-S21]  'HOS049-S21-01'  ->  'HOS049-S21-01'
+  [HOS049-S22]  'HOS049 Esc. La Marina'  ->  'HOS049-S22-01'
+  [HOS049-S22]  'Escola La Marina-HOS049'  ->  'Old-HOS049-S22-02'
+  [HOS049-S22]  'Esc. La Marina - HOS049'  ->  'Old-HOS049-S22-03'
+  [HOS049-SIP]  'HOS049-IPEX04-ID0200J23007500339'  ->  'HOS049-SIP-01'
+  [HOS050-S04]  'HOS050-S04-01'  ->  'HOS050-S04-01'
+  [HOS050-S05]  'HOS050-S05-01'  ->  'HOS050-S05-01'
+  [HOS050-S05]  'HOS050-S05-01'  ->  'Old-HOS050-S05-02'
+  [HOS050-S06]  'Esc. Lola Anglada - HOS050-S06-01 P18AD500319G'  ->  'HOS050-S06-01'
+  [HOS050-S08]  'HOS050-2'  ->  'HOS050-S08-01'
+  [HOS050-S08]  'HOS050-S08-02'  ->  'HOS050-S08-02'
+  [HOS050-S08]  'HOS050-1'  ->  'HOS050-S08-03'
+  [HOS050-S08]  'HOS050-3'  ->  'HOS050-S08-04'
+  [HOS050-S08]  'HOS050-S08-01'  ->  'HOS050-S08-05'
+  [HOS050-S08]  'HOS050-S08-03'  ->  'HOS050-S08-06'
+  [HOS050-S13A]  'HOS050-S13-01'  ->  'HOS050-S13A-01'
+  [HOS050-S14A]  'HOS050-S14-Meteo (215733)'  ->  'HOS050-S14A-01'
+  [HOS050-S14A]  'HOS050-S14-Meteo (215733)'  ->  'Old-HOS050-S14A-02'
+  [HOS050-S14B]  'HOS050-S14-Pira'  ->  'HOS050-S14B-01'
+  [HOS050-S19]  'HOS050-S19-01'  ->  'HOS050-S19-01'
+  [HOS050-S20]  'HOS050-S20-01'  ->  'HOS050-S20-01'
+  [HOS050-S21]  'HOS050-S21-01'  ->  'HOS050-S21-01'
+  [HOS050-S22]  'Escola Lola Anglada-HOS050'  ->  'HOS050-S22-01'
+  [HOS050-S24]  'HOS050-1'  ->  'HOS050-S24-01'
+  [HOS050-S24]  'HOS050-S24-01'  ->  'Old-HOS050-S24-02'
+  [HOS050-SIP]  'HOS050-IPEX04-ID0200J23007500274'  ->  'HOS050-SIP-01'
+  [HOS051-S04]  'HOS051-S04-01'  ->  'HOS051-S04-01'
+  [HOS051-S05]  'HOS051-S05-01'  ->  'HOS051-S05-01'
+  [HOS051-S06]  'R6Wzy1sTy4MvM-lnIXD92Q2x1tN-7Tfo9ZSAvIXO6YA'  ->  'HOS051-S06-01'
+  [HOS051-S06]  'Esc. M. d'E. de Bellvitge - HOS051-S06-01 I21BC007255G'  ->  'HOS051-S06-02'
+  [HOS051-S08]  'HOS051-S08-01'  ->  'HOS051-S08-01'
+  [HOS051-S19]  'HOS051-S19-01'  ->  'HOS051-S19-01'
+  [HOS051-S19]  'HOS051-S19-02'  ->  'HOS051-S19-02'
+  [HOS051-S19]  'HOS051-S19-03'  ->  'HOS051-S19-03'
+  [HOS051-S20]  'HOS051-S20-01'  ->  'HOS051-S20-01'
+  [HOS051-S21]  'HOS051-S21-01'  ->  'HOS051-S21-01'
+  [HOS051-S22]  'HOS051 Esc. M. d'E. de Bellvitge'  ->  'HOS051-S22-01'
+  [HOS051-S22]  'Esc. M. d'E. de Bellvitge - HOS051'  ->  'Old-HOS051-S22-02'
+  [HOS051-S22]  'Escola Mare de Déu de Bellvitge-HOS051'  ->  'Old-HOS051-S22-03'
+  [HOS051-SIP]  'HOS051-IPEX04-ID0200J23007500376'  ->  'HOS051-SIP-01'
+  [HOS052-S04]  'HOS052-S04-01'  ->  'HOS052-S04-01'
+  [HOS052-S05]  'HOS052-S05-01'  ->  'HOS052-S05-01'
+  [HOS052-S08]  'HOS052-S08-01'  ->  'HOS052-S08-01'
+  [HOS052-S09]  'HOS052-S09-01'  ->  'HOS052-S09-01'
+  [HOS052-S13A]  'HOS052-S13-01'  ->  'HOS052-S13A-01'
+  [HOS052-S19]  'HOS052-S19-01'  ->  'HOS052-S19-01'
+  [HOS052-S20]  'HOS052-S20-01'  ->  'HOS052-S20-01'
+  [HOS052-S21]  'HOS052-S21-01'  ->  'HOS052-S21-01'
+  [HOS052-S22]  'HOS052 Esc. Màrius Torres'  ->  'HOS052-S22-01'
+  [HOS052-S22]  'Esc. Màrius Torres - HOS052'  ->  'HOS052-S22-02'
+  [HOS052-S22]  'Escola Màrius Torres-HOS052'  ->  'HOS052-S22-03'
+  [HOS052-SIP]  'HOS052-IPEX04-ID0200J23007500272'  ->  'HOS052-SIP-01'
+  [HOS053-S04]  'HOS053-S04-01'  ->  'HOS053-S04-01'
+  [HOS053-S06]  'Esc. Menéndez Pidal - HOS053-S06-01 I18BD030305U'  ->  'HOS053-S06-01'
+  [HOS053-S06]  'Esc. Menéndez Pidal - HOS053-S06-01 I18BD030305U'  ->  'HOS053-S06-02'
+  [HOS053-S08]  'HOS053-S08-01'  ->  'HOS053-S08-01'
+  [HOS053-S09]  'HOS053-S09-01'  ->  'HOS053-S09-01'
+  [HOS053-S14A]  'HOS053-S14-Meteo (215854)'  ->  'HOS053-S14A-01'
+  [HOS053-S14B]  'HOS053-S14-Pira'  ->  'HOS053-S14B-01'
+  [HOS053-S19]  'HOS053-S19-02'  ->  'HOS053-S19-01'
+  [HOS053-S19]  'HOS053-S19-01'  ->  'HOS053-S19-02'
+  [HOS053-S20]  'HOS053-S20-01'  ->  'HOS053-S20-01'
+  [HOS053-S21]  'HOS053-S21-01'  ->  'HOS053-S21-01'
+  [HOS053-S22]  'Escola Menéndez Pidal-HOS053'  ->  'HOS053-S22-01'
+  [HOS053-SIP]  'HOS053-IPEX04-ID0200J23007500364'  ->  'HOS053-SIP-01'
+  [HOS054-S04]  'HOS054-S04-01'  ->  'HOS054-S04-01'
+  [HOS054-S05]  'HOS054-S05-01'  ->  'HOS054-S05-01'
+  [HOS054-S06]  'Esc. Milagros Consarnau - HOS054-S06-S1 I18BD030306V'  ->  'HOS054-S06-01'
+  [HOS054-S06]  'Esc. Milagros Consarnau - HOS054-S06-S1 I18BD030306V'  ->  'HOS054-S06-02'
+  [HOS054-S08]  'HOS054-3'  ->  'HOS054-S08-01'
+  [HOS054-S08]  'HOS054-S08-01'  ->  'HOS054-S08-02'
+  [HOS054-S08]  'HOS054-S08-02'  ->  'HOS054-S08-03'
+  [HOS054-S08]  'HOS054-2'  ->  'HOS054-S08-04'
+  [HOS054-S08]  'HOS054-S08-03'  ->  'HOS054-S08-05'
+  [HOS054-S08]  'HOS054-1'  ->  'HOS054-S08-06'
+  [HOS054-S14A]  'HOS054-S14-Meteo (215946)'  ->  'HOS054-S14A-01'
+  [HOS054-S14A]  'HOS054-S14-Meteo (215946)'  ->  'Old-HOS054-S14A-02'
+  [HOS054-S14B]  'HOS054-S14-Pira'  ->  'HOS054-S14B-01'
+  [HOS054-S19]  'HOS054-S19-01'  ->  'HOS054-S19-01'
+  [HOS054-S19]  'HOS054-S19-02'  ->  'HOS054-S19-02'
+  [HOS054-S20]  'HOS054-S20-01'  ->  'HOS054-S20-01'
+  [HOS054-S21]  'HOS054-S21-01'  ->  'HOS054-S21-01'
+  [HOS054-S22]  'Escola Milagros Consarnau-HOS054'  ->  'HOS054-S22-01'
+  [HOS054-SIP]  'HOS054-IPEX04-ID0200J23007500282'  ->  'HOS054-SIP-01'
+  [HOS055-S04]  'HOS055-S04-01'  ->  'HOS055-S04-01'
+  [HOS055-S05]  'HOS055-S05-01'  ->  'HOS055-S05-01'
+  [HOS055-S06]  'Esc. Pablo Neruda - HOS055-S06-01 I24BC057137B'  ->  'HOS055-S06-01'
+  [HOS055-S07]  'Esc. Pablo Neruda - 0018b240000198cb-HOS055'  ->  'HOS055-S07-01'
+  [HOS055-S07]  'Esc. Pablo Neruda - 0018b240000198cb-HOS055'  ->  'Old-HOS055-S07-02'
+  [HOS055-S08]  'HOS055-S08-01'  ->  'HOS055-S08-01'
+  [HOS055-S13A]  'HOS055-S13-01'  ->  'HOS055-S13A-01'
+  [HOS055-S19]  'HOS055-S19-02'  ->  'HOS055-S19-01'
+  [HOS055-S19]  'HOS055-S19-03'  ->  'HOS055-S19-02'
+  [HOS055-S19]  'HOS055-S19-01'  ->  'HOS055-S19-03'
+  [HOS055-S20]  'HOS055-S20-01'  ->  'HOS055-S20-01'
+  [HOS055-S21]  'HOS055-S21-01'  ->  'HOS055-S21-01'
+  [HOS055-S22]  'Escola Pablo Neruda-HOS055'  ->  'HOS055-S22-01'
+  [HOS055-SIP]  'HOS055-IPEX04-ID0200J23007500338'  ->  'HOS055-SIP-01'
+  [HOS056-S04]  'HOS056-S04-01'  ->  'HOS056-S04-01'
+  [HOS056-S05]  'Esc. Patufet Sant Jordi-HOS056'  ->  'HOS056-S05-01'
+  [HOS056-S05]  'Esc. Patufet Sant Jordi-HOS056'  ->  'HOS056-S05-02'
+  [HOS056-S05]  'Esc. Patufet Sant Jordi-HOS056'  ->  'HOS056-S05-03'
+  [HOS056-S05]  'Esc. Patufet Sant Jordi-HOS056'  ->  'HOS056-S05-04'
+  [HOS056-S05]  'Esc. Patufet Sant Jordi-HOS056'  ->  'HOS056-S05-05'
+  [HOS056-S05]  'Esc. Patufet Sant Jordi-HOS056'  ->  'HOS056-S05-06'
+  [HOS056-S05]  'Esc. Patufet Sant Jordi-HOS056'  ->  'HOS056-S05-07'
+  [HOS056-S06]  'Esc. Patufet Sant Jordi - HOS056-S06-01 D15FE071450J'  ->  'HOS056-S06-01'
+  [HOS056-S06]  'Esc. Patufet Sant Jordi - HOS056-S06-01 D15FE071450J'  ->  'HOS056-S06-02'
+  [HOS056-S09]  'HOS056-S09-01'  ->  'HOS056-S09-01'
+  [HOS056-S13A]  'HOS056-S13-01'  ->  'HOS056-S13A-01'
+  [HOS056-S19]  'HOS056-S19-01'  ->  'HOS056-S19-01'
+  [HOS056-S20]  'HOS056-S20-01'  ->  'HOS056-S20-01'
+  [HOS056-S21]  'HOS056-S21-01'  ->  'HOS056-S21-01'
+  [HOS056-S22]  'HOS056 Esc. Patufet Sant Jordi'  ->  'HOS056-S22-01'
+  [HOS056-S22]  'Escola Patufet Sant Jordi-HOS056'  ->  'Old-HOS056-S22-02'
+  [HOS056-S22]  'Esc. Patufet Sant Jordi - HOS056'  ->  'Old-HOS056-S22-03'
+  [HOS056-SIP]  'HOS056-IPEX04-ID0200J23007500243'  ->  'HOS056-SIP-01'
+  [HOS057-S04]  'HOS057-S04-01'  ->  'HOS057-S04-01'
+  [HOS057-S05]  'HOS057-S05-01'  ->  'HOS057-S05-01'
+  [HOS057-S06]  'Esc. Pau Casals - HOS057-S06-01 I18BD030309Y'  ->  'HOS057-S06-01'
+  [HOS057-S06]  'Esc. Pau Casals - HOS057-S06-01 I18BD030309Y'  ->  'HOS057-S06-02'
+  [HOS057-S08]  'HOS057-S08-01'  ->  'HOS057-S08-01'
+  [HOS057-S08]  'HOS057-S08-02'  ->  'HOS057-S08-02'
+  [HOS057-S13A]  'HOS057-S13-01'  ->  'HOS057-S13A-01'
+  [HOS057-S19]  'HOS057-S19-02'  ->  'HOS057-S19-01'
+  [HOS057-S19]  'HOS057-S19-01'  ->  'HOS057-S19-02'
+  [HOS057-S20]  'HOS057-S20-01'  ->  'HOS057-S20-01'
+  [HOS057-S21]  'HOS057-S21-01'  ->  'HOS057-S21-01'
+  [HOS057-S22]  'Escola Pau Casals-HOS057'  ->  'HOS057-S22-01'
+  [HOS057-SIP]  'HOS057-IPEX04-ID0200J23007500332'  ->  'HOS057-SIP-01'
+  [HOS057-SIP]  'HOS057-IPEX04-ID0200J23007500393'  ->  'HOS057-SIP-02'
+  [HOS058-S04]  'HOS058-S04-01'  ->  'HOS058-S04-01'
+  [HOS058-S05]  'HOS058-S05-01'  ->  'HOS058-S05-01'
+  [HOS058-S06]  'Esc. Pau Sans - HOS058-S06-01 I22BD021841U'  ->  'HOS058-S06-01'
+  [HOS058-S06]  'Esc. Pau Sans - HOS058-S06-01 I22BD021841U'  ->  'HOS058-S06-02'
+  [HOS058-S08]  'Esc. Pau Sans-HOS058-1'  ->  'HOS058-S08-01'
+  [HOS058-S14A]  'HOS058-S14-Meteo (215289)'  ->  'HOS058-S14A-01'
+  [HOS058-S14B]  'HOS058-S14-Pira'  ->  'HOS058-S14B-01'
+  [HOS058-S19]  'HOS058-S19-01'  ->  'HOS058-S19-01'
+  [HOS058-S19]  'HOS058-S19-02'  ->  'HOS058-S19-02'
+  [HOS058-S20]  'HOS058-S20-01'  ->  'HOS058-S20-01'
+  [HOS058-S21]  'HOS058-S21-01'  ->  'HOS058-S21-01'
+  [HOS058-S22]  'HOS058 Esc. Pau Sans'  ->  'HOS058-S22-01'
+  [HOS058-S22]  'Esc. Pau Sans - HOS058'  ->  'Old-HOS058-S22-02'
+  [HOS058-S22]  'Escola Pau Sans-HOS058'  ->  'Old-HOS058-S22-03'
+  [HOS058-SIP]  'HOS058-IPEX04-ID0200J23007500249'  ->  'HOS058-SIP-01'
+  [HOS059-S04]  'HOS059-S04-01'  ->  'HOS059-S04-01'
+  [HOS059-S05]  'HOS059-S05-01'  ->  'HOS059-S05-01'
+  [HOS059-S06]  'Esc. Pau Vila - HOS059-S06-01 P22FA001797H'  ->  'HOS059-S06-01'
+  [HOS059-S13A]  'HOS059-S13-01'  ->  'HOS059-S13A-01'
+  [HOS059-S19]  'HOS059-S19-03'  ->  'HOS059-S19-01'
+  [HOS059-S19]  'HOS059-S19-02'  ->  'HOS059-S19-02'
+  [HOS059-S19]  'HOS059-S19-01'  ->  'HOS059-S19-03'
+  [HOS059-S20]  'HOS059-S20-01'  ->  'HOS059-S20-01'
+  [HOS059-S21]  'HOS059-S21-01'  ->  'HOS059-S21-01'
+  [HOS059-S22]  'HOS059 Esc. Pau Vila'  ->  'HOS059-S22-01'
+  [HOS059-S22]  'Esc. Pau Vila - HOS059'  ->  'HOS059-S22-02'
+  [HOS059-S22]  'Escola Pau Vila-HOS059'  ->  'HOS059-S22-03'
+  [HOS059-SIP]  'HOS059-IPEX04-ID0200J23007500279'  ->  'HOS059-SIP-01'
+  [HOS060-S04]  'HOS060-S04-01'  ->  'HOS060-S04-01'
+  [HOS060-S05]  'HOS060'  ->  'HOS060-S05-01'
+  [HOS060-S05]  'HOS060-S05-01'  ->  'Old-HOS060-S05-02'
+  [HOS060-S06]  'Esc. Pep Ventura - HOS060-S06-01 ESCOLA PEP VENTURA'  ->  'HOS060-S06-01'
+  [HOS060-S09]  'HOS060-S09-01'  ->  'HOS060-S09-01'
+  [HOS060-S19]  'HOS060-S19-01'  ->  'HOS060-S19-01'
+  [HOS060-S20]  'HOS060-S20-01'  ->  'HOS060-S20-01'
+  [HOS060-S21]  'HOS060-S1-01'  ->  'HOS060-S21-01'
+  [HOS060-S22]  'Escola Pep Ventura-HOS060'  ->  'HOS060-S22-01'
+  [HOS060-SIP]  'HOS060-IPEX04-ID0200J23007500275'  ->  'HOS060-SIP-01'
+  [HOS061-S04]  'HOS061-S04-01'  ->  'HOS061-S04-01'
+  [HOS061-S05]  'HOS061-S05-01'  ->  'HOS061-S05-01'
+  [HOS061-S06]  'Esc. Pere Lliscart - HOS061-S06-01 I18BD030283F'  ->  'HOS061-S06-01'
+  [HOS061-S06]  'Esc. Pere Lliscart - HOS061-S06-01 I18BD030283F'  ->  'HOS061-S06-02'
+  [HOS061-S08]  'HOS061-S08-01'  ->  'HOS061-S08-01'
+  [HOS061-S08]  'HOS061'  ->  'HOS061-S08-02'
+  [HOS061-S09]  'HOS061-S09-01'  ->  'HOS061-S09-01'
+  [HOS061-S14A]  'HOS061-S14-Meteo(215864)'  ->  'HOS061-S14A-01'
+  [HOS061-S14A]  'HOS061-S14-Meteo(215864)'  ->  'Old-HOS061-S14A-02'
+  [HOS061-S14B]  'HOS061-S14-Pira'  ->  'HOS061-S14B-01'
+  [HOS061-S19]  'HOS061-S19-01'  ->  'HOS061-S19-01'
+  [HOS061-S20]  'HOS061-S20-01'  ->  'HOS061-S20-01'
+  [HOS061-S21]  'HOS061-S21-01'  ->  'HOS061-S21-01'
+  [HOS061-S22]  'Escola Pere Lliscart-HOS061'  ->  'HOS061-S22-01'
+  [HOS061-SIP]  'HOS061-IPEX04-ID0200J23007500281'  ->  'HOS061-SIP-01'
+  [HOS062-S04]  'HOS062-S04-01'  ->  'HOS062-S04-01'
+  [HOS062-S05]  'HOS062-S05-01'  ->  'HOS062-S05-01'
+  [HOS062-S06]  'Esc. Pompeu Fabra - HOS062-S06-01 I18BD030308X'  ->  'HOS062-S06-01'
+  [HOS062-S06]  'Esc. Pompeu Fabra - HOS062-S06-01 I18BD030308X'  ->  'HOS062-S06-02'
+  [HOS062-S09]  'HOS062-S09-01'  ->  'HOS062-S09-01'
+  [HOS062-S19]  'HOS062-S19-01'  ->  'HOS062-S19-01'
+  [HOS062-S19]  'HOS062-S19-02'  ->  'HOS062-S19-02'
+  [HOS062-S20]  'HOS062-S20-01'  ->  'HOS062-S20-01'
+  [HOS062-S21]  'HOS062-S21-01'  ->  'HOS062-S21-01'
+  [HOS062-S22]  'Escola Pompeu Fabra-HOS062'  ->  'HOS062-S22-01'
+  [HOS062-SIP]  'HOS062-IPEX04-ID0200J23007500233'  ->  'HOS062-SIP-01'
+  [HOS063-S04]  'HOS063-S04-01'  ->  'HOS063-S04-01'
+  [HOS063-S05]  'HOS063-S05-01'  ->  'HOS063-S05-01'
+  [HOS063-S06]  'Esc. Prat de la Manta - HOS063-S06-01 P18UE276499Z'  ->  'HOS063-S06-01'
+  [HOS063-S13A]  'HOS063-S13-01'  ->  'HOS063-S13A-01'
+  [HOS063-S19]  'HOS063-S19-03'  ->  'HOS063-S19-01'
+  [HOS063-S19]  'HOS063-S19-02'  ->  'HOS063-S19-02'
+  [HOS063-S19]  'HOS063-S19-01'  ->  'HOS063-S19-03'
+  [HOS063-S20]  'HOS063-S20-01'  ->  'HOS063-S20-01'
+  [HOS063-S21]  'HOS063-S21-01'  ->  'HOS063-S21-01'
+  [HOS063-S22]  'Escola Prat de la Manta-HOS063'  ->  'HOS063-S22-01'
+  [HOS063-S22]  'Escola Prat de la Manta-HOS063'  ->  'HOS063-S22-02'
+  [HOS063-S22]  'Esc. Prat de la Manta - HOS063'  ->  'HOS063-S22-03'
+  [HOS063-S22]  'HOS063 Esc. Prat de la Manta'  ->  'HOS063-S22-04'
+  [HOS063-SIP]  'HOS063-IPEX04-ID0200J23007500350'  ->  'HOS063-SIP-01'
+  [HOS064-S04]  'HOS064-S04-01'  ->  'HOS064-S04-01'
+  [HOS064-S05]  'HOS064-S05-01'  ->  'HOS064-S05-01'
+  [HOS064-S05]  'HOS064-S05-01'  ->  'Old-HOS064-S05-02'
+  [HOS064-S06]  'Esc. Puig i Gairalt - HOS064-S06-1 I18BD030289L'  ->  'HOS064-S06-01'
+  [HOS064-S06]  'Esc. Puig i Gairalt - HOS064-S06-1 I18BD030289L'  ->  'HOS064-S06-02'
+  [HOS064-S08]  'Esc. Puig i Gairalt-HOS064-1'  ->  'HOS064-S08-01'
+  [HOS064-S09]  'HOS064-S09-01'  ->  'HOS064-S09-01'
+  [HOS064-S19]  'HOS064-S19-04'  ->  'HOS064-S19-01'
+  [HOS064-S19]  'HOS064-S19-02'  ->  'HOS064-S19-02'
+  [HOS064-S19]  'HOS064-S19-01'  ->  'HOS064-S19-03'
+  [HOS064-S19]  'HOS064-S19-03'  ->  'HOS064-S19-04'
+  [HOS064-S20]  'HOS064-S20-01'  ->  'HOS064-S20-01'
+  [HOS064-S21]  'HOS064-S21-01'  ->  'HOS064-S21-01'
+  [HOS064-S22]  'HOS064 Esc. Puig i Gairalt'  ->  'HOS064-S22-01'
+  [HOS064-S22]  'Esc. Puig i Gairalt - HOS064'  ->  'HOS064-S22-02'
+  [HOS064-S22]  'Escola Puig i Gairalt-HOS064'  ->  'HOS064-S22-03'
+  [HOS064-SIP]  'HOS064-IPEX04-ID0200J23007500247'  ->  'HOS064-SIP-01'
+  [HOS064-SIP]  'HOS064-IPEX04-ID0200J23007500236'  ->  'HOS064-SIP-02'
+  [HOS065-S04]  'HOS065-S04-01'  ->  'HOS065-S04-01'
+  [HOS065-S05]  'HOS065-S05-01'  ->  'HOS065-S05-01'
+  [HOS065-S05]  'HOS065-S05-01'  ->  'Old-HOS065-S05-02'
+  [HOS065-S06]  'Esc. S. Ramón y Cajal - HOS065-S06-01 I22BD089711V'  ->  'HOS065-S06-01'
+  [HOS065-S06]  'Esc. S. Ramón y Cajal - HOS065-S06-01 I22BD089711V'  ->  'HOS065-S06-02'
+  [HOS065-S08]  'HOS065-S08-01'  ->  'HOS065-S08-01'
+  [HOS065-S08]  'HOS065'  ->  'HOS065-S08-02'
+  [HOS065-S09]  'HOS065-S09-01'  ->  'HOS065-S09-01'
+  [HOS065-S19]  'HOS065-S19-01'  ->  'HOS065-S19-01'
+  [HOS065-S19]  'HOS065-S19-02'  ->  'HOS065-S19-02'
+  [HOS065-S19]  'HOS065-S19-03'  ->  'HOS065-S19-03'
+  [HOS065-S20]  'HOS065-S20-01'  ->  'HOS065-S20-01'
+  [HOS065-S21]  'HOS065-S21-01'  ->  'HOS065-S21-01'
+  [HOS065-S22]  'Escola Santiago Ramón y Cajal-HOS065'  ->  'HOS065-S22-01'
+  [HOS065-SIP]  'HOS065-IPEX04-ID0200J23007500245'  ->  'HOS065-SIP-01'
+  [HOS065-SIP]  'HOS065-IPEX04-ID0200J23007500358'  ->  'HOS065-SIP-02'
+  [HOS066-S04]  'HOS066-S04-01'  ->  'HOS066-S04-01'
+  [HOS066-S05]  'HOS066-S05-01'  ->  'HOS066-S05-01'
+  [HOS066-S05]  'HOS066-S05-01'  ->  'Old-HOS066-S05-02'
+  [HOS066-S19]  'HOS066-S19-03'  ->  'HOS066-S19-01'
+  [HOS066-S19]  'HOS066-S19-01'  ->  'HOS066-S19-02'
+  [HOS066-S19]  'HOS066-S19-02'  ->  'HOS066-S19-03'
+  [HOS066-S20]  'HOS066-S20-01'  ->  'HOS066-S20-01'
+  [HOS066-S21]  'HOS066-S21-01'  ->  'HOS066-S21-01'
+  [HOS066-S22]  'Escola Ramon Muntaner-HOS066'  ->  'HOS066-S22-01'
+  [HOS066-S22]  'HOS066 Esc. Ramon Muntaner'  ->  'HOS066-S22-02'
+  [HOS066-SIP]  'HOS066-IPEX04-ID0200J23007500199'  ->  'HOS066-SIP-01'
+  [HOS067-S04]  'HOS067-S04-01'  ->  'HOS067-S04-01'
+  [HOS067-S05]  'HOS067-S05-01'  ->  'HOS067-S05-01'
+  [HOS067-S08]  'Esc. Sant Josep - El Pi-HOS067-1131'  ->  'HOS067-S08-01'
+  [HOS067-S08]  'Esc. Sant Josep - El Pi-HOS067'  ->  'HOS067-S08-02'
+  [HOS067-S19]  'HOS067-S19-01'  ->  'HOS067-S19-01'
+  [HOS067-S20]  'HOS067-S20-01'  ->  'HOS067-S20-01'
+  [HOS067-S21]  'HOS067-S21-01'  ->  'HOS067-S21-01'
+  [HOS067-S22]  'HOS067 Esc. Sant Josep - El Pi'  ->  'HOS067-S22-01'
+  [HOS067-S22]  'Escola Sant Josep - El Pi-HOS067'  ->  'Old-HOS067-S22-02'
+  [HOS067-S22]  'Esc. Sant Josep - El Pi - HOS067'  ->  'Old-HOS067-S22-03'
+  [HOS067-SIP]  'HOS067-IPEX04-ID0200J23007500280'  ->  'HOS067-SIP-01'
+  [HOS068-S21]  'HOS068-S21-01'  ->  'HOS068-S21-01'
+  [HOS068-S22]  'HOS068 Palauet Can Buxeres'  ->  'HOS068-S22-01'
+  [HOS068-S22]  'Palauet Can Buxeres-HOS068'  ->  'Old-HOS068-S22-02'
+  [HOS068-S22]  'Palauet Can Buxeres - HOS068'  ->  'Old-HOS068-S22-03'
+  [HOS069-S04]  'HOS069-S04-01'  ->  'HOS069-S04-01'
+  [HOS069-S05]  'HOS069-S05-01'  ->  'HOS069-S05-01'
+  [HOS069-S05]  'HOS069-S05-01'  ->  'Old-HOS069-S05-02'
+  [HOS069-S06]  'Ca n'Olivé - HOS069-S06-01 H23VA095642V'  ->  'HOS069-S06-01'
+  [HOS069-S06]  'Ca n'Olivé - HOS069-S06-01 H23VA095642V'  ->  'HOS069-S06-02'
+  [HOS069-S09]  'HOS069-S09-01'  ->  'HOS069-S09-01'
+  [HOS069-S15]  'HOS069-S15-02'  ->  'HOS069-S15-01'
+  [HOS069-S15]  'HOS069-S15-01'  ->  'HOS069-S15-02'
+  [HOS069-S20]  'HOS069-S20-01'  ->  'HOS069-S20-01'
+  [HOS069-S21]  'HOS069-S21-01'  ->  'HOS069-S21-01'
+  [HOS069-S22]  'HOS069 Ca n'Olivé'  ->  'HOS069-S22-01'
+  [HOS069-S22]  'Ca n'Olivé - HOS069'  ->  'Old-HOS069-S22-02'
+  [HOS069-S22]  'Ca n'Olivé-HOS069'  ->  'Old-HOS069-S22-03'
+  [HOS069-SIP]  'HOS069-IPEX04-ID0200J23007500257'  ->  'HOS069-SIP-01'
+  [HOS069-SIP]  'HOS069-IPEX04-ID0200J23007500263'  ->  'HOS069-SIP-02'
+  [HOS070-S06]  'Ca n'Arús - HOS070-S06-01 I20BD020169P'  ->  'HOS070-S06-01'
+  [HOS070-S06]  'Ca n'Arús - HOS070-S06-01 I20BD020169P'  ->  'HOS070-S06-02'
+  [HOS070-S21]  'HOS070-S21-01'  ->  'HOS070-S21-01'
+  [HOS070-S22]  'HOS070 Ca n'Arús'  ->  'HOS070-S22-01'
+  [HOS070-S22]  'Ca n'Arús-HOS070'  ->  'Old-HOS070-S22-02'
+  [HOS070-S22]  'Ca n'Arús - HOS070'  ->  'Old-HOS070-S22-03'
+  [HOS071-S21]  'HOS071-S21-01'  ->  'HOS071-S21-01'
+  [HOS071-S22]  'Escola de Música - Centre de les Arts-HOS071'  ->  'HOS071-S22-01'
+  [HOS072-S22]  'L'Hospitalet de Llogregat-HOS072'  ->  'HOS072-S22-01'
+  [HOS073-S22]  'Bellvitge-HOS073'  ->  'HOS073-S22-01'
+  [HOS074-S22]  'Fira (L9)-HOS074'  ->  'HOS074-S22-01'
+  [HOS074-S22]  'Fira (L9)-HOS074'  ->  'HOS074-S22-02'
+  [HOS075-S22]  'Collblanc (L5)-HOS075'  ->  'HOS075-S22-01'
+  [HOS076-S22]  'Torrassa (L1)-HOS076'  ->  'HOS076-S22-01'
+  [HOS077-S22]  'Florida (L1)-HOS077'  ->  'HOS077-S22-01'
+  [HOS077-S22]  'Florida (L1)-HOS077'  ->  'HOS077-S22-02'
+  [HOS078-S22]  'Santa Eulàlia (L1)-HOS078'  ->  'HOS078-S22-01'
+  [HOS079-S22]  'Can Serra (L1)-HOS079'  ->  'HOS079-S22-01'
+  [HOS080-S22]  'Can Vidalet (L5)-HOS080'  ->  'HOS080-S22-01'
+  [HOS081-S22]  'Can Boixeres (L5)-HOS081'  ->  'HOS081-S22-01'
+  [HOS082-S22]  'Avinguda Carrilet (L1)-HOS082'  ->  'HOS082-S22-01'
+  [HOS083-S22]  'Bellvitge (L1)-HOS083'  ->  'HOS083-S22-01'
+  [HOS084-S22]  'Hospital de Bellvitge (L1)-HOS084'  ->  'HOS084-S22-01'
+  [HOS085-S22]  'Pubilla Cases (L5)-HOS085'  ->  'HOS085-S22-01'
+  [HOS086-S22]  'Rambla Just Oliveras (L1)-HOS086'  ->  'HOS086-S22-01'
+  [HOS087-S22]  'Can Tries Gornal (L9)-HOS087'  ->  'HOS087-S22-01'
+  [HOS088-S05]  'HOS088-S05-01'  ->  'HOS088-S05-01'
+  [HOS088-S09]  'HOS088-S09-01'  ->  'HOS088-S09-01'
+  [HOS088-S20]  'HOS088-S20-01'  ->  'HOS088-S20-01'
+  [HOS088-S21]  'HOS088-S21-01'  ->  'HOS088-S21-01'
+  [HOS088-S22]  'Radio-TV de L'Hospitalet-HOS088'  ->  'HOS088-S22-01'
+  [HOS088-SIP]  'HOS88-IPEX04-ID0200J23007500270'  ->  'HOS088-SIP-01'
+  [HOS089-S22]  'Sant Josep-HOS089'  ->  'HOS089-S22-01'
+  [HOS089-S22]  'Sant Josep-HOS089'  ->  'Old-HOS089-S22-02'
+  [HOS090-S22]  'Ildefons Cerdà-HOS090'  ->  'HOS090-S22-01'
+  [HOS091-S22]  'Europa Fira-HOS091'  ->  'HOS091-S22-01'
+  [HOS092-S22]  'Gornal-HOS092'  ->  'HOS092-S22-01'
+  [HOS093-S22]  'Centre comercial Gran Via 2-HOS093'  ->  'HOS093-S22-01'
+  [HOS094-S22]  'Provençana (L10)-HOS094'  ->  'HOS094-S22-01'
+  [HOS094-S22]  'Provençana (L10)-HOS094'  ->  'HOS094-S22-02'
+  [HOS095-S22]  'Ikea-HOS095'  ->  'HOS095-S22-01'
+  [HOS096-S04]  'HOS096-S04-01'  ->  'HOS096-S04-01'
+  [HOS096-S05]  'HOS096-S05-01'  ->  'HOS096-S05-01'
+  [HOS096-S06]  'Esc. Br. Nova Fortuny - HOS096-S06-01 P23AD727227S'  ->  'HOS096-S06-01'
+  [HOS096-S08]  'HOS096-S08-01'  ->  'HOS096-S08-01'
+  [HOS096-S09]  'HOS096-S09-01'  ->  'HOS096-S09-01'
+  [HOS096-S20]  'HOS096-S20-01'  ->  'HOS096-S20-01'
+  [HOS096-S21]  'HOS096-S21-01'  ->  'HOS096-S21-01'
+  [HOS096-S22]  'Escola Bressol Nova Fortuny-HOS096'  ->  'HOS096-S22-01'
+  [HOS096-S22]  'HOS096 Esc. Br. Nova Fortuny'  ->  'HOS096-S22-02'
+  [HOS096-SIP]  'HOS096-IPEX04-ID0200J23007500284'  ->  'HOS096-SIP-01'
+  [HOS097-S21]  'HOS097-S21-01'  ->  'HOS097-S21-01'
+  [HOS097-S22]  'HOS097 Esc. Br. Garabatos'  ->  'HOS097-S22-01'
+  [HOS097-S22]  'Esc. Br. Garabatos-HOS097'  ->  'Old-HOS097-S22-02'
+  [HOS097-S22]  'Escola Bressol Garabatos-HOS097'  ->  'Old-HOS097-S22-03'
+  [HOS098-S04]  'HOS098-S04-01'  ->  'HOS098-S04-01'
+  [HOS098-S05]  'HOS098-S05-01'  ->  'HOS098-S05-01'
+  [HOS098-S06]  'Esc. Br. La Casa del Molí - HOS098-S06-01 I22BB009987T'  ->  'HOS098-S06-01'
+  [HOS098-S06]  'Esc. Br. La Casa del Molí - HOS098-S06-01 I22BB009987T'  ->  'HOS098-S06-02'
+  [HOS098-S09]  'HOS098-S09-01'  ->  'HOS098-S09-01'
+  [HOS098-S19]  'HOS098-S19-01'  ->  'HOS098-S19-01'
+  [HOS098-S20]  'HOS098-S20-01'  ->  'HOS098-S20-01'
+  [HOS098-S21]  'HOS098-S21-01'  ->  'HOS098-S21-01'
+  [HOS098-S22]  'Escola Bressol Municipal La Casa del Molí-HOS098'  ->  'HOS098-S22-01'
+  [HOS098-SIP]  'HOS098-IPEX04-ID0200J23007500421'  ->  'HOS098-SIP-01'
+  [HOS099-S04]  'HOS099-S04-01'  ->  'HOS099-S04-01'
+  [HOS099-S05]  'HOS099-S05-01'  ->  'HOS099-S05-01'
+  [HOS099-S05]  'HOS099-S05-01'  ->  'Old-HOS099-S05-02'
+  [HOS099-S06]  'Esc. Br. Patufet - HOS099-S06-01 I24LA262898U'  ->  'HOS099-S06-01'
+  [HOS099-S09]  'HOS099-S09-01'  ->  'HOS099-S09-01'
+  [HOS099-S13A]  'HOS099 - Esc. Br. Patufet'  ->  'HOS099-S13A-01'
+  [HOS099-S19]  'HOS099-S19-01'  ->  'HOS099-S19-01'
+  [HOS099-S20]  'HOS099-S20-01'  ->  'HOS099-S20-01'
+  [HOS099-S21]  'HOS099'  ->  'HOS099-S21-01'
+  [HOS099-S21]  'HOS099'  ->  'HOS099-S21-02'
+  [HOS099-S21]  'HOS099-S21-01'  ->  'Old-HOS099-S21-03'
+  [HOS099-S21]  'HOS099'  ->  'Old-HOS099-S21-04'
+  [HOS099-S22]  'HOS099 Esc. Br. Patufet'  ->  'HOS099-S22-01'
+  [HOS099-S22]  'Escola Bressol Patufet-HOS099'  ->  'Old-HOS099-S22-02'
+  [HOS099-S22]  'Esc. Br. Patufet - HOS099'  ->  'Old-HOS099-S22-03'
+  [HOS099-SIP]  'HOS099-IPEX04-ID0200J23007500388'  ->  'HOS099-SIP-01'
+  [HOS100-S22]  'Centre d'Atenció Primària Pura Fernández-HOS100'  ->  'HOS100-S22-01'
+  [HOS101-S22]  'Centre d'Atenció Primària Alhambra-HOS101'  ->  'HOS101-S22-01'
+  [HOS102-S02]  'HOS102-S02-01 BET00230042'  ->  'HOS102-S02-01'
+  [HOS102-S02]  'HOS102-S02-01 BET00230042'  ->  'Old-HOS102-S02-02'
+  [HOS102-S22]  'Hotel Hesperia Tower-HOS102'  ->  'HOS102-S22-01'
+  [HOS103-S02]  'HOS103-S02-01 BET00230036'  ->  'HOS103-S02-01'
+  [HOS103-S02]  'HOS103-S02-01 BET00230036'  ->  'Old-HOS103-S02-02'
+  [HOS103-S22]  'CLD-HOS103'  ->  'HOS103-S22-01'
+  [HOS104-S02]  'HOS104-S02-01 BET00230044'  ->  'HOS104-S02-01'
+  [HOS104-S02]  'HOS104-S02-01 BET00230044'  ->  'Old-HOS104-S02-02'
+  [HOS104-S22]  'Ara Vinc-HOS104'  ->  'HOS104-S22-01'
+  [HOS105-S02]  'HOS105-S02-01 BET00230045'  ->  'HOS105-S02-01'
+  [HOS105-S02]  'HOS105-S02-01 BET00230045'  ->  'Old-HOS105-S02-02'
+  [HOS105-S22]  'HOS105 Calzedonia'  ->  'HOS105-S22-01'
+  [HOS105-S22]  'Calzedonia - HOS105'  ->  'HOS105-S22-02'
+  [HOS105-S22]  'Calzedonia-HOS105'  ->  'HOS105-S22-03'
+  [HOS106-S06]  'Pavelló M. d'Esports - HOS106-S06-01 I18BD030318Z'  ->  'HOS106-S06-01'
+  [HOS106-S06]  'Pavelló M. d'Esports - HOS106-S06-01 I18BD030318Z'  ->  'HOS106-S06-02'
+  [HOS106-S22]  'Pavelló Municipal d'Esports-HOS106'  ->  'HOS106-S22-01'
+  [HOS107-S06]  'Piscines M. L'Hospitalet - HOS107-S06-01 P19UF003436T'  ->  'HOS107-S06-01'
+  [HOS107-S22]  'Piscines Municipals L'Hospitalet-HOS107'  ->  'HOS107-S22-01'
+  [HOS108-S06]  'E. M. Futbol L'Hospitalet - HOS108-S06-01 P22UI000467I'  ->  'HOS108-S06-01'
+  [HOS108-S21]  'HOS108-S21-01'  ->  'HOS108-S21-01'
+  [HOS108-S22]  'Estadi Municipal Futbol L'Hospitalet-HOS108'  ->  'HOS108-S22-01'
+  [HOS109-S06]  'C.E.M. L'Hospitalet Nord - HOS109-S06-01 P22UH724572R'  ->  'HOS109-S06-01'
+  [HOS109-S17]  'HOS109-S17-01'  ->  'HOS109-S17-01'
+  [HOS109-S20]  'HOS109-S20-01'  ->  'HOS109-S20-01'
+  [HOS109-S21]  'HOS109-S21-01'  ->  'HOS109-S21-01'
+  [HOS109-S22]  'Complex Esportiu Municipal L'Hospitalet Nord-HOS109'  ->  'HOS109-S22-01'
+  [HOS109-SIP]  'HOS109-IPEX04-ID0200J23007500317'  ->  'HOS109-SIP-01'
+  [HOS110-S06]  'P. M. Fum d'Estampa - HOS110-S06-01 P23UF789879A'  ->  'HOS110-S06-01'
+  [HOS110-S21]  'HOS110-S21-01'  ->  'HOS110-S21-01'
+  [HOS110-S22]  'HOS110 P. M. Fum d'Estampa'  ->  'HOS110-S22-01'
+  [HOS110-S22]  'P. M. Fum d'Estampa - HOS110'  ->  'HOS110-S22-02'
+  [HOS110-S22]  'Poliesportiu Municipal Fum d'Estampa-HOS110'  ->  'HOS110-S22-03'
+  [HOS111-S06]  'P. M. Les Planes - HOS111-S06-01 P21UG990150O'  ->  'HOS111-S06-01'
+  [HOS111-S21]  'HOS111-S21-01'  ->  'HOS111-S21-01'
+  [HOS111-S22]  'Poliesportiu Municipal Les Planes-HOS111'  ->  'HOS111-S22-01'
+  [HOS112-S06]  'P. M. Santa Eulàlia - HOS112-S06-01 P16BH813211W'  ->  'HOS112-S06-01'
+  [HOS112-S21]  'HOS112-S21-01'  ->  'HOS112-S21-01'
+  [HOS112-S22]  'Poliesportiu Municipal Santa Eulàlia-HOS112'  ->  'HOS112-S22-01'
+  [HOS113-S06]  'P. M. Sergio Manzano - HOS113-S06-01 P18UG031358B'  ->  'HOS113-S06-01'
+  [HOS113-S21]  'HOS113-S21-01'  ->  'HOS113-S21-01'
+  [HOS113-S22]  'Poliesportiu Municipal Bellvitge Sergio Manzano-HOS113'  ->  'HOS113-S22-01'
+  [HOS114-S06]  'P. M. Sanfeliu - HOS114-S06-01 POLIESPORTIU SANFELIU'  ->  'HOS114-S06-01'
+  [HOS114-S21]  'HOS114-S21-01'  ->  'HOS114-S21-01'
+  [HOS114-S22]  'Poliesportiu Municipal Sanfeliu-HOS114'  ->  'HOS114-S22-01'
+  [HOS115-S05]  'P. M. Centre-HOS115'  ->  'HOS115-S05-01'
+  [HOS115-S06]  'P. M. Centre - HOS115-S06-01 P14BH094224F'  ->  'HOS115-S06-01'
+  [HOS115-S22]  'HOS115 P. M. Centre'  ->  'HOS115-S22-01'
+  [HOS115-S22]  'P. M. Centre - HOS115'  ->  'Old-HOS115-S22-02'
+  [HOS115-S22]  'Poliesportiu Municipal Centre-HOS115'  ->  'Old-HOS115-S22-03'
+  [HOS116-S22]  'Ciudad de la Justicia (Juzgado 1ª Instancia Nº 2)-HOS116'  ->  'HOS116-S22-01'
+  [HOS117-S04]  'HOS117-S04-01'  ->  'HOS117-S04-01'
+  [HOS117-S06]  'Mercat Merca-2 Bellvitge - HOS117-S06-01 P24UG742861K'  ->  'HOS117-S06-01'
+  [HOS117-S21]  'HOS117-S21-01'  ->  'HOS117-S21-01'
+  [HOS117-S22]  'Mercat Merca-2 Bellvitge - HOS117'  ->  'HOS117-S22-01'
+  [HOS117-S22]  'HOS117 Mercat Merca-2 Bellvitge'  ->  'HOS117-S22-02'
+  [HOS117-S22]  'Mercat Merca-2 Bellvitge-HOS117'  ->  'HOS117-S22-03'
+  [HOS118-S06]  'CGG la Ermita - HOS118-S06-01 I19BD042435Z'  ->  'HOS118-S06-01'
+  [HOS118-S06]  'CGG la Ermita - HOS118-S06-01 I19BD042435Z'  ->  'HOS118-S06-02'
+  [HOS118-S22]  'HOS118 CGG la Ermita'  ->  'HOS118-S22-01'
+  [HOS118-S22]  'Mercat Bellvitge-HOS118'  ->  'Old-HOS118-S22-02'
+  [HOS118-S22]  'CGG la Ermita - HOS118'  ->  'Old-HOS118-S22-03'
+  [HOS119-S06]  'HOS119-S06-01 P21UF000569J'  ->  'HOS119-S06-01'
+  [HOS119-S22]  'Mercat Merca-2 Can Serra-HOS119'  ->  'HOS119-S22-01'
+  [HOS120-S06]  'CGG del polígon Gornal - HOS120-S06-01 H23VA120591E'  ->  'HOS120-S06-01'
+  [HOS120-S06]  'CGG del polígon Gornal - HOS120-S06-01 H23VA120591E'  ->  'HOS120-S06-02'
+  [HOS120-S22]  'Mercat de Collblanc-HOS120'  ->  'HOS120-S22-01'
+  [HOS121-S04]  'HOS121-S04-01'  ->  'HOS121-S04-01'
+  [HOS121-S17]  'HOS121-S17-01'  ->  'HOS121-S17-01'
+  [HOS121-S22]  'Mercat de La Florida-HOS121'  ->  'HOS121-S22-01'
+  [HOS122-S06]  'CGG de Can Serra - HOS122-S06-01 P21VA198542C'  ->  'HOS122-S06-01'
+  [HOS122-S22]  'Mercat de Santa Eulàlia-HOS122'  ->  'HOS122-S22-01'
+  [HOS123-S22]  'HOS123 CGG Provençana'  ->  'HOS123-S22-01'
+  [HOS123-S22]  'Mercat del Centre-HOS123'  ->  'Old-HOS123-S22-02'
+  [HOS124-S06]  'Mercat del Torrent Gornal - HOS124-S06-01 P23VA148607V'  ->  'HOS124-S06-01'
+  [HOS124-S21]  'HOS124-S21-01'  ->  'HOS124-S21-01'
+  [HOS124-S22]  'Mercat del Torrent Gornal-HOS124'  ->  'HOS124-S22-01'
+  [HOS125-S04]  'HOS125'  ->  'HOS125-S04-01'
+  [HOS125-S04]  'HOS125-S04-01'  ->  'Old-HOS125-S04-02'
+  [HOS125-S05]  'HOS125'  ->  'HOS125-S05-01'
+  [HOS125-S05]  'HOS125-S05-01'  ->  'Old-HOS125-S05-02'
+  [HOS125-S06]  'Museu Casa Espanya - HOS125-S06-01 P23FA027637J'  ->  'HOS125-S06-01'
+  [HOS125-S08]  'HOS125'  ->  'HOS125-S08-01'
+  [HOS125-S08]  'HOS125-S08-01'  ->  'HOS125-S08-02'
+  [HOS125-S09]  'HOS125-S09-01'  ->  'HOS125-S09-01'
+  [HOS125-S13A]  'HOS125-S13-01'  ->  'HOS125-S13A-01'
+  [HOS125-S14A]  'HOS125-S14-Meteo (???)'  ->  'HOS125-S14A-01'
+  [HOS125-S14B]  'HOS125-S14-Pira'  ->  'HOS125-S14B-01'
+  [HOS125-S19]  'HOS125'  ->  'HOS125-S19-01'
+  [HOS125-S19]  'HOS125-S19-01'  ->  'HOS125-S19-02'
+  [HOS125-S20]  'HOS125-S20-01'  ->  'HOS125-S20-01'
+  [HOS125-S20]  'HOS125'  ->  'HOS125-S20-02'
+  [HOS125-S21]  'HOS125'  ->  'HOS125-S21-01'
+  [HOS125-S21]  'HOS125'  ->  'HOS125-S21-02'
+  [HOS125-S21]  'HOS125-S21-01'  ->  'Old-HOS125-S21-03'
+  [HOS125-S22]  'HOS125 Museu Casa Espanya'  ->  'HOS125-S22-01'
+  [HOS125-S22]  'Museu Casa Espanya - HOS125'  ->  'Old-HOS125-S22-02'
+  [HOS125-S22]  'Museu de L'Hospitalet - Casa Espanya-HOS125'  ->  'Old-HOS125-S22-03'
+  [HOS125-SIP]  'HOS125-IPEX04-ID0200J23007500337'  ->  'HOS125-SIP-01'
+  [HOS126-S04]  'HOS126-S04-01'  ->  'HOS126-S04-01'
+  [HOS126-S05]  'HOS126-S05-01'  ->  'HOS126-S05-01'
+  [HOS126-S06]  'Museu L'Harmonia - HOS126-S06-01 P23FA005374N'  ->  'HOS126-S06-01'
+  [HOS126-S09]  'HOS126-S09-01'  ->  'HOS126-S09-01'
+  [HOS126-S13A]  'HOS126-S13-01'  ->  'HOS126-S13A-01'
+  [HOS126-S14A]  'HOS126-S14-Meteo (221405 )'  ->  'HOS126-S14A-01'
+  [HOS126-S14B]  'HOS126-S14-Pira'  ->  'HOS126-S14B-01'
+  [HOS126-S20]  'HOS126-S20-01'  ->  'HOS126-S20-01'
+  [HOS126-S21]  'HOS126-S21-01'  ->  'HOS126-S21-01'
+  [HOS126-S22]  'HOS126 Museu L'Harmonia'  ->  'HOS126-S22-01'
+  [HOS126-S22]  'Museu L'Harmonia - HOS126'  ->  'Old-HOS126-S22-02'
+  [HOS126-S22]  'Museu de L'Hospitalet - L'Harmonia-HOS126'  ->  'Old-HOS126-S22-03'
+  [HOS126-SIP]  'HOS126-IPEX04-ID0200J23007500277'  ->  'HOS126-SIP-01'
+  [HOS127-S04]  'HOS127'  ->  'HOS127-S04-01'
+  [HOS127-S04]  'HOS127-S04-01'  ->  'Old-HOS127-S04-02'
+  [HOS127-S05]  'HOS127-S05-01'  ->  'HOS127-S05-01'
+  [HOS127-S05]  'HOS127-S05-01'  ->  'Old-HOS127-S05-02'
+  [HOS127-S06]  'Museu Can Riera - HOS127-S06-01 H23VA095644X'  ->  'HOS127-S06-01'
+  [HOS127-S06]  'Museu Can Riera - HOS127-S06-01 H23VA095644X'  ->  'HOS127-S06-02'
+  [HOS127-S21]  'HOS127-S21-01'  ->  'HOS127-S21-01'
+  [HOS127-S22]  'HOS127 Museu Can Riera'  ->  'HOS127-S22-01'
+  [HOS127-S22]  'Museu de L'Hospitalet - Can Riera-HOS127'  ->  'Old-HOS127-S22-02'
+  [HOS127-S22]  'Museu Can Riera - HOS127'  ->  'Old-HOS127-S22-03'
+  [HOS128-S02]  'HOS128-S02-01 BET00230038'  ->  'HOS128-S02-01'
+  [HOS128-S02]  'HOS128-S02-01 BET00230038'  ->  'Old-HOS128-S02-02'
+  [HOS128-S22]  'HOS128 Edificio PUIG'  ->  'HOS128-S22-01'
+  [HOS128-S22]  'Edificio PUIG-HOS128'  ->  'HOS128-S22-02'
+  [HOS129-S13A]  'HOS129-S13-01'  ->  'HOS129-S13A-01'
+  [HOS129-S22]  'Centre assistencial Prytanis Plaça Europa-HOS129'  ->  'HOS129-S22-01'
+  [HOS130-S06]  'P. M. Gornal - HOS130-S06-01 P24UG743696T'  ->  'HOS130-S06-01'
+  [HOS130-S07]  'P. M. Gornal - 0018b2400001947d - HOS130'  ->  'HOS130-S07-01'
+  [HOS130-S07]  'P. M. Gornal - 0018b2400001947d - HOS130'  ->  'Old-HOS130-S07-02'
+  [HOS130-S17]  'HOS130-S17-01 (051001812)'  ->  'HOS130-S17-01'
+  [HOS130-S17]  'HOS130-S17-02 (051001716)'  ->  'HOS130-S17-02'
+  [HOS130-S21]  'HOS130-S21-01'  ->  'HOS130-S21-01'
+  [HOS130-S22]  'Poliesportiu Municipal Gornal-HOS130'  ->  'HOS130-S22-01'
+  [HOS130-S22]  'HOS130 P. M. Gornal'  ->  'HOS130-S22-02'
+  [HOS130-S22]  'P. M. Gornal - HOS130'  ->  'HOS130-S22-03'
+  [HOS130-S23]  'P. M. Gornal - Plaza 1 - HOS130'  ->  'HOS130-S23-01'
+  [HOS130-S23]  'P. M. Gornal - Plaza 2 - HOS130'  ->  'HOS130-S23-02'
+  [HOS131-S22]  'Fira Barcelona Gran Via-HOS131'  ->  'HOS131-S22-01'
+  [HOS132-S02]  'Deixalleria Municipal - HOS132-S02-01 BET00230060'  ->  'HOS132-S02-01'
+  [HOS132-S02]  'Deixalleria Municipal - HOS132-S02-01 BET00230060'  ->  'Old-HOS132-S02-02'
+  [HOS132-S05]  'HOS132-S05-01'  ->  'HOS132-S05-01'
+  [HOS132-S06]  'Deixalleria Municipal - HOS132-S06-01 I17BD045696M'  ->  'HOS132-S06-01'
+  [HOS132-S09]  'HOS132-S09-01'  ->  'HOS132-S09-01'
+  [HOS132-S15]  'HOS132-S15-03'  ->  'HOS132-S15-01'
+  [HOS132-S15]  'HOS132-S15-01'  ->  'HOS132-S15-02'
+  [HOS132-S15]  'HOS132-S15-02'  ->  'HOS132-S15-03'
+  [HOS132-S20]  'HOS132-S20-01'  ->  'HOS132-S20-01'
+  [HOS132-S21]  'HOS132-S21-01'  ->  'HOS132-S21-01'
+  [HOS132-S22]  'Deixalleria Municipal-HOS132'  ->  'HOS132-S22-01'
+  [HOS133-S22]  'HOS133 Ermita de Santa Eulàlia'  ->  'HOS133-S22-01'
+  [HOS133-S22]  'Ermita de Santa Eulàlia - HOS133'  ->  'Old-HOS133-S22-02'
+  [HOS133-S22]  'Ermita de Santa Eulàlia-HOS133'  ->  'Old-HOS133-S22-03'
+  [HOS134-S02]  'HOS134-S02-01 BET00230041'  ->  'HOS134-S02-01'
+  [HOS134-S02]  'HOS134-S02-01 BET00230041'  ->  'Old-HOS134-S02-02'
+  [HOS134-S22]  'Iglesia de la Florida-HOS134'  ->  'HOS134-S22-01'
+  [HOS135-S22]  'Mezquita de Santa Eulàlia-HOS135'  ->  'HOS135-S22-01'
+  [HOS136-S01]  'HOS136-S01-01 (T257517)'  ->  'HOS136-S01-01'
+  [HOS136-S04]  'HOS136-S04-01'  ->  'HOS136-S04-01'
+  [HOS136-S05]  'HOS136-S05-01'  ->  'HOS136-S05-01'
+  [HOS136-S06]  'Residencia Els Alps - HOS136-S06-01 I17BD083286K'  ->  'HOS136-S06-01'
+  [HOS136-S06]  'Residencia Els Alps - HOS136-S06-01 I17BD083286K'  ->  'HOS136-S06-02'
+  [HOS136-S07]  'Residencia Els Alps - HOS136'  ->  'HOS136-S07-01'
+  [HOS136-S08]  'HOS136-S08-01'  ->  'HOS136-S08-01'
+  [HOS136-S09]  'HOS136-S09-01'  ->  'HOS136-S09-01'
+  [HOS136-S19]  'HOS136-S19-01'  ->  'HOS136-S19-01'
+  [HOS136-S20]  'HOS136-S20-01'  ->  'HOS136-S20-01'
+  [HOS136-S21]  'HOS136-S21-01'  ->  'HOS136-S21-01'
+  [HOS136-S22]  'HOS136 Residencia Els Alps'  ->  'HOS136-S22-01'
+  [HOS136-S22]  'Residencia Els Alps-HOS136'  ->  'Old-HOS136-S22-02'
+  [HOS136-S22]  'Residencia Els Alps - HOS136'  ->  'Old-HOS136-S22-03'
+  [HOS137-S02]  'HOS137-S02-01 BET00230037'  ->  'HOS137-S02-01'
+  [HOS137-S02]  'HOS137-S02-01 BET00230037'  ->  'Old-HOS137-S02-02'
+  [HOS137-S22]  'Centre assistencial Prytanis Hospitalet-HOS137'  ->  'HOS137-S22-01'
+  [HOS138-S22]  'Residència Collblanc Companys Socials-HOS138'  ->  'HOS138-S22-01'
+  [HOS139-S06]  'Esc. Rest. El Repartidor - HOS139-S06-01 C15FA550083J'  ->  'HOS139-S06-01'
+  [HOS139-S21]  'HOS139-S21-01'  ->  'HOS139-S21-01'
+  [HOS139-S22]  'HOS139 Esc. Rest. El Repartidor'  ->  'HOS139-S22-01'
+  [HOS139-S22]  'Escola restaurant El Repartidor / Tragaluz - El Llindar-HOS139'  ->  'Old-HOS139-S22-02'
+  [HOS139-S22]  'Esc. Rest. El Repartidor - HOS139'  ->  'Old-HOS139-S22-03'
+  [HOS140-S22]  'IFP (Innovación en Formación Profesional)-HOS140'  ->  'HOS140-S22-01'
+  [HOS141-S04]  'HOS141-S04-01'  ->  'HOS141-S04-01'
+  [HOS141-S08]  'HOS141-1'  ->  'HOS141-S08-01'
+  [HOS141-S08]  'HOS141-S08-01'  ->  'HOS141-S08-02'
+  [HOS141-S08]  'HOS141-2'  ->  'HOS141-S08-03'
+  [HOS141-S08]  'HOS141-S08-02'  ->  'HOS141-S08-04'
+  [HOS141-S22]  'Institut Eugeni d'Ors-HOS141'  ->  'HOS141-S22-01'
+  [HOS142-S08]  'HOS142-S08-02'  ->  'HOS142-S08-01'
+  [HOS142-S08]  'HOS142-S08-01'  ->  'HOS142-S08-02'
+  [HOS142-S22]  'Institut Apel·les Mestres-HOS142'  ->  'HOS142-S22-01'
+  [HOS142-S22]  'S4E-HOS142'  ->  'HOS142-S22-02'
+  [HOS143-S04]  'HOS143-S04-01'  ->  'HOS143-S04-01'
+  [HOS143-S08]  'HOS143-2'  ->  'HOS143-S08-01'
+  [HOS143-S08]  'HOS143-S08-01'  ->  'HOS143-S08-02'
+  [HOS143-S08]  'HOS143-S08-02'  ->  'HOS143-S08-03'
+  [HOS143-S08]  'HOS143-1'  ->  'HOS143-S08-04'
+  [HOS143-S22]  'Institut Bellvitge-HOS143'  ->  'HOS143-S22-01'
+  [HOS143-S22]  'HOS143 Institut Bellvitge'  ->  'HOS143-S22-02'
+  [HOS144-S04]  'HOS144-S04-01'  ->  'HOS144-S04-01'
+  [HOS144-S22]  'Institut Bisbe Berenguer-HOS144'  ->  'HOS144-S22-01'
+  [HOS145-S08]  'HOS145-S08-02'  ->  'HOS145-S08-01'
+  [HOS145-S22]  'Institut Eduard Fontserè-HOS145'  ->  'HOS145-S22-01'
+  [HOS146-S04]  'HOS146-S04-01'  ->  'HOS146-S04-01'
+  [HOS146-S08]  'HOS146-S08-01'  ->  'HOS146-S08-01'
+  [HOS146-S08]  'HOS146-1'  ->  'HOS146-S08-02'
+  [HOS146-S08]  'HOS146-2'  ->  'HOS146-S08-03'
+  [HOS146-S08]  'HOS146-S08-02'  ->  'HOS146-S08-04'
+  [HOS146-S22]  'HOS146 Institut Europa'  ->  'HOS146-S22-01'
+  [HOS146-S22]  'Institut Europa-HOS146'  ->  'Old-HOS146-S22-02'
+  [HOS147-S04]  'HOS147-S04-01'  ->  'HOS147-S04-01'
+  [HOS147-S08]  'HOS147-S08-02'  ->  'HOS147-S08-01'
+  [HOS147-S08]  'HOS147-S08-01'  ->  'HOS147-S08-02'
+  [HOS147-S22]  'HOS147 Institut Mercè Rodoreda'  ->  'HOS147-S22-01'
+  [HOS147-S22]  'Institut Mercè Rodoreda-HOS147'  ->  'Old-HOS147-S22-02'
+  [HOS147-S22]  'Institut Mercè Rodoreda - HOS147'  ->  'Old-HOS147-S22-03'
+  [HOS147-S24]  'HOS147-S24-01'  ->  'HOS147-S24-01'
+  [HOS147-S24]  'HOS147-S24-02'  ->  'HOS147-S24-02'
+  [HOS148-S04]  'HOS148-S04-01'  ->  'HOS148-S04-01'
+  [HOS148-S08]  'Institut Margarida Xirgu-HOS148-2'  ->  'HOS148-S08-01'
+  [HOS148-S22]  'Institut Margarida Xirgu-HOS148'  ->  'HOS148-S22-01'
+  [HOS149-S04]  'HOS149-S04-01'  ->  'HOS149-S04-01'
+  [HOS149-S08]  'Institut Pedraforca-HOS149-2'  ->  'HOS149-S08-01'
+  [HOS149-S22]  'Institut Pedraforca-HOS149'  ->  'HOS149-S22-01'
+  [HOS149-S24]  'HOS149-S24-01'  ->  'HOS149-S24-01'
+  [HOS149-S24]  'HOS149-S24-02'  ->  'HOS149-S24-02'
+  [HOS150-S04]  'HOS150-S04-01'  ->  'HOS150-S04-01'
+  [HOS150-S08]  'HOS150-S08-01'  ->  'HOS150-S08-01'
+  [HOS150-S08]  'HOS150-2'  ->  'HOS150-S08-02'
+  [HOS150-S08]  'HOS150-S08-02'  ->  'HOS150-S08-03'
+  [HOS150-S08]  'HOS150-1'  ->  'HOS150-S08-04'
+  [HOS150-S22]  'Institut Rubio i Ors-HOS150'  ->  'HOS150-S22-01'
+  [HOS151-S04]  'HOS151-S04-01'  ->  'HOS151-S04-01'
+  [HOS151-S08]  'HOS151-S08-01'  ->  'HOS151-S08-01'
+  [HOS151-S22]  'Institut Santa Eulàlia-HOS151'  ->  'HOS151-S22-01'
+  [HOS152-S04]  'HOS152-S04-01'  ->  'HOS152-S04-01'
+  [HOS152-S08]  'HOS152-2'  ->  'HOS152-S08-01'
+  [HOS152-S08]  'HOS152-S08-01'  ->  'HOS152-S08-02'
+  [HOS152-S08]  'HOS152-S08-02'  ->  'HOS152-S08-03'
+  [HOS152-S08]  'HOS152-1'  ->  'HOS152-S08-04'
+  [HOS152-S22]  'HOS152 Institut Torras i Bages'  ->  'HOS152-S22-01'
+  [HOS152-S22]  'Institut Torras i Bages-HOS152'  ->  'Old-HOS152-S22-02'
+  [HOS152-S22]  'Institut Torras i Bages - HOS152'  ->  'Old-HOS152-S22-03'
+  [HOS153-S04]  'HOS153-S04-01'  ->  'HOS153-S04-01'
+  [HOS153-S22]  'HOS153 Institut Can Vilumara'  ->  'HOS153-S22-01'
+  [HOS153-S22]  'Institut Can Vilumara-HOS153'  ->  'Old-HOS153-S22-02'
+  [HOS153-S22]  'Institut Can Vilumara-HOS153'  ->  'Old-HOS153-S22-03'
+  [HOS154-S04]  'HOS154-S04-01'  ->  'HOS154-S04-01'
+  [HOS154-S08]  'HOS154-S08-02'  ->  'HOS154-S08-01'
+  [HOS154-S08]  'HOS154-S08-01'  ->  'HOS154-S08-02'
+  [HOS154-S08]  'HOS154-1'  ->  'HOS154-S08-03'
+  [HOS154-S08]  'HOS154-2'  ->  'HOS154-S08-04'
+  [HOS154-S22]  'HOS154 Institut Jaume Botey'  ->  'HOS154-S22-01'
+  [HOS154-S22]  'Institut Llobregat (2)-HOS154'  ->  'HOS154-S22-02'
+  [HOS154-S22]  'Jaueme Botey-HOS154'  ->  'HOS154-S22-03'
+  [HOS155-S04]  'HOS155-S04-01'  ->  'HOS155-S04-01'
+  [HOS155-S08]  'Institut Llobregat-HOS155-2'  ->  'HOS155-S08-01'
+  [HOS155-S22]  'Institut Llobregat-HOS155'  ->  'HOS155-S22-01'
+  [HOS156-S04]  'HOS156-S04-01'  ->  'HOS156-S04-01'
+  [HOS156-S08]  'HOS156-S08-02'  ->  'HOS156-S08-01'
+  [HOS156-S08]  'HOS156-S08-01'  ->  'HOS156-S08-02'
+  [HOS156-S22]  'Institut Provençana-HOS156'  ->  'HOS156-S22-01'
+  [HOS157-S02]  'HOS157-S02-01 BET00230040'  ->  'HOS157-S02-01'
+  [HOS157-S02]  'HOS157-S02-01 BET00230040'  ->  'Old-HOS157-S02-02'
+  [HOS157-S22]  'Tanatori L'Hospitalet Ronda-HOS157'  ->  'HOS157-S22-01'
+  [HOS158-S22]  'Tanatori - Crematori L'Hospitalet Gran Via-HOS158'  ->  'HOS158-S22-01'
+  [HOS159-S06]  'Teatre Joventut - HOS159-S06-01 P20UH000838Q'  ->  'HOS159-S06-01'
+  [HOS159-S21]  'HOS159-S21-01'  ->  'HOS159-S21-01'
+  [HOS159-S22]  'Teatre Joventut-HOS159'  ->  'HOS159-S22-01'
+  [HOS160-S22]  'Hospital Universitari Bellvitge-HOS160'  ->  'HOS160-S22-01'
+  [HOS161-S22]  'Universitat de Barcelona-HOS161'  ->  'HOS161-S22-01'
+  [HOS162-S06]  'HOS162-S06-01 D17BA088747O'  ->  'HOS162-S06-01'
+  [HOS162-S21]  'HOS162-S21-01'  ->  'HOS162-S21-01'
+  [HOS162-S22]  'Edificio de viviendas C. Prat-HOS162'  ->  'HOS162-S22-01'
+  [HOS162-S22]  'Edificio de viviendas C. Prat-HOS162'  ->  'Old-HOS162-S22-02'
+  [HOS163-S22]  'Unifamiliar C. Ebre-HOS163'  ->  'HOS163-S22-01'
+  [HOS163-S22]  'Unifamiliar C. Ebre-HOS163'  ->  'Old-HOS163-S22-02'
+  [HOS164-S06]  'HOS164-S06-01 D18BA010631X'  ->  'HOS164-S06-01'
+  [HOS164-S22]  'Edificio de viviendas Plaza Guernica-HOS164'  ->  'HOS164-S22-01'
+  [HOS165-S22]  'Centre Telecom. i Tecnologies de la Informació (CTTI)-HOS165'  ->  'HOS165-S22-01'
+  [HOS166-S22]  'ETRA BONAL - Cornellà-HOS166'  ->  'HOS166-S22-01'
+  [HOS501-S02]  'HOS501-S02-01 BET00230026 - AJUNTAMENT'  ->  'HOS501-S02-01'
+  [HOS501-S02]  'HOS501-S02-01 BET00230026 - AJUNTAMENT'  ->  'Old-HOS501-S02-02'
+  [HOS502-S02]  'HOS502-S02-01 BET00230027'  ->  'HOS502-S02-01'
+  [HOS502-S02]  'HOS502-S02-01 BET00230027'  ->  'Old-HOS502-S02-02'
+  [HOS503-S02]  'HOS503-S02-01 BET00230058'  ->  'HOS503-S02-01'
+  [HOS503-S02]  'HOS503-S02-01 BET00230058'  ->  'Old-HOS503-S02-02'
+  [HOS504-S02]  'HOS504-S02-01 BET00230059'  ->  'HOS504-S02-01'
+  [HOS504-S02]  'HOS504-S02-01 BET00230059'  ->  'Old-HOS504-S02-02'
+  [HOS505-S02]  'HOS505-S02-01 BET00230061'  ->  'HOS505-S02-01'
+  [HOS505-S02]  'HOS505-S02-01 BET00230061'  ->  'Old-HOS505-S02-02'
+  [HOS506-S02]  'HOS506-S02-01 BET00230062'  ->  'HOS506-S02-01'
+  [HOS506-S02]  'HOS506-S02-01 BET00230062'  ->  'Old-HOS506-S02-02'
+  [HOS507-S02]  'HOS507-S02-01 BET00230063'  ->  'HOS507-S02-01'
+  [HOS507-S02]  'HOS507-S02-01 BET00230063'  ->  'Old-HOS507-S02-02'
+  [HOS508-S02]  'HOS508-S02-01 BET00230064'  ->  'HOS508-S02-01'
+  [HOS508-S02]  'HOS508-S02-01 BET00230064'  ->  'Old-HOS508-S02-02'
+  [HOS509-S02]  'HOS509-S02-01 BET00230065'  ->  'HOS509-S02-01'
+  [HOS509-S02]  'HOS509-S02-01 BET00230065'  ->  'Old-HOS509-S02-02'
+  [HOS510-S02]  'HOS510-S02-01 BET00230066'  ->  'HOS510-S02-01'
+  [HOS510-S02]  'HOS510-S02-01 BET00230066'  ->  'Old-HOS510-S02-02'
+  [HOS511-S02]  'HOS511-S02-01 BET00230067'  ->  'HOS511-S02-01'
+  [HOS511-S02]  'HOS511-S02-01 BET00230067'  ->  'Old-HOS511-S02-02'
+  [HOS512-S02]  'HOS512-S02-01 BET00230068'  ->  'HOS512-S02-01'
+  [HOS512-S02]  'HOS512-S02-01 BET00230068'  ->  'Old-HOS512-S02-02'
+  [HOS513-S02]  'HOS513-S02-01 BET00230144'  ->  'HOS513-S02-01'
+  [HOS513-S02]  'HOS513-S02-01 BET00230144'  ->  'Old-HOS513-S02-02'
+  [HOS514-S02]  'HOS514-S02-01 BET00230145'  ->  'HOS514-S02-01'
+  [HOS514-S02]  'HOS514-S02-01 BET00230145'  ->  'Old-HOS514-S02-02'
+  [HOS515-S02]  'HOS515-S02-01 BET00230146'  ->  'HOS515-S02-01'
+  [HOS515-S02]  'HOS515-S02-01 BET00230146'  ->  'Old-HOS515-S02-02'
+  [HOS516-S02]  'HOS516-S02-01 BET00230147'  ->  'HOS516-S02-01'
+  [HOS516-S02]  'HOS516-S02-01 BET00230147'  ->  'Old-HOS516-S02-02'
+  [HOS517-S02]  'HOS517-S02-01 BET00230148'  ->  'HOS517-S02-01'
+  [HOS517-S02]  'HOS517-S02-01 BET00230148'  ->  'Old-HOS517-S02-02'
+  [HOS518-S02]  'HOS518-S02-01 BET00230149'  ->  'HOS518-S02-01'
+  [HOS518-S02]  'HOS518-S02-01 BET00230149'  ->  'Old-HOS518-S02-02'
+  [HOS519-S02]  'HOS519-S02-01 BET00230150'  ->  'HOS519-S02-01'
+  [HOS519-S02]  'HOS519-S02-01 BET00230150'  ->  'Old-HOS519-S02-02'
+  [HOS520-S02]  'HOS520-S02-01 BET00230151'  ->  'HOS520-S02-01'
+  [HOS520-S02]  'HOS520-S02-01 BET00230151'  ->  'Old-HOS520-S02-02'
+  [HOS521-S02]  'HOS521-S02-01 BET00230152'  ->  'HOS521-S02-01'
+  [HOS521-S02]  'HOS521-S02-01 BET00230152'  ->  'Old-HOS521-S02-02'
+  [HOS522-S02]  'HOS522-S02-01 BET00230153'  ->  'HOS522-S02-01'
+  [HOS522-S02]  'HOS522-S02-01 BET00230153'  ->  'Old-HOS522-S02-02'
+  [HOS523-S02]  'HOS523-S02-01 BET00240027'  ->  'HOS523-S02-01'
+  [HOSPITAL-S22]  'Hospital de Bellvitge (L1)-HOS084'  ->  'HOSPITAL-S22-01'
+  [HOSPITAL-S22]  'Hospital General de L'Hospitalet-HOS032'  ->  'HOSPITAL-S22-02'

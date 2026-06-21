@@ -1,0 +1,185 @@
+{
+  "_meta": {
+    "audit_at": "2026-06-21T20:51:18.937060",
+    "snapshot_path": "data\\thethings_snapshots\\latest\\thethings_resources_probe.json",
+    "probe_created_at": "2026-06-21T20:51:11.929285",
+    "sensors_in_probe": 20
+  },
+  "summary": {
+    "sensors_processed": 20,
+    "sensors_with_resource": 18,
+    "sensors_with_data": 18,
+    "sensors_no_data": 2,
+    "sensors_with_error": 0,
+    "unique_resources": [
+      "co",
+      "co2",
+      "no2",
+      "noise",
+      "noise_avg_d",
+      "noise_avg_h",
+      "noise_avg_w",
+      "o3",
+      "pm1",
+      "pm10",
+      "pm25",
+      "pressure",
+      "temperature"
+    ],
+    "unique_resources_count": 13,
+    "global_last_seen": "2026-06-21T18:50:47.024Z",
+    "active_24h": 18,
+    "active_7d": 18,
+    "active_30d": 18,
+    "stale_30d": 0,
+    "no_last_seen": 2
+  },
+  "by_system": {
+    "S01": {
+      "system_name": "RUIDO",
+      "sensors_processed": 3,
+      "sensors_with_data": 1,
+      "sensors_no_data": 2,
+      "sensors_error": 0,
+      "pct_with_data": "33.3%",
+      "active_24h": 1,
+      "active_7d": 1,
+      "active_30d": 1,
+      "stale_30d": 0,
+      "sensors_no_last_seen": 2,
+      "resources_found": [
+        "noise",
+        "noise_avg_d",
+        "noise_avg_h",
+        "noise_avg_w"
+      ],
+      "primary_resource": "noise",
+      "last_seen": "2026-06-21T18:50:17.753Z"
+    },
+    "S02": {
+      "system_name": "CONTAMINACIÓN EXTERIOR",
+      "sensors_processed": 17,
+      "sensors_with_data": 17,
+      "sensors_no_data": 0,
+      "sensors_error": 0,
+      "pct_with_data": "100.0%",
+      "active_24h": 17,
+      "active_7d": 17,
+      "active_30d": 17,
+      "stale_30d": 0,
+      "sensors_no_last_seen": 0,
+      "resources_found": [
+        "co",
+        "co2",
+        "no2",
+        "o3",
+        "pm1",
+        "pm10",
+        "pm25",
+        "pressure",
+        "temperature"
+      ],
+      "primary_resource": "co",
+      "last_seen": "2026-06-21T18:50:47.024Z"
+    }
+  },
+  "top_active_sensors": [
+    {
+      "id": "HOS504-S02-01 BET00230059",
+      "system_id": "S02",
+      "last_seen": "2026-06-21T18:50:47.024Z"
+    },
+    {
+      "id": "HOS103-S02-01 BET00230036",
+      "system_id": "S02",
+      "last_seen": "2026-06-21T18:50:46.782Z"
+    },
+    {
+      "id": "HOS516-S02-01 BET00230147",
+      "system_id": "S02",
+      "last_seen": "2026-06-21T18:50:46.726Z"
+    },
+    {
+      "id": "HOS128-S02-01 BET00230038",
+      "system_id": "S02",
+      "last_seen": "2026-06-21T18:50:46.618Z"
+    },
+    {
+      "id": "HOS024-S02-01-BET00230039",
+      "system_id": "S02",
+      "last_seen": "2026-06-21T18:50:46.590Z"
+    },
+    {
+      "id": "BET00230154",
+      "system_id": "S02",
+      "last_seen": "2026-06-21T18:50:45.244Z"
+    },
+    {
+      "id": "HOS508-S02-01 BET00230064",
+      "system_id": "S02",
+      "last_seen": "2026-06-21T18:50:45.210Z"
+    },
+    {
+      "id": "HOS157-S02-01 BET00230040",
+      "system_id": "S02",
+      "last_seen": "2026-06-21T18:50:45.024Z"
+    },
+    {
+      "id": "HOS522-S02-01 BET00230153",
+      "system_id": "S02",
+      "last_seen": "2026-06-21T18:50:44.474Z"
+    },
+    {
+      "id": "HOS506-S02-01 BET00230062",
+      "system_id": "S02",
+      "last_seen": "2026-06-21T18:50:44.295Z"
+    },
+    {
+      "id": "HOS044-S01-01",
+      "system_id": "S01",
+      "last_seen": "2026-06-21T18:50:17.753Z"
+    },
+    {
+      "id": "HOS509-S02-01 BET00230065",
+      "system_id": "S02",
+      "last_seen": "2026-06-21T18:48:46.866Z"
+    },
+    {
+      "id": "HOS519-S02-01 BET00230150",
+      "system_id": "S02",
+      "last_seen": "2026-06-21T18:48:46.847Z"
+    },
+    {
+      "id": "HOS102-S02-01 BET00230042",
+      "system_id": "S02",
+      "last_seen": "2026-06-21T18:48:46.805Z"
+    },
+    {
+      "id": "HOS503-S02-01 BET00230058",
+      "system_id": "S02",
+      "last_seen": "2026-06-21T18:48:46.571Z"
+    },
+    {
+      "id": "HOS521-S02-01 BET00230152",
+      "system_id": "S02",
+      "last_seen": "2026-06-21T18:48:46.440Z"
+    },
+    {
+      "id": "HOS515-S02-01 BET00230146",
+      "system_id": "S02",
+      "last_seen": "2026-06-21T18:48:46.099Z"
+    },
+    {
+      "id": "HOS517-S02-01 BET00230148",
+      "system_id": "S02",
+      "last_seen": "2026-06-21T18:48:44.359Z"
+    }
+  ],
+  "sensors_no_data_by_system": {
+    "S01": [
+      "HOS044-S01-01",
+      "HOS136-S01-01 (T257517)"
+    ]
+  },
+  "sensors_errors_by_system": {}
+}

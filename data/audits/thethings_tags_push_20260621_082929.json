@@ -1,0 +1,71 @@
+{
+  "generated_at": "20260621_082929",
+  "mode": "push",
+  "stats": {
+    "total": 5,
+    "by_action": {
+      "already_ok": 5
+    },
+    "by_status": {
+      "OK": 5
+    },
+    "errors": []
+  },
+  "rows": [
+    {
+      "sensor_id": "HOS044-S01-01",
+      "thing_id": "SnHdcxnnzpD1Z79Dvxs_8O-CkgSE79MVRI3j6T0DxEk",
+      "thing_token": "Rgbvq1cQ-axYBE3u6gUFQqr3yHRHKDT_q29KAmWa2fI",
+      "system_id": "S01",
+      "hos_master": "HOS044",
+      "hos_tag": "HOS044",
+      "action": "already_ok",
+      "status": "OK",
+      "error": ""
+    },
+    {
+      "sensor_id": "HOS044-S01-01",
+      "thing_id": "suj9PiI4JbekaYqNnsbjaQY2kR1TrCjFT1KOvxdOzPU",
+      "thing_token": "t0kyL490cWiXX1e4kfQyAnY9Ias4JGDk2heMNgqHL60",
+      "system_id": "S01",
+      "hos_master": "HOS044",
+      "hos_tag": "HOS044",
+      "action": "already_ok",
+      "status": "OK",
+      "error": ""
+    },
+    {
+      "sensor_id": "HOS136-S01-01 (T257517)",
+      "thing_id": "XzMNdYAN5eNT1UNnkgGcoT6Zb1kO9QeLauwy9m-pon8",
+      "thing_token": "h4C7It4LeNY6j1bXTEJ6GxIdEWoQ91mlnryTQalX_no",
+      "system_id": "S01",
+      "hos_master": "HOS136",
+      "hos_tag": "HOS136",
+      "action": "already_ok",
+      "status": "OK",
+      "error": ""
+    },
+    {
+      "sensor_id": "HOS508-S02-01 BET00230064",
+      "thing_id": "1NwDlCAwmCjKzsgAtcqg0tON7JFd9vXKJQ-m1PejYjw",
+      "thing_token": "d9DdR9A5Cm2tgWI2uf6mtTEgASLJnq9SMjzAxQ7ywgc",
+      "system_id": "S02",
+      "hos_master": "HOS508",
+      "hos_tag": "HOS508",
+      "action": "already_ok",
+      "status": "OK",
+      "error": ""
+    },
+    {
+      "sensor_id": "Deixalleria Municipal - HOS132-S02-01 BET00230060",
+      "thing_id": "MzmEiSRRNnHnq65i-o7gQmXyjZhUHiUM8H7DVEar6Eo",
+      "thing_token": "npPEl4msdSLvmXriIpKaMZarRWKXKCigNvE1bmVpkTY",
+      "system_id": "S02",
+      "hos_master": "HOS132",
+      "hos_tag": "HOS132",
+      "action": "already_ok",
+      "status": "OK",
+      "error": ""
+    }
+  ]
+}

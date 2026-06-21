@@ -1,0 +1,40 @@
+[
+  {
+    "_id": "041bMJeGKfp3cz6tR53jm9hr1wBpFzw_laFJFyDu-SU",
+    "thingToken": "NjlW1thD9u5h_HbX_KdnjaxlpIn4j3yQT3Sh1gmBxwQ",
+    "description": {
+      "name": "P. M. Gornal - Plaza 1 - HOS130",
+      "geo": {
+        "lat": 41.35945682834393,
+        "long": 2.098919464149644
+      }
+    },
+    "createdAt": "2024-05-16T10:00:54.679Z",
+    "tags": [
+      {
+        "_id": "hos130",
+        "name": "HOS130",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "D7iCBGkDj3Oi5aZR_J83o7r_5X4sOPo_07wBUCi2zdw",
+    "thingToken": "-098dvdn-yadMbKRrUq6iKmgkQVOMxJUmUHf9QJzy8Q",
+    "description": {
+      "name": "P. M. Gornal - Plaza 2 - HOS130",
+      "geo": {
+        "long": 2.098919464149644,
+        "lat": 41.35945682834393
+      }
+    },
+    "createdAt": "2023-06-06T13:37:36.797Z",
+    "tags": [
+      {
+        "_id": "hos130",
+        "name": "HOS130",
+        "organizationId": 33788
+      }
+    ]
+  }
+]

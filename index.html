@@ -28,6 +28,7 @@
             </div>
             <div class="card">
                 <div class="card-value" id="count-sensors">—</div>
+                <div id="count-sensors-legacy" class="card-sub-label"></div>
                 <div class="card-label">Sensores</div>
             </div>
             <div class="card">
@@ -206,6 +207,9 @@
                             onclick="openBulkEdit('sensor')">
                         Editar <span id="bulk-count-sns">0</span>
                     </button>
+                    <label class="lbl-only-visible">
+                        <input type="checkbox" id="chk-show-legacy"> Mostrar LEGACY
+                    </label>
                     <label class="lbl-only-visible">
                         <input type="checkbox" id="chk-visible-sns"> Solo visibles
                     </label>

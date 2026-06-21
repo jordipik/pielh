@@ -1,0 +1,1804 @@
+[
+  {
+    "_id": "Q7rnvv_KWKbM44_5cMOcOwC5UvkkkNp3HQw9TIPtpkg",
+    "lastSeen": "2026-06-21T18:26:47.754Z",
+    "lastRead": "2026-06-21T18:26:47.721Z",
+    "lastWrite": "2026-06-21T18:26:47.754Z",
+    "thingToken": "aX7CSqq0GjgEt6tZrNlaGKv-Qkmlrldnf_BWVyQaZqc",
+    "description": {
+      "name": "HOS519-S02-01 BET00230150",
+      "geo": {
+        "long": 2.10314,
+        "lat": 41.357792
+      }
+    },
+    "createdAt": "2026-06-08T11:29:21.035Z",
+    "tags": [
+      {
+        "_id": "hos519",
+        "name": "HOS519",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "04G1c1BHHYT8ZfIZk3fdA1YTIhxYlkFNbYADI22DL3Q",
+    "lastSeen": "2026-06-21T18:26:47.753Z",
+    "lastRead": "2026-06-21T18:26:47.716Z",
+    "lastWrite": "2026-06-21T18:26:47.753Z",
+    "thingToken": "Lab2t8tg-qftichzDUF4U_bskbcird9Rhmak34qwSqQ",
+    "description": {
+      "name": "HOS521-S02-01 BET00230152",
+      "geo": {
+        "long": 2.10235,
+        "lat": 41.36718
+      }
+    },
+    "createdAt": "2026-06-08T11:32:43.705Z",
+    "tags": [
+      {
+        "_id": "hos521",
+        "name": "HOS521",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "7UD3c1Cr8KiFODz0zQQNnMxJn6xyq6jBKixNUGO9AmI",
+    "lastSeen": "2026-06-21T18:26:47.692Z",
+    "lastRead": "2026-06-21T18:26:47.538Z",
+    "lastWrite": "2026-06-21T18:26:47.692Z",
+    "thingToken": "88Uvbf-rUBQzHWGof0L-Dtt2rdR-HfpA2hqraeYxp6g",
+    "description": {
+      "name": "HOS509-S02-01 BET00230065",
+      "geo": {
+        "long": 2.12556,
+        "lat": 41.3618
+      }
+    },
+    "createdAt": "2026-06-08T11:32:43.941Z",
+    "tags": [
+      {
+        "_id": "hos509",
+        "name": "HOS509",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "YwZ06s4-aeESCU3tFvYvA3N_Xl9VQQabwi7swBFUUw8",
+    "lastSeen": "2026-06-21T18:26:47.599Z",
+    "lastRead": "2026-06-21T18:26:47.413Z",
+    "lastWrite": "2026-06-21T18:26:47.599Z",
+    "thingToken": "XmBWZedZSmPlQ_y9fX7v__3Vgjpk9MjKVHLIrZ36JKg",
+    "description": {
+      "name": "HOS102-S02-01 BET00230042",
+      "geo": {
+        "long": 2.108638468040945,
+        "lat": 41.346379614959794
+      }
+    },
+    "createdAt": "2026-06-08T11:32:44.593Z",
+    "tags": [
+      {
+        "_id": "hos102",
+        "name": "HOS102",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "P3HrZp_UOHxDamPu1AOSWEWQSYmfAp-uqQMNOEx6EdA",
+    "lastSeen": "2026-06-21T18:26:47.598Z",
+    "lastRead": "2026-06-21T18:26:47.458Z",
+    "lastWrite": "2026-06-21T18:26:47.598Z",
+    "thingToken": "GHhkPcXmEAYsCwHxUPjGP4IMnavct7hTBxMU9woOAUM",
+    "description": {
+      "name": "HOS517-S02-01 BET00230148",
+      "geo": {
+        "long": 2.10921,
+        "lat": 41.36454
+      }
+    },
+    "createdAt": "2026-06-08T11:29:22.273Z",
+    "tags": [
+      {
+        "_id": "hos517",
+        "name": "HOS517",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "AQK8RQ0DtE9zlFRoIdswWl9sic8ORoRnqvPhbEDRv3s",
+    "lastSeen": "2026-06-21T18:26:47.572Z",
+    "lastRead": "2026-06-21T18:26:47.384Z",
+    "lastWrite": "2026-06-21T18:26:47.572Z",
+    "thingToken": "fiJfShfWiNXIpsftSOQTpyKVeDoV-YwCnLgWi1eeWB8",
+    "description": {
+      "name": "HOS515-S02-01 BET00230146",
+      "geo": {
+        "long": 2.09923,
+        "lat": 41.35966
+      }
+    },
+    "createdAt": "2026-06-08T11:29:20.906Z",
+    "tags": [
+      {
+        "_id": "hos515",
+        "name": "HOS515",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "r_4Rww_t5HWcFuobge3-V0XthVyfDKGJle_4-Ta6u3o",
+    "lastSeen": "2026-06-21T18:26:47.548Z",
+    "lastRead": "2026-06-21T18:26:47.336Z",
+    "lastWrite": "2026-06-21T18:26:47.548Z",
+    "thingToken": "reRAX9E7vN7LMO9J-TEvuY5xV6ymPIlvBIMk6_paU7E",
+    "description": {
+      "name": "HOS503-S02-01 BET00230058",
+      "geo": {
+        "long": 2.118188,
+        "lat": 41.36689
+      }
+    },
+    "createdAt": "2026-06-08T11:29:21.650Z",
+    "tags": [
+      {
+        "_id": "hos503",
+        "name": "HOS503",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "7j4-Kdha3KXwjMVsOaaiKU0AjokWHJ97J8FWxm9XbjU",
+    "lastSeen": "2026-06-21T18:26:47.529Z",
+    "lastRead": "2026-06-21T18:26:47.310Z",
+    "lastWrite": "2026-06-21T18:26:47.529Z",
+    "thingToken": "OihkFg1iRxWcyA0xmoeSYKPai8G5wS_8Ac9tHsJipuA",
+    "description": {
+      "name": "HOS103-S02-01 BET00230036",
+      "geo": {
+        "long": 2.1295932797792583,
+        "lat": 41.34779542044428
+      }
+    },
+    "createdAt": "2026-06-08T11:29:22.159Z",
+    "tags": [
+      {
+        "_id": "hos103",
+        "name": "HOS103",
+        "organizationId": 33788
+      },
+      {
+        "_id": "calle-c_motors",
+        "name": "CALLE-C._MOTORS",
+        "organizationId": 33788
+      },
+      {
+        "_id": "distrito-3",
+        "name": "DISTRITO-3",
+        "organizationId": 33788
+      },
+      {
+        "_id": "barrio-granvia_sud",
+        "name": "BARRIO-GRANVIA_SUD",
+        "organizationId": 33788
+      },
+      {
+        "_id": "zona-industrial",
+        "name": "ZONA-INDUSTRIAL",
+        "organizationId": 33788
+      },
+      {
+        "_id": "tipo-equipamientos",
+        "name": "TIPO-EQUIPAMIENTOS",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "1NwDlCAwmCjKzsgAtcqg0tON7JFd9vXKJQ-m1PejYjw",
+    "lastSeen": "2026-06-21T18:26:47.463Z",
+    "lastRead": "2026-06-21T18:26:47.248Z",
+    "lastWrite": "2026-06-21T18:26:47.463Z",
+    "thingToken": "d9DdR9A5Cm2tgWI2uf6mtTEgASLJnq9SMjzAxQ7ywgc",
+    "description": {
+      "name": "HOS508-S02-01 BET00230064",
+      "geo": {
+        "long": 2.11694,
+        "lat": 41.37274
+      }
+    },
+    "createdAt": "2026-06-08T11:34:42.905Z",
+    "tags": [
+      {
+        "_id": "hos508",
+        "name": "HOS508",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ZwlgXpeLiKRjN2rlOqTtUMX2hUg5d0xyC9MuQcMycEI",
+    "lastSeen": "2026-06-21T18:26:47.352Z",
+    "lastRead": "2026-06-21T18:26:46.944Z",
+    "lastWrite": "2026-06-21T18:26:47.352Z",
+    "thingToken": "yp7ZibsKh7t8jSRETcSY7UBRIkAmefmPdt0YLleJofU",
+    "description": {
+      "name": "HOS157-S02-01 BET00230040",
+      "geo": {
+        "long": 2.092157068041681,
+        "lat": 41.362582772859554
+      }
+    },
+    "createdAt": "2026-06-08T11:32:44.847Z",
+    "tags": [
+      {
+        "_id": "hos157",
+        "name": "HOS157",
+        "organizationId": 33788
+      },
+      {
+        "_id": "tipo-religioso",
+        "name": "TIPO-RELIGIOSO",
+        "organizationId": 33788
+      },
+      {
+        "_id": "zona-industrial",
+        "name": "ZONA-INDUSTRIAL",
+        "organizationId": 33788
+      },
+      {
+        "_id": "calle-av_j_tarradellas_j",
+        "name": "CALLE-AV_J_TARRADELLAS_J",
+        "organizationId": 33788
+      },
+      {
+        "_id": "distrito-1",
+        "name": "DISTRITO-1",
+        "organizationId": 33788
+      },
+      {
+        "_id": "barrio-centre",
+        "name": "BARRIO-CENTRE",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "G556UP-SDICJ0z-uUi77YJ8nkBQLIfS4JiskOjqASlc",
+    "lastSeen": "2026-06-21T18:26:47.352Z",
+    "lastRead": "2026-06-21T18:26:46.926Z",
+    "lastWrite": "2026-06-21T18:26:47.352Z",
+    "thingToken": "QjSRND0hsE80omWKBbiDj2q4Q6_w9OKSH6MxecsWEL4",
+    "description": {
+      "name": "HOS504-S02-01 BET00230059",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2026-06-08T11:29:22.834Z",
+    "tags": [
+      {
+        "_id": "hos504",
+        "name": "HOS504",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "vyoObnVyAQLIp0G5lnS0BtrQliPxCRohVG5pEP9kHA4",
+    "lastSeen": "2026-06-21T18:26:47.291Z",
+    "lastRead": "2026-06-21T18:26:46.790Z",
+    "lastWrite": "2026-06-21T18:26:47.291Z",
+    "thingToken": "uZAvrs3gMBlIHSS9cZ83_qz2sxwLCbOP_gh5Z8FBxZc",
+    "description": {
+      "name": "BET00230154",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T11:29:22.574Z",
+    "tags": []
+  },
+  {
+    "_id": "_0TrX0h06wO2WDeo8mNhgL1Z3Fjm7aeAQz8SyD20EX0",
+    "lastSeen": "2026-06-21T18:26:47.101Z",
+    "lastRead": "2026-06-21T18:26:46.785Z",
+    "lastWrite": "2026-06-21T18:26:47.101Z",
+    "thingToken": "Ies6FIco-XrucZ6lDb9dwcEMtjBTa5fb-h_wwZyseMQ",
+    "description": {
+      "name": "HOS506-S02-01 BET00230062",
+      "geo": {
+        "long": 2.11955,
+        "lat": 41.37478
+      }
+    },
+    "createdAt": "2026-06-08T11:32:44.309Z",
+    "tags": [
+      {
+        "_id": "hos506",
+        "name": "HOS506",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "5ZNeqH6IoaRddPT_tGfAFrGPQ58Sd3kEohKXgDvw5oQ",
+    "lastSeen": "2026-06-21T18:26:47.097Z",
+    "lastRead": "2026-06-21T18:26:46.650Z",
+    "lastWrite": "2026-06-21T18:26:47.097Z",
+    "thingToken": "L5Wx_uaEpgBCw1Bhc_5EKcuqzzEFsC32IyrBAfFfLCs",
+    "description": {
+      "name": "HOS024-S02-01-BET00230039",
+      "geo": {
+        "long": 2.117481366194221,
+        "lat": 41.37545179029178
+      }
+    },
+    "createdAt": "2026-06-08T11:29:21.577Z",
+    "tags": [
+      {
+        "_id": "hos024",
+        "name": "HOS024",
+        "organizationId": 33788
+      },
+      {
+        "_id": "tipo-cultural",
+        "name": "TIPO-CULTURAL",
+        "organizationId": 33788
+      },
+      {
+        "_id": "zona-residencial",
+        "name": "ZONA-RESIDENCIAL",
+        "organizationId": 33788
+      },
+      {
+        "_id": "calle-pc_marquesa",
+        "name": "CALLE-PC_MARQUESA",
+        "organizationId": 33788
+      },
+      {
+        "_id": "distrito-2",
+        "name": "DISTRITO-2",
+        "organizationId": 33788
+      },
+      {
+        "_id": "barrio-collblanc",
+        "name": "BARRIO-COLLBLANC",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "QnlazOHYON_6VJ-NCX5bj8jua403B3l-Tjca_oqrLAc",
+    "lastSeen": "2026-06-21T18:26:47.096Z",
+    "lastRead": "2026-06-21T18:26:46.787Z",
+    "lastWrite": "2026-06-21T18:26:47.096Z",
+    "thingToken": "gtEflTkOLxvcToD0HVwEeo3nYzK8G_Y2RakuCeQQObA",
+    "description": {
+      "name": "HOS522-S02-01 BET00230153",
+      "geo": {
+        "long": 2.11088,
+        "lat": 41.350412
+      }
+    },
+    "createdAt": "2026-06-08T11:29:20.485Z",
+    "tags": [
+      {
+        "_id": "hos522",
+        "name": "HOS522",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "r07qpMIayX32SrVzIqaBCfjywHOuhqm5on4ADF9kRFg",
+    "lastSeen": "2026-06-21T18:26:46.980Z",
+    "lastRead": "2026-06-21T18:26:46.649Z",
+    "lastWrite": "2026-06-21T18:26:46.980Z",
+    "thingToken": "7xoBywsRb9fnCxHBMNxxAROS6JhCTGBfiWxTLtATIZc",
+    "description": {
+      "name": "HOS128-S02-01 BET00230038",
+      "geo": {
+        "long": 2.1222155833831935,
+        "lat": 41.35766312267478
+      }
+    },
+    "createdAt": "2026-06-08T11:29:21.553Z",
+    "tags": [
+      {
+        "_id": "hos128",
+        "name": "HOS128",
+        "organizationId": 33788
+      },
+      {
+        "_id": "tipo-comercial",
+        "name": "TIPO-COMERCIAL",
+        "organizationId": 33788
+      },
+      {
+        "_id": "zona-administrativa",
+        "name": "ZONA-ADMINISTRATIVA",
+        "organizationId": 33788
+      },
+      {
+        "_id": "calle-c_sangoneres",
+        "name": "CALLE-C._SANGONERES",
+        "organizationId": 33788
+      },
+      {
+        "_id": "distrito-3",
+        "name": "DISTRITO-3",
+        "organizationId": 33788
+      },
+      {
+        "_id": "barrio-santa_eulalia",
+        "name": "BARRIO-SANTA_EULÀLIA",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "L2xhnj5lUBGO58StMy8AmW6viTQwptqRK548rbtH5k8",
+    "lastSeen": "2026-06-21T18:26:46.686Z",
+    "lastRead": "2026-06-21T18:26:46.290Z",
+    "lastWrite": "2026-06-21T18:26:46.686Z",
+    "thingToken": "G6riOKl1m9-2MOOcyiJNNKIh7R1V3wwDqyGTBbkO2uY",
+    "description": {
+      "name": "HOS516-S02-01 BET00230147",
+      "geo": {
+        "long": 2.12705,
+        "lat": 41.36736
+      }
+    },
+    "createdAt": "2026-06-08T11:29:20.232Z",
+    "tags": [
+      {
+        "_id": "hos516",
+        "name": "HOS516",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "6HiR-4F_LJH-dmMnXICDhYtTJPhGfzgfSzoEgbk3fhk",
+    "lastSeen": "2026-06-21T18:26:46.372Z",
+    "lastRead": "2026-06-21T18:26:45.728Z",
+    "lastWrite": "2026-06-21T18:26:46.373Z",
+    "thingToken": "EOl0lQ5EfNMd63uo_rIoyYnV-b6SyBJcBEZI75RDPME",
+    "description": {
+      "name": "HOS518-S02-01 BET00230149",
+      "geo": {
+        "long": 2.12299,
+        "lat": 41.37192
+      }
+    },
+    "createdAt": "2026-06-08T11:29:23.132Z",
+    "tags": [
+      {
+        "_id": "hos518",
+        "name": "HOS518",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "9RmOMSnPJglQJ0OZoVS6QdBeAZ6-fHMG9TkpzTI0gjM",
+    "lastSeen": "2026-06-21T18:26:45.985Z",
+    "lastRead": "2026-06-21T18:26:45.429Z",
+    "lastWrite": "2026-06-21T18:26:45.985Z",
+    "thingToken": "8MIBMhazTYzS9Fy57Aj03aoMHPt751NQypeXjAUJHE8",
+    "description": {
+      "name": "HOS104-S02-01 BET00230044",
+      "geo": {
+        "long": 2.1278077410536884,
+        "lat": 41.34864199688712
+      }
+    },
+    "createdAt": "2026-06-08T11:29:19.832Z",
+    "tags": [
+      {
+        "_id": "hos104",
+        "name": "HOS104",
+        "organizationId": 33788
+      },
+      {
+        "_id": "tipo-comercial",
+        "name": "TIPO-COMERCIAL",
+        "organizationId": 33788
+      },
+      {
+        "_id": "zona-industrial",
+        "name": "ZONA-INDUSTRIAL",
+        "organizationId": 33788
+      },
+      {
+        "_id": "calle-c_sr_espriu",
+        "name": "CALLE-C._SR_ESPRIU",
+        "organizationId": 33788
+      },
+      {
+        "_id": "distrito-3",
+        "name": "DISTRITO-3",
+        "organizationId": 33788
+      },
+      {
+        "_id": "barrio-granvia_sud",
+        "name": "BARRIO-GRANVIA_SUD",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "7zh3xggwGiVWWea8eYXhENZsvwpS-Zx90OC1JA-ITkI",
+    "lastSeen": "2026-06-21T18:26:45.793Z",
+    "lastRead": "2026-06-21T18:26:45.171Z",
+    "lastWrite": "2026-06-21T18:26:45.794Z",
+    "thingToken": "171CpI6hyuTFTodsqgGpC9-zi7HDCAzvaNM_sIUaL8A",
+    "description": {
+      "name": "HOS510-S02-01 BET00230066",
+      "geo": {
+        "long": 2.11014,
+        "lat": 41.35522
+      }
+    },
+    "createdAt": "2026-06-08T11:29:21.166Z",
+    "tags": [
+      {
+        "_id": "hos510",
+        "name": "HOS510",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "cPrSYjFUXGQS8C8bZybxmgUwtIZasLrxeTXRLCVjNyQ",
+    "lastSeen": "2026-06-21T18:26:45.564Z",
+    "lastRead": "2026-06-21T18:26:45.043Z",
+    "lastWrite": "2026-06-21T18:26:45.564Z",
+    "thingToken": "hLVIskvW5PZ_QVkTkT1XDHRwr9Vc9gAnYHeNSv4Ro2o",
+    "description": {
+      "name": "HOS105-S02-01 BET00230045",
+      "geo": {
+        "long": 2.129535410370654,
+        "lat": 41.35897219392181
+      }
+    },
+    "createdAt": "2026-06-08T11:29:23.011Z",
+    "tags": [
+      {
+        "_id": "hos105",
+        "name": "HOS105",
+        "organizationId": 33788
+      },
+      {
+        "_id": "calle-c_fisica",
+        "name": "CALLE-C._FÍSICA",
+        "organizationId": 33788
+      },
+      {
+        "_id": "distrito-3",
+        "name": "DISTRITO-3",
+        "organizationId": 33788
+      },
+      {
+        "_id": "barrio-granvia_sud",
+        "name": "BARRIO-GRANVIA_SUD",
+        "organizationId": 33788
+      },
+      {
+        "_id": "zona-comercial",
+        "name": "ZONA-COMERCIAL",
+        "organizationId": 33788
+      },
+      {
+        "_id": "tipo-comercial",
+        "name": "TIPO-COMERCIAL",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "MzmEiSRRNnHnq65i-o7gQmXyjZhUHiUM8H7DVEar6Eo",
+    "lastSeen": "2026-06-21T18:26:45.459Z",
+    "lastRead": "2026-06-21T18:26:44.890Z",
+    "lastWrite": "2026-06-21T18:26:45.459Z",
+    "thingToken": "npPEl4msdSLvmXriIpKaMZarRWKXKCigNvE1bmVpkTY",
+    "description": {
+      "name": "Deixalleria Municipal - HOS132-S02-01 BET00230060",
+      "geo": {
+        "long": 2.10769,
+        "lat": 41.37426
+      }
+    },
+    "createdAt": "2026-06-08T11:29:20.420Z",
+    "tags": [
+      {
+        "_id": "hos132",
+        "name": "HOS132",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "nsn-FjlsTl6YriQD3Io8zAl1S2h-0zKHFXzQU5LAglw",
+    "lastSeen": "2026-06-21T18:26:45.457Z",
+    "lastRead": "2026-06-21T18:26:44.876Z",
+    "lastWrite": "2026-06-21T18:26:45.457Z",
+    "thingToken": "2wfEQxyp3Fx42SKL6uKXQxWjLXFxMmccvYVpdGgXQCE",
+    "description": {
+      "name": "HOS137-S02-01 BET00230037",
+      "geo": {
+        "long": 2.1301074968772,
+        "lat": 41.36415236878068
+      }
+    },
+    "createdAt": "2026-06-08T11:29:22.833Z",
+    "tags": [
+      {
+        "_id": "hos137",
+        "name": "HOS137",
+        "organizationId": 33788
+      },
+      {
+        "_id": "calle-c_aprestadora",
+        "name": "CALLE-C._APRESTADORA",
+        "organizationId": 33788
+      },
+      {
+        "_id": "distrito-3",
+        "name": "DISTRITO-3",
+        "organizationId": 33788
+      },
+      {
+        "_id": "barrio-santa_eulalia",
+        "name": "BARRIO-SANTA_EULÀLIA",
+        "organizationId": 33788
+      },
+      {
+        "_id": "tipo-sanitario",
+        "name": "TIPO-SANITARIO",
+        "organizationId": 33788
+      },
+      {
+        "_id": "zona-residencial",
+        "name": "ZONA-RESIDENCIAL",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "FVHX-pJGTFnDBLO6Mnuk4-VtxAUjjFUFuxBVGLTUZyo",
+    "lastSeen": "2026-06-21T18:26:45.264Z",
+    "lastRead": "2026-06-21T18:26:44.675Z",
+    "lastWrite": "2026-06-21T18:26:45.264Z",
+    "thingToken": "YYV-HdP3ALoW1oBS6iEjOOPZ2uraAmD3aTXzyx0xx2Q",
+    "description": {
+      "name": "HOS501-S02-01 BET00230026 - AJUNTAMENT",
+      "geo": {
+        "long": 2.11481,
+        "lat": 41.37082
+      }
+    },
+    "createdAt": "2026-06-08T11:29:20.901Z",
+    "tags": [
+      {
+        "_id": "ajuntament",
+        "name": "AJUNTAMENT",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos501",
+        "name": "HOS501",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "P1R0s3qUfWq5443HCWV-75b2vis7vpruWWOWvyr7ihA",
+    "lastSeen": "2026-06-21T18:26:45.262Z",
+    "lastRead": "2026-06-21T18:26:44.676Z",
+    "lastWrite": "2026-06-21T18:26:45.262Z",
+    "thingToken": "0aYOB8tyUiVv9kp-dbf0BlwYySLIix5ktFwijitBUTo",
+    "description": {
+      "name": "HOS511-S02-01 BET00230067",
+      "geo": {
+        "long": 2.11251,
+        "lat": 41.366928
+      }
+    },
+    "createdAt": "2026-06-08T11:29:19.690Z",
+    "tags": [
+      {
+        "_id": "hos511",
+        "name": "HOS511",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "4MI_iGP24kvawone70S_zUcJgIvPUjoZftykGvA3Cxo",
+    "lastSeen": "2026-06-21T18:26:45.261Z",
+    "lastRead": "2026-06-21T18:26:44.663Z",
+    "lastWrite": "2026-06-21T18:26:45.261Z",
+    "thingToken": "PWTUgsxQa8QFxkKyWoqa0RWasVb7ZIgqIwn7OaUe9uQ",
+    "description": {
+      "name": "HOS502-S02-01 BET00230027",
+      "geo": {
+        "long": 2.111,
+        "lat": 41.371688
+      }
+    },
+    "createdAt": "2026-06-08T11:29:22.367Z",
+    "tags": [
+      {
+        "_id": "hos502",
+        "name": "HOS502",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "5XFX7MnaGfKlMIi9MfRt9es-5WSprI-AciJ6FHBNodQ",
+    "lastSeen": "2026-06-21T18:26:45.091Z",
+    "lastRead": "2026-06-21T18:26:44.641Z",
+    "lastWrite": "2026-06-21T18:26:45.091Z",
+    "thingToken": "iN8lgc7xy-kPthWmUFyeAfIqGjJgOc7lBrCaNTDh0I4",
+    "description": {
+      "name": "HOS512-S02-01 BET00230068",
+      "geo": {
+        "long": 2.12997,
+        "lat": 41.364348
+      }
+    },
+    "createdAt": "2026-06-08T11:29:19.687Z",
+    "tags": [
+      {
+        "_id": "hos512",
+        "name": "HOS512",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "qy61tETGeUS01qP-PWHe9jzIH9iJGFrfWeJFEfqrcww",
+    "lastSeen": "2026-06-21T18:26:45.091Z",
+    "lastRead": "2026-06-21T18:26:44.641Z",
+    "lastWrite": "2026-06-21T18:26:45.091Z",
+    "thingToken": "g1IsSa3EuyYjLxjScHAkuwOEr4akw6OBG0DexqI9uw8",
+    "description": {
+      "name": "HOS134-S02-01 BET00230041",
+      "geo": {
+        "lat": 41.37080774309496,
+        "long": 2.1094923201990894
+      }
+    },
+    "createdAt": "2026-06-08T11:32:44.762Z",
+    "tags": [
+      {
+        "_id": "hos134",
+        "name": "HOS134",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "gdhnZio3Rp41Iu0V4m4ry7RLvndUw-M0jxoZgJayjEc",
+    "lastSeen": "2026-06-21T18:26:44.935Z",
+    "lastRead": "2026-06-21T18:26:44.596Z",
+    "lastWrite": "2026-06-21T18:26:44.935Z",
+    "thingToken": "3uLiFO_MkT3Uc-bwqP6AmNtf9gL3gh5lVgusMuOd9mM",
+    "description": {
+      "name": "HOS507-S02-01 BET00230063",
+      "geo": {
+        "long": 2.12278,
+        "lat": 41.36952
+      }
+    },
+    "createdAt": "2026-06-08T11:32:44.444Z",
+    "tags": [
+      {
+        "_id": "hos507",
+        "name": "HOS507",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "mqVgWHUfvf_gNxXTFz7TpCVXasx7sB8H1Wo8115A7yE",
+    "lastSeen": "2026-06-21T18:26:44.930Z",
+    "lastRead": "2026-06-21T18:26:44.617Z",
+    "lastWrite": "2026-06-21T18:26:44.930Z",
+    "thingToken": "v_LDfdawWkQGMsbW7KM_Y_77Buw8ZT4bjuSitUFaJLA",
+    "description": {
+      "name": "HOS520-S02-01 BET00230151",
+      "geo": {
+        "long": 2.12063,
+        "lat": 41.3571
+      }
+    },
+    "createdAt": "2026-06-08T11:34:42.944Z",
+    "tags": [
+      {
+        "_id": "hos520",
+        "name": "HOS520",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "1iF1KLwuc_Vbq6ozQVgZzg6SFaOmK3GsqrkOlj0BKoc",
+    "lastSeen": "2026-06-21T18:26:44.742Z",
+    "lastRead": "2026-06-21T18:26:44.604Z",
+    "lastWrite": "2026-06-21T18:26:44.742Z",
+    "thingToken": "aIGN-BmF-nekoC1QO_tTeRWS-wMJcRXERSWDvCxAv1o",
+    "description": {
+      "name": "HOS513-S02-01 BET00230144",
+      "geo": {
+        "long": 2.10945,
+        "lat": 41.362672
+      }
+    },
+    "createdAt": "2026-06-08T11:32:43.636Z",
+    "tags": [
+      {
+        "_id": "hos513",
+        "name": "HOS513",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "DpiPkodBFYGGfczyurg-XbBRXI8HRxVfC0owg8j5_vs",
+    "lastSeen": "2026-06-21T18:26:44.742Z",
+    "lastRead": "2026-06-21T18:26:44.612Z",
+    "lastWrite": "2026-06-21T18:26:44.742Z",
+    "thingToken": "thrcVaMaj7IH0IMqrKzoLMRad3DyJSGUplQhJhAv8jw",
+    "description": {
+      "name": "HOS514-S02-01 BET00230145",
+      "geo": {
+        "long": 2.11614,
+        "lat": 41.37562
+      }
+    },
+    "createdAt": "2026-06-08T11:29:21.766Z",
+    "tags": [
+      {
+        "_id": "hos514",
+        "name": "HOS514",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "QmwnQuDypPIa1yMjbVA6CKsH0FVwcl7vwTV00dkowJQ",
+    "lastSeen": "2026-06-21T18:26:44.740Z",
+    "lastRead": "2026-06-21T18:26:44.608Z",
+    "lastWrite": "2026-06-21T18:26:44.740Z",
+    "thingToken": "XjcjJsoAL1XQJTd4WC8a-EevmZrNyxOzd_cr4xm9Hq4",
+    "description": {
+      "name": "HOS505-S02-01 BET00230061",
+      "geo": {
+        "long": 2.10353,
+        "lat": 41.3752
+      }
+    },
+    "createdAt": "2026-06-08T11:29:21.138Z",
+    "tags": [
+      {
+        "_id": "hos505",
+        "name": "HOS505",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "a34c6eOz_xDApCTGMCdo1lTWTSxSnZddwunbQpnnyFY",
+    "thingToken": "awxZS_sPEbAZBnTM7d-vKvOuMBu98DE_6q2TrQzGHzY",
+    "description": {
+      "name": "BET00230154",
+      "geo": {}
+    },
+    "createdAt": "2026-02-04T15:40:46.250Z",
+    "tags": []
+  },
+  {
+    "_id": "VexWl8lLjzWkxnoqJeBJI4kw4bgbQumWybrFCsUEPiA",
+    "thingToken": "DPeLtHgA5-uuDSsNtlXqhlk02y_VTxBmcUYz1O1ztpc",
+    "description": {
+      "name": "HOS128-S02-01 BET00230038",
+      "geo": {
+        "long": 2.1222155833831935,
+        "lat": 41.35766312267478
+      }
+    },
+    "createdAt": "2025-02-18T06:23:13.663Z",
+    "tags": [
+      {
+        "_id": "hos128",
+        "name": "HOS128",
+        "organizationId": 33788
+      },
+      {
+        "_id": "tipo-comercial",
+        "name": "TIPO-COMERCIAL",
+        "organizationId": 33788
+      },
+      {
+        "_id": "zona-administrativa",
+        "name": "ZONA-ADMINISTRATIVA",
+        "organizationId": 33788
+      },
+      {
+        "_id": "calle-c_sangoneres",
+        "name": "CALLE-C._SANGONERES",
+        "organizationId": 33788
+      },
+      {
+        "_id": "distrito-3",
+        "name": "DISTRITO-3",
+        "organizationId": 33788
+      },
+      {
+        "_id": "barrio-santa_eulalia",
+        "name": "BARRIO-SANTA_EULÀLIA",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "vsmKRCYSxPGqGiJdYVlLBO9PTq1vr_F2oeFFNC7ghFc",
+    "thingToken": "6qLeNsL8rEtQ-G7xdBXKnUrGsW8-1WKIDmZcrOlF9-c",
+    "description": {
+      "name": "HOS105-S02-01 BET00230045",
+      "geo": {
+        "long": 2.129535410370654,
+        "lat": 41.35897219392181
+      }
+    },
+    "createdAt": "2025-02-05T16:49:36.275Z",
+    "tags": [
+      {
+        "_id": "hos105",
+        "name": "HOS105",
+        "organizationId": 33788
+      },
+      {
+        "_id": "calle-c_fisica",
+        "name": "CALLE-C._FÍSICA",
+        "organizationId": 33788
+      },
+      {
+        "_id": "distrito-3",
+        "name": "DISTRITO-3",
+        "organizationId": 33788
+      },
+      {
+        "_id": "barrio-granvia_sud",
+        "name": "BARRIO-GRANVIA_SUD",
+        "organizationId": 33788
+      },
+      {
+        "_id": "zona-comercial",
+        "name": "ZONA-COMERCIAL",
+        "organizationId": 33788
+      },
+      {
+        "_id": "tipo-comercial",
+        "name": "TIPO-COMERCIAL",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "3aHWc4qpEDCK5Su1SUDF0TaFTeUtjC-LIpv_NLUVatQ",
+    "thingToken": "ZtZqfspZyNSDUUsnsANoEWoDXSZcJNI7G5OABL6QOX4",
+    "description": {
+      "name": "HOS103-S02-01 BET00230036",
+      "geo": {
+        "lat": 41.34779542044428,
+        "long": 2.1295932797792583
+      }
+    },
+    "createdAt": "2025-02-05T16:49:35.972Z",
+    "tags": [
+      {
+        "_id": "hos103",
+        "name": "HOS103",
+        "organizationId": 33788
+      },
+      {
+        "_id": "calle-c_motors",
+        "name": "CALLE-C._MOTORS",
+        "organizationId": 33788
+      },
+      {
+        "_id": "distrito-3",
+        "name": "DISTRITO-3",
+        "organizationId": 33788
+      },
+      {
+        "_id": "barrio-granvia_sud",
+        "name": "BARRIO-GRANVIA_SUD",
+        "organizationId": 33788
+      },
+      {
+        "_id": "zona-industrial",
+        "name": "ZONA-INDUSTRIAL",
+        "organizationId": 33788
+      },
+      {
+        "_id": "tipo-equipamientos",
+        "name": "TIPO-EQUIPAMIENTOS",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "qezVcKFQ65MbrtlOz1YnAHX0MlIcoW2cV3e3eXwW42w",
+    "thingToken": "47KDbxC9T-NJ76P2uPyY3sHpbOS7Chcg1Yj_GRL-hMM",
+    "description": {
+      "name": "HOS102-S02-01 BET00230042",
+      "geo": {
+        "lat": 41.346379614959794,
+        "long": 2.108638468040945
+      }
+    },
+    "createdAt": "2025-01-30T13:49:34.987Z",
+    "tags": [
+      {
+        "_id": "hos102",
+        "name": "HOS102",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "kUo4f0tbykvMhJFdG6tQZabx05lpeUTVwWOC6O9heZk",
+    "thingToken": "mH7_pXoYbl2rjzg0uVuXELgPVdt2EzUc625hw4U1wRY",
+    "description": {
+      "name": "HOS157-S02-01 BET00230040",
+      "geo": {
+        "long": 2.092157068041681,
+        "lat": 41.362582772859554
+      }
+    },
+    "createdAt": "2025-01-30T11:49:35.300Z",
+    "tags": [
+      {
+        "_id": "hos157",
+        "name": "HOS157",
+        "organizationId": 33788
+      },
+      {
+        "_id": "tipo-religioso",
+        "name": "TIPO-RELIGIOSO",
+        "organizationId": 33788
+      },
+      {
+        "_id": "zona-industrial",
+        "name": "ZONA-INDUSTRIAL",
+        "organizationId": 33788
+      },
+      {
+        "_id": "calle-av_j_tarradellas_j",
+        "name": "CALLE-AV_J_TARRADELLAS_J",
+        "organizationId": 33788
+      },
+      {
+        "_id": "distrito-1",
+        "name": "DISTRITO-1",
+        "organizationId": 33788
+      },
+      {
+        "_id": "barrio-centre",
+        "name": "BARRIO-CENTRE",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "EEFiSO24JgvwmDweJIQkPiOJ5GnVxNEe-H93vZEImx8",
+    "thingToken": "vZKEEwIagWDlDsiO_mehE27LJlnuXzcVkdNN90ZVgiA",
+    "description": {
+      "name": "HOS134-S02-01 BET00230041",
+      "geo": {
+        "lat": 41.37080774309496,
+        "long": 2.1094923201990894
+      }
+    },
+    "createdAt": "2025-01-28T12:29:35.346Z",
+    "tags": [
+      {
+        "_id": "hos134",
+        "name": "HOS134",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "6dQkBlXOI2SMmBjU8spic1y5kcTYeBtq9f135XG8lls",
+    "thingToken": "i4GoMDk6Yp3NfM6_kqnTqxciNn9Q5FDh2D5lPsD25yM",
+    "description": {
+      "name": "HOS104-S02-01 BET00230044",
+      "geo": {
+        "long": 2.1278077410536884,
+        "lat": 41.34864199688712
+      }
+    },
+    "createdAt": "2025-01-28T10:39:35.167Z",
+    "tags": [
+      {
+        "_id": "hos104",
+        "name": "HOS104",
+        "organizationId": 33788
+      },
+      {
+        "_id": "tipo-comercial",
+        "name": "TIPO-COMERCIAL",
+        "organizationId": 33788
+      },
+      {
+        "_id": "zona-industrial",
+        "name": "ZONA-INDUSTRIAL",
+        "organizationId": 33788
+      },
+      {
+        "_id": "calle-c_sr_espriu",
+        "name": "CALLE-C._SR_ESPRIU",
+        "organizationId": 33788
+      },
+      {
+        "_id": "distrito-3",
+        "name": "DISTRITO-3",
+        "organizationId": 33788
+      },
+      {
+        "_id": "barrio-granvia_sud",
+        "name": "BARRIO-GRANVIA_SUD",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "UYsRx__sUStrFG94NhIUcD5B0UFpvam8mxDMVFzb_DA",
+    "thingToken": "TNUBz9tGFoiM5602-ZzVhkzrYUHfnjZ-fq-25QQn3EA",
+    "description": {
+      "name": "HOS137-S02-01 BET00230037",
+      "geo": {
+        "lat": 41.36415236878068,
+        "long": 2.1301074968772
+      }
+    },
+    "createdAt": "2025-01-28T09:49:35.046Z",
+    "tags": [
+      {
+        "_id": "hos137",
+        "name": "HOS137",
+        "organizationId": 33788
+      },
+      {
+        "_id": "calle-c_aprestadora",
+        "name": "CALLE-C._APRESTADORA",
+        "organizationId": 33788
+      },
+      {
+        "_id": "distrito-3",
+        "name": "DISTRITO-3",
+        "organizationId": 33788
+      },
+      {
+        "_id": "barrio-santa_eulalia",
+        "name": "BARRIO-SANTA_EULÀLIA",
+        "organizationId": 33788
+      },
+      {
+        "_id": "tipo-sanitario",
+        "name": "TIPO-SANITARIO",
+        "organizationId": 33788
+      },
+      {
+        "_id": "zona-residencial",
+        "name": "ZONA-RESIDENCIAL",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "-La5byltZ5kMCNROYREZZGJOnZBGU7mEmYmrh-AJFKk",
+    "thingToken": "BZuku3t9auK9gTE39ypV9OrLNSJkypw0YUiUoFJ7llo",
+    "description": {
+      "name": "HOS523-S02-01 BET00240027",
+      "geo": {
+        "lat": 41.365428,
+        "long": 2.108267
+      }
+    },
+    "createdAt": "2024-12-23T15:15:03.151Z",
+    "tags": [
+      {
+        "_id": "hos523",
+        "name": "HOS523",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "dH94Wwq5kbyZEdy68wKoAhiYOvQbJqVz8lR0v_JkRmM",
+    "thingToken": "Q5Qt_KKm69aO3-P30ZwfB4eTjSzcD-p6STE9XKWFqjs",
+    "description": {
+      "name": "HOS504-S02-01 BET00230059",
+      "geo": {
+        "lat": null,
+        "long": null
+      }
+    },
+    "createdAt": "2024-12-23T14:56:56.466Z",
+    "tags": [
+      {
+        "_id": "hos504",
+        "name": "HOS504",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "4dWKC8LXRaLmSZTlg_gyFGQ3A4D3oI1WWughRwpsfxE",
+    "thingToken": "YsRmUCnyj-75rkciKp4PbYi1QAQ0I-3FA3ef3ugX8ds",
+    "description": {
+      "name": "HOS024-S02-01-BET00230039",
+      "geo": {
+        "lat": 41.37545179029178,
+        "long": 2.117481366194221
+      }
+    },
+    "createdAt": "2024-12-23T14:56:56.352Z",
+    "tags": [
+      {
+        "_id": "hos024",
+        "name": "HOS024",
+        "organizationId": 33788
+      },
+      {
+        "_id": "tipo-cultural",
+        "name": "TIPO-CULTURAL",
+        "organizationId": 33788
+      },
+      {
+        "_id": "zona-residencial",
+        "name": "ZONA-RESIDENCIAL",
+        "organizationId": 33788
+      },
+      {
+        "_id": "calle-pc_marquesa",
+        "name": "CALLE-PC_MARQUESA",
+        "organizationId": 33788
+      },
+      {
+        "_id": "distrito-2",
+        "name": "DISTRITO-2",
+        "organizationId": 33788
+      },
+      {
+        "_id": "barrio-collblanc",
+        "name": "BARRIO-COLLBLANC",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "SUMbI7W8B0jiuCS1QNf0ZkJZFBPocE489oWvA7eezek",
+    "thingToken": "n_N_kgdEp_QgoPI2WqRpupGeKmLmsfEgg1pcbnBi-PE",
+    "description": {
+      "name": "HOS503-S02-01 BET00230058",
+      "geo": {
+        "lat": 41.36689,
+        "long": 2.118188
+      }
+    },
+    "createdAt": "2024-12-23T14:56:56.352Z",
+    "tags": [
+      {
+        "_id": "hos503",
+        "name": "HOS503",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "qIVyO45h-aJVQ3QLmmFPHMnAtLjh3zUHqUQl-KWfBuI",
+    "thingToken": "cgJLl5sony90Wiae9BRH1Z7RXiaD4ozs_Fp0W51fKQo",
+    "description": {
+      "name": "HOS508-S02-01 BET00230064",
+      "geo": {
+        "long": 2.11694,
+        "lat": 41.37274
+      }
+    },
+    "createdAt": "2024-10-23T15:18:05.851Z",
+    "tags": [
+      {
+        "_id": "hos508",
+        "name": "HOS508",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "LyVg7kadRmOZ2K-VKrEHC2lHTGHmOMJjM5QiQt87X-Y",
+    "thingToken": "Oy6yD3NOJxnxXxYDsUEGBVUUS098cJ_Gh0tZzvMjhCc",
+    "description": {
+      "name": "HOS509-S02-01 BET00230065",
+      "geo": {
+        "long": 2.12556,
+        "lat": 41.3618
+      }
+    },
+    "createdAt": "2024-09-23T09:12:40.348Z",
+    "tags": [
+      {
+        "_id": "hos509",
+        "name": "HOS509",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "NiXOWFNBroQQj5p0Tjw_aLXMAQ1EtTdrK7wLu-4OVss",
+    "thingToken": "_k0jFEdtc_nGvwA_gW49cv6UrSqMaljHTk2g_XcqLZ8",
+    "description": {
+      "name": "HOS506-S02-01 BET00230062",
+      "geo": {
+        "long": 2.11955,
+        "lat": 41.37478
+      }
+    },
+    "createdAt": "2024-09-23T09:02:40.571Z",
+    "tags": [
+      {
+        "_id": "hos506",
+        "name": "HOS506",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "9umPMhtfifPvfpOEn5cPOTS-iJyBtQ1D4DWLbdSY3WA",
+    "thingToken": "Xd14ZJbcRo3KSk5pI3qK7Si61RStN0JBq8i5_lQ36G0",
+    "description": {
+      "name": "HOS517-S02-01 BET00230148",
+      "geo": {
+        "long": 2.10921,
+        "lat": 41.36454
+      }
+    },
+    "createdAt": "2024-09-23T08:52:42.300Z",
+    "tags": [
+      {
+        "_id": "hos517",
+        "name": "HOS517",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "u7wF1a9-6RvK-tbL6PqC8DVSVT18P-kctlFcNeKK1tQ",
+    "thingToken": "-1Y_Xrfz_Qvrh2PNXtvTRapqC6-ZRhOYW_AMa7S2j4w",
+    "description": {
+      "name": "HOS522-S02-01 BET00230153",
+      "geo": {
+        "long": 2.11088,
+        "lat": 41.350412
+      }
+    },
+    "createdAt": "2024-09-23T08:52:42.281Z",
+    "tags": [
+      {
+        "_id": "hos522",
+        "name": "HOS522",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "QdDX1BQPhAse4-FwwRIRPaKooAxKR4WFqhqQNmkdanI",
+    "thingToken": "rGWuExd07r8kA2tYNn9ABG0N6En_Cd-Dq1Ae7IdAxuQ",
+    "description": {
+      "name": "Deixalleria Municipal - HOS132-S02-01 BET00230060",
+      "geo": {
+        "lat": 41.37426,
+        "long": 2.10769
+      }
+    },
+    "createdAt": "2024-09-23T08:52:42.034Z",
+    "tags": [
+      {
+        "_id": "hos132",
+        "name": "HOS132",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "o8Xh6c-EtBytbrRTqFsPQTPEOdbVX8gI61q6M--2UYE",
+    "thingToken": "Hjl9G5Eoqluz2MaPl7zk0A3MoBEDvmmZ5UiIbQUQFfs",
+    "description": {
+      "name": "HOS513-S02-01 BET00230144",
+      "geo": {
+        "long": 2.10945,
+        "lat": 41.362672
+      }
+    },
+    "createdAt": "2024-09-23T08:52:41.885Z",
+    "tags": [
+      {
+        "_id": "hos513",
+        "name": "HOS513",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "J4rgJG_z25qd_ywkwz362rqOu3BkIsncJ9FX6gsCd0w",
+    "thingToken": "Cx4zlqTnhA3hLRo6onc5veVmiywaQAa9HYraTihnU_M",
+    "description": {
+      "name": "HOS507-S02-01 BET00230063",
+      "geo": {
+        "long": 2.12278,
+        "lat": 41.36952
+      }
+    },
+    "createdAt": "2024-09-23T08:42:44.916Z",
+    "tags": [
+      {
+        "_id": "hos507",
+        "name": "HOS507",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "UNbTeW2mi1gzPT3aUcpOncBaR75GoEwIP8xEpj0koDA",
+    "thingToken": "wSYponjelBW6y7LbItdcKrFlxbi6j88i3h7ggjE8zL0",
+    "description": {
+      "name": "HOS518-S02-01 BET00230149",
+      "geo": {
+        "long": 2.12299,
+        "lat": 41.37192
+      }
+    },
+    "createdAt": "2024-09-23T08:42:44.767Z",
+    "tags": [
+      {
+        "_id": "hos518",
+        "name": "HOS518",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "pHLQyCat9AtwvOYsEOORQe4AWkwKjVfyO01OYLhnUuc",
+    "thingToken": "EyLszEVkAqVwpVv-uKWo35m5jWrJ0AKgaIx7ab57Tlk",
+    "description": {
+      "name": "HOS512-S02-01 BET00230068",
+      "geo": {
+        "long": 2.12997,
+        "lat": 41.364348
+      }
+    },
+    "createdAt": "2024-09-23T08:42:44.684Z",
+    "tags": [
+      {
+        "_id": "hos512",
+        "name": "HOS512",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "qaHtYmGu9eY-xBgYPMIKzirhgN9eh5jqK-ayPZTOmQE",
+    "thingToken": "p3BKGtbm4aJWd88DW-oaBZ9ROdMINqkL0xLKZsL9lZ8",
+    "description": {
+      "name": "HOS505-S02-01 BET00230061",
+      "geo": {
+        "lat": 41.3752,
+        "long": 2.10353
+      }
+    },
+    "createdAt": "2024-09-23T08:42:44.663Z",
+    "tags": [
+      {
+        "_id": "hos505",
+        "name": "HOS505",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "0okSyxSJy3MehBYqwoyGMFhYbhAaIkhp1TT4Z-wacPI",
+    "thingToken": "QMXyYf8VH2uB1nhbpSE1FMi7ShNOJU0AbfR8RCHtgzY",
+    "description": {
+      "name": "HOS515-S02-01 BET00230146",
+      "geo": {
+        "long": 2.09923,
+        "lat": 41.35966
+      }
+    },
+    "createdAt": "2024-09-23T08:42:44.639Z",
+    "tags": [
+      {
+        "_id": "hos515",
+        "name": "HOS515",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "K9A42jogtrQYVxVwQXbILkVZ1fv3RxAjFeIqouZWTus",
+    "thingToken": "u7dSZZrXAMLkg3ebL3i3eFgupNOaO9Z1QCM717vQViE",
+    "description": {
+      "name": "HOS511-S02-01 BET00230067",
+      "geo": {
+        "long": 2.11251,
+        "lat": 41.366928
+      }
+    },
+    "createdAt": "2024-09-23T08:42:44.634Z",
+    "tags": [
+      {
+        "_id": "hos511",
+        "name": "HOS511",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "UydHKvrYFf0yD83CW3u44QNIDSFxjdywBOuMfZRyKrI",
+    "thingToken": "V_MlARk2EEimYkStD12DdOdqQp1cpJSavSpZ4VmF9O8",
+    "description": {
+      "name": "HOS514-S02-01 BET00230145",
+      "geo": {
+        "long": 2.11614,
+        "lat": 41.37562
+      }
+    },
+    "createdAt": "2024-09-23T08:42:44.518Z",
+    "tags": [
+      {
+        "_id": "hos514",
+        "name": "HOS514",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "b8kpn_tHNOi1dIB0XBmQ69PMjm8dJnDDn7SBSesdcu0",
+    "thingToken": "J4Pdx9hzkcCwfdxa1TX4GtGwD_RNiYBdrj-nUpjiTZQ",
+    "description": {
+      "name": "HOS520-S02-01 BET00230151",
+      "geo": {
+        "long": 2.12063,
+        "lat": 41.3571
+      }
+    },
+    "createdAt": "2024-09-23T07:49:38.902Z",
+    "tags": [
+      {
+        "_id": "hos520",
+        "name": "HOS520",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "mUYq96nhGidzLmiFd4g_jcIW0Hw1oe7x6rLELR0Rfts",
+    "thingToken": "FRXIcPz4i8691M1CRC8Q68UBQBqahhlggUfdxtvduN4",
+    "description": {
+      "name": "HOS501-S02-01 BET00230026 - AJUNTAMENT",
+      "geo": {
+        "lat": 41.37082,
+        "long": 2.11481
+      }
+    },
+    "createdAt": "2024-09-23T07:49:38.802Z",
+    "tags": [
+      {
+        "_id": "ajuntament",
+        "name": "AJUNTAMENT",
+        "organizationId": 33788
+      },
+      {
+        "_id": "hos501",
+        "name": "HOS501",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "SqQEwHijmZhYFdx_THXPqH8VUYhdm91fkFWpyfJDDe0",
+    "thingToken": "F23Gk8lbKCAc_4onOJ5XJ7phiVi9VeCEpT3M-0FqLFg",
+    "description": {
+      "name": "HOS502-S02-01 BET00230027",
+      "geo": {
+        "long": 2.111,
+        "lat": 41.371688
+      }
+    },
+    "createdAt": "2024-09-23T07:49:38.743Z",
+    "tags": [
+      {
+        "_id": "hos502",
+        "name": "HOS502",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "WbXk-eVOJxijqUjmAyedDdWyMd9N8F7lgrjgRVWSWHM",
+    "thingToken": "wJmQ3WG-DdifG3B2SvhxR3V8xQJ8HOkP-a9OOmMuwCA",
+    "description": {
+      "name": "HOS519-S02-01 BET00230150",
+      "geo": {
+        "long": 2.10314,
+        "lat": 41.357792
+      }
+    },
+    "createdAt": "2024-09-23T07:49:38.697Z",
+    "tags": [
+      {
+        "_id": "hos519",
+        "name": "HOS519",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "DXlMNT7XaUZ_gR2E64iTTScdE_sVnE0mLEnchvHIzOg",
+    "thingToken": "RdKFDpem0QauysrmQapKCMKynP1xWuIa8IR1M-07l0w",
+    "description": {
+      "name": "HOS521-S02-01 BET00230152",
+      "geo": {
+        "long": 2.10235,
+        "lat": 41.36718
+      }
+    },
+    "createdAt": "2024-09-23T07:49:38.644Z",
+    "tags": [
+      {
+        "_id": "hos521",
+        "name": "HOS521",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "P8XDOyVErcjk3U-Lz_n6fOCo4ZfTUbncBY93FqeJxCM",
+    "thingToken": "7OnzoX3_GW0-npYCtxvs9qdfYpUd1ubZO6oUcYj_mZg",
+    "description": {
+      "name": "HOS516-S02-01 BET00230147",
+      "geo": {
+        "long": 2.12705,
+        "lat": 41.36736
+      }
+    },
+    "createdAt": "2024-09-23T07:49:38.517Z",
+    "tags": [
+      {
+        "_id": "hos516",
+        "name": "HOS516",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "exQG4mh3qmTMwXiASvy9QF2j8s2SWqysqjtVtzvHejU",
+    "thingToken": "GJtMyMve27Yd2FxKAR1099sddeK5O3iHOPKiN-8MJh0",
+    "description": {
+      "name": "HOS510-S02-01 BET00230066",
+      "geo": {
+        "long": 2.11014,
+        "lat": 41.35522
+      }
+    },
+    "createdAt": "2024-09-23T07:49:38.489Z",
+    "tags": [
+      {
+        "_id": "hos510",
+        "name": "HOS510",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "VFxdD9iHilAStXe3-QK-_jCE4zUGDo1HcZva6Bzu6-M",
+    "thingToken": "XR9YKw-TlS-z4zcE2dQClk3parMPPurDbpgJ9h_twR8",
+    "description": {
+      "name": "HOS011-S02-01 BET00210039",
+      "geo": {
+        "long": 2.1060591968774616,
+        "lat": 41.370212798453494
+      }
+    },
+    "createdAt": "2023-09-20T12:54:35.304Z",
+    "tags": [
+      {
+        "_id": "hos011",
+        "name": "HOS011",
+        "organizationId": 33788
+      },
+      {
+        "_id": "tipo-equipamientos",
+        "name": "TIPO-EQUIPAMIENTOS",
+        "organizationId": 33788
+      },
+      {
+        "_id": "zona-residencial",
+        "name": "ZONA-RESIDENCIAL",
+        "organizationId": 33788
+      },
+      {
+        "_id": "calle-c_st_rafael",
+        "name": "CALLE-C._ST_RAFAEL",
+        "organizationId": 33788
+      },
+      {
+        "_id": "distrito-4",
+        "name": "DISTRITO-4",
+        "organizationId": 33788
+      },
+      {
+        "_id": "barrio-les_planes",
+        "name": "BARRIO-LES_PLANES",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "MoUnr5YAzNQnhsmWGnyF4C5VM-kEi1sCEsp6QFOM_-g",
+    "thingToken": "MJbgSQz8gMwXwNvM1Kk6PnohjLXpC4Z6zRbNsLLU7Ew",
+    "description": {
+      "name": "HOS015-S02-01",
+      "geo": {
+        "long": 2.1092471526993877,
+        "lat": 41.35017364521854
+      }
+    },
+    "createdAt": "2023-05-16T14:46:12.697Z",
+    "tags": [
+      {
+        "_id": "hos015",
+        "name": "HOS015",
+        "organizationId": 33788
+      },
+      {
+        "_id": "calle-c_ermita_bellvitge",
+        "name": "CALLE-C._ERMITA_BELLVITGE",
+        "organizationId": 33788
+      },
+      {
+        "_id": "distrito-6",
+        "name": "DISTRITO-6",
+        "organizationId": 33788
+      },
+      {
+        "_id": "barrio-bellvitge",
+        "name": "BARRIO-BELLVITGE",
+        "organizationId": 33788
+      },
+      {
+        "_id": "tipo-sanitario",
+        "name": "TIPO-SANITARIO",
+        "organizationId": 33788
+      },
+      {
+        "_id": "zona-residencial",
+        "name": "ZONA-RESIDENCIAL",
+        "organizationId": 33788
+      }
+    ]
+  }
+]

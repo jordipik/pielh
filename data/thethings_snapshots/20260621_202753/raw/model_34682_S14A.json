@@ -1,0 +1,359 @@
+[
+  {
+    "_id": "Y7KI1L2q0PJG4GSexl0Pxr4csg4maKDd2cl1W87YHOg",
+    "lastSeen": "2026-06-21T18:27:33.998Z",
+    "lastWrite": "2026-06-21T18:27:33.998Z",
+    "thingToken": "IAxREWcPyYV6EDB4bNYlrekowoLw2jjGxGC7bwIEkuE",
+    "description": {
+      "name": "HOS045-S14-Meteo (216699)",
+      "geo": {
+        "lat": 41.36633711793946,
+        "long": 2.109332362917055
+      }
+    },
+    "createdAt": "2026-06-08T10:57:30.870Z",
+    "tags": [
+      {
+        "_id": "hos045",
+        "name": "HOS045",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "A_YXMkclEJU4IeGfZyhrnoVob6ckLslYjFP3tYP6XwA",
+    "lastSeen": "2026-06-21T18:27:33.349Z",
+    "lastWrite": "2026-06-21T18:27:33.349Z",
+    "thingToken": "WJQ1zwJU7hZXjvAcWdffHultjVcUaayxjIA13Fh2Ax4",
+    "description": {
+      "name": "HOS054-S14-Meteo (215946)",
+      "geo": {
+        "lat": 41.364484084491146,
+        "long": 2.1293158257126676
+      }
+    },
+    "createdAt": "2026-06-08T10:57:30.221Z",
+    "tags": [
+      {
+        "_id": "hos054",
+        "name": "HOS054",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "B1WhSf_iDIxSwg9UxIuXvh2e4r9FMbHYS79OHzn2n6w",
+    "lastSeen": "2026-06-21T18:27:33.115Z",
+    "lastWrite": "2026-06-21T18:27:33.115Z",
+    "thingToken": "Uv8_I8e4pkAbF08qNu8LMISZ_8LVB75lrZUDNJC3xAY",
+    "description": {
+      "name": "HOS061-S14-Meteo(215864)",
+      "geo": {
+        "long": 2.111619596877657,
+        "lat": 41.37479624882629
+      }
+    },
+    "createdAt": "2026-06-08T10:57:29.898Z",
+    "tags": [
+      {
+        "_id": "hos061",
+        "name": "HOS061",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "IxxV_FEEqs41-DobsZ7vSgA0lCE8dijpuNQ5h0WhE4I",
+    "lastSeen": "2026-06-21T18:27:32.407Z",
+    "lastWrite": "2026-06-21T18:27:32.407Z",
+    "thingToken": "iPdrcOgrU5MqzLg26qLgkyOybSyI7-ZXidgrv4seAvU",
+    "description": {
+      "name": "HOS050-S14-Meteo (215733)",
+      "geo": {
+        "long": 2.103239409922257,
+        "lat": 41.368885152035766
+      }
+    },
+    "createdAt": "2026-06-08T10:57:29.262Z",
+    "tags": [
+      {
+        "_id": "hos050",
+        "name": "HOS050",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "xlNn-zdQyD8v9KLzpXPzwmTdRp8STE9in0ObTXksTNA",
+    "lastSeen": "2026-06-21T18:27:32.260Z",
+    "lastWrite": "2026-06-21T18:27:32.260Z",
+    "thingToken": "tmFZ9tSZq_r9vAOzmji71iyCPgKPDpVf4bPFoWo61ZE",
+    "description": {
+      "name": "HOS047-S14-Meteo (215360)",
+      "geo": {
+        "long": 2.110586996877262,
+        "lat": 41.36538072196777
+      }
+    },
+    "createdAt": "2026-06-08T10:57:28.934Z",
+    "tags": [
+      {
+        "_id": "hos047",
+        "name": "HOS047",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "HCI2JzQyGUn-vjyesLOONO6XDxFxSS1k9Oa-VviQ1YY",
+    "lastSeen": "2026-06-21T18:27:31.571Z",
+    "lastWrite": "2026-06-21T18:27:31.571Z",
+    "thingToken": "2X0DXnJ60Fcu35iYNnsGE1D2bfiYJCsg4gRal0vy-Ck",
+    "description": {
+      "name": "HOS041-S14-Meteo (214189)",
+      "geo": {
+        "long": 2.1165200676343883,
+        "lat": 41.3735215060933
+      }
+    },
+    "createdAt": "2026-06-08T11:23:28.162Z",
+    "tags": [
+      {
+        "_id": "hos041",
+        "name": "HOS041",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "kHw10INwrGv1Y9VImSN-nPDjnQYXR8eTk6GFxqassqs",
+    "lastSeen": "2026-06-08T12:23:58.436Z",
+    "lastWrite": "2026-06-08T12:23:58.436Z",
+    "thingToken": "OlpaFhneRnYCrOQvqZ7xFSD3L6tYUsYTpm_9YzL9ONc",
+    "description": {
+      "name": "test",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:23:56.626Z",
+    "tags": []
+  },
+  {
+    "_id": "i_OJbjXGzAYosPNUXyuldw28Mnhy9FsUH7dTAwqNSrY",
+    "thingToken": "YiLOTyzRCByZ4ur07Z2lyHr5J2A5ozfHvEcQw5ePhho",
+    "description": {
+      "name": "HOS126-S14-Meteo (221405 )",
+      "geo": {
+        "lat": 41.360494767375066,
+        "long": 2.0976899950289667
+      }
+    },
+    "createdAt": "2025-09-17T10:39:35.648Z",
+    "tags": [
+      {
+        "_id": "hos126",
+        "name": "HOS126",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "bgUlV895PfEf9-ORbtWjNG--gYsKOamVdvdNUPLFJrQ",
+    "thingToken": "czYQMdzQ83FxBoS2pYQv7-JY3bAS55I0_5uA-5BXJjY",
+    "description": {
+      "name": "HOS045-S14-Meteo (216699)",
+      "geo": {
+        "lat": 41.36633711793946,
+        "long": 2.109332362917055
+      }
+    },
+    "createdAt": "2025-07-08T09:16:17.428Z",
+    "tags": [
+      {
+        "_id": "hos045",
+        "name": "HOS045",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "34jlvFbsfIgmAMwRleo9qSecDR6fr9IrftIM9r9C83o",
+    "thingToken": "Nd77rE58d39O0idkHSJw-j6pyd3PnVC71aH3hxuMn0Q",
+    "description": {
+      "name": "HOS039-S14-Meteo (216694)",
+      "geo": {
+        "lat": 41.36326127587289,
+        "long": 2.0938688815354225
+      }
+    },
+    "createdAt": "2025-07-08T07:32:17.442Z",
+    "tags": [
+      {
+        "_id": "hos039",
+        "name": "HOS039",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "XRPvEClZvUtarJUcYkAXhTWo3lJY_CxPTeYabYm_MCE",
+    "thingToken": "fUqcdmqR_twA--iRSAnCLBZr12BZZkRFx41P0Ne3hYE",
+    "description": {
+      "name": "HOS054-S14-Meteo (215946)",
+      "geo": {
+        "lat": 41.364484084491146,
+        "long": 2.1293158257126676
+      }
+    },
+    "createdAt": "2025-06-27T08:41:07.067Z",
+    "tags": [
+      {
+        "_id": "hos054",
+        "name": "HOS054",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "lShImk9gzylLJ9ZrRiFpzKtF0XLMsRxF7pZumhIYEC0",
+    "thingToken": "Q8yNYbfEbZyU7v-LEBuRyHEnR9G3Dm0JQxFQ-T6Ly7g",
+    "description": {
+      "name": "HOS061-S14-Meteo(215864)",
+      "geo": {
+        "lat": 41.37479624882629,
+        "long": 2.111619596877657
+      }
+    },
+    "createdAt": "2025-06-26T10:25:22.728Z",
+    "tags": [
+      {
+        "_id": "hos061",
+        "name": "HOS061",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "O8snBfqSbEV6Orsa1JcwM8wZg50xaa7Qn46wcth2hFA",
+    "thingToken": "UK4qR89zi5lzXmzPtXBe_L7wIfq6pHo-Bw7RSyAbCTA",
+    "description": {
+      "name": "HOS053-S14-Meteo (215854)",
+      "geo": {
+        "lat": 41.373052201540304,
+        "long": 2.110847583383893
+      }
+    },
+    "createdAt": "2025-06-26T08:53:22.809Z",
+    "tags": [
+      {
+        "_id": "hos053",
+        "name": "HOS053",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "WFrbfwaUQpxjefDQmj-sVM8NMz58vyD4g_c0iU8btuc",
+    "thingToken": "bQ6GBQBGn50XWi-HaiJAsoc3Hk3UUdVtlZ6Hl2P6e_w",
+    "description": {
+      "name": "HOS050-S14-Meteo (215733)",
+      "geo": {
+        "lat": 41.368885152035766,
+        "long": 2.103239409922257
+      }
+    },
+    "createdAt": "2025-06-25T07:49:46.239Z",
+    "tags": [
+      {
+        "_id": "hos050",
+        "name": "HOS050",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "lLF4YQl7YaD27ZWtWT8qCtpGoLcgAflcbhUzmEXYyC4",
+    "thingToken": "WlA6BPIqSpWzugqKwsJQn_HbaiYm6sfZter4323SZF0",
+    "description": {
+      "name": "HOS047-S14-Meteo (215360)",
+      "geo": {
+        "lat": 41.36538072196777,
+        "long": 2.110586996877262
+      }
+    },
+    "createdAt": "2025-06-20T09:12:51.892Z",
+    "tags": [
+      {
+        "_id": "hos047",
+        "name": "HOS047",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "CR2IZxc-7qUZworafWcVppK8tQ0Etn7aAL1wdrzbFZE",
+    "thingToken": "P4Lm3MQRtHBvnwBC2UKKnMRD9e4Eu9-azvelcJnwreU",
+    "description": {
+      "name": "HOS058-S14-Meteo (215289)",
+      "geo": {
+        "lat": 41.36229332110509,
+        "long": 2.1109706833834316
+      }
+    },
+    "createdAt": "2025-06-19T10:51:34.337Z",
+    "tags": [
+      {
+        "_id": "hos058",
+        "name": "HOS058",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ezVRedL_SN6dsP59K60zbQsRmJKCgh5DRLwhq69rCjI",
+    "thingToken": "iH3NpEJvI_Y2NXTK7EHLw7UiclFE9fv0x6IHOrm9XVY",
+    "description": {
+      "name": "215285",
+      "geo": {}
+    },
+    "createdAt": "2025-06-19T10:17:34.256Z",
+    "tags": []
+  },
+  {
+    "_id": "Cr1I7_LILezq2p8iA2ZnzhFFrVENWPPEZsC3xYdzxAs",
+    "thingToken": "zTSVTcxws3S0osHq3fPTjlDP8OMRF9SkIqSuz5u_-Ms",
+    "description": {
+      "name": "HOS041-S14-Meteo (214189)",
+      "geo": {
+        "lat": 41.3735215060933,
+        "long": 2.1165200676343883
+      }
+    },
+    "createdAt": "2025-06-05T06:38:42.396Z",
+    "tags": [
+      {
+        "_id": "hos041",
+        "name": "HOS041",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "TkfnUUt0RV4A9iIp5pJ4CTUS8DYrmhRpl3p4xIDKr8k",
+    "thingToken": "vQ9p08cWdQTNl8elH3-bh9ojZcsLmW3i6skN78U8j1Y",
+    "description": {
+      "name": "HOS125-S14-Meteo (???)",
+      "geo": {
+        "long": 2.118242894471688,
+        "lat": 41.36030692938389
+      }
+    },
+    "createdAt": "2023-09-18T12:16:54.411Z",
+    "tags": [
+      {
+        "_id": "hos125",
+        "name": "HOS125",
+        "organizationId": 33788
+      }
+    ]
+  }
+]

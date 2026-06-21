@@ -1,0 +1,3793 @@
+[
+  {
+    "_id": "gG1p5VXVOLDWOSP0LasaRRC3PzdXowawOCLBf6Gr1HY",
+    "lastSeen": "2026-06-21T09:40:23.365Z",
+    "lastWrite": "2026-06-21T09:40:23.365Z",
+    "thingToken": "KsYhoFjnZKg6QzNvEPtZNEknufRqlDIjKVI1EE9G06A",
+    "description": {
+      "name": "Deixalleria Municipal - HOS132-S06-01 I17BD045696M",
+      "geo": {
+        "long": 2.0868816817430282,
+        "lat": 41.346829965749805
+      }
+    },
+    "createdAt": "2026-06-08T12:49:34.252Z",
+    "tags": [
+      {
+        "_id": "hos132",
+        "name": "HOS132",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "MuIS9XC5Vp2Eevu0F3NobPhPcsIizURQpSIhbg2ZAQo",
+    "lastSeen": "2026-06-21T09:40:22.529Z",
+    "lastWrite": "2026-06-21T09:40:22.529Z",
+    "thingToken": "faPZKnwckMaqrRXZopjOCCwc9onAkM28TphLpXtfUrY",
+    "description": {
+      "name": "CEMFO - HOS004-S06-01 I17BE046798C",
+      "geo": {
+        "long": 2.10895929318077,
+        "lat": 41.3564226694841
+      }
+    },
+    "createdAt": "2026-06-08T12:56:45.115Z",
+    "tags": [
+      {
+        "_id": "hos004",
+        "name": "HOS004",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ySrH2RptEYTddry1SZrUqq9BhFgpfcPk7GoqIjFvDW8",
+    "lastSeen": "2026-06-21T09:40:21.764Z",
+    "lastWrite": "2026-06-21T09:40:21.764Z",
+    "thingToken": "xxRGIduiTkVqFL_r7e16saqOCEmStS-leyh-8Hri9P4",
+    "description": {
+      "name": "Residencia Els Alps - HOS136-S06-01 I17BD083286K",
+      "geo": {
+        "long": 2.09548452571258,
+        "lat": 41.3625896728415
+      }
+    },
+    "createdAt": "2026-06-08T12:50:44.399Z",
+    "tags": [
+      {
+        "_id": "hos136",
+        "name": "HOS136",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "L0Zt3Y4iUtfbD_ImPoLa61na9eljBOxyoWWDvXcuLM8",
+    "lastSeen": "2026-06-21T09:40:20.918Z",
+    "lastWrite": "2026-06-21T09:40:20.918Z",
+    "thingToken": "kObW7zQW6lfYZb8sjszQ_1CStJ0p4jBNpQsfXDHiK-I",
+    "description": {
+      "name": "Biblioteca Can Sumarro - HOS007-S06-01 I17BD504878W",
+      "geo": {
+        "long": 2.09668715454791,
+        "lat": 41.3603458094608
+      }
+    },
+    "createdAt": "2026-06-08T12:55:30.465Z",
+    "tags": [
+      {
+        "_id": "hos007",
+        "name": "HOS007",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "5-Oeec6_AXYXtJcF6TElybxC4bL9ciBPGQK1Fb-H2Pc",
+    "lastSeen": "2026-06-21T09:40:20.171Z",
+    "lastWrite": "2026-06-21T09:40:20.171Z",
+    "thingToken": "efXwl6cP4V3f0I0a_Yj7yGnBboYOdzKSPC754fNhNng",
+    "description": {
+      "name": "C. C.  Tecla Sala - HOS022-S06-01 I17BD504011F",
+      "geo": {
+        "long": 2.11527145270015,
+        "lat": 41.3668052618861
+      }
+    },
+    "createdAt": "2026-06-08T12:54:15.559Z",
+    "tags": [
+      {
+        "_id": "hos022",
+        "name": "HOS022",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "TcJV4q9yEATh8BcI9WGTuwhEmDz02AOBdAfH-d-c2FA",
+    "lastSeen": "2026-06-21T09:40:19.412Z",
+    "lastWrite": "2026-06-21T09:40:19.412Z",
+    "thingToken": "kc1q4SE8N7DPmcswS5z2QXFmixdnnC7xDouRgb5msZw",
+    "description": {
+      "name": "S06-01 I17BC095962D",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2026-06-08T12:47:36.518Z",
+    "tags": []
+  },
+  {
+    "_id": "-Qa0z9F7d74mKBQkniAdv6z6MNYxmvChQLmvDqsQX4U",
+    "lastSeen": "2026-06-21T09:40:18.597Z",
+    "lastWrite": "2026-06-21T09:40:18.597Z",
+    "thingToken": "-JLH6JiuaOuxKjqDEdoJ5j2yntGxdNsFtNWbVcI9NDg",
+    "description": {
+      "name": "I17BE063112M",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:58:50.413Z",
+    "tags": []
+  },
+  {
+    "_id": "FHwdWkBsMVf6jnLLtBcoQtDjvatzrLjqCuLoF35_iEo",
+    "lastSeen": "2026-06-21T09:40:17.838Z",
+    "lastWrite": "2026-06-21T09:40:17.838Z",
+    "thingToken": "aiWGgKrDFUC-_EHtBWDGv07n24KnA-S5TD-N8gh8hiI",
+    "description": {
+      "name": "I17BD096770I",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:53:03.455Z",
+    "tags": []
+  },
+  {
+    "_id": "aoIT2mIgAwOWV2HqTrbnPYZjM1hCanxKfQ-psYixnvY",
+    "lastSeen": "2026-06-21T09:40:17.075Z",
+    "lastWrite": "2026-06-21T09:40:17.075Z",
+    "thingToken": "fauawEPDQrB1NcHVnk0m_ecsORYntmJxFEICL-XFi84",
+    "description": {
+      "name": "I17BC041526Y",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:46:35.524Z",
+    "tags": []
+  },
+  {
+    "_id": "yqCm7nvS5RZPBMeXn4FDN2jBa2HYJV96dsohOYDIp0Q",
+    "lastSeen": "2026-06-21T09:40:16.300Z",
+    "lastWrite": "2026-06-21T09:40:16.300Z",
+    "thingToken": "i27iJtFI6ODYLg7dzCcze5kXXO0eZSaLayqWV8lInuI",
+    "description": {
+      "name": "CGG Provençana - HOS023-S06-01 I17BC013010U",
+      "geo": {
+        "long": 2.11027938338369,
+        "lat": 41.3678031666015
+      }
+    },
+    "createdAt": "2026-06-08T12:45:28.166Z",
+    "tags": [
+      {
+        "_id": "hos023",
+        "name": "HOS023",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "5HEDDOHOKyW_7XeH3NzexThwueIAt32XGzuUCbEdQYU",
+    "lastSeen": "2026-06-21T09:40:15.538Z",
+    "lastWrite": "2026-06-21T09:40:15.538Z",
+    "thingToken": "y25ZsusjLo9gP1qPbdwVdKkRPbPtB6J8_osEjN7axnI",
+    "description": {
+      "name": "I17BD014384G",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:48:31.529Z",
+    "tags": []
+  },
+  {
+    "_id": "bvDyRLP6B4Ena6VIHWZx6DLinEAJ4BNTh3REKYlt3bA",
+    "lastSeen": "2026-06-21T09:40:14.778Z",
+    "lastWrite": "2026-06-21T09:40:14.778Z",
+    "thingToken": "8CIsffh086Uj1ErL78_aYoMTYYRIZSBC6or07L0xja0",
+    "description": {
+      "name": "I17BE085778O",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:59:47.959Z",
+    "tags": []
+  },
+  {
+    "_id": "Erk69_FPdhWpMr3jNXf50ekuHJRDRL9oU14lAxqDHYI",
+    "lastSeen": "2026-06-21T09:40:13.952Z",
+    "lastWrite": "2026-06-21T09:40:13.952Z",
+    "thingToken": "yQbrfj50wPvBGNxxg6GX0Es5ujgcmC7mM96UWIhHcLk",
+    "description": {
+      "name": "Dipòsit Parc de la serp - HOS037-S06-01 H24VA628016X",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2026-06-08T12:42:31.778Z",
+    "tags": [
+      {
+        "_id": "hos037",
+        "name": "HOS037",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "sIQ9poVOVsfcnniLpju66uu25F11_geG8nrAjq4nd7Q",
+    "lastSeen": "2026-06-21T09:40:13.183Z",
+    "lastWrite": "2026-06-21T09:40:13.183Z",
+    "thingToken": "wi173CdYGZInLPEVAABszq6o6CKLtnyAboKwMg_rC1M",
+    "description": {
+      "name": "H23VA864747G",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:41:50.045Z",
+    "tags": []
+  },
+  {
+    "_id": "cYWfQdc3J1q5dKRw4kCc2Rl197i1YTPgmFw1kkOe4oQ",
+    "lastSeen": "2026-06-21T09:40:12.430Z",
+    "lastWrite": "2026-06-21T09:40:12.430Z",
+    "thingToken": "HxjDxJba0I3uzkrVtk7ubpy0nydC43dfpCwkTn-Rthk",
+    "description": {
+      "name": "CGG Pubilla Casas - HOS025-S06-01 H23VA084841R",
+      "geo": {
+        "long": 2.1046224392067723,
+        "lat": 41.373745441670316
+      }
+    },
+    "createdAt": "2026-06-08T12:34:29.312Z",
+    "tags": [
+      {
+        "_id": "hos025",
+        "name": "HOS025",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ZqV_aihLNQOaTdfQU68TKo-y32KaNo3jrbse2UIvyUI",
+    "lastSeen": "2026-06-21T09:40:11.427Z",
+    "lastWrite": "2026-06-21T09:40:11.427Z",
+    "thingToken": "9boaGEw2-pOjSZRtB9CoEfhbI5ra5cSLOssfgNBZQRc",
+    "description": {
+      "name": "D16FE086647C",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:19:58.441Z",
+    "tags": []
+  },
+  {
+    "_id": "c6cRV_3BOt29TcJplk7B0yUWZ3mPnaDc1xAs4vnrWAQ",
+    "lastSeen": "2026-06-21T09:40:10.440Z",
+    "lastWrite": "2026-06-21T09:40:10.440Z",
+    "thingToken": "4sK7b86tKioxT1WO_ZH7deoy_VjPpd9RVFvxLtqYECk",
+    "description": {
+      "name": "H23VA083135U",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:31:29.215Z",
+    "tags": []
+  },
+  {
+    "_id": "FtXokvZ0XJo9pyB_Z0Rvz12HB7zafgAPBSiS45hzsZQ",
+    "lastSeen": "2026-06-21T09:40:09.546Z",
+    "lastWrite": "2026-06-21T09:40:09.546Z",
+    "thingToken": "P1ajlJdhExwxrXDXOSqIhSyVc29vm4L4zEoV37Hq0bY",
+    "description": {
+      "name": "I16BD105801Y",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:43:30.676Z",
+    "tags": []
+  },
+  {
+    "_id": "7UsFdKdJTnJnlSaqY_oL2zl96UK5LBnGCKsBiWzdsfo",
+    "lastSeen": "2026-06-21T09:40:08.693Z",
+    "lastWrite": "2026-06-21T09:40:08.693Z",
+    "thingToken": "QZKn9BzIQilJLGRitEWW7GXuWHzbJ3JGNJU8OxnGSC4",
+    "description": {
+      "name": "Casa dels Cargols - HOS029-S06-01 H22VA827558M",
+      "geo": {
+        "long": 2.12096392062176,
+        "lat": 41.3711275446201
+      }
+    },
+    "createdAt": "2026-06-08T12:29:02.207Z",
+    "tags": [
+      {
+        "_id": "hos029",
+        "name": "HOS029",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "I_qSUteKIaouoy6FedMVJOpwdieQ5yKVZhFJuERUOxo",
+    "lastSeen": "2026-06-21T09:40:07.829Z",
+    "lastWrite": "2026-06-21T09:40:07.829Z",
+    "thingToken": "9GPPeEG-qUfXAhCDAj05z9rOVE8T9OrrSSrmmLiAjg0",
+    "description": {
+      "name": "D15TC125050O",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:19:17.616Z",
+    "tags": []
+  },
+  {
+    "_id": "2-XpFA_5RaRgL5-n92x4oCP9i4p12sYu545r9BM1K9A",
+    "lastSeen": "2026-06-21T09:40:06.847Z",
+    "lastWrite": "2026-06-21T09:40:06.847Z",
+    "thingToken": "cXFGiylknttrWpyqXvmRzyUVFmiDF9UVvis-kgrlLfI",
+    "description": {
+      "name": "D17BA245795C",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:26:26.405Z",
+    "tags": []
+  },
+  {
+    "_id": "sJoawNXOcwt2HoYq9yL1A6_aMgImsBBkNBdDvboitNQ",
+    "lastSeen": "2026-06-21T09:40:05.938Z",
+    "lastWrite": "2026-06-21T09:40:05.938Z",
+    "thingToken": "fQ4KrYiPUuR1h6hGmkrjM4aBcQ-57R888Gw2uH1AjCM",
+    "description": {
+      "name": "Area de Benestar social - HOS028-S06-01 H23VA120131G",
+      "geo": {
+        "long": 2.11021778427181,
+        "lat": 41.3641720618462
+      }
+    },
+    "createdAt": "2026-06-08T12:40:00.485Z",
+    "tags": [
+      {
+        "_id": "hos028",
+        "name": "HOS028",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "KAZWTUtIj5bUR2x1nh0nFqnOSD_GM0oIEWDs00BLDWk",
+    "lastSeen": "2026-06-21T09:40:05.091Z",
+    "lastWrite": "2026-06-21T09:40:05.091Z",
+    "thingToken": "-nI0-REZ5atpyJoYjI7S884Dfo8aWwrW2HJW7wXQboY",
+    "description": {
+      "name": "A. B. S. S. - Dte. IV/V - HOS026-S06-01 D16BA108177L",
+      "geo": {
+        "long": 2.10273187524804,
+        "lat": 41.3709523746761
+      }
+    },
+    "createdAt": "2026-06-08T12:19:34.440Z",
+    "tags": [
+      {
+        "_id": "hos026",
+        "name": "HOS026",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "s6op2vXC2h4cl9hlfVxld0TN5NbKMaS6KJdl3SnkY9M",
+    "lastSeen": "2026-06-21T09:40:04.064Z",
+    "lastWrite": "2026-06-21T09:40:04.064Z",
+    "thingToken": "Qda9ceTghzWVrafE7AL_bDj7KwM87u5MjnJCeYiffTc",
+    "description": {
+      "name": "Cal Gotlla - HOS006-S06-01 D18BA388376I",
+      "geo": {
+        "long": 2.12363835835246,
+        "lat": 41.3533736756027
+      }
+    },
+    "createdAt": "2026-06-08T12:27:37.728Z",
+    "tags": [
+      {
+        "_id": "hos006",
+        "name": "HOS006",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "Ji39TqbstdLkZV_bVmHFqOJNJuVB8yRyTR6Qe91RzA0",
+    "lastSeen": "2026-06-21T09:40:03.277Z",
+    "lastWrite": "2026-06-21T09:40:03.277Z",
+    "thingToken": "o42bsTxEreBiklnhZwtGcmbJyVwxJDSrvrvA3yLo2yE",
+    "description": {
+      "name": "Aj L'H-Ed. Migdia - HOS002-S06-01 D16UH084259X",
+      "geo": {
+        "long": 2.09613941249931,
+        "lat": 41.3610058832045
+      }
+    },
+    "createdAt": "2026-06-08T12:22:17.530Z",
+    "tags": [
+      {
+        "_id": "hos002",
+        "name": "HOS002",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "RdeTqQXaqYJN3oJu9H4Hyr6f2O3YwYEQDPlgFt__Iiw",
+    "lastSeen": "2026-06-21T09:40:02.302Z",
+    "lastWrite": "2026-06-21T09:40:02.302Z",
+    "thingToken": "N5rm6n4L-TyjBrQBRi7dCmvVVIannHBqTL6iKo01Oh8",
+    "description": {
+      "name": "CGG del polígon Gornal - HOS120-S06-01 H23VA120591E",
+      "geo": {
+        "long": 2.119787510371402,
+        "lat": 41.37496179539499
+      }
+    },
+    "createdAt": "2026-06-08T12:41:00.641Z",
+    "tags": [
+      {
+        "_id": "hos120",
+        "name": "HOS120",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "-3w1daghXEt3sRvZ6Mn32wIQILqupcIjmnJGrJtyWII",
+    "lastSeen": "2026-06-21T09:40:01.469Z",
+    "lastWrite": "2026-06-21T09:40:01.469Z",
+    "thingToken": "-T8k_GyJ1WgcRY8JWBn6jHG6PX833HMAF8_nsOPYPbg",
+    "description": {
+      "name": "D16TD053003Y",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T12:20:31.836Z",
+    "tags": []
+  },
+  {
+    "_id": "X0bAlCRIne28bVU8KlVrRUdai-ML3eb1O9_OiVh6db8",
+    "lastSeen": "2026-06-21T09:40:00.413Z",
+    "lastWrite": "2026-06-21T09:40:00.413Z",
+    "thingToken": "zytsWih5H7vHzGETSdQNklhDWyAOgAyyI7lhIDE1zV4",
+    "description": {
+      "name": "Biblioteca la Florida - HOS009-S06-01 D17BA214472T",
+      "geo": {
+        "lat": 41.36966996210325,
+        "long": 2.107444067975394
+      }
+    },
+    "createdAt": "2026-06-08T12:24:59.005Z",
+    "tags": [
+      {
+        "_id": "hos009",
+        "name": "HOS009",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "PONt4MVyjmUdS656zFvF16W8PefQQ5YUnmEItyornAo",
+    "lastSeen": "2026-06-21T09:39:59.445Z",
+    "lastWrite": "2026-06-21T09:39:59.445Z",
+    "thingToken": "td5lvkgiv105BhLj2jPLYWibm9QAg-k2eMBN_T9KXWM",
+    "description": {
+      "name": "Ca n'Olivé - HOS069-S06-01 H23VA095642V",
+      "geo": {
+        "long": 2.1015703140999826,
+        "lat": 41.360059846996805
+      }
+    },
+    "createdAt": "2026-06-08T12:37:11.560Z",
+    "tags": [
+      {
+        "_id": "hos069",
+        "name": "HOS069",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "L_r_F60131zyxRTCmXdZGaxtaFMMCzfS7IF2RYiYTe8",
+    "lastSeen": "2026-06-21T09:39:58.321Z",
+    "lastWrite": "2026-06-21T09:39:58.321Z",
+    "thingToken": "zp6VbH3B6KbhDBr_X5M7dK9GLs2sEPKkqQUaEW97MxI",
+    "description": {
+      "name": "Museu Can Riera - HOS127-S06-01 H23VA095644X",
+      "geo": {
+        "long": 2.09693001037074,
+        "lat": 41.3614898335236
+      }
+    },
+    "createdAt": "2026-06-08T12:39:05.423Z",
+    "tags": [
+      {
+        "_id": "hos127",
+        "name": "HOS127",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "zKabHbjjW0gxCHbOSnuwMNjltUktzfzS14NCZw9emsk",
+    "lastSeen": "2026-06-21T09:39:57.279Z",
+    "lastWrite": "2026-06-21T09:39:57.279Z",
+    "thingToken": "he2EjNgJWLcAsiBleMq7NkJVConOsg96c_EaoXvt_fw",
+    "description": {
+      "name": "Esc. Patufet Sant Jordi - HOS056-S06-01 D15FE071450J",
+      "geo": {
+        "long": 2.10273712571236,
+        "lat": 41.3577143732239
+      }
+    },
+    "createdAt": "2026-06-08T12:18:58.678Z",
+    "tags": [
+      {
+        "_id": "hos056",
+        "name": "HOS056",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "xGrGl53ELTrcyZnl05Id-0oIZpYi2TL5IZd2O47-hgg",
+    "lastSeen": "2026-06-20T09:25:55.224Z",
+    "lastWrite": "2026-06-20T09:25:55.224Z",
+    "thingToken": "fl1zMaefVRQyYzrcQehsApujR2RoAmV6wyt-A88rlFQ",
+    "description": {
+      "name": "Esc. Br. La Casa del Molí - HOS098-S06-01 I22BB009987T",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2026-06-08T14:14:31.982Z",
+    "tags": [
+      {
+        "_id": "hos098",
+        "name": "HOS098",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "7cPYd2gxnGh-EnXJoJi0-Cer9FqUdyt_8Gn6pP-AB_w",
+    "lastSeen": "2026-06-19T09:40:47.049Z",
+    "lastWrite": "2026-06-19T09:40:47.049Z",
+    "thingToken": "5Zof9yHwwyFhr4Llx6F_YlothQFCTrbHyNu0R_3JhQI",
+    "description": {
+      "name": "Esc. Pompeu Fabra - HOS062-S06-01 I18BD030308X",
+      "geo": {
+        "long": 2.1229377589519,
+        "lat": 41.3660529864254
+      }
+    },
+    "createdAt": "2026-06-08T13:18:07.616Z",
+    "tags": [
+      {
+        "_id": "hos062",
+        "name": "HOS062",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "vpMwMM5PlLdyHRkFB7EhHb-AXBN0DKk62LHarUVCQgU",
+    "lastSeen": "2026-06-19T09:40:43.797Z",
+    "lastWrite": "2026-06-19T09:40:43.798Z",
+    "thingToken": "N9vyiqohezuePmkJOVjb8wmZhyYv56hCUrP-N5Ts2Fc",
+    "description": {
+      "name": "I19BC062758S",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T13:33:11.477Z",
+    "tags": []
+  },
+  {
+    "_id": "HX0rRX32C0JYLoPABHs9ODXZXT2abCr6amYqXlysxfE",
+    "lastSeen": "2026-06-19T09:40:42.032Z",
+    "lastWrite": "2026-06-19T09:40:42.032Z",
+    "thingToken": "PDvgZZeF_LepkY5LgYtMCgaYmbPjjNkmUDUG7Pz-9qo",
+    "description": {
+      "name": "HOS001-S06-01 I19BD035462J",
+      "geo": {
+        "long": 2.09613941249931,
+        "lat": 41.3610058832045
+      }
+    },
+    "createdAt": "2026-06-08T13:37:20.812Z",
+    "tags": [
+      {
+        "_id": "hos001",
+        "name": "HOS001",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "XE0GP6G7DzTaxZ1xirF_8TSwVkmpjygbbqgY1RfL3IA",
+    "lastSeen": "2026-06-19T09:40:36.505Z",
+    "lastWrite": "2026-06-19T09:40:36.505Z",
+    "thingToken": "WGI-XThC51OJdl8SYwx3gk03_lrPDOI2rGVdJ7EETz4",
+    "description": {
+      "name": "Esc. Menéndez Pidal - HOS053-S06-01 I18BD030305U",
+      "geo": {
+        "long": 2.11084758338389,
+        "lat": 41.3730522015403
+      }
+    },
+    "createdAt": "2026-06-08T13:14:57.660Z",
+    "tags": [
+      {
+        "_id": "hos053",
+        "name": "HOS053",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "opfI7hEkWdbqNuv5BmC790Mv4dv9nPYczKjcjH3R_YQ",
+    "lastSeen": "2026-06-19T09:40:35.634Z",
+    "lastWrite": "2026-06-19T09:40:35.634Z",
+    "thingToken": "kuqCBd0jt8jLYkagKksmfXnA3VYXheC6U-uRbFuymFs",
+    "description": {
+      "name": "Esc. Josep Janes - HOS047-S06-01 I17BE094519Y",
+      "geo": {
+        "long": 2.11426156641481,
+        "lat": 41.3513013902853
+      }
+    },
+    "createdAt": "2026-06-08T13:01:01.047Z",
+    "tags": [
+      {
+        "_id": "hos047",
+        "name": "HOS047",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "PMoZsEhMaDZ54jaxB4y_XmRFrSWm2-EG3jUieUXSEJg",
+    "lastSeen": "2026-06-19T09:40:32.863Z",
+    "lastWrite": "2026-06-19T09:40:32.863Z",
+    "thingToken": "7reVyKYPqrWEE7b0pr3KzGDIMNy5BPSHqxT_7ObrDZo",
+    "description": {
+      "name": "Esc. Pau Casals - HOS057-S06-01 I18BD030309Y",
+      "geo": {
+        "long": 2.11567618576053,
+        "lat": 41.3691385657368
+      }
+    },
+    "createdAt": "2026-06-08T13:21:36.849Z",
+    "tags": [
+      {
+        "_id": "hos057",
+        "name": "HOS057",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "3YahYi55PAJbhwB0w4xN3L66gAPo9r-j8-lGjcM4SZI",
+    "lastSeen": "2026-06-19T09:40:30.260Z",
+    "lastWrite": "2026-06-19T09:40:30.260Z",
+    "thingToken": "Lv0ENSmMLknsBwFKXCT7BkgWtN34oofCCKyo-3m73SA",
+    "description": {
+      "name": "I18BC030788S",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T13:05:34.227Z",
+    "tags": []
+  },
+  {
+    "_id": "xrZpEfWjNlVV_c3CbxhJpKArlC30cPXV97rrXB-YlHE",
+    "lastSeen": "2026-06-19T09:40:28.531Z",
+    "lastWrite": "2026-06-19T09:40:28.531Z",
+    "thingToken": "mFDNpu0E1L5g9-r-RbpLIiv-ELLiZcDayzY51aUVcO4",
+    "description": {
+      "name": "Pavelló M. d'Esports - HOS106-S06-01 I18BD030318Z",
+      "geo": {
+        "long": 2.10130494917204,
+        "lat": 41.3471157667437
+      }
+    },
+    "createdAt": "2026-06-08T13:23:28.070Z",
+    "tags": [
+      {
+        "_id": "hos106",
+        "name": "HOS106",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "JFA4pbO-LVPuQ-GjAfGirqnX7RCM8FTW8CSTGPjajrI",
+    "lastSeen": "2026-06-19T09:40:27.700Z",
+    "lastWrite": "2026-06-19T09:40:27.700Z",
+    "thingToken": "UeRlGWRsCdh83oLxFfESdInb9xvop6Vw7Q7arPqYVH8",
+    "description": {
+      "name": "I18BD012202M",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T13:07:04.268Z",
+    "tags": []
+  },
+  {
+    "_id": "iYhmNIxgsURPkWkOf9cA_8c3XaivhuANzR7MfV2IOpI",
+    "lastSeen": "2026-06-19T09:40:26.780Z",
+    "lastWrite": "2026-06-19T09:40:26.780Z",
+    "thingToken": "ew2ihAE2ih12I664m6f8v3o7XaQ7K8OBeQr3iJV3iJk",
+    "description": {
+      "name": "Esc. Pere Lliscart - HOS061-S06-01 I18BD030283F",
+      "geo": {
+        "long": 2.11161959687766,
+        "lat": 41.3747962488263
+      }
+    },
+    "createdAt": "2026-06-08T13:10:03.116Z",
+    "tags": [
+      {
+        "_id": "hos061",
+        "name": "HOS061",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "n7GgQ9Op5wSWBrCu9C65Q8NnbQxlYsy5qlegl2grlxY",
+    "lastSeen": "2026-06-19T09:40:25.875Z",
+    "lastWrite": "2026-06-19T09:40:25.875Z",
+    "thingToken": "6JPoG-FelYQfaSyitizuWh1Z0xK4rHPdYbN6A7TDn6c",
+    "description": {
+      "name": "I18BE082533S",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T13:29:35.597Z",
+    "tags": []
+  },
+  {
+    "_id": "7DlF2Eitcfuayt0LntjGuL8jxHQYZJ-C8ijr4Y6BU0A",
+    "lastSeen": "2026-06-19T09:40:23.074Z",
+    "lastWrite": "2026-06-19T09:40:23.074Z",
+    "thingToken": "GUujKEzdoGLdQwGlRPTO_OeMwUYmPQntR2So93LitCU",
+    "description": {
+      "name": "I18BD033258Q",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T13:24:56.995Z",
+    "tags": []
+  },
+  {
+    "_id": "BNF52C8CRBdnppLcuArbJxM8BXgUsOuJlkqmlb34qnQ",
+    "lastSeen": "2026-06-19T09:40:21.388Z",
+    "lastWrite": "2026-06-19T09:40:21.388Z",
+    "thingToken": "QLsVxBt5Yk4ljXhDAecgY9NHIvpII6Lr-ir_cG58Q88",
+    "description": {
+      "name": "I19BB015889I",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T13:31:20.837Z",
+    "tags": []
+  },
+  {
+    "_id": "tyf8SBGezEGTbx9WF8iB2b9tdwdiw9E0cv80s61GUAQ",
+    "lastSeen": "2026-06-19T09:40:16.997Z",
+    "lastWrite": "2026-06-19T09:40:16.997Z",
+    "thingToken": "C042OyAePlzKVliFEojF-bnLLGe_L93Tpq1-pD0OxLI",
+    "description": {
+      "name": "I18BC012582E",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T13:04:10.771Z",
+    "tags": []
+  },
+  {
+    "_id": "qDgqygCiDQ5jNbfopn-_5VnSHECxTik3vRyVXTEpSUI",
+    "lastSeen": "2026-06-19T09:40:16.121Z",
+    "lastWrite": "2026-06-19T09:40:16.121Z",
+    "thingToken": "lbF6PcV2yBks7IQ3Ak6FrsofnAXgeMpPGQXM2zG6w5w",
+    "description": {
+      "name": "Esc. Milagros Consarnau - HOS054-S06-S1 I18BD030306V",
+      "geo": {
+        "long": 2.12931582571267,
+        "lat": 41.3644840844911
+      }
+    },
+    "createdAt": "2026-06-08T13:16:25.391Z",
+    "tags": [
+      {
+        "_id": "hos054",
+        "name": "HOS054",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "6_FjkI_CN4xUeLlSQuXa2XNNsjiIEurylMtNyEZUY9g",
+    "lastSeen": "2026-06-19T09:40:12.568Z",
+    "lastWrite": "2026-06-19T09:40:12.569Z",
+    "thingToken": "yE6ZlNkkhnWEP6b4TceTzl7s8395K5zNoDNM_LBXTvI",
+    "description": {
+      "name": "I19BD042447D",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T13:41:19.130Z",
+    "tags": []
+  },
+  {
+    "_id": "TUJYZjfm1wb1kt0ilyolEf_iIQddz1tOwlDuvUEhzGA",
+    "lastSeen": "2026-06-19T09:40:07.409Z",
+    "lastWrite": "2026-06-19T09:40:07.409Z",
+    "thingToken": "6FqPHJTQT1gUHTp7kVRosdl6RYa_DQyDMiH-kWU5VYI",
+    "description": {
+      "name": "I18BD033597G",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T13:26:48.793Z",
+    "tags": []
+  },
+  {
+    "_id": "Axzlmkx7jSqTc0gbeFfbZQc2ol2joxGVPVsHZG5zOiU",
+    "lastSeen": "2026-06-19T09:40:06.612Z",
+    "lastWrite": "2026-06-19T09:40:06.612Z",
+    "thingToken": "j4uyQee3faJYbTFgnQ_h-GpP1hz7VW8GeJXxNtCmBIA",
+    "description": {
+      "name": "I20BD020143F",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T13:42:58.478Z",
+    "tags": []
+  },
+  {
+    "_id": "u9xGIFNle6ALuAoLdKg0EsZsp7wmOUzFKMhciJ8OQsc",
+    "lastSeen": "2026-06-19T09:40:03.843Z",
+    "lastWrite": "2026-06-19T09:40:03.843Z",
+    "thingToken": "P-ETmcr8YcpJYr0jq1rHGXqFSIjbbAdR3wKmkcqGTcM",
+    "description": {
+      "name": "CGG la Ermita - HOS118-S06-01 I19BD042435Z",
+      "geo": {
+        "long": 2.112201583383001,
+        "lat": 41.35291618331664
+      }
+    },
+    "createdAt": "2026-06-08T13:39:25.999Z",
+    "tags": [
+      {
+        "_id": "hos118",
+        "name": "HOS118",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "m5iE1kXUxyYX5grZEb0AH9xtFM6mwE1p6L8u4Zv75-Q",
+    "lastSeen": "2026-06-19T09:40:02.034Z",
+    "lastWrite": "2026-06-19T09:40:02.034Z",
+    "thingToken": "5RkMGRtvMgo4KDurgHM0OTjrNXspBCaTY3Y8sQNx7_E",
+    "description": {
+      "name": "Ca n'Arús - HOS070-S06-01 I20BD020169P",
+      "geo": {
+        "long": 2.10205392201625,
+        "lat": 41.3587527484308
+      }
+    },
+    "createdAt": "2026-06-08T13:44:57.077Z",
+    "tags": [
+      {
+        "_id": "hos070",
+        "name": "HOS070",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ENbDiVPuctRpQSizdzd6m5TQmH3CNMPUfzML1cGW6dE",
+    "lastSeen": "2026-06-19T09:40:01.110Z",
+    "lastWrite": "2026-06-19T09:40:01.110Z",
+    "thingToken": "2PeaIeMbqo8w4_qTAKpwacWXoHXhuGZSjXKhUf_t3Ko",
+    "description": {
+      "name": "Esc. Puig i Gairalt - HOS064-S06-1 I18BD030289L",
+      "geo": {
+        "long": 2.10682919687775,
+        "lat": 41.3756422829567
+      }
+    },
+    "createdAt": "2026-06-08T13:11:43.835Z",
+    "tags": [
+      {
+        "_id": "hos064",
+        "name": "HOS064",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "Wbn_nPQ--G29OwmnwHNK7MwSP862itr956EoU8-8ARM",
+    "lastSeen": "2026-06-19T09:40:00.179Z",
+    "lastWrite": "2026-06-19T09:40:00.179Z",
+    "thingToken": "IeIBlboiPX-SvaooOU34ix3gqn5OgNzNSVSx5g9jiZA",
+    "description": {
+      "name": "I18BD039671X",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T13:27:47.160Z",
+    "tags": []
+  },
+  {
+    "_id": "e7F8mB3WyPVfiIzs19ai2yEIvHD-7s2-MOxlJDguhhk",
+    "lastSeen": "2026-06-19T09:39:59.327Z",
+    "lastWrite": "2026-06-19T09:39:59.327Z",
+    "thingToken": "o82pi_40IWCTk-HWN4P30IcfMSfIqq6fDE6f3HV1-yo",
+    "description": {
+      "name": "Esc. Ausias March - HOS039-S06-01 I20BD036700P",
+      "geo": {
+        "long": 2.09386888153542,
+        "lat": 41.3632612758729
+      }
+    },
+    "createdAt": "2026-06-08T13:49:08.137Z",
+    "tags": [
+      {
+        "_id": "hos039",
+        "name": "HOS039",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "-aAYpDA-LA9n7EyWjVhK43AAxZQc5udyl8NlMAID22I",
+    "lastSeen": "2026-06-19T09:39:58.397Z",
+    "lastWrite": "2026-06-19T09:39:58.397Z",
+    "thingToken": "9l94Mlu4pIcZfrQWs6PW3qfqNIyrecHgdxef9qoXGIs",
+    "description": {
+      "name": "I20BD036673D",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T13:46:58.622Z",
+    "tags": []
+  },
+  {
+    "_id": "mNHHJ_e5Nbf1lctKqG7KPQ8bnRclLLahIALGWBipatQ",
+    "lastSeen": "2026-06-15T00:02:17.518Z",
+    "lastWrite": "2026-06-15T00:02:17.519Z",
+    "thingToken": "IfqdJ4-aoRA9jM6XlxESIxBZ-QBxdxZ5ifulb5G4dIo",
+    "description": {
+      "name": "Bibl. i esc. pl. Europa - HOS010-S06-01 I22BD035149C",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2026-06-08T14:50:23.989Z",
+    "tags": [
+      {
+        "_id": "hos010",
+        "name": "HOS010",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "CVTEtgap2xiHwDh70ncRMRw3Yxhd8NGH6pmSe2QhdRk",
+    "lastSeen": "2026-06-15T00:02:16.205Z",
+    "lastWrite": "2026-06-15T00:02:16.205Z",
+    "thingToken": "VAbWeCt5kkXZaDxonT2iELk1WrFWEPone2qQx5Oas60",
+    "description": {
+      "name": "I22BD053196L",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T14:53:57.329Z",
+    "tags": []
+  },
+  {
+    "_id": "CPsUMKBbOgK-bT7dD_KpoTf9OZm_64F315FjYWMDN7A",
+    "lastSeen": "2026-06-15T00:02:14.459Z",
+    "lastWrite": "2026-06-15T00:02:14.459Z",
+    "thingToken": "MHS5R9_eKzb1YU-uybEDQfbG_a5icL4SDwyTo62ZZmg",
+    "description": {
+      "name": "I22BD089718C",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T15:08:58.300Z",
+    "tags": []
+  },
+  {
+    "_id": "yN5KhpaV7jIz2b8A4u0R-OsQ_DG2rMXfXjWVbhami9E",
+    "lastSeen": "2026-06-15T00:02:13.121Z",
+    "lastWrite": "2026-06-15T00:02:13.121Z",
+    "thingToken": "_x6-u3ZgLmN6wh0jV_Yikeecqhv54AydjdYlY0SCrRw",
+    "description": {
+      "name": "I21BE056200A",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T14:11:49.796Z",
+    "tags": []
+  },
+  {
+    "_id": "L1rvpBim3OtUu0M1NzYSVZ5JgaLf1aTOqVvyYhAIlzI",
+    "lastSeen": "2026-06-15T00:02:11.813Z",
+    "lastWrite": "2026-06-15T00:02:11.813Z",
+    "thingToken": "bGOzsukKpzZIpszpO-1U8EUm3k6_zqiJY5bpaCfaWpc",
+    "description": {
+      "name": "I22LA020277R",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T15:12:13.809Z",
+    "tags": []
+  },
+  {
+    "_id": "wj_a4kDsEeN9JBjkhkV23AUJuOArdAy-2px60q85K-k",
+    "lastSeen": "2026-06-15T00:02:10.134Z",
+    "lastWrite": "2026-06-15T00:02:10.134Z",
+    "thingToken": "7nANWbaRYrDgt2VzicFs778ebCRcBnSRw2I8YcHv2gY",
+    "description": {
+      "name": "I20BD078435T",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T13:52:52.671Z",
+    "tags": []
+  },
+  {
+    "_id": "PSt7qyv7PbBdn8KtafbF7hIcPgoJxgmJZiLqfmn_wtg",
+    "lastSeen": "2026-06-15T00:02:08.777Z",
+    "lastWrite": "2026-06-15T00:02:08.777Z",
+    "thingToken": "3fkrFUFXvC0H4bdHssgrC5aH6vsIGbvifWpKYGz24v8",
+    "description": {
+      "name": "I22BD089717B",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T15:05:03.897Z",
+    "tags": []
+  },
+  {
+    "_id": "VZNA14X8PGdDEJT3clKfNP1f3HeRETcty0DGOdt5cgQ",
+    "lastSeen": "2026-06-15T00:02:07.155Z",
+    "lastWrite": "2026-06-15T00:02:07.155Z",
+    "thingToken": "IwEBLSolj26WlKqC1sLMLbMd8qo5aCwRveeKnyiCPwQ",
+    "description": {
+      "name": "I20LA078279G",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T13:55:03.589Z",
+    "tags": []
+  },
+  {
+    "_id": "uxE6bMAeIvmmclOY_ydV9sF4pQbO6nkeXbqL2g_wjLE",
+    "lastSeen": "2026-06-15T00:02:05.496Z",
+    "lastWrite": "2026-06-15T00:02:05.496Z",
+    "thingToken": "u741BIlL8ICwpsQN5SFLH1qdLf99Z4wTGbROvkn7U88",
+    "description": {
+      "name": "I21BD015287S",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T14:06:43.091Z",
+    "tags": []
+  },
+  {
+    "_id": "bKVLntYsC6-rJ2c35lOWZN3SH2Y4VONrAUXHm2fvVfg",
+    "lastSeen": "2026-06-15T00:02:03.900Z",
+    "lastWrite": "2026-06-15T00:02:03.900Z",
+    "thingToken": "eOxpRtNshRNaVZ9VyviK0QZo1xzHXlVPJ6iC9ByxhTk",
+    "description": {
+      "name": "Esc. Charlie Rivel - HOS041-S06-01 I22BB010137G",
+      "geo": {
+        "long": 2.11652006763439,
+        "lat": 41.3735215060933
+      }
+    },
+    "createdAt": "2026-06-08T14:20:04.305Z",
+    "tags": [
+      {
+        "_id": "hos041",
+        "name": "HOS041",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "I07o08O1ZdpMBOwEFei25yB4TkDJHNk4NOQ1k_lzpUY",
+    "lastSeen": "2026-06-15T00:02:02.594Z",
+    "lastWrite": "2026-06-15T00:02:02.594Z",
+    "thingToken": "hMF25zKrCHJLM69605-TIoKxpbfPNQUu5DagEOzVDNA",
+    "description": {
+      "name": "Esc. S. Ramón y Cajal - HOS065-S06-01 I22BD089711V",
+      "geo": {
+        "long": 2.12241056804198,
+        "lat": 41.3694666582098
+      }
+    },
+    "createdAt": "2026-06-08T14:57:38.123Z",
+    "tags": [
+      {
+        "_id": "hos065",
+        "name": "HOS065",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "R6Wzy1sTy4MvM-lnIXD92Q2x1tN-7Tfo9ZSAvIXO6YA",
+    "lastSeen": "2026-06-15T00:02:00.911Z",
+    "lastWrite": "2026-06-15T00:02:00.911Z",
+    "thingToken": "Eb775XQDFOtq9k6dFX2iPrbmxGfhYDso4CKEVmfCzFY",
+    "description": {
+      "name": "R6Wzy1sTy4MvM-lnIXD92Q2x1tN-7Tfo9ZSAvIXO6YA",
+      "geo": {
+        "long": 2.10770175454751,
+        "lat": 41.3516944397011
+      }
+    },
+    "createdAt": "2026-06-08T13:58:59.907Z",
+    "tags": [
+      {
+        "_id": "hos051",
+        "name": "HOS051",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "kqS0ZopvD9SVwPOyYhKqFGF100pnBUpnp30nGQ7keFE",
+    "lastSeen": "2026-06-15T00:01:59.350Z",
+    "lastWrite": "2026-06-15T00:01:59.350Z",
+    "thingToken": "DPndcO-paFP8LvJVq3i3qiARojzgCgKC1rPcDVBQghc",
+    "description": {
+      "name": "I22BC092123D",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T14:43:28.335Z",
+    "tags": []
+  },
+  {
+    "_id": "XSYfYCL8hlGJ2vOnXfAAFZ38kIYHTNy8wPv_Ytzdv9w",
+    "lastSeen": "2026-06-15T00:01:57.996Z",
+    "lastWrite": "2026-06-15T00:01:57.996Z",
+    "thingToken": "SBAi3uNZ69Ylu_fK57_GVy4liCagnaeEY9MXtev4OEw",
+    "description": {
+      "name": "I21BB036576Y",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T13:56:43.815Z",
+    "tags": []
+  },
+  {
+    "_id": "TOOdSmVMs7pVZadc7d2SiLFdr2JOO-fTz-1D44qEkj4",
+    "lastSeen": "2026-06-15T00:01:55.978Z",
+    "lastWrite": "2026-06-15T00:01:55.981Z",
+    "thingToken": "HQGJyxtmjIpANUiflgQVW5PbdsTM6LcCZknmEcrR8J8",
+    "description": {
+      "name": "I21BD022197K",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T14:09:14.282Z",
+    "tags": []
+  },
+  {
+    "_id": "PIzjp75zb8CIO9BJlHjSEZ83JbnaN09ica_GJgGNKN8",
+    "lastSeen": "2026-06-15T00:01:54.152Z",
+    "lastWrite": "2026-06-15T00:01:54.152Z",
+    "thingToken": "a3xTNZ99bOOtr0TtrZWsfNhABMRWkdBqdmXtpPJizu0",
+    "description": {
+      "name": "Esc. Pau Sans - HOS058-S06-01 I22BD021841U",
+      "geo": {
+        "long": 2.11097068338343,
+        "lat": 41.3622933211051
+      }
+    },
+    "createdAt": "2026-06-08T14:46:59.217Z",
+    "tags": [
+      {
+        "_id": "hos058",
+        "name": "HOS058",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "6CnHLIbSh9GqQOKBf6mRAvrBQfaHCjD9r5DslDotjx0",
+    "lastSeen": "2026-06-15T00:01:52.382Z",
+    "lastWrite": "2026-06-15T00:01:52.382Z",
+    "thingToken": "tvVZ_kX6zV0Um6sR6egUqQOsu7vbaubfgCj0t-l9kQU",
+    "description": {
+      "name": "I21BC007276L",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T14:03:56.712Z",
+    "tags": []
+  },
+  {
+    "_id": "oRWyTwSR4b2pcybuHBbxnG2uCT58zA3c8W_wL1evx50",
+    "lastSeen": "2026-06-15T00:01:50.517Z",
+    "lastWrite": "2026-06-15T00:01:50.517Z",
+    "thingToken": "9ytS4ImNXizbYzS2ljv1nPPUTGCjnQIr3dY7V_aAvuU",
+    "description": {
+      "name": "Can Colom - HOS030-S06-02 I22BB051956F",
+      "geo": {
+        "long": 2.1317029559931697,
+        "lat": 41.36737156926719
+      }
+    },
+    "createdAt": "2026-06-08T14:26:45.567Z",
+    "tags": [
+      {
+        "_id": "hos030",
+        "name": "HOS030",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "nIwgPd_H-kpDGNVUTdx3uiPIk1Vchs2RVW5QLB5Gqr0",
+    "lastSeen": "2026-06-15T00:01:48.929Z",
+    "lastWrite": "2026-06-15T00:01:48.929Z",
+    "thingToken": "iD1sxQUwWCvE9mMZ2eHu8zMqi5d7A6ErlXTajURdLjY",
+    "description": {
+      "name": "I22BB051758B",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T14:22:42.530Z",
+    "tags": []
+  },
+  {
+    "_id": "ChkWbVIZ1VivtdjBeSi50NCQ95M_TP6TPh6IEIeej7E",
+    "lastSeen": "2026-06-15T00:01:45.704Z",
+    "lastWrite": "2026-06-15T00:01:45.704Z",
+    "thingToken": "b52Xanmemy12gCGttxaTBWfeWYi2ey1YjLvpoCSBdMM",
+    "description": {
+      "name": "I22BC056178O",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T14:40:00.223Z",
+    "tags": []
+  },
+  {
+    "_id": "uC9rm7zYb6DZZyvHQvHO55ZhQCCSHJUbfuD86h-8PNs",
+    "lastSeen": "2026-06-15T00:01:43.921Z",
+    "lastWrite": "2026-06-15T00:01:43.921Z",
+    "thingToken": "s-cBQLpslHvKgZkbqFi-W0rGUJH4est4qnx_5mLbbNk",
+    "description": {
+      "name": "Aj L'H-Ed. Girona - HOS003-S06-01 I22BB010103W",
+      "geo": {
+        "long": 2.1034192312847493,
+        "lat": 41.36179764658288
+      }
+    },
+    "createdAt": "2026-06-08T14:17:17.704Z",
+    "tags": [
+      {
+        "_id": "hos003",
+        "name": "HOS003",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "GaXU5xo9CEobrWJKKqRn-n526bslA0z8x3iAqXMFqY0",
+    "lastSeen": "2026-06-15T00:01:42.578Z",
+    "lastWrite": "2026-06-15T00:01:42.578Z",
+    "thingToken": "XTvPVstujBFvuOyv0RHgTvAlP83qXwRKv29MyHnq60g",
+    "description": {
+      "name": "I22BC022199O",
+      "geo": {}
+    },
+    "createdAt": "2026-06-08T14:37:17.372Z",
+    "tags": []
+  },
+  {
+    "_id": "VL23TN7OPt3DkHiYvipGRtixIvW_fSgurreyO42jhV4",
+    "lastSeen": "2026-06-15T00:01:39.981Z",
+    "lastWrite": "2026-06-15T00:01:39.981Z",
+    "thingToken": "BOa8xrcfK40sifXaNtbchjD2pzgqhPZRpMWvg760RSc",
+    "description": {
+      "name": "Regidoria Districte II - HOS034-S06-01 C15FA260208R",
+      "geo": {
+        "long": 2.12171107190601,
+        "lat": 41.3706249073488
+      }
+    },
+    "createdAt": "2026-06-08T12:18:43.542Z",
+    "tags": [
+      {
+        "_id": "hos034",
+        "name": "HOS034",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "8-IR6v5dzxTbsgpuq3ITB5T1J7m_JpJW25bAxnUBPdg",
+    "thingToken": "_vhwu9tBooCOB-mP82hMxnkvKmIqbPQnmhWoHDWPdOA",
+    "description": {
+      "name": "I26BB006351N",
+      "geo": {}
+    },
+    "createdAt": "2026-04-25T01:45:30.550Z",
+    "tags": []
+  },
+  {
+    "_id": "4bLZswZmfExWCRSnotwwSlwWDGAgd_U9mZ0v5unxoVQ",
+    "thingToken": "N2OhdgTaQ-vDSK6g8VLhriLxJ5Fri5XR20lc-UPgX8E",
+    "description": {
+      "name": "P25AD361634T",
+      "geo": {}
+    },
+    "createdAt": "2026-04-15T02:19:05.283Z",
+    "tags": []
+  },
+  {
+    "_id": "XEi8NRykPUb70jaki0L2GfDMp2FULEVLmFK9Gkb-UVo",
+    "thingToken": "RWH5cJjYVrpHxQg9GzszYyA9pxLhtwHcYF2T3jsKHF0",
+    "description": {
+      "name": "I25BD102387U",
+      "geo": {}
+    },
+    "createdAt": "2026-03-25T02:54:09.783Z",
+    "tags": []
+  },
+  {
+    "_id": "iefAOYWw0tR7pckMOuUcUKtngE4wrotS-cyuvG8Gd7E",
+    "thingToken": "1AtLCFpGjcBlOzeayO-OjT_ru-PIjy5ObvpP5Hr-3xk",
+    "description": {
+      "name": "P24UG742875Q",
+      "geo": {}
+    },
+    "createdAt": "2025-12-05T16:11:06.047Z",
+    "tags": []
+  },
+  {
+    "_id": "ottr0Ke3551OxXh5jbuN9Del1ond7pGYtCLyQn7H8pA",
+    "thingToken": "9cku3PQoCKVRjZb5tRxuYM3IcwgLfnd_XdFvKPwUvpY",
+    "description": {
+      "name": "P24UF737486P",
+      "geo": {}
+    },
+    "createdAt": "2025-12-05T16:01:44.040Z",
+    "tags": []
+  },
+  {
+    "_id": "2i6h4Hiu39Qe6vmFr00TYCq_y5kTh_Ej9qUevzQva34",
+    "thingToken": "eHYZ1b30HOrMK4hh_2qr-_vMKr3pu4rvUbD0bCcqvF8",
+    "description": {
+      "name": "P24AB721542X",
+      "geo": {}
+    },
+    "createdAt": "2025-12-05T15:57:25.268Z",
+    "tags": []
+  },
+  {
+    "_id": "b-c9rDdrKObRLXR9UmWJ8SY9i4-E8AZhiIMMKAp39E4",
+    "thingToken": "BKZXiJIpWmndaheUhRC4liyYITGnwwr5JaOkBhWoGes",
+    "description": {
+      "name": "P23UH800297G",
+      "geo": {}
+    },
+    "createdAt": "2025-12-05T15:49:32.950Z",
+    "tags": []
+  },
+  {
+    "_id": "7twO2wqPkOMCpcWTqoqsKVyFglpWpBGvZ82AorLWnHM",
+    "thingToken": "b7PZEtb2qlz-EAFddhZ0UQSJHx6QliinI3NuAZtij8Q",
+    "description": {
+      "name": "P23FA018698V",
+      "geo": {}
+    },
+    "createdAt": "2025-12-05T15:41:05.725Z",
+    "tags": []
+  },
+  {
+    "_id": "cDQVb_DnXNIgfATn3TAP1Jg5l1Y3ap8nj-IqrWQAZl8",
+    "thingToken": "FUjqICHK1UA_DhIUXyvzkYn_0BsaPwtklb8-7DTjahs",
+    "description": {
+      "name": "P22UF521430S",
+      "geo": {}
+    },
+    "createdAt": "2025-11-23T04:14:03.990Z",
+    "tags": []
+  },
+  {
+    "_id": "ULVBxGHfGlrMbe9c3DWucExAwLiRS3-ERRtoinvzxBo",
+    "thingToken": "qTvUJW0cW5niNBB8IGPhhqsK8Vsgfcts-Xffx5Ec7ak",
+    "description": {
+      "name": "P22UE716341M",
+      "geo": {}
+    },
+    "createdAt": "2025-11-23T04:10:51.900Z",
+    "tags": []
+  },
+  {
+    "_id": "cmRodiC-_i0VMpRAJkDr8KEGmprUA3d-1P2J3K2ZouM",
+    "thingToken": "JgaQ8rB6j79UFwosmAktJcMGu-AJ2t-VwGxu5La4bqA",
+    "description": {
+      "name": "P22UE716336P",
+      "geo": {}
+    },
+    "createdAt": "2025-11-23T04:07:32.459Z",
+    "tags": []
+  },
+  {
+    "_id": "U0CPeWXh18K_rC6TYctN3ZZLpZkLtUwMYN10PdeUZeU",
+    "thingToken": "l3NQJakEmQ1FbMoEGUbuxX0h6s6GCmzEOoNpjf4Ht_I",
+    "description": {
+      "name": "P20VA163658V",
+      "geo": {}
+    },
+    "createdAt": "2025-11-22T04:42:03.359Z",
+    "tags": []
+  },
+  {
+    "_id": "j0N_pwAh-d4jDH16Yatl6SNmqRdM7fdm2oPFT__C-rk",
+    "thingToken": "IWT0uom9WdqKsmZociIrGx5M6nn1BFqU0sxO-8e61GQ",
+    "description": {
+      "name": "P19UF026339P",
+      "geo": {}
+    },
+    "createdAt": "2025-11-22T04:17:01.706Z",
+    "tags": []
+  },
+  {
+    "_id": "Hs14FXIBz8UdvpeP5gIo5VFwF_BnETa2isj9v1Fq9BM",
+    "thingToken": "9p9Eja-oxezvkPncVgcAPPiTOENK7AahWJuMGoJESoc",
+    "description": {
+      "name": "P19UE040018G",
+      "geo": {}
+    },
+    "createdAt": "2025-11-22T04:10:35.979Z",
+    "tags": []
+  },
+  {
+    "_id": "UfLdSOTChbBaPlql5FWN-yClCLpaofq87bUO9UiQTpc",
+    "thingToken": "5DaA_Vmwp4oyUD_ulhxGy7vRUAp3jysai3dAq_xwwF0",
+    "description": {
+      "name": "P19UE039966U",
+      "geo": {}
+    },
+    "createdAt": "2025-11-22T04:07:20.857Z",
+    "tags": []
+  },
+  {
+    "_id": "FOxCYb_IgcpGFWKpnszjFYqMd-sDXMolQITZwTQZwTE",
+    "thingToken": "NnMvNGiAcOZhQTkif-u1IdVsp60l1kQr4p0SRfbC8Zg",
+    "description": {
+      "name": "P18UG043847A",
+      "geo": {}
+    },
+    "createdAt": "2025-11-22T04:04:43.625Z",
+    "tags": []
+  },
+  {
+    "_id": "TtbR_bzjNUheV_8F2S7rAgVYF_mY83oAPhLXD-N-qPg",
+    "thingToken": "ItG8bTBsn5Mb3bKjvzqQy-w6SSuL2dKQ018AS6OALcY",
+    "description": {
+      "name": "P18UE276483R",
+      "geo": {}
+    },
+    "createdAt": "2025-11-22T03:50:21.769Z",
+    "tags": []
+  },
+  {
+    "_id": "iboKVZPj6yDjs0Nr1T4sCqaPpojblVwtgmmjXVKxfbU",
+    "thingToken": "-ak-Aa-5KLsUKEUlXa73PCsSD3e7KU6OoWKbYo0lsN0",
+    "description": {
+      "name": "P18UE276339K",
+      "geo": {}
+    },
+    "createdAt": "2025-11-22T03:46:16.003Z",
+    "tags": []
+  },
+  {
+    "_id": "NGBRme1hoZKCl_uunhGgZZ4pyC_K_qIg5iGXca7X79s",
+    "thingToken": "HUpQahau7RD1BVWyu_riEFE44PD-9mt0BWvZ3plPsZg",
+    "description": {
+      "name": "P18AD500332D",
+      "geo": {}
+    },
+    "createdAt": "2025-11-22T03:38:59.557Z",
+    "tags": []
+  },
+  {
+    "_id": "I--XU8gdrDd9cMqMjEjUiSY95llr80xYl6bpQtygGm0",
+    "thingToken": "6egbHbOAWRgXMhetrlfpP8ZxKV7qgIKfis_laFMl21U",
+    "description": {
+      "name": "I25BD024186Z",
+      "geo": {}
+    },
+    "createdAt": "2025-11-22T03:26:42.123Z",
+    "tags": []
+  },
+  {
+    "_id": "8jzoJB2gRaPEAhR78wK6StAbm1-GfAQyn_c3_N5-0IM",
+    "thingToken": "y9SBgySIqD_ZqNtGQ3QClgf-a1iQRTr0lrLnJr8jc6g",
+    "description": {
+      "name": "I24LA138052L",
+      "geo": {}
+    },
+    "createdAt": "2025-11-22T03:18:44.232Z",
+    "tags": []
+  },
+  {
+    "_id": "06oA6dx7HAaYnAGNRfOaSvVT30UUJSvH432bU_fLb0U",
+    "thingToken": "dm5E3d-R7_iYmYlpTlvEGggXRNUA_5bOrcpH5HYtefY",
+    "description": {
+      "name": "I24BD057468Y",
+      "geo": {}
+    },
+    "createdAt": "2025-11-22T03:16:46.109Z",
+    "tags": []
+  },
+  {
+    "_id": "xz7A6EdCjhEgK0pSIRHhqxbzTp9VL1DzSVFhDJlVNjI",
+    "thingToken": "hO48AigI4Ll9C8fUgJng1WkGu3BxvNBje9ifzAWlx5E",
+    "description": {
+      "name": "I24BC057126Y",
+      "geo": {}
+    },
+    "createdAt": "2025-11-22T03:13:04.998Z",
+    "tags": []
+  },
+  {
+    "_id": "z3m36shHPRDl4ueiQak35vg2jG48z0g6Q6ntfNyFnXk",
+    "thingToken": "ZXBAdAhExS4lvGHTfzNM5aeUp7mZHFDKCsWQvyqXukY",
+    "description": {
+      "name": "I23BE066999T",
+      "geo": {}
+    },
+    "createdAt": "2025-11-22T03:11:15.037Z",
+    "tags": []
+  },
+  {
+    "_id": "ho64U0znBEqmWWKufhaDfjgg0hmJRTS8xwhKoOd1QRo",
+    "thingToken": "ZeSmTQB67WN46CRlC14N0_r4k8g1YMjiwv5zGxPphZs",
+    "description": {
+      "name": "I23BE024445O",
+      "geo": {}
+    },
+    "createdAt": "2025-11-22T03:10:06.873Z",
+    "tags": []
+  },
+  {
+    "_id": "bxNLs8t-LvjiHUgpXVhifCzZQGOx6saYNgxcyC3J7dQ",
+    "thingToken": "1HcMFfhcg3dlIKB3hbb5-xr47hS16Tal7sly9n0DCgc",
+    "description": {
+      "name": "I23BD017868H",
+      "geo": {}
+    },
+    "createdAt": "2025-11-22T03:09:05.237Z",
+    "tags": []
+  },
+  {
+    "_id": "6sulLCDEYSL8t4I0LmMS5bL4rJ7QYVR4Plgsu2RLC_A",
+    "thingToken": "Vh_2WwVwKsEDfiPHpVc7QnXoVz9CjUOSXW2QzZfQaZs",
+    "description": {
+      "name": "I23BD011418N",
+      "geo": {}
+    },
+    "createdAt": "2025-11-22T03:07:28.703Z",
+    "tags": []
+  },
+  {
+    "_id": "8vHw8wtm0EDUKO5uexIGGzjbATjs8-RpJrxU8UbvRi0",
+    "thingToken": "6NKLTnJSwB-vCTluogObFJ6HzicUInygxCRNzsdKRQg",
+    "description": {
+      "name": "I23BD005562F",
+      "geo": {}
+    },
+    "createdAt": "2025-11-22T03:05:46.266Z",
+    "tags": []
+  },
+  {
+    "_id": "3dvIl2LDOQ1J_dekUcDa6gjmQpd8gatlo469jBswAkA",
+    "thingToken": "TlHVhvvNCBwmhR6AxWzsNV3ForsOY9A-QMhhEyNa2o4",
+    "description": {
+      "name": "I23BC010176D",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:46:02.637Z",
+    "tags": []
+  },
+  {
+    "_id": "TDHPYL8VwAQNXdn_KLx6NHbo9Oxg2RMWiUNw1X-IH6k",
+    "thingToken": "3eUqFcDsCK5-GxIr5dRryJgWSWGkcn-lcfUmcm4w3r0",
+    "description": {
+      "name": "I23BB001380X",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:41:48.503Z",
+    "tags": []
+  },
+  {
+    "_id": "f1kSJfg9iunBMAScFDqQOZYegLLuIKradx_5DQVPHh0",
+    "thingToken": "lc7SkX1Rv6iOCmc9Z3IPxLxTgrI7MOGBG0RmRwLtMEU",
+    "description": {
+      "name": "I22LA020277R",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:40:33.317Z",
+    "tags": []
+  },
+  {
+    "_id": "n9tfCtFPW3L0fzLNwmXsqLH-Dp6kRCGWruRP1U2e8go",
+    "thingToken": "Tsl1c-SIRDVQG-9jeh65mD7DjqRx4I3rxZR8L5qsXfs",
+    "description": {
+      "name": "I22BD089718C",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:39:30.829Z",
+    "tags": []
+  },
+  {
+    "_id": "zUg9Xgj6ptjyj2CFrnNK_ktjt7i8Ys5mOrJzKULMgTk",
+    "thingToken": "IxRec9FWc_ndT7721SufsDX122sDskwEOYSdn1G4zv8",
+    "description": {
+      "name": "",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:39:14.411Z",
+    "tags": []
+  },
+  {
+    "_id": "DjMruoSsQwRu_16IAZYuKhI-u_0vnbuMb4DHPedvDSA",
+    "thingToken": "2gRyDA_QcBVSF46Fqxhm2J0-1aoeaQC2BYVnNBYp0bU",
+    "description": {
+      "name": "I22BD089717B",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:38:01.902Z",
+    "tags": []
+  },
+  {
+    "_id": "5r0UI8ys3ywXqe9FLXc9Mk_r08ujKJSAs2IgBhFWw68",
+    "thingToken": "ShXieEYNLq6W5ZZi_U-eIWCULmtNJONkwCjRPNm1Als",
+    "description": {
+      "name": "I22BD053196L",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:34:39.563Z",
+    "tags": []
+  },
+  {
+    "_id": "IL7NXBSvpddGpqyKq1eX41ezmzWMyrZKPUmzuoO45vM",
+    "thingToken": "87qoQvfpqTr5jgkZDPb7E8raf-edF6kIYw7wWvFuweQ",
+    "description": {
+      "name": "I22BC092123D",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:30:37.434Z",
+    "tags": []
+  },
+  {
+    "_id": "wKYgEL79xi9cyLpmcit9FEkW1D_B36cDuTnm8-w_S08",
+    "thingToken": "ohjbLZiQMAsYuS0ibQeJdFkDQhRDFeUFegAKcUXSY3g",
+    "description": {
+      "name": "I22BC092123D",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:30:35.006Z",
+    "tags": []
+  },
+  {
+    "_id": "Lya7cUqq9pylVSXwCD5pyYcCet5OtKyTIAYJ5ADniUw",
+    "thingToken": "NV7K4wlqm6aWIPE3hyMvODAg2IY8HzlwkVk0ebwJXWY",
+    "description": {
+      "name": "I22BC056178O",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:29:40.023Z",
+    "tags": []
+  },
+  {
+    "_id": "h4a_hExT5sahbPAvoXCiknzWVJKv1I73MU71yg7ulfc",
+    "thingToken": "xBU8Bi19oKkJX_R7SDozWX9VhykeehrcFJGUoMgNtig",
+    "description": {
+      "name": "I22BC056178O",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:29:37.022Z",
+    "tags": []
+  },
+  {
+    "_id": "363WV9xYkL88DI9XaYY4bZtcL-J8wwjl5UVxves6_Dw",
+    "thingToken": "1lurdOsajQ41OYUG7NUOR2Wd5n64kO31B1hQP1Yy2fg",
+    "description": {
+      "name": "I22BC022199O",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:28:47.869Z",
+    "tags": []
+  },
+  {
+    "_id": "1GjOoR4KLympzI9aHUit9kNO_gI2rE03SohOloB9VIM",
+    "thingToken": "oaLc8po5QQpTPj5V3eF5R20lg2GDj1USkLLzgKC9lrU",
+    "description": {
+      "name": "I22BC022199O",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:28:45.516Z",
+    "tags": []
+  },
+  {
+    "_id": "tdEtSSYlbIyC8x0fpST8LyBU76MlWJe93TjB_4r_asE",
+    "thingToken": "PrisPO8EN80CIDX5n2Qae9kfT6zUnmOaFDIGm1kPW-k",
+    "description": {
+      "name": "D8683450377492801I21BE056200A",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:21:07.542Z",
+    "tags": []
+  },
+  {
+    "_id": "7w0wOEniXJIsmJwLkza9pubEeyPQu42axDveVG5qkQU",
+    "thingToken": "kSB4yJwU6Wwwg-LC_0L9wfcojEHquvWYZPE2SMOS2rA",
+    "description": {
+      "name": "I21BD017030D",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:19:29.685Z",
+    "tags": []
+  },
+  {
+    "_id": "KCk2keaoLRjpPUTqgt7ER2ULaZ6l1a87cexRqhYFlRY",
+    "thingToken": "kyVcjfeMb4_4v4buUJaqTpuVEeIaFWDXmljjy3h6nUg",
+    "description": {
+      "name": "I21BD015287S",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:18:50.565Z",
+    "tags": []
+  },
+  {
+    "_id": "yNgi1lPf1RpGxgGMcDqkvdj-yNqKrFpGIMrYa6BDHH0",
+    "thingToken": "x7RNsn-1g74Dx_TVXPGPRaTaBSxeVruIhRo-1O9VknA",
+    "description": {
+      "name": "I21BC007276L",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:18:01.723Z",
+    "tags": []
+  },
+  {
+    "_id": "lX072ZWq3q6u6QgTjsIJRoiW0OJlBgApyHaaAsZuRps",
+    "thingToken": "QMZSFRzM1zX38-L_VL-lpR7DFKTHq34SBKMSOs7QFuM",
+    "description": {
+      "name": "I21BB036576Y",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:15:56.333Z",
+    "tags": []
+  },
+  {
+    "_id": "is2YsOjQA8q_m-8f7YfZrPVqwD_6k48U4f8E-CD4TVU",
+    "thingToken": "P_aPtx9rHJHzKHTCrokwN0u9TyqGfcckiQL1-ZyrSCg",
+    "description": {
+      "name": "I20LA078279G",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:15:33.110Z",
+    "tags": []
+  },
+  {
+    "_id": "gKOf4KTzDyE3NtI3Dg7xmc_jA3PZqeadhvBFdZE9f5U",
+    "thingToken": "vGiYCwsia-LG7U4383wq8V8vWfZa9s36BbilJM7BXks",
+    "description": {
+      "name": "I20BD078435T",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:14:50.660Z",
+    "tags": []
+  },
+  {
+    "_id": "0CNF02b8PpUC-Wc9bvxs-Oe0IWSLU6WoTGfap4bp3Pw",
+    "thingToken": "9CxhqXoBEoJSil-MN4ssmpMiuZtk5lbI435u2oOiHcY",
+    "description": {
+      "name": "I20BD036673D",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:13:01.838Z",
+    "tags": []
+  },
+  {
+    "_id": "g-9Za7dcN2rll83aRQpkWoX0xQ_SyZsHlTeH0cpjmFo",
+    "thingToken": "ul-NziBCIprFDp5SAP3ZPIZ6Wj026dkxpgTHvJ9DcPQ",
+    "description": {
+      "name": "I20BD020143F",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:11:49.441Z",
+    "tags": []
+  },
+  {
+    "_id": "UaoFwCzu2iHIA_yH6676jv1GfXuz0S2TRdPwRL2WqP4",
+    "thingToken": "W9r1tgXpvXqP3UaGLBlI_XiMd8R_kwWP_q7ntUsWATg",
+    "description": {
+      "name": "I19BD042447D",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:11:30.609Z",
+    "tags": []
+  },
+  {
+    "_id": "YVNyB6e2v0K5Tjzws_SvUB_eLudTKJgP4HthWtzPU8E",
+    "thingToken": "YNx5E_8KAha3dtyKWcVf_VTOYbYeu0o9tBH4EtK4GXw",
+    "description": {
+      "name": "I19BB015889I",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:08:31.865Z",
+    "tags": []
+  },
+  {
+    "_id": "_zntoV03U8_E_NQiOehyDyTqstnkPKiJn2Dfqex4O20",
+    "thingToken": "BKUdUdu0GPQRE4WLb3KwbiRAh787C9IcFp14R2HuObU",
+    "description": {
+      "name": "I18BE082533S",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:08:05.290Z",
+    "tags": []
+  },
+  {
+    "_id": "OmgDzp5zTdezLzgLev6sCnjm31e9xKBSf13xc0towwU",
+    "thingToken": "hhuAZRN62psdi2sFL7vhZczaxLAvcIBxO8uiApuSa8Y",
+    "description": {
+      "name": "I18BD033597G",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:07:05.245Z",
+    "tags": []
+  },
+  {
+    "_id": "GFmsPYbtt8KR7CfWadkVYhSwctNbGJ9qLaDu7lWSmiY",
+    "thingToken": "b6yXbzCMpMZ9lYIM_mOq_bGO0M5YW7hbKPL9srbthxg",
+    "description": {
+      "name": "I18BD033258Q",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:06:41.454Z",
+    "tags": []
+  },
+  {
+    "_id": "tD6wO4Kf2s6evUvs3LOaH-7hUfyzrR2URqG71YcuqCk",
+    "thingToken": "yRM-VRnYFUzCCmD-KE60_m1Uu9O54kCeeily6wt4FlQ",
+    "description": {
+      "name": "I18BC012582E",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T09:00:58.367Z",
+    "tags": []
+  },
+  {
+    "_id": "pMzNaomPkIBteIik7XgXhSGM--NeZ16extFhxLkJKag",
+    "thingToken": "eAQOhmH5_i7tU1Gktlrll_J1iCw7yGZYOlhNCvcHS7c",
+    "description": {
+      "name": "I17BE063112M",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T08:59:17.716Z",
+    "tags": []
+  },
+  {
+    "_id": "vD5Wi4yd2gXucKr9zkOmzsxT96_rt3e38voTsHUlME8",
+    "thingToken": "LKMVs0R8WEGwklnruoFwb4i9IObIko1_rRL_8-w57TQ",
+    "description": {
+      "name": "I17BD096770I",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T08:57:26.392Z",
+    "tags": []
+  },
+  {
+    "_id": "na6UdV5zI9grVPNZY6c8WGIYhMQ4YWS77cSaIJypwP0",
+    "thingToken": "L-Jvqf665KNEsEP8K_VKQV0MwaKczD-DuRtK1Mtifng",
+    "description": {
+      "name": "I17BD014384G",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T08:56:10.057Z",
+    "tags": []
+  },
+  {
+    "_id": "Uo7BXvGh-uS0_toA8JkS8RjMPFUVhOPdK6BVcYP2LYg",
+    "thingToken": "TfMoZz-qtEd9MafVCURwUz7_54oQpyMJiMNnyStEKzI",
+    "description": {
+      "name": "H23VA083135U",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T08:51:09.074Z",
+    "tags": []
+  },
+  {
+    "_id": "i1DiJjhlw8xBUUdeDKr_QDKwqf9abmYOwsTxQrxbSXA",
+    "thingToken": "e8SPKEGAJCRXCuuwFogODzdkN6_YL4bAFN5zM9Q58DU",
+    "description": {
+      "name": "H23VA083135U",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T08:51:07.974Z",
+    "tags": []
+  },
+  {
+    "_id": "lyEkpPhU7grfnxCVNVTIA0LFb2h6gHrNWT4DgNeH3OQ",
+    "thingToken": "rt9vqWfpQnNJOGX8fVU-7161PKoVnWVxS1ecX-ZFTo8",
+    "description": {
+      "name": "H23VA083135U",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T08:51:07.250Z",
+    "tags": []
+  },
+  {
+    "_id": "_1AKrmXDbKj2-d4d-77mC-tB93x969qO8XB43qyz88g",
+    "thingToken": "CzgFdNzCAdBw6CmP4QJ4gkh6TRLLGtAen8YTTQjou-k",
+    "description": {
+      "name": "H23VA083135U",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T08:51:06.866Z",
+    "tags": []
+  },
+  {
+    "_id": "lPpA_HbgwKzrktpleAEIe4Vx746iM7PiCCGp6uF-X_I",
+    "thingToken": "Th0T-SvEyqfjKjE5KFJQmRJn796LIRmILx0YkpvWWS8",
+    "description": {
+      "name": "D17BA245795C",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T08:50:41.999Z",
+    "tags": []
+  },
+  {
+    "_id": "Pi_w2XsjNzEVqfwFHoL9RqIuMB-yEHvn28Gk7TD4irw",
+    "thingToken": "9LSz7PP5bBl9MBQBHesBYvtqVRyJqwhZFGzDcUYc9Hc",
+    "description": {
+      "name": "D16TD053003Y",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T08:49:30.011Z",
+    "tags": []
+  },
+  {
+    "_id": "D46j4SYD0WaSmhxLrof4CrPd38kavXM6dZ9Xz-HpNCA",
+    "thingToken": "Pvjf3EkBqD2Zy1lzZ84frqF0sMQjQ5aEoelU8p-Hw2M",
+    "description": {
+      "name": "D15TC125050O",
+      "geo": {}
+    },
+    "createdAt": "2025-11-20T08:48:50.286Z",
+    "tags": []
+  },
+  {
+    "_id": "RggYT30L6_k9A5NA1uktWZIXD9JQWiS5nSb5f9D9SsU",
+    "thingToken": "ExpIkrD30WZa57islLPJBfS2IpBKZDoa8bJCg4nVcaI",
+    "description": {
+      "name": "P21UE000954H",
+      "geo": {}
+    },
+    "createdAt": "2025-11-16T02:22:03.112Z",
+    "tags": []
+  },
+  {
+    "_id": "LMyHLxa84XsxMPIwNO0OAKGJjqWwmmtAhpyvVaGQxMo",
+    "thingToken": "Vm7xHor5k4D8Uqt-POAnq94A7lhwG2-X9cmFXblFMAQ",
+    "description": {
+      "name": "P16VA111023D",
+      "geo": {}
+    },
+    "createdAt": "2025-11-16T02:13:47.516Z",
+    "tags": []
+  },
+  {
+    "_id": "19ijPwx51vLSemBXDONk00AbBe_LLh7XQFBP3LGyzOQ",
+    "thingToken": "DOOegmyIWzIotha95J0LqGxp4M1Elx3Dt_QCeEDY4Ek",
+    "description": {
+      "name": "I23BB012089G",
+      "geo": {}
+    },
+    "createdAt": "2025-11-16T02:10:01.703Z",
+    "tags": []
+  },
+  {
+    "_id": "UzwhyQRRNCXKsGnuIPed84WyiqcUwco3hMgip7eZKAc",
+    "thingToken": "ZYkKDu1_MOJN8h5__wnm6HZ5hLaHdptyJSK8JD2l2PM",
+    "description": {
+      "name": "I23BB012089G",
+      "geo": {}
+    },
+    "createdAt": "2025-11-16T02:10:00.578Z",
+    "tags": []
+  },
+  {
+    "_id": "u8QoaVgm6LmEeFEq0fZEzRwj4toVhgvhP0y8dWaIn3g",
+    "thingToken": "GG7U3mvx5cMsFV9IkeOG-Pnv5FY1HjaK4HZgyapcWv8",
+    "description": {
+      "name": "I22BB051758B",
+      "geo": {}
+    },
+    "createdAt": "2025-11-16T02:06:52.093Z",
+    "tags": []
+  },
+  {
+    "_id": "5tetjCBi_1lOuAhZHqQlaPAMFBsM43ILB42fqao7tZc",
+    "thingToken": "-upRoyEU2coQzge1j26deZVrjzPHjluSalnhxA3a9fE",
+    "description": {
+      "name": "I19BC062758S",
+      "geo": {}
+    },
+    "createdAt": "2025-11-16T02:03:05.153Z",
+    "tags": []
+  },
+  {
+    "_id": "Blq7xEEmop51cHn_hZD6_7snMmJOPMFOU_tcpUngA_M",
+    "thingToken": "cJFFSJXnR13k_rFZMR3icfTd-7txDkLjmYxI14cAOoA",
+    "description": {
+      "name": "I18BD012202M",
+      "geo": {}
+    },
+    "createdAt": "2025-11-16T02:00:15.514Z",
+    "tags": []
+  },
+  {
+    "_id": "s7HX76CPNimXDeExfhesgMap55IqIK2PWxX63AqdJ-Y",
+    "thingToken": "OcJL2m1GpbWgnpvzMnvFVsP391DNOQw9-ltrIdAtM_4",
+    "description": {
+      "name": "I18BD012202M",
+      "geo": {}
+    },
+    "createdAt": "2025-11-16T02:00:15.274Z",
+    "tags": []
+  },
+  {
+    "_id": "zu1e7LuxR6pCllwJQdCEqmqbIt9HNyAXDxj-DmDtj6k",
+    "thingToken": "wxwoYiMnxWIHtwH05xCiqx4We-930NIjtmeaKTizsGM",
+    "description": {
+      "name": "I18BD012202M",
+      "geo": {}
+    },
+    "createdAt": "2025-11-16T02:00:13.532Z",
+    "tags": []
+  },
+  {
+    "_id": "7TnMajRCyaJhcGkzO9DWsi7zp004Z7NThr1Dahbf3VM",
+    "thingToken": "-ksZrtR68odnD8cpGPZcP1FgIJOi-JXLL3G8Mo6BP_0",
+    "description": {
+      "name": "I17BE085778O",
+      "geo": {}
+    },
+    "createdAt": "2025-11-16T01:59:29.936Z",
+    "tags": []
+  },
+  {
+    "_id": "y3SUvmcY87NtRsooY_rXxoXvd3_vfLrskGANoOlnJB0",
+    "thingToken": "2vntAgbO7RSSk0fZ4XTE1Ab0UCAeAX5Q8tJ7sNd_9aQ",
+    "description": {
+      "name": "I17BE085778O",
+      "geo": {}
+    },
+    "createdAt": "2025-11-16T01:59:29.877Z",
+    "tags": []
+  },
+  {
+    "_id": "YlItyWsROEa_UW-xU4lmeRf3n2OqShUB0BeDApzG3II",
+    "thingToken": "5JxevVK4RmDPlfe5QR3FmLFhfNsVUqUnHtYqG5ThJEg",
+    "description": {
+      "name": "I17BE085778O",
+      "geo": {}
+    },
+    "createdAt": "2025-11-16T01:59:29.401Z",
+    "tags": []
+  },
+  {
+    "_id": "5yoe5uUPfAeQP6RGoOzErp7U8eUgUYf_B3wgJhBuxEg",
+    "thingToken": "c121ZteYw3nwuRnefAU5UWI-8hNuPh0jX81u1LzGI3k",
+    "description": {
+      "name": "I17BE085778O",
+      "geo": {}
+    },
+    "createdAt": "2025-11-16T01:59:28.652Z",
+    "tags": []
+  },
+  {
+    "_id": "OSBz9gHsfpCZFsNN-nOtWp77KdnIUbSWDghPllsEZkw",
+    "thingToken": "_OtwKIfePmYmiSUvbObNKULcL4jBwwifkQjcEQD60ZQ",
+    "description": {
+      "name": "I17BE085778O",
+      "geo": {}
+    },
+    "createdAt": "2025-11-16T01:59:28.074Z",
+    "tags": []
+  },
+  {
+    "_id": "0Pzjg3Gwm9tY8wGhiXZwhcXjwl3rbZ3p7mj-mN77h6I",
+    "thingToken": "PTLu0pXdVYrjXzzlNuFzbfDwuCvC5IVNJhLUk-KAZao",
+    "description": {
+      "name": "I17BC041526Y",
+      "geo": {}
+    },
+    "createdAt": "2025-11-16T01:57:24.611Z",
+    "tags": []
+  },
+  {
+    "_id": "grrj8oLFEGWu3DFEAD2myzmz2tk9T4ToEKgQ48PKGhI",
+    "thingToken": "tIkAi7ZwvlLOfPuRQMeLDdQRsgyjWjgYWpcVWMJxTvY",
+    "description": {
+      "name": "I16BD105801Y",
+      "geo": {}
+    },
+    "createdAt": "2025-11-16T01:56:42.508Z",
+    "tags": []
+  },
+  {
+    "_id": "ZFTlVdznec_JUzwpD5R1mV5wCM5OVHwAZ0K9DlBV_p4",
+    "thingToken": "ocnTYjR5rR6TeNYFdc4P1Jz18gsBJE2PEJGCjC5dw6o",
+    "description": {
+      "name": "H23VA864747G",
+      "geo": {}
+    },
+    "createdAt": "2025-11-16T01:56:11.434Z",
+    "tags": []
+  },
+  {
+    "_id": "YrAtVAHGaCou7NUXJG4tOLN6JmkPNIuUnsLDYsfkzVs",
+    "thingToken": "oL7ESy4tIrxqGh0WNnELmW_FYwODxnzVzmUHE26F3sI",
+    "description": {
+      "name": "P. M. Gornal - HOS130-S06-01 P24UG743696T",
+      "geo": {
+        "long": 2.1186282359595356,
+        "lat": 41.36037642431063
+      }
+    },
+    "createdAt": "2025-10-26T01:49:51.909Z",
+    "tags": [
+      {
+        "_id": "hos130",
+        "name": "HOS130",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "qCfe6FwwX169i2pFtK0C1Pj9PbFCk5ARde3kbZ_f6QQ",
+    "thingToken": "-L4SuQK0tizNqNELV94VZO5XUjHsurXUn6lGiYB58UI",
+    "description": {
+      "name": "Mercat Merca-2 Bellvitge - HOS117-S06-01 P24UG742861K",
+      "geo": {
+        "long": 2.1103918103702894,
+        "lat": 41.35100929689533
+      }
+    },
+    "createdAt": "2025-10-26T01:49:00.575Z",
+    "tags": [
+      {
+        "_id": "hos117",
+        "name": "HOS117",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "dKe_ABWS288UWvn6gsTmltosDJ8kRUgkUGyqj-r_uVc",
+    "thingToken": "EdVa9gmARIjliS4rN5iWzSvjPZ4QeXxl2B2AS28yLG8",
+    "description": {
+      "name": "Esc. Br. Nova Fortuny - HOS096-S06-01 P23AD727227S",
+      "geo": {
+        "long": 2.122055483384039,
+        "lat": 41.37545458852764
+      }
+    },
+    "createdAt": "2025-10-26T01:43:05.084Z",
+    "tags": [
+      {
+        "_id": "hos096",
+        "name": "HOS096",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "FgPLc3N5ZVp9CFsLOu8AbPgL2sBeRmsWXOqLIWI-fT4",
+    "thingToken": "9Qz5IcvD32CvaZ6na0vC8BDZKg-sGJWXCF8Cab9ds90",
+    "description": {
+      "name": "E. M. Futbol L'Hospitalet - HOS108-S06-01 P22UI000467I",
+      "geo": {
+        "long": 2.102077854547316,
+        "lat": 41.3474426665431
+      }
+    },
+    "createdAt": "2025-10-26T01:40:10.678Z",
+    "tags": [
+      {
+        "_id": "hos108",
+        "name": "HOS108",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "e5zH94cKTL7QsD-9JhbFtw2D0MZIYXKNYtKryRwlU6g",
+    "thingToken": "ZjQjtZUswUqFlJ4klUdCqNxjDiPT-Dz1u_y-vJp0iz4",
+    "description": {
+      "name": "C.E.M. L'Hospitalet Nord - HOS109-S06-01 P22UH724572R",
+      "geo": {
+        "long": 2.10223203920702,
+        "lat": 41.37910802990839
+      }
+    },
+    "createdAt": "2025-10-26T01:38:22.118Z",
+    "tags": [
+      {
+        "_id": "hos109",
+        "name": "HOS109",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "2cV7HDD43s53TWNGdC3X8ZYwJi056VKDMMnnyLjH17M",
+    "thingToken": "-OCPpCp5l7jI-oYBKeDzj9DMPGtZ08K-pu_0T1YRyu0",
+    "description": {
+      "name": "Esc. Br. Garabatos - HOS097-S06-01 P22FA007729T",
+      "geo": {
+        "lat": null,
+        "long": null
+      }
+    },
+    "createdAt": "2025-10-26T01:37:35.372Z",
+    "tags": []
+  },
+  {
+    "_id": "c80EWDXjQQklG29uWKFaZaPtaOvn_FVTlJJnnRVs2cY",
+    "thingToken": "wiMv0FzMiw1vmwxBjgYLSkXxWPomxrSbCs609IfJT0w",
+    "description": {
+      "name": "P. M. Les Planes - HOS111-S06-01 P21UG990150O",
+      "geo": {
+        "lat": null,
+        "long": null
+      }
+    },
+    "createdAt": "2025-10-26T01:34:42.816Z",
+    "tags": [
+      {
+        "_id": "hos111",
+        "name": "HOS111",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "rhdYpM68e04QmMKHcdJzdTE4MOyrxDwcFpSnfzZvE84",
+    "thingToken": "0xB6xrwSAuXr70gdwigjrJuJsRIlUPwwxs7621nuubs",
+    "description": {
+      "name": "Esc. Br. Patufet - HOS099-S06-01 I24LA262898U",
+      "geo": {
+        "lat": null,
+        "long": null
+      }
+    },
+    "createdAt": "2025-10-26T01:20:08.161Z",
+    "tags": [
+      {
+        "_id": "hos099",
+        "name": "HOS099",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "wjo8-mF1I1BnPi4xk5H9ahOayXvpXxJZBPlZPv6PoPU",
+    "thingToken": "f6ivQ5Xw7pmZTF9SaxxgHxLqzr6a1p3jbeMPIVzm8jU",
+    "description": {
+      "name": "Radio-TV de L'Hospitalet - HOS088-S06-01 I24LA138394E",
+      "geo": {
+        "lat": null,
+        "long": null
+      }
+    },
+    "createdAt": "2025-10-26T01:19:37.342Z",
+    "tags": []
+  },
+  {
+    "_id": "j0IPYIgS0HHsVN8GTDwkwifQSwdHrOrv4_LYbp1GQIY",
+    "thingToken": "PmwkqZ6xfXX8_DSw6Sw6-C7zMhFVqOWP9FAjYyMHKno",
+    "description": {
+      "name": "A. B. B. S. - Dte. VI - HOS027-S06-01 I23BD005559K",
+      "geo": {
+        "long": 2.1141417163978398,
+        "lat": 41.352336592468866
+      }
+    },
+    "createdAt": "2025-10-26T01:16:25.934Z",
+    "tags": [
+      {
+        "_id": "hos027",
+        "name": "HOS027",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "2vJ-PK9HE1hdsGxUDOH468fudPJO0hC0IsnZsyNsvqk",
+    "thingToken": "HolCXYiWGVEXXaxBrABsvEwFivjZlx4gaQddh-ygYas",
+    "description": {
+      "name": "Bibl. i esc. pl. Europa - HOS010-S06-01 I22BD035149C",
+      "geo": {
+        "lat": null,
+        "long": null
+      }
+    },
+    "createdAt": "2025-10-26T01:15:10.138Z",
+    "tags": []
+  },
+  {
+    "_id": "sztDZqAzKFFl07AZRqqLT5ubjSmfwUhnVMoVtTb5SyE",
+    "thingToken": "wdOoDXHzjXR81t4EuvntQggt2MUFje6rHjAR44dZPoY",
+    "description": {
+      "name": "Esc. Br. La Casa del Molí - HOS098-S06-01 I22BB009987T",
+      "geo": {
+        "lat": null,
+        "long": null
+      }
+    },
+    "createdAt": "2025-10-26T01:11:05.957Z",
+    "tags": [
+      {
+        "_id": "hos098",
+        "name": "HOS098",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "WsejAd5UyQ6UhqKimRkaIzmkLGLTXncqHKPpTjncja4",
+    "thingToken": "tYmMjKhvnBWkV23ri05WvdYDAruS5ta4FpUC4d0oEao",
+    "description": {
+      "name": "I20LA223736D",
+      "geo": {}
+    },
+    "createdAt": "2025-10-26T01:05:43.814Z",
+    "tags": []
+  },
+  {
+    "_id": "SGZ6oBWyCdAEhB2y_pSDW1JSHZrA08nPvBUwsCsGhys",
+    "thingToken": "JkO52kprGFN8Nz2fL7GZmiiNOiD7u2FS94_HO957j5A",
+    "description": {
+      "name": "Deixalleria Municipal - HOS132-S06-01 I17BD045696M",
+      "geo": {
+        "lat": null,
+        "long": null
+      }
+    },
+    "createdAt": "2025-10-26T01:00:09.473Z",
+    "tags": [
+      {
+        "_id": "hos132",
+        "name": "HOS132",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "gIXSRI_QX0tzkRd5yu0KvDHOwBFWlK_xcsWUkqzacO4",
+    "thingToken": "DPKM52fZ-d8sq-09SF4Q3DijpVuHUT62EVOBCCDX1ko",
+    "description": {
+      "name": "Dipòsit Parc de la serp - HOS037-S06-01 H24VA628016X",
+      "geo": {
+        "lat": null,
+        "long": null
+      }
+    },
+    "createdAt": "2025-10-26T00:59:23.836Z",
+    "tags": [
+      {
+        "_id": "hos037",
+        "name": "HOS037",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ns3NrNGKXErrbljsxxfwzRjWQat_6X5Zsi0Su-qeBks",
+    "thingToken": "M1qjr40GOWQOdl-cPHApF5Hp7ZHB6YwdYLX0LzPZl4s",
+    "description": {
+      "name": "Ca n'Olivé - HOS069-S06-01 H23VA095642V",
+      "geo": {
+        "long": 2.1015703140999826,
+        "lat": 41.360059846996805
+      }
+    },
+    "createdAt": "2025-10-26T00:58:02.468Z",
+    "tags": [
+      {
+        "_id": "hos069",
+        "name": "HOS069",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "f1RIIuZqvpEF28JQ4V_1xOsBT2BgIirhomw0pLWhxXs",
+    "thingToken": "p85Lp_iGCv5i-tawFLo3AkpJFHkPQVFWWfNs4aKIddw",
+    "description": {
+      "name": "J25FA091773F",
+      "geo": {}
+    },
+    "createdAt": "2025-07-21T01:11:28.146Z",
+    "tags": []
+  },
+  {
+    "_id": "TpaJFv9rXRTIPyv43jMSWp8fQdgGEFQwvf9CbCXubRE",
+    "thingToken": "snMO1AbQQ-ZLr0biVwrdkquP7HVwzZzVVoyffpyF8Vs",
+    "description": {
+      "name": "Edificio Cobalt - HOS005-S06-01 P24VA123225Q",
+      "geo": {
+        "lat": 41.3591420784577,
+        "long": 2.11084210861811
+      }
+    },
+    "createdAt": "2025-05-16T01:39:46.884Z",
+    "tags": [
+      {
+        "_id": "hos005",
+        "name": "HOS005",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "TmWO830O5Tbe_5aaYPItxI6jn5o042y7ZP-zb_jK2vU",
+    "thingToken": "ahrWU54ZdtpkQ-05cBVYtqol_P9ptj_Yg9YXhnz7QaQ",
+    "description": {
+      "name": "Mercat del Torrent Gornal - HOS124-S06-01 P23VA148607V",
+      "geo": {
+        "lat": 41.3703968525515,
+        "long": 2.11503973735857
+      }
+    },
+    "createdAt": "2025-05-16T01:38:13.159Z",
+    "tags": [
+      {
+        "_id": "hos124",
+        "name": "HOS124",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "fg4wDIDAg4b2pYePUwK1Li510PJv_3obc2rT73kf_9k",
+    "thingToken": "OAjnbdm9t_UTFRPTSkD7z_WqdNq79Py7ItQtiCOvzd0",
+    "description": {
+      "name": "P. M. Fum d'Estampa - HOS110-S06-01 P23UF789879A",
+      "geo": {
+        "lat": 41.3752669907951,
+        "long": 2.1149156103714
+      }
+    },
+    "createdAt": "2025-05-16T01:36:56.381Z",
+    "tags": [
+      {
+        "_id": "hos110",
+        "name": "HOS110",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "aGrMoulyq2Tk9t8nzI5mmEyNP6X0xqMTwhMWjjbqVoA",
+    "thingToken": "JxsKNXWG6KgwEwyPh-Xbk1_fh9BEA2EZcfeKMozygUM",
+    "description": {
+      "name": "Museu Casa Espanya - HOS125-S06-01 P23FA027637J",
+      "geo": {
+        "lat": 41.3612285975209,
+        "long": 2.09729801037076
+      }
+    },
+    "createdAt": "2025-05-16T01:35:33.664Z",
+    "tags": [
+      {
+        "_id": "hos125",
+        "name": "HOS125",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "k_2XjiIHcjZEZ_3lLiwn27bM4A_kpTbZngPm2pmRq18",
+    "thingToken": "rK4agFUzfzDs5IhoewE3Ho6hJNtnOcyejWrfI5h_rtg",
+    "description": {
+      "name": "Regidoria Districte I - HOS033-S06-01 P23FA015384U",
+      "geo": {
+        "lat": 41.3616845345428,
+        "long": 2.10116435656426
+      }
+    },
+    "createdAt": "2025-05-16T01:34:53.565Z",
+    "tags": [
+      {
+        "_id": "hos033",
+        "name": "HOS033",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "avM9LdxsAr_uFVIMnfP8JOrSnPJuEj8Q1pmT0yJggRU",
+    "thingToken": "_MExVag4qbexoYteyPp_d-Bzm_dGVKZtRrteFn4uH9c",
+    "description": {
+      "name": "Museu L'Harmonia - HOS126-S06-01 P23FA005374N",
+      "geo": {
+        "lat": 41.3604947673751,
+        "long": 2.09768999502897
+      }
+    },
+    "createdAt": "2025-05-16T01:33:51.600Z",
+    "tags": [
+      {
+        "_id": "hos126",
+        "name": "HOS126",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ZbzxWaWb-1UbPgvnfHgGTZsxs_4J2bIGU1ultRaF_hk",
+    "thingToken": "ARMuQMk2L_cEBVxyH3M5iZfohXOH42r7xJ5zBuVt8ak",
+    "description": {
+      "name": "P23AD727226R",
+      "geo": {}
+    },
+    "createdAt": "2025-05-16T01:32:33.468Z",
+    "tags": []
+  },
+  {
+    "_id": "y8sN5qfX9r5ht-cu8YUkPTFq8dsROUQJ7Nvcw0vVJUw",
+    "thingToken": "1Z5QOfRtFOIhxC8OSUi1E1JjsVEt6pMCEZ1ek8odaJ8",
+    "description": {
+      "name": "Esc. Pau Vila - HOS059-S06-01 P22FA001797H",
+      "geo": {
+        "lat": 41.3690095239023,
+        "long": 2.11046735420563
+      }
+    },
+    "createdAt": "2025-05-16T01:31:21.446Z",
+    "tags": [
+      {
+        "_id": "hos059",
+        "name": "HOS059",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ValEhCT5Hy26yHrMA5cSSzomjLRVIEIqO8pA1Peg8Cc",
+    "thingToken": "5O2miZW-BCOEElFvKlEf9aJTsrs2u553Pb13QeFwS00",
+    "description": {
+      "name": "CGG de Can Serra - HOS122-S06-01 P21VA198542C",
+      "geo": {
+        "lat": 41.36559042134499,
+        "long": 2.127172939206397
+      }
+    },
+    "createdAt": "2025-05-16T01:30:14.145Z",
+    "tags": [
+      {
+        "_id": "hos122",
+        "name": "HOS122",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "aH31HEkVNUCZSe9GuioyMHRv8KDsuI0udszPnDhJPwY",
+    "thingToken": "aXv6eBriIiMkPvNDvY7EFG9vc8J9eVDpUMNT3QRYxTg",
+    "description": {
+      "name": "HOS119-S06-01 P21UF000569J",
+      "geo": {
+        "long": 2.09971355381476,
+        "lat": 41.3678470939428
+      }
+    },
+    "createdAt": "2025-05-16T01:29:09.935Z",
+    "tags": [
+      {
+        "_id": "hos119",
+        "name": "HOS119",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "MNwTIiSr--h-SWjh1u_3dbvAh0Cva778-mY1DES3flI",
+    "thingToken": "N7dPlQGjLRvTIx4yoDnZHIp3Zc43IK_Xe-0CMQHnRxY",
+    "description": {
+      "name": "C. C. Santa Eulàlia - HOS021-S06-01 P20VA148641W",
+      "geo": {
+        "lat": 41.367964758872574,
+        "long": 2.1275503103710465
+      }
+    },
+    "createdAt": "2025-05-16T01:28:07.748Z",
+    "tags": [
+      {
+        "_id": "hos021",
+        "name": "HOS021",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "jaFwkz1gSzRrBq9iU9Zz887jvB-jDiDrML-01lKMPTo",
+    "thingToken": "J-I3A_3ZpO8EUC_w8jf7LP9CnM1VHgcHTC7hXAoCQKg",
+    "description": {
+      "name": "Teatre Joventut - HOS159-S06-01 P20UH000838Q",
+      "geo": {
+        "lat": 41.3727545049352,
+        "long": 2.11787804105476
+      }
+    },
+    "createdAt": "2025-05-16T01:27:10.584Z",
+    "tags": [
+      {
+        "_id": "hos159",
+        "name": "HOS159",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "H-uLf_vINhzLoN4BkX_icPxNcjaZeTcMwjIfAojWmRg",
+    "thingToken": "mvPh3cW-JF1Gq6Ei-lKoPos3GSp_rDhzIPq3UmyRSqE",
+    "description": {
+      "name": "Esc. Busquets i Punset - HOS038-S06-01 P20AD552738S",
+      "geo": {
+        "lat": 41.3631054811353,
+        "long": 2.09667342571257
+      }
+    },
+    "createdAt": "2025-05-16T01:26:09.651Z",
+    "tags": [
+      {
+        "_id": "hos038",
+        "name": "HOS038",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "hCzDri2YpxOGoWCpU1oPtoP2lHDAWOPow9Cj8-ilIkE",
+    "thingToken": "5DBTk_ZK_TKq6Pvkg0VQh9NN3GxtdCnWDG0UN8eFt5U",
+    "description": {
+      "name": "Piscines M. L'Hospitalet - HOS107-S06-01 P19UF003436T",
+      "geo": {
+        "lat": 41.3657962645084,
+        "long": 2.11583006804183
+      }
+    },
+    "createdAt": "2025-05-16T01:25:23.004Z",
+    "tags": [
+      {
+        "_id": "hos107",
+        "name": "HOS107",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "tSsLGHo7pLKvzWEM6dScZLWLbFme_geszACe3U71xOg",
+    "thingToken": "R0irPyp63UJxEdx_qL9GzJ7nYUW05uW-_c3ULuFNjUc",
+    "description": {
+      "name": "P19UE039975V",
+      "geo": {}
+    },
+    "createdAt": "2025-05-16T01:24:31.850Z",
+    "tags": []
+  },
+  {
+    "_id": "DSQ4_WlnUg8GT0NjtDf2fYm714VgulG7VallB7d0FFY",
+    "thingToken": "NbnAAMR95hNDlstNLubv37bWQ9lpdy5Nnl8shINwBNg",
+    "description": {
+      "name": "P. M. Sergio Manzano - HOS113-S06-01 P18UG031358B",
+      "geo": {
+        "long": 2.1059178122182183,
+        "lat": 41.34858377184772
+      }
+    },
+    "createdAt": "2025-05-16T01:23:06.945Z",
+    "tags": [
+      {
+        "_id": "hos113",
+        "name": "HOS113",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "xe33D2qP3LLyQDq5K0KbUWG_uqBUaOL4r4pxnlkdcGc",
+    "thingToken": "pOI9y4361SSnTMOXTCH-LNxeCuND4qq8gjdPYyH5MOM",
+    "description": {
+      "name": "Bibl. i C. C. la Bòbila - HOS008-S06-01 P18UF031335N",
+      "geo": {
+        "lat": 41.3730932254087,
+        "long": 2.10118049512877
+      }
+    },
+    "createdAt": "2025-05-16T01:22:33.907Z",
+    "tags": [
+      {
+        "_id": "hos008",
+        "name": "HOS008",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "pD-8RIsF3VIih6lbtstT52TRsW8Slf1Eb_aWQVHO-V0",
+    "thingToken": "jD8nNTrvJoXRWcUmhLuqqAUMd66gPTiO0C9HrNxCFj0",
+    "description": {
+      "name": "Esc. Prat de la Manta - HOS063-S06-01 P18UE276499Z",
+      "geo": {
+        "lat": 41.3599868212327,
+        "long": 2.12748035269984
+      }
+    },
+    "createdAt": "2025-05-16T01:21:44.805Z",
+    "tags": [
+      {
+        "_id": "hos063",
+        "name": "HOS063",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "3NcUP2I3m8XH1Cbs2RgNbWJweWnNeCbB-9dqxcEi7mM",
+    "thingToken": "OCcvjC0KjDrAM4zmckB5dq8FroSImg4Nydr9xJEZl6I",
+    "description": {
+      "name": "Esc. La Carpa - HOS048-S06-01 P18UE276480O",
+      "geo": {
+        "lat": 41.3672213608047,
+        "long": 2.09978269502928
+      }
+    },
+    "createdAt": "2025-05-16T01:20:56.665Z",
+    "tags": [
+      {
+        "_id": "hos048",
+        "name": "HOS048",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "2OQuEDiXGSHsE6EULS-BOLq-VbVHYP7VIa89qsBRx2U",
+    "thingToken": "i11gaEGxXESTFhIC_Wi-aIGiyOfC9-A4es3kRRZoKkU",
+    "description": {
+      "name": "Esc. J. M. Folch i Torres - HOS042-S06-01 P18AD500362J",
+      "geo": {
+        "lat": 41.378223319568,
+        "long": 2.1036891396955
+      }
+    },
+    "createdAt": "2025-05-16T01:20:14.729Z",
+    "tags": [
+      {
+        "_id": "hos042",
+        "name": "HOS042",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "JzAwEh_8L9UmcKNNtygM0HAXmUG4kYBmzSXvDMaralQ",
+    "thingToken": "YuNOf_ciCSdnRY99FI2VmOj-Q0JtuaaP_JisNDY8uUs",
+    "description": {
+      "name": "Esc. Lola Anglada - HOS050-S06-01 P18AD500319G",
+      "geo": {
+        "lat": 41.3688851520358,
+        "long": 2.10323940992226
+      }
+    },
+    "createdAt": "2025-05-16T01:19:28.189Z",
+    "tags": [
+      {
+        "_id": "hos050",
+        "name": "HOS050",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "B5j1Se3N8Z0nLjRLIpYtYVTfkkKEJmtnl-qf6nubMF0",
+    "thingToken": "1dLb1TD2y7gQg9pPM4-qh6MPyUDbRDUUtXLcsWyq5g0",
+    "description": {
+      "name": "P. M. Santa Eulàlia - HOS112-S06-01 P16BH813211W",
+      "geo": {
+        "lat": 41.3665036586999,
+        "long": 2.128120710371
+      }
+    },
+    "createdAt": "2025-05-16T01:19:00.288Z",
+    "tags": [
+      {
+        "_id": "hos112",
+        "name": "HOS112",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "o7tUsfFhRygph-BRE7O3CLl9mpL6A7Au8o6g2JPgol0",
+    "thingToken": "0NJvhmu6BYZf7QfcXgrXthVkANqPlwh2VH3228jRHOo",
+    "description": {
+      "name": "P. M. Centre - HOS115-S06-01 P14BH094224F",
+      "geo": {
+        "lat": 41.3616549909158,
+        "long": 2.09622290909519
+      }
+    },
+    "createdAt": "2025-05-16T01:18:23.946Z",
+    "tags": [
+      {
+        "_id": "hos115",
+        "name": "HOS115",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "E53vLxF8RrBxPeAJhn2bVNIijMvQddoJDlv_c4Zej24",
+    "thingToken": "5MW8V6XEszHpu4fIW4bWKBA0s-Vq27ylfueBJCP_9VI",
+    "description": {
+      "name": "Esc. Joaquim Ruyra - HOS046-S06-01 I25BD024043L",
+      "geo": {
+        "lat": 41.3762598922437,
+        "long": 2.11120923689681
+      }
+    },
+    "createdAt": "2025-05-16T01:17:48.345Z",
+    "tags": [
+      {
+        "_id": "hos046",
+        "name": "HOS046",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "psLRLtHK37SqSOLtI3B0qzu9SfF3XWptFXfAsGRfU30",
+    "thingToken": "ExmJ_888VbqxH8ikJZkW_jCBYqwv8kZ7XXaS8LZfOp8",
+    "description": {
+      "name": "Esc. Pablo Neruda - HOS055-S06-01 I24BC057137B",
+      "geo": {
+        "lat": 41.365828552025,
+        "long": 2.08727351037097
+      }
+    },
+    "createdAt": "2025-05-16T01:17:15.577Z",
+    "tags": [
+      {
+        "_id": "hos055",
+        "name": "HOS055",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "AfyTXAIgoXNrANiG-qs027_a78HEdwB-QifdLg39fyM",
+    "thingToken": "s50zhsGTk0hn7tloAm_p96a7JSUjbAUpdDr2fCMLASE",
+    "description": {
+      "name": "I23BD021926H",
+      "geo": {}
+    },
+    "createdAt": "2025-05-16T01:16:48.433Z",
+    "tags": []
+  },
+  {
+    "_id": "DkqdhLYkl2B5y0bYpDZMKd_aPSymIWrzob41CFyn388",
+    "thingToken": "3u_9UO1CFMOX2chYj_mBXxLYhR-YrWqnXzwhOk7z6I8",
+    "description": {
+      "name": "Esc. S. Ramón y Cajal - HOS065-S06-01 I22BD089711V",
+      "geo": {
+        "lat": 41.3694666582098,
+        "long": 2.12241056804198
+      }
+    },
+    "createdAt": "2025-05-16T01:16:19.731Z",
+    "tags": [
+      {
+        "_id": "hos065",
+        "name": "HOS065",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "DbWizGmTNr6UADycOeuUJJhb0ketH_LA7VWVNGkgcjM",
+    "thingToken": "OGQ6buuh09Lm-36Sbf31hdsch6stufCoTwYC-aINqXw",
+    "description": {
+      "name": "Esc. Pau Sans - HOS058-S06-01 I22BD021841U",
+      "geo": {
+        "lat": 41.3622933211051,
+        "long": 2.11097068338343
+      }
+    },
+    "createdAt": "2025-05-16T01:15:49.035Z",
+    "tags": [
+      {
+        "_id": "hos058",
+        "name": "HOS058",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "iWj0gS1j7oQE8vSs_pcyBLbuhfTQFOqLAxBFtF8ZXWs",
+    "thingToken": "izL_tRHBAzrCeKHjXKGPRNPcWbXhkfFHMp63HuzaGAU",
+    "description": {
+      "name": "I22BC001723Y",
+      "geo": {}
+    },
+    "createdAt": "2025-05-16T01:15:25.554Z",
+    "tags": []
+  },
+  {
+    "_id": "6sDSoFg3eLNTDjcx4PzXJHg1bcEL01S7KmELudOB3K0",
+    "thingToken": "zfvwIgz9Gbe8impI5mb7cUs1pQj6y4JuSNwFZJFeQK0",
+    "description": {
+      "name": "Can Colom - HOS030-S06-02 I22BB051956F",
+      "geo": {
+        "lat": 41.36737156926719,
+        "long": 2.1317029559931697
+      }
+    },
+    "createdAt": "2025-05-16T01:15:03.887Z",
+    "tags": [
+      {
+        "_id": "hos030",
+        "name": "HOS030",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "87JVN8ClWehUL4AqBix02bdgwP6tWMyto_oXWGY1Ty8",
+    "thingToken": "ei5fPHjUt7-I9Nf_MTiyAtCu_0htI6Ibs69bnkvlLOk",
+    "description": {
+      "name": "I22BB010257N",
+      "geo": {}
+    },
+    "createdAt": "2025-05-16T01:14:46.497Z",
+    "tags": []
+  },
+  {
+    "_id": "O7jch8ycVqWW8TsuNCEW8x90HbZegHRIvB_lTWRDd-M",
+    "thingToken": "cyVbDQwBvlmYnvd3WfRplyC9OE1sW5xY6oj_h1nKtu8",
+    "description": {
+      "name": "Esc. Charlie Rivel - HOS041-S06-01 I22BB010137G",
+      "geo": {
+        "lat": 41.3735215060933,
+        "long": 2.11652006763439
+      }
+    },
+    "createdAt": "2025-05-16T01:14:22.109Z",
+    "tags": [
+      {
+        "_id": "hos041",
+        "name": "HOS041",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "MBjNrm7OgX2-11viHwX22Rq3QCg0Oj5ssWFV-XQi6dU",
+    "thingToken": "eroeGvnYHTbW7uPR_aB-PHzAvjwKeenE9r5tnt_0DAU",
+    "description": {
+      "name": "Aj L'H-Ed. Girona - HOS003-S06-01 I22BB010103W",
+      "geo": {
+        "long": 2.1034192312847493,
+        "lat": 41.36179764658288
+      }
+    },
+    "createdAt": "2025-05-16T01:14:00.764Z",
+    "tags": [
+      {
+        "_id": "hos003",
+        "name": "HOS003",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "YCDJGlQQ1FTThed11kRZ3KOAP-FqndvC7dFBO6n0o8Q",
+    "thingToken": "MXfXfbGGFLlPxlFx3Ub-Get_-47KKCirA2gD_7zkZPc",
+    "description": {
+      "name": "P. M. Sanfeliu - HOS114-S06-01 POLIESPORTIU SANFELIU",
+      "geo": {
+        "lat": 41.3688782081913,
+        "long": 2.08919119687742
+      }
+    },
+    "createdAt": "2025-05-16T01:13:38.031Z",
+    "tags": [
+      {
+        "_id": "hos114",
+        "name": "HOS114",
+        "organizationId": 33788
+      },
+      {
+        "_id": "i21bd022197k",
+        "name": "I21BD022197K",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "_JrAB09lg36v0WGj-6D4T-X9bCNoRhhPcyTeQmuTlQ0",
+    "thingToken": "0EqFujV4FcUaH0Bkj-5KjPESNvpq_mpcK1XYXyGOD3I",
+    "description": {
+      "name": "Esc. M. d'E. de Bellvitge - HOS051-S06-01 I21BC007255G",
+      "geo": {
+        "lat": 41.3516944397011,
+        "long": 2.10770175454751
+      }
+    },
+    "createdAt": "2025-05-16T01:13:09.936Z",
+    "tags": [
+      {
+        "_id": "hos051",
+        "name": "HOS051",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "aaEp_jRsleIANtwjIW21QMiNu54PmMCbHiFZMxu26nA",
+    "thingToken": "Eby9LUK0wowXw67kXwNpdUHVAS9jzP36MZ9plr8AYSs",
+    "description": {
+      "name": "I20LA228706R",
+      "geo": {}
+    },
+    "createdAt": "2025-05-16T01:12:47.263Z",
+    "tags": []
+  },
+  {
+    "_id": "kXwD39MlgHe1oWCABNJ1Nkz6VuGgoI0bV6KOY8R5Dxk",
+    "thingToken": "wv_sthdzL-6nEDcEgrkCVabdCBZkPcG106SuPWdeHvc",
+    "description": {
+      "name": "Dipòsit Santa Eulàlia - HOS036-S06-01 I20LA195865W",
+      "geo": {
+        "lat": 41.3666429623081,
+        "long": 2.11809931037101
+      }
+    },
+    "createdAt": "2025-05-16T01:12:34.980Z",
+    "tags": [
+      {
+        "_id": "hos036",
+        "name": "HOS036",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "gFzDGks5AA_5g-JrCaOUWZeGdMLA0g9UqiY8oUSH_9g",
+    "thingToken": "1zJm7y-EAS_ol1HnNMNIWVMd6Tqb_Ulex48xbXLl4SI",
+    "description": {
+      "name": "Esc. Ausias March - HOS039-S06-01 I20BD036700P",
+      "geo": {
+        "lat": 41.3632612758729,
+        "long": 2.09386888153542
+      }
+    },
+    "createdAt": "2025-05-16T01:12:21.171Z",
+    "tags": [
+      {
+        "_id": "hos039",
+        "name": "HOS039",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "qHUjuT98_UowvAwBH92O14Zcja6_HrIGUpIAsu2F2qM",
+    "thingToken": "LRJhyzAE9MQLQsnKxwWY93yq-GdowYwQo9pkfNyF9xw",
+    "description": {
+      "name": "Ca n'Arús - HOS070-S06-01 I20BD020169P",
+      "geo": {
+        "lat": 41.3587527484308,
+        "long": 2.10205392201625
+      }
+    },
+    "createdAt": "2025-05-16T01:12:03.600Z",
+    "tags": [
+      {
+        "_id": "hos070",
+        "name": "HOS070",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "g1uRpJSx8I0GbIuCkKu_j1Bdh7uXqZlF_dXOL8bEyC8",
+    "thingToken": "zm1eoUMq9nVBYgKCRqBqs42qOGadFSf8QTkJeAL-ErU",
+    "description": {
+      "name": "I20BB038156H",
+      "geo": {}
+    },
+    "createdAt": "2025-05-16T01:11:44.554Z",
+    "tags": []
+  },
+  {
+    "_id": "-QqsXX8plJ7TlZxk8koOxIwQ8I9VQxSSBpUSNHRQhIk",
+    "thingToken": "V4OngsM_EUJ0eo8UGBa29QSq5lAct1_FiAm2A6pSV38",
+    "description": {
+      "name": "CGG la Ermita - HOS118-S06-01 I19BD042435Z",
+      "geo": {
+        "lat": 41.35291618331664,
+        "long": 2.112201583383001
+      }
+    },
+    "createdAt": "2025-05-16T01:11:31.691Z",
+    "tags": [
+      {
+        "_id": "hos118",
+        "name": "HOS118",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "GMbLxZXSp7ZYaELVDAd-OEOHrFo6xTmoEL-64vq-gDE",
+    "thingToken": "-_l3yUXQZNsp73deBH8Yvse0AexlccYcKlW_5Fw3_PA",
+    "description": {
+      "name": "I18BD039671X",
+      "geo": {}
+    },
+    "createdAt": "2025-05-16T01:10:59.146Z",
+    "tags": []
+  },
+  {
+    "_id": "Sx-kQEKgldD-AQTFS52ePF23fg9bfUXJetuGZbT0_O0",
+    "thingToken": "CzG5BASr-bwK6uXpu7fQuFRLQncC4yZk8q2Kac47D5A",
+    "description": {
+      "name": "Pavelló M. d'Esports - HOS106-S06-01 I18BD030318Z",
+      "geo": {
+        "lat": 41.3471157667437,
+        "long": 2.10130494917204
+      }
+    },
+    "createdAt": "2025-05-16T01:10:44.596Z",
+    "tags": [
+      {
+        "_id": "hos106",
+        "name": "HOS106",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "g1Y_M5kabYYWncMbwl0xKRdDPnJFx8wCl-qiNSl8gxg",
+    "thingToken": "86PNSrbiMcYfXrs5ptuYp4kxw2Dzw55kKu2siBBoB_Y",
+    "description": {
+      "name": "Esc. Pau Casals - HOS057-S06-01 I18BD030309Y",
+      "geo": {
+        "lat": 41.3691385657368,
+        "long": 2.11567618576053
+      }
+    },
+    "createdAt": "2025-05-16T01:10:30.858Z",
+    "tags": [
+      {
+        "_id": "hos057",
+        "name": "HOS057",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "05okVxEcPl0bcFgj_JujacwE59Qj88pWHwe35-Z4Gp0",
+    "thingToken": "37eIPTSxkBSG7ljGc4foTWcDhVOrYsojLFNp-KkFQEk",
+    "description": {
+      "name": "Esc. Pompeu Fabra - HOS062-S06-01 I18BD030308X",
+      "geo": {
+        "lat": 41.3660529864254,
+        "long": 2.1229377589519
+      }
+    },
+    "createdAt": "2025-05-16T01:10:16.918Z",
+    "tags": [
+      {
+        "_id": "hos062",
+        "name": "HOS062",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "luwyqNAn2Yl-vhuaV4JOdWNbgKp8CNTj6s16cwNJv3M",
+    "thingToken": "LXyqzJS32uLNqEaea4j7QI0Hf42qXMJ3scpow5gSAXE",
+    "description": {
+      "name": "Esc. Milagros Consarnau - HOS054-S06-S1 I18BD030306V",
+      "geo": {
+        "lat": 41.3644840844911,
+        "long": 2.12931582571267
+      }
+    },
+    "createdAt": "2025-05-16T01:10:02.023Z",
+    "tags": [
+      {
+        "_id": "hos054",
+        "name": "HOS054",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "rtyxh9FGteuKlH8KcWUIwhFdZtTTDU-NEAiYVT2zBFI",
+    "thingToken": "aphC-LvE2qhEutuBFQaS6HW7w0ZuMFg0Hs0bs2cvpgU",
+    "description": {
+      "name": "Esc. Menéndez Pidal - HOS053-S06-01 I18BD030305U",
+      "geo": {
+        "lat": 41.3730522015403,
+        "long": 2.11084758338389
+      }
+    },
+    "createdAt": "2025-05-16T01:09:49.199Z",
+    "tags": [
+      {
+        "_id": "hos053",
+        "name": "HOS053",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "chJF5THF9Wn4e630KjfnmdJmWSiu1F-wlPIzsR2GObM",
+    "thingToken": "_Lnm1aYtiqZSLUc_yulU8ILbgNuSoVyOeKOl8jTFfhA",
+    "description": {
+      "name": "Esc. Puig i Gairalt - HOS064-S06-1 I18BD030289L",
+      "geo": {
+        "lat": 41.3756422829567,
+        "long": 2.10682919687775
+      }
+    },
+    "createdAt": "2025-05-16T01:09:34.747Z",
+    "tags": [
+      {
+        "_id": "hos064",
+        "name": "HOS064",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ZHoowDP4Bgx1YYIdfqtokD6hptE_aMkoZQmYE1IZDAs",
+    "thingToken": "XBI-hlB3-D573X8pRUrmOGSaaiuwY6mTTV5TU-ANtGI",
+    "description": {
+      "name": "Esc. Pere Lliscart - HOS061-S06-01 I18BD030283F",
+      "geo": {
+        "long": 2.11161959687766,
+        "lat": 41.3747962488263
+      }
+    },
+    "createdAt": "2025-05-16T01:09:20.215Z",
+    "tags": [
+      {
+        "_id": "hos061",
+        "name": "HOS061",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ToWNVRDfaMd2hi2dQ2TrryTozpplHTm9aJesvKbxIIY",
+    "thingToken": "-bpia-YzDr8oaRJXcZjiE_NCadTT0Wc8Uax0Clqee-Q",
+    "description": {
+      "name": "I18BC030788S",
+      "geo": {}
+    },
+    "createdAt": "2025-05-16T01:09:07.626Z",
+    "tags": []
+  },
+  {
+    "_id": "w3Haol8yJjKgCxQ2A0TuK_J0gIEreOaT_skmc09AJMM",
+    "thingToken": "ocn19qPqQOWFr52HIf-gIvNypLk21i-l9bL8HJQZ14Y",
+    "description": {
+      "name": "I17BF045531G",
+      "geo": {}
+    },
+    "createdAt": "2025-05-16T01:08:57.002Z",
+    "tags": []
+  },
+  {
+    "_id": "kdtilYZRll5Z9tG8M_KYPtI95swaieYFdl3srKtZisY",
+    "thingToken": "xLAzNRo3aRojx77VChorySwYUS9O1KYidiy5sPojlmw",
+    "description": {
+      "name": "Esc. Josep Janes - HOS047-S06-01 I17BE094519Y",
+      "geo": {
+        "lat": 41.3513013902853,
+        "long": 2.11426156641481
+      }
+    },
+    "createdAt": "2025-05-16T01:08:46.362Z",
+    "tags": [
+      {
+        "_id": "hos047",
+        "name": "HOS047",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "R3cb43lgGATns9PzXqHiOAIiYfA0ebtby2o0Zz1OWAc",
+    "thingToken": "d9DjVUvCYQgjXBS8UkHeb0gCFlN80Li2z3g_YzOjyeQ",
+    "description": {
+      "name": "CEMFO - HOS004-S06-01 I17BE046798C",
+      "geo": {
+        "lat": 41.3564226694841,
+        "long": 2.10895929318077
+      }
+    },
+    "createdAt": "2025-05-16T01:08:35.576Z",
+    "tags": [
+      {
+        "_id": "hos004",
+        "name": "HOS004",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "79gUfGsH71sDnPV_yhs3CYOgxnXmTHC7m85p9daoC_c",
+    "thingToken": "pbc6AZRjwS-wrC2rp3ZcFiGRhtRw1SQ7JMh_QYe66po",
+    "description": {
+      "name": "Biblioteca Can Sumarro - HOS007-S06-01 I17BD504878W",
+      "geo": {
+        "long": 2.09668715454791,
+        "lat": 41.3603458094608
+      }
+    },
+    "createdAt": "2025-05-16T01:08:23.895Z",
+    "tags": [
+      {
+        "_id": "hos007",
+        "name": "HOS007",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "sxw8JElEFTXKDQakAkifTZ_lPPlxffW6Ig-2dCJJuzc",
+    "thingToken": "ycDPiNwPmisLsBFLNB6CpHbziIYYMOtUAG09NZcIX-g",
+    "description": {
+      "name": "C. C.  Tecla Sala - HOS022-S06-01 I17BD504011F",
+      "geo": {
+        "long": 2.11527145270015,
+        "lat": 41.3668052618861
+      }
+    },
+    "createdAt": "2025-05-16T01:08:13.093Z",
+    "tags": [
+      {
+        "_id": "hos022",
+        "name": "HOS022",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "7jnp3LTGFcXWlaj1OhbxOru-DGSOXdXKzf4sYCDRDSA",
+    "thingToken": "BL1QPYY8ha3t4D8KvO98c6O9aFjMKZ2h__-4PMe8y4c",
+    "description": {
+      "name": "Residencia Els Alps - HOS136-S06-01 I17BD083286K",
+      "geo": {
+        "long": 2.09548452571258,
+        "lat": 41.3625896728415
+      }
+    },
+    "createdAt": "2025-05-16T01:08:02.739Z",
+    "tags": [
+      {
+        "_id": "hos136",
+        "name": "HOS136",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "BfOGDzo6fJCDJTR2fnkdND5fY8TSej7eXcWGdTEf0pk",
+    "thingToken": "icOpUxgivwifCWZopJbQ9KR0YAc487iudim_hFSvGH0",
+    "description": {
+      "name": "S06-01 I17BC095962D",
+      "geo": {
+        "lat": null,
+        "long": null
+      }
+    },
+    "createdAt": "2025-05-16T01:07:55.345Z",
+    "tags": []
+  },
+  {
+    "_id": "eel1Mlrp4Ub-areB3cBNDGueODqoRTNg4RTAHoZiJBE",
+    "thingToken": "IsrK5GyDgyojXCxiz5-i3GtMSxagoevU8_3eiJQVSvo",
+    "description": {
+      "name": "CGG Provençana - HOS023-S06-01 I17BC013010U",
+      "geo": {
+        "long": 2.11027938338369,
+        "lat": 41.3678031666015
+      }
+    },
+    "createdAt": "2025-05-16T01:07:37.455Z",
+    "tags": [
+      {
+        "_id": "hos023",
+        "name": "HOS023",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "FuRxJCLl5-wx8OP9ENDHp7boKLMUiv-sI3Q7XY0qfP0",
+    "thingToken": "nrfBEvvMx_XGK75W33Az9xwv1YSGX742Lal3O3RWE3g",
+    "description": {
+      "name": "S06-01 H23VA120599M",
+      "geo": {
+        "lat": null,
+        "long": null
+      }
+    },
+    "createdAt": "2025-05-16T01:07:30.302Z",
+    "tags": []
+  },
+  {
+    "_id": "sCSMnuLbWrWG77U7L7jA4D3lJhyu2C3WAAKd6voFoUQ",
+    "thingToken": "Tt1BBeau7fpmxGmbjqm4mucJT7fOfK2b5o6G5Hs_WfY",
+    "description": {
+      "name": "CGG del polígon Gornal - HOS120-S06-01 H23VA120591E",
+      "geo": {
+        "long": 2.119787510371402,
+        "lat": 41.37496179539499
+      }
+    },
+    "createdAt": "2025-05-16T01:07:23.172Z",
+    "tags": [
+      {
+        "_id": "hos120",
+        "name": "HOS120",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "KMex1ECZAGJoKyzqjgv41oi65chSnA5fcH8GQl6h3wU",
+    "thingToken": "2bPuiIf4BaZFWmtDkpr-GFCiHBrFtYEUn-9C9abT7qc",
+    "description": {
+      "name": "Area de Benestar social - HOS028-S06-01 H23VA120131G",
+      "geo": {
+        "long": 2.11021778427181,
+        "lat": 41.3641720618462
+      }
+    },
+    "createdAt": "2025-05-16T01:07:15.370Z",
+    "tags": [
+      {
+        "_id": "hos028",
+        "name": "HOS028",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "3o1hDw2-Ag15hBUV49JTZem34Htf1_bM_U2_BYD6T28",
+    "thingToken": "2xm9veoqUw2qr513b4A60ilhmJKXZoHpn2qQ_cmH05c",
+    "description": {
+      "name": "Museu Can Riera - HOS127-S06-01 H23VA095644X",
+      "geo": {
+        "long": 2.09693001037074,
+        "lat": 41.3614898335236
+      }
+    },
+    "createdAt": "2025-05-16T01:07:07.250Z",
+    "tags": [
+      {
+        "_id": "hos127",
+        "name": "HOS127",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "nzE6osZpsuwmDe7B4AI3-y-eXCPWv8Zz5TrbWcVg_ys",
+    "thingToken": "eCNrF3uto3a2DeKDpDc1a5qsBMkOymK78O0ccagZDgY",
+    "description": {
+      "name": "CGG Pubilla Casas - HOS025-S06-01 H23VA084841R",
+      "geo": {
+        "long": 2.1046224392067723,
+        "lat": 41.373745441670316
+      }
+    },
+    "createdAt": "2025-05-16T01:06:58.764Z",
+    "tags": [
+      {
+        "_id": "hos025",
+        "name": "HOS025",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "6O7JThQCzPWD-GlHf8aLbHmfktFAd3R-6Q4fHElWj2A",
+    "thingToken": "HqPa502BllykysYXUvoCR7KIH5FZdOWqYHr_vY5zbQM",
+    "description": {
+      "name": "Casa dels Cargols - HOS029-S06-01 H22VA827558M",
+      "geo": {
+        "long": 2.12096392062176,
+        "lat": 41.3711275446201
+      }
+    },
+    "createdAt": "2025-05-16T01:06:49.946Z",
+    "tags": [
+      {
+        "_id": "hos029",
+        "name": "HOS029",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ABwm-eZa5itEfMPI8VugqmDlGN3tbRyVpEm0E-_7u8I",
+    "thingToken": "WLVsObkpTo5UZ134x0v9dkP_KtgRMflzDn71kUdFrEg",
+    "description": {
+      "name": "Cal Gotlla - HOS006-S06-01 D18BA388376I",
+      "geo": {
+        "lat": 41.3533736756027,
+        "long": 2.12363835835246
+      }
+    },
+    "createdAt": "2025-05-16T01:06:43.920Z",
+    "tags": [
+      {
+        "_id": "hos006",
+        "name": "HOS006",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "6XWBLg9D5iAA8Gm0yWjbqYm4u2JFuYaw_kcxjG5YeOw",
+    "thingToken": "GCMT9u-eWTOd5SV9iIvsiMr_7KPQfFcR6XaPaW9G9mw",
+    "description": {
+      "name": "ZZ-DUPLICADO D18BA010631X",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-05-16T01:06:35.844Z",
+    "tags": []
+  },
+  {
+    "_id": "qeQDeHYleIy-ueeSoxlzKH9kWg6Tyj3rRPR6E3cuosM",
+    "thingToken": "mvHcW10Bbaz2edddU8G-mSwH14QG5a_DmgU5jLOpgAo",
+    "description": {
+      "name": "HOS164-S06-01 D18BA010631X",
+      "geo": {
+        "lat": 41.3743496932928,
+        "long": 2.12253316804219
+      }
+    },
+    "createdAt": "2025-05-16T01:06:34.903Z",
+    "tags": [
+      {
+        "_id": "hos164",
+        "name": "HOS164",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "eTxpgEjfnJqO9FX6QMfMPmz7M2BFyc-_PuCnQmvOes4",
+    "thingToken": "AVNWTUsoWMZOUJ4ObSWgJqmA0X9WQQ1EFR4-CH-n9t4",
+    "description": {
+      "name": "Biblioteca la Florida - HOS009-S06-01 D17BA214472T",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-05-16T01:06:28.393Z",
+    "tags": [
+      {
+        "_id": "hos009",
+        "name": "HOS009",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "QPA9o6cYS5K8kuhlm75KmcATNrQ9CTqbrmlF1P9C6e4",
+    "thingToken": "p-hy9NCA9yUk6c0-W8GjjEIBCPdceIFQ_wuRpNzDp4o",
+    "description": {
+      "name": "HOS162-S06-01 D17BA088747O",
+      "geo": {
+        "lat": 41.3515767433978,
+        "long": 2.10675423405663
+      }
+    },
+    "createdAt": "2025-05-16T01:06:22.058Z",
+    "tags": [
+      {
+        "_id": "hos162",
+        "name": "HOS162",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "iMoFEaif8h5NgSFxsvFa381w3BL2ScacgBY87AyFTRY",
+    "thingToken": "iT2OteA8vcXknBNYDouJp_bjYcmIrJr5AzxpRNQuaOo",
+    "description": {
+      "name": "S06-01 D17BA087741E",
+      "geo": {
+        "lat": null,
+        "long": null
+      }
+    },
+    "createdAt": "2025-05-16T01:06:15.060Z",
+    "tags": []
+  },
+  {
+    "_id": "3AcOP2_HecUn2Uq0PfpeqhHax6E2FXo4FGUwfQKs0uk",
+    "thingToken": "2G6t-B1zu4-fOC5YRGaGHtWdnfiGIYom4t8t7jcv-To",
+    "description": {
+      "name": "Aj L'H-Ed. Migdia - HOS002-S06-01 D16UH084259X",
+      "geo": {
+        "long": 2.09613941249931,
+        "lat": 41.3610058832045
+      }
+    },
+    "createdAt": "2025-05-16T01:06:07.851Z",
+    "tags": [
+      {
+        "_id": "hos002",
+        "name": "HOS002",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "Q-HE4oaR4QBaUaSPFJ16H0QRhONuC9z0BHGuM9DXdZQ",
+    "thingToken": "uHoS_2zU76TVn-Ky2VxWd77qqzaSt0yx5R5nESmI4wM",
+    "description": {
+      "name": "Esc. Pep Ventura - HOS060-S06-01 ESCOLA PEP VENTURA",
+      "geo": {
+        "lat": 41.3747641316128,
+        "long": 2.12140885270052
+      }
+    },
+    "createdAt": "2025-05-16T01:06:01.644Z",
+    "tags": [
+      {
+        "_id": "hos060",
+        "name": "HOS060",
+        "organizationId": 33788
+      },
+      {
+        "_id": "d16fe086647c",
+        "name": "D16FE086647C",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "IE3Iq_ZaMxN-aSQpHcyKmOFwZ0B9rb1I3NhV8zVhMiQ",
+    "thingToken": "rvkkSOeWPWYSf88hiAA1LoVrsS32Z7r4-Lkm9BoEd8k",
+    "description": {
+      "name": "S06-01 D16BA113364X",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-05-16T01:05:55.783Z",
+    "tags": []
+  },
+  {
+    "_id": "sTaMcxyhtv-W0JzhVI_BCwMswsE9uRf3luZ2rWTG608",
+    "thingToken": "CxAlR1gDoscAht_I3jYXbNj8jirGmx0XR5GxAO2MHlk",
+    "description": {
+      "name": "A. B. S. S. - Dte. IV/V - HOS026-S06-01 D16BA108177L",
+      "geo": {
+        "long": 2.10273187524804,
+        "lat": 41.3709523746761
+      }
+    },
+    "createdAt": "2025-05-16T01:05:49.257Z",
+    "tags": [
+      {
+        "_id": "hos026",
+        "name": "HOS026",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "od_yGwPXsH56h5XhPxWcivXMrPSoIIZO_2dmGg0zz60",
+    "thingToken": "yg-udfWTRpuNC3FtQih3ZpFdu8toOAtHXMFuTKwPBmg",
+    "description": {
+      "name": "Esc. Patufet Sant Jordi - HOS056-S06-01 D15FE071450J",
+      "geo": {
+        "long": 2.10273712571236,
+        "lat": 41.3577143732239
+      }
+    },
+    "createdAt": "2025-05-16T01:05:42.863Z",
+    "tags": [
+      {
+        "_id": "hos056",
+        "name": "HOS056",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "lVrm5BWWbrAjSZG817TNhiDwY47f7X2_Ih50-ayB2DY",
+    "thingToken": "bYJPodq0wX9NZTAIRG1bTxBtF5GcUoPcgp0vJ9-pmQk",
+    "description": {
+      "name": "Esc. Rest. El Repartidor - HOS139-S06-01 C15FA550083J",
+      "geo": {
+        "long": 2.09970864105426,
+        "lat": 41.3617170276881
+      }
+    },
+    "createdAt": "2025-05-16T01:05:37.164Z",
+    "tags": [
+      {
+        "_id": "hos139",
+        "name": "HOS139",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "0C7LfHB9bIRGX-SiaDXugkLagp2xW-h1w5SFarevArc",
+    "thingToken": "RNWaIvnCew0pYpADN0omc7uhOD3Gkvyf12d5Wi9heUQ",
+    "description": {
+      "name": "Regidoria Districte II - HOS034-S06-01 C15FA260208R",
+      "geo": {
+        "lat": 41.3706249073488,
+        "long": 2.12171107190601
+      }
+    },
+    "createdAt": "2025-05-16T01:05:30.633Z",
+    "tags": [
+      {
+        "_id": "hos034",
+        "name": "HOS034",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "tb1j1L57S_Wx9J8VsZpMWZI5ZCoLPm1IKdIFuJZ8Gz4",
+    "thingToken": "gQ4wzlfbaeNWcQAy7jAJLYHUDA0O66MT6tyCg9BEyzs",
+    "description": {
+      "name": "HOS001-S06-01 I19BD035462J",
+      "geo": {
+        "long": 2.09613941249931,
+        "lat": 41.3610058832045
+      }
+    },
+    "createdAt": "2024-10-22T09:41:26.714Z",
+    "tags": [
+      {
+        "_id": "hos001",
+        "name": "HOS001",
+        "organizationId": 33788
+      }
+    ]
+  }
+]

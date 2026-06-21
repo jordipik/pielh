@@ -1,0 +1,211 @@
+[
+  {
+    "_id": "PEg5pj0YDAW1EyQPlZueFU1qIe1D_2GBXjrKfDkKD1Y",
+    "thingToken": "4inJpdWslYv2jA6BCgn_be3MIEEiyyB0sqNSflPTw6I",
+    "description": {
+      "name": "HOS041-S14-Pira",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-11-27T14:58:43.291Z",
+    "tags": [
+      {
+        "_id": "hos041",
+        "name": "HOS041",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "sG_BB8DECN1wujW_JV4TMcI4sJWHkhTfgdKsVgmhGH0",
+    "thingToken": "_6LjNuZe3gtclO88X-aQn-AczI2261jnAZFIl3Svy48",
+    "description": {
+      "name": "HOS125-S14-Pira",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-30T13:02:37.769Z",
+    "tags": [
+      {
+        "_id": "hos125",
+        "name": "HOS125",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "LzkJBGULIamiYWMWQU1gpMibKgD76011bTxkb6h-lb0",
+    "thingToken": "rwwVpUBM7xGYhq-u0jklF7J5ShnHKXX2X12rTXtbpbA",
+    "description": {
+      "name": "HOS126-S14-Pira",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-10-14T11:20:31.312Z",
+    "tags": [
+      {
+        "_id": "hos126",
+        "name": "HOS126",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "i8iqSdTF6gFMth3hTHzeGN5G5g1UIhnqlQuAenxrF2g",
+    "thingToken": "fzmB5i_c-OqKA_eB7bIAVtvFfIn87GUCmjtlRhxyCTs",
+    "description": {
+      "name": "HOS047-S14-Pira",
+      "geo": {
+        "lat": null,
+        "long": null
+      }
+    },
+    "createdAt": "2025-07-01T09:38:03.203Z",
+    "tags": [
+      {
+        "_id": "hos047",
+        "name": "HOS047",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "-HsxemWRW-ExWktMgBUmveEYM-i3_xgXKTu0QThB2ww",
+    "thingToken": "zb35gyJyIRD9VgLDBFAHc4Bs8viksTcAXu3kS0tyvDQ",
+    "description": {
+      "name": "HOS054-S14-Pira",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-06-27T09:28:59.931Z",
+    "tags": [
+      {
+        "_id": "hos054",
+        "name": "HOS054",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "YGSjb5EKW1xBxt4-4gpcCBYSfiPkHfokGNP_OI6cgbM",
+    "thingToken": "aIHPmb63-31ROsAa8l3Il0CeouZ5Ehf2VkZP4X1KpSk",
+    "description": {
+      "name": "HOS061-S14-Pira",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-06-26T11:04:32.133Z",
+    "tags": [
+      {
+        "_id": "hos061",
+        "name": "HOS061",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "_xXI6oDsL1_Ejcj_gCX7V6G-84seudX7QwgXEs_DTvc",
+    "thingToken": "sJx_vHVR3juXPcCbBn88sHWdgcv0B4MBOQmjYUQlT-w",
+    "description": {
+      "name": "HOS053-S14-Pira",
+      "geo": {
+        "lat": null,
+        "long": null
+      }
+    },
+    "createdAt": "2025-06-26T09:11:53.054Z",
+    "tags": [
+      {
+        "_id": "hos053",
+        "name": "HOS053",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "c1zmB6dLtw0VkHW4bsE-2MnPtYcQfCYhNG4EROm_daI",
+    "thingToken": "xJ1kTZjBH_dVz2-k4Zh6ddP2Y1oF4IQkJyp1hP9NHmo",
+    "description": {
+      "name": "HOS050-S14-Pira",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-06-25T09:23:11.650Z",
+    "tags": [
+      {
+        "_id": "hos050",
+        "name": "HOS050",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "jBsNbHWiwtzHcPZfwD8a8U2qpLL9r3_1TvlVJ2i_Gfo",
+    "thingToken": "KJLNP4duG8_2EJxA3MOix_qTNX47DUk08e-amMpSKZM",
+    "description": {
+      "name": "HOS045-S14-Pira",
+      "geo": {
+        "lat": null,
+        "long": null
+      }
+    },
+    "createdAt": "2025-06-19T14:03:18.989Z",
+    "tags": [
+      {
+        "_id": "hos045",
+        "name": "HOS045",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "nIIlgG7VN-LseFjc7uLlPwuFlgEbflpD9hPwgARzIVk",
+    "thingToken": "KgWOxOTKJUsm3y_P4YvQzS-StKUG0Mb1C0Fe3s3CKK0",
+    "description": {
+      "name": "HOS058-S14-Pira",
+      "geo": {
+        "lat": null,
+        "long": null
+      }
+    },
+    "createdAt": "2025-06-19T12:04:06.914Z",
+    "tags": [
+      {
+        "_id": "hos058",
+        "name": "HOS058",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "riwaLyHvD745nolv8E9uIqyuiVfTYwUHWgLnSHaxCYE",
+    "thingToken": "Hi2iO1UMLqtKGou_3LXP1LO16_Ps_K38YMCoGlzhXIE",
+    "description": {
+      "name": "HOS039-S14-Pira",
+      "geo": {
+        "lat": null,
+        "long": null
+      }
+    },
+    "createdAt": "2025-06-12T15:24:01.402Z",
+    "tags": [
+      {
+        "_id": "hos039",
+        "name": "HOS039",
+        "organizationId": 33788
+      }
+    ]
+  }
+]

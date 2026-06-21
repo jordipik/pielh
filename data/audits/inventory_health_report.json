@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-06-20T17:57:26.728839+00:00",
-  "source_summary": "C:\\Users\\jordi\\source\\repos\\pielh\\pielh_v02\\data\\audits\\thethings_activity_20260620_174117.csv",
+  "generated_at": "2026-06-20T22:55:25.568993+00:00",
+  "source_summary": "C:\\Users\\jordi\\source\\repos\\pielh\\pielh_v02\\data\\audits\\thethings_activity_20260620_223934.csv",
   "executive_summary": {
     "total_sensors": 1564,
     "valid_things": 1564,
     "invalid_things": 0,
-    "sensors_active": 244,
+    "sensors_active": 238,
     "sensors_with_data": 286,
     "sensors_no_data": 1277,
     "sensors_token_invalid": 0,
     "api_errors": 0
   },
   "kpis_demo": {
-    "demo_ready_sensors": 244,
+    "demo_ready_sensors": 238,
     "demo_ready_systems": 10,
-    "demo_ready_percent": 15.6
+    "demo_ready_percent": 15.2
   },
   "classification": {
     "A_operative": [
@@ -22,8 +22,8 @@
       "S22",
       "S21",
       "S02",
-      "S04",
       "S05",
+      "S04",
       "S14A",
       "S07",
       "S01",
@@ -105,16 +105,16 @@
       "total": 112,
       "valid": 112,
       "invalid": 0,
-      "active_24h": 21,
-      "active_7d": 12,
-      "stale_30d": 7,
+      "active_24h": 20,
+      "active_7d": 7,
+      "stale_30d": 13,
       "stale_90d": 0,
       "inactive_90d": 0,
       "data_no_timestamp": 0,
       "no_data": 72,
       "has_real_value": 40,
       "class": "A",
-      "active": 33,
+      "active": 27,
       "with_data": 40,
       "pct_invalid": 0.0
     },
@@ -411,8 +411,8 @@
       "total": 139,
       "valid": 139,
       "invalid": 0,
-      "active_24h": 46,
-      "active_7d": 3,
+      "active_24h": 45,
+      "active_7d": 4,
       "stale_30d": 1,
       "stale_90d": 0,
       "inactive_90d": 0,

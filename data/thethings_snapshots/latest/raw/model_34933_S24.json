@@ -1,0 +1,126 @@
+[
+  {
+    "_id": "56eOEgFbZ1uTmth4Fz0iv2O3PFcYR_Oxhx7J-ONuaTY",
+    "lastSeen": "2026-06-21T18:27:21.047Z",
+    "lastRead": "2026-06-21T18:27:21.028Z",
+    "lastWrite": "2026-06-21T18:27:21.047Z",
+    "thingToken": "s0ouQDNzpmYP-meQYcAP9-zR55K3rJr-wzUdcO2Xgsg",
+    "description": {
+      "name": "HOS050-1",
+      "geo": {}
+    },
+    "createdAt": "2026-06-10T11:03:58.726Z",
+    "tags": [
+      {
+        "_id": "hos050",
+        "name": "HOS050",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "34W68hDc3Ix1ktSZqCmibuuWHMtgYU_zad6IHb_Jqxo",
+    "thingToken": "go9e6WCLp_OgrVE4B7AWP3qBepswULImKCOVN4_YwF0",
+    "description": {
+      "name": "HOS050-S24-01",
+      "geo": {
+        "long": 2.103239409922257,
+        "lat": 41.368885152035766
+      }
+    },
+    "createdAt": "2025-06-25T08:31:30.861Z",
+    "tags": [
+      {
+        "_id": "hos050",
+        "name": "HOS050",
+        "organizationId": 33788
+      },
+      {
+        "_id": "cu20",
+        "name": "CU20",
+        "organizationId": 33788
+      },
+      {
+        "_id": "active",
+        "name": "ACTIVE",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "aZBD3hlmfJDbRBn8je2u4B69lkgs0iI7qkFFM2qY_A4",
+    "thingToken": "VIEikVv7INtCr1VtaJ40G04FTCVq1Xpd0Iqo0i1kNxs",
+    "description": {
+      "name": "HOS147-S24-01",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-03-25T09:24:31.950Z",
+    "tags": [
+      {
+        "_id": "hos147",
+        "name": "HOS147",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "9Jrh-kC6ucBalLPshXRrn4oCG4iTJJQfqGWt0wHuSsg",
+    "thingToken": "WOyWGi433HrzdcUoH7B-ngKB1osUa6NOSYrBl9q5298",
+    "description": {
+      "name": "HOS149-S24-01",
+      "geo": {
+        "lat": null,
+        "long": null
+      }
+    },
+    "createdAt": "2025-03-24T10:52:31.338Z",
+    "tags": [
+      {
+        "_id": "hos149",
+        "name": "HOS149",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "l76Aj26SNxyYv0_ysD-lgBZIWqessEGbbVmN4xU7Xv8",
+    "thingToken": "OIZVoWA66vR6DyAQ8dFPUwa9vuRP2Ao49oBxjutRmx0",
+    "description": {
+      "name": "HOS149-S24-02",
+      "geo": {
+        "lat": null,
+        "long": null
+      }
+    },
+    "createdAt": "2025-03-24T10:28:56.125Z",
+    "tags": [
+      {
+        "_id": "hos149",
+        "name": "HOS149",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "smg4VRljFCIW9CgX-Q6-uFj29u4G_3HUNOCFxWMA080",
+    "thingToken": "KF_S1jdSsdZ913deUrNq51rz-I3o4cmBPamICSO6JEM",
+    "description": {
+      "name": "HOS147-S24-02",
+      "geo": {
+        "long": null,
+        "lat": null
+      }
+    },
+    "createdAt": "2025-01-15T09:26:45.332Z",
+    "tags": [
+      {
+        "_id": "hos147",
+        "name": "HOS147",
+        "organizationId": 33788
+      }
+    ]
+  }
+]

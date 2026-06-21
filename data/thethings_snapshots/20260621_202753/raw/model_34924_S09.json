@@ -1,0 +1,1009 @@
+[
+  {
+    "_id": "LmLfYewN_buZMvZHhdhR7Yr0Uhjfz7MTHEpEaV6eSW4",
+    "thingToken": "FiJQ4p1RHlv1ImvWfjQ0LgFdDFGl3u5iys28mfYQdEs",
+    "description": {
+      "name": "HOS010-S09-01",
+      "geo": {
+        "lat": 41.35985412714199,
+        "long": 2.1226581815352565
+      }
+    },
+    "createdAt": "2026-04-21T09:48:57.043Z",
+    "tags": [
+      {
+        "_id": "hos010",
+        "name": "HOS010",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "NDj5yMvO4s44pmMEAiyFW_K61Rx0LUFmcuFXQPDuL4Q",
+    "thingToken": "SRj_oFJkQE-DzLxjSzoYkiYR-QXWxT0abwYo_MEopOQ",
+    "description": {
+      "name": "HOS001-S09-09",
+      "geo": {
+        "lat": 41.36100588320447,
+        "long": 2.0961394124993054
+      }
+    },
+    "createdAt": "2025-11-03T13:06:09.373Z",
+    "tags": [
+      {
+        "_id": "hos001",
+        "name": "HOS001",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "5pYLAg-bdx0y0mkqPNhAelPsvVanpx9Bdp-LtFgQ4YI",
+    "thingToken": "i6OJXSwzd4k63dCLIcMAvb-fa0HN2QlQhSJ544mFRoE",
+    "description": {
+      "name": "HOS001-S09-05",
+      "geo": {
+        "lat": 41.36100588320447,
+        "long": 2.0961394124993054
+      }
+    },
+    "createdAt": "2025-11-03T13:04:09.929Z",
+    "tags": [
+      {
+        "_id": "hos001",
+        "name": "HOS001",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "2QZ-2gJ28GOIU8YuPOpPNk5yEAaNeAkGooNPZM4NGY0",
+    "thingToken": "YgTwmsMkEclqB3wQDwbX6fDGj8U9zpl57gYgGJ6ki4M",
+    "description": {
+      "name": "HOS001-S09-08",
+      "geo": {
+        "lat": 41.36100588320447,
+        "long": 2.0961394124993054
+      }
+    },
+    "createdAt": "2025-11-03T13:04:08.911Z",
+    "tags": [
+      {
+        "_id": "hos001",
+        "name": "HOS001",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "RSw7P8HuwxVSzMUjiHTvY7ujqaoqT1dwYEsls7Fjwwk",
+    "thingToken": "903Tk2SifMihc0bqjvPfYMisinuV9khwPdwdZ1dUt2s",
+    "description": {
+      "name": "HOS001-S09-07",
+      "geo": {
+        "lat": 41.36100588320447,
+        "long": 2.0961394124993054
+      }
+    },
+    "createdAt": "2025-11-03T13:04:08.600Z",
+    "tags": [
+      {
+        "_id": "hos001",
+        "name": "HOS001",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "xWhw6kBzX0wEtvL_zdFVhx3gX7UKR9nPCWOKC-SLKeQ",
+    "thingToken": "jnxF4Cb7q9enEuxFzws5mEta9X43qxtEc-aSPDg2-q8",
+    "description": {
+      "name": "HOS001-S09-02",
+      "geo": {
+        "lat": 41.36100588320447,
+        "long": 2.0961394124993054
+      }
+    },
+    "createdAt": "2025-11-03T13:04:07.228Z",
+    "tags": [
+      {
+        "_id": "hos001",
+        "name": "HOS001",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "Ig5Tf5n4RLVyolYAjwZbZIUHpIuMvgo0is8amE9yDis",
+    "thingToken": "mQOrDPSxIrWCmCmkLyRAuY3D4UmoMxwHTTcm553Jp-o",
+    "description": {
+      "name": "HOS001-S09-06",
+      "geo": {
+        "lat": 41.36100588320447,
+        "long": 2.0961394124993054
+      }
+    },
+    "createdAt": "2025-11-03T13:04:05.442Z",
+    "tags": [
+      {
+        "_id": "hos001",
+        "name": "HOS001",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "s81Sij6MKyATC-vJnJp8RnLzfjW6mJ1WndBeR5iX9Es",
+    "thingToken": "_HBXZKq568qlNg5vbWb7WKSfbzGMrJB9LeLQKgm4vrc",
+    "description": {
+      "name": "HOS001-S09-04",
+      "geo": {
+        "lat": 41.36100588320447,
+        "long": 2.0961394124993054
+      }
+    },
+    "createdAt": "2025-11-03T12:52:04.071Z",
+    "tags": [
+      {
+        "_id": "hos001",
+        "name": "HOS001",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "bNtferF9NnyoJFodefEzF4opAp1mLzoXIq-alBCnXds",
+    "thingToken": "0TDOJDApMx5uQ7iJDjpCm8A1EtZnVgZF2U8nJ9p8v3c",
+    "description": {
+      "name": "HOS001-S09-03",
+      "geo": {
+        "lat": 41.36100588320447,
+        "long": 2.0961394124993054
+      }
+    },
+    "createdAt": "2025-11-03T12:52:03.287Z",
+    "tags": [
+      {
+        "_id": "hos001",
+        "name": "HOS001",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "4Nb6_I39lUUsAsLUJEu3V3gPqh2F8l5P4oWczmW8kEM",
+    "thingToken": "h3W-FpSRkPGXJldndhwbVsaSsKGAY9tXxnkjrvxEXP8",
+    "description": {
+      "name": "HOS001-S09-01",
+      "geo": {
+        "lat": 41.36100588320447,
+        "long": 2.0961394124993054
+      }
+    },
+    "createdAt": "2025-11-03T12:42:01.109Z",
+    "tags": [
+      {
+        "_id": "hos001",
+        "name": "HOS001",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "YTv6iqSqxrI7K27ygZ8cs1KM1ODSZiUUTGloLY_WTv4",
+    "thingToken": "m3iaTTCY60xsIOZCMF_9rnoPF9hXudN62oK9RN_mzow",
+    "description": {
+      "name": "HOS036-S09-01",
+      "geo": {
+        "lat": 41.36664296230814,
+        "long": 2.1180993103710057
+      }
+    },
+    "createdAt": "2025-11-03T09:24:06.647Z",
+    "tags": [
+      {
+        "_id": "hos036",
+        "name": "HOS036",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "vToFcnkII6eHwyMOdUa9IyHpNguPwEXqNyRDFAi7XrU",
+    "thingToken": "7oGm98FW8uKZLvCiJGY3s70AWIQWgTZii-sjqMJ7ZKo",
+    "description": {
+      "name": "HOS088-S09-01",
+      "geo": {
+        "lat": 41.364854844215394,
+        "long": 2.1281175668513144
+      }
+    },
+    "createdAt": "2025-11-03T09:14:07.548Z",
+    "tags": [
+      {
+        "_id": "hos088",
+        "name": "HOS088",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "IMf9Hj5mVzgEkzvreJdzLI0SAyuZ6Z1_CXhbEkjuZRc",
+    "thingToken": "knOfuDpsGcA28-jF9Rj1vew-2ORDH-7yonI-CZtwEgU",
+    "description": {
+      "name": "HOS125-S09-01",
+      "geo": {
+        "lat": 41.36122859752088,
+        "long": 2.097298010370756
+      }
+    },
+    "createdAt": "2025-10-30T13:06:04.500Z",
+    "tags": [
+      {
+        "_id": "hos125",
+        "name": "HOS125",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "93HGX59YsFaRNTZVqfwtJmZfdeqUZM5jPMMpCYoDa_8",
+    "thingToken": "b7JZcx4xZ1npluuf7CA4dfGUAVyi4glL7PWrkUlqZT8",
+    "description": {
+      "name": "HOS099-S09-01",
+      "geo": {
+        "lat": 41.36258512047963,
+        "long": 2.093596369897219
+      }
+    },
+    "createdAt": "2025-10-28T10:06:03.582Z",
+    "tags": [
+      {
+        "_id": "hos099",
+        "name": "HOS099",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "t5f4KF0GIg8m4ZfjTkxpWCqfaqLpsJDeJbNb3yAHPBc",
+    "thingToken": "0_btQlWz0EULQzMs6mlysibhG-FmX0Vm0vgOwQBOHo0",
+    "description": {
+      "name": "HOS037-S09-01",
+      "geo": {
+        "lat": 41.36198726423529,
+        "long": 2.109137281535389
+      }
+    },
+    "createdAt": "2025-10-27T09:32:04.700Z",
+    "tags": [
+      {
+        "_id": "hos037",
+        "name": "HOS037",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "Roi3kFm7YKvVhbuc_w62PQacANWGnTPqgw-c0BqiotM",
+    "thingToken": "Bict8HjDoxDP9_DBMRKNErh8DA_oPFLmChjB3jDznP4",
+    "description": {
+      "name": "HOS098-S09-01",
+      "geo": {
+        "lat": 41.3702258014712,
+        "long": 2.1010214833837733
+      }
+    },
+    "createdAt": "2025-10-14T10:08:08.840Z",
+    "tags": [
+      {
+        "_id": "hos098",
+        "name": "HOS098",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "NWBowCBSJyX_47oHnK3baDxii21cwUFkRAYiPPdc-8A",
+    "thingToken": "wr1P3wXxjQTTuJjfk5pUShoxBM8G0wPa4dNvxI5Nv8U",
+    "description": {
+      "name": "HOS126-S09-01",
+      "geo": {
+        "lat": 41.360494767375066,
+        "long": 2.0976899950289667
+      }
+    },
+    "createdAt": "2025-09-17T11:18:06.935Z",
+    "tags": [
+      {
+        "_id": "hos126",
+        "name": "HOS126",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "vT2oBjF4Yxl59fBNHYAZBDxorLuJqVn6oYFjjP_oSIw",
+    "thingToken": "ntHzhgxbJh-aNT_jNde66y6ukaMdwxLtvX_HsVEEDpE",
+    "description": {
+      "name": "HOS132-S09-01",
+      "geo": {
+        "lat": 41.349618730784414,
+        "long": 2.0957683290275684
+      }
+    },
+    "createdAt": "2025-09-16T12:02:05.009Z",
+    "tags": [
+      {
+        "_id": "hos132",
+        "name": "HOS132",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "XTYejIVGr5DQW8jV1lLSH0V2zv5wPBuiLvmlLf9siCA",
+    "thingToken": "oQ5IzldCI6EtRFILOi8xTGGOQBhWQ_eZhayTuYYW1EE",
+    "description": {
+      "name": "HOS006-S09-01",
+      "geo": {
+        "lat": 41.35337367560269,
+        "long": 2.1236383583524563
+      }
+    },
+    "createdAt": "2025-09-15T09:44:04.361Z",
+    "tags": [
+      {
+        "_id": "hos006",
+        "name": "HOS006",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "HDy5LIW50DGzm7hysN_vkt_SHkTA7WaKsiNzgeEcFig",
+    "thingToken": "EkQjZjhZ2_-fhlczRt_actIbK1fH6K00v-NuQ_3NMJU",
+    "description": {
+      "name": "HOS005-S09-01",
+      "geo": {
+        "lat": 41.35914207845774,
+        "long": 2.110842108618114
+      }
+    },
+    "createdAt": "2025-07-17T09:46:31.058Z",
+    "tags": [
+      {
+        "_id": "hos005",
+        "name": "HOS005",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "_V1kt0ea7lUnYewYPLHOloxgC8K5ZXSN1c702mruvuI",
+    "thingToken": "95cJuxLQhxKQcoLEhR2aHYwju6M_w01huJu9SMdFZ0Q",
+    "description": {
+      "name": "HOS022-S09-01",
+      "geo": {
+        "lat": 41.366805261886064,
+        "long": 2.1152714527001515
+      }
+    },
+    "createdAt": "2025-07-15T09:08:02.034Z",
+    "tags": [
+      {
+        "_id": "hos022",
+        "name": "HOS022",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "RGhI1XmrRTWfwf38Xkjv5YrLYXoHagZ_hSEVNJbZaHE",
+    "thingToken": "q09HjlK1z9ALzRRM7WliJNCdn8XsMhUXf9SeeY5Ew9U",
+    "description": {
+      "name": "HOS025-S09-01",
+      "geo": {
+        "lat": 41.373745441670316,
+        "long": 2.1046224392067723
+      }
+    },
+    "createdAt": "2025-07-10T10:28:08.523Z",
+    "tags": [
+      {
+        "_id": "hos025",
+        "name": "HOS025",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "-SP0Ig53IAiKa3pxuMCnWxHWhtq1MYlVQnKIQBSdv2s",
+    "thingToken": "Lf39jcIlVhn7MgiE4HKm3C16Lb6M7oyocb4EpdkLdr0",
+    "description": {
+      "name": "HOS049-S09-01",
+      "geo": {
+        "lat": 41.35352359044607,
+        "long": 2.1090857857292793
+      }
+    },
+    "createdAt": "2025-07-10T09:25:03.980Z",
+    "tags": [
+      {
+        "_id": "hos049",
+        "name": "HOS049",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "S68vtTcBF1NZ8QhOnzHv2C_U9M52d9pbae6iz5Qf-oA",
+    "thingToken": "d440_T_MKXcAYpH4UZjwRMIa83ASFdPAqEPT7wPEKt4",
+    "description": {
+      "name": "HOS061-S09-01",
+      "geo": {
+        "lat": 41.37479624882629,
+        "long": 2.111619596877657
+      }
+    },
+    "createdAt": "2025-07-10T08:06:14.902Z",
+    "tags": [
+      {
+        "_id": "hos061",
+        "name": "HOS061",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "9wKPlVnymbj9JQ5yVtHkdzX_KRFnFi31Z-4jRpKUppU",
+    "thingToken": "ERdHPLFe5udZ55hXpD0idI2nJF0_r4FBENekMZa3h-U",
+    "description": {
+      "name": "HOS027-S09-01",
+      "geo": {
+        "lat": 41.352336592468866,
+        "long": 2.1141417163978398
+      }
+    },
+    "createdAt": "2025-07-04T09:09:37.390Z",
+    "tags": [
+      {
+        "_id": "hos027",
+        "name": "HOS027",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "6UlNH6ii3GClCsJEN-wZk-iBxCFpECBBvyzleGgCYWE",
+    "thingToken": "7qWG2ZWvmAeFCAtdJrJo0gYnEZhEEw3ZgzhSpsNF7oI",
+    "description": {
+      "name": "HOS030-S09-01",
+      "geo": {
+        "lat": 41.36737156926719,
+        "long": 2.1317029559931697
+      }
+    },
+    "createdAt": "2025-07-03T11:14:30.223Z",
+    "tags": [
+      {
+        "_id": "hos030",
+        "name": "HOS030",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "B95-vd5FjGMpA1yDDevgaT9kENGr2KWZct1Snvonjqc",
+    "thingToken": "LPAFVAGKrAfDU2rLJXFKRB1DXMwg8unRbctLKhE4TrY",
+    "description": {
+      "name": "HOS021-S09-01",
+      "geo": {
+        "lat": 41.367964758872574,
+        "long": 2.1275503103710465
+      }
+    },
+    "createdAt": "2025-07-03T08:07:02.342Z",
+    "tags": [
+      {
+        "_id": "hos021",
+        "name": "HOS021",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "gh-_7Jdpkjd7mPlEw9qcNkn8X1lW2gZirKXq1HQ-J7A",
+    "thingToken": "S9X6zvb1Vvf8MFht4SheAxKj5N_Orv3-_ZG-XOnydbc",
+    "description": {
+      "name": "HOS004-S09-01",
+      "geo": {
+        "lat": 41.35642266948409,
+        "long": 2.1089592931807704
+      }
+    },
+    "createdAt": "2025-07-01T10:19:18.271Z",
+    "tags": [
+      {
+        "_id": "hos004",
+        "name": "HOS004",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "2mENPnwBcnarl1lgJfm9WuPmlnmoCsmV3IbCBRKwndE",
+    "thingToken": "vU4kCLkSPZ9WWH8jAUJaHxXXYN69ypTUlE1ZMzMHM4M",
+    "description": {
+      "name": "HOS053-S09-01",
+      "geo": {
+        "lat": 41.373052201540304,
+        "long": 2.110847583383893
+      }
+    },
+    "createdAt": "2025-06-26T07:24:33.610Z",
+    "tags": [
+      {
+        "_id": "hos053",
+        "name": "HOS053",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "NMYD9-clqFZXBzsmc0KEZfDP2r8Ls54yipYhBq-Pvl0",
+    "thingToken": "8TU4099CtyvLTgEQVvIrqyzhy7H8cc3spO7WHgfSIcY",
+    "description": {
+      "name": "HOS026-S09-01",
+      "geo": {
+        "lat": 41.37095237467606,
+        "long": 2.102731875248043
+      }
+    },
+    "createdAt": "2025-06-25T10:15:39.527Z",
+    "tags": [
+      {
+        "_id": "hos026",
+        "name": "HOS026",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ohy9tRpwbOjtSAEMy1Om6y8bsPsbHIQWRe9IJHfwejE",
+    "thingToken": "fNU7Z2q-LbgOQDDcV2MlBfWVHxA9Z36cfsCfn565iQo",
+    "description": {
+      "name": "HOS045-S09-01",
+      "geo": {
+        "lat": 41.36633711793946,
+        "long": 2.109332362917055
+      }
+    },
+    "createdAt": "2025-06-19T09:20:04.609Z",
+    "tags": [
+      {
+        "_id": "hos045",
+        "name": "HOS045",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "5TyJvKPgSTwoXC7EQqG2k_9xvpNjfoYzwJYIyy94gUQ",
+    "thingToken": "Rout7aT1Hy_e9D-_IglDBJGxOETm9u0AmvUuM4cX8rs",
+    "description": {
+      "name": "HOS064-S09-01",
+      "geo": {
+        "lat": 41.37564228295669,
+        "long": 2.1068291968777477
+      }
+    },
+    "createdAt": "2025-06-18T11:24:37.739Z",
+    "tags": [
+      {
+        "_id": "hos064",
+        "name": "HOS064",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "zwr7-rnFIWflYZFKoEipQdz7Ioj86CBC-kpnfRhifb8",
+    "thingToken": "p720v5I9vKQxvNA8HdT9N8tpR_Jkp--lFcf0Y94iXJI",
+    "description": {
+      "name": "HOS065-S09-01",
+      "geo": {
+        "lat": 41.3694666582098,
+        "long": 2.1224105680419783
+      }
+    },
+    "createdAt": "2025-06-18T09:45:58.324Z",
+    "tags": [
+      {
+        "_id": "hos065",
+        "name": "HOS065",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "kaHAq8c9slwXcM88m9qaeOzixqqHb5njgMun8CZRqnA",
+    "thingToken": "zqpYriy7XACSy2CzjoOxsNE7oa0UaMVgiY3MXlqJiW8",
+    "description": {
+      "name": "HOS062-S09-01",
+      "geo": {
+        "lat": 41.36605298642543,
+        "long": 2.1229377589519003
+      }
+    },
+    "createdAt": "2025-06-18T07:47:49.198Z",
+    "tags": [
+      {
+        "_id": "hos062",
+        "name": "HOS062",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "XDzfBx8APjdQ_gcuDUCP7bpC6fMOuhQ7wHVuUwkZT5Q",
+    "thingToken": "iXXhzsXMsvcVdrVM1zYVEzidYrWptOBDEkMOWw-NYfM",
+    "description": {
+      "name": "HOS069-S09-01",
+      "geo": {
+        "lat": 41.36952525205977,
+        "long": 2.094770390538484
+      }
+    },
+    "createdAt": "2025-06-17T13:48:31.966Z",
+    "tags": [
+      {
+        "_id": "hos069",
+        "name": "HOS069",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "sp5gBIs7SQcZOnR7wPvH4qeLJA5wEL3k7Dz2sGB21Ck",
+    "thingToken": "kUyLAYYVT--QKL8fn3dgnMBXAhxJ_2Ayo8EZuZ5DrvQ",
+    "description": {
+      "name": "HOS060-S09-01",
+      "geo": {
+        "lat": 41.374764131612785,
+        "long": 2.121408852700516
+      }
+    },
+    "createdAt": "2025-06-16T13:00:52.089Z",
+    "tags": [
+      {
+        "_id": "hos060",
+        "name": "HOS060",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "dRqz3aHXPVln9QtOa9pnQWF3GUsbay-ujElXt73mhes",
+    "thingToken": "5Ur54buQUeOaBJhX1ffU_qY7N2V122Tgh6IrAN6kFMU",
+    "description": {
+      "name": "HOS043-S09-01",
+      "geo": {
+        "lat": 41.36226896760275,
+        "long": 2.133601222082758
+      }
+    },
+    "createdAt": "2025-06-16T10:18:41.821Z",
+    "tags": [
+      {
+        "_id": "hos043",
+        "name": "HOS043",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "ZmDtgWhLUNDQfrrxxy-u2ipEd_qim5yP1pkDp6I1TA0",
+    "thingToken": "EMz7sDxwW5rum5jsG_MuS4FD5KaDj_SWdBCZo9sgSwc",
+    "description": {
+      "name": "HOS034-S09-01",
+      "geo": {
+        "lat": 41.370624907348784,
+        "long": 2.121711071906005
+      }
+    },
+    "createdAt": "2025-06-12T10:26:40.682Z",
+    "tags": [
+      {
+        "_id": "hos034",
+        "name": "HOS034",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "uRSdy610ocTsyrb6uSDVSyOgYgGdbVx54KWTnKhCGoc",
+    "thingToken": "tIe2_ncTFgf1kclo-rqytT-S7GTJnSYbTmEE5VDO6bA",
+    "description": {
+      "name": "HOS052-S09-01",
+      "geo": {
+        "lat": 41.37586603668318,
+        "long": 2.115805373586468
+      }
+    },
+    "createdAt": "2025-06-10T08:46:08.814Z",
+    "tags": [
+      {
+        "_id": "hos052",
+        "name": "HOS052",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "67ajaSdW9k3fu3OUIE3GJh0ETO0MYzbG61k8N229w-c",
+    "thingToken": "gSe2yEoXABoujqtqlnKxXpyoIt5prhw1nN7Hj77iyc8",
+    "description": {
+      "name": "HOS024-S09-01",
+      "geo": {
+        "lat": 41.37545179029178,
+        "long": 2.117481366194221
+      }
+    },
+    "createdAt": "2025-06-10T08:08:21.819Z",
+    "tags": [
+      {
+        "_id": "hos024",
+        "name": "HOS024",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "jRCzTcKt42EzurnzXMSHwmvwCrdk0H6Mr0BQ-LNZJz4",
+    "thingToken": "dIhxWl33_zEdz3wvd2DR1WvupxBuQJK5hci0_47yYD4",
+    "description": {
+      "name": "HOS056-S09-01",
+      "geo": {
+        "lat": 41.357714373223935,
+        "long": 2.1027371257123595
+      }
+    },
+    "createdAt": "2025-06-06T08:02:49.271Z",
+    "tags": [
+      {
+        "_id": "hos056",
+        "name": "HOS056",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "HGm_i5nmhii2XGoHsT7nuRQ_Ntz_m5Oi2fvMZrC04JU",
+    "thingToken": "dmFwT1MyyXCiuXw1OzUGshAB4XXb1tWNnt2HEVLXUF4",
+    "description": {
+      "name": "HOS048-S09-01",
+      "geo": {
+        "lat": 41.36722136080466,
+        "long": 2.099782695029278
+      }
+    },
+    "createdAt": "2025-06-04T09:34:08.345Z",
+    "tags": [
+      {
+        "_id": "hos048",
+        "name": "HOS048",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "eMVpKRl1oJNPJG0L-4blkQQG0Hq4xZECCBgEVhn65Fc",
+    "thingToken": "gno2Z7pIKbGEsRfA7FwriEATbfx2EmvZVIkt3jQtTnY",
+    "description": {
+      "name": "HOS042-S09-01",
+      "geo": {
+        "lat": 41.37822331956801,
+        "long": 2.1036891396955038
+      }
+    },
+    "createdAt": "2025-06-03T07:44:24.518Z",
+    "tags": [
+      {
+        "_id": "hos042",
+        "name": "HOS042",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "DL-fD3fnP51-XTOWONOGpzI4F6Xppvv1BURiJNIcNUc",
+    "thingToken": "k782inzPKjVEHoLl5n6LZeTgrkSnpcwvJax3QQSXM0c",
+    "description": {
+      "name": "HOS023-S09-01",
+      "geo": {
+        "lat": 41.36780316660146,
+        "long": 2.110279383383685
+      }
+    },
+    "createdAt": "2025-05-23T08:23:28.313Z",
+    "tags": [
+      {
+        "_id": "hos023",
+        "name": "HOS023",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "RxQJ2m4no0U2yKgvhiqRsFrJejqsyMYUYuYLwI01hiQ",
+    "thingToken": "8twq-PcPtlwzsQHH6j1QepzTnGos1UJFaCdmd6dVMUU",
+    "description": {
+      "name": "HOS096-S09-01",
+      "geo": {
+        "lat": 41.37545458852764,
+        "long": 2.122055483384039
+      }
+    },
+    "createdAt": "2025-05-22T10:00:20.888Z",
+    "tags": [
+      {
+        "_id": "hos096",
+        "name": "HOS096",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "A6SGILBgpgMRDqOHE1poA682gh52ege7Cy9Y7X30_hw",
+    "thingToken": "2pEW1fpJItr0hUwNfzn-QdIYNoxyEzDvwjnUuFdqE4I",
+    "description": {
+      "name": "HOS136-S09-01",
+      "geo": {
+        "lat": 41.36258967284149,
+        "long": 2.0954845257125845
+      }
+    },
+    "createdAt": "2025-05-21T12:36:18.610Z",
+    "tags": [
+      {
+        "_id": "hos136",
+        "name": "HOS136",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "I0NuA9bvpFAWxD81F7LzRBl1eLWW890trQi2G7dtrws",
+    "thingToken": "XMVulfl5qDUE2JT53ylPI6keZ5xBRqV8sMpsOV2av6M",
+    "description": {
+      "name": "HOS012-S09-01",
+      "geo": {
+        "lat": 41.366017720075696,
+        "long": 2.106016968041826
+      }
+    },
+    "createdAt": "2025-05-09T09:00:52.892Z",
+    "tags": [
+      {
+        "_id": "hos012",
+        "name": "HOS012",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "PZRWO7DOZdGTpcs_o0xp8-Rtq2m8aag2DY7pxyvWiOM",
+    "thingToken": "00ystQ2DSCqt3-AAxP727jjO_AlXGbEGxEASBvYgkVo",
+    "description": {
+      "name": "HOS029-S09-01",
+      "geo": {
+        "lat": 41.371127544620045,
+        "long": 2.120963920621763
+      }
+    },
+    "createdAt": "2025-04-16T06:35:19.764Z",
+    "tags": [
+      {
+        "_id": "hos029",
+        "name": "HOS029",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "tG8RNnoUIBmuHA3bZv1QrqNbwClkJLJ1lyw7DU8nudU",
+    "thingToken": "DlFJBvNiSPOawZAdq5lpFjeJS99g5g-I1FFpyymUADQ",
+    "description": {
+      "name": "HOS033-S09-01",
+      "geo": {
+        "lat": 41.36168453454276,
+        "long": 2.1011643565642597
+      }
+    },
+    "createdAt": "2025-04-15T10:31:27.658Z",
+    "tags": [
+      {
+        "_id": "hos033",
+        "name": "HOS033",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "UbIXPMZ8Dx-6oFOzN2185lSCetoJHx2NJG9JI0KRngg",
+    "thingToken": "rZP9NX5aF2U8srqGfiMiWGo0sRQfm2rwZI-QvyLaXJ4",
+    "description": {
+      "name": "HOS035-S09-01",
+      "geo": {
+        "lat": 41.368273839983765,
+        "long": 2.127204235649481
+      }
+    },
+    "createdAt": "2025-03-19T05:31:14.639Z",
+    "tags": [
+      {
+        "_id": "hos035",
+        "name": "HOS035",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "l7T4S9Pld_NhzGh19PBdQwQwjhwdtZcQywW40hcxP8Y",
+    "thingToken": "rLw62xLtfqmpLaH19IZp5RoricyRc_D3HTvpvySW24A",
+    "description": {
+      "name": "HOS003-S09-01",
+      "geo": {
+        "lat": 41.36179764658288,
+        "long": 2.103427277911183
+      }
+    },
+    "createdAt": "2025-03-18T13:17:09.648Z",
+    "tags": [
+      {
+        "_id": "hos003",
+        "name": "HOS003",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "pCgzMMthpoLtjPEAt6-Yk5esBr6CXTNaN_z1oYnNFKc",
+    "thingToken": "FQfqgzntjCZ45txu2bUeeVSidnLOBDX0Zn7-kyruGWo",
+    "description": {
+      "name": "HOS008-S09-01",
+      "geo": {
+        "long": 2.1011804951287654,
+        "lat": 41.373093225408724
+      }
+    },
+    "createdAt": "2024-10-17T09:49:19.995Z",
+    "tags": [
+      {
+        "_id": "hos008",
+        "name": "HOS008",
+        "organizationId": 33788
+      }
+    ]
+  },
+  {
+    "_id": "T82zLZv10_5vfgujD_K1LIk5F9SMa80ReFjQeX-nrQU",
+    "thingToken": "kCUBbyVxIFi9Ogy0g0Hj_8x9jf72RiJrhTwuZ8OvfhQ",
+    "description": {
+      "name": "HOS028-S09-01",
+      "geo": {
+        "lat": 41.36417206184624,
+        "long": 2.110217784271812
+      }
+    },
+    "createdAt": "2024-10-17T09:35:15.445Z",
+    "tags": [
+      {
+        "_id": "hos028",
+        "name": "HOS028",
+        "organizationId": 33788
+      }
+    ]
+  }
+]

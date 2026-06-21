@@ -1,0 +1,211 @@
+======================================================================
+PIELH - Auditoria de Sensores Duplicados
+Fecha: 2026-06-21T00:25:37.825254
+======================================================================
+
+RESUMEN EJECUTIVO
+  Total sensores analizados   : 1564
+  IDs duplicados (sensores)   : 166  (77 grupos)
+  Thing IDs duplicados        : 0  (0 grupos)
+  Thing Tokens duplicados     : 0  (0 grupos)
+  Conflictos SYNC_CONFLICT    : 8
+  Posibles sensores OLD       : 4
+  Riesgo CRITICAL             : 8
+  Riesgo HIGH                 : 158
+
+======================================================================
+TOP 20 GRUPOS PROBLEMATICOS (por ID)
+======================================================================
+
+[CRITICAL] id='BET00230154'  (2 sensores)
+  thing_id=vyoObnVyAQLIp0G5lnS0BtrQliPxCRohVG5pEP9k
+    token  =uZAvrs3gMBlIHSS9cZ83  last_seen=2026-06-20T17:40:25  (0d)  ACTIVO
+  thing_id=a34c6eOz_xDApCTGMCdo1lTWTSxSnZddwunbQpnn
+    token  =awxZS_sPEbAZBnTM7d-v  last_seen=N/A  (?)  INACTIVO
+
+[CRITICAL] id='22323387990187'  (2 sensores)
+  thing_id=wbx3m-dvqOvXsyh8lnNerW274aW6GUL1tyPdpIjD
+    token  =SjDbanE2tgUEanaovhE3  last_seen=2026-06-20T17:41:38  (0d)  ACTIVO
+  thing_id=S_ffLkXbpEwoCph_q-7qdY6UeNh3eww7--DhQtkN
+    token  =Gbq_ROXXbEL_yXGn2_dV  last_seen=N/A  (?)  INACTIVO
+
+[CRITICAL] id='22324388010270'  (2 sensores)
+  thing_id=dc07w1BSo5tlplBRi13Mi1I_kmFbiaeZWNQQ_hBB
+    token  =QvasJPaBGeiJHEKQbHwa  last_seen=2026-06-14T22:14:51  (6d)  ACTIVO
+  thing_id=P0tEr4HozonmCmgU1N4z_ldVqJKIhuMdynmhHtJj
+    token  =vS5aBMU6i7CGRb8fJjKp  last_seen=N/A  (?)  INACTIVO
+
+[CRITICAL] id='ID0200J23007500191'  (2 sensores)
+  thing_id=kgofkTNNmlmBN0HwACexHA_U-QngU5pUq1VHwdEU
+    token  =Eu1UZFOAtVy6VGaDTvQI  last_seen=2026-06-14T08:45:55  (6d)  ACTIVO
+  thing_id=oJYzRibnvWxfHHX5kTlUPbuy1tOGMBCeXHs7F4K6
+    token  =vEzEUokdnCCxbhHl496F  last_seen=N/A  (?)  INACTIVO
+
+[HIGH] id='I17BE085778O'  (6 sensores)
+  thing_id=bvDyRLP6B4Ena6VIHWZx6DLinEAJ4BNTh3REKYlt
+    token  =8CIsffh086Uj1ErL78_a  last_seen=N/A  (?)  INACTIVO
+  thing_id=7TnMajRCyaJhcGkzO9DWsi7zp004Z7NThr1Dahbf
+    token  =-ksZrtR68odnD8cpGPZc  last_seen=N/A  (?)  INACTIVO
+  thing_id=y3SUvmcY87NtRsooY_rXxoXvd3_vfLrskGANoOln
+    token  =2vntAgbO7RSSk0fZ4XTE  last_seen=N/A  (?)  INACTIVO
+  thing_id=YlItyWsROEa_UW-xU4lmeRf3n2OqShUB0BeDApzG
+    token  =5JxevVK4RmDPlfe5QR3F  last_seen=N/A  (?)  INACTIVO
+  thing_id=5yoe5uUPfAeQP6RGoOzErp7U8eUgUYf_B3wgJhBu
+    token  =c121ZteYw3nwuRnefAU5  last_seen=N/A  (?)  INACTIVO
+  thing_id=OSBz9gHsfpCZFsNN-nOtWp77KdnIUbSWDghPllsE
+    token  =_OtwKIfePmYmiSUvbObN  last_seen=N/A  (?)  INACTIVO
+
+[HIGH] id='H23VA083135U'  (5 sensores)
+  thing_id=c6cRV_3BOt29TcJplk7B0yUWZ3mPnaDc1xAs4vnr
+    token  =4sK7b86tKioxT1WO_ZH7  last_seen=N/A  (?)  INACTIVO
+  thing_id=Uo7BXvGh-uS0_toA8JkS8RjMPFUVhOPdK6BVcYP2
+    token  =TfMoZz-qtEd9MafVCURw  last_seen=N/A  (?)  INACTIVO
+  thing_id=i1DiJjhlw8xBUUdeDKr_QDKwqf9abmYOwsTxQrxb
+    token  =e8SPKEGAJCRXCuuwFogO  last_seen=N/A  (?)  INACTIVO
+  thing_id=lyEkpPhU7grfnxCVNVTIA0LFb2h6gHrNWT4DgNeH
+    token  =rt9vqWfpQnNJOGX8fVU-  last_seen=N/A  (?)  INACTIVO
+  thing_id=_1AKrmXDbKj2-d4d-77mC-tB93x969qO8XB43qyz
+    token  =CzgFdNzCAdBw6CmP4QJ4  last_seen=N/A  (?)  INACTIVO
+
+[HIGH] id='I18BD012202M'  (4 sensores)
+  thing_id=JFA4pbO-LVPuQ-GjAfGirqnX7RCM8FTW8CSTGPja
+    token  =UeRlGWRsCdh83oLxFfES  last_seen=N/A  (?)  INACTIVO
+  thing_id=Blq7xEEmop51cHn_hZD6_7snMmJOPMFOU_tcpUng
+    token  =cJFFSJXnR13k_rFZMR3i  last_seen=N/A  (?)  INACTIVO
+  thing_id=s7HX76CPNimXDeExfhesgMap55IqIK2PWxX63Aqd
+    token  =OcJL2m1GpbWgnpvzMnvF  last_seen=N/A  (?)  INACTIVO
+  thing_id=zu1e7LuxR6pCllwJQdCEqmqbIt9HNyAXDxj-DmDt
+    token  =wxwoYiMnxWIHtwH05xCi  last_seen=N/A  (?)  INACTIVO
+
+[HIGH] id='I22BC092123D'  (3 sensores)
+  thing_id=kqS0ZopvD9SVwPOyYhKqFGF100pnBUpnp30nGQ7k
+    token  =DPndcO-paFP8LvJVq3i3  last_seen=N/A  (?)  INACTIVO
+  thing_id=IL7NXBSvpddGpqyKq1eX41ezmzWMyrZKPUmzuoO4
+    token  =87qoQvfpqTr5jgkZDPb7  last_seen=N/A  (?)  INACTIVO
+  thing_id=wKYgEL79xi9cyLpmcit9FEkW1D_B36cDuTnm8-w_
+    token  =ohjbLZiQMAsYuS0ibQeJ  last_seen=N/A  (?)  INACTIVO
+
+[HIGH] id='I22BC056178O'  (3 sensores)
+  thing_id=ChkWbVIZ1VivtdjBeSi50NCQ95M_TP6TPh6IEIee
+    token  =b52Xanmemy12gCGttxaT  last_seen=N/A  (?)  INACTIVO
+  thing_id=Lya7cUqq9pylVSXwCD5pyYcCet5OtKyTIAYJ5ADn
+    token  =NV7K4wlqm6aWIPE3hyMv  last_seen=N/A  (?)  INACTIVO
+  thing_id=h4a_hExT5sahbPAvoXCiknzWVJKv1I73MU71yg7u
+    token  =xBU8Bi19oKkJX_R7SDoz  last_seen=N/A  (?)  INACTIVO
+
+[HIGH] id='I22BC022199O'  (3 sensores)
+  thing_id=GaXU5xo9CEobrWJKKqRn-n526bslA0z8x3iAqXMF
+    token  =XTvPVstujBFvuOyv0RHg  last_seen=N/A  (?)  INACTIVO
+  thing_id=363WV9xYkL88DI9XaYY4bZtcL-J8wwjl5UVxves6
+    token  =1lurdOsajQ41OYUG7NUO  last_seen=N/A  (?)  INACTIVO
+  thing_id=1GjOoR4KLympzI9aHUit9kNO_gI2rE03SohOloB9
+    token  =oaLc8po5QQpTPj5V3eF5  last_seen=N/A  (?)  INACTIVO
+
+[HIGH] id='S4E-HOS034'  (2 sensores)
+  thing_id=yJLYrIKoPdIeCSTXSlzRde0pJHZx9nvk5RTheLYC
+    token  =I6JwLM3CkpvCnCRDk_Ae  last_seen=2026-06-20T05:55:42  (0d)  ACTIVO
+  thing_id=OGW8gpuDCp21SzNSrACArtRblkejEjbZADCmDZCA
+    token  =oSgglVUIUveMRXzimZ0B  last_seen=2026-06-10T11:03:42  (10d)  ACTIVO
+
+[HIGH] id='I17BD014384G'  (2 sensores)
+  thing_id=5HEDDOHOKyW_7XeH3NzexThwueIAt32XGzuUCbEd
+    token  =y25ZsusjLo9gP1qPbdwV  last_seen=N/A  (?)  INACTIVO
+  thing_id=na6UdV5zI9grVPNZY6c8WGIYhMQ4YWS77cSaIJyp
+    token  =L-Jvqf665KNEsEP8K_VK  last_seen=N/A  (?)  INACTIVO
+
+[HIGH] id='D16TD053003Y'  (2 sensores)
+  thing_id=-3w1daghXEt3sRvZ6Mn32wIQILqupcIjmnJGrJty
+    token  =-T8k_GyJ1WgcRY8JWBn6  last_seen=N/A  (?)  INACTIVO
+  thing_id=Pi_w2XsjNzEVqfwFHoL9RqIuMB-yEHvn28Gk7TD4
+    token  =9LSz7PP5bBl9MBQBHesB  last_seen=N/A  (?)  INACTIVO
+
+[HIGH] id='I17BC041526Y'  (2 sensores)
+  thing_id=aoIT2mIgAwOWV2HqTrbnPYZjM1hCanxKfQ-psYix
+    token  =fauawEPDQrB1NcHVnk0m  last_seen=N/A  (?)  INACTIVO
+  thing_id=0Pzjg3Gwm9tY8wGhiXZwhcXjwl3rbZ3p7mj-mN77
+    token  =PTLu0pXdVYrjXzzlNuFz  last_seen=N/A  (?)  INACTIVO
+
+[HIGH] id='I17BD096770I'  (2 sensores)
+  thing_id=FHwdWkBsMVf6jnLLtBcoQtDjvatzrLjqCuLoF35_
+    token  =aiWGgKrDFUC-_EHtBWDG  last_seen=N/A  (?)  INACTIVO
+  thing_id=vD5Wi4yd2gXucKr9zkOmzsxT96_rt3e38voTsHUl
+    token  =LKMVs0R8WEGwklnruoFw  last_seen=N/A  (?)  INACTIVO
+
+[HIGH] id='I17BE063112M'  (2 sensores)
+  thing_id=-Qa0z9F7d74mKBQkniAdv6z6MNYxmvChQLmvDqsQ
+    token  =-JLH6JiuaOuxKjqDEdoJ  last_seen=N/A  (?)  INACTIVO
+  thing_id=pMzNaomPkIBteIik7XgXhSGM--NeZ16extFhxLkJ
+    token  =eAQOhmH5_i7tU1Gktlrl  last_seen=N/A  (?)  INACTIVO
+
+[HIGH] id='S06-01 I17BC095962D'  (2 sensores)
+  thing_id=TcJV4q9yEATh8BcI9WGTuwhEmDz02AOBdAfH-d-c
+    token  =kc1q4SE8N7DPmcswS5z2  last_seen=N/A  (?)  INACTIVO
+  thing_id=BfOGDzo6fJCDJTR2fnkdND5fY8TSej7eXcWGdTEf
+    token  =icOpUxgivwifCWZopJbQ  last_seen=N/A  (?)  INACTIVO
+
+[HIGH] id='D17BA245795C'  (2 sensores)
+  thing_id=2-XpFA_5RaRgL5-n92x4oCP9i4p12sYu545r9BM1
+    token  =cXFGiylknttrWpyqXvmR  last_seen=N/A  (?)  INACTIVO
+  thing_id=lPpA_HbgwKzrktpleAEIe4Vx746iM7PiCCGp6uF-
+    token  =Th0T-SvEyqfjKjE5KFJQ  last_seen=N/A  (?)  INACTIVO
+
+[HIGH] id='H23VA864747G'  (2 sensores)
+  thing_id=sIQ9poVOVsfcnniLpju66uu25F11_geG8nrAjq4n
+    token  =wi173CdYGZInLPEVAABs  last_seen=N/A  (?)  INACTIVO
+  thing_id=ZFTlVdznec_JUzwpD5R1mV5wCM5OVHwAZ0K9DlBV
+    token  =ocnTYjR5rR6TeNYFdc4P  last_seen=N/A  (?)  INACTIVO
+
+[HIGH] id='D15TC125050O'  (2 sensores)
+  thing_id=I_qSUteKIaouoy6FedMVJOpwdieQ5yKVZhFJuERU
+    token  =9GPPeEG-qUfXAhCDAj05  last_seen=N/A  (?)  INACTIVO
+  thing_id=D46j4SYD0WaSmhxLrof4CrPd38kavXM6dZ9Xz-Hp
+    token  =Pvjf3EkBqD2Zy1lzZ84f  last_seen=N/A  (?)  INACTIVO
+
+======================================================================
+THING IDs DUPLICADOS
+======================================================================
+  Ninguno.
+
+======================================================================
+THING TOKENS DUPLICADOS
+======================================================================
+  Ninguno.
+
+======================================================================
+CONFLICTOS DE SINCRONIZACION (SYNC_CONFLICT)
+======================================================================
+
+id='22323387990187'
+  [ACTIVO] thing_id=wbx3m-dvqOvXsyh8lnNerW274aW6GUL1tyPdpIjD
+    token=SjDbanE2tgUEanaovhE3  has_real_data=True  demo_ready=True
+  [INACTIVO] thing_id=S_ffLkXbpEwoCph_q-7qdY6UeNh3eww7--DhQtkN
+    token=Gbq_ROXXbEL_yXGn2_dV  has_real_data=False  demo_ready=False
+
+id='22324388010270'
+  [ACTIVO] thing_id=dc07w1BSo5tlplBRi13Mi1I_kmFbiaeZWNQQ_hBB
+    token=QvasJPaBGeiJHEKQbHwa  has_real_data=True  demo_ready=True
+  [INACTIVO] thing_id=P0tEr4HozonmCmgU1N4z_ldVqJKIhuMdynmhHtJj
+    token=vS5aBMU6i7CGRb8fJjKp  has_real_data=False  demo_ready=False
+
+id='BET00230154'
+  [ACTIVO] thing_id=vyoObnVyAQLIp0G5lnS0BtrQliPxCRohVG5pEP9k
+    token=uZAvrs3gMBlIHSS9cZ83  has_real_data=True  demo_ready=True
+  [INACTIVO] thing_id=a34c6eOz_xDApCTGMCdo1lTWTSxSnZddwunbQpnn
+    token=awxZS_sPEbAZBnTM7d-v  has_real_data=False  demo_ready=False
+
+id='ID0200J23007500191'
+  [ACTIVO] thing_id=kgofkTNNmlmBN0HwACexHA_U-QngU5pUq1VHwdEU
+    token=Eu1UZFOAtVy6VGaDTvQI  has_real_data=True  demo_ready=True
+  [INACTIVO] thing_id=oJYzRibnvWxfHHX5kTlUPbuy1tOGMBCeXHs7F4K6
+    token=vEzEUokdnCCxbhHl496F  has_real_data=False  demo_ready=False
+
+======================================================================
+RECOMENDACION
+======================================================================
+  PRECAUCION: 8 sensores con riesgo CRITICAL.
+  Revisar manualmente antes de cualquier normalizacion adicional.
+  Los sensores CRITICAL tienen IDs compartidos con things distintos,
+  lo que puede causar errores 404 al sincronizar con TheThings.
+
+CSV generado : C:\Users\jordi\source\repos\pielh\pielh_v02\reports\duplicate_sensors_audit.csv
+TXT generado : C:\Users\jordi\source\repos\pielh\pielh_v02\reports\duplicate_sensors_audit.txt

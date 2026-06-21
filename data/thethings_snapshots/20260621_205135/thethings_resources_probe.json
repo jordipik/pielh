@@ -1,0 +1,196 @@
+{
+  "_meta": {
+    "created_at": "2026-06-21T20:51:38.827823",
+    "source": "thethings",
+    "phase": "resources_probe",
+    "base_structure_snapshot": "C:\\Users\\jordi\\source\\repos\\pielh\\pielh_v02\\data\\thethings_snapshots\\latest\\thethings_structure_only.json",
+    "sensors_total": 1564,
+    "sensors_processed": 3,
+    "limit_samples": 1,
+    "mode": "probe_candidates",
+    "master_modified": false
+  },
+  "sensors": [
+    {
+      "id": "HOS044-S01-01",
+      "hos": "HOS044",
+      "system_id": "S01",
+      "system_name": "RUIDO",
+      "thing_id": "SnHdcxnnzpD1Z79Dvxs_8O-CkgSE79MVRI3j6T0DxEk",
+      "thing_token_present": true,
+      "platform_last_seen": "2026-06-21T18:27:17.706Z",
+      "resources": [
+        {
+          "resource": "noise",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T18:51:17.806Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "noise_avg_d",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-20T21:59:59.000Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "noise_avg_h",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-21T17:59:59.000Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "resource": "noise_avg_w",
+          "exists": true,
+          "has_data": true,
+          "samples_count": 1,
+          "last_seen": "2026-06-14T21:59:59.000Z",
+          "last_value_type": "number",
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "has_any_resource": true,
+      "has_real_data": true,
+      "last_seen": "2026-06-21T18:51:17.806Z",
+      "errors_count": 0
+    },
+    {
+      "id": "HOS044-S01-01",
+      "hos": "HOS044",
+      "system_id": "S01",
+      "system_name": "RUIDO",
+      "thing_id": "suj9PiI4JbekaYqNnsbjaQY2kR1TrCjFT1KOvxdOzPU",
+      "thing_token_present": true,
+      "platform_last_seen": null,
+      "resources": [
+        {
+          "resource": "noise",
+          "exists": false,
+          "has_data": false,
+          "samples_count": 0,
+          "last_seen": null,
+          "last_value_type": null,
+          "http_status": 404,
+          "error": null
+        },
+        {
+          "resource": "noise_avg_d",
+          "exists": false,
+          "has_data": false,
+          "samples_count": 0,
+          "last_seen": null,
+          "last_value_type": null,
+          "http_status": 404,
+          "error": null
+        },
+        {
+          "resource": "noise_avg_h",
+          "exists": false,
+          "has_data": false,
+          "samples_count": 0,
+          "last_seen": null,
+          "last_value_type": null,
+          "http_status": 404,
+          "error": null
+        },
+        {
+          "resource": "noise_avg_w",
+          "exists": false,
+          "has_data": false,
+          "samples_count": 0,
+          "last_seen": null,
+          "last_value_type": null,
+          "http_status": 404,
+          "error": null
+        }
+      ],
+      "has_any_resource": false,
+      "has_real_data": false,
+      "last_seen": null,
+      "errors_count": 0
+    },
+    {
+      "id": "HOS136-S01-01 (T257517)",
+      "hos": "HOS136",
+      "system_id": "S01",
+      "system_name": "RUIDO",
+      "thing_id": "XzMNdYAN5eNT1UNnkgGcoT6Zb1kO9QeLauwy9m-pon8",
+      "thing_token_present": true,
+      "platform_last_seen": null,
+      "resources": [
+        {
+          "resource": "noise",
+          "exists": false,
+          "has_data": false,
+          "samples_count": 0,
+          "last_seen": null,
+          "last_value_type": null,
+          "http_status": 404,
+          "error": null
+        },
+        {
+          "resource": "noise_avg_d",
+          "exists": false,
+          "has_data": false,
+          "samples_count": 0,
+          "last_seen": null,
+          "last_value_type": null,
+          "http_status": 404,
+          "error": null
+        },
+        {
+          "resource": "noise_avg_h",
+          "exists": false,
+          "has_data": false,
+          "samples_count": 0,
+          "last_seen": null,
+          "last_value_type": null,
+          "http_status": 404,
+          "error": null
+        },
+        {
+          "resource": "noise_avg_w",
+          "exists": false,
+          "has_data": false,
+          "samples_count": 0,
+          "last_seen": null,
+          "last_value_type": null,
+          "http_status": 404,
+          "error": null
+        }
+      ],
+      "has_any_resource": false,
+      "has_real_data": false,
+      "last_seen": null,
+      "errors_count": 0
+    }
+  ],
+  "summary_by_system": {
+    "S01": {
+      "sensors_processed": 3,
+      "sensors_with_data": 1,
+      "system_name": "RUIDO",
+      "resources_found": [
+        "noise",
+        "noise_avg_d",
+        "noise_avg_h",
+        "noise_avg_w"
+      ],
+      "errors": 0,
+      "last_seen": "2026-06-21T18:51:17.806Z"
+    }
+  },
+  "errors": []
+}

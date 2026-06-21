@@ -1,0 +1,45 @@
+============================================================
+PIELH - Sensores OLD Marcados
+Fecha  : 2026-06-21T00:32:55.958915
+Backup : C:\Users\jordi\source\repos\pielh\pielh_v02\data\backups\pielh_qa_master_before_mark_old_20260621_003255.json
+============================================================
+
+Sensores OLD marcados : 4
+Omitidos (activos)    : 0
+Errores               : 0
+
+Detalle:
+
+  thing_id    : a34c6eOz_xDApCTGMCdo1lTWTSxSnZddwunbQpnnyFY
+  thing_token : awxZS_sPEbAZBnTM7d-vKvOuMBu98DE_6q2TrQzGHzY
+  id antes    : 'BET00230154'
+  id despues  : 'Old-BET00230154'
+  include     : False
+  status      : OLD
+
+  thing_id    : P0tEr4HozonmCmgU1N4z_ldVqJKIhuMdynmhHtJjYsY
+  thing_token : vS5aBMU6i7CGRb8fJjKp8uDondB2C8Ddao9YFSBO4mM
+  id antes    : '22324388010270'
+  id despues  : 'Old-22324388010270'
+  include     : False
+  status      : OLD
+
+  thing_id    : S_ffLkXbpEwoCph_q-7qdY6UeNh3eww7--DhQtkNyXI
+  thing_token : Gbq_ROXXbEL_yXGn2_dVjOSE7uL7UbYTGHTmkNjidf8
+  id antes    : '22323387990187'
+  id despues  : 'Old-22323387990187'
+  include     : False
+  status      : OLD
+
+  thing_id    : oJYzRibnvWxfHHX5kTlUPbuy1tOGMBCeXHs7F4K6LVs
+  thing_token : vEzEUokdnCCxbhHl496FJBcZsID-BnUjOvgQMy1dJIM
+  id antes    : 'ID0200J23007500191'
+  id despues  : 'Old-ID0200J23007500191'
+  include     : False
+  status      : OLD
+
+Validacion:
+  Total sensores intacto     : 1564
+  Total edificios intacto    : 192
+  thing_id/thing_token       : sin cambios (verificado)
+  Sensores activos hermanos  : no modificados

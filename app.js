@@ -31,6 +31,7 @@ const state = {
     selectedSensorThingId: null,
     onlyVisibleBld: false,
     onlyVisibleSns: false,
+    showLegacySensors: false,
     onlyIotSensorsActive: false,
     onlyIotBuildingsActive: false,
     demoIotMode: false,
@@ -495,6 +496,7 @@ function applyFilters() {
     });
 
     filtered.sensors = (data.sensors ?? []).filter(s => {
+        if (!state.showLegacySensors && s.inventory_status === 'LEGACY') return false;
         if (district && s.district_code !== district) return false;
         if (neighborhood && !sameKey(s.neighborhood_key, neighborhood)) return false;
         if (system && normalizeSystemId(s.system_id) !== normalizeSystemId(system)) return false;
@@ -853,6 +855,13 @@ function renderIotDemoSummary() {
 function renderSummary() {
     document.getElementById('count-buildings').textContent = filtered.buildings.length;
     document.getElementById('count-sensors').textContent = filtered.sensors.length;
+    const legacyEl = document.getElementById('count-sensors-legacy');
+    if (legacyEl) {
+        const nLegacy = (data.sensors ?? []).filter(s => s.inventory_status === 'LEGACY').length;
+        legacyEl.textContent = nLegacy
+            ? (state.showLegacySensors ? `incl. ${nLegacy} LEGACY` : `+${nLegacy} ocultos`)
+            : '';
+    }
     document.getElementById('count-neighborhoods').textContent = (data.catalogs?.neighborhoods ?? []).length;
     document.getElementById('count-systems').textContent = (data.catalogs?.systems ?? []).length;
     document.getElementById('count-qa').textContent = (data.qa?.findings ?? []).length;
@@ -939,12 +948,14 @@ function renderSensorsList() {
         const color = getSystemColor(s.system_id);
         const hasData = (s.has_data ?? '').toUpperCase();
         const dataColor = hasData === 'OK' ? '#16a34a' : '#94a3b8';
+        const isLegacy = s.inventory_status === 'LEGACY';
         const tr = document.createElement('tr');
         tr.dataset.rid = s.id;
+        if (isLegacy) tr.classList.add('row-legacy');
         if (s.id === state.selectedSensorId && (!state.selectedSensorThingId || s.thing_id === state.selectedSensorThingId))
             tr.classList.add('row-selected');
         tr.innerHTML = `
-            <td title="${esc(s.id)}">${esc(truncate(s.id, 18))}</td>
+            <td title="${esc(s.id)}">${esc(truncate(s.id, 18))}${isLegacy ? ' <span class="badge badge-legacy">LEGACY</span>' : ''}</td>
             <td>${esc(s.hos ?? '—')}</td>
             <td title="${esc(s.system_name)}">
                 <span class="sys-dot" style="background:${color}"></span>${esc(s.system_id ?? '—')}
@@ -1208,6 +1219,10 @@ function initTables() {
     document.getElementById('chk-visible-bld').addEventListener('change', e => {
         state.onlyVisibleBld = e.target.checked;
         renderBuildingsList();
+    });
+    document.getElementById('chk-show-legacy').addEventListener('change', e => {
+        state.showLegacySensors = e.target.checked;
+        applyFilters();
     });
     document.getElementById('chk-visible-sns').addEventListener('change', e => {
         state.onlyVisibleSns = e.target.checked;
