@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-06-21T23:23:48.130779+00:00",
+  "mode": "apply",
+  "backup": "C:\\Users\\jordi\\source\\repos\\pielh\\pielh_v02\\data\\backups\\pielh_qa_master_before_sensor_building_inheritance_20260622_012347.json",
+  "total_sensors": 1564,
+  "sensors_with_hos": 1242,
+  "sensors_without_hos": 322,
+  "sensors_without_matching_building": 2,
+  "sensors_checked": 1240,
+  "sensors_modified": 0,
+  "total_fields_modified": 0,
+  "fields_modified_count": {},
+  "examples": [],
+  "total_buildings": 192,
+  "buildings_without_coordinates": 3,
+  "buildings_filled_from_sensors": 0,
+  "buildings_with_multiple_sensor_coords": 0,
+  "buildings_without_sensor_coords": 3,
+  "examples_buildings_filled": [],
+  "buildings_assigned_placeholder": 3,
+  "examples_placeholder": [
+    {
+      "building_id": "HOS504",
+      "lat": 41.322,
+      "lon": 2.175
+    },
+    {
+      "building_id": "DIPRO-MTI",
+      "lat": 41.322,
+      "lon": 2.179
+    },
+    {
+      "building_id": "LH_MAIN",
+      "lat": 41.322,
+      "lon": 2.183
+    }
+  ],
+  "validation": {
+    "total_sensors_orig": 1564,
+    "total_sensors_mod": 1564,
+    "total_buildings_orig": 192,
+    "total_buildings_mod": 192,
+    "issues": [],
+    "passed": true
+  }
+}

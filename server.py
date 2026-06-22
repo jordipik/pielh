@@ -40,7 +40,8 @@ EMPTY_VALUES = (None, '', [])
 BUILDING_TO_SENSOR_FIELDS = {
     'district_code', 'district_name',
     'neighborhood_key', 'neighborhood',
-    'type', 'zone', 'street_etra',
+    'type', 'zone', 'street_etra', 'street_mti',
+    'lat', 'lon',
 }
 
 # Fields that can be pushed back to TheThings API

@@ -1734,6 +1734,8 @@ function renderDetailForm(record, entityType) {
 
     const copyBtn = document.getElementById('dp-copy-btn');
     if (copyBtn) copyBtn.style.display = (entityType === 'sensor') ? '' : 'none';
+    const pushSensorsBtn = document.getElementById('dp-push-sensors-btn');
+    if (pushSensorsBtn) pushSensorsBtn.style.display = (entityType === 'building') ? '' : 'none';
 }
 
 function renderBulkForm(entityType) {
@@ -1753,6 +1755,8 @@ function renderBulkForm(entityType) {
     document.getElementById('dp-body').innerHTML = `<form id="dp-form">${rows.join('')}</form>`;
     const copyBtn = document.getElementById('dp-copy-btn');
     if (copyBtn) copyBtn.style.display = 'none';
+    const pushSensorsBtn = document.getElementById('dp-push-sensors-btn');
+    if (pushSensorsBtn) pushSensorsBtn.style.display = 'none';
 }
 
 // ── Panel open / close ────────────────────────────────────────
@@ -2043,14 +2047,20 @@ async function saveDetailPanel() {
         return;
     }
 
+    // Capture state before async ops (may change on reloadData)
+    const savedId         = editState.ids[0];
+    const savedEntityType = editState.entityType;
+    const savedBulk       = editState.bulk;
+    const savedSelector   = editState.selector;
+
     try {
         let result;
-        if (editState.bulk) {
+        if (savedBulk) {
             result = await fetchJson('/api/save-batch', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    entityType: editState.entityType,
+                    entityType: savedEntityType,
                     ids: editState.ids,
                     updates,
                 }),
@@ -2060,9 +2070,9 @@ async function saveDetailPanel() {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    entityType: editState.entityType,
-                    id: editState.ids[0],
-                    selector: editState.selector,
+                    entityType: savedEntityType,
+                    id: savedId,
+                    selector: savedSelector,
                     updates,
                 }),
             });
@@ -2073,7 +2083,7 @@ async function saveDetailPanel() {
         await reloadData();
 
         let msg;
-        if (editState.bulk) {
+        if (savedBulk) {
             msg = `${editState.ids.length} registros guardados.`;
             if (result.records_updated > editState.ids.length) {
                 msg = `${editState.ids.length} registros guardados (${result.records_updated} en total, incluye duplicados con el mismo ID).`;
@@ -2090,8 +2100,13 @@ async function saveDetailPanel() {
         showToast(msg, true);
         loadPushStatus();
 
-        closeDetailPanel();
-        clearMultiSelect();
+        if (savedEntityType === 'building' && !savedBulk) {
+            // Stay on building panel — re-render with fresh data
+            openDetailPanel(savedId);
+        } else {
+            closeDetailPanel();
+            clearMultiSelect();
+        }
 
     } catch (err) {
         showToast('Error: ' + err.message, false);
@@ -2158,6 +2173,94 @@ function applyCopyFromBuilding() {
 
 function cancelCopyFromBuilding() {
     _pendingCopyChanges = null;
+    const preview = document.getElementById('dp-copy-preview');
+    if (preview) preview.style.display = 'none';
+}
+
+// ── Push building data to all sensors ────────────────────────
+
+const BUILDING_PUSH_FIELDS = [
+    'district_code', 'district_name',
+    'neighborhood_key', 'neighborhood',
+    'type', 'zone',
+    'street_etra', 'street_mti',
+    'lat', 'lon',
+];
+
+let _pendingPushToSensors = null;
+
+function pushBuildingToSensors() {
+    const buildingId = editState.ids[0];
+    if (!buildingId) return;
+
+    // Form values take priority over saved data (user may have edited without saving yet)
+    const formValues = getSingleFormValues();
+    const saved      = data._buildingsMap[buildingId] || {};
+
+    const pushValues = {};
+    BUILDING_PUSH_FIELDS.forEach(f => {
+        const v = (formValues[f] != null && formValues[f] !== '') ? formValues[f] : saved[f];
+        if (v != null && v !== '') pushValues[f] = v;
+    });
+
+    if (!Object.keys(pushValues).length) {
+        showToast('El edificio no tiene datos para propagar.', false);
+        return;
+    }
+
+    const sensors = (data.sensors || []).filter(s => s.hos === buildingId);
+    if (!sensors.length) {
+        showToast('No hay sensores asociados a este edificio.', false);
+        return;
+    }
+
+    // Store full form values for building save + push values for sensor propagation
+    _pendingPushToSensors = { buildingId, formValues, pushValues, sensorCount: sensors.length };
+
+    const rows = BUILDING_PUSH_FIELDS
+        .filter(f => pushValues[f] != null)
+        .map(f => `
+        <div class="dp-preview-row">
+            <span class="dp-preview-label">${esc(f)}</span>
+            <span class="dp-preview-new">${esc(String(pushValues[f]))}</span>
+        </div>`).join('');
+
+    const preview = document.getElementById('dp-copy-preview');
+    preview.innerHTML = `
+        <div class="dp-preview-title">Guardar edificio y copiar a ${sensors.length} sensor${sensors.length === 1 ? '' : 'es'}</div>
+        ${rows}
+        <div class="dp-preview-btns">
+            <button class="btn-pri" onclick="applyPushBuildingToSensors()">Guardar y propagar</button>
+            <button class="btn-sec" onclick="cancelPushBuildingToSensors()">Cancelar</button>
+        </div>`;
+    preview.style.display = 'block';
+}
+
+async function applyPushBuildingToSensors() {
+    if (!_pendingPushToSensors) return;
+    const { buildingId, formValues, sensorCount } = _pendingPushToSensors;
+    cancelPushBuildingToSensors();
+
+    try {
+        // Save building with current form values — server auto-propagates BUILDING_TO_SENSOR_FIELDS
+        const result = await fetchJson('/api/save-record', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ entityType: 'building', id: buildingId, selector: null, updates: formValues }),
+        });
+        if (!result.ok) throw new Error(result.error);
+        await reloadData();
+        const n = result.sensors_updated ?? sensorCount;
+        showToast(`Edificio guardado. ${n} sensor${n === 1 ? '' : 'es'} actualizados.`, true);
+        loadPushStatus();
+        openDetailPanel(buildingId);
+    } catch (err) {
+        showToast('Error: ' + err.message, false);
+    }
+}
+
+function cancelPushBuildingToSensors() {
+    _pendingPushToSensors = null;
     const preview = document.getElementById('dp-copy-preview');
     if (preview) preview.style.display = 'none';
 }
