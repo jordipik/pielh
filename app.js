@@ -614,7 +614,7 @@ function renderBuildingMarker(b) {
     });
 
     const marker = L.marker([lat, lon], { icon, pane: 'buildingsPane', zIndexOffset: 0 });
-    marker.on('click', () => selectRecord(b.id, { source: 'map', thingId: b.thing_id || null }));
+    marker.on('click', () => selectRecord(b.id, { source: 'map', thingId: b.thing_id || null, entityType: 'building' }));
     layers.buildings.addLayer(marker);
     markerIndex.buildings[b.id] = marker;
 }
@@ -643,7 +643,7 @@ function renderSensorMarker(s, offsets) {
         fillOpacity: fillOpacity,
     });
 
-    marker.on('click', () => selectRecord(s.id, { source: 'map', thingId: s.thing_id || null }));
+    marker.on('click', () => selectRecord(s.id, { source: 'map', thingId: s.thing_id || null, entityType: 'sensor' }));
     layers.sensors.addLayer(marker);
     markerIndex.sensors[getRecordKey(s)] = marker;
 }
@@ -920,7 +920,7 @@ function renderBuildingsList() {
                 rangeMultiSelect(getRecordKey(b), 'building', _lastBuildingRecords);
             } else {
                 clearMultiSelect();
-                selectRecord(b.id, { source: 'table', thingId: b.thing_id || null });
+                selectRecord(b.id, { source: 'table', thingId: b.thing_id || null, entityType: 'building' });
             }
         });
         tbody.appendChild(tr);
@@ -985,7 +985,7 @@ function renderSensorsList() {
                 rangeMultiSelect(getRecordKey(s), 'sensor', _lastSensorRecords);
             } else {
                 clearMultiSelect();
-                selectRecord(s.id, { source: 'table', thingId: s.thing_id });
+                selectRecord(s.id, { source: 'table', thingId: s.thing_id, entityType: 'sensor' });
             }
         });
         tbody.appendChild(tr);
@@ -1066,13 +1066,17 @@ function highlightMapRecord(id, type, thingId = null) {
 // ── Central record selection ──────────────────────────────────
 
 function selectRecord(id, opts = {}) {
-    const { source = 'table', thingId = null } = opts;
+    const { source = 'table', thingId = null, entityType = null } = opts;
 
     document.querySelectorAll('tr.row-selected').forEach(r => r.classList.remove('row-selected'));
     clearMapHighlight();
     if (!id) return;
 
-    const isBuilding = !!data._buildingsMap[id];
+    // entityType explicit > fallback a _buildingsMap lookup.
+    // Sense entityType explícit, sensors amb id igual a un HOS quedarien mal classificats.
+    const isBuilding = entityType === 'building' ? true
+                     : entityType === 'sensor'   ? false
+                     : !!data._buildingsMap[id];
 
     if (isBuilding) {
         // Building selected: set building context, clear sensor
