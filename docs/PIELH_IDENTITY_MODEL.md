@@ -176,6 +176,14 @@ function highlightMapRecord(id, type, thingId = null) {
 }
 ```
 
+## ThingID visible a la taula de sensors
+
+La columna **ThingID** és visible directament a la taula de sensors (posició 3, entre "Nombre Corto" i "HOS"), facilitant auditories, suport i depuració d'incidències d'identitat sense necessitat d'obrir el panel de detall.
+
+La columna **Nombre Corto** mostra `building.short_name` → `building.name` → `''` (nom abreujat de l'edifici pare, derivat de `data._buildingsMap[s.hos]`).
+
+---
+
 ## Ressaltat de fila a la taula
 
 Cada fila de sensor té dos atributs:

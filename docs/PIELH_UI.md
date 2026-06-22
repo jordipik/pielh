@@ -143,13 +143,14 @@ Apareix quan hi ha elements seleccionats (`n >= 1`):
 | Columna | `data-sort` | Notes |
 |---|---|---|
 | ID | `id` | Truncat a 18 caràcters |
+| Nombre Corto | — | `building.short_name` → `building.name` → `''`; truncat a 16 caràcters |
+| ThingID | `thing_id` | Identificador operatiu principal; truncat a 16 caràcters, valor complet al `title` |
 | HOS | `hos` | Edifici pare |
 | Sistema | `system_id` | Amb punt de color del sistema |
 | Barrio | `neighborhood` | Abreujat |
 | Dist. | `district_name` | |
 | Calle | `ref_etra` | Truncat a 18 caràcters |
 | Datos | `has_data` | Color: verd (OK) o gris |
-| ThingID | `thing_id` | Truncat a 16 caràcters, valor complet al `title` |
 
 **Atributs de cada fila `<tr>`:**
 

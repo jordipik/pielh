@@ -28,7 +28,7 @@
 | Botó limpiar filtres | FUNCIONAL | |
 | Filtre "Solo visibles" | FUNCIONAL | Binds a `moveend`/`zoomend` del mapa |
 | Taula d'edificis | FUNCIONAL | 8 columnes, ordenació, multi-selecció |
-| Taula de sensors | FUNCIONAL | 8 columnes (afegida ThingID), límit 500, `data-key` i `data-thing-id` per fila |
+| Taula de sensors | FUNCIONAL | 9 columnes (ID, Nombre Corto, ThingID, HOS, Sistema, Barrio, Dist., Calle, Datos), límit 500, `data-key` i `data-thing-id` per fila |
 | Pestanya QA | FUNCIONAL | Filtres per severitat i tipus |
 | Cards de resum (header) | FUNCIONAL | Edificis, sensors, barrios, sistemes, QA |
 | Selecció simple (taula o mapa) | FUNCIONAL | Sincronització bidireccional. Sensors germanos desambiguats per `thing_id` |

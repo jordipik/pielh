@@ -1616,7 +1616,7 @@
       "iot_demo_ready": 1,
       "iot_health_status": "ACTIVE",
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T01:37:46.549496",
         "fields": [
           "district_code",
@@ -1629,7 +1629,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: UIekpqJbbMju2Hesku9q_HY53A_MG8Pfgk45JJXWAH8)\",\"endpoint\":\"POST /v2/things/fCDUZYwMzB3OTNrvrEOwIEoXpGtmMmknfUEN2YLk5wU?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -5007,7 +5007,7 @@
       "iot_demo_ready": 2,
       "iot_health_status": "ACTIVE",
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T01:33:23.371936",
         "fields": [
           "district_code",
@@ -5020,7 +5020,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: zxlsnTO0u_zFN0H4IjTFie-jnUJmce1ckwxp5-dJFpI)\",\"endpoint\":\"POST /v2/things/qCvEQOzE64zbWKlGj8dQjks3re7UwmDqjpc_aiI6tv0?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -6503,7 +6503,7 @@
       "iot_demo_ready": 3,
       "iot_health_status": "ACTIVE",
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T10:00:20.035843",
         "fields": [
           "district_code",
@@ -6516,7 +6516,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: FwfpwyLpJI_ux4P8BWYgKFDzjixk9LF2CzNece-rIkg)\",\"endpoint\":\"POST /v2/things/APwSwSkSvBbA3GNSA0ogobSzldx3CgWp7Jpj8Tm4bR0?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -11727,7 +11727,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "synced",
         "updated_at": "2026-06-22T01:37:46.550496",
         "fields": [
           "district_code",
@@ -11741,7 +11741,7 @@
           "zone"
         ],
         "error": null,
-        "synced_at": null
+        "synced_at": "2026-06-22T12:55:58.018818"
       }
     },
     {
@@ -12261,7 +12261,7 @@
       },
       "observaciones": null,
       "_sync": {
-        "status": "pending",
+        "status": "synced",
         "updated_at": "2026-06-22T00:55:11.431411",
         "fields": [
           "district_code",
@@ -12272,7 +12272,7 @@
           "neighborhood_key"
         ],
         "error": null,
-        "synced_at": null
+        "synced_at": "2026-06-22T12:55:58.018818"
       }
     },
     {
@@ -12395,7 +12395,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "synced",
         "updated_at": "2026-06-22T01:33:23.372937",
         "fields": [
           "district_code",
@@ -12409,7 +12409,7 @@
           "zone"
         ],
         "error": null,
-        "synced_at": null
+        "synced_at": "2026-06-22T12:55:58.018818"
       }
     },
     {
@@ -13484,7 +13484,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T01:33:23.372937",
         "fields": [
           "district_code",
@@ -13497,7 +13497,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: NfS01mUl_I-LODxfzrQyb2_wTGPEU1lbdoOOkqm9Xp8)\",\"endpoint\":\"POST /v2/things/i0VHbZ8gKxXh2Af-mRmHMkT8THK_kq0gkw7MEOgBqXI?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -15260,7 +15260,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T01:37:46.550496",
         "fields": [
           "district_code",
@@ -15273,7 +15273,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: sGnuUi2g2bhc5l_0bSgXRcDwpWojrJQqPI76P6li5dQ)\",\"endpoint\":\"POST /v2/things/1YeNQNYUBVpuWcQhUNv2HnmbPPZPeT1I5LhiELQWyWM?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -15757,7 +15757,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "synced",
         "updated_at": "2026-06-22T10:00:20.036842",
         "fields": [
           "district_code",
@@ -15769,7 +15769,7 @@
           "zone"
         ],
         "error": null,
-        "synced_at": null
+        "synced_at": "2026-06-22T12:55:58.018818"
       }
     },
     {
@@ -15852,7 +15852,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "synced",
         "updated_at": "2026-06-22T01:33:23.372937",
         "fields": [
           "district_code",
@@ -15866,7 +15866,7 @@
           "zone"
         ],
         "error": null,
-        "synced_at": null
+        "synced_at": "2026-06-22T12:55:58.018818"
       }
     },
     {
@@ -16897,7 +16897,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T10:00:20.036842",
         "fields": [
           "district_code",
@@ -16908,7 +16908,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: _Co9F6vd-_brOv_73AY3uiwnkiyqXWh7lYzr9bwnpXY)\",\"endpoint\":\"POST /v2/things/_c8z0UYRW4TmAiNIs6kE0k-KSJXA3bYTBrncSktpWGU?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -17536,7 +17536,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T01:33:23.372937",
         "fields": [
           "district_code",
@@ -17549,7 +17549,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: t0QT8kdjRpy-WgUR_lzKL1cl-bgwFYmq96v-lHzH7A8)\",\"endpoint\":\"POST /v2/things/EnNly5sNW9c2BTH1c_C1lkXtWiaQqakA8Bk1SjnJmkU?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -20044,7 +20044,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "synced",
         "updated_at": "2026-06-22T10:00:20.036842",
         "fields": [
           "district_code",
@@ -20056,7 +20056,7 @@
           "zone"
         ],
         "error": null,
-        "synced_at": null
+        "synced_at": "2026-06-22T12:55:58.018818"
       }
     },
     {
@@ -20671,7 +20671,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "synced",
         "updated_at": "2026-06-22T01:33:23.372937",
         "fields": [
           "district_code",
@@ -20685,7 +20685,7 @@
           "zone"
         ],
         "error": null,
-        "synced_at": null
+        "synced_at": "2026-06-22T12:55:58.018818"
       }
     },
     {
@@ -26152,7 +26152,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T10:00:20.036842",
         "fields": [
           "district_code",
@@ -26163,7 +26163,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: gIXSRI_QX0tzkRd5yu0KvDHOwBFWlK_xcsWUkqzacO4)\",\"endpoint\":\"POST /v2/things/DPKM52fZ-d8sq-09SF4Q3DijpVuHUT62EVOBCCDX1ko?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -26207,7 +26207,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T01:33:23.372937",
         "fields": [
           "district_code",
@@ -26220,7 +26220,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: ns3NrNGKXErrbljsxxfwzRjWQat_6X5Zsi0Su-qeBks)\",\"endpoint\":\"POST /v2/things/M1qjr40GOWQOdl-cPHApF5Hp7ZHB6YwdYLX0LzPZl4s?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -34280,7 +34280,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T01:37:46.550496",
         "fields": [
           "district_code",
@@ -34293,7 +34293,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: sSz8NetbltzZF-ugvwhb43DOE9LshpNVfUWx2iml83U)\",\"endpoint\":\"POST /v2/things/Twybw_oIlkCrb7wlIHEt6xg_PHdnTYAI4czfpLeno4A?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -35137,7 +35137,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T10:00:20.036842",
         "fields": [
           "district_code",
@@ -35148,7 +35148,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: t5f4KF0GIg8m4ZfjTkxpWCqfaqLpsJDeJbNb3yAHPBc)\",\"endpoint\":\"POST /v2/things/0_btQlWz0EULQzMs6mlysibhG-FmX0Vm0vgOwQBOHo0?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -35952,7 +35952,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T01:33:23.372937",
         "fields": [
           "district_code",
@@ -35965,7 +35965,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: XDzfBx8APjdQ_gcuDUCP7bpC6fMOuhQ7wHVuUwkZT5Q)\",\"endpoint\":\"POST /v2/things/iXXhzsXMsvcVdrVM1zYVEzidYrWptOBDEkMOWw-NYfM?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -38640,7 +38640,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T01:33:23.372937",
         "fields": [
           "district_code",
@@ -38653,7 +38653,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: n2NjZSTdEiPou-oHnggccyDRbnCTGIv9Grk-rPADSPc)\",\"endpoint\":\"POST /v2/things/nKXbY36DQ0Wo9M2ZpMqjuX2Pt7r80QZCjabucBYK6nU?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -38697,7 +38697,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T01:33:23.372937",
         "fields": [
           "district_code",
@@ -38710,7 +38710,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: zzYIauthjfsrBVmeMPZUV4YZkUC9-FDwW3cPhQY6TZ4)\",\"endpoint\":\"POST /v2/things/Reh8NA0VhpQiIHcEk4xZPMJZolaTwJWl3qapOvOZDes?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -42789,7 +42789,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T10:00:20.036842",
         "fields": [
           "district_code",
@@ -42800,7 +42800,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: I4ViepJoIVqg-AWcOuLy3i0L5-Vk-U0oKYeIaaezOYY)\",\"endpoint\":\"POST /v2/things/twR3aDPjpFNyIgM5K56IxVM_Y6DLea88ZxgpkUhly6E?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -43764,7 +43764,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T01:33:23.372937",
         "fields": [
           "district_code",
@@ -43777,7 +43777,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: aNJesfRaigQOiX9AfHZKXbCsJ64B3cIX9_MiX5fJciQ)\",\"endpoint\":\"POST /v2/things/MTt5fqMVpSxzQT6_oX2sJELUylX68dtsHVcQWaEsNBo?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -45704,7 +45704,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "synced",
         "updated_at": "2026-06-22T10:00:20.036842",
         "fields": [
           "district_code",
@@ -45716,7 +45716,7 @@
           "zone"
         ],
         "error": null,
-        "synced_at": null
+        "synced_at": "2026-06-22T12:55:58.018818"
       }
     },
     {
@@ -47255,7 +47255,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "synced",
         "updated_at": "2026-06-22T10:00:20.036842",
         "fields": [
           "district_code",
@@ -47267,7 +47267,7 @@
           "zone"
         ],
         "error": null,
-        "synced_at": null
+        "synced_at": "2026-06-22T12:55:58.018818"
       }
     },
     {
@@ -47922,7 +47922,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T10:00:20.036842",
         "fields": [
           "district_code",
@@ -47933,7 +47933,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: -pcVBoEjXxaiy8IEsoLvYsk9VurIWHvkX8-joDxjmy8)\",\"endpoint\":\"POST /v2/things/U6ndaOPUc9IqkzSHRXY3YjZszDlvU2yMZeZoVKVHJkY?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -50536,7 +50536,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T01:33:23.372937",
         "fields": [
           "district_code",
@@ -50549,7 +50549,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: 4VPt5g2n3vCPxgKmkvEmhPfVIkyGAD86_OAsj71ggfk)\",\"endpoint\":\"POST /v2/things/T7BeYE4S-NUEO6xIKN2vMfp1HqleJKmpcwQW_bydAvE?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -52629,7 +52629,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "synced",
         "updated_at": "2026-06-22T10:00:20.036842",
         "fields": [
           "district_code",
@@ -52641,7 +52641,7 @@
           "zone"
         ],
         "error": null,
-        "synced_at": null
+        "synced_at": "2026-06-22T12:55:58.018818"
       }
     },
     {
@@ -52804,7 +52804,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "synced",
         "updated_at": "2026-06-22T01:33:23.372937",
         "fields": [
           "district_code",
@@ -52818,7 +52818,7 @@
           "zone"
         ],
         "error": null,
-        "synced_at": null
+        "synced_at": "2026-06-22T12:55:58.018818"
       }
     },
     {
@@ -55753,7 +55753,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T01:33:23.372937",
         "fields": [
           "district_code",
@@ -55766,7 +55766,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: MO-vyYHWg_ENwBTL00joSBVIHokOpjZwqi5O2QgQMvo)\",\"endpoint\":\"POST /v2/things/hLz0T-niqYNt1Grr2NTQc39kAoMxy6Pdb4gewxYJiqo?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -56510,7 +56510,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T10:00:20.036842",
         "fields": [
           "district_code",
@@ -56521,7 +56521,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: HhUpyKrX9UboVQ0_bXC-yFj0_aRrXn1SH_fUjIedj14)\",\"endpoint\":\"POST /v2/things/kxjxFVqlZx2uWpxNILJAfQGNDfEJS5zq_8kp3zTxBOI?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -57385,7 +57385,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T01:33:23.372937",
         "fields": [
           "district_code",
@@ -57398,7 +57398,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: jr_tmwwbANyYUOKmUG72LEPxaDyit19d83H4XrpeNk0)\",\"endpoint\":\"POST /v2/things/0nHDZ74TrWNLJSO4Ui2xCgB5d3gc6sGbNSHEMD09nl0?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -58002,7 +58002,7 @@
       },
       "observaciones": null,
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T01:37:46.550496",
         "fields": [
           "district_code",
@@ -58015,7 +58015,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: gyOIXi7IRpUlDl0m2q6mLmxNmTv13Jf2odUBz8DTxl0)\",\"endpoint\":\"POST /v2/things/ltjgppMTDdYRr8Q57xmDWKMFfWKWRdH9WeQxVc0ZNXg?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -59059,7 +59059,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T09:52:35.231495",
         "fields": [
           "district_code",
@@ -59070,7 +59070,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: dyfk8FJnmY3lZJT19JGpkTcaSywXWb2RD_44MAQ0Ly0)\",\"endpoint\":\"POST /v2/things/tNGoCDC29lKD-MhzT690s_cOs6dVR6sWrlw3RUzK-90?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -60866,7 +60866,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T10:00:20.036842",
         "fields": [
           "district_code",
@@ -60877,7 +60877,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: _sAg45gN-qlLlaqz6v-aEP4dpsjMM-Bpr8t_qsj83-Y)\",\"endpoint\":\"POST /v2/things/QkwRr45ETor2UGkKBK6dS7UmIhmFxYbBJd5vsoLOh64?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -66709,7 +66709,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T10:00:20.036842",
         "fields": [
           "district_code",
@@ -66720,7 +66720,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: EmOcJtvDWWdNUXN-fWGPT-llRXZ1RSYHIn7MP9yAKRs)\",\"endpoint\":\"POST /v2/things/gMRKje4PbiRhGFxag-q1JmVHoIpv-eHaEfXqS8WDVbE?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -69046,7 +69046,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T01:33:23.372937",
         "fields": [
           "district_code",
@@ -69059,7 +69059,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: ikEGY21Q6_io48SgaCasrzNm2DF8kTPPNLCVmS-BHYg)\",\"endpoint\":\"POST /v2/things/L10LvfVaR4zXQrs_iIXF6g2R3fPP57NGl0cGBCLAL0c?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },
@@ -69103,7 +69103,7 @@
         "health_source": "thethings_activity_20260621_223839.csv"
       },
       "_sync": {
-        "status": "pending",
+        "status": "error",
         "updated_at": "2026-06-22T01:33:23.372937",
         "fields": [
           "district_code",
@@ -69116,7 +69116,7 @@
           "type",
           "zone"
         ],
-        "error": null,
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: N2hxr5B-4wODwUX1obyx3DQWKO8eviFGt_D_x9dscBM)\",\"endpoint\":\"POST /v2/things/8SZbpCi2yoZkJnU4otInnCfGLE3OQNHUteLCloHNkqs?store=true&broadcast=true\"}",
         "synced_at": null
       }
     },

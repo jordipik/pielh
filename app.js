@@ -957,6 +957,8 @@ function renderSensorsList() {
         const hasData = (s.has_data ?? '').toUpperCase();
         const dataColor = hasData === 'OK' ? '#16a34a' : '#94a3b8';
         const isLegacy = s.inventory_status === 'LEGACY';
+        const building = data._buildingsMap[s.hos];
+        const shortName = building?.short_name || building?.name || '';
         const tr = document.createElement('tr');
         tr.dataset.rid = s.id;
         tr.dataset.key = getRecordKey(s);
@@ -966,6 +968,8 @@ function renderSensorsList() {
             tr.classList.add('row-selected');
         tr.innerHTML = `
             <td title="${esc(s.id)}">${esc(truncate(s.id, 18))}${isLegacy ? ' <span class="badge badge-legacy">LEGACY</span>' : ''}</td>
+            <td title="${esc(shortName)}">${esc(truncate(shortName, 16))}</td>
+            <td title="${esc(s.thing_id ?? '')}">${s.thing_id ? esc(truncate(s.thing_id, 16)) : '—'}</td>
             <td>${esc(s.hos ?? '—')}</td>
             <td title="${esc(s.system_name)}">
                 <span class="sys-dot" style="background:${color}"></span>${esc(s.system_id ?? '—')}
@@ -976,7 +980,6 @@ function renderSensorsList() {
             <td>${s.iot_health
                 ? `<span class="iot-badge iot-${s.iot_health.demo_ready ? 'active' : 'nodata'}">${esc(s.iot_health.status)}</span>`
                 : `<span style="color:${dataColor};font-weight:600">${esc(s.has_data ?? '—')}</span>`}</td>
-            <td title="${esc(s.thing_id ?? '')}">${s.thing_id ? esc(truncate(s.thing_id, 16)) : '—'}</td>
         `;
         tr.addEventListener('click', e => {
             if (e.ctrlKey || e.metaKey) {
