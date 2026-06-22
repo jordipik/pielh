@@ -13,6 +13,37 @@ Aquest document cobreix **dues operacions de sincronització amb TheThings** que
 
 ---
 
+## Identitat vs Sincronització
+
+Els identificadors de registre i els mecanismes de comunicació amb TheThings serveixen finalitats completament diferents. **No s'han de confondre.**
+
+| Identificador | Àmbit | Funció |
+|---|---|---|
+| `thing_id` | PIELH intern + TheThings | Identifica el registre **dins de PIELH**: selecció, edició, multi-selecció, desambiguació de germanos |
+| `thing_token` | TheThings API únicament | Identifica el recurs remot a la plataforma TheThings: push de valors, lectura d'activitat |
+
+### Regles clau
+
+- `thing_id` és la **clau operativa de PIELH**: es desa a `state.multiSelect`, a `editState.selector`, a `editState.targets[].selector.thing_id`.
+- `thing_token` **mai s'usa com a clau interna**: no apareix a la UI, no es passa com a selector d'edició, no s'envia al frontend en cap operació de selecció o formulari.
+- Tots dos camps formen `OWN_FIELDS` al servidor: no es sobreescriuen en operacions shared (ni en batch, ni via `_complete_empty_fields`).
+- La fase 3 del pipeline d'import (auditoria d'activitat) usa `thing_token` per consultar TheThings; el resultat (`iot_health`) s'indexa per `thing_id`.
+
+### Resum gràfic
+
+```
+PIELH intern                    TheThings API
+─────────────────────────────   ──────────────────────────────
+recordKey = thing_id || id      push:  POST /things/{thing_token}
+editState.selector.thing_id     audit: GET  /things/{thing_token}/last
+state.multiSelect.add(thing_id)
+findSensor(id, thingId)
+```
+
+**Referència:** [PIELH_IDENTITY_MODEL.md](PIELH_IDENTITY_MODEL.md)
+
+---
+
 ## Sync de baixada — Pipeline `import_tags_inventory_v1`
 
 Implementat a `server.py:_run_import()`. Executa 3 fases automàtiques en seqüència.

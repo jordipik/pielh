@@ -2986,14 +2986,14 @@
     {
       "id": "HOS116",
       "name": "Ciudad de la Justicia (Juzgado 1ª Instancia Nº 2)-HOS116",
-      "short_name": "",
-      "description": "",
-      "observaciones": "",
+      "short_name": null,
+      "description": null,
+      "observaciones": null,
       "pielh_id": "",
-      "district_code": "DISTRITO-1",
-      "district_name": "Distrito I",
-      "neighborhood_key": "CENTRE",
-      "neighborhood": "Centre",
+      "district_code": "DISTRITO-3",
+      "district_name": "Distrito III",
+      "neighborhood_key": "SANTA EULÀLIA",
+      "neighborhood": "Santa Eulàlia",
       "type": "ADMINISTRATIVO",
       "zone": "RESIDENCIAL",
       "street_etra": "AV_ÁLVAREZ_CASTRO",
@@ -3014,13 +3014,30 @@
           "DISTRITO-1",
           "BARRIO-CENTRE"
         ],
-        "Distrito": "DISTRITO-1",
-        "Barrio": "Centre"
+        "Distrito": "DISTRITO-3",
+        "Barrio": "Santa Eulàlia"
       },
       "iot_total_sensors": 1,
       "iot_active_sensors": 0,
       "iot_demo_ready": 0,
-      "iot_health_status": "NO_DATA"
+      "iot_health_status": "NO_DATA",
+      "_sync": {
+        "status": "error",
+        "updated_at": "2026-06-22T09:52:35.231495",
+        "fields": [
+          "district_code",
+          "district_name",
+          "lat",
+          "lon",
+          "neighborhood",
+          "neighborhood_key",
+          "street_etra",
+          "type",
+          "zone"
+        ],
+        "error": "HTTP 404 Not Found: {\"status\":\"error\",\"code\":404,\"message\":\"Thing not found (thingId: SFLcDVj3Et6u8k6XEQmD3RU2t-rdULAE14VFRndIRAY)\",\"endpoint\":\"POST /v2/things/1wp2m5RewgBvOhOs-EKH7us52pIl0KABfx2dMkrF2so?store=true&broadcast=true\"}",
+        "synced_at": null
+      }
     },
     {
       "id": "HOS115",
@@ -6445,9 +6462,9 @@
     {
       "id": "HOS037",
       "name": "HOS037 Dipòsit Parc de la serp",
-      "short_name": "",
-      "description": "",
-      "observaciones": "",
+      "short_name": null,
+      "description": null,
+      "observaciones": null,
       "pielh_id": "",
       "district_code": "DISTRITO-1",
       "district_name": "Distrito I",
@@ -6484,7 +6501,24 @@
       "iot_total_sensors": 13,
       "iot_active_sensors": 3,
       "iot_demo_ready": 3,
-      "iot_health_status": "ACTIVE"
+      "iot_health_status": "ACTIVE",
+      "_sync": {
+        "status": "pending",
+        "updated_at": "2026-06-22T10:00:20.035843",
+        "fields": [
+          "district_code",
+          "district_name",
+          "lat",
+          "lon",
+          "neighborhood",
+          "neighborhood_key",
+          "street_etra",
+          "type",
+          "zone"
+        ],
+        "error": null,
+        "synced_at": null
+      }
     },
     {
       "id": "HOS036",
@@ -15721,6 +15755,21 @@
         "resource": "energy",
         "system_class": "A",
         "health_source": "thethings_activity_20260621_223839.csv"
+      },
+      "_sync": {
+        "status": "pending",
+        "updated_at": "2026-06-22T10:00:20.036842",
+        "fields": [
+          "district_code",
+          "district_name",
+          "neighborhood",
+          "neighborhood_key",
+          "street_etra",
+          "type",
+          "zone"
+        ],
+        "error": null,
+        "synced_at": null
       }
     },
     {
@@ -16846,6 +16895,21 @@
         "resource": null,
         "system_class": "A",
         "health_source": "thethings_activity_20260621_223839.csv"
+      },
+      "_sync": {
+        "status": "pending",
+        "updated_at": "2026-06-22T10:00:20.036842",
+        "fields": [
+          "district_code",
+          "district_name",
+          "neighborhood",
+          "neighborhood_key",
+          "street_etra",
+          "type",
+          "zone"
+        ],
+        "error": null,
+        "synced_at": null
       }
     },
     {
@@ -19978,6 +20042,21 @@
         "resource": null,
         "system_class": "B",
         "health_source": "thethings_activity_20260621_223839.csv"
+      },
+      "_sync": {
+        "status": "pending",
+        "updated_at": "2026-06-22T10:00:20.036842",
+        "fields": [
+          "district_code",
+          "district_name",
+          "neighborhood",
+          "neighborhood_key",
+          "street_etra",
+          "type",
+          "zone"
+        ],
+        "error": null,
+        "synced_at": null
       }
     },
     {
@@ -26071,6 +26150,21 @@
         "resource": null,
         "system_class": "B",
         "health_source": "thethings_activity_20260621_223839.csv"
+      },
+      "_sync": {
+        "status": "pending",
+        "updated_at": "2026-06-22T10:00:20.036842",
+        "fields": [
+          "district_code",
+          "district_name",
+          "neighborhood",
+          "neighborhood_key",
+          "street_etra",
+          "type",
+          "zone"
+        ],
+        "error": null,
+        "synced_at": null
       }
     },
     {
@@ -35041,6 +35135,21 @@
         "resource": null,
         "system_class": "B",
         "health_source": "thethings_activity_20260621_223839.csv"
+      },
+      "_sync": {
+        "status": "pending",
+        "updated_at": "2026-06-22T10:00:20.036842",
+        "fields": [
+          "district_code",
+          "district_name",
+          "neighborhood",
+          "neighborhood_key",
+          "street_etra",
+          "type",
+          "zone"
+        ],
+        "error": null,
+        "synced_at": null
       }
     },
     {
@@ -42678,6 +42787,21 @@
         "resource": null,
         "system_class": "B",
         "health_source": "thethings_activity_20260621_223839.csv"
+      },
+      "_sync": {
+        "status": "pending",
+        "updated_at": "2026-06-22T10:00:20.036842",
+        "fields": [
+          "district_code",
+          "district_name",
+          "neighborhood",
+          "neighborhood_key",
+          "street_etra",
+          "type",
+          "zone"
+        ],
+        "error": null,
+        "synced_at": null
       }
     },
     {
@@ -45578,6 +45702,21 @@
         "resource": "alert_fire",
         "system_class": "A",
         "health_source": "thethings_activity_20260621_223839.csv"
+      },
+      "_sync": {
+        "status": "pending",
+        "updated_at": "2026-06-22T10:00:20.036842",
+        "fields": [
+          "district_code",
+          "district_name",
+          "neighborhood",
+          "neighborhood_key",
+          "street_etra",
+          "type",
+          "zone"
+        ],
+        "error": null,
+        "synced_at": null
       }
     },
     {
@@ -47114,6 +47253,21 @@
         "resource": "alert_fire",
         "system_class": "A",
         "health_source": "thethings_activity_20260621_223839.csv"
+      },
+      "_sync": {
+        "status": "pending",
+        "updated_at": "2026-06-22T10:00:20.036842",
+        "fields": [
+          "district_code",
+          "district_name",
+          "neighborhood",
+          "neighborhood_key",
+          "street_etra",
+          "type",
+          "zone"
+        ],
+        "error": null,
+        "synced_at": null
       }
     },
     {
@@ -47766,6 +47920,21 @@
         "resource": null,
         "system_class": "A",
         "health_source": "thethings_activity_20260621_223839.csv"
+      },
+      "_sync": {
+        "status": "pending",
+        "updated_at": "2026-06-22T10:00:20.036842",
+        "fields": [
+          "district_code",
+          "district_name",
+          "neighborhood",
+          "neighborhood_key",
+          "street_etra",
+          "type",
+          "zone"
+        ],
+        "error": null,
+        "synced_at": null
       }
     },
     {
@@ -52458,6 +52627,21 @@
         "resource": "next_time_ferrocarril",
         "system_class": "A",
         "health_source": "thethings_activity_20260621_223839.csv"
+      },
+      "_sync": {
+        "status": "pending",
+        "updated_at": "2026-06-22T10:00:20.036842",
+        "fields": [
+          "district_code",
+          "district_name",
+          "neighborhood",
+          "neighborhood_key",
+          "street_etra",
+          "type",
+          "zone"
+        ],
+        "error": null,
+        "synced_at": null
       }
     },
     {
@@ -56324,6 +56508,21 @@
         "resource": null,
         "system_class": "A",
         "health_source": "thethings_activity_20260621_223839.csv"
+      },
+      "_sync": {
+        "status": "pending",
+        "updated_at": "2026-06-22T10:00:20.036842",
+        "fields": [
+          "district_code",
+          "district_name",
+          "neighborhood",
+          "neighborhood_key",
+          "street_etra",
+          "type",
+          "zone"
+        ],
+        "error": null,
+        "synced_at": null
       }
     },
     {
@@ -58830,10 +59029,10 @@
       "lat": 41.365896307868766,
       "lon": 2.132876408153555,
       "building_name": null,
-      "district_code": "DISTRITO-1",
-      "district_name": "Distrito I",
-      "neighborhood_key": "CENTRE",
-      "neighborhood": "Centre",
+      "district_code": "DISTRITO-3",
+      "district_name": "Distrito III",
+      "neighborhood_key": "SANTA EULÀLIA",
+      "neighborhood": "Santa Eulàlia",
       "type": "ADMINISTRATIVO",
       "zone": "RESIDENCIAL",
       "ref_etra": null,
@@ -58846,8 +59045,8 @@
       "qa_notes": null,
       "tags": "",
       "raw": {
-        "Distrito": "DISTRITO-1",
-        "Barrio": "Centre"
+        "Distrito": "DISTRITO-3",
+        "Barrio": "Santa Eulàlia"
       },
       "street_etra": "AV_ÁLVAREZ_CASTRO",
       "iot_health": {
@@ -58858,6 +59057,21 @@
         "resource": null,
         "system_class": "A",
         "health_source": "thethings_activity_20260621_223839.csv"
+      },
+      "_sync": {
+        "status": "pending",
+        "updated_at": "2026-06-22T09:52:35.231495",
+        "fields": [
+          "district_code",
+          "district_name",
+          "neighborhood",
+          "neighborhood_key",
+          "street_etra",
+          "type",
+          "zone"
+        ],
+        "error": null,
+        "synced_at": null
       }
     },
     {
@@ -60650,6 +60864,21 @@
         "resource": null,
         "system_class": "A",
         "health_source": "thethings_activity_20260621_223839.csv"
+      },
+      "_sync": {
+        "status": "pending",
+        "updated_at": "2026-06-22T10:00:20.036842",
+        "fields": [
+          "district_code",
+          "district_name",
+          "neighborhood",
+          "neighborhood_key",
+          "street_etra",
+          "type",
+          "zone"
+        ],
+        "error": null,
+        "synced_at": null
       }
     },
     {
@@ -66478,6 +66707,21 @@
         "resource": null,
         "system_class": "A",
         "health_source": "thethings_activity_20260621_223839.csv"
+      },
+      "_sync": {
+        "status": "pending",
+        "updated_at": "2026-06-22T10:00:20.036842",
+        "fields": [
+          "district_code",
+          "district_name",
+          "neighborhood",
+          "neighborhood_key",
+          "street_etra",
+          "type",
+          "zone"
+        ],
+        "error": null,
+        "synced_at": null
       }
     },
     {

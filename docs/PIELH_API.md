@@ -107,7 +107,42 @@
 **Mètode:** POST  
 **Content-Type:** `application/json`
 
-**Cos de la petició:**
+### Format recomanat: `targets` (des de 2026-06)
+
+Permet especificar `selector.thing_id` per a cada registre, essencial per a sensors germanos.
+
+```json
+{
+  "entityType": "sensor",
+  "targets": [
+    { "id": "HOS136-S01-01", "selector": { "thing_id": "abc123" } },
+    { "id": "HOS136-S01-01", "selector": { "thing_id": "def456" } },
+    { "id": "HOS002-S02-01", "selector": null }
+  ],
+  "updates": {
+    "qa_notes": "revisat",
+    "status": "OK"
+  }
+}
+```
+
+| Camp | Req. | Notes |
+|---|---|---|
+| `entityType` | SI | `"building"` o `"sensor"` |
+| `targets` | SI* | Llista de `{id, selector}`. *Si no s'envia, cal `ids` (legacy) |
+| `targets[].id` | SI | ID lògic del registre |
+| `targets[].selector` | No | `{thing_id: "..."}` per a edició precisa; `null` → afecta tots els germanos del `id` |
+| `updates` | SI | Camps a aplicar |
+
+**Comportament per target:**
+- Amb `selector.thing_id` → aplica updates **únicament** al registre amb aquell `thing_id`. No executa `_complete_empty_fields` (evita contaminació entre germanos).
+- Sense `selector` (`null`) → aplica updates a **tots** els germanos del `id` (comportament legacy). Executa `_complete_empty_fields`.
+- Deduplicació: cada registre (per `object id` Python) s'actualitza com a màxim una vegada, fins i tot si apareix a diversos targets.
+
+### Format legacy: `ids`
+
+Mantingut per retrocompatibilitat. El servidor el converteix internament a targets sense selector.
+
 ```json
 {
   "entityType": "building",
@@ -119,16 +154,14 @@
 }
 ```
 
-| Camp | Req. | Notes |
-|---|---|---|
-| `entityType` | SI | `"building"` o `"sensor"` |
-| `ids` | SI | Llista no buida d'IDs |
-| `updates` | SI | Camps a aplicar a tots |
+Equivalent a: `targets = [{ id: rid, selector: null } for rid in ids]`
 
-**Notes:**
-- `OWN_FIELDS` (`thing_id`, `thing_token`) s'ignoren en batch (no hi ha `selector`)
-- Un únic backup per a tota l'operació
-- Si algun ID no existeix → error 404 per a tots
+**Efecte:** aplica updates a tots els germanos de cada id. Adequat per a edificis (no tenen el problema de germanos). Per a sensors amb germanos, usar format `targets` per precisió.
+
+**Notes comunes:**
+- `OWN_FIELDS` (`thing_id`, `thing_token`) sempre s'exclouen de `shared_updates` (mai es modifiquen en batch)
+- Un únic backup per a tota l'operació (abans de qualsevol modificació)
+- Validació completa de tots els targets **abans** del backup; si algun no existeix → error 404 sense modificar res
 
 **Sortida (200 OK):**
 ```json
@@ -141,7 +174,8 @@
 }
 ```
 
-`records_updated` pot ser > `count` si hi ha sensors/edificis amb germans (mateixa ID, múltiples registres).
+- `count`: nombre de targets enviats
+- `records_updated`: nombre de registres JSON realment modificats (pot ser > `count` si hi ha germanos sense selector)
 
 ---
 

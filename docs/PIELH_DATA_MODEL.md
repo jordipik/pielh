@@ -47,8 +47,8 @@ Representa un edifici municipal amb sensors IoT.
 | `street_mti` | string | `""` | No | Adreça MTI (legacy) |
 | `lat` | number\|null | `41.3610058832045` | No | Latitud WGS84 |
 | `lon` | number\|null | `2.09613941249931` | No | Longitud WGS84 |
-| `thing_id` | string | `"kEl-nX4_..."` | No | ID a la plataforma thethings |
-| `thing_token` | string | `"1OdhHyb..."` | No | Token a la plataforma thethings |
+| `thing_id` | string | `"kEl-nX4_..."` | No | **Identificador operatiu** a TheThings i PIELH. Clau per a selecció, edició i sync |
+| `thing_token` | string | `"1OdhHyb..."` | No | Token de comunicació TheThings. Únicament per a API remota. Camp protegit (`OWN_FIELDS`) |
 | `tags` | string | `"DISTRITO-1, BARRIO-CENTRE"` | No | Tags CSV de la plataforma |
 | `state` | string\|null | `"Fuera Proyecto"` | No | Estat operatiu |
 | `has_data` | string\|null | `"OK"` \| `"SIN DATOS"` | No | Estat de dades |
@@ -62,9 +62,9 @@ Representa un sensor físic instal·lat en un edifici o al carrer.
 
 | Camp | Tipus | Exemple | Req. | Notes |
 |---|---|---|---|---|
-| `id` | string | `"HOS136-S01-01"` | SI | Pot repetir-se (sensors germans amb el mateix ID lògic) |
-| `thing_id` | string | `"0vgUY6Uk..."` | No | ID únic a thethings (disambigua germans) |
-| `thing_token` | string | `"8n5lCA8..."` | No | Token a thethings |
+| `id` | string | `"HOS136-S01-01"` | SI | **Identificador lògic/visual.** Pot repetir-se entre sensors germanos |
+| `thing_id` | string | `"0vgUY6Uk..."` | No | **Identificador operatiu únic.** Selecció, edició, sync, multiselecció. Disambigua germanos |
+| `thing_token` | string | `"8n5lCA8..."` | No | Token de comunicació TheThings. Camp protegit (`OWN_FIELDS`) |
 | `hos` | string\|null | `"HOS136"` | No | HOS de l'edifici pare |
 | `system_id` | string | `"S01"` | No | ID del sistema (clau de catàleg) |
 | `system_name` | string | `"RUIDO"` | No | Nom del sistema |
@@ -88,7 +88,7 @@ Representa un sensor físic instal·lat en un edifici o al carrer.
 | `tags` | string | `""` | No | Tags CSV |
 | `raw` | object | `{}` | No | Dades brutes |
 
-**Nota important:** Sensors amb el mateix `id` però diferent `thing_id` es consideren "germans" (duplicats lògics). El servidor propaga camps compartits a tots els germans i reserva `thing_id`/`thing_token` al registre específic (`OWN_FIELDS`).
+**Nota important:** Sensors amb el mateix `id` però diferent `thing_id` es consideren "germanos" (duplicats lògics). El servidor propaga camps compartits a tots els germanos per defecte i reserva `thing_id`/`thing_token` al registre específic (`OWN_FIELDS`). Quan una operació especifica `selector.thing_id`, afecta **únicament** el germano indicat i no executa `_complete_empty_fields` entre germanos. Vegeu [PIELH_IDENTITY_MODEL.md](PIELH_IDENTITY_MODEL.md).
 
 ## Entitat: OtherObject
 
@@ -198,6 +198,7 @@ OtherObject (OTROS-BARRIOS/DISTRITOS/CALLES) → capes del mapa (no relacionats 
 | Índex | Estructura | Ús |
 |---|---|---|
 | `data._systemsMap` | `{ system_id → System }` | Lookup ràpid de sistemas |
-| `data._buildingsMap` | `{ building_id → Building }` | Lookup ràpid d'edificis |
+| `data._buildingsMap` | `{ building_id → Building }` | Lookup ràpid d'edificis per `id` |
+| `data._buildingsByThingId` | `{ thing_id → Building }` | Lookup ràpid d'edificis per `thing_id` (multiselecció) |
 | `data._sensorsByBuilding` | `{ hos → [Sensor] }` | Sensors per edifici |
 | `data._otherByType` | `{ object_type → [OtherObject] }` | Altres objectes per tipus |

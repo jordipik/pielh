@@ -301,7 +301,11 @@ function normalizeData() {
     (data.catalogs?.systems ?? []).forEach(s => { data._systemsMap[s.id] = s; });
 
     data._buildingsMap = {};
-    (data.buildings ?? []).forEach(b => { data._buildingsMap[b.id] = b; });
+    data._buildingsByThingId = {};
+    (data.buildings ?? []).forEach(b => {
+        data._buildingsMap[b.id] = b;
+        if (b.thing_id) data._buildingsByThingId[b.thing_id] = b;
+    });
 
     data._sensorsByBuilding = {};
     (data.sensors ?? []).forEach(s => {
@@ -554,8 +558,10 @@ function pruneStaleSelection() {
         state.selectedSensorThingId = null;
         clearMapHighlight();
     }
-    for (const id of [...state.multiSelect]) {
-        if (!isVisible(id)) state.multiSelect.delete(id);
+    for (const key of [...state.multiSelect]) {
+        const found = getRecordByKey(key);
+        if (!found || !isVisible(found.record.id, found.record.thing_id || null))
+            state.multiSelect.delete(key);
     }
     if (!state.multiSelect.size) state.multiSelectType = null;
 }
@@ -608,7 +614,7 @@ function renderBuildingMarker(b) {
     });
 
     const marker = L.marker([lat, lon], { icon, pane: 'buildingsPane', zIndexOffset: 0 });
-    marker.on('click', () => selectRecord(b.id, { source: 'map' }));
+    marker.on('click', () => selectRecord(b.id, { source: 'map', thingId: b.thing_id || null }));
     layers.buildings.addLayer(marker);
     markerIndex.buildings[b.id] = marker;
 }
@@ -637,7 +643,7 @@ function renderSensorMarker(s, offsets) {
         fillOpacity: fillOpacity,
     });
 
-    marker.on('click', () => selectRecord(s.id, { source: 'map' }));
+    marker.on('click', () => selectRecord(s.id, { source: 'map', thingId: s.thing_id || null }));
     layers.sensors.addLayer(marker);
     markerIndex.sensors[s.id] = marker;
 }
@@ -891,6 +897,7 @@ function renderBuildingsList() {
         const dataColor = hasData === 'OK' ? '#16a34a' : '#94a3b8';
         const tr = document.createElement('tr');
         tr.dataset.rid = b.id;
+        tr.dataset.key = getRecordKey(b);
         if (b.id === state.selectedBuildingId) tr.classList.add('row-selected');
         if (b.state === 'Fuera Proyecto') tr.classList.add('row-fuera');
         tr.innerHTML = `
@@ -904,15 +911,16 @@ function renderBuildingsList() {
             <td>${b.iot_health_status
                 ? `<span class="iot-badge iot-${b.iot_health_status.toLowerCase()}">${b.iot_active_sensors ?? 0}/${b.iot_total_sensors ?? 0}</span>`
                 : `<span style="color:${dataColor};font-weight:600">${esc(b.has_data ?? '—')}</span>`}</td>
+            <td title="${esc(b.thing_id ?? '')}">${b.thing_id ? esc(truncate(b.thing_id, 16)) : '—'}</td>
         `;
         tr.addEventListener('click', e => {
             if (e.ctrlKey || e.metaKey) {
-                toggleMultiSelect(b.id, 'building');
+                toggleMultiSelect(getRecordKey(b), 'building');
             } else if (e.shiftKey && state.lastSelectedId) {
-                rangeMultiSelect(b.id, 'building', _lastBuildingRecords);
+                rangeMultiSelect(getRecordKey(b), 'building', _lastBuildingRecords);
             } else {
                 clearMultiSelect();
-                selectRecord(b.id, { source: 'table' });
+                selectRecord(b.id, { source: 'table', thingId: b.thing_id || null });
             }
         });
         tbody.appendChild(tr);
@@ -951,6 +959,7 @@ function renderSensorsList() {
         const isLegacy = s.inventory_status === 'LEGACY';
         const tr = document.createElement('tr');
         tr.dataset.rid = s.id;
+        tr.dataset.key = getRecordKey(s);
         if (isLegacy) tr.classList.add('row-legacy');
         if (s.id === state.selectedSensorId && (!state.selectedSensorThingId || s.thing_id === state.selectedSensorThingId))
             tr.classList.add('row-selected');
@@ -966,12 +975,13 @@ function renderSensorsList() {
             <td>${s.iot_health
                 ? `<span class="iot-badge iot-${s.iot_health.demo_ready ? 'active' : 'nodata'}">${esc(s.iot_health.status)}</span>`
                 : `<span style="color:${dataColor};font-weight:600">${esc(s.has_data ?? '—')}</span>`}</td>
+            <td title="${esc(s.thing_id ?? '')}">${s.thing_id ? esc(truncate(s.thing_id, 16)) : '—'}</td>
         `;
         tr.addEventListener('click', e => {
             if (e.ctrlKey || e.metaKey) {
-                toggleMultiSelect(s.id, 'sensor');
+                toggleMultiSelect(getRecordKey(s), 'sensor');
             } else if (e.shiftKey && state.lastSelectedId) {
-                rangeMultiSelect(s.id, 'sensor', _lastSensorRecords);
+                rangeMultiSelect(getRecordKey(s), 'sensor', _lastSensorRecords);
             } else {
                 clearMultiSelect();
                 selectRecord(s.id, { source: 'table', thingId: s.thing_id });
@@ -1001,6 +1011,21 @@ function focusSensor(id, thingId = null) {
 
     if (!map.hasLayer(layers.sensors)) map.addLayer(layers.sensors);
     map.setView([lat, lon], 17, { animate: true });
+}
+
+// Returns the operational key for a record: thing_id when available, id otherwise.
+function getRecordKey(record) {
+    return record.thing_id || record.id;
+}
+
+// Resolves a record from a key (thing_id or id). Returns { record, type } or null.
+function getRecordByKey(key) {
+    const b = data._buildingsMap[key] || data._buildingsByThingId?.[key];
+    if (b) return { record: b, type: 'building' };
+    const s = (data.sensors ?? []).find(s => s.thing_id === key) ||
+              (data.sensors ?? []).find(s => s.id === key);
+    if (s) return { record: s, type: 'sensor' };
+    return null;
 }
 
 // Sensors may share the same `id` (legacy duplicates) — when a specific
@@ -1053,7 +1078,7 @@ function selectRecord(id, opts = {}) {
         state.selectedSensorId      = null;
         state.selectedSensorThingId = null;
         state.selectedId            = id;
-        state.selectedThingId       = null;
+        state.selectedThingId       = thingId || data._buildingsMap[id]?.thing_id || null;
 
         highlightMapRecord(id, 'building');
         if (source === 'map') {
@@ -1613,7 +1638,8 @@ let _pendingCopyChanges = null;
 
 const editState = {
     entityType: null,   // 'sensor' | 'building'
-    ids: [],     // single or bulk
+    ids: [],            // compat: deduplicated ids (may omit siblings sharing same id)
+    targets: [],        // preferred: [{ id, selector: { thing_id } | null }] for bulk
     bulk: false,
     selector: null,
 };
@@ -1773,7 +1799,7 @@ function openDetailPanel(id, thingId = null) {
     editState.entityType = entityType;
     editState.ids = [id];
     editState.bulk = false;
-    editState.selector = entityType === 'sensor' && record.thing_id
+    editState.selector = record.thing_id
         ? { thing_id: record.thing_id }
         : null;
     _pendingCopyChanges = null;
@@ -1796,19 +1822,28 @@ function openDetailPanel(id, thingId = null) {
 }
 
 function openBulkEdit(type) {
-    const ids = [...state.multiSelect].filter(id =>
-        type === 'building' ? !!data._buildingsMap[id] : !data._buildingsMap[id]
+    const isBuildingKey = key => !!(data._buildingsMap[key] || data._buildingsByThingId?.[key]);
+    const keys = [...state.multiSelect].filter(key =>
+        type === 'building' ? isBuildingKey(key) : !isBuildingKey(key)
     );
-    if (!ids.length) return;
+    if (!keys.length) return;
+
+    const records = keys.map(key => getRecordByKey(key)?.record).filter(Boolean);
+    const targets = records.map(r => ({
+        id: r.id,
+        selector: r.thing_id ? { thing_id: r.thing_id } : null,
+    }));
+    const ids = [...new Set(records.map(r => r.id))]; // compat only
 
     editState.entityType = type;
-    editState.ids = ids;
+    editState.ids     = ids;
+    editState.targets = targets;
     editState.bulk = true;
     editState.selector = null;
     _pendingCopyChanges = null;
 
     document.getElementById('dp-title').textContent =
-        `Editar ${ids.length} ${type === 'building' ? 'edificios' : 'sensores'}`;
+        `Editar ${keys.length} ${type === 'building' ? 'edificios' : 'sensores'}`;
     renderBulkForm(type);
 
     const preview = document.getElementById('dp-copy-preview');
@@ -1820,8 +1855,9 @@ function openBulkEdit(type) {
 function closeDetailPanel() {
     document.getElementById('detail-panel').classList.remove('open');
     editState.entityType = null;
-    editState.ids = [];
-    editState.bulk = false;
+    editState.ids     = [];
+    editState.targets = [];
+    editState.bulk    = false;
     editState.selector = null;
     _pendingCopyChanges = null;
 }
@@ -1852,11 +1888,11 @@ function renderSelectionBar() {
         return;
     }
 
-    // Multi-select (n===1): use the single selected id for edit/zoom actions
+    // Multi-select (n===1): resolve actual id/thingId from the stored key
     if (n === 1) {
-        const mid = [...state.multiSelect][0];
-        state.selectedId = mid;
-        state.selectedThingId = null;
+        const found = getRecordByKey([...state.multiSelect][0]);
+        state.selectedId      = found?.record.id      || [...state.multiSelect][0];
+        state.selectedThingId = found?.record.thing_id || null;
     }
 
     const sensorCard = document.getElementById('selected-sensor-card');
@@ -1908,6 +1944,7 @@ function renderSelectedBuildingCard(b) {
             <div class="selection-card-info">
                 <div class="selection-card-kicker">Contexto actual</div>
                 <div class="selection-card-title">${esc(b.id)} · ${esc(b.short_name || b.name || '')}</div>
+                <div style="font-family:monospace;font-size:0.72em;opacity:0.65;margin-top:1px" title="${esc(b.thing_id ?? '')}">ThingID: ${b.thing_id ? esc(truncate(b.thing_id, 16)) : '—'}</div>
                 <div class="selection-card-meta">${meta}</div>
                 <div class="selection-card-systems">
                     ${sysBadges}
@@ -1941,6 +1978,7 @@ function renderSelectedSensorCard(s) {
             <div class="selection-card-info">
                 <div class="selection-card-kicker">Sensor activo</div>
                 <div class="selection-card-title">${esc(s.id)}</div>
+                <div style="font-family:monospace;font-size:0.72em;opacity:0.65;margin-top:1px" title="${esc(s.thing_id ?? '')}">ThingID: ${s.thing_id ? esc(truncate(s.thing_id, 16)) : '—'}</div>
                 <div class="selection-card-meta">${meta}</div>
                 <div class="selection-card-systems">
                     <span class="sys-badge" style="background:${esc(color)}">${esc(s.system_id || '')}</span>
@@ -1964,7 +2002,7 @@ function clearSensor() {
     state.selectedSensorId      = null;
     state.selectedSensorThingId = null;
     state.selectedId            = state.selectedBuildingId;
-    state.selectedThingId       = null;
+    state.selectedThingId       = data._buildingsMap[state.selectedBuildingId]?.thing_id || null;
     document.querySelectorAll('tr.row-selected').forEach(r => r.classList.remove('row-selected'));
     clearMapHighlight();
     if (state.selectedBuildingId) {
@@ -1995,7 +2033,8 @@ function editSelectedRecord() {
     if (n > 1) {
         openBulkEdit(state.multiSelectType);
     } else if (n === 1) {
-        openDetailPanel([...state.multiSelect][0]);
+        const found = getRecordByKey([...state.multiSelect][0]);
+        if (found) openDetailPanel(found.record.id, found.record.thing_id || null);
     } else if (state.selectedSensorId) {
         openDetailPanel(state.selectedSensorId, state.selectedSensorThingId);
     } else if (state.selectedBuildingId) {
@@ -2006,9 +2045,9 @@ function editSelectedRecord() {
 function zoomSelectedRecord() {
     const n = state.multiSelect.size;
     if (n === 1) {
-        const mid = [...state.multiSelect][0];
-        if (data._buildingsMap[mid]) focusBuilding(mid);
-        else focusSensor(mid, null);
+        const found = getRecordByKey([...state.multiSelect][0]);
+        if (found?.type === 'building') focusBuilding(found.record.id);
+        else if (found) focusSensor(found.record.id, found.record.thing_id || null);
         return;
     }
     // Zoom to sensor if active, else to building context
@@ -2052,6 +2091,8 @@ async function saveDetailPanel() {
     const savedEntityType = editState.entityType;
     const savedBulk       = editState.bulk;
     const savedSelector   = editState.selector;
+    const savedTargets    = editState.targets.slice();
+    const savedTargetCount = savedBulk ? savedTargets.length : 1;
 
     try {
         let result;
@@ -2061,7 +2102,7 @@ async function saveDetailPanel() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     entityType: savedEntityType,
-                    ids: editState.ids,
+                    targets: savedTargets,
                     updates,
                 }),
             });
@@ -2084,9 +2125,9 @@ async function saveDetailPanel() {
 
         let msg;
         if (savedBulk) {
-            msg = `${editState.ids.length} registros guardados.`;
-            if (result.records_updated > editState.ids.length) {
-                msg = `${editState.ids.length} registros guardados (${result.records_updated} en total, incluye duplicados con el mismo ID).`;
+            msg = `${savedTargetCount} registros guardados.`;
+            if (result.records_updated > savedTargetCount) {
+                msg = `${savedTargetCount} registros guardados (${result.records_updated} en total).`;
             }
         } else {
             msg = 'Guardado correctamente.';
@@ -2287,14 +2328,14 @@ function rangeMultiSelect(id, type, records) {
         state.multiSelect.clear();
     state.multiSelectType = type;
 
-    const ids = records.map(r => r.id);
-    const last = state.lastSelectedId ? ids.indexOf(state.lastSelectedId) : -1;
-    const curr = ids.indexOf(id);
+    const keys = records.map(r => getRecordKey(r));
+    const last = state.lastSelectedId ? keys.indexOf(state.lastSelectedId) : -1;
+    const curr = keys.indexOf(id);
     if (last === -1) {
         state.multiSelect.add(id);
     } else {
         const [a, b] = [Math.min(last, curr), Math.max(last, curr)];
-        for (let i = a; i <= b; i++) state.multiSelect.add(ids[i]);
+        for (let i = a; i <= b; i++) state.multiSelect.add(keys[i]);
     }
     updateMultiSelectUI();
 }
@@ -2308,21 +2349,23 @@ function clearMultiSelect() {
 function updateMultiSelectUI() {
     const n = state.multiSelect.size;
 
+    const isBuildingKey = key => !!(data._buildingsMap[key] || data._buildingsByThingId?.[key]);
+
     // Buildings bulk button
-    const bldIds = n > 0 ? [...state.multiSelect].filter(id => !!data._buildingsMap[id]) : [];
+    const bldKeys = n > 0 ? [...state.multiSelect].filter(isBuildingKey) : [];
     const btnBld = document.getElementById('btn-bulk-bld');
     const cntBld = document.getElementById('bulk-count-bld');
-    if (btnBld) { btnBld.style.display = bldIds.length > 1 ? '' : 'none'; if (cntBld) cntBld.textContent = bldIds.length; }
+    if (btnBld) { btnBld.style.display = bldKeys.length > 1 ? '' : 'none'; if (cntBld) cntBld.textContent = bldKeys.length; }
 
     // Sensors bulk button
-    const snsIds = n > 0 ? [...state.multiSelect].filter(id => !data._buildingsMap[id]) : [];
+    const snsKeys = n > 0 ? [...state.multiSelect].filter(k => !isBuildingKey(k)) : [];
     const btnSns = document.getElementById('btn-bulk-sns');
     const cntSns = document.getElementById('bulk-count-sns');
-    if (btnSns) { btnSns.style.display = snsIds.length > 1 ? '' : 'none'; if (cntSns) cntSns.textContent = snsIds.length; }
+    if (btnSns) { btnSns.style.display = snsKeys.length > 1 ? '' : 'none'; if (cntSns) cntSns.textContent = snsKeys.length; }
 
-    // Row classes
-    document.querySelectorAll('tr[data-rid]').forEach(tr => {
-        tr.classList.toggle('row-multi-selected', state.multiSelect.has(tr.dataset.rid));
+    // Row classes — compare against data-key (thing_id || id), not data-rid (id only)
+    document.querySelectorAll('tr[data-key]').forEach(tr => {
+        tr.classList.toggle('row-multi-selected', state.multiSelect.has(tr.dataset.key));
     });
 
     renderSelectionBar();

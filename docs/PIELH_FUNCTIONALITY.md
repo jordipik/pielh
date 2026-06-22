@@ -6,20 +6,22 @@
 
 | Via | Funció cridada | Paràmetres |
 |---|---|---|
-| Click fila taula | `selectRecord(b.id, {source: 'table'})` | |
-| Click marcador mapa | `selectRecord(b.id, {source: 'map'})` | |
+| Click fila taula | `selectRecord(b.id, {source:'table', thingId:b.thing_id})` | `thingId` des de la 2026-06 |
+| Click marcador mapa | `selectRecord(b.id, {source:'map', thingId:b.thing_id})` | `thingId` des de la 2026-06 |
 
 **Flux complet:**
 
 ```
-selectRecord(id, {source})
+selectRecord(id, {source, thingId})
   ├── treu row-selected de totes les files
   ├── clearMapHighlight()
-  ├── state.selectedId = id
+  ├── state.selectedBuildingId = id
+  ├── state.selectedThingId = thingId || building.thing_id   ← identificador operatiu
+  ├── state.selectedId = id                                   ← alias lògic
   ├── marca fila com row-selected + scrollIntoView
   ├── highlightMapRecord(id, 'building')  → cercle groc al mapa
   ├── si source === 'map' → showTab() a pestanya Edificios
-  ├── renderSelectionBar()               → mostra card de l'edifici
+  ├── renderSelectionBar()               → mostra card de l'edifici (amb ThingID visible)
   └── renderSensorsList()               → filtra sensors per este edifici
 ```
 
@@ -51,25 +53,47 @@ selectRecord(id, {source, thingId})
 ## 3. Multi-selecció
 
 **Activació:**
-- `Ctrl+Click` (o `Meta+Click`) a una fila → `toggleMultiSelect(id, type)`
-- `Shift+Click` → `rangeMultiSelect(id, type, records)` (selecció per rang)
+- `Ctrl+Click` (o `Meta+Click`) a una fila → `toggleMultiSelect(getRecordKey(record), type)`
+- `Shift+Click` → `rangeMultiSelect(getRecordKey(record), type, records)` (selecció per rang)
 
 **Regles:**
 - Només es pot tenir selecció d'un tipus (`building` o `sensor`) a la vegada
 - Canviar de tipus neteja la selecció anterior
 
+**Clau de multiselecció (`recordKey`):**
+
+```js
+recordKey = thing_id || id
+// getRecordKey(record) retorna thing_id quan existeix, id com a fallback
+```
+
+Dos sensors germanos (mateix `id`, diferent `thing_id`) es compten com **2 entrades separades** a `state.multiSelect`.
+
 **Estat:**
-- `state.multiSelect`: `Set` d'IDs
+- `state.multiSelect`: `Set` de `recordKey` (`thing_id` quan existeix, `id` com fallback)
 - `state.multiSelectType`: `'building'` | `'sensor'` | `null`
-- `state.lastSelectedId`: última ID seleccionada (per al rang)
+- `state.lastSelectedId`: últim `recordKey` seleccionat (per al rang Shift+Click)
+
+**Helpers:**
+- `getRecordKey(record)` → `thing_id || id`
+- `getRecordByKey(key)` → `{ record, type }` (cerca per `thing_id`, després per `id`)
 
 **UI actualitzada per `updateMultiSelectUI()`:**
 - Botó "Editar N edificios" (`#btn-bulk-bld`) apareix si ≥ 2 edificis seleccionats
 - Botó "Editar N sensores" (`#btn-bulk-sns`) apareix si ≥ 2 sensors seleccionats
-- Files amb classe `row-multi-selected`
+- Files amb classe `row-multi-selected` (compara per `data-key`, no `data-rid`)
 - `renderSelectionBar()` → mostra barra d'accions si n > 1
 
-**Fitxers:** `app.js:1773-1834`
+**Edició massiva (bulk):**
+
+Quan l'usuari fa click a "Editar N", s'obre `openBulkEdit(type)`:
+- Construeix `editState.targets = [{ id, selector: { thing_id } | null }]`
+- Cada target porta el `thing_id` quan existeix → el servidor actualitza **únicament** el registre indicat
+- El título mostra `targets.length` (nombre real de registres, incloent germanos seleccionats per separat)
+
+Veure [PIELH_IDENTITY_MODEL.md](PIELH_IDENTITY_MODEL.md) per al model complet.
+
+**Fitxers:** `app.js:1773-1834`, `app.js:2270-2340`
 
 ---
 

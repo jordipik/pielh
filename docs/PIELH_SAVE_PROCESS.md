@@ -145,20 +145,56 @@
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
-## Flux de guardada batch (diferències)
+## Flux de guardada batch (format actual — targets)
 
 ```
 saveDetailPanel() [bulk=true]
   ├── getBulkFormValues()           → NOMÉS camps amb valor
-  ├── POST /api/save-batch {entityType, ids:[], updates}
-  │   servidor: per cada id:
-  │   ├── _siblings() + _apply_updates() per a cada germà
-  │   ├── _complete_empty_fields()
-  │   └── _propagate_to_sensors() (si building)
-  │   UN ÚNIC _backup() al principi
-  │   UNA ÚNICA _save() al final
-  └── reloadData() + showToast()
+  ├── POST /api/save-batch {entityType, targets:[{id, selector}], updates}
+  │   servidor:
+  │   ├── valida tots els targets ABANS de fer backup
+  │   ├── UN ÚNIC _backup() al principi
+  │   ├── per cada target {id, selector:{thing_id}}:
+  │   │   ├── _siblings(id)                      → tots els germanos
+  │   │   ├── si selector.thing_id:
+  │   │   │   └── aplica updates NOMÉS al registre amb thing_id indicat
+  │   │   │       (sense _complete_empty_fields)
+  │   │   └── si sense selector (legacy):
+  │   │       ├── aplica updates a TOTS els germanos
+  │   │       └── _complete_empty_fields(germanos)
+  │   ├── _propagate_to_sensors() (si building)
+  │   └── UNA ÚNICA _save() al final
+  └── reloadData() + showToast(N registres guardats)
 ```
+
+### Retrocompatibilitat: format `ids` (legacy)
+
+Si el client envia `ids` en comptes de `targets`, el servidor fa la conversió automàtica:
+
+```
+POST /api/save-batch { entityType, ids: ["HOS001","HOS002"], updates }
+  ↓ conversió interna
+targets = [{ id: "HOS001", selector: null }, { id: "HOS002", selector: null }]
+  ↓ comportament: aplica a tots els germanos de cada id (igual que abans)
+```
+
+### Exemple: bulk edit de sensors germanos per thing_id
+
+```json
+POST /api/save-batch
+{
+  "entityType": "sensor",
+  "targets": [
+    { "id": "HOS136-S01-01", "selector": { "thing_id": "abc123" } },
+    { "id": "HOS136-S01-01", "selector": { "thing_id": "def456" } }
+  ],
+  "updates": { "qa_notes": "revisat" }
+}
+```
+
+Resultat: `abc123` i `def456` s'actualitzen per separat, cadascun amb la seva edició independent.
+
+Veure [PIELH_IDENTITY_MODEL.md](PIELH_IDENTITY_MODEL.md) per al model d'identitat complet.
 
 ## Gestió d'errors
 

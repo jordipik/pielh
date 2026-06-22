@@ -312,15 +312,24 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         try:
             body        = self._read_json()
             entity_type = body.get('entityType', '')
-            ids         = body.get('ids', [])
+            targets_raw = body.get('targets')      # new: [{id, selector}]
+            ids_raw     = body.get('ids', [])      # legacy: [id, ...]
             updates     = body.get('updates', {})
 
             if entity_type not in ('sensor', 'building'):
                 return self._err(400, 'entityType must be sensor or building')
-            if not ids or not isinstance(ids, list):
-                return self._err(400, 'ids must be a non-empty list')
             if not isinstance(updates, dict) or not updates:
                 return self._err(400, 'updates must be a non-empty dict')
+
+            # Normalize to targets list
+            if targets_raw is not None:
+                if not isinstance(targets_raw, list) or not targets_raw:
+                    return self._err(400, 'targets must be a non-empty list')
+                targets = targets_raw
+            else:
+                if not ids_raw or not isinstance(ids_raw, list):
+                    return self._err(400, 'ids must be a non-empty list')
+                targets = [{'id': rid, 'selector': None} for rid in ids_raw]
 
             master = self._load()
             err = self._validate(updates, master)
@@ -329,37 +338,73 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             updates = self._expand_updates(updates, master)
             shared_updates = {k: v for k, v in updates.items() if k not in OWN_FIELDS}
 
-            groups = {rid: self._siblings(master, entity_type, rid) for rid in ids}
-            not_found = [rid for rid, siblings in groups.items() if not siblings]
+            # Validate all targets exist before any write
+            not_found = []
+            for t in targets:
+                tid      = t.get('id', '')
+                selector = t.get('selector') or {}
+                thing_id = selector.get('thing_id') if isinstance(selector, dict) else None
+                siblings = self._siblings(master, entity_type, tid)
+                if not siblings:
+                    not_found.append(tid)
+                elif thing_id:
+                    if not any(r.get('thing_id') == thing_id for r in siblings):
+                        not_found.append(f"{tid}/{thing_id}")
             if not_found:
                 return self._err(404, f"No encontrados: {', '.join(not_found)}")
 
             self._backup()
-            total_records = 0
+            total_records   = 0
             sensors_updated = 0
-            for rid, siblings in groups.items():
-                before = {id(r): copy.deepcopy(r) for r in siblings}
-                for r in siblings:
+            seen = set()  # object ids of already-processed records
+
+            for t in targets:
+                tid      = t.get('id', '')
+                selector = t.get('selector') or {}
+                thing_id = selector.get('thing_id') if isinstance(selector, dict) else None
+                siblings = self._siblings(master, entity_type, tid)
+
+                if thing_id:
+                    # Targeted: apply only to the record matching thing_id
+                    specific = next((r for r in siblings if r.get('thing_id') == thing_id), None)
+                    if not specific or id(specific) in seen:
+                        continue
+                    seen.add(id(specific))
+                    records_to_update = [specific]
+                else:
+                    # Legacy/fallback: apply to all siblings not yet processed
+                    records_to_update = [r for r in siblings if id(r) not in seen]
+                    for r in records_to_update:
+                        seen.add(id(r))
+
+                before = {id(r): copy.deepcopy(r) for r in records_to_update}
+                for r in records_to_update:
                     self._apply_updates(r, shared_updates)
-                self._complete_empty_fields(siblings)
+                # _complete_empty_fields only makes sense when editing all siblings together;
+                # skip it when targeting a specific thing_id to avoid cross-contamination.
+                if not thing_id:
+                    self._complete_empty_fields(records_to_update)
+
                 if entity_type == 'building':
-                    sensors_updated += self._propagate_to_sensors(master, rid, shared_updates)
-                self._mark_sync_pending(siblings, list(shared_updates.keys()))
+                    sensors_updated += self._propagate_to_sensors(master, tid, shared_updates)
+                self._mark_sync_pending(records_to_update, list(shared_updates.keys()))
                 if entity_type == 'building':
-                    affected_sns = [s for s in master.get('sensors', []) if s.get('hos') == rid]
+                    affected_sns = [s for s in master.get('sensors', []) if s.get('hos') == tid]
                     propagated   = [k for k in shared_updates if k in BUILDING_TO_SENSOR_FIELDS]
                     self._mark_sync_pending(affected_sns, propagated)
-                for r in siblings:
+
+                for r in records_to_update:
                     old = before[id(r)]
                     for field, new_val in r.items():
                         if field == 'raw':
                             continue
                         if old.get(field) != new_val:
                             _log_change(entity_type, r.get('id'), field, old.get(field), new_val)
-                total_records += len(siblings)
+                total_records += len(records_to_update)
+
             self._save(master)
-            self._ok({'ok': True, 'count': len(ids), 'records_updated': total_records, 'updates': shared_updates,
-                      'sensors_updated': sensors_updated})
+            self._ok({'ok': True, 'count': len(targets), 'records_updated': total_records,
+                      'updates': shared_updates, 'sensors_updated': sensors_updated})
 
         except Exception as e:
             self._err(500, str(e))
