@@ -28,12 +28,12 @@
 | Botó limpiar filtres | FUNCIONAL | |
 | Filtre "Solo visibles" | FUNCIONAL | Binds a `moveend`/`zoomend` del mapa |
 | Taula d'edificis | FUNCIONAL | 8 columnes, ordenació, multi-selecció |
-| Taula de sensors | FUNCIONAL | 7 columnes, límit 500, filtre per edifici |
+| Taula de sensors | FUNCIONAL | 8 columnes (afegida ThingID), límit 500, `data-key` i `data-thing-id` per fila |
 | Pestanya QA | FUNCIONAL | Filtres per severitat i tipus |
 | Cards de resum (header) | FUNCIONAL | Edificis, sensors, barrios, sistemes, QA |
-| Selecció simple (taula o mapa) | FUNCIONAL | Sincronització bidireccional |
-| Selecció multi (Ctrl+click, Shift+click) | FUNCIONAL | |
-| Highlight al mapa | FUNCIONAL | Cercle groc |
+| Selecció simple (taula o mapa) | FUNCIONAL | Sincronització bidireccional. Sensors germanos desambiguats per `thing_id` |
+| Selecció multi (Ctrl+click, Shift+click) | FUNCIONAL | Clau `thing_id \|\| id` — dos germanos compten com 2 entrades separades |
+| Highlight al mapa | FUNCIONAL | Cercle groc. Sensors per `markerIndex.sensors[thing_id\|\|id]` |
 | Zoom a element seleccionat | FUNCIONAL | `map.setView(..., 17)` |
 | Panell de detall/edició | FUNCIONAL | Edifici i sensor |
 | Edició individual | FUNCIONAL | Tots els camps del formulari |
@@ -94,6 +94,17 @@
 | Panell de fitxa inferior | FUNCIONAL | Edifici, sensor, barri, districte |
 | Edició de dades | NO IMPLEMENTAT | Explorer és read-only |
 | Offset espiral sensors solapats | FUNCIONAL | `_spiralOffset` |
+
+---
+
+## Problemes resolts (2026-06)
+
+| Problema | Solució | Commit |
+|---|---|---|
+| `markerIndex.sensors[id]` — germanos sobreescrivien la clau | Indexat per `getRecordKey(s) = thing_id\|\|id` | `fix(identity)` 2026-06-22 |
+| `highlightMapRecord(id, 'sensor')` sense thingId — marcador equivocat | Nou paràmetre `thingId`, lookup per `thingId\|\|id` | `fix(identity)` 2026-06-22 |
+| `querySelector('[data-rid="${id}"]')` — fila equivocada per a germanos | Ressaltat per `data-key` (únic) en comptes de `data-rid` (compartit) | `fix(identity)` 2026-06-22 |
+| ThingID de tarjeta poc visible (opacity 0.65) | Elimada opacity, `<strong>`, truncat augmentat a 20 | `fix(identity)` 2026-06-22 |
 
 ---
 

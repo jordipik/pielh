@@ -35,3 +35,14 @@ Documentació generada el 2026-06-18 a partir de la lectura directa del codi fon
 **Stack:** HTML + CSS + JavaScript vanilla (Leaflet) / Python stdlib (servidor HTTP)  
 **Dades:** `pielh_qa_master.json` (font de veritat única, JSON)  
 **API externa:** `api.smartpielh.l-h.cat` (thethings IoT platform)
+
+## Model d'identitat — resum executiu
+
+```
+thing_id = identificador operatiu principal (selecció, edició, marcadors, files)
+id       = identificador lògic/visual (formularis, capçaleres, relació edifici-sensor)
+```
+
+Sensors germanos (mateix `id`, diferent `thing_id`) es gestionen correctament en totes les operacions: selecció, ressaltat, edició individual, edició massiva i sincronització. Cas validat: **HOS037**.
+
+Vegeu [PIELH_IDENTITY_MODEL.md](PIELH_IDENTITY_MODEL.md) per al model complet.

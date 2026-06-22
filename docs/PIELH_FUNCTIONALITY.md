@@ -35,18 +35,25 @@ selectRecord(id, {source, thingId})
 
 ```
 selectRecord(id, {source, thingId})
-  ├── state.selectedId = id, state.selectedThingId = thingId
+  ├── state.selectedSensorId      = id
+  ├── state.selectedSensorThingId = thingId         ← clau operativa
   ├── findSensor(id, thingId)           → desambigua sensors germans
-  ├── highlightMapRecord(id, 'sensor')
+  ├── highlightMapRecord(id, 'sensor', thingId)      ← passa thingId
+  │   └── markerIndex.sensors[thingId || id]         ← índex per thing_id
+  ├── fila ressaltada per data-key = thingId || id   ← no data-rid
   ├── si source === 'map' → showTab() a pestanya Sensores
   └── renderSelectionBar()
         ├── renderSelectedBuildingCard(building pare)  [si s.hos existeix]
         └── renderSelectedSensorCard(sensor)
+              ├── Títol: Sensor ID
+              ├── ThingID (en negreta)
+              ├── HOS al kicker ("Sensor activo · HOS: HOSXXX")
+              └── Sistema, estat IoT, districte
 ```
 
 **Fitxers:** `app.js:965-1004`
 
-**Nota sobre sensors germans:** Sensors amb el mateix `id` però diferent `thing_id` es seleccionen per `thingId`. `findSensor(id, thingId)` busca primer per `thing_id`, cau en el primer `id` coincident si no troba.
+**Sensors germanos:** Sensors amb el mateix `id` però diferent `thing_id` es seleccionen per `thingId`. `findSensor(id, thingId)` busca primer per `thing_id`, cau en el primer `id` coincident si no troba. El ressaltat de fila usa `data-key` (únic per sensor), i el ressaltat de marcador usa `markerIndex.sensors[thingId || id]` (únic per sensor). Sense `thingId`, sensors germanos caurien sempre sobre el darrer registre indexat.
 
 ---
 
@@ -243,12 +250,16 @@ Activa la capa del mapa corresponent si estava desactivada.
 
 ## 11. Ressaltat al mapa
 
-**Funció:** `highlightMapRecord(id, type)` — `app.js:948`
+**Funció:** `highlightMapRecord(id, type, thingId = null)` — `app.js:1050`
 
 - Neteja el highlight anterior (`_hlLayer`)
-- Busca el marcador a `markerIndex.buildings[id]` o `markerIndex.sensors[id]`
+- Per sensors: clau de lookup = `thingId || id` → `markerIndex.sensors[sKey]`
+- Per edificis: clau de lookup = `id` → `markerIndex.buildings[id]`
+- `markerIndex.sensors` s'indexa per `getRecordKey(s) = thing_id || id` (no per `id` sol)
 - Crea un `L.circleMarker` groc al damunt (`color: #f59e0b`)
 - Guarda a `_hlLayer` (es neteja automàticament en la pròxima selecció)
+
+**Sensors germanos:** Sense `thingId`, dos sensors amb el mateix `id` quedarien solapats al `markerIndex` i el ressaltat sempre apuntaria al darrer indexat. El paràmetre `thingId` és obligatori per a selecció precisa de germanos.
 
 ---
 

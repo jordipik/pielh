@@ -63,6 +63,18 @@ function getRecordKey(record) {
 `state.multiSelect` emmagatzema `recordKey` (no `id`) des de la versió actual.  
 `getRecordByKey(key)` resol `{ record, type }` des d'un key.
 
+**`thing_id` és la clau operativa única per a:**
+- Selecció (`state.selectedSensorThingId`, `state.selectedThingId`)
+- Ressaltat de files (`data-key = thing_id || id`)
+- Ressaltat de marcadors (`markerIndex.sensors[getRecordKey(s)]`)
+- Edició individual (`editState.selector = { thing_id }`)
+- Edició massiva (`editState.targets[].selector.thing_id`)
+- Multi-selecció (`state.multiSelect` emmagatzema `thing_id || id`)
+- Sincronització (`/api/sync-record selector.thing_id`)
+- Localització de marcadors al mapa (`highlightMapRecord(id, 'sensor', thingId)`)
+
+**`id` es considera únicament un identificador lògic/visual** — visible a taules, formularis i capçaleres, però insuficient com a clau operativa quan existeixen sensors germanos.
+
 ### Backend (`server.py`)
 
 ```python
@@ -134,6 +146,68 @@ saveDetailPanel()
 ```
 
 ---
+
+## Índex de marcadors de sensors
+
+```js
+// INCORRECTE (anterior): colisions entre germanos
+markerIndex.sensors[s.id] = marker;
+
+// CORRECTE (actual): clau única per cada sensor
+markerIndex.sensors[getRecordKey(s)] = marker;  // = thing_id || id
+```
+
+Quan dos sensors germanos comparteixen `id`, indexar per `id` fa que el segon sobreescrigui el marcador del primer. L'índex per `getRecordKey` garanteix una entrada per sensor físic.
+
+## Ressaltat de marcador (highlightMapRecord)
+
+```js
+// INCORRECTE (anterior): sempre ressaltava el darrer germà indexat
+highlightMapRecord(id, 'sensor');
+
+// CORRECTE (actual): ressalta el sensor exacte per thing_id
+highlightMapRecord(id, 'sensor', thingId);
+
+// Implementació interna:
+function highlightMapRecord(id, type, thingId = null) {
+    const sKey = type === 'sensor' ? (thingId || id) : id;
+    const m = markerIndex.sensors[sKey];  // clau única
+    // ...
+}
+```
+
+## Ressaltat de fila a la taula
+
+Cada fila de sensor té dos atributs:
+
+```html
+<tr data-rid="HOS037-S01-01"     <!-- id lògic — pot repetir-se entre germanos -->
+    data-key="abc123"             <!-- thing_id || id — ÚNIC -->
+    data-thing-id="abc123">       <!-- thing_id explícit -->
+```
+
+El ressaltat visual usa `data-key`:
+
+```js
+// INCORRECTE (anterior): podia seleccionar el germà equivocat
+querySelector(`tr[data-rid="${id}"]`)
+
+// CORRECTE (actual): selecció unívoca per thing_id
+querySelector(`tr[data-key="${thingId || id}"]`)
+```
+
+## Validació: sensors germanos (HOS037)
+
+Cas provat amb dos sensors que comparteixen `id` però tenen `thing_id` diferent:
+
+| Operació | Resultat |
+|---|---|
+| Seleccionar sensor A | Fila A ressaltada ✓ — Marcador A ressaltat ✓ |
+| Seleccionar sensor B | Fila B ressaltada ✓ — Marcador B ressaltat ✓ |
+| Tarjeta de selecció | Mostra ThingID i HOS correctes del sensor seleccionat ✓ |
+| Obrir editor | Obre el registre exacte del sensor seleccionat ✓ |
+| Guardar un camp | Modifica únicament el sensor seleccionat ✓ |
+| Sensor germà | No s'afecta ✓ |
 
 ## Documents relacionats
 

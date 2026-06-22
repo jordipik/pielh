@@ -62,21 +62,25 @@ La card QA té estil d'alerta (`card-alert`, fons taronja).
 
 Apareix quan es selecciona un edifici. Conté:
 - Icona edifici (o imatge si `b.image` existeix — camp NO habitual a les dades)
-- Kicker "Edificio seleccionado"
+- Kicker "Contexto actual"
 - Títol: `HOS_ID · short_name`
+- **ThingID** (monospace, negreta) — identificador operatiu visible
 - Meta: type · neighborhood · district · state
-- Badges de sistema + comptador de sensors
+- Badges de sistema + comptador de sensors + iot_health
 - Botons: Editar (✏), Zoom (📍), Netejar (✕)
 
 ### selected-sensor-card (`#selected-sensor-card`)
 
 Apareix quan es selecciona un sensor. Conté:
 - Icona cercle amb color del sistema
-- Kicker "Sensor seleccionado"
-- Títol: ID sensor
+- Kicker "Sensor activo · HOS: HOSXXX" — inclou el codi HOS de l'edifici pare
+- Títol: **Sensor ID**
+- **ThingID** (monospace, negreta) — identificador operatiu, visible de forma destacada
 - Meta: system_name · type · ref_etra · neighborhood
-- Badges sistema + has_data + district
+- Badges sistema + estat IoT (iot_health o has_data) + data darrer contacte + districte
 - Botons: Editar, Zoom, Netejar
+
+**Nota:** El ThingID es mostra sense opacitat reduïda per garantir la visibilitat en casos de sensors germanos (on el ThingID és l'únic diferenciador visual).
 
 ---
 
@@ -145,11 +149,25 @@ Apareix quan hi ha elements seleccionats (`n >= 1`):
 | Dist. | `district_name` | |
 | Calle | `ref_etra` | Truncat a 18 caràcters |
 | Datos | `has_data` | Color: verd (OK) o gris |
+| ThingID | `thing_id` | Truncat a 16 caràcters, valor complet al `title` |
+
+**Atributs de cada fila `<tr>`:**
+
+```html
+<tr data-rid="HOS037-S01-01"     <!-- id lògic (pot compartir-se entre germanos) -->
+    data-key="abc123..."          <!-- thing_id || id  — ÚNIC per sensor -->
+    data-thing-id="abc123...">    <!-- thing_id explícit per trazabilitat -->
+```
+
+- `data-key` és la clau de ressaltat visual (multi-selecció i selecció simple)
+- `data-rid` es manté per compatibilitat amb edificis (on `id` és únic)
+- `data-thing-id` permet localitzar el sensor exacte des del DOM
 
 **Funcionalitats:**
 - Límit de 500 sensors mostrats (`SENSOR_LIMIT`)
 - Si hi ha un edifici seleccionat, filtra per `s.hos === selectedId`
-- Mateixa multi-selecció que edificis
+- Multi-selecció: Ctrl+click (toggle), Shift+click (rang), click simple (exclusiu)
+- Ressaltat: `row-selected` (selecció simple) i `row-multi-selected` (multi-selecció), ambdós per `data-key`
 - Filtre "Solo visibles" per bounds del mapa
 
 ---
