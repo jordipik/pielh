@@ -645,7 +645,7 @@ function renderSensorMarker(s, offsets) {
 
     marker.on('click', () => selectRecord(s.id, { source: 'map', thingId: s.thing_id || null }));
     layers.sensors.addLayer(marker);
-    markerIndex.sensors[s.id] = marker;
+    markerIndex.sensors[getRecordKey(s)] = marker;
 }
 
 // ── Neighborhood markers ──────────────────────────────────────
@@ -960,6 +960,7 @@ function renderSensorsList() {
         const tr = document.createElement('tr');
         tr.dataset.rid = s.id;
         tr.dataset.key = getRecordKey(s);
+        tr.dataset.thingId = s.thing_id || '';
         if (isLegacy) tr.classList.add('row-legacy');
         if (s.id === state.selectedSensorId && (!state.selectedSensorThingId || s.thing_id === state.selectedSensorThingId))
             tr.classList.add('row-selected');
@@ -1046,9 +1047,10 @@ function clearMapHighlight() {
     if (_hlLayer) { map.removeLayer(_hlLayer); _hlLayer = null; }
 }
 
-function highlightMapRecord(id, type) {
+function highlightMapRecord(id, type, thingId = null) {
     clearMapHighlight();
-    const m = type === 'building' ? markerIndex.buildings[id] : markerIndex.sensors[id];
+    const sKey = type === 'sensor' ? (thingId || id) : id;
+    const m = type === 'building' ? markerIndex.buildings[id] : markerIndex.sensors[sKey];
     if (!m) return;
     _hlLayer = L.circleMarker(m.getLatLng(), {
         pane: 'sensorsPane',
@@ -1098,7 +1100,7 @@ function selectRecord(id, opts = {}) {
             if (s.hos && data._buildingsMap[s.hos]) {
                 state.selectedBuildingId = s.hos;
             }
-            highlightMapRecord(id, 'sensor');
+            highlightMapRecord(id, 'sensor', thingId);
             if (source === 'map') {
                 const btn = document.querySelector('[data-tab="tab-sensors"]');
                 if (btn && !document.getElementById('tab-sensors').classList.contains('active'))
@@ -1110,8 +1112,9 @@ function selectRecord(id, opts = {}) {
     // Highlight rows
     const bldRow = document.querySelector(`tr[data-rid="${CSS.escape(state.selectedBuildingId || '')}"]`);
     if (bldRow) { bldRow.classList.add('row-selected'); bldRow.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }
-    const sensRow = document.querySelector(`tr[data-rid="${CSS.escape(id)}"]`);
-    if (sensRow && !isBuilding) { sensRow.classList.add('row-selected'); sensRow.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }
+    const sensKey = !isBuilding ? (thingId || id) : null;
+    const sensRow = sensKey ? document.querySelector(`tr[data-key="${CSS.escape(sensKey)}"]`) : null;
+    if (sensRow) { sensRow.classList.add('row-selected'); sensRow.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }
 
     renderSelectionBar();
     renderSensorsList();
@@ -1944,7 +1947,7 @@ function renderSelectedBuildingCard(b) {
             <div class="selection-card-info">
                 <div class="selection-card-kicker">Contexto actual</div>
                 <div class="selection-card-title">${esc(b.id)} · ${esc(b.short_name || b.name || '')}</div>
-                <div style="font-family:monospace;font-size:0.72em;opacity:0.65;margin-top:1px" title="${esc(b.thing_id ?? '')}">ThingID: ${b.thing_id ? esc(truncate(b.thing_id, 16)) : '—'}</div>
+                <div style="font-family:monospace;font-size:0.75em;margin-top:2px" title="${esc(b.thing_id ?? '')}">ThingID: <strong>${b.thing_id ? esc(truncate(b.thing_id, 20)) : '—'}</strong></div>
                 <div class="selection-card-meta">${meta}</div>
                 <div class="selection-card-systems">
                     ${sysBadges}
@@ -1976,9 +1979,9 @@ function renderSelectedSensorCard(s) {
                 <div class="sys-icon-circle" style="background:${esc(color)}">${esc(s.system_id || '?')}</div>
             </div>
             <div class="selection-card-info">
-                <div class="selection-card-kicker">Sensor activo</div>
+                <div class="selection-card-kicker">Sensor activo${s.hos ? ` · HOS: ${esc(s.hos)}` : ''}</div>
                 <div class="selection-card-title">${esc(s.id)}</div>
-                <div style="font-family:monospace;font-size:0.72em;opacity:0.65;margin-top:1px" title="${esc(s.thing_id ?? '')}">ThingID: ${s.thing_id ? esc(truncate(s.thing_id, 16)) : '—'}</div>
+                <div style="font-family:monospace;font-size:0.75em;margin-top:2px" title="${esc(s.thing_id ?? '')}">ThingID: <strong>${s.thing_id ? esc(truncate(s.thing_id, 20)) : '—'}</strong></div>
                 <div class="selection-card-meta">${meta}</div>
                 <div class="selection-card-systems">
                     <span class="sys-badge" style="background:${esc(color)}">${esc(s.system_id || '')}</span>
