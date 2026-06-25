@@ -143,14 +143,26 @@ Apareix quan hi ha elements seleccionats (`n >= 1`):
 | Columna | `data-sort` | Notes |
 |---|---|---|
 | ID | `id` | Truncat a 18 caràcters |
-| Nombre Corto | — | `building.short_name` → `building.name` → `''`; truncat a 16 caràcters |
+| Nombre Corto | — | `building.short_name` → `building.name` → `''`; truncat a 16 caràcters; no ordenable (camp derivat) |
 | ThingID | `thing_id` | Identificador operatiu principal; truncat a 16 caràcters, valor complet al `title` |
 | HOS | `hos` | Edifici pare |
 | Sistema | `system_id` | Amb punt de color del sistema |
-| Barrio | `neighborhood` | Abreujat |
-| Dist. | `district_name` | |
-| Calle | `ref_etra` | Truncat a 18 caràcters |
-| Datos | `has_data` | Color: verd (OK) o gris |
+| Último dato | `_iot_last_seen` | Data relativa de `iot_health.last_seen`; "Hoy", "Hace N días", "Hace N meses", "Sin datos" |
+| Estado IoT | `_iot_status` | Badge visual per `iot_health.status`; fallback "NO_DATA" si no hi ha `iot_health` |
+
+**Estados IoT i classes CSS:**
+
+| Status | Classe CSS | Aspecte |
+|---|---|---|
+| `ACTIVE_24H` | `iot-active_24h` | Verd positiu |
+| `ACTIVE_7D` | `iot-active_7d` | Verd clar |
+| `STALE_30D` | `iot-stale_30d` | Groc advertència |
+| `STALE_90D` | `iot-stale_90d` | Taronja degradat |
+| `INACTIVE_90D` | `iot-inactive_90d` | Vermell crític |
+| `DATA_NO_TIMESTAMP` | `iot-data_no_timestamp` | Blau neutre |
+| `NO_DATA` | `iot-no_data` | Gris (existent) |
+
+Nota: Barrio, Dist., Calle i Datos s'han eliminat de la taula (disponibles a la fitxa de sensor i filtres). "Estado IoT" substitueix "Datos" amb informació més granular.
 
 **Atributs de cada fila `<tr>`:**
 

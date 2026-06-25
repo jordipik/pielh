@@ -7,16 +7,17 @@ Documentació generada el 2026-06-18 a partir de la lectura directa del codi fon
 | Document | Contingut |
 |---|---|
 | [PIELH_PROJECT_INVENTORY.md](PIELH_PROJECT_INVENTORY.md) | Inventari complet de fitxers, dependències i APIs externes |
+| [PIELH_SCRIPTS.md](PIELH_SCRIPTS.md) | **Inventari complet de scripts** — funció, mode lectura/escriptura, backup, riscos, fluix HOS |
 | [PIELH_ARCHITECTURE.md](PIELH_ARCHITECTURE.md) | Arquitectura global: Frontend / Backend / Persistència |
 | [PIELH_IDENTITY_MODEL.md](PIELH_IDENTITY_MODEL.md) | **Model d'identitat** — `thing_id` vs `id` vs `thing_token`, sensors germanos, `recordKey`. Lectura obligatòria per entendre la gestió de sensors germanos |
-| [PIELH_DATA_MODEL.md](PIELH_DATA_MODEL.md) | Model de dades de `pielh_qa_master.json` |
+| [PIELH_DATA_MODEL.md](PIELH_DATA_MODEL.md) | Model de dades de `pielh_qa_master.json` + **relació sensor-edifici i resolució HOS** |
 | [PIELH_GIS.md](PIELH_GIS.md) | Mapa Leaflet: capes, marcadors, interacció |
 | [PIELH_UI.md](PIELH_UI.md) | Interfície d'usuari: pestanyes, taules, filtres, panells |
 | [PIELH_FUNCTIONALITY.md](PIELH_FUNCTIONALITY.md) | Funcionalitats detallades amb fluxos i fitxers afectats |
 | [PIELH_API.md](PIELH_API.md) | Endpoints de `server.py` |
 | [PIELH_SAVE_PROCESS.md](PIELH_SAVE_PROCESS.md) | Flux complet de guardada de dades |
 | [PIELH_DEPLOYMENT.md](PIELH_DEPLOYMENT.md) | Desplegament des de zero (local i producció) |
-| [PIELH_STATUS.md](PIELH_STATUS.md) | Estat de cada funcionalitat: FUNCIONAL / PARCIAL / NO IMPLEMENTAT |
+| [PIELH_STATUS.md](PIELH_STATUS.md) | Estat de cada funcionalitat: FUNCIONAL / PARCIAL / NO IMPLEMENTAT + **seguretat de scripts** |
 
 ## Diagrames Mermaid
 

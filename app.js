@@ -923,6 +923,7 @@ function renderBuildingsList() {
                 selectRecord(b.id, { source: 'table', thingId: b.thing_id || null, entityType: 'building' });
             }
         });
+        tr.addEventListener('dblclick', () => openDetailPanel(b.id, b.thing_id || null));
         tbody.appendChild(tr);
     });
 }
@@ -954,11 +955,8 @@ function renderSensorsList() {
     tbody.innerHTML = '';
     records.forEach(s => {
         const color = getSystemColor(s.system_id);
-        const hasData = (s.has_data ?? '').toUpperCase();
-        const dataColor = hasData === 'OK' ? '#16a34a' : '#94a3b8';
         const isLegacy = s.inventory_status === 'LEGACY';
-        const building = data._buildingsMap[s.hos];
-        const shortName = building?.short_name || building?.name || '';
+        const shortName = s.short_name || '';
         const tr = document.createElement('tr');
         tr.dataset.rid = s.id;
         tr.dataset.key = getRecordKey(s);
@@ -974,12 +972,10 @@ function renderSensorsList() {
             <td title="${esc(s.system_name)}">
                 <span class="sys-dot" style="background:${color}"></span>${esc(s.system_id ?? '—')}
             </td>
-            <td title="${esc(s.neighborhood)}">${esc(shortNeighborhood(s.neighborhood))}</td>
-            <td title="${esc(s.district_name)}">${esc(s.district_name ?? '—')}</td>
-            <td title="${esc(s.ref_etra)}">${esc(truncate(s.ref_etra, 18))}</td>
-            <td>${s.iot_health
-                ? `<span class="iot-badge iot-${s.iot_health.demo_ready ? 'active' : 'nodata'}">${esc(s.iot_health.status)}</span>`
-                : `<span style="color:${dataColor};font-weight:600">${esc(s.has_data ?? '—')}</span>`}</td>
+            <td title="${esc(s.iot_health?.last_seen ?? '')}">${esc(_fmtLastSeen(s.iot_health?.last_seen))}</td>
+            <td>${s.iot_health?.status
+                ? `<span class="iot-badge iot-${esc(s.iot_health.status.toLowerCase())}" title="${esc(s.iot_health.status)}">${esc(s.iot_health.status)}</span>`
+                : `<span class="iot-badge iot-no_data">NO_DATA</span>`}</td>
         `;
         tr.addEventListener('click', e => {
             if (e.ctrlKey || e.metaKey) {
@@ -991,6 +987,7 @@ function renderSensorsList() {
                 selectRecord(s.id, { source: 'table', thingId: s.thing_id, entityType: 'sensor' });
             }
         });
+        tr.addEventListener('dblclick', () => openDetailPanel(s.id, s.thing_id || null));
         tbody.appendChild(tr);
     });
 }
@@ -1143,8 +1140,14 @@ function sortRecords(records, sortState) {
     const { key, dir } = sortState;
     const mult = dir === 'asc' ? 1 : -1;
     return [...records].sort((a, b) => {
-        let va = key === '_sCount' ? (data._sensorsByBuilding[a.id] ?? []).length : a[key];
-        let vb = key === '_sCount' ? (data._sensorsByBuilding[b.id] ?? []).length : b[key];
+        let va = key === '_sCount'        ? (data._sensorsByBuilding[a.id] ?? []).length
+               : key === '_iot_last_seen' ? (a.iot_health?.last_seen ?? '')
+               : key === '_iot_status'    ? (a.iot_health?.status ?? '')
+               : a[key];
+        let vb = key === '_sCount'        ? (data._sensorsByBuilding[b.id] ?? []).length
+               : key === '_iot_last_seen' ? (b.iot_health?.last_seen ?? '')
+               : key === '_iot_status'    ? (b.iot_health?.status ?? '')
+               : b[key];
         if (va == null) va = ''; if (vb == null) vb = '';
         if (typeof va === 'number' && typeof vb === 'number') return mult * (va - vb);
         return mult * String(va).localeCompare(String(vb), 'ca', { sensitivity: 'base' });
@@ -1612,6 +1615,18 @@ function _relativeTime(isoStr) {
     return `hace ${Math.floor(h / 24)}d`;
 }
 
+function _fmtLastSeen(isoStr) {
+    if (!isoStr) return 'Sin datos';
+    const days = Math.floor((Date.now() - new Date(isoStr).getTime()) / 86400000);
+    if (days === 0) return 'Hoy';
+    if (days === 1) return 'Ayer';
+    if (days < 30)  return `Hace ${days} días`;
+    const months = Math.floor(days / 30);
+    if (months < 12) return `Hace ${months} mes${months > 1 ? 'es' : ''}`;
+    const years = Math.floor(days / 365);
+    return `Hace ${years} año${years > 1 ? 's' : ''}`;
+}
+
 function _fmtDT(isoStr) {
     if (!isoStr) return '—';
     return new Date(isoStr).toLocaleString('es-ES', {
@@ -1738,6 +1753,7 @@ function renderDetailForm(record, entityType) {
     const rows = [];
     if (entityType === 'sensor') {
         rows.push(dpReadonly('ID', record.id));
+        rows.push(dpText('short_name', 'Nombre corto', record.short_name));
         rows.push(dpReadonly('Tipo', record.type));
         rows.push(dpSelect('system_id', 'Sistema', allSystems(), record.system_id));
         rows.push(dpSelect('neighborhood_key', 'Barrio', allNeighborhoods(), record.neighborhood_key));
@@ -1976,8 +1992,13 @@ function renderSelectedSensorCard(s) {
     if (!card || !s) return;
 
     const color = getSystemColor(s.system_id);
-    const meta = [s.system_name, s.type, s.ref_etra, s.neighborhood]
-        .filter(Boolean).map(esc).join('<span class="meta-sep">·</span>');
+    const iotStatus = s.iot_health?.status || '—';
+    const iotClass  = s.iot_health?.status ? `iot-${s.iot_health.status.toLowerCase()}` : 'iot-no_data';
+    const lastSeen  = s.iot_health?.last_seen ? s.iot_health.last_seen.slice(0, 10) : '—';
+    const street    = s.street_etra || s.ref_etra || '—';
+
+    const field = (label, value) =>
+        `<span class="sc-field"><span class="sc-label">${label}</span> ${value ? esc(value) : '—'}</span>`;
 
     card.classList.remove('hidden');
     card.innerHTML = `
@@ -1986,17 +2007,21 @@ function renderSelectedSensorCard(s) {
                 <div class="sys-icon-circle" style="background:${esc(color)}">${esc(s.system_id || '?')}</div>
             </div>
             <div class="selection-card-info">
-                <div class="selection-card-kicker">Sensor activo${s.hos ? ` · HOS: ${esc(s.hos)}` : ''}</div>
-                <div class="selection-card-title">${esc(s.id)}</div>
+                <div class="selection-card-kicker">Sensor activo · HOS: ${s.hos ? esc(s.hos) : '—'}</div>
+                <div class="selection-card-title">${esc(s.id)}${s.short_name ? ` <span class="sc-shortname">${esc(s.short_name)}</span>` : ''}</div>
                 <div style="font-family:monospace;font-size:0.75em;margin-top:2px" title="${esc(s.thing_id ?? '')}">ThingID: <strong>${s.thing_id ? esc(truncate(s.thing_id, 20)) : '—'}</strong></div>
-                <div class="selection-card-meta">${meta}</div>
-                <div class="selection-card-systems">
+                <div class="selection-card-systems" style="margin-top:4px">
                     <span class="sys-badge" style="background:${esc(color)}">${esc(s.system_id || '')}</span>
-                    ${s.iot_health
-                        ? `<span class="iot-badge iot-${s.iot_health.demo_ready ? 'active' : 'nodata'}">${esc(s.iot_health.status)}</span>`
-                        : `<span class="sys-count">${esc(s.has_data || '-')}</span>`}
-                    ${s.iot_health?.last_seen ? `<span class="meta-sep">·</span><span class="sys-count">${esc(s.iot_health.last_seen.slice(0,10))}</span>` : ''}
-                    ${s.district_name || s.district_code ? `<span class="meta-sep">·</span><span class="sys-count">${esc(s.district_name || s.district_code)}</span>` : ''}
+                    <span class="iot-badge ${iotClass}">${esc(iotStatus)}</span>
+                    <span class="sc-field"><span class="sc-label">Último dato</span> ${esc(lastSeen)}</span>
+                </div>
+                <div class="sc-fields">
+                    ${field('Tipo', s.type)}
+                    ${field('Distrito', s.district_name || s.district_code)}
+                    ${field('Barrio', s.neighborhood)}
+                    ${field('Calle', street)}
+                    <span class="sc-field"><span class="sc-label">Lat</span> ${s.lat ?? '—'}</span>
+                    <span class="sc-field"><span class="sc-label">Lon</span> ${s.lon ?? '—'}</span>
                 </div>
             </div>
             <div class="selection-card-actions">
@@ -2144,9 +2169,6 @@ async function saveDetailPanel() {
             if (result.records?.length > 1) {
                 msg = `Guardado correctamente (${result.records.length} sensores con el mismo ID actualizados).`;
             }
-        }
-        if (result.sensors_updated > 0) {
-            msg += ` ${result.sensors_updated} sensor${result.sensors_updated === 1 ? '' : 'es'} del edificio actualizado${result.sensors_updated === 1 ? '' : 's'}.`;
         }
         showToast(msg, true);
         loadPushStatus();

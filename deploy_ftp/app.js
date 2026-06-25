@@ -1298,6 +1298,7 @@ function renderDetailForm(record, entityType) {
     const rows = [];
     if (entityType === 'sensor') {
         rows.push(dpReadonly('ID', record.id));
+        rows.push(dpText('short_name', 'Nombre corto', record.short_name));
         rows.push(dpReadonly('Tipo', record.type));
         rows.push(dpSelect('system_id', 'Sistema', allSystems(), record.system_id));
         rows.push(dpSelect('neighborhood_key', 'Barrio', allNeighborhoods(), record.neighborhood_key));

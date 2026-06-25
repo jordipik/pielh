@@ -28,7 +28,7 @@
 | Botó limpiar filtres | FUNCIONAL | |
 | Filtre "Solo visibles" | FUNCIONAL | Binds a `moveend`/`zoomend` del mapa |
 | Taula d'edificis | FUNCIONAL | 8 columnes, ordenació, multi-selecció |
-| Taula de sensors | FUNCIONAL | 9 columnes (ID, Nombre Corto, ThingID, HOS, Sistema, Barrio, Dist., Calle, Datos), límit 500, `data-key` i `data-thing-id` per fila |
+| Taula de sensors | FUNCIONAL | 7 columnes (ID, Nombre Corto, ThingID, HOS, Sistema, Último dato, Estado IoT), límit 500, `data-key` i `data-thing-id` per fila |
 | Pestanya QA | FUNCIONAL | Filtres per severitat i tipus |
 | Cards de resum (header) | FUNCIONAL | Edificis, sensors, barrios, sistemes, QA |
 | Selecció simple (taula o mapa) | FUNCIONAL | Sincronització bidireccional. Sensors germanos desambiguats per `thing_id` |
@@ -140,3 +140,72 @@
 | Multiusuari concurrent | Cap mecanisme de locks a nivell d'usuari | Risc si múltiples usuaris editen simultàniament |
 | Validació de formulari al frontend | Mínima | Delega al servidor |
 | Confirmació abans de guardar | Cap diàleg de confirmació | Guarda directe |
+
+---
+
+## Scripts i operacions de manteniment
+
+> Inventari complet: [PIELH_SCRIPTS.md](PIELH_SCRIPTS.md)
+
+### Scripts de solo lectura (segurs)
+
+| Script | Funció |
+|---|---|
+| `audit_sensors_without_hos.py` | Detecta sensors sense HOS. Genera candidats per revisió |
+| `audit_sensor_building_inheritance.py` | Comprova herència edifici→sensor |
+| `audit_duplicate_sensors.py` | Detecta sensors duplicats per id/thing_id/geo |
+| `plan_duplicate_sensor_cleanup.py` | Genera pla dry-run de neteja |
+| `audit_thethings_structure.py` | Compara master vs snapshot TheThings |
+| `audit_thethings_tags.py` | Compara tags master vs snapshot |
+| `audit_thethings_data_health.py` | Audita salut de dades IoT |
+| `audit_thethings_activity.py` | Audita activitat IoT |
+| `build_inventory_health_report.py` | Genera informe de salut inventari |
+| `audit_post_cleanup.py` | Mètriques pre/post neteja |
+| `report_sensors_data_cleanup.py` | Informe de depuració sensors |
+| `export_legacy_02.py` | Còpia del master a `data/legacy/` (no modifica l'original) |
+| `fetch_thethings_structure.py` | Descarrega snapshot estructura TheThings |
+| `fetch_thethings_tags.py` | Extreu tags del snapshot (sense API) |
+| `discover_thethings_resources.py` | Descobreix recursos IoT disponibles |
+| `build_hospitalet_boundary.py` | Genera GeoJSON contorn (no toca master) |
+| `download_hospitalet_geojson.py` | Descarrega GeoJSON OSM (no toca master) |
+
+### Scripts que generen informes
+
+Els scripts d'auditoria anteriors escriuen a:
+- `data/audits/*.md` i `*.json`
+- `reports/*.json` i `*.csv`
+
+Cap modifica `pielh_qa_master.json`.
+
+### Scripts que modifiquen `pielh_qa_master.json`
+
+| Script | Condició d'activació | Dry-run | Backup | Risc |
+|---|---|---|---|---|
+| `apply_hos_assignments.py` | Sempre (--apply implícit) | Sí | Sí | Mig |
+| `apply_sensor_building_inheritance.py` | Només amb `--apply` | Sí | Sí | Mig |
+| `apply_inventory_health_to_master.py` | Sempre | No | Sí | Baix |
+| `apply_high_confidence_legacy_marks.py` | Només amb `--apply` | Sí | Sí | Mig |
+| `mark_old_duplicate_sensors.py` | Sempre | No | Sí | Mig |
+| `dedupe_sensor_siblings.py` | Sempre | No | Sí | Mig |
+| `normalize_sensor_ids.py` | Sempre | **No té dry-run** | Sí | **ALT** |
+| `sync_thethings_tags.py --pull` | `--pull` sense `--dry-run` | Sí (`--dry-run`) | Sí | Mig |
+
+### Scripts que requereixen backup manual previ
+
+- `normalize_sensor_ids.py` — No té mode dry-run. Fer `cp pielh_qa_master.json data/backups/manual_$(date +%Y%m%d).json` abans.
+
+### Scripts que NO s'han d'executar sense revisar informe
+
+- `apply_hos_assignments.py --apply` → revisar `data/audits/sensors_without_hos_audit.json` primer.
+- `apply_sensor_building_inheritance.py --apply` → revisar `reports/sensor_building_inheritance_report.json` primer.
+- `apply_high_confidence_legacy_marks.py --apply` → revisar `reports/duplicate_sensor_cleanup_plan.json` primer.
+- `sync_thethings_tags.py --push` → **modifica dades a TheThings (sistema extern)**. Risc alt. Sempre dry-run primer.
+
+### Scripts que afecten sistemes externs (TheThings)
+
+| Script | Tipus operació | Risc |
+|---|---|---|
+| `sync_thethings_tags.py --push` | Escriptura a TheThings | **ALT** |
+| `fetch_thethings_structure.py` | Lectura des de TheThings | Baix |
+| `discover_thethings_resources.py` | Lectura des de TheThings | Baix |
+| `audit_thethings_activity.py` | Lectura des de TheThings | Baix |

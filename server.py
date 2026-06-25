@@ -278,17 +278,17 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                 self._apply_updates(r, shared_updates)
             if own_updates:
                 self._apply_updates(target, own_updates)
-            self._complete_empty_fields(siblings)
+            # self._complete_empty_fields(siblings)  # auto-propagation disabled
 
             sensors_updated = 0
-            if entity_type == 'building':
-                sensors_updated = self._propagate_to_sensors(master, record_id, shared_updates)
+            # if entity_type == 'building':
+            #     sensors_updated = self._propagate_to_sensors(master, record_id, shared_updates)
 
             self._mark_sync_pending(siblings, list(updates.keys()))
-            if entity_type == 'building' and sensors_updated > 0:
-                affected_sns = [s for s in master.get('sensors', []) if s.get('hos') == record_id]
-                propagated   = [k for k in shared_updates if k in BUILDING_TO_SENSOR_FIELDS]
-                self._mark_sync_pending(affected_sns, propagated)
+            # if entity_type == 'building' and sensors_updated > 0:
+            #     affected_sns = [s for s in master.get('sensors', []) if s.get('hos') == record_id]
+            #     propagated   = [k for k in shared_updates if k in BUILDING_TO_SENSOR_FIELDS]
+            #     self._mark_sync_pending(affected_sns, propagated)
 
             self._save(master)
 
@@ -380,18 +380,17 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                 before = {id(r): copy.deepcopy(r) for r in records_to_update}
                 for r in records_to_update:
                     self._apply_updates(r, shared_updates)
-                # _complete_empty_fields only makes sense when editing all siblings together;
-                # skip it when targeting a specific thing_id to avoid cross-contamination.
-                if not thing_id:
-                    self._complete_empty_fields(records_to_update)
+                # auto-propagation disabled
+                # if not thing_id:
+                #     self._complete_empty_fields(records_to_update)
 
-                if entity_type == 'building':
-                    sensors_updated += self._propagate_to_sensors(master, tid, shared_updates)
+                # if entity_type == 'building':
+                #     sensors_updated += self._propagate_to_sensors(master, tid, shared_updates)
                 self._mark_sync_pending(records_to_update, list(shared_updates.keys()))
-                if entity_type == 'building':
-                    affected_sns = [s for s in master.get('sensors', []) if s.get('hos') == tid]
-                    propagated   = [k for k in shared_updates if k in BUILDING_TO_SENSOR_FIELDS]
-                    self._mark_sync_pending(affected_sns, propagated)
+                # if entity_type == 'building':
+                #     affected_sns = [s for s in master.get('sensors', []) if s.get('hos') == tid]
+                #     propagated   = [k for k in shared_updates if k in BUILDING_TO_SENSOR_FIELDS]
+                #     self._mark_sync_pending(affected_sns, propagated)
 
                 for r in records_to_update:
                     old = before[id(r)]

@@ -47,6 +47,8 @@
 
 ## Scripts de suport
 
+> **Inventari complet de scripts:** Vegeu [PIELH_SCRIPTS.md](PIELH_SCRIPTS.md) per a la llista detallada de tots els scripts (25+), amb mode lectura/escriptura, entrades, sortides, backup i estat.
+
 | Fitxer | Funció | En ús |
 |---|---|---|
 | `build_deploy_ftp.py` | Genera la carpeta `deploy_ftp/` llesta per pujar per FTP | Manual |
@@ -55,6 +57,17 @@
 | `scripts/build_hospitalet_boundary.py` | Genera GeoJSON del contorn de la ciutat | Manual / utilitat |
 | `scripts/dedupe_sensor_siblings.py` | Utilitat per deduplicar sensors amb el mateix ID | Manual |
 | `scripts/download_hospitalet_geojson.py` | Descarrega les dades GeoJSON d'OpenStreetMap | Manual |
+| `scripts/audit_sensors_without_hos.py` | Audita sensors sense HOS assignat (READ-ONLY) | Manual |
+| `scripts/apply_hos_assignments.py` | Aplica assignacions HOS als sensors (MODIFICA MASTER) | Manual |
+| `scripts/audit_sensor_building_inheritance.py` | Audita herència edifici→sensor (READ-ONLY) | Manual |
+| `scripts/apply_sensor_building_inheritance.py` | Propaga camps edifici→sensor (MODIFICA MASTER amb --apply) | Manual |
+| `scripts/audit_duplicate_sensors.py` | Detecta sensors duplicats (READ-ONLY) | Manual |
+| `scripts/plan_duplicate_sensor_cleanup.py` | Genera pla de neteja de duplicats (READ-ONLY) | Manual |
+| `scripts/apply_high_confidence_legacy_marks.py` | Aplica marques LEGACY HIGH (MODIFICA MASTER amb --apply) | Manual |
+| `scripts/fetch_thethings_structure.py` | Descarrega estructura TheThings a snapshot | Manual |
+| `scripts/fetch_thethings_tags.py` | Extreu tags del snapshot TheThings | Manual |
+| `scripts/audit_thethings_activity.py` | Audita activitat IoT des de TheThings | Manual |
+| `scripts/apply_inventory_health_to_master.py` | Enriqueix master amb iot_health (MODIFICA MASTER) | Manual |
 
 ## Fitxers de dades GeoJSON
 

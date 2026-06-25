@@ -87,6 +87,7 @@ Representa un sensor físic instal·lat en un edifici o al carrer.
 | `qa_notes` | string\|null | `null` | No | Notes de QA |
 | `tags` | string | `""` | No | Tags CSV |
 | `raw` | object | `{}` | No | Dades brutes |
+| `iot_health` | object\|null | `{status, has_real_data, demo_ready, last_seen, resource, system_class, health_source}` | No | Salut IoT calculada pel pipeline de sincronització TheThings. `status`: `ACTIVE_24H`, `ACTIVE_7D`, `STALE_30D`, `STALE_90D`, `INACTIVE_90D`, `DATA_NO_TIMESTAMP`, `NO_DATA`. `last_seen`: ISO 8601 UTC. **No modificar directament**; es recalcula a cada sincronització. |
 
 **Nota important:** Sensors amb el mateix `id` però diferent `thing_id` es consideren "germanos" (duplicats lògics). El servidor propaga camps compartits a tots els germanos per defecte i reserva `thing_id`/`thing_token` al registre específic (`OWN_FIELDS`). Quan una operació especifica `selector.thing_id`, afecta **únicament** el germano indicat i no executa `_complete_empty_fields` entre germanos. Vegeu [PIELH_IDENTITY_MODEL.md](PIELH_IDENTITY_MODEL.md).
 
@@ -202,3 +203,54 @@ OtherObject (OTROS-BARRIOS/DISTRITOS/CALLES) → capes del mapa (no relacionats 
 | `data._buildingsByThingId` | `{ thing_id → Building }` | Lookup ràpid d'edificis per `thing_id` (multiselecció) |
 | `data._sensorsByBuilding` | `{ hos → [Sensor] }` | Sensors per edifici |
 | `data._otherByType` | `{ object_type → [OtherObject] }` | Altres objectes per tipus |
+
+---
+
+## Relació sensor-edifici i resolució HOS
+
+### Regles canòniques
+
+| Regla | Descripció |
+|---|---|
+| `Building.id` és la referència HOS | `Building.id` = `"HOS001"`, `"HOS136"`, etc. És la clau principal de l'edifici. |
+| `Sensor.hos` apunta a `Building.id` | La relació 1:N edifici-sensors es resol via `sensor.hos == building.id`. |
+| `Sensor.id` pot inferir HOS | Si `sensor.id` conté el patró `HOS\d+` (ex: `"HOS136-S01-01"`), es pot inferir l'edifici pare. No és garantit per a tots els sensors. |
+| `thing_id` no substitueix `hos` | `thing_id` és la clau operativa per a selecció/edició. No conté ni implica `hos`. |
+| `thing_token` no relaciona sensors amb edificis | `thing_token` és únicament per a crides API TheThings. Protegit. No usar com a clau de relació. |
+
+### Com es resol HOS
+
+1. **Preferent:** `sensor.hos` ja té valor → relació directa.
+2. **Inferència per id:** `sensor.id` conté `HOS\d+` → candidat `BUILDING_MATCH_BY_ID`.
+3. **Inferència per tags/raw:** tags de TheThings poden contenir prefix `HOS` → extret per `fetch_thethings_tags.py`.
+4. **Hermanos:** si un hermano (mateix `id`, diferent `thing_id`) ja té `hos`, és candidat `DUPLICATE_OR_SIBLING` — cal verificar per `thing_id` per no contaminar.
+5. **Sense pista:** classifica com `STREET_SENSOR` (EUI/serial) o `UNKNOWN`.
+
+### Camps propagats del edifici al sensor
+
+Quan `sensor.hos` és vàlid, els scripts de propagació copien:
+
+| Camp edifici | Camp sensor | Scripts |
+|---|---|---|
+| `district_code` | `district_code` | `apply_hos_assignments.py`, `apply_sensor_building_inheritance.py` |
+| `district_name` | `district_name` | idem |
+| `neighborhood_key` | `neighborhood_key` | idem |
+| `neighborhood` | `neighborhood` | idem |
+| `type` | `type` | idem |
+| `zone` | `zone` | idem |
+| `street_etra` | `street_etra` | idem |
+| `street_mti` | `street_mti` | `apply_sensor_building_inheritance.py` (superset) |
+| `lat` | `lat` | `apply_sensor_building_inheritance.py` (si sensor no té lat) |
+| `lon` | `lon` | `apply_sensor_building_inheritance.py` (si sensor no té lon) |
+
+Camps **mai** sobreescrits: `thing_id`, `thing_token`, `id`, `system_id`, `system_name`, `iot_health`, `raw`, `tags`, `has_data`, `status`, `sensor_order`, `cu_old`, `ref_etra`.
+
+### Riscos de correccions massives
+
+- Qualsevol script que modifiqui `pielh_qa_master.json` **ha de fer backup previ**.
+- Scripts amb `--apply` han d'executar-se primer en **dry-run** i revisar l'informe.
+- En sensors hermanos (mateix `id`, diferent `thing_id`), l'assignació s'ha de fer per `thing_id` per evitar contaminar el germano incorrecte.
+- `sync_thethings_tags.py --push` modifica dades a TheThings (sistema extern). Risc alt.
+- `normalize_sensor_ids.py` no té dry-run clar. Fer backup manual abans d'executar.
+
+Vegeu [PIELH_SCRIPTS.md](PIELH_SCRIPTS.md) per al fluix complet de resolució HOS i tots els scripts implicats.

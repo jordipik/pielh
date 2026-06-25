@@ -1,16 +1,16 @@
 # PIELH — Aplicación HOS: Informe de cambios
 
-_Generado: 2026-06-21T08:04:51.371777+00:00_
+_Generado: 2026-06-22T12:23:39.176698+00:00_
 
-_Backup: `pielh_qa_master_20260621_100451.json`_
+_Backup: `pielh_qa_master_20260622_142339.json`_
 
 ---
 ## Resumen
 
 | Métrica | Valor |
 |---|---|
-| Candidatos HIGH | 81 |
-| **Aplicados** | **81** |
+| Candidatos HIGH | 16 |
+| **Aplicados** | **16** |
 | Saltados | 0 |
 
 ---
@@ -18,60 +18,46 @@ _Backup: `pielh_qa_master_20260621_100451.json`_
 
 | Categoría | Aplicados |
 |---|---|
-| BUILDING_MATCH_BY_ID | 56 |
-| DUPLICATE_OR_SIBLING | 25 |
+| BUILDING_MATCH_BY_ID | 15 |
+| DUPLICATE_OR_SIBLING | 1 |
 
 ---
 ## Por edificio (HOS)
 
 | HOS | Sensores asignados |
 |---|---|
-| HOS010 | 4 |
-| HOS027 | 2 |
-| HOS045 | 2 |
-| HOS033 | 2 |
-| HOS040 | 2 |
-| HOS034 | 2 |
-| HOS066 | 2 |
-| HOS154 | 2 |
-| HOS146 | 2 |
-| HOS064 | 1 |
-| HOS141 | 1 |
-| HOS054 | 1 |
-| HOS030 | 1 |
-| HOS046 | 1 |
-| HOS153 | 1 |
-| HOS099 | 1 |
-| HOS150 | 1 |
-| HOS060 | 1 |
-| HOS148 | 1 |
-| HOS144 | 1 |
-| HOS041 | 1 |
-| HOS022 | 1 |
-| HOS043 | 1 |
-| HOS048 | 1 |
-| HOS026 | 1 |
-| HOS152 | 1 |
-| HOS004 | 1 |
-| HOS061 | 1 |
-| HOS025 | 1 |
-| HOS065 | 1 |
+| HOS001 | 1 |
+| HOS097 | 1 |
+| HOS088 | 1 |
+| HOS045 | 1 |
+| HOS154 | 1 |
+| HOS146 | 1 |
+| HOS143 | 1 |
+| HOS128 | 1 |
+| HOS123 | 1 |
+| HOS066 | 1 |
+| HOS096 | 1 |
+| HOS047 | 1 |
+| HOS044 | 1 |
+| HOS027 | 1 |
+| HOS040 | 1 |
+| HOS015 | 1 |
 
 ---
 ## Muestra de cambios aplicados
 
 | thing_id (corto) | sensor_id | Categoría | HOS | Campos propagados |
 |---|---|---|---|---|
-| CMpnq1N3oSHY | S4E-HOS064 | BUILDING_MATCH_BY_ID | HOS064 | district_code, district_name, neighborhood_key, neighborhood, type, zone, street_etra |
-| K99gziUqdvUo | S4E-HOS141 | BUILDING_MATCH_BY_ID | HOS141 | district_code, district_name, neighborhood_key, neighborhood, type, zone, street_etra |
-| XSSoWPOE8p99 | S4E-HOS027 | BUILDING_MATCH_BY_ID | HOS027 | district_code, district_name, neighborhood_key, neighborhood, type, zone, street_etra |
-| vWbUartAl3FW | S4E-HOS054 | BUILDING_MATCH_BY_ID | HOS054 | district_code, district_name, neighborhood_key, neighborhood, type, zone, street_etra |
-| kP9HBcJWs2v0 | S4E-HOS030 | BUILDING_MATCH_BY_ID | HOS030 | district_code, district_name, neighborhood_key, neighborhood, type, zone, street_etra |
-| 2Ir17bu0U1As | S4E-HOS045 | BUILDING_MATCH_BY_ID | HOS045 | district_code, district_name, neighborhood_key, neighborhood, type, zone, street_etra |
-| LWlB4iipptKy | S4E-HOS046 | BUILDING_MATCH_BY_ID | HOS046 | district_code, district_name, neighborhood_key, neighborhood, type, zone, street_etra |
-| Cf-b6ps2YNjP | S4E-HOS033-1 | BUILDING_MATCH_BY_ID | HOS033 | district_code, district_name, neighborhood_key, neighborhood, type, zone, street_etra |
-| MH5SO0NuQaHC | S4E-HOS033 | BUILDING_MATCH_BY_ID | HOS033 | district_code, district_name, neighborhood_key, neighborhood, type, zone, street_etra |
-| OnvkGxY_iCpi | S4E-HOS153 | BUILDING_MATCH_BY_ID | HOS153 | district_code, district_name, neighborhood_key, neighborhood, type, zone, street_etra |
+| WMVijobmh_N0 | Aj L'H-Casa Consistorial-HOS001 | BUILDING_MATCH_BY_ID | HOS001 | district_code, district_name, neighborhood_key, neighborhood, type, zone, street_etra |
+| 2cV7HDD43s53 | Esc. Br. Garabatos - HOS097-S06-01 P22FA007729T | BUILDING_MATCH_BY_ID | HOS097 | district_code, district_name, neighborhood_key, neighborhood, type, zone, street_etra |
+| wjo8-mF1I1Bn | Radio-TV de L'Hospitalet - HOS088-S06-01 I24LA138394E | BUILDING_MATCH_BY_ID | HOS088 | district_code, district_name, neighborhood_key, neighborhood, type, zone, street_etra |
+| 1mfmjD218sHe | 0018b2400001961f-HOS045 | BUILDING_MATCH_BY_ID | HOS045 | district_code, district_name, neighborhood_key, neighborhood, type, zone, street_etra |
+| PIVrTsZcxGqN | Institut Jaume Botey - HOS154 | BUILDING_MATCH_BY_ID | HOS154 | district_code, district_name, neighborhood_key, neighborhood, type, zone, street_etra |
+| AinJaftftCaO | Institut Europa - HOS146 | BUILDING_MATCH_BY_ID | HOS146 | district_code, district_name, neighborhood_key, neighborhood, type, zone, street_etra |
+| 0_q1-J9lPbUJ | Institut Bellvitge-HOS143 | DUPLICATE_OR_SIBLING | HOS143 | district_code, district_name, neighborhood_key, neighborhood, type, zone, street_etra |
+| BV-0oTJPO2bC | Edificio PUIG - HOS128 | BUILDING_MATCH_BY_ID | HOS128 | district_code, district_name, neighborhood_key, neighborhood, type, zone, street_etra |
+| opMfszLm2-Zk | CGG Provençana - HOS123 | BUILDING_MATCH_BY_ID | HOS123 | district_code, district_name, neighborhood_key, neighborhood, type, zone, street_etra |
+| r122K4jtfici | Esc. Ramon Muntaner - HOS066 | BUILDING_MATCH_BY_ID | HOS066 | district_code, district_name, neighborhood_key, neighborhood, type, zone, street_etra |
 
 ---
 _PIELH Smart City — Asignación automática HOS — Solo HIGH confidence._
